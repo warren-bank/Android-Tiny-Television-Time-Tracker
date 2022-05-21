@@ -12,12 +12,12 @@ import nl.asymmetrics.droidshows.utils.SQLiteStore;
 import android.util.Log;
 
 public class TheTVDB {
-	private static final String main = "https://thetvdb.com";
-	private static final String mirror = "https://thetvdb.plexapp.com";
+  private static final String main = "https://thetvdb.com";
+  private static final String mirror = "https://thetvdb.plexapp.com";
 
-	private static String apiKey;
-	private static String xmlMirror;
-	private static String bannerMirror;
+  private static String apiKey;
+  private static String xmlMirror;
+  private static String bannerMirror;
 
     public TheTVDB(String newApiKey, boolean useMirror) {
         apiKey = newApiKey;
@@ -62,7 +62,7 @@ public class TheTVDB {
             String urlToXML = xmlMirror + apiKey + "/series/" + id + "/all/" + (language!=null?language+".xml":"");
             List<String> XMLData = xmlparser.parse(urlToXML);
             if (XMLData == null) {
-            	return null;
+              return null;
             }
 
             serie = parseSeries(XMLData);
@@ -75,7 +75,7 @@ public class TheTVDB {
                     Episode episode = parseEpisode( (List<String>)xml_episodes.get(i) );
                     if (episode != null) {
                         if(episode.getEpisodeName() == null || episode.getEpisodeName().equals(""))
-                        	episode.setEpisodeName(" ");
+                          episode.setEpisodeName(" ");
                         episodes.add(episode);
                     }
                 } catch (Exception e) {
@@ -87,8 +87,8 @@ public class TheTVDB {
             serie.setEpisodes(episodes);
             serie.setNSeasons(parseNSeasons(episodes));
         } catch (Exception e) {
-        	Log.e(SQLiteStore.TAG, "Error gathering the TV show info from the XML file");
-        	return null;
+          Log.e(SQLiteStore.TAG, "Error gathering the TV show info from the XML file");
+          return null;
         }
 
         return serie;
@@ -115,14 +115,14 @@ public class TheTVDB {
                         }
                         else if ( xmldata.get(i).contentEquals("<banner>") && !xmldata.get(i+1).contentEquals("</banner>") ) {
                                 String tmpBanner = xmldata.get(i+1).trim();
-                        		if (!tmpBanner.isEmpty())
-                                	series.setBanner(bannerMirror + tmpBanner);
+                            if (!tmpBanner.isEmpty())
+                                  series.setBanner(bannerMirror + tmpBanner);
                         }
                         else if ( xmldata.get(i).contentEquals("<Overview>") && !xmldata.get(i+1).contentEquals("</Overview>") ) {
-                            	series.setOverview(xmldata.get(i+1).trim() );
+                              series.setOverview(xmldata.get(i+1).trim() );
                         }
                         else if ( xmldata.get(i).contentEquals("<FirstAired>") && !xmldata.get(i+1).contentEquals("</FirstAired>") ) {
-                       			series.setFirstAired(xmldata.get(i+1).trim());
+                             series.setFirstAired(xmldata.get(i+1).trim());
                         }
                         else if ( xmldata.get(i).contentEquals("<IMDB_ID>") && !xmldata.get(i+1).contentEquals("</IMDB_ID>") ) {
                                 series.setImdbId(xmldata.get(i+1).trim());
@@ -162,7 +162,7 @@ public class TheTVDB {
                         }
                         else if ( xmldata.get(i).contentEquals("<fanart>") && !xmldata.get(i+1).contentEquals("</fanart>") ) {
                                 String tmpBanner = xmldata.get(i+1).trim();
-                        		if (!tmpBanner.isEmpty())
+                            if (!tmpBanner.isEmpty())
                                     series.setFanart(bannerMirror + tmpBanner);
                         }
                         else if ( xmldata.get(i).contentEquals("<lastupdated>") && !xmldata.get(i+1).contentEquals("</lastupdated>") ) {
@@ -227,7 +227,7 @@ public class TheTVDB {
                                 episode.setEpisodeNumber(Integer.parseInt(xmldata.get(i+1).trim()));
                         }
                         else if ( xmldata.get(i).contentEquals("<FirstAired>") && !xmldata.get(i+1).contentEquals("</FirstAired>") ) {
-                        		episode.setFirstAired(xmldata.get(i+1).trim());
+                            episode.setFirstAired(xmldata.get(i+1).trim());
                         }
                         else if ( xmldata.get(i).contentEquals("<GuestStars>") && !xmldata.get(i+1).contentEquals("</GuestStars>") ) {
                                 episode.setGuestStars( parseList(xmldata.get(i+1).trim(), "|,") );
@@ -239,7 +239,7 @@ public class TheTVDB {
                                 episode.setLanguage(xmldata.get(i+1).trim());
                         }
                         else if ( xmldata.get(i).contentEquals("<Overview>") && !xmldata.get(i+1).contentEquals("</Overview>") ) {
-                        		episode.setOverview(xmldata.get(i+1).trim());
+                            episode.setOverview(xmldata.get(i+1).trim());
                         }
                         else if ( xmldata.get(i).contentEquals("<ProductionCode>") && !xmldata.get(i+1).contentEquals("</ProductionCode>") ) {
                                 episode.setProductionCode(xmldata.get(i+1).trim());

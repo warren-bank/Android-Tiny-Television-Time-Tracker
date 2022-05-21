@@ -43,10 +43,10 @@ public class XMLHandler extends DefaultHandler{
      * </tag> */
     @Override
     public void endElement(String namespaceURI, String localName, String qName) throws SAXException {
-    	if (this.merge)
-    		this.XMLData.set(this.XMLData.size()-1, this.XMLData.get(this.XMLData.size()-1).trim());
+      if (this.merge)
+        this.XMLData.set(this.XMLData.size()-1, this.XMLData.get(this.XMLData.size()-1).trim());
         this.merge = false;
-    	this.XMLData.add("</" + localName + ">");
+      this.XMLData.add("</" + localName + ">");
     }
 
     /** Gets be called on the following structure:
@@ -54,11 +54,11 @@ public class XMLHandler extends DefaultHandler{
     @Override
     public void characters(char ch[], int start, int length) {
         String tmp = new String(ch, start, length);
-    	if (this.merge) {
-    		this.XMLData.set(this.XMLData.size()-1, this.XMLData.get(this.XMLData.size()-1) + tmp);
-    	} else {
-    		this.XMLData.add(tmp);
-    	}
-    	this.merge = true;
+      if (this.merge) {
+        this.XMLData.set(this.XMLData.size()-1, this.XMLData.get(this.XMLData.size()-1) + tmp);
+      } else {
+        this.XMLData.add(tmp);
+      }
+      this.merge = true;
     }
 }

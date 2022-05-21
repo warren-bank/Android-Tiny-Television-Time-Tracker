@@ -7,13 +7,13 @@ import android.widget.ImageView;
 
 public class IconView extends ImageView {
 
-	public IconView (Context context, AttributeSet attrs) {
-		super(context, attrs);
-	}
-	
-	@Override
-	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-		int newWidth = (int) (.64 * ((View) getParent()).getMeasuredHeight());
-		super.onMeasure(MeasureSpec.makeMeasureSpec(newWidth, MeasureSpec.EXACTLY), heightMeasureSpec);
-	}
+  public IconView (Context context, AttributeSet attrs) {
+    super(context, attrs);
+  }
+  
+  @Override
+  protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+    int newWidth = (int) (.64 * ((View) getParent()).getMeasuredHeight());
+    super.onMeasure(MeasureSpec.makeMeasureSpec(newWidth, MeasureSpec.EXACTLY), heightMeasureSpec);
+  }
 }

@@ -275,7 +275,7 @@ public class Serie {
             if(TextUtils.isEmpty(this.overview))
               this.overview = "";
             if(TextUtils.isEmpty(this.serieName))
-            	this.serieName = "";
+              this.serieName = "";
             SQLS.execQuery("INSERT INTO series (id, serieId, language, serieName, banner, overview, "+
                            "firstAired, imdbId, zap2ItId, airsDayOfWeek, airsTime, contentRating, "+
                            "network, rating, runtime, status, fanart, lastUpdated, poster, "+
