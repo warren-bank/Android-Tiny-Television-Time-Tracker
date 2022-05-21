@@ -231,18 +231,7 @@ public class DroidShows extends ListActivity
 		filterNetworks = sharedPrefs.getBoolean(FILTER_NETWORKS_NAME, false);
 		String networksStr = sharedPrefs.getString(NETWORKS_NAME, "");
 
-		// Update database
-		updateDS = new Update(db);
-		if (updateDS.needsUpdate()) {
-			backup(false, backupFolder);
-			if (updateDS.updateDroidShows())
-				db.updateShowStats();
-			else {
-				String error = getString(R.string.messages_error_dbupdate);
-				Log.e(SQLiteStore.TAG, error);
-				Toast.makeText(getApplicationContext(), error, Toast.LENGTH_LONG).show();
-			}
-		}
+		updateDatabase();
 
 		if (!networksStr.isEmpty())
 			networks = new ArrayList<String>(Arrays.asList(networksStr.replace("[", "").replace("]", "").split(", ")));
@@ -271,6 +260,23 @@ public class DroidShows extends ListActivity
 		keyboard = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 		padding = (int) (6 * (getApplicationContext().getResources().getDisplayMetrics().densityDpi / 160f));
 		vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+	}
+
+	private void updateDatabase() {
+		updateDS = new Update(db);
+		Log.d(SQLiteStore.TAG, "Database update routine");
+		if (updateDS.needsUpdate()) {
+			Log.d(SQLiteStore.TAG, "Database needs update");
+			backup(false, backupFolder);
+			if (updateDS.updateDroidShows()) {
+				db.updateShowStats();
+				Log.d(SQLiteStore.TAG, "Database updated");
+			} else {
+				String error = getString(R.string.messages_error_dbupdate);
+				Log.e(SQLiteStore.TAG, error);
+				Toast.makeText(getApplicationContext(), error, Toast.LENGTH_LONG).show();
+			}
+		}
 	}
 
 	private void setFastScroll() {
@@ -805,7 +811,7 @@ public class DroidShows extends ListActivity
 			File destination = new File(getApplicationInfo().dataDir +"/databases", "DroidShows.db");
 			try {
 				copy(source, destination);
-				updateDS.updateDroidShows();
+				updateDatabase();
 				File thumbs[] = new File(getApplicationContext().getFilesDir().getAbsolutePath() +"/thumbs/banners/posters").listFiles();
 				if (thumbs != null)
 					for (File thumb : thumbs)
@@ -854,30 +860,32 @@ public class DroidShows extends ListActivity
 	public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
 		super.onCreateContextMenu(menu, v, menuInfo);
 		AdapterContextMenuInfo info = (AdapterContextMenuInfo) menuInfo;
+		TVShowItem serie = seriesAdapter.getItem(info.position);
 		if (logMode)
 			menu.add(0, VIEW_SEASONS_CONTEXT, VIEW_SEASONS_CONTEXT, getString(R.string.messages_seasons));
 		menu.add(0, VIEW_SERIEDETAILS_CONTEXT, VIEW_SERIEDETAILS_CONTEXT, getString(R.string.menu_context_view_serie_details));
-		if (!logMode && seriesAdapter.getItem(info.position).getUnwatched() > 0)
+		if (!logMode && serie.getUnwatched() > 0)
 			menu.add(0, VIEW_EPISODEDETAILS_CONTEXT, VIEW_EPISODEDETAILS_CONTEXT, getString(R.string.messsages_view_ep_details));
 		menu.add(0, EXT_RESOURCES_CONTEXT, EXT_RESOURCES_CONTEXT, getString(R.string.menu_context_ext_resources));
-		if (!logMode && seriesAdapter.getItem(info.position).getUnwatchedAired() > 0)
+		if (!logMode && serie.getUnwatchedAired() > 0)
 			menu.add(0, MARK_NEXT_EPISODE_AS_SEEN_CONTEXT, MARK_NEXT_EPISODE_AS_SEEN_CONTEXT, getString(R.string.menu_context_mark_next_episode_as_seen));
 		if (!logMode) {
 			menu.add(0, TOGGLE_ARCHIVED_CONTEXT, TOGGLE_ARCHIVED_CONTEXT, getString(R.string.menu_archive));
 			menu.add(0, PIN_CONTEXT, PIN_CONTEXT, getString(R.string.menu_context_pin));
 			menu.add(0, DELETE_CONTEXT, DELETE_CONTEXT, getString(R.string.menu_context_delete));
 			menu.add(0, UPDATE_CONTEXT, UPDATE_CONTEXT, getString(R.string.menu_context_update));
-			menu.add(0, SYNOPSIS_LANGUAGE, SYNOPSIS_LANGUAGE, getString(R.string.dialog_change_language) +" ("+ seriesAdapter.getItem(info.position).getLanguage() +")");
-		    if (seriesAdapter.getItem(info.position).getPassiveStatus())
+			menu.add(0, SYNOPSIS_LANGUAGE, SYNOPSIS_LANGUAGE, getString(R.string.dialog_change_language) +" ("+ serie.getLanguage() +")");
+		    if (serie.getPassiveStatus())
 		    	menu.findItem(TOGGLE_ARCHIVED_CONTEXT).setTitle(R.string.menu_unarchive);
-		    if (pinnedShows.contains(seriesAdapter.getItem(info.position).getSerieId()))
+		    if (pinnedShows.contains(serie.getSerieId()))
 		    	menu.findItem(PIN_CONTEXT).setTitle(R.string.menu_context_unpin);
 		}
-		menu.setHeaderTitle(!logMode ? seriesAdapter.getItem(info.position).getName() : seriesAdapter.getItem(info.position).getEpisodeName());
+		menu.setHeaderTitle(!logMode ? serie.getName() : serie.getEpisodeName());
 	}
 
 	public boolean onContextItemSelected(MenuItem item) {
 		final AdapterContextMenuInfo info = (AdapterContextMenuInfo) item.getMenuInfo();
+		final TVShowItem serie = seriesAdapter.getItem(info.position);
 		switch(item.getItemId()) {
 			case MARK_NEXT_EPISODE_AS_SEEN_CONTEXT :
 				markNextEpSeen(info.position);
@@ -886,16 +894,16 @@ public class DroidShows extends ListActivity
 				serieSeasons(info.position);
 				return true;
 			case VIEW_SERIEDETAILS_CONTEXT :
-				showDetails(seriesAdapter.getItem(info.position).getSerieId());
+				showDetails(serie.getSerieId());
 				return true;
 			case VIEW_EPISODEDETAILS_CONTEXT :
 				episodeDetails(info.position);
 				return true;
 			case EXT_RESOURCES_CONTEXT :
-				extResources(seriesAdapter.getItem(info.position).getExtResources(), info.position);
+				extResources(serie.getExtResources(), info.position);
 				return true;
 			case UPDATE_CONTEXT :
-				updateSerie(seriesAdapter.getItem(info.position), info.position);
+				updateSerie(serie, info.position);
 				return true;
 			case SYNOPSIS_LANGUAGE :
 				CharSequence[] langList = Arrays.copyOfRange(getResources().getStringArray(R.array.languages), 1, getResources().getStringArray(R.array.languages).length);
@@ -904,14 +912,13 @@ public class DroidShows extends ListActivity
 					.setItems(langList, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int item) {
 							String langCode = getResources().getStringArray(R.array.langcodes)[item + 1];
-							updateSerie(seriesAdapter.getItem(info.position), langCode, info.position);
+							updateSerie(serie, langCode, info.position);
 						}
 					})
 					.show();
 				return true;
 			case TOGGLE_ARCHIVED_CONTEXT :
 				asyncInfo.cancel(true);
-				TVShowItem serie = seriesAdapter.getItem(info.position);
 				boolean passiveStatus = serie.getPassiveStatus();
 				db.updateSerieStatus(serie.getSerieId(), (passiveStatus ? 0 : 1));
 				String message = serie.getName() +" "+
@@ -926,7 +933,7 @@ public class DroidShows extends ListActivity
 				asyncInfo.execute();
 				return true;
 			case PIN_CONTEXT :
-				String serieId = seriesAdapter.getItem(info.position).getSerieId();
+				String serieId = serie.getSerieId();
 				if (pinnedShows.contains(serieId))
 					pinnedShows.remove(serieId);
 				else
@@ -935,10 +942,8 @@ public class DroidShows extends ListActivity
 				return true;
 			case DELETE_CONTEXT :
 				asyncInfo.cancel(true);
-				final int position = info.position;
 				final Runnable deleteserie = new Runnable() {
 					public void run() {
-						TVShowItem serie = seriesAdapter.getItem(position);
 						String sname = serie.getName();
 						String toastMsg = getString(R.string.messages_deleted);
 						if (!db.deleteSerie(serie.getSerieId()))
@@ -954,7 +959,7 @@ public class DroidShows extends ListActivity
 				};
 				AlertDialog.Builder alertDialog = new AlertDialog.Builder(this)
 					.setTitle(R.string.dialog_title_delete)
-					.setMessage(String.format(getString(R.string.dialog_delete), seriesAdapter.getItem(info.position).getName()))
+					.setMessage(String.format(getString(R.string.dialog_delete), serie.getName()))
 					.setIcon(android.R.drawable.ic_dialog_alert)
 					.setCancelable(false)
 					.setPositiveButton(getString(R.string.dialog_ok), new DialogInterface.OnClickListener() {
@@ -1293,8 +1298,9 @@ public class DroidShows extends ListActivity
 					e.printStackTrace();
 					return;
 				}
-				File posterThumbFile = new File(posterThumbPath);
+				File posterThumbFile = null;
 				try {
+					posterThumbFile = new File(posterThumbPath);
 					FileUtils.copyURLToFile(posterURL, posterThumbFile);
 				} catch (IOException e) {
 					Log.e(SQLiteStore.TAG, "Could not download poster: "+ posterURL);
