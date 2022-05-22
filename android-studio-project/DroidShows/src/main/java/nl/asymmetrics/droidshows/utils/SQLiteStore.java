@@ -140,16 +140,16 @@ public class SQLiteStore extends SQLiteOpenHelper
       Log.e(TAG, e.getMessage());
     }
     if (c != null) c.close();
-    if (!tmpNextEpisode.equals("-1"))
+    if ((tmpNextEpisode != null) && !tmpNextEpisode.isEmpty() && !tmpNextEpisode.equals("-1"))
       nextEpisode = tmpNextEpisode;
-    if (!tmpNextAir.isEmpty() && !tmpNextAir.equals("null")) {
+    if ((tmpNextAir != null) && !tmpNextAir.isEmpty() && !tmpNextAir.equals("null")) {
       try {
         nextAir = SQLiteStore.dateFormat.parse(tmpNextAir);
       } catch (ParseException e) {
         e.printStackTrace();
       }
     }
-    if (!tmpUnwatchedLastAired.isEmpty() && !tmpUnwatchedLastAired.equals("null")) {
+    if ((tmpUnwatchedLastAired != null) && !tmpUnwatchedLastAired.isEmpty() && !tmpUnwatchedLastAired.equals("null")) {
       try {
         unwatchedLastAired = SQLiteStore.dateFormat.parse(tmpUnwatchedLastAired);
       } catch (ParseException e) {
