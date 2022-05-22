@@ -13,6 +13,10 @@
 <string name="menu_add_serie">Añadir una serie</string>
 <string name="menu_update">Actualizar las series</string>
 <string name="menu_search">Buscar</string>
+<string name="menu_sort">Programas de clasificación</string>
+<string name="menu_sort_by_name">Ordenar por nombre\n(ascendente: orden alfabético)</string>
+<string name="menu_sort_by_unseen_count">Ordenar por recuento de episodios no vistos transmitidos\n(descendente: la mayoría de los primeros)</string>
+<string name="menu_sort_by_unseen_date">Ordenar por fecha de episodio no visto recientemente emitido\n(descendente: el más nuevo primero)</string>
 <string name="menu_about">Opciones</string>
 <string name="menu_exit">Salir</string>
 <string name="menu_context_update">Actualizar</string>
