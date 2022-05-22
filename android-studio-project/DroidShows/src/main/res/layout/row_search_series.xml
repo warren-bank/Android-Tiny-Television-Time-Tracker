@@ -1,5 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?> <!-- Guillaume: (text="" & weight necessary) -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/LinearLayout01" android:layout_width="fill_parent" android:layout_height="?android:attr/listPreferredItemHeight" android:orientation="horizontal">
-  <TextView android:id="@+id/seriename" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1" android:ellipsize="end" android:gravity="center_vertical" android:padding="6dp" android:lines="2" android:textSize="16sp" android:textStyle="bold"/>
-  <CheckedTextView android:id="@+id/addserieBtn" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_gravity="center_vertical" android:padding="6dp" android:layout_weight="0" android:checkMark="@drawable/add" android:focusable="false" android:focusableInTouchMode="false" android:gravity="center" android:text=""/>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/LinearLayout01"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:orientation="horizontal"
+  android:paddingVertical="2dp"
+  android:paddingHorizontal="6dp">
+
+  <TextView
+    android:id="@+id/seriename"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:ellipsize="end"
+    android:layout_gravity="center_vertical"
+    android:gravity="left"
+    android:paddingRight="2dp"
+    android:textSize="16sp"
+    android:textStyle="bold"/>
+
+  <CheckedTextView
+    android:id="@+id/addserieBtn"
+    android:layout_width="wrap_content"
+    android:layout_height="75dp"
+    android:layout_weight="0"
+    android:layout_gravity="center_vertical"
+    android:gravity="center"
+    android:checkMark="@drawable/add"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:text=""/>
+
 </LinearLayout>
