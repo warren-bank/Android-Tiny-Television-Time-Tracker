@@ -13,8 +13,6 @@
 <string name="menu_add_serie">Serie toevoegen</string>
 <string name="menu_update">Series bijwerken</string>
 <string name="menu_search">Zoeken</string>
-<string name="menu_sort_by_name">Sorteren op naam</string>
-<string name="menu_sort_by_unseen">Sorteren op datum</string>
 <string name="menu_about">Opties</string>
 <string name="menu_exit">Afsluiten</string>
 <string name="menu_context_update">Bijwerken</string>

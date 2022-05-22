@@ -13,8 +13,6 @@
 <string name="menu_add_serie">Добавить сериал</string>
 <string name="menu_update">Обновить</string>
 <string name="menu_search">Найти</string>
-<string name="menu_sort_by_name">В алфавитном порядке</string>
-<string name="menu_sort_by_unseen">Сначала просмотренные</string>
 <string name="menu_about">Настройки</string>
 <string name="menu_exit">Выход</string>
 <string name="menu_context_update">Обновить</string>

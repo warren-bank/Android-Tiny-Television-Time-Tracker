@@ -9,7 +9,7 @@
 \n\nIcon is a mix of iconeasy.com/icon/tv-shows-2-icon (Thrasos Varnava) and wallalay.com/wallpapers-for-android-67-177682-desktop-background.html (Taenggo)
 \nMaterial icon by Listy2021 and ltGuillaume (XDA)</string>
 <string-array name="languages">
-    <item>All</item>
+  <item>All</item>
   <item> עברית</item>
   <item>čeština</item>
   <item>Dansk</item>
@@ -61,4 +61,9 @@
   <item>ja</item>
 </string-array>
 <string name="messages_error_dbupdate">Database error while updating</string>
+<string-array name="menu_sort_options">
+  <item>@string/menu_sort_by_name</item>
+  <item>@string/menu_sort_by_unseen_count</item>
+  <item>@string/menu_sort_by_unseen_date</item>
+</string-array>
 </resources>

@@ -13,19 +13,20 @@ public class TVShowItem {
         private int snumber;
         private String nextEpisode;
         private Date nextAir;
-        private boolean passiveStatus;
+        private Date unwatchedLastAired;
         private int unwatchedAired;
         private int unwatched;
+        private boolean passiveStatus;
         private String showStatus;
         private String extResources;
         private String episodeId;
         private String episodeName;
         private String episodeSeen;
 
-        public TVShowItem(String serieid, String language, String icon, Drawable dicon, String
-                          name, int snumber, String nextEpisode, Date nextAir,
-                          int unwatchedAired, int unwatched, boolean passiveStatus,
-                          String showStatus, String extResources) {
+        public TVShowItem(String serieid, String language, String icon, Drawable dicon, String name,
+                          int snumber, String nextEpisode, Date nextAir,
+                          Date unwatchedLastAired, int unwatchedAired, int unwatched,
+                          boolean passiveStatus, String showStatus, String extResources) {
                 this.serieid = serieid;
                 this.language = language;
                 this.icon = icon;
@@ -34,6 +35,7 @@ public class TVShowItem {
                 this.snumber = snumber;
                 this.nextEpisode = nextEpisode;
                 this.nextAir = nextAir;
+                this.unwatchedLastAired = unwatchedLastAired;
                 this.unwatchedAired = unwatchedAired;
                 this.unwatched = unwatched;
                 this.passiveStatus = passiveStatus;
@@ -103,6 +105,14 @@ public class TVShowItem {
 
         public void setUnwatchedAired(int unwatchedAired) {
                 this.unwatchedAired = unwatchedAired;
+        }
+
+        public Date getUnwatchedLastAired() {
+          return this.unwatchedLastAired;
+        }
+
+        public void setUnwatchedLastAired(Date unwatchedLastAired) {
+                this.unwatchedLastAired = unwatchedLastAired;
         }
 
         public boolean getPassiveStatus() {

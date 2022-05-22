@@ -142,7 +142,8 @@ public class DroidShows extends ListActivity
   private static boolean excludeSeen;
   private static final String SORT_PREF_NAME = "sort";
   private static final int SORT_BY_NAME = 0;
-  private static final int SORT_BY_UNSEEN = 1;
+  private static final int SORT_BY_UNSEEN_COUNT = 1;
+  private static final int SORT_BY_UNSEEN_DATE = 2;
   private static int sortOption;
   private static final String LATEST_SEASON_PREF_NAME = "last_season";
   private static final int UPDATE_ALL_SEASONS = 0;
@@ -334,7 +335,7 @@ public class DroidShows extends ListActivity
     menu.add(0, UNDO_MENU_ITEM, 0, getString(R.string.menu_undo)).setIcon(android.R.drawable.ic_menu_revert);
     menu.add(0, FILTER_MENU_ITEM, 0, getString(R.string.menu_filter)).setIcon(android.R.drawable.ic_menu_view);
     menu.add(0, SEEN_MENU_ITEM, 0, "").setIcon(android.R.drawable.ic_menu_myplaces);
-    menu.add(0, SORT_MENU_ITEM, 0, "");
+    menu.add(0, SORT_MENU_ITEM, 0, getString(R.string.menu_sort)).setIcon(android.R.drawable.ic_menu_sort_alphabetically);
     menu.add(0, TOGGLE_ARCHIVE_MENU_ITEM, 0, "");
     menu.add(0, LOG_MODE_ITEM, 0, getString(R.string.menu_log)).setIcon(android.R.drawable.ic_menu_agenda);
     menu.add(0, SEARCH_MENU_ITEM, 0, getString(R.string.menu_search)).setIcon(android.R.drawable.ic_menu_search);
@@ -411,15 +412,6 @@ public class DroidShows extends ListActivity
         .setTitle(R.string.menu_show_archive);
     }
     menu.findItem(SEEN_MENU_ITEM).setTitle(excludeSeen ? R.string.menu_include_seen : R.string.menu_exclude_seen);
-    if (sortOption == SORT_BY_UNSEEN) {
-      menu.findItem(SORT_MENU_ITEM)
-        .setIcon(android.R.drawable.ic_menu_sort_alphabetically)
-        .setTitle(R.string.menu_sort_by_name);
-    } else {
-      menu.findItem(SORT_MENU_ITEM)
-        .setIcon(android.R.drawable.ic_menu_sort_by_size)
-        .setTitle(R.string.menu_sort_by_unseen);
-    }
     return super.onPrepareOptionsMenu(menu);
   }
 
@@ -439,7 +431,7 @@ public class DroidShows extends ListActivity
         toggleSeen();
         break;
       case SORT_MENU_ITEM :
-        toggleSort();
+        sortDialog();
         break;
       case FILTER_MENU_ITEM :
         filterDialog();
@@ -478,16 +470,41 @@ public class DroidShows extends ListActivity
     listView.post(updateListView);
   }
 
-  private void toggleSort() {
-    sortOption ^= 1;
-    listView.post(updateListView);
-  }
-
   private void toggleLogMode() {
     logMode ^= true;
     getSeries();
     removeEpisodeFromLog = "";
     listView.setSelection(0);
+  }
+
+  private void sortDialog() {
+    if (m_AlertDlg != null) {
+      m_AlertDlg.dismiss();
+    }
+    m_AlertDlg = new AlertDialog.Builder(this)
+      .setTitle(R.string.menu_sort)
+      .setIcon(Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP ? R.drawable.icon : 0)
+      .setSingleChoiceItems(R.array.menu_sort_options, sortOption, null)
+      .setPositiveButton(getString(R.string.dialog_ok), new DialogInterface.OnClickListener() {
+        public void onClick(DialogInterface dialog, int which) {
+          m_AlertDlg.dismiss();
+
+          try {
+            int selected_option_index = m_AlertDlg.getListView().getCheckedItemPosition();
+            if ((sortOption != selected_option_index) && (selected_option_index >= 0)) {
+              sortOption = selected_option_index;
+              listView.post(updateListView);
+            }
+          }
+          catch(Exception e) {}
+        }
+      })
+      .setNegativeButton(getString(R.string.dialog_cancel), new DialogInterface.OnClickListener() {
+        public void onClick(DialogInterface dialog, int id) {
+          m_AlertDlg.dismiss();
+        }
+      })
+      .show();
   }
 
   private void filterDialog() {
@@ -1553,27 +1570,86 @@ public class DroidShows extends ListActivity
       else if (pinnedShows.contains(object2.getSerieId()) && !pinnedShows.contains(object1.getSerieId()))
         return 1;
 
-      if (sortOption == SORT_BY_UNSEEN) {
-        int unwatchedAired1 = object1.getUnwatchedAired();
-        int unwatchedAired2 = object2.getUnwatchedAired();
-        if (unwatchedAired1 == unwatchedAired2) {
-          Date nextAir1 = object1.getNextAir();
-          Date nextAir2 = object2.getNextAir();
-          if (nextAir1 == null && nextAir2 == null)
-            return object1.getName().compareToIgnoreCase(object2.getName());
-          if (nextAir1 == null)
-            return 1;
-          if (nextAir2 == null)
-            return -1;
-          return nextAir1.compareTo(nextAir2);
+      switch(sortOption) {
+        case SORT_BY_UNSEEN_COUNT: {
+          int unwatchedAired1 = object1.getUnwatchedAired();
+          int unwatchedAired2 = object2.getUnwatchedAired();
+          int compared;
+
+          compared = ((Integer) unwatchedAired2).compareTo(unwatchedAired1); // descending
+
+          if (compared == 0) {
+            // counts of unseen episodes are equal.
+            // perform a secondary sort that is ordered by the next air date (ascending: closest to air are shown first)
+
+            Date nextAir1 = object1.getNextAir();
+            Date nextAir2 = object2.getNextAir();
+
+            if ((nextAir1 == null) && (nextAir2 == null))
+              compared = 0;
+            else if (nextAir1 == null)
+              compared = 1;
+            else if (nextAir2 == null)
+              compared = -1;
+            else
+              compared = nextAir1.compareTo(nextAir2); // ascending
+
+            if (compared == 0) {
+              // dates for airing of next episode are equal.
+              // perform a third (final) sort that is ordered by the name of the show (ascending: alphabetic order)
+
+              compared = object1.getName().compareToIgnoreCase(object2.getName());
+            }
+          }
+
+          return compared;
         }
-        if (unwatchedAired1 == 0)
-          return 1;
-        if (unwatchedAired2 == 0)
-          return -1;
-        return ((Integer) unwatchedAired2).compareTo(unwatchedAired1);
-      } else {
-        return object1.getName().compareToIgnoreCase(object2.getName());
+
+        case SORT_BY_UNSEEN_DATE: {
+          Date unwatchedLastAired1 = object1.getUnwatchedLastAired();
+          Date unwatchedLastAired2 = object2.getUnwatchedLastAired();
+          int compared;
+
+          if ((unwatchedLastAired1 == null) && (unwatchedLastAired2 == null))
+            compared = 0;
+          else if (unwatchedLastAired1 == null)
+            compared = 1;
+          else if (unwatchedLastAired2 == null)
+            compared = -1;
+          else
+            compared = unwatchedLastAired2.compareTo(unwatchedLastAired1); // descending
+
+          if (compared == 0) {
+            // dates of most recently aired unwatched episode are equal.
+            // perform a secondary sort that is ordered by the next air date (ascending: closest to air are shown first)
+
+            Date nextAir1 = object1.getNextAir();
+            Date nextAir2 = object2.getNextAir();
+
+            if ((nextAir1 == null) && (nextAir2 == null))
+              compared = 0;
+            else if (nextAir1 == null)
+              compared = 1;
+            else if (nextAir2 == null)
+              compared = -1;
+            else
+              compared = nextAir1.compareTo(nextAir2); // ascending
+
+            if (compared == 0) {
+              // dates for airing of next episode are equal.
+              // perform a third (final) sort that is ordered by the name of the show (ascending: alphabetic order)
+
+              compared = object1.getName().compareToIgnoreCase(object2.getName());
+            }
+          }
+
+          return compared;
+        }
+
+        case SORT_BY_NAME:
+        default: {
+          return object1.getName().compareToIgnoreCase(object2.getName());
+        }
       }
     }
   };

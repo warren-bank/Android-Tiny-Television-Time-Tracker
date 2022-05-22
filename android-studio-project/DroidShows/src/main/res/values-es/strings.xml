@@ -13,8 +13,6 @@
 <string name="menu_add_serie">Añadir una serie</string>
 <string name="menu_update">Actualizar las series</string>
 <string name="menu_search">Buscar</string>
-<string name="menu_sort_by_name">Ordenar por nombre</string>
-<string name="menu_sort_by_unseen">Ordenar por no visto</string>
 <string name="menu_about">Opciones</string>
 <string name="menu_exit">Salir</string>
 <string name="menu_context_update">Actualizar</string>

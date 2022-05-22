@@ -116,23 +116,24 @@ public class SQLiteStore extends SQLiteOpenHelper
 
   /* Get Methods */
   public TVShowItem createTVShowItem(String serieId) {
-    String name = "", language = "", tmpPoster = "", showStatus = "", tmpNextEpisode = "", nextEpisode = "", tmpNextAir = "", extResources = "";
+    String name = "", language = "", tmpPoster = "", showStatus = "", tmpUnwatchedLastAired = "", tmpNextEpisode = "", nextEpisode = "", tmpNextAir = "", extResources = "";
     int tmpStatus = 0, seasonCount = 0, unwatched = 0, unwatchedAired = 0;
-    Date nextAir = null;
-    Cursor c = Query("SELECT serieName, language, posterThumb, status, passiveStatus, seasonCount, unwatchedAired, unwatched, nextEpisode, nextAir, extResources FROM series WHERE id = '" + serieId + "'");
+    Date nextAir = null, unwatchedLastAired = null;
+    Cursor c = Query("SELECT language, posterThumb, serieName, seasonCount, nextEpisode, nextAir, unwatchedLastAired, unwatchedAired, unwatched, passiveStatus, status, extResources FROM series WHERE id = '" + serieId + "'");
     try {
       c.moveToFirst();
       if (c != null && c.isFirst()) {
-        name = c.getString(c.getColumnIndex("serieName"));
         language = c.getString(c.getColumnIndex("language"));
         tmpPoster = c.getString(c.getColumnIndex("posterThumb"));
-        showStatus = c.getString(c.getColumnIndex("status"));
-        tmpStatus = c.getInt(c.getColumnIndex("passiveStatus"));
+        name = c.getString(c.getColumnIndex("serieName"));
         seasonCount = c.getInt(c.getColumnIndex("seasonCount"));
-        unwatchedAired = c.getInt(c.getColumnIndex("unwatchedAired"));
-        unwatched = c.getInt(c.getColumnIndex("unwatched"));
         tmpNextEpisode = c.getString(c.getColumnIndex("nextEpisode"));
         tmpNextAir = c.getString(c.getColumnIndex("nextAir"));
+        tmpUnwatchedLastAired = c.getString(c.getColumnIndex("unwatchedLastAired"));
+        unwatchedAired = c.getInt(c.getColumnIndex("unwatchedAired"));
+        unwatched = c.getInt(c.getColumnIndex("unwatched"));
+        tmpStatus = c.getInt(c.getColumnIndex("passiveStatus"));
+        showStatus = c.getString(c.getColumnIndex("status"));
         extResources = c.getString(c.getColumnIndex("extResources"));
       }
     } catch (SQLiteException e) {
@@ -148,8 +149,15 @@ public class SQLiteStore extends SQLiteOpenHelper
         e.printStackTrace();
       }
     }
+    if (!tmpUnwatchedLastAired.isEmpty() && !tmpUnwatchedLastAired.equals("null")) {
+      try {
+        unwatchedLastAired = SQLiteStore.dateFormat.parse(tmpUnwatchedLastAired);
+      } catch (ParseException e) {
+        e.printStackTrace();
+      }
+    }
     boolean status = (tmpStatus == 1);
-    TVShowItem tvsi = new TVShowItem(serieId, language, tmpPoster, null, name, seasonCount, nextEpisode, nextAir, unwatchedAired, unwatched, status, showStatus, extResources);
+    TVShowItem tvsi = new TVShowItem(serieId, language, /* icon= */ tmpPoster, /* Drawable dicon= */ null, name, seasonCount, nextEpisode, nextAir, unwatchedLastAired, unwatchedAired, unwatched, status, showStatus, extResources);
     return tvsi;
   }
 
@@ -497,6 +505,39 @@ public class SQLiteStore extends SQLiteOpenHelper
     if (c != null) c.close();
 //    Log.d(TAG, "serie="+serieId+" getEpsWatched="+ watched);
     return watched;
+  }
+
+  public String getEpUnwatchedLastAired(String serieId) {
+    String unwatchedLastAired = "null";
+    Cursor c = Query("SELECT firstAired FROM episodes WHERE serieId='"+ serieId
+      +"' AND seen=0 AND firstAired < '"+ today +"' AND firstAired <> ''"
+      + (DroidShows.includeSpecialsOption ? "" : " AND seasonNumber <> 0")
+      +" ORDER BY firstAired DESC LIMIT 1"
+    );
+    try {
+      c.moveToFirst();
+      if (c != null && c.isFirst()) {
+        String air_date = c.getString(0);
+        if ((air_date != null) && !air_date.equals("") && !air_date.equals("null")) {
+          unwatchedLastAired = air_date;
+        }
+      }
+    } catch (SQLiteException e) {
+      Log.e(TAG, e.getMessage());
+    }
+    if (c != null) c.close();
+    return unwatchedLastAired;
+  }
+
+  public Date getEpUnwatchedLastAiredDate(String serieId) {
+    Date unwatchedLastAiredDate = null;
+    String unwatchedLastAired = getEpUnwatchedLastAired(serieId);
+    if (!unwatchedLastAired.equals("null")) {
+      try {
+        unwatchedLastAiredDate = new SimpleDateFormat("yyyy-MM-dd").parse(unwatchedLastAired);
+      } catch (ParseException e) { e.printStackTrace(); }
+    }
+    return unwatchedLastAiredDate;
   }
 
   public int getEpsUnwatchedAired(String serieId) {
@@ -1038,7 +1079,7 @@ public class SQLiteStore extends SQLiteOpenHelper
   public void onCreate(SQLiteDatabase dbase) {
     try {
       dbase.execSQL("CREATE TABLE IF NOT EXISTS droidseries (version VARCHAR);");
-      dbase.execSQL("INSERT INTO droidseries (version) VALUES ('0.1.5-7G3');");
+      dbase.execSQL("INSERT INTO droidseries (version) VALUES ('0.1.5-7G4');");
       // tabela dos directors
       dbase.execSQL("CREATE TABLE IF NOT EXISTS directors (serieId VARCHAR, episodeId VARCHAR, director VARCHAR);");
       // tabela dos guestStars
@@ -1068,7 +1109,7 @@ public class SQLiteStore extends SQLiteOpenHelper
         +"network VARCHAR, rating VARCHAR, runtime VARCHAR, status VARCHAR, "
         +"fanart VARCHAR, lastUpdated VARCHAR, passiveStatus INTEGER DEFAULT 0, poster VARCHAR, "
         +"posterInCache VARCHAR, posterThumb VARCHAR, "
-        +"seasonCount INTEGER, unwatchedAired INTEGER, unwatched INTEGER, nextEpisode VARCHAR, nextAir VARCHAR, "
+        +"seasonCount INTEGER, unwatchedLastAired VARCHAR, unwatchedAired INTEGER, unwatched INTEGER, nextEpisode VARCHAR, nextAir VARCHAR, "
         +"extResources VARCHAR NOT NULL DEFAULT '');");
     } catch (SQLiteException e) {
       Log.e(TAG, e.getMessage());
@@ -1088,11 +1129,12 @@ public class SQLiteStore extends SQLiteOpenHelper
   
   public void updateShowStats(String serieId) {
     int seasonCount = getSeasonCount(serieId);
+    String unwatchedLastAired = getEpUnwatchedLastAired(serieId);
     int unwatchedAired = getEpsUnwatchedAired(serieId);
     int unwatched = getEpsUnwatched(serieId);
     NextEpisode nextEpisode = getNextEpisode(serieId);
     String nextEpisodeString = getNextEpisodeString(nextEpisode, DroidShows.showNextAiring && 0 < unwatchedAired && unwatchedAired < unwatched);
-    execQuery("UPDATE series SET seasonCount="+ seasonCount +", unwatchedAired="+ unwatchedAired +", unwatched="+ unwatched +", nextEpisode='"+ nextEpisodeString +"', nextAir='"+ nextEpisode.firstAired +"' WHERE id="+ serieId);
+    execQuery("UPDATE series SET seasonCount="+ seasonCount +", unwatchedLastAired="+ unwatchedLastAired +", unwatchedAired="+ unwatchedAired +", unwatched="+ unwatched +", nextEpisode='"+ nextEpisodeString +"', nextAir='"+ nextEpisode.firstAired +"' WHERE id="+ serieId);
   }
   
   public void updateToday(String newToday) {
