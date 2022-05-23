@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Melaksanakan sandar harian secara automatik</string>
 <string name="dialog_backup_versioning">Guna versioning untuk sandar</string>
+<string name="dialog_pull_to_update">Benarkan \"Tarik Untuk Kemaskini\" isyarat</string>
 <string name="dialog_backup">Sandaran</string>
 <string name="dialog_backup_done">Sandar pangkalan data selesai</string>
 <string name="dialog_backup_failed">Tidak boleh buat sandar!</string>

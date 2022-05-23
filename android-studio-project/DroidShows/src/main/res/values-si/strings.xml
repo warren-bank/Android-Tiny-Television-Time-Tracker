@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">දෛනික පසුපසට ස්වයංක්රීයව සිදු කරන්න</string>
 <string name="dialog_backup_versioning">Backups සඳහා versioning භාවිත කරන්න</string>
+<string name="dialog_pull_to_update">\"යාවත්කාලීන කිරීම\" යන හැසිරීම් සක්රීය කරන්න</string>
 <string name="dialog_backup">පසුපසින්ම</string>
 <string name="dialog_backup_done">දත්ත උපස්ථ කිරීම සම්පූර්ණයි</string>
 <string name="dialog_backup_failed">උපස්ථ කිරීමට නොහැකි විය!</string>

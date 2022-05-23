@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">स्वचालित रूपमा दैनिक ब्याकअप सम्पादन गर्नुहोस्</string>
 <string name="dialog_backup_versioning">ब्याकअपका लागि भर्सन प्रयोग गर्नुहोस्</string>
+<string name="dialog_pull_to_update">\"अद्यावधिक गर्नुहोस्\" सङ्केत सक्षम पार्नुहोस्</string>
 <string name="dialog_backup">जगेडा</string>
 <string name="dialog_backup_done">डाटाबेस जगेडा पूरा भयो</string>
 <string name="dialog_backup_failed">जगेडा प्रदर्शन गर्न असक्षम!</string>

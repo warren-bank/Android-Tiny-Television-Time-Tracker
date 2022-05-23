@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">自动执行每日备份</string>
 <string name="dialog_backup_versioning">对备份使用版本控制</string>
+<string name="dialog_pull_to_update">启用 \"拉出更新 \" 手势</string>
 <string name="dialog_backup">备份</string>
 <string name="dialog_backup_done">数据库备份已完成</string>
 <string name="dialog_backup_failed">无法执行备份!</string>

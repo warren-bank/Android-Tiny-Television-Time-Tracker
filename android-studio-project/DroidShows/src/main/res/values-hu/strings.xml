@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Naponta mentések automatikus végrehajtása</string>
 <string name="dialog_backup_versioning">Verziókövetés használata mentésekhez</string>
+<string name="dialog_pull_to_update">\"Frissítés frissítése\" gesztus engedélyezése</string>
 <string name="dialog_backup">Mentés</string>
 <string name="dialog_backup_done">Adatbázis mentése befejeződött</string>
 <string name="dialog_backup_failed">A mentés nem hajtható végre!</string>

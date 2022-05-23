@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Suorita päivittäiset varmuuskopiot automaattisesti</string>
 <string name="dialog_backup_versioning">Käytä versiointia varmuuskopioihin</string>
+<string name="dialog_pull_to_update">Ota käyttöön \"vedä päivitys\" ele</string>
 <string name="dialog_backup">Backup</string>
 <string name="dialog_backup_done">Tietokannan varmistuskopiointi</string>
 <string name="dialog_backup_failed">Varmistuskopiointi ei onnistu!</string>

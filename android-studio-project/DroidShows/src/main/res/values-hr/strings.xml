@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Automatski izvodi dnevna sigurnosna kopiranja</string>
 <string name="dialog_backup_versioning">Koristi verzioniranje za sigurnosne kopije</string>
+<string name="dialog_pull_to_update">Omogući gestu \"Povuci za ažuriranje\"</string>
 <string name="dialog_backup">Sigurnosno kopiranje</string>
 <string name="dialog_backup_done">Sigurnosna kopija baze podataka dovršena</string>
 <string name="dialog_backup_failed">Ne može se izvesti sigurnosno kopiranje!</string>

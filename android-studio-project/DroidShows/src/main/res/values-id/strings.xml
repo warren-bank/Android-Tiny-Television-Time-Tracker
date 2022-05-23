@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Secara otomatis melakukan backup harian</string>
 <string name="dialog_backup_versioning">Gunakan versioning untuk backup</string>
+<string name="dialog_pull_to_update">Aktifkan gerakan \"Pull To Update\"</string>
 <string name="dialog_backup">Backup</string>
 <string name="dialog_backup_done">Cadangan basis data selesai</string>
 <string name="dialog_backup_failed">Tidak dapat melakukan backup!</string>

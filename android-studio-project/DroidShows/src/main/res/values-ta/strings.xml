@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">தானாகவே தினசரி பின்னணி செய்கிறது</string>
 <string name="dialog_backup_versioning">பின்னணிகளுக்கு வேறுபாட்டை பயன்படுத்து</string>
+<string name="dialog_pull_to_update">\"புதுப்பிக்கவும்\" குறிப்பை செயல்படுத்து</string>
 <string name="dialog_backup">பின்னணி</string>
 <string name="dialog_backup_done">தரவுத்தளம் காப்பு முடிந்தது</string>
 <string name="dialog_backup_failed">காப்பு செய்ய இயலவில்லை!</string>

@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Perfformio \' n awtomatig wrth gefn bob dydd</string>
 <string name="dialog_backup_versioning">Defnyddiwch veroneiddio ar gyfer eich cefn</string>
+<string name="dialog_pull_to_update">Galluogi \' r arwydd \"Pod To Diweddaru\"</string>
 <string name="dialog_backup">Wrth Gefn</string>
 <string name="dialog_backup_done">Cwblhawyd cronfa ddata wrth gefn</string>
 <string name="dialog_backup_failed">Methu cyflawni copi wrth gefn!</string>

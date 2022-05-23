@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">ప్రతిరోజూ బ్యాక్అప్లను స్వయంచాలితంగా నిర్వహించుము</string>
 <string name="dialog_backup_versioning">బ్యాకప్ కొరకు వర్షనింగ్ వుపయోగించుము</string>
+<string name="dialog_pull_to_update">\"Pull To Update\" జెస్టర్ ను చేతనము చేయుము</string>
 <string name="dialog_backup">బ్యాక్అప్</string>
 <string name="dialog_backup_done">డాటాబేస్ బ్యాకప్ పూర్తీ</string>
 <string name="dialog_backup_failed">బ్యాకప్ చేయలేకపొయాను!</string>

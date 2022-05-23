@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Automatski izvodimo dnevne kopije</string>
 <string name="dialog_backup_versioning">Koristite verzioniranje za sigurnosna kopiranja</string>
+<string name="dialog_pull_to_update">Omogući \"Povuci za ažuriranje\" gesta.</string>
 <string name="dialog_backup">Pojačanje.</string>
 <string name="dialog_backup_done">Baza podataka je završena.</string>
 <string name="dialog_backup_failed">Ne mogu da izvršim podršku.!</string>

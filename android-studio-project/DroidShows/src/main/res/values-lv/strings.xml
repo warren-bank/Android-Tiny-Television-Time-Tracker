@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Automātiski veikt ikdienas dublējumus</string>
 <string name="dialog_backup_versioning">Izmantot versioning backups</string>
+<string name="dialog_pull_to_update">Ieslēgt \"Pull To Update\" žestu</string>
 <string name="dialog_backup">Rezerves kopija</string>
 <string name="dialog_backup_done">Datu bāzes dublēšana pabeigta</string>
 <string name="dialog_backup_failed">Neizdevās veikt rezerves kopēšanu!</string>

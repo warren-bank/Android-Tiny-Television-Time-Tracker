@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">ביצוע אוטומטי של גיבויים יומיים</string>
 <string name="dialog_backup_versioning">שימוש בניהול גרסאות עבור גיבויים</string>
+<string name="dialog_pull_to_update">הפעלת מחווה \"משוך אל עדכון\"</string>
 <string name="dialog_backup">גיבוי</string>
 <string name="dialog_backup_done">גיבוי מסד הנתונים הושלם</string>
 <string name="dialog_backup_failed">לא ניתן לבצע גיבוי!</string>

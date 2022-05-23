@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Аутоматски обавља свакодневне резервне копије</string>
 <string name="dialog_backup_versioning">Користи креирање верзија за резервне копије</string>
+<string name="dialog_pull_to_update">Омогући \"Повуци за ажурирање\"</string>
 <string name="dialog_backup">Резерва</string>
 <string name="dialog_backup_done">Резервна копија базе података</string>
 <string name="dialog_backup_failed">Не могу да извршим подршку!</string>

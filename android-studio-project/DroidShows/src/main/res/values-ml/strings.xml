@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">ദിവസേന ബാക്കപ്പുകള് സ്വയം നടത്തുക</string>
 <string name="dialog_backup_versioning">ബാക്കപ്പുകള്ക്കായി versioning ഉപയോഗിക്കുക</string>
+<string name="dialog_pull_to_update">\"പുതുക്കല് പരിഷ്കരിക്കുന്നതിനായി\" സജ്ജമാക്കുക</string>
 <string name="dialog_backup">ബാക്കപ്പ്</string>
 <string name="dialog_backup_done">ഡാറ്റാബേസ് പിന്തുണയുള്ള</string>
 <string name="dialog_backup_failed">ബാക്കപ്പ് ചെയ്യാന് കഴിഞ്ഞില്ല!</string>

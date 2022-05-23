@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">दैनिक बैकअप स्वतः करें (e)</string>
 <string name="dialog_backup_versioning">बैकअप्स के लिए प्रयोग का प्रयोग करें</string>
+<string name="dialog_pull_to_update">\"अद्यतन करने के लिए सक्षम\" संकेत सक्षम करें</string>
 <string name="dialog_backup">बैकअप</string>
 <string name="dialog_backup_done">डाटाबेस बैकअप पूरा किया गया</string>
 <string name="dialog_backup_failed">बैकअप करने में असमर्थ!</string>

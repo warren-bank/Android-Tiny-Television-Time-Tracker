@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Автоматично виконувати щоденні резервні</string>
 <string name="dialog_backup_versioning">Використовувати для створення резервних копій</string>
+<string name="dialog_pull_to_update">Увімкнути жест \"Pull To Update\"</string>
 <string name="dialog_backup">Резервування</string>
 <string name="dialog_backup_done">Створення резервної копії завершено</string>
 <string name="dialog_backup_failed">Неможливо виконати резервну копію!</string>

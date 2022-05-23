@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">日次バックアップの自動実行</string>
 <string name="dialog_backup_versioning">バックアップのバージョン管理を使用する</string>
+<string name="dialog_pull_to_update">ジェスチャーを「更新する」を有効にする</string>
 <string name="dialog_backup">バックアップ</string>
 <string name="dialog_backup_done">データベース・バックアップ完了</string>
 <string name="dialog_backup_failed">バックアップを実行できません!</string>

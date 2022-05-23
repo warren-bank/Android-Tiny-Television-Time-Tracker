@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Awtomatikament iwettqu backups kuljum</string>
 <string name="dialog_backup_versioning">Użu versjonar għall backups</string>
+<string name="dialog_pull_to_update">Jippermettu \"Iġbed Biex Taġġorna\" ġest</string>
 <string name="dialog_backup">Backup</string>
 <string name="dialog_backup_done">Bażi tad-dejta kompluta</string>
 <string name="dialog_backup_failed">Ma jistgħux iwettqu backup!</string>

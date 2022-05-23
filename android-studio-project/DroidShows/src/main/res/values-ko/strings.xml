@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">일별 백업 자동 수행</string>
 <string name="dialog_backup_versioning">백업에 대한 버전화 사용</string>
+<string name="dialog_pull_to_update">\"업데이트 받기\" 제스처 사용</string>
 <string name="dialog_backup">백업</string>
 <string name="dialog_backup_done">데이터베이스 백업 완료</string>
 <string name="dialog_backup_failed">백업을 수행할 수 없음!</string>

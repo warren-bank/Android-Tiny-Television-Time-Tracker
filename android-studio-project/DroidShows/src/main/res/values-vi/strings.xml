@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Tự động thực hiện backup hàng ngày</string>
 <string name="dialog_backup_versioning">Sử dụng lập phiên bản cho hô ̃ trợ</string>
+<string name="dialog_pull_to_update">Kích Động Cử Chỉ \"Kéo Để Cập Nhật\"</string>
 <string name="dialog_backup">Sao lưu</string>
 <string name="dialog_backup_done">Sao lưu cơ sở dữ</string>
 <string name="dialog_backup_failed">Không thể thực hiện sao lưu!</string>

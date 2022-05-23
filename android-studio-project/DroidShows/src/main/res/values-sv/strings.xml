@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Utför automatiskt dagliga säkerhetskopieringar</string>
 <string name="dialog_backup_versioning">Använd versionshantering för säkerhetskopiering</string>
+<string name="dialog_pull_to_update">Aktivera \"Dra för att uppdatera\"-gest</string>
 <string name="dialog_backup">Säkerhetskopia</string>
 <string name="dialog_backup_done">säkerhetskopiering av databas</string>
 <string name="dialog_backup_failed">Kan inte utföra säkerhetskopiering!</string>

@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">خود کار طریقے سے روزانہ بیک اپ انجام</string>
 <string name="dialog_backup_versioning">بیک اپ کے لیے عمودی طور پر استعمال کریں</string>
+<string name="dialog_pull_to_update">قابل تجدید \"پلس ٹو ڈیٹ\" اشارہ کریں</string>
 <string name="dialog_backup">بیک اپ</string>
 <string name="dialog_backup_done">ڈیٹا بیس بیک اپ مکمل</string>
 <string name="dialog_backup_failed">بیک اپ انجام دینے کے قابل!</string>

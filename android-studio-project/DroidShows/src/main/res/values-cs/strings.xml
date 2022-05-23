@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Automaticky provádět denní zálohování</string>
 <string name="dialog_backup_versioning">Použít správu verzí pro zálohy</string>
+<string name="dialog_pull_to_update">Povolit gesto \"Stáhnout na aktualizaci\"</string>
 <string name="dialog_backup">Zálohovat</string>
 <string name="dialog_backup_done">Zálohování databáze bylo dokončeno</string>
 <string name="dialog_backup_failed">Nelze provést zálohování!</string>

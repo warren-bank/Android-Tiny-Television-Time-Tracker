@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Günlük yedeklemeleri otomatik olarak gerçekleştirme</string>
 <string name="dialog_backup_versioning">Yedeklemeler için sürüm oluşturma kullan</string>
+<string name="dialog_pull_to_update">\"Güncellemek İçin Çek\" işlemini etkinleştir</string>
 <string name="dialog_backup">Yedekle</string>
 <string name="dialog_backup_done">Veritabanı yedekleme işlemi tamamlandı</string>
 <string name="dialog_backup_failed">Yedekleme gerçekleştirilemedi!</string>

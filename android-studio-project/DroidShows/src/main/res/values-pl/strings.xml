@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Automatycznie wykonuj codzienne kopie zapasowe</string>
 <string name="dialog_backup_versioning">Użyj kontroli wersji dla kopii zapasowych</string>
+<string name="dialog_pull_to_update">Włącz gest \"Pull To Update\"</string>
 <string name="dialog_backup">Kopia zapasowa</string>
 <string name="dialog_backup_done">Składowanie bazy danych zostało zakończone</string>
 <string name="dialog_backup_failed">Nie można wykonać kopii zapasowej!</string>

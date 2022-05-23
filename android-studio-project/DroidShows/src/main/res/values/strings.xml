@@ -40,7 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Automatically perform daily backups</string>
 <string name="dialog_backup_versioning">Use versioning for backups</string>
-<string name="dialog_pull_to_update">Enable \"Pull-To-Update\" gesture</string>
+<string name="dialog_pull_to_update">Enable \"Pull To Update\" gesture</string>
 <string name="dialog_backup">Backup</string>
 <string name="dialog_backup_done">Database backup completed</string>
 <string name="dialog_backup_failed">Unable to perform backup!</string>

@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Udføre automatisk daglig backups</string>
 <string name="dialog_backup_versioning">Brug versionering til backups</string>
+<string name="dialog_pull_to_update">Aktivér \"Træk for at opdatere\"-gestus</string>
 <string name="dialog_backup">Forstærkning</string>
 <string name="dialog_backup_done">Databasesikkerhedskopiering er udført</string>
 <string name="dialog_backup_failed">Kan ikke udføre sikkerhedskopiering!</string>

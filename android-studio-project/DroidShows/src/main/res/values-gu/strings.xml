@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">આપમેળે પ્રતિદિન બેકઅપ ચલાવો</string>
 <string name="dialog_backup_versioning">બેકઅપ માટે શબ્દમાળાને વાપરો</string>
+<string name="dialog_pull_to_update">\"સુધારવા માટે નિષ્ક્રિય\" ને સક્રિય કરો</string>
 <string name="dialog_backup">બેકઅપ</string>
 <string name="dialog_backup_done">ડેટાબેઝ બેકઅપ સમાપ્ત</string>
 <string name="dialog_backup_failed">બેકઅપ ચલાવવાનું અસમર્થ!</string>

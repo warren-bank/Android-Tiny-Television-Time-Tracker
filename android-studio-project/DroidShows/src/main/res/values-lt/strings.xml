@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Automatiškai atlikti kasdienes atsargines kopijas</string>
 <string name="dialog_backup_versioning">Naudoti veiksmųveiksmųveiksmusir</string>
+<string name="dialog_pull_to_update">Įgalinti \"Sutraukti į Atnaujinti\" gestas</string>
 <string name="dialog_backup">Kopijavimas</string>
 <string name="dialog_backup_done">Duomenų bazės atsarginės kopijos</string>
 <string name="dialog_backup_failed">Nepavyko atlikti pastiprinimo!</string>

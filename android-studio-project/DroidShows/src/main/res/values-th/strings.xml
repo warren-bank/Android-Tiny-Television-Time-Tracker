@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">ดำเนินการสำรองข้อมูลรายวันโดยอัตโนมัติ</string>
 <string name="dialog_backup_versioning">ใช้เวอร์ชันสำหรับการสำรองข้อมูล</string>
+<string name="dialog_pull_to_update">เปิดใช้งาน \"Pull To Update\" gesture</string>
 <string name="dialog_backup">สำรองข้อมูล</string>
 <string name="dialog_backup_done">การสำรองข้อมูลฐานข้อมูลเสร็จสมบูรณ์</string>
 <string name="dialog_backup_failed">ไม่สามารถทำการสำรองข้อมูลได้!</string>

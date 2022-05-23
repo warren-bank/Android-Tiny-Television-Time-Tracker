@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Efectuați automat backup-uri zilnice</string>
 <string name="dialog_backup_versioning">Utilizarea versioning pentru backup-uri</string>
+<string name="dialog_pull_to_update">Activează gestul \"Pull To Update\"</string>
 <string name="dialog_backup">Backup</string>
 <string name="dialog_backup_done">Backup baze de date completate</string>
 <string name="dialog_backup_failed">Imposibil de efectuat backup!</string>

@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Автоматично изпълнение на ежедневни резервни копия</string>
 <string name="dialog_backup_versioning">Използване на Versioning за архивиране</string>
+<string name="dialog_pull_to_update">Активиране на жест \"Изтегли към актуализиране\"</string>
 <string name="dialog_backup">Архивиране.</string>
 <string name="dialog_backup_done">Архивиране на база данни</string>
 <string name="dialog_backup_failed">Не може да се изпълни архивиране!</string>

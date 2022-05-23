@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Effectuer automatiquement des sauvegardes quotidiennes</string>
 <string name="dialog_backup_versioning">Utiliser la gestion des versions pour les sauvegardes</string>
+<string name="dialog_pull_to_update">Activer le geste \"Pull To Update\"</string>
 <string name="dialog_backup">Sauvegarde</string>
 <string name="dialog_backup_done">Sauvegarde de base de données</string>
 <string name="dialog_backup_failed">Impossible d\'effectuer la sauvegarde!</string>

@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Igapäevaste varukoopiate automaatne sooritamine</string>
 <string name="dialog_backup_versioning">Versioningi kasutamine varukoopiate tegemiseks</string>
+<string name="dialog_pull_to_update">Luba \"Tõmba Uuenda\" žest</string>
 <string name="dialog_backup">Varundamine</string>
 <string name="dialog_backup_done">Andmebaasi varundamine valmis</string>
 <string name="dialog_backup_failed">Varukoopia tegemine nurjus!</string>

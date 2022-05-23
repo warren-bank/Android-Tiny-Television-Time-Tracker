@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Go huathoibríoch go huathoibríoch cúllíne laethúil</string>
 <string name="dialog_backup_versioning">Úsáid ingearach le haghaidh backups</string>
+<string name="dialog_pull_to_update">Cumasaigh \"Pull Chun Nuashonrú\" gesture</string>
 <string name="dialog_backup">Cúltaca</string>
 <string name="dialog_backup_done">Bunachar sonraí cúltaca críochnaithe</string>
 <string name="dialog_backup_failed">Ní féidir cúltaca a dhéanamh!</string>

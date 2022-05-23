@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Αυτόματη εκτέλεση καθημερινών αντιγράφων</string>
 <string name="dialog_backup_versioning">Χρήση εκδοχών για εφεδρική αποθήκευση</string>
+<string name="dialog_pull_to_update">Ενεργοποίηση χειρονομίας \"Τραβήξτε για ενημέρωση\"</string>
 <string name="dialog_backup">-Ενισχύσεις.</string>
 <string name="dialog_backup_done">Ολοκλήρωση εφεδρικής βάσης δεδομένων</string>
 <string name="dialog_backup_failed">Δεν είναι δυνατή η εκτέλεση.!</string>

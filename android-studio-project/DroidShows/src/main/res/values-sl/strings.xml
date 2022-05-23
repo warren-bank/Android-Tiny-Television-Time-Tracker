@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Samodejno izvede dnevne varnostne kopije</string>
 <string name="dialog_backup_versioning">Uporabi vodenje različic za varnostne kopije</string>
+<string name="dialog_pull_to_update">Omogoči gesto \"povleci na posodobitev\"</string>
 <string name="dialog_backup">Varnostna kopija</string>
 <string name="dialog_backup_done">Kopiranje baze podatkov je končano</string>
 <string name="dialog_backup_failed">Ni moč izvesti izdelave varnostne kopije!</string>

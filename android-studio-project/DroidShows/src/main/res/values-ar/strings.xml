@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">تنفيذ النسخ الاحتياطية اليومية آليا</string>
 <string name="dialog_backup_versioning">استخدام استنساخ للنسخ الاحتياطية</string>
+<string name="dialog_pull_to_update">اتاحة لفتة \"السحب للتعديل\"</string>
 <string name="dialog_backup">نسخة احتياطية</string>
 <string name="dialog_backup_done">النسخة الاحتياطية لقاعدة البيانات</string>
 <string name="dialog_backup_failed">لا يمكن تنفيذ النسخة الاحتياطية!</string>

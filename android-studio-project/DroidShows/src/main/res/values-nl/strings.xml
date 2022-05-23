@@ -40,6 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Automatisch dagelijks back-ups maken</string>
 <string name="dialog_backup_versioning">Versiebeheer voor back-ups gebruiken</string>
+<string name="dialog_pull_to_update">\"Pull To Update\"-gebaar inschakelen</string>
 <string name="dialog_backup">Back-up maken</string>
 <string name="dialog_backup_done">Back-up voltooid</string>
 <string name="dialog_backup_failed">Kon back-up niet voltooien!</string>
