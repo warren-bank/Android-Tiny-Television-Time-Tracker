@@ -2,13 +2,13 @@ package nl.asymmetrics.droidshows.thetvdb.model;
 
 import java.util.Date;
 
-import android.graphics.drawable.Drawable;
+import android.graphics.Bitmap;
 
 public class TVShowItem {
     private String serieid;
     private String language;
     private String icon;
-    private Drawable dicon;
+    private Bitmap dicon;
     private String name;
     private int snumber;
     private String nextEpisode;
@@ -25,7 +25,7 @@ public class TVShowItem {
     private String episodeSeen;
 
     public TVShowItem(
-        String serieid, String language, String icon, Drawable dicon, String name, int snumber,
+        String serieid, String language, String icon, Bitmap dicon, String name, int snumber,
         String nextEpisode, Date nextAir,
         String unwatchedLastEpisode, Date unwatchedLastAired,
         int unwatchedAired, int unwatched,
@@ -64,11 +64,11 @@ public class TVShowItem {
         this.icon = icon;
     }
 
-    public Drawable getDIcon() {
+    public Bitmap getDIcon() {
         return this.dicon;
     }
 
-    public void setDIcon(Drawable dicon) {
+    public void setDIcon(Bitmap dicon) {
         this.dicon = dicon;
     }
 

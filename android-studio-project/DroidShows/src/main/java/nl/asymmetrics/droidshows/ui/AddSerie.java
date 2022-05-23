@@ -224,8 +224,8 @@ public class AddSerie extends ListActivity
           int unwatched = db.getEpsUnwatched(sToAdd.getId());
           String nextEpisodeStr = db.getNextEpisodeString(nextEpisode, DroidShows.showNextAiring && 0 < unwatchedAired && unwatchedAired < unwatched);
           String newestEpisodeStr = db.getNextEpisodeString(newestEpisode, /* boolean showNextAiring= */ false, /* boolean requireAiredDate= */ true);
-          Drawable d = Drawable.createFromPath(sToAdd.getPosterThumb());
-          TVShowItem tvsi = new TVShowItem(sToAdd.getId(), sToAdd.getLanguage(), sToAdd.getPosterThumb(), d, sToAdd.getSerieName(), nseasons,
+          Bitmap dicon = BitmapFactory.decodeFile(sToAdd.getPosterThumb());
+          TVShowItem tvsi = new TVShowItem(sToAdd.getId(), sToAdd.getLanguage(), sToAdd.getPosterThumb(), dicon, sToAdd.getSerieName(), nseasons,
             nextEpisodeStr, nextEpisode.firstAiredDate, newestEpisodeStr, newestEpisode.firstAiredDate, unwatchedAired, unwatched, sToAdd.getPassiveStatus() == 1,
             (sToAdd.getStatus() == null ? "null" : sToAdd.getStatus()), "");
           DroidShows.series.add(tvsi);
@@ -258,6 +258,7 @@ public class AddSerie extends ListActivity
         e.printStackTrace();
         return;
       }
+
       File posterThumbFile = new File(posterThumbPath);
       try {
         FileUtils.copyURLToFile(posterURL, posterThumbFile);
@@ -266,16 +267,14 @@ public class AddSerie extends ListActivity
         e.printStackTrace();
         return;
       }
-      Bitmap posterThumb = BitmapFactory.decodeFile(posterThumbPath);
-      if (posterThumb == null) {
+
+      int show_icon_px = getResources().getInteger(R.integer.show_icon_px);
+      Bitmap resizedBitmap = Utils.decodeSampledBitmapFromFile(posterThumbPath, show_icon_px, show_icon_px);
+      if (resizedBitmap == null) {
         Log.e(SQLiteStore.TAG, "Corrupt or unknown poster file type: "+ posterThumbPath);
         return;
       }
-      int width = getWindowManager().getDefaultDisplay().getWidth();
-      int height = getWindowManager().getDefaultDisplay().getHeight();
-      int newHeight = (int) ((height > width ? height : width) * 0.265);
-      int newWidth = (int) (1.0 * posterThumb.getWidth() / posterThumb.getHeight() * newHeight);
-      Bitmap resizedBitmap = Bitmap.createScaledBitmap(posterThumb, newWidth, newHeight, true);
+
       OutputStream fOut = null;
       try {
         fOut = new FileOutputStream(posterThumbFile, false);
@@ -287,10 +286,8 @@ public class AddSerie extends ListActivity
       } catch (IOException e) {
         e.printStackTrace();
       }
-      posterThumb.recycle();
       resizedBitmap.recycle();
       System.gc();
-      posterThumb = null;
       resizedBitmap = null;
     }
 

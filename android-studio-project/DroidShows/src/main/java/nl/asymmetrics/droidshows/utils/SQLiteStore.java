@@ -160,7 +160,7 @@ public class SQLiteStore extends SQLiteOpenHelper
       }
     }
     boolean status = (tmpStatus == 1);
-    TVShowItem tvsi = new TVShowItem(serieId, language, /* icon= */ tmpPoster, /* Drawable dicon= */ null, name, seasonCount, nextEpisode, nextAir, unwatchedLastEpisode, unwatchedLastAired, unwatchedAired, unwatched, status, showStatus, extResources);
+    TVShowItem tvsi = new TVShowItem(serieId, language, /* icon= */ tmpPoster, /* Bitmap dicon= */ null, name, seasonCount, nextEpisode, nextAir, unwatchedLastEpisode, unwatchedLastAired, unwatchedAired, unwatched, status, showStatus, extResources);
     return tvsi;
   }
 

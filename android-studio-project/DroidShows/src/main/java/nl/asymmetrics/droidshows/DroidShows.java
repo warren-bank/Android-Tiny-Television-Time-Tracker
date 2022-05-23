@@ -2044,14 +2044,21 @@ public class DroidShows extends ListActivity
         }
         if (holder.icon != null) {
           try {
-            Drawable icon = serie.getDIcon();
-            if (icon == null && !serie.getIcon().equals(""))
-              icon = Drawable.createFromPath(serie.getIcon());
-            if (icon == null) {
-              holder.icon.setImageResource(R.drawable.noposter);
-            } else {
-              holder.icon.setImageDrawable(icon);
-              serie.setDIcon(icon);
+            Bitmap icon = serie.getDIcon();
+            if (icon != null) {
+              holder.icon.setImageBitmap(icon);
+            }
+            else {
+              String iconPath = serie.getIcon();
+              if ((iconPath != null) && !iconPath.isEmpty()) {
+                int show_icon_px = getResources().getInteger(R.integer.show_icon_px);
+                icon = Utils.decodeSampledBitmapFromFile(iconPath, show_icon_px, show_icon_px);
+                serie.setDIcon(icon);
+                holder.icon.setImageBitmap(icon);
+              }
+              else {
+                holder.icon.setImageResource(R.drawable.noposter);
+              }
             }
             holder.icon.setVisibility(View.VISIBLE);
           }
@@ -2080,14 +2087,21 @@ public class DroidShows extends ListActivity
         }
         if (holder.icon != null) {
           try {
-            Drawable icon = serie.getDIcon();
-            if (icon == null && !serie.getIcon().equals(""))
-              icon = Drawable.createFromPath(serie.getIcon());
-            if (icon == null) {
-              holder.icon.setImageResource(R.drawable.noposter);
-            } else {
-              holder.icon.setImageDrawable(icon);
-              serie.setDIcon(icon);
+            Bitmap icon = serie.getDIcon();
+            if (icon != null) {
+              holder.icon.setImageBitmap(icon);
+            }
+            else {
+              String iconPath = serie.getIcon();
+              if ((iconPath != null) && !iconPath.isEmpty()) {
+                int show_icon_px = getResources().getInteger(R.integer.show_icon_px);
+                icon = Utils.decodeSampledBitmapFromFile(iconPath, show_icon_px, show_icon_px);
+                serie.setDIcon(icon);
+                holder.icon.setImageBitmap(icon);
+              }
+              else {
+                holder.icon.setImageResource(R.drawable.noposter);
+              }
             }
             holder.icon.setVisibility(View.VISIBLE);
           }
