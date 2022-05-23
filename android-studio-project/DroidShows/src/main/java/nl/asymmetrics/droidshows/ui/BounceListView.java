@@ -14,6 +14,7 @@ public class BounceListView extends ListView {
   private Context context;
   private float startY;
   private boolean allowOverScroll = false;
+  private boolean enablePullToUpdate = true;
   private boolean abortUpdate = true;
   public boolean updating = false;
   public boolean gettingNextLogged = false;
@@ -24,6 +25,10 @@ public class BounceListView extends ListView {
     final float density = context.getResources().getDisplayMetrics().density;
     maxOverScrollDistance = (int) density * MAX_OVERSCROLL_DISTANCE;
     minOverScrollDistance = (int) density * MIN_OVERSCROLL_DISTANCE;
+  }
+
+  public void setEnablePullToUpdate(boolean enablePullToUpdate) {
+    this.enablePullToUpdate = enablePullToUpdate;
   }
 
   @Override
@@ -52,7 +57,7 @@ public class BounceListView extends ListView {
       gettingNextLogged = true;
       ((DroidShows)context).getNextLogged();
     } else {
-      if (!updating && -scrollY > minOverScrollDistance) {
+      if (enablePullToUpdate && !updating && -scrollY > minOverScrollDistance) {
         abortUpdate = false;
         updating = true;
         this.postDelayed(startUpdate, 500);

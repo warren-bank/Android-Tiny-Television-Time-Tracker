@@ -1,7 +1,3 @@
-/*  AsyncInfo might have the same issue as updateAllSeries() had when show order is changed during iteration...
- *   Get list of series in another way?
- */
-
 package nl.asymmetrics.droidshows;
 
 import java.io.File;
@@ -126,49 +122,101 @@ public class DroidShows extends ListActivity
   private static String backFromSeasonSerieId;
   private static TheTVDB theTVDB;
   private Update updateDS;
+
+  // Preferences
+
   private static final String PREF_NAME = "DroidShowsPref";
   private SharedPreferences sharedPrefs;
-  private static final String AUTO_BACKUP_PREF_NAME = "auto_backup";
-  private static boolean autoBackup;
+
+  // ==============
+  // Hidden
+  // ==============
+
   private static final String BACKUP_FOLDER_PREF_NAME = "backup_folder";
   private static String backupFolder;
-  private static final String BACKUP_VERSIONING_PREF_NAME = "backup_versioning";
-  private static boolean backupVersioning;
+
+  private static final String LAST_STATS_UPDATE_NAME = "last_stats_update";
+  private static String lastStatsUpdateCurrent;
+
+  private static final String LAST_STATS_UPDATE_ARCHIVE_NAME = "last_stats_update_archive";
+  private static String lastStatsUpdateArchive;
+
+  private static final String FILTER_NETWORKS_NAME = "filter_networks";
+  private static boolean filterNetworks;
+
+  private static final String NETWORKS_NAME = "networks";
+  private static List<String> networks = new ArrayList<String>();
+
+  private static final String PINNED_SHOWS_NAME = "pinned_shows";
+  private static List<String> pinnedShows = new ArrayList<String>();
+
+  // ==============
+  // ActionBar menu
+  // ==============
+
+  // Exclude seen?
   private static final String EXCLUDE_SEEN_PREF_NAME = "exclude_seen";
   private static boolean excludeSeen;
+
+  // Sort shows...
   private static final String SORT_PREF_NAME = "sort";
   private static final int SORT_BY_NAME = 0;
   private static final int SORT_BY_UNSEEN_COUNT = 1;
   private static final int SORT_BY_UNSEEN_DATE = 2;
   private static int sortOption;
+
+  // ==============
+  // Options Dialog
+  // ==============
+
+  // Automatically perform daily backups?
+  private static final String AUTO_BACKUP_PREF_NAME = "auto_backup";
+  private static boolean autoBackup;
+
+  // Use versioning for backups?
+  private static final String BACKUP_VERSIONING_PREF_NAME = "backup_versioning";
+  private static boolean backupVersioning;
+
+  // Enable "Pull-To-Update" gesture?
+  private static final String ENABLE_PULL_TO_UPDATE_PREF_NAME = "pull_to_update";
+  private static boolean enablePullToUpdate;
+
+  // Update shows' latest season only?
   private static final String LATEST_SEASON_PREF_NAME = "last_season";
   private static final int UPDATE_ALL_SEASONS = 0;
   private static final int UPDATE_LATEST_SEASON_ONLY = 1;
   private static int latestSeasonOption;
-  private static final String INCLUDE_SPECIALS_NAME = "include_specials";
-  public static boolean includeSpecialsOption;
-  private static final String FULL_LINE_CHECK_NAME = "full_line";
-  public static boolean fullLineCheckOption;
-  private static final String SWITCH_SWIPE_DIRECTION = "switch_swipe_direction";
-  public static boolean switchSwipeDirection;
-  private static final String LAST_STATS_UPDATE_NAME = "last_stats_update";
-  private static String lastStatsUpdateCurrent;
-  private static final String LAST_STATS_UPDATE_ARCHIVE_NAME = "last_stats_update_archive";
-  private static String lastStatsUpdateArchive;
-  private static final String LANGUAGE_CODE_NAME = "language";
+
+  // Show date of next airing episode, instead of next episode's date?
   private static final String SHOW_NEXT_AIRING = "show_next_airing";
   public static boolean showNextAiring;
+
+  // Mark next episode starting from the most recently watched?
   private static final String MARK_FROM_LAST_WATCHED = "mark_from_last_watched";
   public static boolean markFromLastWatched;
+
+  // Include specials in unwatched count?
+  private static final String INCLUDE_SPECIALS_NAME = "include_specials";
+  public static boolean includeSpecialsOption;
+
+  // Use entire line to mark episode?
+  private static final String FULL_LINE_CHECK_NAME = "full_line";
+  public static boolean fullLineCheckOption;
+
+  // Swipe right-to-left to go back?
+  private static final String SWITCH_SWIPE_DIRECTION = "switch_swipe_direction";
+  public static boolean switchSwipeDirection;
+
+  // Use TheTVDB mirror (try this if updates are too slow)?
   private static final String USE_MIRROR = "use_mirror";
   public static boolean useMirror;
+
+  // Synopsis language...
+  private static final String LANGUAGE_CODE_NAME = "language";
   public static String langCode;
-  private static final String PINNED_SHOWS_NAME = "pinned_shows";
-  private static List<String> pinnedShows = new ArrayList<String>();
-  private static final String FILTER_NETWORKS_NAME = "filter_networks";
-  private static boolean filterNetworks;
-  private static final String NETWORKS_NAME = "networks";
-  private static List<String> networks = new ArrayList<String>();
+
+  // -----
+
   public static Thread deleteTh = null;
   public static Thread updateShowTh = null;
   public static Thread updateAllShowsTh = null;
@@ -206,27 +254,47 @@ public class DroidShows extends ListActivity
     db = SQLiteStore.getInstance(this);
 
     // Preferences
+
     sharedPrefs = getSharedPreferences(PREF_NAME, 0);
-    autoBackup = sharedPrefs.getBoolean(AUTO_BACKUP_PREF_NAME, false);
-    backupFolder = sharedPrefs.getString(BACKUP_FOLDER_PREF_NAME, Environment.getExternalStorageDirectory() +"/DroidShows");
-    backupVersioning = sharedPrefs.getBoolean(BACKUP_VERSIONING_PREF_NAME, true);
-    excludeSeen = sharedPrefs.getBoolean(EXCLUDE_SEEN_PREF_NAME, false);
-    sortOption = sharedPrefs.getInt(SORT_PREF_NAME, SORT_BY_NAME);
-    latestSeasonOption = sharedPrefs.getInt(LATEST_SEASON_PREF_NAME, UPDATE_LATEST_SEASON_ONLY);
-    includeSpecialsOption = sharedPrefs.getBoolean(INCLUDE_SPECIALS_NAME, false);
-    fullLineCheckOption = sharedPrefs.getBoolean(FULL_LINE_CHECK_NAME, false);
-    switchSwipeDirection = sharedPrefs.getBoolean(SWITCH_SWIPE_DIRECTION, false);
+
+    // ==============
+    // Hidden
+    // ==============
+
+    backupFolder           = sharedPrefs.getString(BACKUP_FOLDER_PREF_NAME, Environment.getExternalStorageDirectory() +"/DroidShows");
     lastStatsUpdateCurrent = sharedPrefs.getString(LAST_STATS_UPDATE_NAME, "");
     lastStatsUpdateArchive = sharedPrefs.getString(LAST_STATS_UPDATE_ARCHIVE_NAME, "");
-    langCode = sharedPrefs.getString(LANGUAGE_CODE_NAME, getString(R.string.lang_code));
-    showNextAiring = sharedPrefs.getBoolean(SHOW_NEXT_AIRING, false);
-    markFromLastWatched = sharedPrefs.getBoolean(MARK_FROM_LAST_WATCHED, false);
-    useMirror = sharedPrefs.getBoolean(USE_MIRROR, false);
-    String pinnedShowsStr = sharedPrefs.getString(PINNED_SHOWS_NAME, "");
+    filterNetworks         = sharedPrefs.getBoolean(FILTER_NETWORKS_NAME, false);
+    String networksStr     = sharedPrefs.getString(NETWORKS_NAME, "");
+    String pinnedShowsStr  = sharedPrefs.getString(PINNED_SHOWS_NAME, "");
+
     if (!pinnedShowsStr.isEmpty())
       pinnedShows = new ArrayList<String>(Arrays.asList(pinnedShowsStr.replace("[", "").replace("]", "").split(", ")));
-    filterNetworks = sharedPrefs.getBoolean(FILTER_NETWORKS_NAME, false);
-    String networksStr = sharedPrefs.getString(NETWORKS_NAME, "");
+
+    // ==============
+    // ActionBar menu
+    // ==============
+
+    excludeSeen            = sharedPrefs.getBoolean(EXCLUDE_SEEN_PREF_NAME, false);
+    sortOption             = sharedPrefs.getInt(SORT_PREF_NAME, SORT_BY_NAME);
+
+    // ==============
+    // Options Dialog
+    // ==============
+
+    autoBackup             = sharedPrefs.getBoolean(AUTO_BACKUP_PREF_NAME, false);
+    backupVersioning       = sharedPrefs.getBoolean(BACKUP_VERSIONING_PREF_NAME, true);
+    enablePullToUpdate     = sharedPrefs.getBoolean(ENABLE_PULL_TO_UPDATE_PREF_NAME, true);
+    latestSeasonOption     = sharedPrefs.getInt(LATEST_SEASON_PREF_NAME, UPDATE_LATEST_SEASON_ONLY);
+    showNextAiring         = sharedPrefs.getBoolean(SHOW_NEXT_AIRING, false);
+    markFromLastWatched    = sharedPrefs.getBoolean(MARK_FROM_LAST_WATCHED, false);
+    includeSpecialsOption  = sharedPrefs.getBoolean(INCLUDE_SPECIALS_NAME, false);
+    fullLineCheckOption    = sharedPrefs.getBoolean(FULL_LINE_CHECK_NAME, false);
+    switchSwipeDirection   = sharedPrefs.getBoolean(SWITCH_SWIPE_DIRECTION, false);
+    useMirror              = sharedPrefs.getBoolean(USE_MIRROR, false);
+    langCode               = sharedPrefs.getString(LANGUAGE_CODE_NAME, getString(R.string.lang_code));
+
+    // -----
 
     updateDatabase();
 
@@ -236,6 +304,7 @@ public class DroidShows extends ListActivity
     seriesAdapter = new SeriesAdapter(this, R.layout.row, series);
     setListAdapter(seriesAdapter);
     listView = (BounceListView) getListView();
+    listView.setEnablePullToUpdate(enablePullToUpdate);
     listView.setDivider(null);
     listView.setOverscrollHeader(getResources().getDrawable(R.drawable.shape_gradient_ring));
     if (savedInstanceState != null) {
@@ -413,6 +482,11 @@ public class DroidShows extends ListActivity
 
   @Override
   public boolean onOptionsItemSelected(MenuItem item) {
+
+    // ==============
+    // ActionBar menu
+    // ==============
+
     switch (item.getItemId()) {
       case ADD_SERIE_MENU_ITEM :
         super.onSearchRequested();
@@ -577,16 +651,25 @@ public class DroidShows extends ListActivity
     } catch (NameNotFoundException e) {
       e.printStackTrace();
     }
-    ((TextView) about.findViewById(R.id.change_language)).setText(getString(R.string.dialog_change_language) +" ("+ langCode +")");
+
+    // ==============
+    // Options Dialog
+    // ==============
+
     ((CheckBox) about.findViewById(R.id.auto_backup)).setChecked(autoBackup);
     ((CheckBox) about.findViewById(R.id.backup_versioning)).setChecked(backupVersioning);
+    ((CheckBox) about.findViewById(R.id.pull_to_update)).setChecked(enablePullToUpdate);
     ((CheckBox) about.findViewById(R.id.latest_season)).setChecked(latestSeasonOption == UPDATE_LATEST_SEASON_ONLY);
+    ((CheckBox) about.findViewById(R.id.show_next_airing)).setChecked(showNextAiring);
+    ((CheckBox) about.findViewById(R.id.mark_from_last_watched)).setChecked(markFromLastWatched);
     ((CheckBox) about.findViewById(R.id.include_specials)).setChecked(includeSpecialsOption);
     ((CheckBox) about.findViewById(R.id.full_line_check)).setChecked(fullLineCheckOption);
     ((CheckBox) about.findViewById(R.id.switch_swipe_direction)).setChecked(switchSwipeDirection);
-    ((CheckBox) about.findViewById(R.id.show_next_airing)).setChecked(showNextAiring);
-    ((CheckBox) about.findViewById(R.id.mark_from_last_watched)).setChecked(markFromLastWatched);
     ((CheckBox) about.findViewById(R.id.use_mirror)).setChecked(useMirror);
+    ((TextView) about.findViewById(R.id.change_language)).setText(getString(R.string.dialog_change_language) +" ("+ langCode +")");
+
+    // -----
+
     m_AlertDlg = new AlertDialog.Builder(this)
       .setView(about)
       .setTitle(R.string.menu_about)
@@ -600,6 +683,11 @@ public class DroidShows extends ListActivity
   }
 
   public void dialogOptions(View v) {
+
+    // ==============
+    // Options Dialog
+    // ==============
+
     switch(v.getId()) {
       case R.id.backup:
         m_AlertDlg.dismiss();
@@ -615,8 +703,20 @@ public class DroidShows extends ListActivity
       case R.id.backup_versioning:
         backupVersioning ^= true;
         break;
+      case R.id.pull_to_update:
+        enablePullToUpdate ^= true;
+        listView.setEnablePullToUpdate(enablePullToUpdate);
+        break;
       case R.id.latest_season:
         latestSeasonOption ^= 1;
+        break;
+      case R.id.show_next_airing:
+        showNextAiring ^= true;
+        updateShowStats();
+        break;
+      case R.id.mark_from_last_watched:
+        markFromLastWatched ^= true;
+        updateShowStats();
         break;
       case R.id.include_specials:
         includeSpecialsOption ^= true;
@@ -627,14 +727,6 @@ public class DroidShows extends ListActivity
         break;
       case R.id.switch_swipe_direction:
         switchSwipeDirection ^= true;
-        break;
-      case R.id.show_next_airing:
-        showNextAiring ^= true;
-        updateShowStats();
-        break;
-      case R.id.mark_from_last_watched:
-        markFromLastWatched ^= true;
-        updateShowStats();
         break;
       case R.id.use_mirror:
         useMirror ^= true;
@@ -1633,25 +1725,47 @@ public class DroidShows extends ListActivity
   @Override
   public void onPause() {
     super.onPause();
+
+    // Preferences
+
     SharedPreferences.Editor ed = sharedPrefs.edit();
-    ed.putBoolean(AUTO_BACKUP_PREF_NAME, autoBackup);
+
+    // ==============
+    // Hidden
+    // ==============
+
     ed.putString(BACKUP_FOLDER_PREF_NAME, backupFolder);
-    ed.putBoolean(BACKUP_VERSIONING_PREF_NAME, backupVersioning);
-    ed.putInt(SORT_PREF_NAME, sortOption);
+    ed.putString(LAST_STATS_UPDATE_NAME, lastStatsUpdateCurrent);
+    ed.putString(LAST_STATS_UPDATE_ARCHIVE_NAME, lastStatsUpdateArchive);
+    ed.putBoolean(FILTER_NETWORKS_NAME, filterNetworks);
+    ed.putString(NETWORKS_NAME, networks.toString());
+    ed.putString(PINNED_SHOWS_NAME, pinnedShows.toString());
+
+    // ==============
+    // ActionBar menu
+    // ==============
+
     ed.putBoolean(EXCLUDE_SEEN_PREF_NAME, excludeSeen);
+    ed.putInt(SORT_PREF_NAME, sortOption);
+
+    // ==============
+    // Options Dialog
+    // ==============
+
+    ed.putBoolean(AUTO_BACKUP_PREF_NAME, autoBackup);
+    ed.putBoolean(BACKUP_VERSIONING_PREF_NAME, backupVersioning);
+    ed.putBoolean(ENABLE_PULL_TO_UPDATE_PREF_NAME, enablePullToUpdate);
     ed.putInt(LATEST_SEASON_PREF_NAME, latestSeasonOption);
+    ed.putBoolean(SHOW_NEXT_AIRING, showNextAiring);
+    ed.putBoolean(MARK_FROM_LAST_WATCHED, markFromLastWatched);
     ed.putBoolean(INCLUDE_SPECIALS_NAME, includeSpecialsOption);
     ed.putBoolean(FULL_LINE_CHECK_NAME, fullLineCheckOption);
     ed.putBoolean(SWITCH_SWIPE_DIRECTION, switchSwipeDirection);
-    ed.putString(LAST_STATS_UPDATE_NAME, lastStatsUpdateCurrent);
-    ed.putString(LAST_STATS_UPDATE_ARCHIVE_NAME, lastStatsUpdateArchive);
-    ed.putString(LANGUAGE_CODE_NAME, langCode);
-    ed.putBoolean(SHOW_NEXT_AIRING, showNextAiring);
-    ed.putBoolean(MARK_FROM_LAST_WATCHED, markFromLastWatched);
     ed.putBoolean(USE_MIRROR, useMirror);
-    ed.putString(PINNED_SHOWS_NAME, pinnedShows.toString());
-    ed.putBoolean(FILTER_NETWORKS_NAME, filterNetworks);
-    ed.putString(NETWORKS_NAME, networks.toString());
+    ed.putString(LANGUAGE_CODE_NAME, langCode);
+
+    // Preferences: commit changes
+
     ed.commit();
   }
 
