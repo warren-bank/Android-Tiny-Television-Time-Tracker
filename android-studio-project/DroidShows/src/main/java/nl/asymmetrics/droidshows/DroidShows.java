@@ -815,38 +815,54 @@ public class DroidShows extends ListActivity
       .setPositiveButton(R.string.dialog_ok, new DialogInterface.OnClickListener() {
         public void onClick(DialogInterface dialog, int id) {
           restore(backupFile);
-          }
-        })
+        }
+      })
       .setNegativeButton(R.string.dialog_cancel, null)
       .show();
   }
 
   private void restore(String backupFile) {
-    String toastTxt = getString(R.string.dialog_restore_done);
-    File source = new File(backupFile);
-    if (source.exists()) {
-      File destination = new File(getApplicationInfo().dataDir +"/databases", "DroidShows.db");
-      try {
-        copy(source, destination);
-        updateDatabase();
-        File thumbs[] = new File(getApplicationContext().getFilesDir().getAbsolutePath() +"/thumbs/banners/posters").listFiles();
-        if (thumbs != null)
-          for (File thumb : thumbs)
-            thumb.delete();
-        for (File file : new File(getApplicationInfo().dataDir +"/databases").listFiles())
-          if (!file.getName().equalsIgnoreCase("DroidShows.db")) file.delete();
-        if (!BuildConfig.DEBUG)
-          updateAllSeries(2);  // 2 = update archive and current shows
-        undo.clear();
-        toastTxt += " ("+ source.getPath() +")";
-      } catch (IOException e) {
-        toastTxt = getString(R.string.dialog_restore_failed);
-        e.printStackTrace();
+    Runnable restoreRunnable = new Runnable() {
+      public void run() {
+        Looper.prepare();
+        String toastTxt = getString(R.string.dialog_restore_done);
+        File source = new File(backupFile);
+        if (source.exists()) {
+          File destination = new File(getApplicationInfo().dataDir +"/databases", "DroidShows.db");
+          try {
+            copy(source, destination);
+            updateDatabase();
+            File thumbs[] = new File(getApplicationContext().getFilesDir().getAbsolutePath() +"/thumbs/banners/posters").listFiles();
+            if (thumbs != null)
+              for (File thumb : thumbs)
+                thumb.delete();
+            for (File file : new File(getApplicationInfo().dataDir +"/databases").listFiles())
+              if (!file.getName().equalsIgnoreCase("DroidShows.db")) file.delete();
+            updateRestoredDB();
+            undo.clear();
+            toastTxt += " ("+ source.getPath() +")";
+          } catch (IOException e) {
+            toastTxt = getString(R.string.dialog_restore_failed);
+            e.printStackTrace();
+          }
+        } else {
+          toastTxt = getString(R.string.dialog_restore_notfound);
+        }
+        Toast.makeText(getApplicationContext(), toastTxt, Toast.LENGTH_LONG).show();
+        Looper.loop();
       }
-    } else {
-      toastTxt = getString(R.string.dialog_restore_notfound);
-    }
-    Toast.makeText(getApplicationContext(), toastTxt, Toast.LENGTH_LONG).show();
+
+      private void updateRestoredDB() {
+        runOnUiThread(new Runnable() {
+          public void run() {
+            if (!BuildConfig.DEBUG)
+              updateAllSeries(2);  // 2 = update archive and current shows
+          }
+        });
+      }
+    };
+    Thread restoreThread = new Thread(restoreRunnable);
+    restoreThread.start();
   }
 
   private void copy(File source, File destination) throws IOException {
@@ -969,9 +985,9 @@ public class DroidShows extends ListActivity
             series.remove(series.indexOf(serie));
             listView.post(updateListView);
             Looper.prepare();  // Threads don't have a message loop
-              Toast.makeText(getApplicationContext(), sname +" "+ toastMsg, Toast.LENGTH_LONG).show();
-              asyncInfo = new AsyncInfo();
-              asyncInfo.execute();
+            Toast.makeText(getApplicationContext(), sname +" "+ toastMsg, Toast.LENGTH_LONG).show();
+            asyncInfo = new AsyncInfo();
+            asyncInfo.execute();
             Looper.loop();
           }
         };
@@ -1285,10 +1301,12 @@ public class DroidShows extends ListActivity
             updatePosterThumb(serieId, sToUpdate);
             m_ProgressDialog.dismiss();
             Looper.prepare();
-              Toast.makeText(getApplicationContext(),
-                sToUpdate.getSerieName() +" "+ toastMsg,
-                Toast.LENGTH_SHORT).show();
-              listView.post(updateShowView(serieId));
+            Toast.makeText(
+              getApplicationContext(),
+              sToUpdate.getSerieName() +" "+ toastMsg,
+              Toast.LENGTH_SHORT
+            ).show();
+            listView.post(updateShowView(serieId));
             Looper.loop();
           }
           theTVDB = null;
