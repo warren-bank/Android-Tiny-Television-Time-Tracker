@@ -1,11 +1,5 @@
 package nl.asymmetrics.droidshows.ui;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -15,6 +9,7 @@ import nl.asymmetrics.droidshows.R;
 import nl.asymmetrics.droidshows.thetvdb.TheTVDB;
 import nl.asymmetrics.droidshows.thetvdb.model.Serie;
 import nl.asymmetrics.droidshows.thetvdb.model.TVShowItem;
+import nl.asymmetrics.droidshows.thetvdb.utils.PosterThumb;
 import nl.asymmetrics.droidshows.utils.SQLiteStore;
 import nl.asymmetrics.droidshows.utils.SwipeDetect;
 import nl.asymmetrics.droidshows.utils.Utils;
@@ -46,8 +41,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.AdapterContextMenuInfo;
-
-import org.apache.commons.io.FileUtils;
 
 public class AddSerie extends ListActivity
 {
@@ -245,50 +238,7 @@ public class AddSerie extends ListActivity
     }
     
     private void addPosterThumb() {
-      Log.d(SQLiteStore.TAG, "Adding "+ sToAdd.getSerieName() +": getting the poster");
-      // get the poster and save it in cache
-      String poster = sToAdd.getPoster();
-      URL posterURL = null;
-      String posterThumbPath = null;
-      try {
-        posterURL = new URL(poster);
-        posterThumbPath = getApplicationContext().getFilesDir().getAbsolutePath() +"/thumbs"+ posterURL.getFile().toString();
-      } catch (MalformedURLException e) {
-        Log.e(SQLiteStore.TAG, sToAdd.getSerieName() +" doesn't have a poster URL");
-        e.printStackTrace();
-        return;
-      }
-
-      File posterThumbFile = new File(posterThumbPath);
-      try {
-        FileUtils.copyURLToFile(posterURL, posterThumbFile);
-      } catch (IOException e) {
-        Log.e(SQLiteStore.TAG, "Could not download poster: "+ posterURL);
-        e.printStackTrace();
-        return;
-      }
-
-      int show_icon_px = getResources().getInteger(R.integer.show_icon_px);
-      Bitmap resizedBitmap = Utils.decodeSampledBitmapFromFile(posterThumbPath, show_icon_px, show_icon_px);
-      if (resizedBitmap == null) {
-        Log.e(SQLiteStore.TAG, "Corrupt or unknown poster file type: "+ posterThumbPath);
-        return;
-      }
-
-      OutputStream fOut = null;
-      try {
-        fOut = new FileOutputStream(posterThumbFile, false);
-        resizedBitmap.compress(Bitmap.CompressFormat.JPEG, 90, fOut);
-        fOut.flush();
-        fOut.close();
-        sToAdd.setPosterInCache("true");
-        sToAdd.setPosterThumb(posterThumbPath);
-      } catch (IOException e) {
-        e.printStackTrace();
-      }
-      resizedBitmap.recycle();
-      System.gc();
-      resizedBitmap = null;
+      PosterThumb.save(getApplicationContext(), sToAdd, SQLiteStore.TAG);
     }
 
     @Override

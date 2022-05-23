@@ -10,10 +10,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FilenameFilter;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.lang.reflect.Method;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.nio.channels.FileChannel;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -22,11 +19,11 @@ import java.util.Calendar;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
-import org.apache.commons.io.FileUtils;
 import nl.asymmetrics.droidshows.R;
 import nl.asymmetrics.droidshows.thetvdb.TheTVDB;
 import nl.asymmetrics.droidshows.thetvdb.model.Serie;
 import nl.asymmetrics.droidshows.thetvdb.model.TVShowItem;
+import nl.asymmetrics.droidshows.thetvdb.utils.PosterThumb;
 import nl.asymmetrics.droidshows.ui.AddSerie;
 import nl.asymmetrics.droidshows.ui.BounceListView;
 import nl.asymmetrics.droidshows.ui.IconView;
@@ -1322,60 +1319,21 @@ public class DroidShows extends ListActivity
     Cursor c = DroidShows.db.Query("SELECT posterInCache, poster, posterThumb FROM series WHERE id='"+ serieId +"'");
     c.moveToFirst();
     if (c != null && c.isFirst()) {
-      String posterInCache = c.getString(0);
-      String poster = c.getString(1);
+      String posterInCache   = c.getString(0);
+      String poster          = c.getString(1);
       String posterThumbPath = c.getString(2);
-      URL posterURL = null;
-      if (!posterInCache.equals("true") || !(new File(posterThumbPath).exists())) {
-        poster = sToUpdate.getPoster();
-        try {
-          posterURL = new URL(poster);
-          new File(posterThumbPath).delete();
-          posterThumbPath = getApplicationContext().getFilesDir().getAbsolutePath() +"/thumbs"+ posterURL.getFile().toString();
-        } catch (MalformedURLException e) {
-          Log.e(SQLiteStore.TAG, sToUpdate.getSerieName() +" doesn't have a poster URL");
-          e.printStackTrace();
-          return;
-        }
-        File posterThumbFile = null;
-        try {
-          posterThumbFile = new File(posterThumbPath);
-          FileUtils.copyURLToFile(posterURL, posterThumbFile);
-        } catch (IOException e) {
-          Log.e(SQLiteStore.TAG, "Could not download poster: "+ posterURL);
-          e.printStackTrace();
-          return;
-        }
-        Bitmap posterThumb = BitmapFactory.decodeFile(posterThumbPath);
-        if (posterThumb == null) {
-          Log.e(SQLiteStore.TAG, "Corrupt or unknown poster file type: "+ posterThumbPath);
-          return;
-        }
-        int width = getWindowManager().getDefaultDisplay().getWidth();
-        int height = getWindowManager().getDefaultDisplay().getHeight();
-        int newHeight = (int) ((height > width ? height : width) * 0.265);
-        int newWidth = (int) (1.0 * posterThumb.getWidth() / posterThumb.getHeight() * newHeight);
-        Bitmap resizedBitmap = Bitmap.createScaledBitmap(posterThumb, newWidth, newHeight, true);
-        OutputStream fOut = null;
-        try {
-          fOut = new FileOutputStream(posterThumbFile, false);
-          resizedBitmap.compress(Bitmap.CompressFormat.JPEG, 90, fOut);
-          fOut.flush();
-          fOut.close();
-          db.execQuery("UPDATE series SET posterInCache='true', poster='"+ poster
-            +"', posterThumb='"+ posterThumbPath +"' WHERE id='"+ serieId +"'");
-          Log.d(SQLiteStore.TAG, "Updated poster thumb for "+ sToUpdate.getSerieName());
-        } catch (FileNotFoundException e) {
-          Log.e(SQLiteStore.TAG, "File not found:"+ posterThumbFile);
-          e.printStackTrace();
-        } catch (IOException e) {
-          e.printStackTrace();
-        }
-        posterThumb.recycle();
-        resizedBitmap.recycle();
-        System.gc();
-        posterThumb = null;
-        resizedBitmap = null;
+      File posterThumbFile   = new File(posterThumbPath);
+      if (!posterInCache.equals("true") || !posterThumbFile.exists()) {
+        if (posterThumbFile.exists())
+          posterThumbFile.delete();
+
+        PosterThumb.save(getApplicationContext(), sToUpdate, SQLiteStore.TAG);
+
+        posterInCache   = sToUpdate.getPosterInCache();
+        posterThumbPath = sToUpdate.getPosterThumb();
+
+        db.execQuery("UPDATE series SET posterInCache='" + posterInCache + "', poster='"+ poster +"', posterThumb='"+ posterThumbPath +"' WHERE id='"+ serieId +"'");
+        Log.d(SQLiteStore.TAG, "Updated poster thumb for "+ sToUpdate.getSerieName());
       }
     }
     c.close();
@@ -2051,8 +2009,7 @@ public class DroidShows extends ListActivity
             else {
               String iconPath = serie.getIcon();
               if ((iconPath != null) && !iconPath.isEmpty()) {
-                int show_icon_px = getResources().getInteger(R.integer.show_icon_px);
-                icon = Utils.decodeSampledBitmapFromFile(iconPath, show_icon_px, show_icon_px);
+                icon = BitmapFactory.decodeFile(iconPath);
                 serie.setDIcon(icon);
                 holder.icon.setImageBitmap(icon);
               }
@@ -2094,8 +2051,7 @@ public class DroidShows extends ListActivity
             else {
               String iconPath = serie.getIcon();
               if ((iconPath != null) && !iconPath.isEmpty()) {
-                int show_icon_px = getResources().getInteger(R.integer.show_icon_px);
-                icon = Utils.decodeSampledBitmapFromFile(iconPath, show_icon_px, show_icon_px);
+                icon = BitmapFactory.decodeFile(iconPath);
                 serie.setDIcon(icon);
                 holder.icon.setImageBitmap(icon);
               }
