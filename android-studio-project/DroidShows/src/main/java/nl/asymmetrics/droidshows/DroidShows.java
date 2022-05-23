@@ -2026,14 +2026,20 @@ public class DroidShows extends ListActivity
           holder.sne.setText(sleString);
         }
         if (holder.icon != null) {
-          Drawable icon = serie.getDIcon();
-          if (icon == null && !serie.getIcon().equals(""))
-            icon = Drawable.createFromPath(serie.getIcon());
-          if (icon == null) {
-            holder.icon.setImageResource(R.drawable.noposter);
-          } else {
-            holder.icon.setImageDrawable(icon);
-            serie.setDIcon(icon);
+          try {
+            Drawable icon = serie.getDIcon();
+            if (icon == null && !serie.getIcon().equals(""))
+              icon = Drawable.createFromPath(serie.getIcon());
+            if (icon == null) {
+              holder.icon.setImageResource(R.drawable.noposter);
+            } else {
+              holder.icon.setImageDrawable(icon);
+              serie.setDIcon(icon);
+            }
+            holder.icon.setVisibility(View.VISIBLE);
+          }
+          catch(Exception e) {
+            holder.icon.setVisibility(View.GONE);
           }
         }
       } else {
@@ -2056,14 +2062,20 @@ public class DroidShows extends ListActivity
           holder.sne.setVisibility(View.VISIBLE);
         }
         if (holder.icon != null) {
-          Drawable icon = serie.getDIcon();
-          if (icon == null && !serie.getIcon().equals(""))
-            icon = Drawable.createFromPath(serie.getIcon());
-          if (icon == null) {
-            holder.icon.setImageResource(R.drawable.noposter);
-          } else {
-            holder.icon.setImageDrawable(icon);
-            serie.setDIcon(icon);
+          try {
+            Drawable icon = serie.getDIcon();
+            if (icon == null && !serie.getIcon().equals(""))
+              icon = Drawable.createFromPath(serie.getIcon());
+            if (icon == null) {
+              holder.icon.setImageResource(R.drawable.noposter);
+            } else {
+              holder.icon.setImageDrawable(icon);
+              serie.setDIcon(icon);
+            }
+            holder.icon.setVisibility(View.VISIBLE);
+          }
+          catch(Exception e) {
+            holder.icon.setVisibility(View.GONE);
           }
         }
       }
