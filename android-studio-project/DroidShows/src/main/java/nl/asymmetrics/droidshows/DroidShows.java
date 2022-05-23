@@ -834,8 +834,9 @@ public class DroidShows extends ListActivity
           for (File thumb : thumbs)
             thumb.delete();
         for (File file : new File(getApplicationInfo().dataDir +"/databases").listFiles())
-            if (!file.getName().equalsIgnoreCase("DroidShows.db")) file.delete();
-        updateAllSeries(2);  // 2 = update archive and current shows
+          if (!file.getName().equalsIgnoreCase("DroidShows.db")) file.delete();
+        if (!BuildConfig.DEBUG)
+          updateAllSeries(2);  // 2 = update archive and current shows
         undo.clear();
         toastTxt += " ("+ source.getPath() +")";
       } catch (IOException e) {
