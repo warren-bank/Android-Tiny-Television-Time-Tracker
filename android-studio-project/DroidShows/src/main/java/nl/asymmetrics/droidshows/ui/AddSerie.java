@@ -61,7 +61,6 @@ public class AddSerie extends ListActivity
   /* Context Menus */
   private static final int ADD_CONTEXT = Menu.FIRST;
   private ListView listView;
-  private Utils utils = new Utils();
   static String searchQuery = "";
   private SQLiteStore db;
   private List<String> series;
@@ -333,7 +332,7 @@ public class AddSerie extends ListActivity
   }
   
   private void doSearch() {
-    if (utils.isNetworkAvailable(AddSerie.this))
+    if (Utils.isNetworkAvailable(AddSerie.this))
       Search();
     else
       Toast.makeText(getApplicationContext(), R.string.messages_no_internet, Toast.LENGTH_LONG).show();

@@ -128,7 +128,6 @@ public class DroidShows extends ListActivity
   private static BounceListView listView = null;
   private static String backFromSeasonSerieId;
   private static TheTVDB theTVDB;
-  private Utils utils = new Utils();
   private Update updateDS;
   private static final String PREF_NAME = "DroidShowsPref";
   private SharedPreferences sharedPrefs;
@@ -1278,7 +1277,7 @@ public class DroidShows extends ListActivity
   }
 
   private void updateSerie(TVShowItem serie, final String langCode, int position) {
-    if (!utils.isNetworkAvailable(DroidShows.this)) {
+    if (!Utils.isNetworkAvailable(DroidShows.this)) {
       Toast.makeText(getApplicationContext(), R.string.messages_no_internet, Toast.LENGTH_LONG).show();
     } else {
       final String serieId = serie.getSerieId();
@@ -1426,7 +1425,7 @@ public class DroidShows extends ListActivity
   }
 
   public void updateAllSeries(final int showArchive) {
-    if (!utils.isNetworkAvailable(DroidShows.this)) {
+    if (!Utils.isNetworkAvailable(DroidShows.this)) {
       Toast.makeText(getApplicationContext(), R.string.messages_no_internet, Toast.LENGTH_LONG).show();
     } else if (updateAllSeriesPD == null || !updateAllSeriesPD.isShowing()) {
       final List<TVShowItem> seriesToUpdate = new ArrayList<TVShowItem>();
