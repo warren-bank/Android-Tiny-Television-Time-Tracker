@@ -5,169 +5,182 @@ import java.util.Date;
 import android.graphics.drawable.Drawable;
 
 public class TVShowItem {
-        private String serieid;
-        private String language;
-        private String icon;
-        private Drawable dicon;
-        private String name;
-        private int snumber;
-        private String nextEpisode;
-        private Date nextAir;
-        private Date unwatchedLastAired;
-        private int unwatchedAired;
-        private int unwatched;
-        private boolean passiveStatus;
-        private String showStatus;
-        private String extResources;
-        private String episodeId;
-        private String episodeName;
-        private String episodeSeen;
+    private String serieid;
+    private String language;
+    private String icon;
+    private Drawable dicon;
+    private String name;
+    private int snumber;
+    private String nextEpisode;
+    private Date nextAir;
+    private String unwatchedLastEpisode;
+    private Date unwatchedLastAired;
+    private int unwatchedAired;
+    private int unwatched;
+    private boolean passiveStatus;
+    private String showStatus;
+    private String extResources;
+    private String episodeId;
+    private String episodeName;
+    private String episodeSeen;
 
-        public TVShowItem(String serieid, String language, String icon, Drawable dicon, String name,
-                          int snumber, String nextEpisode, Date nextAir,
-                          Date unwatchedLastAired, int unwatchedAired, int unwatched,
-                          boolean passiveStatus, String showStatus, String extResources) {
-                this.serieid = serieid;
-                this.language = language;
-                this.icon = icon;
-                this.dicon = dicon;
-                this.name = name;
-                this.snumber = snumber;
-                this.nextEpisode = nextEpisode;
-                this.nextAir = nextAir;
-                this.unwatchedLastAired = unwatchedLastAired;
-                this.unwatchedAired = unwatchedAired;
-                this.unwatched = unwatched;
-                this.passiveStatus = passiveStatus;
-                this.showStatus = showStatus;
-                this.extResources = extResources;
-        }
+    public TVShowItem(
+        String serieid, String language, String icon, Drawable dicon, String name, int snumber,
+        String nextEpisode, Date nextAir,
+        String unwatchedLastEpisode, Date unwatchedLastAired,
+        int unwatchedAired, int unwatched,
+        boolean passiveStatus, String showStatus, String extResources
+    ) {
+        this.serieid = serieid;
+        this.language = language;
+        this.icon = icon;
+        this.dicon = dicon;
+        this.name = name;
+        this.snumber = snumber;
+        this.nextEpisode = nextEpisode;
+        this.nextAir = nextAir;
+        this.unwatchedLastEpisode = unwatchedLastEpisode;
+        this.unwatchedLastAired = unwatchedLastAired;
+        this.unwatchedAired = unwatchedAired;
+        this.unwatched = unwatched;
+        this.passiveStatus = passiveStatus;
+        this.showStatus = showStatus;
+        this.extResources = extResources;
+    }
 
-        public String getSerieId() {
-                return this.serieid;
-        }
+    public String getSerieId() {
+        return this.serieid;
+    }
 
-        public String getLanguage() {
-            return this.language;
-        }
+    public String getLanguage() {
+        return this.language;
+    }
 
-        public String getIcon() {
-                return this.icon;
-        }
+    public String getIcon() {
+        return this.icon;
+    }
 
-          public void setIcon(String icon) {
-                  this.icon = icon;
-          }
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
 
-        public String getName() {
-                return this.name;
-        }
+    public Drawable getDIcon() {
+        return this.dicon;
+    }
 
-          public void setName(String name) {
-                  this.name = name;
-          }
+    public void setDIcon(Drawable dicon) {
+        this.dicon = dicon;
+    }
 
-        public int getSNumber() {
-                return this.snumber;
-        }
+    public String getName() {
+        return this.name;
+    }
 
-          public void setSNumber(int snumber) {
-                  this.snumber = snumber;
-          }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-        public String getNextEpisode() {
-                return this.nextEpisode;
-        }
+    public int getSNumber() {
+        return this.snumber;
+    }
 
-          public void setNextEpisode(String nextEpisode) {
-                  this.nextEpisode = nextEpisode;
-          }
+    public void setSNumber(int snumber) {
+        this.snumber = snumber;
+    }
 
-        public Date getNextAir() {
-          return this.nextAir;
-        }
+    public String getNextEpisode() {
+        return this.nextEpisode;
+    }
 
-        public void setNextAir(Date nextAir) {
-                this.nextAir = nextAir;
-        }
-  
-        public int getUnwatched() {
-                return this.unwatched;
-        }
+    public void setNextEpisode(String nextEpisode) {
+        this.nextEpisode = nextEpisode;
+    }
 
-          public void setUnwatched(int unwatched) {
-                  this.unwatched = unwatched;
-          }
+    public Date getNextAir() {
+        return this.nextAir;
+    }
 
-        public int getUnwatchedAired() {
-          return this.unwatchedAired;
-        }
+    public void setNextAir(Date nextAir) {
+        this.nextAir = nextAir;
+    }
 
-        public void setUnwatchedAired(int unwatchedAired) {
-                this.unwatchedAired = unwatchedAired;
-        }
+    public String getUnwatchedLastEpisode() {
+        return this.unwatchedLastEpisode;
+    }
 
-        public Date getUnwatchedLastAired() {
-          return this.unwatchedLastAired;
-        }
+    public void setUnwatchedLastEpisode(String unwatchedLastEpisode) {
+        this.unwatchedLastEpisode = unwatchedLastEpisode;
+    }
 
-        public void setUnwatchedLastAired(Date unwatchedLastAired) {
-                this.unwatchedLastAired = unwatchedLastAired;
-        }
+    public Date getUnwatchedLastAired() {
+        return this.unwatchedLastAired;
+    }
 
-        public boolean getPassiveStatus() {
-                return this.passiveStatus;
-        }
+    public void setUnwatchedLastAired(Date unwatchedLastAired) {
+        this.unwatchedLastAired = unwatchedLastAired;
+    }
 
-          public void setPassiveStatus(boolean passiveStatus) {
-                  this.passiveStatus = passiveStatus;
-          }
+    public int getUnwatchedAired() {
+      return this.unwatchedAired;
+    }
 
-        public Drawable getDIcon() {
-                return this.dicon;
-        }
+    public void setUnwatchedAired(int unwatchedAired) {
+        this.unwatchedAired = unwatchedAired;
+    }
 
-          public void setDIcon(Drawable dicon) {
-                  this.dicon = dicon;
-          }
-        
-        public String getShowStatus() {
-                return this.showStatus;
-        }
+    public int getUnwatched() {
+        return this.unwatched;
+    }
 
-          public void setShowStatus(String showStatus) {
-                  this.showStatus = showStatus;
-          }
-        
-        public String getExtResources() {
-            return this.extResources;
-      }
-  
-        public void setExtResources(String extResources) {
-                this.extResources = extResources;
-        }
+    public void setUnwatched(int unwatched) {
+        this.unwatched = unwatched;
+    }
 
-        public String getEpisodeId() {
-            return this.episodeId;
-      }
-  
-        public void setEpisodeId(String episodeId) {
-                this.episodeId = episodeId;
-        }
+    public boolean getPassiveStatus() {
+        return this.passiveStatus;
+    }
 
-        public String getEpisodeName() {
-            return this.episodeName;
-      }
-    
-        public void setEpisodeName(String episodeName) {
-                this.episodeName = episodeName;
-        }
+    public void setPassiveStatus(boolean passiveStatus) {
+        this.passiveStatus = passiveStatus;
+    }
 
-        public String getEpisodeSeen() {
-            return this.episodeSeen;
-      }
-  
-        public void setEpisodeSeen(String episodeSeen) {
-                this.episodeSeen = episodeSeen;
-        }
+    public String getShowStatus() {
+        return this.showStatus;
+    }
+
+    public void setShowStatus(String showStatus) {
+        this.showStatus = showStatus;
+    }
+
+    public String getExtResources() {
+        return this.extResources;
+    }
+
+    public void setExtResources(String extResources) {
+        this.extResources = extResources;
+    }
+
+    public String getEpisodeId() {
+        return this.episodeId;
+    }
+
+    public void setEpisodeId(String episodeId) {
+        this.episodeId = episodeId;
+    }
+
+    public String getEpisodeName() {
+        return this.episodeName;
+    }
+
+    public void setEpisodeName(String episodeName) {
+        this.episodeName = episodeName;
+    }
+
+    public String getEpisodeSeen() {
+        return this.episodeSeen;
+    }
+
+    public void setEpisodeSeen(String episodeSeen) {
+        this.episodeSeen = episodeSeen;
+    }
 }

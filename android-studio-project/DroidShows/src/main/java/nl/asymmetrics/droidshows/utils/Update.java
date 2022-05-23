@@ -7,7 +7,7 @@ import android.util.Log;
 public class Update
 {
   private SQLiteStore db;
-  private String currentVersion = "0.1.5-7G4";
+  private String currentVersion = "0.1.5-7G5";
   
   public Update(SQLiteStore db) {
     this.db = db;
@@ -34,9 +34,15 @@ public class Update
     }
     if (version.equals("0.1.5-7G2")) {
       done = u0157GTo0157G3();
+      version = getVersion();
     }
     if (version.equals("0.1.5-7G3")) {
       done = u0157GTo0157G4();
+      version = getVersion();
+    }
+    if (version.equals("0.1.5-7G4")) {
+      done = u0157GTo0157G5();
+      version = getVersion();
     }
     return done;
   }
@@ -120,6 +126,19 @@ public class Update
     try {
       db.execQuery("ALTER TABLE series ADD COLUMN unwatchedLastAired VARCHAR");
       db.execQuery("UPDATE droidseries SET version='0.1.5-7G4'");
+      return true;
+    } catch (Exception e) {
+      Log.e(SQLiteStore.TAG, "Error updating database");
+      e.printStackTrace();
+      return false;
+    }
+  }
+
+  private boolean u0157GTo0157G5() {
+    Log.d(SQLiteStore.TAG, "UPDATING TO VERSION 0.1.5-7G5");
+    try {
+      db.execQuery("ALTER TABLE series ADD COLUMN unwatchedLastEpisode VARCHAR");
+      db.execQuery("UPDATE droidseries SET version='0.1.5-7G5'");
       return true;
     } catch (Exception e) {
       Log.e(SQLiteStore.TAG, "Error updating database");

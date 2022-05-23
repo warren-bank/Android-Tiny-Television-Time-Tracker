@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">to be aired</string>
 <string name="messages_seasons">Seasons</string>
 <string name="messages_season">Season</string>
-<string name="messages_next_episode">Next episode:</string>
+<string name="messages_next_episode">Next unseen:</string>
+<string name="messages_last_episode">Last unseen:</string>
 <string name="messages_next_airing">Next airing:</string>
 <string name="messages_no_new_eps">No new episodes</string>
 <string name="messages_season_completely_watched">Season completely watched</string>

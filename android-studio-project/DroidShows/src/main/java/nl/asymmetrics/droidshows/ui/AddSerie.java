@@ -220,13 +220,14 @@ public class AddSerie extends ListActivity
           Log.d(SQLiteStore.TAG, "Adding "+ sToAdd.getSerieName() +": creating the TV show item");
           int nseasons = db.getSeasonCount(sToAdd.getId());
           SQLiteStore.NextEpisode nextEpisode = db.getNextEpisode(sToAdd.getId());
-          Date unwatchedLastAired = db.getUnwatchedLastAiredEpisodeDate(sToAdd.getId());
+          SQLiteStore.UnwatchedLastAiredEpisode newestEpisode = db.getUnwatchedLastAiredEpisode(sToAdd.getId());
           int unwatchedAired = db.getEpsUnwatchedAired(sToAdd.getId());
           int unwatched = db.getEpsUnwatched(sToAdd.getId());
           String nextEpisodeStr = db.getNextEpisodeString(nextEpisode, DroidShows.showNextAiring && 0 < unwatchedAired && unwatchedAired < unwatched);
+          String newestEpisodeStr = db.getNextEpisodeString(newestEpisode, /* boolean showNextAiring= */ false, /* boolean requireAiredDate= */ true);
           Drawable d = Drawable.createFromPath(sToAdd.getPosterThumb());
           TVShowItem tvsi = new TVShowItem(sToAdd.getId(), sToAdd.getLanguage(), sToAdd.getPosterThumb(), d, sToAdd.getSerieName(), nseasons,
-            nextEpisodeStr, nextEpisode.firstAiredDate, unwatchedLastAired, unwatchedAired, unwatched, sToAdd.getPassiveStatus() == 1,
+            nextEpisodeStr, nextEpisode.firstAiredDate, newestEpisodeStr, newestEpisode.firstAiredDate, unwatchedAired, unwatched, sToAdd.getPassiveStatus() == 1,
             (sToAdd.getStatus() == null ? "null" : sToAdd.getStatus()), "");
           DroidShows.series.add(tvsi);
           series.add(sToAdd.getId());

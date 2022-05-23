@@ -1829,8 +1829,9 @@ public class DroidShows extends ListActivity
     private final String strEpAired = getString(R.string.messages_ep_aired);
     private final String strNewEp = getString(R.string.messages_new_episode);
     private final String strNewEps = getString(R.string.messages_new_episodes);
-    private final String strNextAiring = getString(R.string.messages_next_airing);
     private final String strNextEp = getString(R.string.messages_next_episode);
+    private final String strLastEp = getString(R.string.messages_last_episode);
+    private final String strNextAiring = getString(R.string.messages_next_airing);
     private final String strNoNewEps = getString(R.string.messages_no_new_eps);
     private final String strOf = getString(R.string.messages_of);
     private final String strOn = getString(R.string.messages_on);
@@ -1912,6 +1913,7 @@ public class DroidShows extends ListActivity
         holder = new ViewHolder();
         holder.sn = (TextView) convertView.findViewById(R.id.seriename);
         holder.si = (TextView) convertView.findViewById(R.id.serieinfo);
+        holder.sle = (TextView) convertView.findViewById(R.id.serielastepisode);
         holder.sne = (TextView) convertView.findViewById(R.id.serienextepisode);
         holder.icon = (IconView) convertView.findViewById(R.id.serieicon);
         holder.context = (ImageView) convertView.findViewById(R.id.seriecontext);
@@ -1928,9 +1930,11 @@ public class DroidShows extends ListActivity
         int nunwatched = serie.getUnwatched();
         int nunwatchedAired = serie.getUnwatchedAired();
         String ended = (serie.getShowStatus().equalsIgnoreCase("Ended") ? " \u2020" : "");
+        boolean sneAired = false;
         if (holder.sn != null) {
           holder.sn.setText((pinnedShows.contains(serie.getSerieId()) ? "\u2022 " : "") + serie.getName() + ended);
           holder.sn.setEnabled(!searching() || !serie.getPassiveStatus());
+          holder.sn.setVisibility(View.VISIBLE);
         }
         if (holder.si != null) {
           String siText = "";
@@ -1957,17 +1961,68 @@ public class DroidShows extends ListActivity
             }
           }
           holder.si.setText(siText +" | "+ unwatched);
+          holder.si.setVisibility(View.VISIBLE);
+        }
+        if (holder.sle != null) {
+          String sleString = serie.getUnwatchedLastEpisode();
+          if ((sleString != null) && !sleString.isEmpty()) {
+            holder.sle.setText(
+              sleString
+                .replace("[ne]", strLastEp)
+                .replace("[na]", "")
+                .replace("[on]", strOn)
+            );
+            holder.sle.setEnabled(true);
+            holder.sle.setVisibility(View.VISIBLE);
+          } else {
+            holder.sle.setVisibility(View.GONE);
+          }
         }
         if (holder.sne != null) {
-          if (nunwatched > 0 && !serie.getNextEpisode().isEmpty()) {
-            holder.sne.setText(serie.getNextEpisode() == null ? "" : serie.getNextEpisode()
-              .replace("[ne]", strNextEp)
-              .replace("[na]", strNextAiring)
-              .replace("[on]", strOn));
-            holder.sne.setEnabled(serie.getNextAir() != null && serie.getNextAir().compareTo(Calendar.getInstance().getTime()) <= 0);
+          String sneString = serie.getNextEpisode();
+          if ((nunwatched > 0) && (sneString != null) && !sneString.isEmpty()) {
+            if (sneString.contains("[na]")) {
+              sneAired = false;
+            }
+            else {
+              if (!sneAired) {
+                sneAired = (nunwatchedAired > 0);
+              }
+
+              if (!sneAired) {
+                Date nextAirDate = serie.getNextAir();
+
+                if ((nextAirDate != null)) {
+                  sneAired = (nextAirDate.compareTo(Calendar.getInstance().getTime()) <= 0);
+                }
+              }
+            }
+
+            holder.sne.setText(
+              sneString
+                .replace("[ne]", (sneAired ? strNextEp : strNextAiring))
+                .replace("[na]", strNextAiring)
+                .replace("[on]", strOn)
+            );
+            holder.sne.setEnabled(sneAired);
+            holder.sne.setVisibility(View.VISIBLE);
           } else {
-            holder.sne.setText("");
+            holder.sne.setVisibility(View.GONE);
           }
+        }
+        if ((holder.sle != null) && (holder.sne != null) && (holder.sle.getVisibility() == View.VISIBLE) && (holder.sne.getVisibility() == View.VISIBLE) && sneAired) {
+          // next episode (sne) is older than last episode (sle), because the user has a backlog of unwatched episodes.
+          // swap the text these 2x fields, so the presentation makes more sense for the user.
+          // ie: 2x of the 3x will always be shown in the following order:
+          //   1) Next unseen (sne: reverse position)
+          //   2) Last unseen
+          //   3) Next airing (sne: default position)
+
+          CharSequence sleString = holder.sle.getText();
+          CharSequence sneString = holder.sne.getText();
+
+          holder.sle.setText(sneString);
+          holder.sne.setText(sleString);
         }
         if (holder.icon != null) {
           Drawable icon = serie.getDIcon();
@@ -1984,14 +2039,20 @@ public class DroidShows extends ListActivity
         if (holder.sn != null) {
           holder.sn.setText(serie.getName());
           holder.sn.setTextColor(textViewColors);
+          holder.sn.setVisibility(View.VISIBLE);
         }
         if (holder.si != null) {
           holder.si.setEnabled(true);
           holder.si.setText(serie.getEpisodeName());
+          holder.si.setVisibility(View.VISIBLE);
+        }
+        if (holder.sle != null) {
+          holder.sle.setVisibility(View.GONE);
         }
         if (holder.sne != null) {
           holder.sne.setEnabled(true);
           holder.sne.setText(serie.getEpisodeSeen());
+          holder.sne.setVisibility(View.VISIBLE);
         }
         if (holder.icon != null) {
           Drawable icon = serie.getDIcon();
@@ -2057,6 +2118,7 @@ public class DroidShows extends ListActivity
   {
     TextView sn;
     TextView si;
+    TextView sle;
     TextView sne;
     IconView icon;
     ImageView context;

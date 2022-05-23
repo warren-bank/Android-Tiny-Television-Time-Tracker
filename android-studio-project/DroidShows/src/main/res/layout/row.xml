@@ -5,6 +5,7 @@
     <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingTop="2dp" android:paddingBottom="6dp" android:paddingLeft="6dp">
       <TextView android:id="@+id/seriename" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textStyle="bold" android:textSize="18sp" android:ellipsize="marquee" android:singleLine="true"/>
       <TextView android:id="@+id/serieinfo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:ellipsize="marquee" android:singleLine="true"/>
+      <TextView android:id="@+id/serielastepisode" android:layout_width="fill_parent" android:layout_height="wrap_content" android:ellipsize="marquee" android:singleLine="true"/>
       <TextView android:id="@+id/serienextepisode" android:layout_width="fill_parent" android:layout_height="wrap_content" android:ellipsize="marquee" android:singleLine="true"/>
     </LinearLayout>
   </LinearLayout>
