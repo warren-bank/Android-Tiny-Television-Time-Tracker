@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">发</string>
 <string name="messages_seasons">季节</string>
 <string name="messages_season">季节</string>
-<string name="messages_next_episode">下一集:</string>
+<string name="messages_next_episode">下一个未显示:</string>
+<string name="messages_last_episode">上次未显示:</string>
 <string name="messages_next_airing">下次播出:</string>
 <string name="messages_no_new_eps">没有新剧集</string>
 <string name="messages_season_completely_watched">季节完全看</string>

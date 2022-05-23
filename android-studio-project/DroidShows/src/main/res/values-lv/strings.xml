@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">jāpārraida</string>
 <string name="messages_seasons">Gadalaiki</string>
 <string name="messages_season">Sezona</string>
-<string name="messages_next_episode">Nākamā epizode:</string>
+<string name="messages_next_episode">Nākamais neredzēts:</string>
+<string name="messages_last_episode">Pēdējais neredzēts:</string>
 <string name="messages_next_airing">Nākamā airēšana:</string>
 <string name="messages_no_new_eps">Nav jaunu epizožu</string>
 <string name="messages_season_completely_watched">Sezona pilnīgi noskatījās</string>

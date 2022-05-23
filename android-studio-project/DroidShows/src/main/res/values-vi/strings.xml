@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">được phát sóng</string>
 <string name="messages_seasons">Các mùa</string>
 <string name="messages_season">Mùa giải</string>
-<string name="messages_next_episode">Tập tiếp theo:</string>
+<string name="messages_next_episode">Tiếp theo mà không được nhìn thấy:</string>
+<string name="messages_last_episode">Tập cuối cùng chưa từng thấy:</string>
 <string name="messages_next_airing">Phát sóng kế:</string>
 <string name="messages_no_new_eps">Không có tập mới</string>
 <string name="messages_season_completely_watched">Mùa giải hoàn toàn được</string>

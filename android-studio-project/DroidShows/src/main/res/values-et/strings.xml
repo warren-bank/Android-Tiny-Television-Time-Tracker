@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">Olla eetris.</string>
 <string name="messages_seasons">Hooajad</string>
 <string name="messages_season">Hooaeg</string>
-<string name="messages_next_episode">Järgmine episood:</string>
+<string name="messages_next_episode">Järgmine:</string>
+<string name="messages_last_episode">Viimati nähtud:</string>
 <string name="messages_next_airing">Järgmine:</string>
 <string name="messages_no_new_eps">Ei mingeid uusi episoode</string>
 <string name="messages_season_completely_watched">Hooaeg on täielikult jälgitud</string>

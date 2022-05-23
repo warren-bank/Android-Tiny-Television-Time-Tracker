@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">untuk dapat ditayangkan</string>
 <string name="messages_seasons">Musim</string>
 <string name="messages_season">Musim</string>
-<string name="messages_next_episode">Episode berikutnya:</string>
+<string name="messages_next_episode">Berikutnya tak terlihat:</string>
+<string name="messages_last_episode">Terakhir tak terlihat:</string>
 <string name="messages_next_airing">Penayangan berikutnya:</string>
 <string name="messages_no_new_eps">Tidak ada episode baru</string>
 <string name="messages_season_completely_watched">Musim benar-benar ditonton</string>

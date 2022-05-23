@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">को जोहो गर्न</string>
 <string name="messages_seasons">Seasons</string>
 <string name="messages_season">सिजन</string>
-<string name="messages_next_episode">पछिल्लो प्रकरण:</string>
+<string name="messages_next_episode">पछिल्लो नदेखिने:</string>
+<string name="messages_last_episode">अन्तिम अदृश्य:</string>
 <string name="messages_next_airing">पछिल्लो वायुयान:</string>
 <string name="messages_no_new_eps">नयाँ घटनाहरू छैन</string>
 <string name="messages_season_completely_watched">सिजन पूर्ण रुपमा हेरिएको छ</string>

@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">പ്രദര്ശിപ്പിക്കാന്</string>
 <string name="messages_seasons">സീസണ്</string>
 <string name="messages_season">സീസാന്</string>
-<string name="messages_next_episode">അടുത്ത അദ്ധ്യായം:</string>
+<string name="messages_next_episode">അടുത്തതു് കാണപ്പെടുന്നതു്:</string>
+<string name="messages_last_episode">അവസാനമായി കാണപ്പെടുന്നത്:</string>
 <string name="messages_next_airing">അടുത്ത എയര്വിങ്:</string>
 <string name="messages_no_new_eps">പുതിയ അക്ഷരങ്ങള് ലഭ്യമല്ല</string>
 <string name="messages_season_completely_watched">സീസൺ പൂർണ്ണമായും നിരീക്ഷിച്ചു</string>

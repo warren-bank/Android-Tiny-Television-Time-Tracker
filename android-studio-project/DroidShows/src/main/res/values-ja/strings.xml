@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">放送されること</string>
 <string name="messages_seasons">シーズンズ</string>
 <string name="messages_season">シーズン</string>
-<string name="messages_next_episode">次のエピソード:</string>
+<string name="messages_next_episode">次の未確認:</string>
+<string name="messages_last_episode">最後の未確認:</string>
 <string name="messages_next_airing">次の接続:</string>
 <string name="messages_no_new_eps">新規エピソードなし</string>
 <string name="messages_season_completely_watched">シーソン・完全に監視</string>

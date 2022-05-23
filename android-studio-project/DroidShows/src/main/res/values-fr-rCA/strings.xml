@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">à diffuser</string>
 <string name="messages_seasons">Saisons</string>
 <string name="messages_season">Saison</string>
-<string name="messages_next_episode">Prochain épisode:</string>
+<string name="messages_next_episode">Prochain invisible:</string>
+<string name="messages_last_episode">Dernier invisible:</string>
 <string name="messages_next_airing">Prochaine diffusion:</string>
 <string name="messages_no_new_eps">Aucun nouveau épisode</string>
 <string name="messages_season_completely_watched">Saison complètement surveillée</string>

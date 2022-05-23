@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">سيتم اذاعة</string>
 <string name="messages_seasons">الفصول</string>
 <string name="messages_season">الموسم</string>
-<string name="messages_next_episode">الحلقة القادمة:</string>
+<string name="messages_next_episode">لم يتم رؤيته بعد:</string>
+<string name="messages_last_episode">آخر غير رؤية:</string>
 <string name="messages_next_airing">المزاوران التالي:</string>
 <string name="messages_no_new_eps">لا حلقات جديدة</string>
 <string name="messages_season_completely_watched">لقد شاهد الموسم بالكامل</string>

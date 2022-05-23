@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">AIred olmak için</string>
 <string name="messages_seasons">Mevsimler</string>
 <string name="messages_season">Sezon</string>
-<string name="messages_next_episode">Sonraki bölüm:</string>
+<string name="messages_next_episode">Sonraki görülmeyen:</string>
+<string name="messages_last_episode">Son görünmeyen:</string>
 <string name="messages_next_airing">Sonraki hava durumu:</string>
 <string name="messages_no_new_eps">Yeni bölüm yok</string>
 <string name="messages_season_completely_watched">Sezon tamamen izlendi</string>

@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">да се емитује</string>
 <string name="messages_seasons">Годишња доба</string>
 <string name="messages_season">Сезона</string>
-<string name="messages_next_episode">Следећа епизода:</string>
+<string name="messages_next_episode">Следеће невиђено:</string>
+<string name="messages_last_episode">Последње невиђено:</string>
 <string name="messages_next_airing">Следеће емитирање:</string>
 <string name="messages_no_new_eps">Нема нових епизода</string>
 <string name="messages_season_completely_watched">Сезона је потпуно посматрала</string>

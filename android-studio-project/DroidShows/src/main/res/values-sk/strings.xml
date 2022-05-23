@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">má sa odvysie</string>
 <string name="messages_seasons">Ročné obdobia</string>
 <string name="messages_season">Sezóna</string>
-<string name="messages_next_episode">Ďalšia epizóda:</string>
+<string name="messages_next_episode">Ďalšie neviditeľné:</string>
+<string name="messages_last_episode">Naposledy neviditeľné:</string>
 <string name="messages_next_airing">Ďalšie vetranie:</string>
 <string name="messages_no_new_eps">Žiadne nové epizódy</string>
 <string name="messages_season_completely_watched">Sezóna úplne sledovaná</string>

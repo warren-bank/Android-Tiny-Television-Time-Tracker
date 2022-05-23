@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">Буде показано</string>
 <string name="messages_seasons">Сезони</string>
 <string name="messages_season">Сезон</string>
-<string name="messages_next_episode">Наступний епізод:</string>
+<string name="messages_next_episode">Наступна невидима:</string>
+<string name="messages_last_episode">Остання невидима:</string>
 <string name="messages_next_airing">Наступний ефір:</string>
 <string name="messages_no_new_eps">Ніяких нових епізодів</string>
 <string name="messages_season_completely_watched">Завершення сезону повністю спостереження</string>

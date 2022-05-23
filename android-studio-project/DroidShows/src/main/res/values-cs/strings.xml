@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">být vysílán</string>
 <string name="messages_seasons">Sezony</string>
 <string name="messages_season">Sezóna</string>
-<string name="messages_next_episode">Další epizoda:</string>
+<string name="messages_next_episode">Další neviditelné:</string>
+<string name="messages_last_episode">Poslední neviditelné:</string>
 <string name="messages_next_airing">Další párování:</string>
 <string name="messages_no_new_eps">Žádné nové epizody</string>
 <string name="messages_season_completely_watched">Sezóna kompletně sledována</string>

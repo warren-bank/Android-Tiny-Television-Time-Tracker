@@ -95,7 +95,8 @@
 <string name="messages_to_be_aired_pl">da trasmettere</string>
 <string name="messages_seasons">Stagioni</string>
 <string name="messages_season">Stagione</string>
-<string name="messages_next_episode">Prossimo episodio:</string>
+<string name="messages_next_episode">Prossimo inosservato:</string>
+<string name="messages_last_episode">Ultimo inosservato:</string>
 <string name="messages_next_airing">Prossimo trasmesso:</string>
 <string name="messages_no_new_eps">Nessun nuovo episodio</string>
 <string name="messages_season_completely_watched">Stagione vista completamente</string>

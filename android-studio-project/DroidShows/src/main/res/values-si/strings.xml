@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">ලෙස දක්වා ඇත</string>
 <string name="messages_seasons">Seasons</string>
 <string name="messages_season">සිසුවා</string>
-<string name="messages_next_episode">ඊලග කොටස:</string>
+<string name="messages_next_episode">ඊලඟ නොපෙනෙන:</string>
+<string name="messages_last_episode">අවසන් නොවූ විරූ:</string>
 <string name="messages_next_airing">ඊලග ගුවන් යානය:</string>
 <string name="messages_no_new_eps">නව කොටස් නැත</string>
 <string name="messages_season_completely_watched">සීසන් එක සම්පූර්ණයෙන්ම බලලා තියෙනවා.</string>

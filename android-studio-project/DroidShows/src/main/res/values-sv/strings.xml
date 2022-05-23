@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">som ska sändas</string>
 <string name="messages_seasons">Säsonger</string>
 <string name="messages_season">Säsong</string>
-<string name="messages_next_episode">Nästa avsnitt:</string>
+<string name="messages_next_episode">Nästa osedda:</string>
+<string name="messages_last_episode">Senast ej sedd:</string>
 <string name="messages_next_airing">Nästa luftning:</string>
 <string name="messages_no_new_eps">Inga nya episoder</string>
 <string name="messages_season_completely_watched">Säsongen bevakade</string>

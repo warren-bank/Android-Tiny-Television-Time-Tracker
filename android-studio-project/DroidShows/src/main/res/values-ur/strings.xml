@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">نشر کیا جائے گا</string>
 <string name="messages_seasons">موسم</string>
 <string name="messages_season">موسم</string>
-<string name="messages_next_episode">اگلی قسط:</string>
+<string name="messages_next_episode">اگلا غیب:</string>
+<string name="messages_last_episode">آخری غیب:</string>
 <string name="messages_next_airing">اگلی نشر:</string>
 <string name="messages_no_new_eps">کوئی نئی اقساط</string>
 <string name="messages_season_completely_watched">موسم پوری طرح دیکھا</string>

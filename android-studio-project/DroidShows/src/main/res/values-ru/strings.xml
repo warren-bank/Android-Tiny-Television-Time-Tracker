@@ -94,7 +94,8 @@
 <string name="messages_to_be_aired_pl">будет показан</string>
 <string name="messages_seasons">Сезоны</string>
 <string name="messages_season">Сезон</string>
-<string name="messages_next_episode">Следующая серия:</string>
+<string name="messages_next_episode">Следующий невиданные:</string>
+<string name="messages_last_episode">Последний невиданные:</string>
 <string name="messages_next_airing">Cледующая трансляция:</string>
 <string name="messages_no_new_eps">Новых серий нет</string>
 <string name="messages_season_completely_watched">Сезон полностью просмотрен</string>

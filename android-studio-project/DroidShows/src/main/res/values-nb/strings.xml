@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">å bli avsendt</string>
 <string name="messages_seasons">Sesong</string>
 <string name="messages_season">Sesong</string>
-<string name="messages_next_episode">Neste episode:</string>
+<string name="messages_next_episode">Neste usett:</string>
+<string name="messages_last_episode">Siste usett:</string>
 <string name="messages_next_airing">Neste luftfart:</string>
 <string name="messages_no_new_eps">Ingen nye episoder</string>
 <string name="messages_season_completely_watched">Sesong totalt sett</string>

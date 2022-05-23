@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">সম্প্রচার করা হবে</string>
 <string name="messages_seasons">Seasons</string>
 <string name="messages_season">সিজন</string>
-<string name="messages_next_episode">পরবর্তী পর্ব:</string>
+<string name="messages_next_episode">পরবর্তী অদেখা:</string>
+<string name="messages_last_episode">সর্বশেষ অদেখা:</string>
 <string name="messages_next_airing">পরবর্তী এয়ারলিং:</string>
 <string name="messages_no_new_eps">নতুন পর্ব নয়</string>
 <string name="messages_season_completely_watched">সিজন পুরোপুরি দেখেছে</string>

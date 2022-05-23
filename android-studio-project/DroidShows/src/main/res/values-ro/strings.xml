@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">pentru a fi difuzat</string>
 <string name="messages_seasons">Anotimpuri</string>
 <string name="messages_season">Sezon</string>
-<string name="messages_next_episode">Episodul următor:</string>
+<string name="messages_next_episode">Următorul nevăzut:</string>
+<string name="messages_last_episode">Ultima nevăzut:</string>
 <string name="messages_next_airing">Următorul zbor:</string>
 <string name="messages_no_new_eps">Fără episoade noi</string>
 <string name="messages_season_completely_watched">Sezonul complet vizionat</string>

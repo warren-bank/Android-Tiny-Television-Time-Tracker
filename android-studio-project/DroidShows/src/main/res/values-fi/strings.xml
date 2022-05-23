@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">Aipuna</string>
 <string name="messages_seasons">Siemenet</string>
 <string name="messages_season">Kausi</string>
-<string name="messages_next_episode">Seuraava jakso:</string>
+<string name="messages_next_episode">Seuraava näkymätön:</string>
+<string name="messages_last_episode">Viimeksi nähty:</string>
 <string name="messages_next_airing">Seuraava ilma:</string>
 <string name="messages_no_new_eps">Ei uusia jaksoja</string>
 <string name="messages_season_completely_watched">Kausi on täysin katsonut</string>

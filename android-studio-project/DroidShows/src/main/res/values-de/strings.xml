@@ -96,7 +96,8 @@
 <string name="messages_to_be_aired_pl">werden ausgestrahlt</string>
 <string name="messages_seasons">Staffeln</string>
 <string name="messages_season">Staffel</string>
-<string name="messages_next_episode">Nächste Folge:</string>
+<string name="messages_next_episode">Nächste nicht gesehene:</string>
+<string name="messages_last_episode">Letzte nicht gesehene:</string>
 <string name="messages_next_airing">Nächste Ausstrahlung:</string>
 <string name="messages_no_new_eps">Keine neue Folgen</string>
 <string name="messages_season_completely_watched">Staffel komplett gesehen\n</string>

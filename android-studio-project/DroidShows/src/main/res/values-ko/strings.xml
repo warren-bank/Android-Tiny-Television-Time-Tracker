@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">방송되다</string>
 <string name="messages_seasons">계절성</string>
 <string name="messages_season">시즌</string>
-<string name="messages_next_episode">다음 에피소드:</string>
+<string name="messages_next_episode">다음은 보이지 않는:</string>
+<string name="messages_last_episode">마지막으로 볼 수 없는:</string>
 <string name="messages_next_airing">다음 방영:</string>
 <string name="messages_no_new_eps">새로운 에피소드는 없다</string>
 <string name="messages_season_completely_watched">시즌을 완전히 지켜보는</string>

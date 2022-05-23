@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">Le kell adni</string>
 <string name="messages_seasons">Seasons</string>
 <string name="messages_season">Season</string>
-<string name="messages_next_episode">Következő rész:</string>
+<string name="messages_next_episode">Következő láthatatlan:</string>
+<string name="messages_last_episode">Utolsó láthatatlan:</string>
 <string name="messages_next_airing">Következő légzés:</string>
 <string name="messages_no_new_eps">Nincsenek új epizódok</string>
 <string name="messages_season_completely_watched">Season teljesen figyelt.</string>

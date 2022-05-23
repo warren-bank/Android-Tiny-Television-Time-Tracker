@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">do wyemitowania</string>
 <string name="messages_seasons">Pory roku</string>
 <string name="messages_season">Sezon</string>
-<string name="messages_next_episode">Następny odcinek:</string>
+<string name="messages_next_episode">Następne niewidoczne:</string>
+<string name="messages_last_episode">Ostatnio niewidoczne:</string>
 <string name="messages_next_airing">Następne Airing:</string>
 <string name="messages_no_new_eps">Brak nowych odcinków</string>
 <string name="messages_season_completely_watched">Sezon całkowicie obserwowany</string>

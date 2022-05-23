@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">प्रसारित होना</string>
 <string name="messages_seasons">ऋतुएं</string>
 <string name="messages_season">मौसम</string>
-<string name="messages_next_episode">अगला प्रसंग:</string>
+<string name="messages_next_episode">अगला अदृश्य:</string>
+<string name="messages_last_episode">अंतिम अदृश्य:</string>
 <string name="messages_next_airing">अगला प्रसारण:</string>
 <string name="messages_no_new_eps">कोई नया प्रकरण नहीं</string>
 <string name="messages_season_completely_watched">पूरी तरह से देखा मौसम</string>

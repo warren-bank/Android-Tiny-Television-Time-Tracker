@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">જોવા માટે</string>
 <string name="messages_seasons">Seasons</string>
 <string name="messages_season">સિઝન</string>
-<string name="messages_next_episode">આગળનું અહેવાલ:</string>
+<string name="messages_next_episode">આગળનું અસ્તિત્વ:</string>
+<string name="messages_last_episode">છેલ્લે અસ્તિત્વ:</string>
 <string name="messages_next_airing">આગળનું એરઇંગ:</string>
 <string name="messages_no_new_eps">નવી ભાગો નથી</string>
 <string name="messages_season_completely_watched">શિયાળાને સંપૂર્ણપણે જોઇ</string>

@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">జరుపుకోవాలి.</string>
 <string name="messages_seasons">సీజన్లు</string>
 <string name="messages_season">సీజన్</string>
-<string name="messages_next_episode">తరువాతి అధ్యాయం:</string>
+<string name="messages_next_episode">తరువాతి కనిపించు:</string>
+<string name="messages_last_episode">చివరి కనిపించు:</string>
 <string name="messages_next_airing">తరువాతి విమానము:</string>
 <string name="messages_no_new_eps">కొత్త ధారావాహిక</string>
 <string name="messages_season_completely_watched">సీజన్ పూర్తిగా కనిపించింది.</string>

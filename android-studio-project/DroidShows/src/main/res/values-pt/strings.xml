@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">para ser exibido</string>
 <string name="messages_seasons">Estações</string>
 <string name="messages_season">Temporada</string>
-<string name="messages_next_episode">Próximo episódio:</string>
+<string name="messages_next_episode">Próximo invisto:</string>
+<string name="messages_last_episode">Último invisto:</string>
 <string name="messages_next_airing">Próximo arejamento:</string>
 <string name="messages_no_new_eps">Sem novos episódios</string>
 <string name="messages_season_completely_watched">Temporada completamente assistida</string>

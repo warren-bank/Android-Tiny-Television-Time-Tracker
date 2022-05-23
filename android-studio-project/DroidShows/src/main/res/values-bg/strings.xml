@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">Да се излъчи.</string>
 <string name="messages_seasons">Сезони:</string>
 <string name="messages_season">Сезон:</string>
-<string name="messages_next_episode">Следваща епизод:</string>
+<string name="messages_next_episode">Следваща невиждана.:</string>
+<string name="messages_last_episode">Последно невиждано.:</string>
 <string name="messages_next_airing">Следваща ...:</string>
 <string name="messages_no_new_eps">Няма нови епизоди.</string>
 <string name="messages_season_completely_watched">Сезон, напълно наблюдаван</string>

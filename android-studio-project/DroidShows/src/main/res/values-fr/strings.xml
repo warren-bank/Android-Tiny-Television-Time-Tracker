@@ -89,7 +89,8 @@
 <string name="messages_to_be_aired_pl">doit sortir</string>
 <string name="messages_seasons">Saisons</string>
 <string name="messages_season">Saison</string>
-<string name="messages_next_episode">Prochain épisode:</string>
+<string name="messages_next_episode">Prochain inaperçu:</string>
+<string name="messages_last_episode">Dernière modification:</string>
 <string name="messages_next_airing">Prochaine sortie:</string>
 <string name="messages_no_new_eps">Pas de nouvel épisode</string>
 <string name="messages_season_completely_watched">Saison regardée intégralement</string>

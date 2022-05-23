@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">ที่จะได้ออกอากาศ</string>
 <string name="messages_seasons">ฤดูกาล</string>
 <string name="messages_season">ฤดูกาล</string>
-<string name="messages_next_episode">ตอนต่อไป:</string>
+<string name="messages_next_episode">ถัดไปที่มองไม่เห็น:</string>
+<string name="messages_last_episode">สิ่งที่มองไม่เห็นล่าสุด:</string>
 <string name="messages_next_airing">ต่อไปจะออกอากาศ:</string>
 <string name="messages_no_new_eps">ไม่มีตอนใหม่</string>
 <string name="messages_season_completely_watched">ซีซั่นดูแล้ว</string>

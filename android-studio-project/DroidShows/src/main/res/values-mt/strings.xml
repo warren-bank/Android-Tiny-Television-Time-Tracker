@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">biex tixxandar</string>
 <string name="messages_seasons">Staġuni</string>
 <string name="messages_season">Staġun</string>
-<string name="messages_next_episode">Episodju li jmiss:</string>
+<string name="messages_next_episode">Li jmiss mhux meqjusa:</string>
+<string name="messages_last_episode">L-aħħar mhux meqjusa:</string>
 <string name="messages_next_airing">Li jmiss:</string>
 <string name="messages_no_new_eps">L-ebda episodju ġdid</string>
 <string name="messages_season_completely_watched">Staġun kompletament jarah</string>

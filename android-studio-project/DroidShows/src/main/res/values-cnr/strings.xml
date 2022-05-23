@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">Da se emitiraju.</string>
 <string name="messages_seasons">Godišnja doba</string>
 <string name="messages_season">Sezona 5.</string>
-<string name="messages_next_episode">Sljedeća epizoda:</string>
+<string name="messages_next_episode">Sledeća nevidljiva:</string>
+<string name="messages_last_episode">Posljednja nevidljiva.:</string>
 <string name="messages_next_airing">Sledeće emitovanje.:</string>
 <string name="messages_no_new_eps">Nema novih epizoda.</string>
 <string name="messages_season_completely_watched">Sezona je potpuno gledala.</string>

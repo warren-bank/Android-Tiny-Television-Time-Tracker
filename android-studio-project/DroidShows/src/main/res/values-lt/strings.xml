@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">būti suporuotas</string>
 <string name="messages_seasons">Metų laikai</string>
 <string name="messages_season">Sezonas</string>
-<string name="messages_next_episode">Kitas epizodas:</string>
+<string name="messages_next_episode">Kitas nematęs:</string>
+<string name="messages_last_episode">Paskutinis nematęs:</string>
 <string name="messages_next_airing">Next Airing:</string>
 <string name="messages_no_new_eps">Nėra naujų epizodų</string>
 <string name="messages_season_completely_watched">Sezonas visiškai stebimi</string>

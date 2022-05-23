@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">கூடுதலாக</string>
 <string name="messages_seasons">Seasons</string>
 <string name="messages_season">சைன்</string>
-<string name="messages_next_episode">அடுத்த ஆசிரியர்:</string>
+<string name="messages_next_episode">அடுத்த பார்க்கப்படாத:</string>
+<string name="messages_last_episode">கடைசியாக காணப்படாத:</string>
 <string name="messages_next_airing">அடுத்த விளிம்பு:</string>
 <string name="messages_no_new_eps">புதிய விசைகள் இல்லை</string>
 <string name="messages_season_completely_watched">சைன் முழுமையாக பார்க்கப்பட்டது</string>

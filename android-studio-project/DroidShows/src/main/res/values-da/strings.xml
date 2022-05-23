@@ -81,7 +81,8 @@
 <string name="messages_to_be_aired_pl">for at blive hjulpet</string>
 <string name="messages_seasons">Årstider</string>
 <string name="messages_season">Sæson</string>
-<string name="messages_next_episode">Næste afsnit:</string>
+<string name="messages_next_episode">Næste uset:</string>
+<string name="messages_last_episode">Sidst ikke set:</string>
 <string name="messages_next_airing">Næste luftning:</string>
 <string name="messages_no_new_eps">Ingen nye afsnit</string>
 <string name="messages_season_completely_watched">Season så fuldstændig på</string>
