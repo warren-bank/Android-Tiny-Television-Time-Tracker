@@ -64,7 +64,8 @@ public class PosterThumb {
       return;
     }
 
-    int show_icon_px = context.getResources().getInteger(R.integer.show_icon_px);
+    // convert 100dp to pixels based on density of screen
+    int show_icon_px = (int) (context.getResources().getInteger(R.integer.show_icon_dp) * context.getResources().getDisplayMetrics().density);
     Bitmap resizedBitmap = PosterThumb.decodeSampledBitmapFromFile(posterThumbPath, show_icon_px, show_icon_px);
     if (resizedBitmap == null) {
       Log.e(TAG, "Corrupt or unknown poster file type: "+ posterThumbPath);

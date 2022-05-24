@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<integer name="show_icon_px">100</integer> <!-- reminder: this value is also hardwired into the layout: DroidShows/src/main/res/layout/row.xml -->
+<integer name="show_icon_dp">100</integer> <!-- reminder: this value is also hardwired into the layout: DroidShows/src/main/res/layout/row.xml -->
 </resources>
