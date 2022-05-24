@@ -62,6 +62,7 @@
 <string name="dialog_include_specials">Include specials in unwatched count</string>
 <string name="dialog_full_line_check">Use entire line to mark episode</string>
 <string name="dialog_switch_swipe_direction">Swipe right-to-left to go back</string>
+<string name="dialog_show_icons">Show images in list</string>
 <string name="dialog_show_next_airing">Show date of next airing episode, instead of next episode\'s date</string>
 <string name="dialog_mark_from_last_watched">Mark next episode starting from the most recently watched</string>
 <string name="dialog_help">&#187; Don\'t forget to update shows regularly\n&#187; Long-press items for more options\n&#187; Swipe left-to-right to go back\n\nIn Shows Overview:\n&#187; Pull down list to update shows\n&#187; Tap poster for next episode info\n&#187; Double tap poster for show info\n&#187; Long-press poster for external resource (to *[url]s directly, or list)\n&#187; Swipe right-to-left to mark next as seen\n\nIn Show Details:\n&#187; Tap poster for full-screen view\n&#187; Click full-screen poster image for fan art\n&#187; Long-press full-screen poster to open in external app\n\nIn Show/Episode Details:\n&#187; Tap IMDb rating to view in IMDb\n&#187; Tap date to add to calendar</string>

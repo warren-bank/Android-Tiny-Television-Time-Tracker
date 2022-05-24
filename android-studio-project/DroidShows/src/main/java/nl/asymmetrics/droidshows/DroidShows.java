@@ -187,6 +187,10 @@ public class DroidShows extends ListActivity
   private static final int UPDATE_LATEST_SEASON_ONLY = 1;
   private static int latestSeasonOption;
 
+  // Show images in list?
+  private static final String SHOW_ICONS = "show_icons";
+  public static boolean showIcons;
+
   // Show date of next airing episode, instead of next episode's date?
   private static final String SHOW_NEXT_AIRING = "show_next_airing";
   public static boolean showNextAiring;
@@ -286,6 +290,7 @@ public class DroidShows extends ListActivity
     backupVersioning       = sharedPrefs.getBoolean(BACKUP_VERSIONING_PREF_NAME, true);
     enablePullToUpdate     = sharedPrefs.getBoolean(ENABLE_PULL_TO_UPDATE_PREF_NAME, true);
     latestSeasonOption     = sharedPrefs.getInt(LATEST_SEASON_PREF_NAME, UPDATE_LATEST_SEASON_ONLY);
+    showIcons              = sharedPrefs.getBoolean(SHOW_ICONS, true);
     showNextAiring         = sharedPrefs.getBoolean(SHOW_NEXT_AIRING, false);
     markFromLastWatched    = sharedPrefs.getBoolean(MARK_FROM_LAST_WATCHED, false);
     includeSpecialsOption  = sharedPrefs.getBoolean(INCLUDE_SPECIALS_NAME, false);
@@ -660,6 +665,7 @@ public class DroidShows extends ListActivity
     ((CheckBox) about.findViewById(R.id.backup_versioning)).setChecked(backupVersioning);
     ((CheckBox) about.findViewById(R.id.pull_to_update)).setChecked(enablePullToUpdate);
     ((CheckBox) about.findViewById(R.id.latest_season)).setChecked(latestSeasonOption == UPDATE_LATEST_SEASON_ONLY);
+    ((CheckBox) about.findViewById(R.id.show_icons)).setChecked(showIcons);
     ((CheckBox) about.findViewById(R.id.show_next_airing)).setChecked(showNextAiring);
     ((CheckBox) about.findViewById(R.id.mark_from_last_watched)).setChecked(markFromLastWatched);
     ((CheckBox) about.findViewById(R.id.include_specials)).setChecked(includeSpecialsOption);
@@ -710,6 +716,12 @@ public class DroidShows extends ListActivity
       case R.id.latest_season:
         latestSeasonOption ^= 1;
         break;
+      case R.id.show_icons:
+        showIcons ^= true;
+        if (!showIcons)
+          deleteCachedIcons();
+        listView.post(updateListView);
+        break;
       case R.id.show_next_airing:
         showNextAiring ^= true;
         updateShowStats();
@@ -743,6 +755,12 @@ public class DroidShows extends ListActivity
           })
           .show();
       break;
+    }
+  }
+
+  private void deleteCachedIcons() {
+    for (TVShowItem serie : series) {
+      serie.setDIcon(null);
     }
   }
 
@@ -1756,6 +1774,7 @@ public class DroidShows extends ListActivity
     ed.putBoolean(BACKUP_VERSIONING_PREF_NAME, backupVersioning);
     ed.putBoolean(ENABLE_PULL_TO_UPDATE_PREF_NAME, enablePullToUpdate);
     ed.putInt(LATEST_SEASON_PREF_NAME, latestSeasonOption);
+    ed.putBoolean(SHOW_ICONS, showIcons);
     ed.putBoolean(SHOW_NEXT_AIRING, showNextAiring);
     ed.putBoolean(MARK_FROM_LAST_WATCHED, markFromLastWatched);
     ed.putBoolean(INCLUDE_SPECIALS_NAME, includeSpecialsOption);
@@ -2116,6 +2135,8 @@ public class DroidShows extends ListActivity
         }
         if (holder.icon != null) {
           try {
+            if (!showIcons) throw new Exception("");
+
             Bitmap icon = serie.getDIcon();
             if (icon != null) {
               holder.icon.setImageBitmap(icon);
@@ -2158,6 +2179,8 @@ public class DroidShows extends ListActivity
         }
         if (holder.icon != null) {
           try {
+            if (!showIcons) throw new Exception("");
+
             Bitmap icon = serie.getDIcon();
             if (icon != null) {
               holder.icon.setImageBitmap(icon);
