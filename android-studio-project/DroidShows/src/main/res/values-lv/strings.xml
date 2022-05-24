@@ -62,6 +62,7 @@
 <string name="dialog_include_specials">Iekļaut specials nevērotu skaitu</string>
 <string name="dialog_full_line_check">Lietot visu rindu, lai atzīmētu epizodi</string>
 <string name="dialog_switch_swipe_direction">Pārvelciet pa labi pa kreisi, lai atgrieztos</string>
+<string name="dialog_show_icons">Rādīt attēlus sarakstā</string>
 <string name="dialog_show_next_airing">Rādīt datumu nākamās ēšanas epizode, nevis nākamā epizode datums</string>
 <string name="dialog_mark_from_last_watched">Atzīmēt nākamo epizodi sākot no pavisam nesen noskatījos</string>
 <string name="dialog_help">&#187; Neaizmirstiet atjaunināt parāda regulāri\n&#187; Garie preses priekšmeti, lai iegūtu vairāk iespēju\n&#187; Pārvelciet pa kreisi-pa labi, lai dotos atpakaļ\n\nRāda pārskatu:\n&#187; Velciet uz leju sarakstu, lai atjauninātu parāda\n&#187; Piesitiet plakāts nākamajam epizode info\n&#187; Dubultkrāna plakāts parādīt info\n&#187; Long-press plakāts ārējiem resursiem (lai * [url] s tieši, vai saraksts)\n&#187; Pārvelciet pa labi pa kreisi, lai atzīmētu nākamo, kā redzams\n\nRādīt detaļas:\n&#187; Piesitiet plakāts pilna ekrāna skatam\n&#187; Noklikšķiniet uz pilna ekrāna plakāta attēlu fanu mākslas\n&#187; Long-press pilna ekrāna plakāts, lai atvērtu ārējā lietotnē\n\nIn Show/Episode Sīkāka informācija:\n&#187; Pieskarieties IMDb reitinga, lai skatos IMDb\n&#187; Piesitiet datums, lai pievienotu kalendāram</string>

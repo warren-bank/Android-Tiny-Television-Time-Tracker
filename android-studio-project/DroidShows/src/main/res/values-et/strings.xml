@@ -62,6 +62,7 @@
 <string name="dialog_include_specials">Erialade kaasamine jälgimata loendamisse</string>
 <string name="dialog_full_line_check">Terve rea kasutamine episoodi tähistamiseks</string>
 <string name="dialog_switch_swipe_direction">Nipsake paremalt vasakule, et tagasi minna</string>
+<string name="dialog_show_icons">Piltide näitamine nimekirjas</string>
 <string name="dialog_show_next_airing">Järgmise episoodi kuupäeva asemel näidatakse järgmise episoodi kuupäeva</string>
 <string name="dialog_mark_from_last_watched">Mark järgmine episood alates viimati vaadatud</string>
 <string name="dialog_help">&#187; Ärge unustage uuendada näitab regulaarselt\n&#187; Kauavajutuse elemendid lisavalikute jaoks\n&#187; Libistage vasakule-paremale\n\nNäitab ülevaadet:\n&#187; Nimekirja tõmbamine näitab näitajad\n&#187; Puudutage valikut poster järgmise episoodi info\n&#187; Topeltstepp plakati näitamiseks\n&#187; Väline ressurss välisressursile (to * [ url] s otse, või nimekiri)\n&#187; Libistage paremale-to-vasakule, et tähistada järgmise nähtu\n\nNäita üksikasju:\n&#187; Koputage täisekraani vaatamiseks\n&#187; Vajuta täisekraanil poster pilt fänn kunst\n&#187; Kauavajutage täisekraani poster, et avada väline rakendus\n\nNäita/episood üksikasjad:\n&#187; Koputage IMDb hinnang, et vaadata IMDb\n&#187; Kalendri lisamiseks koputage kuupäev</string>

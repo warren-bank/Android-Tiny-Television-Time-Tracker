@@ -40,7 +40,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">ดำเนินการสำรองข้อมูลรายวันโดยอัตโนมัติ</string>
 <string name="dialog_backup_versioning">ใช้เวอร์ชันสำหรับการสำรองข้อมูล</string>
-<string name="dialog_pull_to_update">เปิดใช้งาน \"Pull To Update\" gesture</string>
+<string name="dialog_pull_to_update">เปิดใช้งานท่าทาง \"ดึงเพื่ออัปเดต\"</string>
 <string name="dialog_backup">สำรองข้อมูล</string>
 <string name="dialog_backup_done">การสำรองข้อมูลฐานข้อมูลเสร็จสมบูรณ์</string>
 <string name="dialog_backup_failed">ไม่สามารถทำการสำรองข้อมูลได้!</string>
@@ -62,6 +62,7 @@
 <string name="dialog_include_specials">รวมพิเศษในการนับที่ไม่ได้ดู</string>
 <string name="dialog_full_line_check">ใช้บรรทัดทั้งหมดเพื่อทำเครื่องหมายตอน</string>
 <string name="dialog_switch_swipe_direction">ปัดจากขวาไปซ้ายเพื่อกลับไปที่</string>
+<string name="dialog_show_icons">แสดงอิมเมจในรายการ</string>
 <string name="dialog_show_next_airing">แสดงวันที่ของตอนออกอากาศถัดไปแทนวันที่ของตอนต่อไป ...</string>
 <string name="dialog_mark_from_last_watched">มาร์กในตอนถัดไปเริ่มจากการเฝ้าสังเกตครั้งล่าสุด</string>
 <string name="dialog_help">&#187; อย่าลืมอัพเดตแสดงอย่างสม่ำเสมอ\n&#187; ไอเท็มที่มีการกดยาวสำหรับอ็อพชันเพิ่มเติม\n&#187; ปัดจากซ้ายไปขวาเพื่อกลับไป -\n\nในการแสดงภาพรวม:\n&#187; ดึงรายการเพื่ออัพเดตรายการ\n&#187; แท็บโปสเตอร์สำหรับข้อมูลตอนถัดไป\n&#187; โปสเตอร์ double tap เพื่อแสดงข้อมูล\n&#187; โปสเตอร์ค้างไว้นานสำหรับรีซอร์สภายนอก (ไปที่ *[url]s โดยตรงหรือรายการ)\n&#187; ปัดจากขวาไปซ้ายเพื่อทำเครื่องหมายถัดจาก seen\n\nในรายละเอียดที่แสดง:\n&#187; แตะโปสเตอร์สำหรับมุมมองแบบเต็มหน้าจอ\n&#187; คลิกรูปภาพโปสเตอร์แบบเต็มจอสำหรับภาพอาร์ต\n&#187; โปสเตอร์ขนาดเต็มจอแบบเต็มเพื่อเปิดในแอ็พภายนอก\n\nใน Show/Episode Details:\n&#187; แตะ IMDb การจัดอันดับเพื่อดูใน IMDb\n&#187; วันที่แตะเพื่อเพิ่มลงในปฏิทิน</string>
@@ -102,7 +103,7 @@
 <string name="messages_marked_seen">ทำเครื่องหมายเป็นเห็นแล้ว</string>
 <string name="messages_marked_unseen">ทำเครื่องหมายเป็นมองไม่เห็น</string>
 <string name="messages_context_mark_seasonunseen">ทำเครื่องหมายทุกตอนเป็นไม่สามารถเห็นได้</string>
-<string name="messages_context_mark_asseenuptothis"># Season up to here are seen.</string>
+<string name="messages_context_mark_asseenuptothis">ฤดูกาลขึ้นไปที่นี่จะเห็น</string>
 <string name="messages_context_archived">เก็บถาวร</string>
 <string name="messages_context_unarchived">กู้คืน</string>
 <string name="messages_aired">เป็นประธาน:</string>

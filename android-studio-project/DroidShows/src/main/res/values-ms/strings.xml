@@ -61,10 +61,11 @@
 <string name="dialog_latest_season">Kemaskini memaparkan \' musim terbaru sahaja</string>
 <string name="dialog_include_specials">Sertakan khusus dalam kiraan yang tidak ditonton</string>
 <string name="dialog_full_line_check">Guna keseluruhan baris untuk menandakan episod</string>
-<string name="dialog_switch_swipe_direction">Swipe kanan-to-left to go back</string>
+<string name="dialog_switch_swipe_direction">Leret ke kiri ke kiri untuk kembali</string>
+<string name="dialog_show_icons">Papar imej dalam senarai</string>
 <string name="dialog_show_next_airing">Papar tarikh bagi episod airing berikutnya, selain tarikh episod berikutnya</string>
 <string name="dialog_mark_from_last_watched">Tanda episod berikutnya bermula dari ditonton baru-baru ini</string>
-<string name="dialog_help">&#187; Jangan lupa kemaskini yang dipaparkan secara kerap\n&#187; Item-tekan item untuk pilihan lanjut\n&#187; Swipe left-to-right to go back\n\nDalam Memaparkan Overview:\n&#187; Tarik senarai turun ke paparan kemaskini\n&#187; Poster tekan untuk maklumat episod berikutnya\n&#187; Poster dua kali ganda untuk maklumat persembahan\n&#187; Poster am-tekan untuk sumber luaran (ke * [url] s secara langsung, atau senarai)\n&#187; Swipe kanan-ke-kiri untuk tanda berikutnya seperti dilihat\n\nDalam Papar Perincian:\n&#187; Poster tap untuk paparan skrin penuh\n&#187; Klik imej poster skrin penuh untuk seni kipas\n&#187; Poster skrin penuh tekan penuh untuk dibuka dalam aplikasi luaran\n\nDalam Papar/Perincian Episod:\n&#187; Ketukan IMDb penarafan untuk lihat dalam IMDb\n&#187; Tarikh tekan untuk tambah ke kalendar</string>
+<string name="dialog_help">&#187; Jangan lupa kemaskini yang dipaparkan secara kerap\n&#187; Item-tekan item untuk pilihan lanjut\n&#187; Leret ke kiri ke kanan untuk kembali\n\nDalam gambaran keseluruhan menunjukkan:\n&#187; Tarik senarai turun ke paparan kemaskini\n&#187; Poster tekan untuk maklumat episod berikutnya\n&#187; Poster dua kali ganda untuk maklumat persembahan\n&#187; Poster am-tekan untuk sumber luaran (ke * [url] s secara langsung, atau senarai)\n&#187; Swipe kanan-ke-kiri untuk tanda berikutnya seperti dilihat\n\nDalam Papar Perincian:\n&#187; Poster tap untuk paparan skrin penuh\n&#187; Klik imej poster skrin penuh untuk seni kipas\n&#187; Poster skrin penuh tekan penuh untuk dibuka dalam aplikasi luaran\n\nDalam Papar/Perincian Episod:\n&#187; Ketukan IMDb penarafan untuk lihat dalam IMDb\n&#187; Tarikh tekan untuk tambah ke kalendar</string>
 <string name="dialog_networks">Rangkaian</string>
 <string name="menu_archive">Arkib</string>
 <string name="menu_unarchive">Pulih</string>
@@ -107,8 +108,8 @@
 <string name="messages_context_unarchived">Dipulihkan</string>
 <string name="messages_aired">Aired:</string>
 <string name="messages_at">di</string>
-<string name="messages_of">bagi</string>
-<string name="messages_on">% 1</string>
+<string name="messages_of">dari</string>
+<string name="messages_on">pada</string>
 <string name="messages_daily">Harian</string>
 <string name="messages_ep">Episod</string>
 <string name="episode_directors">&amp; Arah:</string>

@@ -62,6 +62,7 @@
 <string name="dialog_include_specials">Jinkludu speals fl-għadd mhux segwit</string>
 <string name="dialog_full_line_check">Uża l-linja sħiħa għall-episodju tal-marka</string>
 <string name="dialog_switch_swipe_direction">Swip dritt-biex-xellug biex tmur lura</string>
+<string name="dialog_show_icons">Uri immaġini fil-lista</string>
 <string name="dialog_show_next_airing">Uri d-data ta \' episodju li jmiss li jmiss, minflok l-episodju li jmiss</string>
 <string name="dialog_mark_from_last_watched">Mark episodju li jmiss jibda mill-aktar reċentement jaraw</string>
 <string name="dialog_help">&#187; Tinsiex li taġġorna turi regolarment\n&#187; Oġġetti ta \' l-istampa twal għal aktar għażliet\n&#187; Swipe xellug-to-dritt li jmorru lura\n\nF \' Shows Ħarsa Ġenerali:\n&#187; Iġbed lista \' l isfel biex taġġorna turi\n&#187; Poster tal-vit għall-episodju li jmiss info\n&#187; Poster tal-vit doppju għall juru info\n&#187; Poster fit-tul għal riżorsi esterni (biex * [url] s direttament, jew lista)\n&#187; Swip dritt-biex-xellug għall-marka li jmiss kif jidher\n\nF \' uri Dettalji:\n&#187; Poster tal-vit għall-veduta full-screen\n&#187; Ikklikkja immaġni poster full-screen għal arti fann\n&#187; Poster full-screen full-screen li jinfetaħ fl-app esterna\n\nFil Show/Episode Dettalji:\n&#187; Tektek IMDb klassifikazzjoni biex tara f \' IMDb\n&#187; Data tal-vit biex iżżid mal-kalendarju</string>

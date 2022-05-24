@@ -62,6 +62,7 @@
 <string name="dialog_include_specials">包含未受监视的计数</string>
 <string name="dialog_full_line_check">使用整条线标记集中</string>
 <string name="dialog_switch_swipe_direction">从右到左转回</string>
+<string name="dialog_show_icons">在列表中显示图像</string>
 <string name="dialog_show_next_airing">显示下一个播出集的日期，而不是下一集的日期</string>
 <string name="dialog_mark_from_last_watched">从最近观看的最新一集开始</string>
 <string name="dialog_help">&#187; 不要忘记定期更新显示\n&#187; 长按项以获取更多选项\n&#187; 刷卡从左到右返回\n\n在显示概述中:\n&#187; 下拉列表以更新显示\n&#187; 下一集的点击海报\n&#187; 显示信息的双抽头海报\n&#187; 外部资源 ( 直接为 *[url]s 或列表 ) 的长报海报)\n&#187; 从右到左转至下一个显示的标记\n\n在显示详细信息中:\n&#187; 全屏幕视图的点击海报\n&#187; 单击风扇艺术的全屏幕海报图像\n&#187; 长压全屏海报在外部应用中打开\n\n显示 /集中详细信息:\n&#187; 塔普 IMDb 要查看的评级 IMDb\n&#187; 要添加到日历的点击日期</string>

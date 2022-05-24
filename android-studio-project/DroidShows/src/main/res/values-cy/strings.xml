@@ -62,6 +62,7 @@
 <string name="dialog_include_specials">Cynnwys y rhai sydd heb eu gwylio</string>
 <string name="dialog_full_line_check">Defnyddio llinell gyfan i farcio \' r digwyddiad</string>
 <string name="dialog_switch_swipe_direction">Llusgwch dde-i-chwith i fynd yn ôl</string>
+<string name="dialog_show_icons">Dangos delweddau mewn rhestr</string>
 <string name="dialog_show_next_airing">Dangos dyddiad y gwyntylliad nesaf, yn lle dyddiad nesaf y digwyddiad</string>
 <string name="dialog_mark_from_last_watched">Marcio y digwyddiad nesaf yn cychwyn o\'r un a wylwyd yn fwyaf diweddar</string>
 <string name="dialog_help">&#187; Peidiwch ag anghofio am y diweddariad yn dangos yn rheolaidd\n&#187; Eitemau hir i\'r wasg am fwy o ddewisiadau\n&#187; Llusgo ar ôl-i-dde i fynd yn ôl\n\nWrth Dangos Trosolwg:\n&#187; Tynnu\'r rhestr i lawr er mwyn diweddaru\n&#187; Tapioio\'r poster ar gyfer y wybodaeth olaf\n&#187; Poster tap dwbl ar gyfer dangos gwybodaeth\n&#187; Poster hir i\'r wasg am adnoddau allanol (i * [url] yn uniongyrchol, neu restr)\n&#187; Llusgwch hawl-i-chwith i nod nesaf fel y\'i gwelwyd\n\nYn Dangos Manylion:\n&#187; Tapio\'r poster i\'r golwg sgrin lawn\n&#187; Cliciwch y ddelwedd sgrin sgrin lawn ar gyfer celfyddyd\n&#187; Poster sgrin lawn yn y wasg i agor yn yr ap allanol\n\n&amp; Manylion:\n&#187; Tap IMDb sgôr i weld ynddi IMDb\n&#187; Dyddiad tap i ychwanegu at y calendr</string>

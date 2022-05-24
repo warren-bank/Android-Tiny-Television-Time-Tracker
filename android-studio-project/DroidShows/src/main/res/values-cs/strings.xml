@@ -62,6 +62,7 @@
 <string name="dialog_include_specials">Zahrnout speciály v nesledovaný počet</string>
 <string name="dialog_full_line_check">Použít celý řádek k označení epizody</string>
 <string name="dialog_switch_swipe_direction">Přejeďte prstem doprava a vraťte se zpět</string>
+<string name="dialog_show_icons">Zobrazit obrázky v seznamu</string>
 <string name="dialog_show_next_airing">Zobrazit datum příští epizody ve spojení s datem další epizody</string>
 <string name="dialog_mark_from_last_watched">Označit další epizodu od naposledy sledovaný</string>
 <string name="dialog_help">&#187; Nezapomeňte pravidelně aktualizovat pořady\n&#187; Dlouhé tiskové položky pro více možností\n&#187; Swipe left-right se vrátí\n\nZobrazují se přehled:\n&#187; Rozevírací seznam pro aktualizaci zobrazení\n&#187; Další informace o epizodě Ťukněte\n&#187; Dvakrát ťukněte na plakát pro zobrazení informací\n&#187; Long-press poster for external resource (to * [ url] s directly, or list)\n&#187; Přejeďte prstem doprava doleva, abyste označili další, jak je vidět\n\nPodrobně zobrazit podrobnosti:\n&#187; Ťukněte na plakát s celoobrazovkový pohled\n&#187; Klepněte na obrázek celé obrazovky pro ventilátor.\n&#187; Dlouho-tisk celoobrazovkové plakátu pro otevření v externí aplikaci\n\nPodrobnost v zobrazení/epizoda:\n&#187; Tap IMDb hodnocení k zobrazení v IMDb\n&#187; Chcete-li přidat do kalendáře, zadejte datum</string>

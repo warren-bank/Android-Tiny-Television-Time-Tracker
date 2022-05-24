@@ -62,6 +62,7 @@
 <string name="dialog_include_specials">Inkluder spesialiteter i uovervåket telling</string>
 <string name="dialog_full_line_check">Bruk hele linjen til å markere episode</string>
 <string name="dialog_switch_swipe_direction">Sveip høyre-til-venstre for å gå tilbake</string>
+<string name="dialog_show_icons">Vis bilder på liste</string>
 <string name="dialog_show_next_airing">Vis dato for neste airing episode, i stedet for neste episode er dato</string>
 <string name="dialog_mark_from_last_watched">Merk neste episode fra start fra den mest nylig overvåkede</string>
 <string name="dialog_help">&#187; Ikke glem å oppdatere viser regelmessig\n&#187; Lange-presseartikler for flere alternativer\n&#187; Sveip venstre-til-høyre for å gå tilbake\n\nI Viser oversikt:\n&#187; Dra ned liste for å oppdatere viser\n&#187; Tapp plakat for neste episode-info\n&#187; Dobbelttapp plakat for å vise info\n&#187; Lang-presseplakat for ekstern ressurs (til * [ url ] s direkte, eller liste)\n&#187; Sveip høyre-til-venstre for å markere neste som sett\n\nI Vis detaljer:\n&#187; Tapp plakat for fullskjermvisning\n&#187; Klikk på fullskjerm-plakat for fantekunst\n&#187; Lang-trykke fullskjermplakat for å åpne i ekstern app\n\nI Vis / Episode Detaljer:\n&#187; Tap IMDb Vurdere å vise i IMDb\n&#187; Tastedato for å legge til i kalender</string>

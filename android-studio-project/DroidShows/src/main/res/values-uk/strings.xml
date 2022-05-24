@@ -35,8 +35,8 @@
 <string name="menu_context_search_on">Шукати на</string>
 <string name="menu_context_ext_resources">Зовнішні ресурси</string>
 <string name="menu_context_mark_next_episode_as_seen">Позначити наступний епізод, як це видно</string>
-<string name="menu_context_pin">Pin</string>
-<string name="menu_context_unpin">Unpin</string>
+<string name="menu_context_pin">приколювати</string>
+<string name="menu_context_unpin">відколювати</string>
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Автоматично виконувати щоденні резервні</string>
 <string name="dialog_backup_versioning">Використовувати для створення резервних копій</string>
@@ -61,10 +61,11 @@
 <string name="dialog_latest_season">Оновлення лише для останнього сезону</string>
 <string name="dialog_include_specials">Включити спеціальні значення у непереглянутому підрахунку</string>
 <string name="dialog_full_line_check">Використовувати цілу лінію для позначення епізоду</string>
-<string name="dialog_switch_swipe_direction">Swipe right-to-left to go back</string>
+<string name="dialog_switch_swipe_direction">Проведіть проведіть праворуч вліво, щоб повернутися назад</string>
+<string name="dialog_show_icons">Показувати зображення у списку</string>
 <string name="dialog_show_next_airing">Показувати дату наступного ефіру, замість дати наступного епізоду</string>
 <string name="dialog_mark_from_last_watched">Позначити наступний епізод, починаючи з нещодавно переглянутої</string>
-<string name="dialog_help">&#187; Не забудьте регулярно показувати покази\n&#187; Надовго-натисніть елементи для додаткових параметрів\n&#187; Swipe left-to-right to go back\n\nУ огляд показів:\n&#187; Витягнути список, щоб оновлювати покази\n&#187; Постер для наступної інформації про епізод\n&#187; Подвійний постер для показу інформації\n&#187; Long-press-плакат для зовнішнього ресурсу (до * [url] s безпосередньо, або список)\n&#187; Swipe right-to-left, щоб позначити наступне\n\nУ показі подробиці:\n&#187; Постер для повноекранного перегляду\n&#187; Натисніть повноекранне зображення для вентилятора\n&#187; Long-press повноекранний постер, який буде відкрито у зовнішньому додатку\n\nПодробиці щодо показу/Епізод:\n&#187; Tap IMDb Оцінка для перегляду IMDb\n&#187; Дата додавання до календаря</string>
+<string name="dialog_help">&#187; Не забудьте регулярно показувати покази\n&#187; Надовго-натисніть елементи для додаткових параметрів\n&#187; Проведіть ліворуч направо, щоб повернутися назад\n\nУ огляд показів:\n&#187; Витягнути список, щоб оновлювати покази\n&#187; Постер для наступної інформації про епізод\n&#187; Подвійний постер для показу інформації\n&#187; Long-press-плакат для зовнішнього ресурсу (до * [url] s безпосередньо, або список)\n&#187; Swipe right-to-left, щоб позначити наступне\n\nУ показі подробиці:\n&#187; Постер для повноекранного перегляду\n&#187; Натисніть повноекранне зображення для вентилятора\n&#187; Long-press повноекранний постер, який буде відкрито у зовнішньому додатку\n\nПодробиці щодо показу/Епізод:\n&#187; Tap IMDb Оцінка для перегляду IMDb\n&#187; Дата додавання до календаря</string>
 <string name="dialog_networks">Мережі</string>
 <string name="menu_archive">Архівувати</string>
 <string name="menu_unarchive">Відновити</string>

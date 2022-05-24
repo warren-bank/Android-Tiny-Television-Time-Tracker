@@ -21,7 +21,7 @@
 <string name="menu_exit">Thoát</string>
 <string name="menu_context_update">Cập nhật</string>
 <string name="menu_context_updated">đã cập nhật</string>
-<string name="menu_context_delete">&amp;amp; Xoá</string>
+<string name="menu_context_delete">Xóa bỏ</string>
 <string name="menu_context_add_serie">Thêm chương trình</string>
 <string name="menu_show_archive">Hiện kho lưu</string>
 <string name="menu_show_current">Hiện dòng</string>
@@ -35,8 +35,8 @@
 <string name="menu_context_search_on">Tìm kiếm trên</string>
 <string name="menu_context_ext_resources">Nguồn bên ngoài</string>
 <string name="menu_context_mark_next_episode_as_seen">Đánh dấu tập tiếp theo như đã thấy</string>
-<string name="menu_context_pin">Chốt</string>
-<string name="menu_context_unpin">Unpin</string>
+<string name="menu_context_pin">Găm bằng kim gút</string>
+<string name="menu_context_unpin">Tháo kim găm</string>
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Tự động thực hiện backup hàng ngày</string>
 <string name="dialog_backup_versioning">Sử dụng lập phiên bản cho hô ̃ trợ</string>
@@ -62,6 +62,7 @@
 <string name="dialog_include_specials">Bao gồm các chương trình đặc biệt trong sô ́ lượng</string>
 <string name="dialog_full_line_check">Dùng toàn bộ dòng để đánh dấu tập</string>
 <string name="dialog_switch_swipe_direction">Xoay sang trái để quay lại</string>
+<string name="dialog_show_icons">Hiện hình ảnh trong danh sách</string>
 <string name="dialog_show_next_airing">Hiện ngày phát sóng tiếp theo, thay vì ngày của tập tiếp theo</string>
 <string name="dialog_mark_from_last_watched">Đánh dấu tập tiếp theo bắt đầu từ lượt xem gần đây nhất</string>
 <string name="dialog_help">&#187; Đừng quên cập nhật thường xuyên\n&#187; Các mục báo chí lâu dài cho nhiều tùy chọn\n&#187; Swipe trái phải quay lại\n\nTrong chương trình tổng quan:\n&#187; Kéo danh sách xuống để cập nhật cho các\n&#187; Tap poster cho thông tin tập tiếp theo\n&#187; Áp phích kép để hiển thị thông tin\n&#187; Áp phích dài hạn cho tài nguyên bên ngoài (to * [url] trực tiếp, hoặc danh sách)\n&#187; Xoay sang phải sang trái để đánh dấu tiếp theo\n\nTrong Chương trình:\n&#187; Tap poster cho màn hình toàn màn hình\n&#187; Nhấp vào ảnh toàn màn hình cho nghệ thuật người hâm mộ\n&#187; Áp phích toàn màn hình dài hạn để mở trong ứng dụng bên ngoài\n\nTrong Chương trình/Tập tin chi tiết:\n&#187; Tap IMDb đánh giá để xem trong IMDb\n&#187; Ngày chạm để thêm vào lịch</string>
@@ -115,7 +116,7 @@
 <string name="episode_writers">Nhà văn:</string>
 <string name="episode_guest_stars">Các sao khách:</string>
 <string name="series_runtime_minutes">phút</string>
-<string name="series_synopsis">Synopsis:</string>
+<string name="series_synopsis">Tóm tắc:</string>
 <string name="series_actors">Diễn viên:</string>
 <string name="showstatus_continuing">tiếp tục</string>
 <string name="showstatus_ended">đã kết thúc</string>

@@ -62,6 +62,7 @@
 <string name="dialog_include_specials">Uključi specijalitete u nepromatračni brojač</string>
 <string name="dialog_full_line_check">Koristite cijelu liniju za označitu epizodu</string>
 <string name="dialog_switch_swipe_direction">Swipe desno-na-lijevo za povratak</string>
+<string name="dialog_show_icons">Pokaži slike u listi</string>
 <string name="dialog_show_next_airing">Prikaži datum sljedećeg emitiranja epizoda, umjesto datuma sljedeće epizode</string>
 <string name="dialog_mark_from_last_watched">Mark slijedeću epizodu počevši od najkasnije gledana</string>
 <string name="dialog_help">&#187; Ne zaboravite da se redovno ažurirate.\n&#187; Dugo-pritisnite stavke za više opcija\n&#187; Swipe lijevo-na-desno za povratak\n\nU Prikazu Pokazuje:\n&#187; Povuci dolje listu za ažuriranje pokazuje\n&#187; Pritisnite poster za sljedeće informacije o epizoaciji\n&#187; Dvokrevatni poster za prikaz informacija\n&#187; Plakat dugog medija za vanjski resurs (na * [url] je izravno ili lista)\n&#187; Swipe desno-na-lijevo za označnikovo kao što je viđeno\n\nU Prikaži detalje:\n&#187; Dodirni poster za pregled cijelog zaslona\n&#187; Kliknite sliku postera punog ekrana za umjetnost ventilatora\n&#187; Dugo-pritisnite poster punog ekrana za otvaranje u vanjskoj aplikaciji\n\nU Prikaži / Epizodu:\n&#187; Dodirnite IMDb ocjena za gledanje u IMDb\n&#187; Dodirnite datum za dodavanje u kalendar</string>

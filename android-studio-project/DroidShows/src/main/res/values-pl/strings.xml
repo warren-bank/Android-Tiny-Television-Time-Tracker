@@ -62,6 +62,7 @@
 <string name="dialog_include_specials">Uwzględnij specjały w liczbie nieobserwowanych</string>
 <string name="dialog_full_line_check">Użyj całej linii do zaznaczania odcinka</string>
 <string name="dialog_switch_swipe_direction">Przesuń w prawo od prawej do lewej, aby wrócić</string>
+<string name="dialog_show_icons">Pokaż obrazy na liście</string>
 <string name="dialog_show_next_airing">Pokaż datę następnego odcinka lotu, zamiast daty następnego odcinka</string>
 <string name="dialog_mark_from_last_watched">Oznacz następny odcinek rozpoczynający się od ostatnio obserwowanego</string>
 <string name="dialog_help">&#187; Nie zapomnij o regularnie aktualizowanych pokazach\n&#187; Długie elementy prasy dla większej liczby opcji\n&#187; Przeciągnij od lewej do prawej, aby przejść wstecz\n\nPokazy-przegląd:\n&#187; Lista rozwijana w celu aktualizacji pokazów\n&#187; Dotknij plakat dla następnego odcinka info\n&#187; Podwójny plakat z kranu, aby wyświetlić informacje\n&#187; Długi plakat prasowy dla zasobów zewnętrznych (do * [ url] s bezpośrednio, lub lista)\n&#187; Przesuń w prawo od prawej do lewej, aby oznaczyć dalej jako widoczne\n\nW polu Pokaż szczegóły:\n&#187; Dotknij plakatu dla pełnoekranowego widoku\n&#187; Kliknij pełnoekranowy obraz plakatu dla sztuki wentylatora\n&#187; Długo-prasa pełnoekranowa plakat otwierający się w aplikacji zewnętrznej\n\nSzczegóły w sekcji Pokaż/Episode:\n&#187; Dotknij IMDb ocena do wyświetlenia w IMDb\n&#187; Dotknij daty, aby dodać do kalendarza</string>

@@ -62,6 +62,7 @@
 <string name="dialog_include_specials">Specialok tartalmazása a nem figyelt számlálásban</string>
 <string name="dialog_full_line_check">Teljes sor használata az epizód megjelöléséhez</string>
 <string name="dialog_switch_swipe_direction">Jobbra-balra-vissza.</string>
+<string name="dialog_show_icons">Képek megjelenítése a listában</string>
 <string name="dialog_show_next_airing">A következő epizód dátuma, a következő epizód dátuma helyett</string>
 <string name="dialog_mark_from_last_watched">Mark következő epizódja a legutóbbi megfigyelésből indul</string>
 <string name="dialog_help">&#187; Ne felejts el rendszeresen frissíteni\n&#187; Hosszú sajtóelemek további beállításokhoz\n&#187; Balról jobbra, hogy visszamenjen.\n\nIn megjelenítése:\n&#187; Lista kihúzása a frissítéshez\n&#187; Tap plakát a következő epizódhoz\n&#187; Duplán koppintó plakát\n&#187; Hosszú sajtóplakát külső erőforráshoz (* [url] s közvetlenül, vagy lista)\n&#187; Jobb-balról balra-jelölésre látható, mint látható\n\nA Részletek megjelenítése:\n&#187; Tap plakát teljes képernyős nézethez\n&#187; Kattintson a teljes képernyős poszterre a ventilátor képéhez\n&#187; Hosszan nyomja meg a teljes képernyős posztert a külső alkalmazásban.\n\nMegjelenítés/Fordítás részletei:\n&#187; Tap IMDb értékelés a nézethez IMDb\n&#187; A naptár hozzáadásának dátuma</string>

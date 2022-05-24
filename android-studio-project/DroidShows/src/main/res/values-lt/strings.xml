@@ -62,6 +62,7 @@
 <string name="dialog_include_specials">Įtraukti atmainas nestebimų skaičiaus</string>
 <string name="dialog_full_line_check">Naudoti visą liniją pažymėti epizodas</string>
 <string name="dialog_switch_swipe_direction">Braukite į dešinę-į kairę, kad grįžtų</string>
+<string name="dialog_show_icons">Rodyti paveikslėlius sąraše</string>
 <string name="dialog_show_next_airing">Rodyti kito oro padavimo epizodo datą, vietoj kito epizodo datos</string>
 <string name="dialog_mark_from_last_watched">Pažymėti kitą epizodą pradedant nuo neseniai stebėjo</string>
 <string name="dialog_help">&#187; Negalima pamiršti, kad atnaujinti rodo reguliariai\n&#187; Long-press elementai daugiau galimybių\n&#187; Braukite kairėn-į dešinę, kad grįžtų\n\nRodo apžvalgoje:\n&#187; Ištraukite sąrašą į atnaujinimo sąrašą\n&#187; Kito epizodo informacija bakstelėkite plakatas\n&#187; Dukart bakstelėkite plakato plakatas\n&#187; Long-press plakatas išorės išteklių (į * [url] s tiesiogiai, arba sąrašas)\n&#187; Braukite į dešinę-į kairę arba į kairę, kaip matyti\n\nRodyti detales:\n&#187; Bakstelėkite plakatą, kad galėtumėte pamatyti visą ekraną\n&#187; Spustelėkite viso ekrano plakato atvaizdą ventiliatoriaus menui\n&#187; Ilgo paspaudimo viso ekrano plakate, kad atvertų išorinę programėlę\n\nRodyti/epizodo detales:\n&#187; Bakstelėkite IMDb įvertinimas, kad galėtumėte peržiūrėti IMDb\n&#187; Bakstelėkite data, kurią reikia pridėti prie kalendoriaus</string>
