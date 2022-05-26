@@ -15,8 +15,9 @@
 <string name="menu_search">వెతకండి</string>
 <string name="menu_sort">సార్ట్ ప్రదర్శన</string>
 <string name="menu_sort_by_name">పేరు ద్వారా क्रमముచేయి\n(వర్గం: అక్షరక్రమము)</string>
-<string name="menu_sort_by_unseen_count">नशर అన్న ధారావాహిక ధారావాహికల లెక్కల ద్వారా\n(దిగువన: అతిగా లభ్యమవుతాయి.)</string>
-<string name="menu_sort_by_last_unseen_date">ఇటీవల ప్రసారం చేయబడిన ఎపిసోడ్ తేదీ నాటికి క్రమబద్ధీకరించండి\n(దిగువన: మొదటిది మొదట)</string>
+<string name="menu_sort_by_unseen_count">కనిపించే ధారావాహిక ధారావాహికల లెక్కల ద్వారా\n(దిగువన: అతిగా లభ్యమవుతాయి.)</string>
+<string name="menu_sort_by_next_unseen_date">తరువాతి అసలు అధ్యాయము యొక్క తేదీ ద్వారా\n(వర్గం: పురాతనమైన మొదటి)</string>
+<string name="menu_sort_by_last_unseen_date">చివరి అసలు అధ్యాయము యొక్క తేదీ ద్వారా\n(దిగువన: మొదటిది మొదట)</string>
 <string name="menu_about">ఐచ్చికములు</string>
 <string name="menu_exit">ఎక్విట్</string>
 <string name="menu_context_update">నవీకరణ</string>

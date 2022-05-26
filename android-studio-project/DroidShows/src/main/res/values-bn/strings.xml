@@ -15,8 +15,9 @@
 <string name="menu_search">অনুসন্ধান</string>
 <string name="menu_sort">প্রদর্শনকারী</string>
 <string name="menu_sort_by_name">নাম দ্বারা সড়ক\n(আরোহণ: বর্ণমালা)</string>
-<string name="menu_sort_by_unseen_count">সম্প্রচারিত অদেখা পর্বগুলো গণনা করে\n(নিচে নেমে আসে: সবচেয়ে বেশি পাওয়া যায়)</string>
-<string name="menu_sort_by_last_unseen_date">সাম্প্রতিককালে সম্প্রচারিত অদেখা পর্বের তারিখ\n(নিচে নেমে আসে: প্রথমবার)</string>
+<string name="menu_sort_by_unseen_count">অদেখা সম্প্রচারিত পর্বগুলির গণনা দ্বারা মর্মান্তিক\n(নিচে নেমে আসে: সবচেয়ে বেশি পাওয়া যায়)</string>
+<string name="menu_sort_by_next_unseen_date">পরবর্তী অদেখা পর্বের তারিখ দ্বারা স্পোর্ট করা হবে\n(প্রাচীনতম প্রথম)</string>
+<string name="menu_sort_by_last_unseen_date">সর্বশেষ অদেখা পর্বের তারিখ দ্বারা সঞ্জন করা হবে\n(নিচে নেমে আসে: প্রথমবার)</string>
 <string name="menu_about">অপশন</string>
 <string name="menu_exit">এক্সিট</string>
 <string name="menu_context_update">আপডেট</string>

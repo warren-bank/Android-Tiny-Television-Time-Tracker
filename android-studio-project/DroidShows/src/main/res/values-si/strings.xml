@@ -16,7 +16,8 @@
 <string name="menu_sort">සංදර්ශන පෙන්වයි</string>
 <string name="menu_sort_by_name">නාමයෙන් क्रमबद्ध කරන්න\n(ඇසිම: ඇලිෆැටික පිළිවෙල)</string>
 <string name="menu_sort_by_unseen_count">නොපෙනෙන කොටස් ගණන මගින් ගණනය කිරීම\n(බහින කොට: බොහෝ විට පවතින)</string>
-<string name="menu_sort_by_last_unseen_date">මෑතකදී හමුවන ලද නොපෙනෙන කොටසේ දිස්වන\n(පහලට බහිනවා: අලුත්ගම පළාත)</string>
+<string name="menu_sort_by_next_unseen_date">ඊලඟ නොපෙනෙන කොටසේ දිස්වන දිනය\n(නැගණිය: පැරණිම පළමු)</string>
+<string name="menu_sort_by_last_unseen_date">පසුගිය නොපෙනෙන කොටසේ දිනය විසින්\n(පහලට බහිනවා: අලුත්ගම පළාත)</string>
 <string name="menu_about">විකල්ප</string>
 <string name="menu_exit">Exit</string>
 <string name="menu_context_update">යාවත්කාලීන කිරීම</string>

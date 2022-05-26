@@ -15,8 +15,9 @@
 <string name="menu_search">Търсене!</string>
 <string name="menu_sort">-Да.</string>
 <string name="menu_sort_by_name">Сортиране по име\n(възходящ: азбучен ред)</string>
-<string name="menu_sort_by_unseen_count">Сортиране по брой на излъчени невиждани епизоди\n(Низходящ: най-първи)</string>
-<string name="menu_sort_by_last_unseen_date">Сортиране по дата на последно излъчен невиждан епизод\n(Низходящ: най-новите първи)</string>
+<string name="menu_sort_by_unseen_count">Сортиране по брой на негледани излъчени епизоди\n(Низходящ: най-първи)</string>
+<string name="menu_sort_by_next_unseen_date">Сортиране по дата на следващия невиждан епизод\n(възходящи: най-старите първи)</string>
+<string name="menu_sort_by_last_unseen_date">Сортиране по дата на последния невиждан епизод\n(Низходящ: най-новите първи)</string>
 <string name="menu_about">Опции:</string>
 <string name="menu_exit">Изход:</string>
 <string name="menu_context_update">Обновяване:</string>

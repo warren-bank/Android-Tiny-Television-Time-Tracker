@@ -16,7 +16,8 @@
 <string name="menu_sort">Urutkan menunjukkan</string>
 <string name="menu_sort_by_name">Urutkan menurut nama\n(naik: urutan alfabetis)</string>
 <string name="menu_sort_by_unseen_count">Urutkan menurut hitungan episode yang tidak terlihat\n(turun: paling banyak tersedia pertama)</string>
-<string name="menu_sort_by_last_unseen_date">Sortir menurut tanggal yang paling baru ditayangkan di episode tak terlihat\n(turun: baru pertama)</string>
+<string name="menu_sort_by_next_unseen_date">Urutkan berdasarkan tanggal tak terlihat berikutnya\n(naik: tertua pertama)</string>
+<string name="menu_sort_by_last_unseen_date">Urutkan berdasarkan tanggal terakhir yang tak terlihat\n(turun: baru pertama)</string>
 <string name="menu_about">Opsi</string>
 <string name="menu_exit">Keluar</string>
 <string name="menu_context_update">Perbarui</string>

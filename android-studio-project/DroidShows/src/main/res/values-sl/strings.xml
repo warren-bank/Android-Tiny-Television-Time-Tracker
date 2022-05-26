@@ -15,8 +15,9 @@
 <string name="menu_search">Iskanje</string>
 <string name="menu_sort">Razvrsti oddaje</string>
 <string name="menu_sort_by_name">Razvrsti po imenu\n(naraščajoče: abecedni vrstni red)</string>
-<string name="menu_sort_by_unseen_count">Razvrsti po številu nevidenjih epizod\n(padajoče: najbolj na voljo najprej)</string>
-<string name="menu_sort_by_last_unseen_date">Razvrsti po datumu zadnje epizod nevideno v paru\n(padajoče: najnovejše najprej)</string>
+<string name="menu_sort_by_unseen_count">Razvrsti po številu nevidnih epizod epizod\n(padajoče: najbolj na voljo najprej)</string>
+<string name="menu_sort_by_next_unseen_date">Razvrsti po datumu naslednje nevidene epizod\n(naraščajoče: najstarejši prvi)</string>
+<string name="menu_sort_by_last_unseen_date">Razvrsti po datumu zadnje nevidente epizod\n(padajoče: najnovejše najprej)</string>
 <string name="menu_about">Možnosti</string>
 <string name="menu_exit">Izhod</string>
 <string name="menu_context_update">Posodobi</string>

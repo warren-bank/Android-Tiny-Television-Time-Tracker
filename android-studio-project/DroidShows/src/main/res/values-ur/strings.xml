@@ -15,8 +15,9 @@
 <string name="menu_search">تلاش</string>
 <string name="menu_sort">اسکیرٹ شوز</string>
 <string name="menu_sort_by_name">نام سے ترتیب\n(چڑھاوے: حروف تہجی کا حکم)</string>
-<string name="menu_sort_by_unseen_count">غیب اقساط کی گنتی کی طرف سے گرا\n(اترتے ہیں: سب سے زیادہ دستیاب)</string>
-<string name="menu_sort_by_last_unseen_date">سب سے زیادہ حال ہی میں نشر ہونے والی غیب قسط کی تاریخ\n(اترتے ہیں: سب سے پہلے)</string>
+<string name="menu_sort_by_unseen_count">غیب سے نشر ہونے والی اقساط\n(اترتے ہیں: سب سے زیادہ دستیاب)</string>
+<string name="menu_sort_by_next_unseen_date">اگلی غیب قسط کی تاریخ سے Sort\n(چڑھاوے: سب سے پہلے)</string>
+<string name="menu_sort_by_last_unseen_date">آخری غیب قسط کی تاریخ\n(اترتے ہیں: سب سے پہلے)</string>
 <string name="menu_about">اختیارات</string>
 <string name="menu_exit">باہر نکلیں</string>
 <string name="menu_context_update">اپ ڈیٹ</string>

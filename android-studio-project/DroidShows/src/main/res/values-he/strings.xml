@@ -16,7 +16,8 @@
 <string name="menu_sort">מיון מופעים</string>
 <string name="menu_sort_by_name">מיון לפי שם\n(סדר עולה: סדר אלפביתי)</string>
 <string name="menu_sort_by_unseen_count">מיון לפי ספירה של פרקים בלתי נראים.\n(יורד: ביותר זמין תחילה)</string>
-<string name="menu_sort_by_last_unseen_date">מיון לפי תאריך של פרק אחרון ששודר לאחרונה\n(יורד: ראשון חדש)</string>
+<string name="menu_sort_by_next_unseen_date">מיון לפי תאריך של הפרק הבא הבא\n(סדר עולה: ישן קודם)</string>
+<string name="menu_sort_by_last_unseen_date">מיון לפי תאריך של פרק אחרון בלתי נראה\n(יורד: ראשון חדש)</string>
 <string name="menu_about">אופציות</string>
 <string name="menu_exit">יציאה</string>
 <string name="menu_context_update">עדכון</string>

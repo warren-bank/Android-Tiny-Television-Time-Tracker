@@ -15,8 +15,9 @@
 <string name="menu_search">بحث</string>
 <string name="menu_sort">فرز العروض</string>
 <string name="menu_sort_by_name">فرز بواسطة الاسم\n(تصاعدي : ترتيب أبجدي)</string>
-<string name="menu_sort_by_unseen_count">فرز بواسطة عد الحلقات التي لم يتم رؤيتها\n(تنازلي : الأكثر اتاحة أولا)</string>
-<string name="menu_sort_by_last_unseen_date">فرز بواسطة تاريخ آخر حلقة لم يتم عرضها\n(تنازلي : الأحدث أولا)</string>
+<string name="menu_sort_by_unseen_count">فرز بواسطة عد الحلقات التي لم يتم عرضها\n(تنازلي : الأكثر اتاحة أولا)</string>
+<string name="menu_sort_by_next_unseen_date">فرز بواسطة تاريخ الحلقة التي لم يتم النظر فيها بعد\n(تصاعدي : أقدم أولا)</string>
+<string name="menu_sort_by_last_unseen_date">فرز بواسطة تاريخ آخر حلقة لم يتم النظر فيها\n(تنازلي : الأحدث أولا)</string>
 <string name="menu_about">اختيارات</string>
 <string name="menu_exit">خروج</string>
 <string name="menu_context_update">تعديل</string>

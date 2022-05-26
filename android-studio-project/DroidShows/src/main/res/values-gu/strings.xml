@@ -15,8 +15,9 @@
 <string name="menu_search">શોધો</string>
 <string name="menu_sort">ક્રમમાં ગોઠવો</string>
 <string name="menu_sort_by_name">નામ દ્વારા ક્રમમાં ગોઠવો\n(ચકાસણી: આલ્ફાબેટિક ક્રમ)</string>
-<string name="menu_sort_by_unseen_count">અસ્તિત્વ થયેલ અસ્તિત્વની ગણતરી દ્વારા ક્રમમાં ગોઠવો\n(ઉતરતા: સૌથી ઉપલબ્ધ પહેલા)</string>
-<string name="menu_sort_by_last_unseen_date">છેલ્લે જોવા મળેલ અસ્તિત્વની તારીખની તારીખ દ્વારા ક્રમમાં ગોઠવો\n(ઉતરતા: નવી પ્રથમ)</string>
+<string name="menu_sort_by_unseen_count">જોવાયેલ ભાગો ની ગણતરી દ્વારા ક્રમમાં ગોઠવો\n(ઉતરતા: સૌથી ઉપલબ્ધ પહેલા)</string>
+<string name="menu_sort_by_next_unseen_date">આગળના અસ્તિત્વની તારીખ દ્વારા ક્રમમાં ગોઠવો\n(ચકાસણી: જૂનું પ્રથમ)</string>
+<string name="menu_sort_by_last_unseen_date">છેલ્લા અસ્તિત્વની તારીખ દ્વારા ક્રમમાં ગોઠવો\n(ઉતરતા: નવી પ્રથમ)</string>
 <string name="menu_about">વિકલ્પો</string>
 <string name="menu_exit">બહાર નીકળવો</string>
 <string name="menu_context_update">સુધારો</string>

@@ -15,8 +15,9 @@
 <string name="menu_search">खोजी गर्नुहोस्</string>
 <string name="menu_sort">क्रमबद्ध देखाउँछ</string>
 <string name="menu_sort_by_name">नामद्वारा क्रमबद्ध गर्नुहोस्\n(आरोही: अल्फाबेटिक आदेश)</string>
-<string name="menu_sort_by_unseen_count">नदेखिने अदृश्य घटनाहरूको गणना गरेर क्रमबद्ध गर्नुहोस्\n(घट्दो: सबैभन्दा धेरै उपलब्ध पहिलो)</string>
-<string name="menu_sort_by_last_unseen_date">हालै गरिएको अदृश्य प्रकरणको मिति अनुसार क्रमबद्ध गर्नुहोस्\n(घट्दो: सबैभन्दा पहिला पहिला)</string>
+<string name="menu_sort_by_unseen_count">नदेखिने घटनाको गणना गरेर क्रमबद्ध गर्नुहोस्\n(घट्दो: सबैभन्दा धेरै उपलब्ध पहिलो)</string>
+<string name="menu_sort_by_next_unseen_date">पछिल्लो अदृश्य प्रकरणको मितिद्वारा क्रमबद्ध गर्नुहोस्\n(आरोही: सबैभन्दा पुरानो पहिलो)</string>
+<string name="menu_sort_by_last_unseen_date">अन्तिम अदृश्य प्रकरणको मितिद्वारा क्रमबद्ध गर्नुहोस्\n(घट्दो: सबैभन्दा पहिला पहिला)</string>
 <string name="menu_about">विकल्पहरू</string>
 <string name="menu_exit">निस्कदा</string>
 <string name="menu_context_update">अद्यावधिक गर्नुहोस्</string>

@@ -15,8 +15,9 @@
 <string name="menu_search">Cuardaigh</string>
 <string name="menu_sort">Taispeáin sórtáil</string>
 <string name="menu_sort_by_name">Sórtáil de réir ainm\n(Clár: alphabetic)</string>
-<string name="menu_sort_by_unseen_count">Sórtáil de réir líon na n-eileoidí gan choinne\n(descending: an chuid is mó ar fáil)</string>
-<string name="menu_sort_by_last_unseen_date">Sórtáil de réir an dáta is déanaí arfheicthe unseen episode\n(Scanú:)</string>
+<string name="menu_sort_by_unseen_count">Sórtáil de réir comhaireamh na n -eipeasóid a bhfuiltear ag súil leis\n(íslitheach: an chuid is mó ar fáil ar dtús)</string>
+<string name="menu_sort_by_next_unseen_date">Sórtáil de réir dáta an chéad eachtra eile nach bhfacthas riamh\n(ag dul suas: an chéad duine is sine)</string>
+<string name="menu_sort_by_last_unseen_date">Sórtáil de réir dáta na heachtra deiridh nach bhfacthas riamh\n(íslitheach: an chéad cheann is nuaí)</string>
 <string name="menu_about">Roghanna</string>
 <string name="menu_exit">Scoir</string>
 <string name="menu_context_update">Nuashonraigh</string>

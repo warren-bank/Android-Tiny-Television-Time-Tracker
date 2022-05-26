@@ -15,8 +15,9 @@
 <string name="menu_search">Пошук</string>
 <string name="menu_sort">Впорядкувати список</string>
 <string name="menu_sort_by_name">Впорядкувати за назвою\n(зростанням: алфавітний порядок)</string>
-<string name="menu_sort_by_unseen_count">Впорядкувати за рахунок показів невидимих епізодів\n(За спадним спадом:)</string>
-<string name="menu_sort_by_last_unseen_date">Впорядкувати за датою останнього показника невидимого епізоду\n(спадний: найновіший)</string>
+<string name="menu_sort_by_unseen_count">Впорядкувати за числом невидимих епізодів\n(За спадним спадом:)</string>
+<string name="menu_sort_by_next_unseen_date">Впорядкувати за датою наступного небачених епізодів\n(зростанням: найстаріший перший)</string>
+<string name="menu_sort_by_last_unseen_date">Впорядкувати за датою останнього невидимого епізоду\n(спадний: найновіший)</string>
 <string name="menu_about">Параметри</string>
 <string name="menu_exit">Вийти</string>
 <string name="menu_context_update">Оновлювати</string>

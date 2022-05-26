@@ -15,8 +15,9 @@
 <string name="menu_search">Chwilio</string>
 <string name="menu_sort">Math o fath</string>
 <string name="menu_sort_by_name">Trefnu yn ôl enw\n(esgynnol: trefn yr wyddor)</string>
-<string name="menu_sort_by_unseen_count">Trefnu yn ôl cyfrif o episodau heb eu hystyried\n(disgynnol: y rhan fwyaf ohonynt)</string>
-<string name="menu_sort_by_last_unseen_date">Trefnu yn ôl dyddiad wedi ei wyntyllu\'n fwyaf diweddar\n(disgynnol: diweddaraf cyntaf)</string>
+<string name="menu_sort_by_unseen_count">Trefnu yn ôl cyfrif o episodau wedi\'u gwyntyllu\n(disgynnol: y rhan fwyaf ohonynt)</string>
+<string name="menu_sort_by_next_unseen_date">Trefnu yn ôl dyddiad y digwyddiad heb ei weld nesaf\n(esgynnol: hynaf yn gyntaf)</string>
+<string name="menu_sort_by_last_unseen_date">Trefnu yn ôl dyddiad y digwyddiad heb ei weld diwethaf\n(disgynnol: diweddaraf cyntaf)</string>
 <string name="menu_about">Dewisiadau</string>
 <string name="menu_exit">Gadael</string>
 <string name="menu_context_update">Diweddaru</string>

@@ -15,8 +15,9 @@
 <string name="menu_search">การค้นหา</string>
 <string name="menu_sort">เรียงลำดับรายการ</string>
 <string name="menu_sort_by_name">เรียงตามชื่อ\n(เรียงจากน้อยไปหามาก: ลำดับตัวอักษร)</string>
-<string name="menu_sort_by_unseen_count">เรียงลำดับโดยนับของออกอากาศที่มองไม่เห็นตอน\n(จากมากไปหาน้อย: มีอยู่อันดับแรก)</string>
-<string name="menu_sort_by_last_unseen_date">เรียงลำดับตามวันที่ของตอนที่มองไม่เห็นออกอากาศล่าสุด\n(จากมากไปหาน้อย: ใหม่ล่าสุด)</string>
+<string name="menu_sort_by_unseen_count">เรียงลำดับตามจำนวนที่มองไม่เห็นออกอากาศตอน\n(จากมากไปหาน้อย: มีอยู่อันดับแรก)</string>
+<string name="menu_sort_by_next_unseen_date">เรียงลำดับตามวันที่ของตอนถัดไปที่มองไม่เห็น\n(จากน้อยไปหามาก: เก่าสุดก่อน)</string>
+<string name="menu_sort_by_last_unseen_date">เรียงลำดับตามวันที่ของตอนที่มองไม่เห็นล่าสุด\n(จากมากไปหาน้อย: ใหม่ล่าสุด)</string>
 <string name="menu_about">อ็อพชัน</string>
 <string name="menu_exit">ออก</string>
 <string name="menu_context_update">อัพเดต</string>

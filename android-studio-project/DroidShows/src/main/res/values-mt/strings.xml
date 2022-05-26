@@ -15,8 +15,9 @@
 <string name="menu_search">Fittex</string>
 <string name="menu_sort">Tip turi</string>
 <string name="menu_sort_by_name">Tip bl-isem\n(axxendenti: ordni alfabetika)</string>
-<string name="menu_sort_by_unseen_count">Tip skont l-għadd ta \' episodji mxandra mhux meqjusa\n(dixxendenti: ħafna disponibbli l-ewwel)</string>
-<string name="menu_sort_by_last_unseen_date">Tip skond id-data ta \' l-aktar episodju mhux osservat reċentement\n(dixxendenti: aktar ġodda ewwel)</string>
+<string name="menu_sort_by_unseen_count">Tip skont l-għadd ta \' episodji imxandra mhux meqjusa\n(dixxendenti: ħafna disponibbli l-ewwel)</string>
+<string name="menu_sort_by_next_unseen_date">Tip sa data ta \' episodju li jmiss li jmiss\n(axxendenti: eqdem ewwel)</string>
+<string name="menu_sort_by_last_unseen_date">Tip sa data ta \' l-aħħar episodju mhux osservat\n(dixxendenti: aktar ġodda ewwel)</string>
 <string name="menu_about">Għażliet</string>
 <string name="menu_exit">Ħruġ</string>
 <string name="menu_context_update">Aġġornament</string>

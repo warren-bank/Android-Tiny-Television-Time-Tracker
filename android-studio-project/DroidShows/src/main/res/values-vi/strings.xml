@@ -15,8 +15,9 @@
 <string name="menu_search">Tìm kiếm</string>
 <string name="menu_sort">&amp;amp; Sắp xếp</string>
 <string name="menu_sort_by_name">Phân loại theo tên\n(tăng dần: thứ tự abc)</string>
-<string name="menu_sort_by_unseen_count">Sắp xếp theo số tập chưa từng thấy\n(giảm dần nhất:)</string>
-<string name="menu_sort_by_last_unseen_date">Sắp xếp theo ngày của tập chưa được phát sóng gần đây nhất\n(giảm dần: mới nhất)</string>
+<string name="menu_sort_by_unseen_count">Sắp xếp theo số tập phim được phát sóng vô hình\n(giảm dần nhất:)</string>
+<string name="menu_sort_by_next_unseen_date">Sắp xếp theo ngày của tập vô hình tiếp theo\n(tăng lên: đầu tiên)</string>
+<string name="menu_sort_by_last_unseen_date">Sắp xếp theo ngày của tập phim cuối cùng\n(giảm dần: mới nhất)</string>
 <string name="menu_about">Tùy chọn</string>
 <string name="menu_exit">Thoát</string>
 <string name="menu_context_update">Cập nhật</string>

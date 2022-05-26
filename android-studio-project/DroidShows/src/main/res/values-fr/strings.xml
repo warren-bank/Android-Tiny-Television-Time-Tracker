@@ -16,7 +16,8 @@
 <string name="menu_sort">Trier les séries</string>
 <string name="menu_sort_by_name">Trier par nom\n(Croissant: ordre alphabétique)</string>
 <string name="menu_sort_by_unseen_count">Trier par nombre d\'épisodes non vus diffusés\n(Décroissant: la plus disponible en premier)</string>
-<string name="menu_sort_by_last_unseen_date">Triés par date de l\'épisode le plus récemment diffusé\n(Décroissant: plus récent en premier)</string>
+<string name="menu_sort_by_next_unseen_date">Trier par date du prochain épisode non vu\n(Croissant: plus ancien premier)</string>
+<string name="menu_sort_by_last_unseen_date">Trier par date du dernier épisode non vu\n(Décroissant: plus récent en premier)</string>
 <string name="menu_about">Options</string>
 <string name="menu_exit">Quitter</string>
 <string name="menu_context_update">Mettre à jour</string>

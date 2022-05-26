@@ -15,8 +15,9 @@
 <string name="menu_search">തെരയുക</string>
 <string name="menu_sort">ദൃശ്യം കാണിക്കുന്നു</string>
 <string name="menu_sort_by_name">പേരില് ക്രമീകരണം\n(അക്ഷരമാല: അക്ഷരക്രമം)</string>
-<string name="menu_sort_by_unseen_count">പ്രദര്ശിപ്പിക്കുന്ന അക്ഷരങ്ങളുടെ എണ്ണം ക്രമീകരണം\n(താഴെ പറയുന്നു: ഏറ്റവും കൂടുതൽ ലഭ്യമായത്)</string>
-<string name="menu_sort_by_last_unseen_date">ഏറ്റവും ഒടുവില് കാണപ്പെടുന്നതുമായ എപ്പിസോഡിന്റെ തീയതി\n(താഴെ പറയുന്നു: ഏറ്റവും പുതിയ ആദ്യത്തെ)</string>
+<string name="menu_sort_by_unseen_count">കാണപ്പെടുന്നതുമായ അക്ഷരങ്ങളുടെ എണ്ണം ക്രമീകരിച്ച് ക്രമീകരണം\n(താഴെ പറയുന്നു: ഏറ്റവും കൂടുതൽ ലഭ്യമായത്)</string>
+<string name="menu_sort_by_next_unseen_date">അടുത്ത അകന്ന അദ്ധ്യായത്തിന്റെ തീയതി\n(ഏറ്റവും പഴക്കമേറിയത്)</string>
+<string name="menu_sort_by_last_unseen_date">അവസാനമായി കാണപ്പെടുന്നതുമായ എപ്പിസോഡിന്റെ തീയതി\n(താഴെ പറയുന്നു: ഏറ്റവും പുതിയ ആദ്യത്തെ)</string>
 <string name="menu_about">ഐച്ഛികങ്ങള്</string>
 <string name="menu_exit">പ്രദര്ശിപ്പിക്കുക</string>
 <string name="menu_context_update">പുതുക്കുക</string>

@@ -15,8 +15,9 @@
 <string name="menu_search">Αναζήτηση.</string>
 <string name="menu_sort">Ταξινόμηση δείχνει</string>
 <string name="menu_sort_by_name">Ταξινόμηση κατά όνομα:\n(αύξουσα: αλφαβητική σειρά)</string>
-<string name="menu_sort_by_unseen_count">Ταξινόμηση με την καταμέτρηση των aωμένα μη ορατά επεισόδια\n(φθίνουσα: η πιο διαθέσιμη πρώτη)</string>
-<string name="menu_sort_by_last_unseen_date">Ταξινόμηση κατά ημερομηνία του πιο πρόσφατα προβλήθηκε unseen επεισόδιο\n(φθίνουσα: νεότερο πρώτο)</string>
+<string name="menu_sort_by_unseen_count">Ταξινόμηση με την καταμέτρηση των unseen aωμένα επεισόδια\n(φθίνουσα: η πιο διαθέσιμη πρώτη)</string>
+<string name="menu_sort_by_next_unseen_date">Ταξινόμηση κατά ημερομηνία του επόμενου αόρατους επεισόδιο\n(αύξουσα: παλαιότερα πρώτη)</string>
+<string name="menu_sort_by_last_unseen_date">Ταξινόμηση κατά ημερομηνία του τελευταίου αόρατους επεισόδιο\n(φθίνουσα: νεότερο πρώτο)</string>
 <string name="menu_about">\' Επιλογές</string>
 <string name="menu_exit">Έξοδος:</string>
 <string name="menu_context_update">Ενημέρωση:</string>

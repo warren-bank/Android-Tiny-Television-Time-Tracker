@@ -15,8 +15,9 @@
 <string name="menu_search">搜尋</string>
 <string name="menu_sort">排序顯示</string>
 <string name="menu_sort_by_name">依名稱排序\n(遞增：英文字母順序)</string>
-<string name="menu_sort_by_unseen_count">依播放的未查看集數排序\n(降序：最多可使用)</string>
-<string name="menu_sort_by_last_unseen_date">依最新播出的未看過劇集日期排序\n(遞減：最新的第一個)</string>
+<string name="menu_sort_by_unseen_count">依未看播出的劇集數量排序\n(降序：最多可使用)</string>
+<string name="menu_sort_by_next_unseen_date">依下一次未看到的事件日期排序\n(遞增：最早的第一個)</string>
+<string name="menu_sort_by_last_unseen_date">依前次未看事件的日期排序\n(遞減：最新的第一個)</string>
 <string name="menu_about">選項</string>
 <string name="menu_exit">出口</string>
 <string name="menu_context_update">更新</string>

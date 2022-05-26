@@ -15,8 +15,9 @@
 <string name="menu_search">Pretraži</string>
 <string name="menu_sort">Sortini serije</string>
 <string name="menu_sort_by_name">Sort po imenu\n(uzlazno: abecedni red)</string>
-<string name="menu_sort_by_unseen_count">Sortiran po broj emitiran neviđeni epizoda\n(silazni: najdostupnije prvo)</string>
-<string name="menu_sort_by_last_unseen_date">Sortiran po datu najnovije emitiran neviđeni epizoda\n(silasila:najnoviji prvi)</string>
+<string name="menu_sort_by_unseen_count">Sortiran po broj neviđeni uparenih epizoda\n(silazni: najdostupnije prvo)</string>
+<string name="menu_sort_by_next_unseen_date">Sort po datu sljedeće neviđeni epizode\n(uzlazni: najstarije)</string>
+<string name="menu_sort_by_last_unseen_date">Sort po datu zadnje neviđeni epizode\n(silasila:najnoviji prvi)</string>
 <string name="menu_about">Opcije</string>
 <string name="menu_exit">Izlaz</string>
 <string name="menu_context_update">Ažuriraj</string>

@@ -15,8 +15,9 @@
 <string name="menu_search">Otsing</string>
 <string name="menu_sort">Sordi näitamine</string>
 <string name="menu_sort_by_name">Sorteeri nime järgi\n(tõusuteel: tähestikuline järjekord)</string>
-<string name="menu_sort_by_unseen_count">Sorteeri paaritatud nähtavate episoodide arv\n(kahanev: kõige rohkem saadaval)</string>
-<string name="menu_sort_by_last_unseen_date">Sorteeri kõige viimasel paaris märkamatu episood\n(Kahanev: uusim)</string>
+<string name="menu_sort_by_unseen_count">Sorteeri paaritumata eetris episoode\n(kahanev: kõige rohkem saadaval)</string>
+<string name="menu_sort_by_next_unseen_date">Sorteeri järgmise märkamatu episoodi kuupäev\n(kasvavalt: vanim esimene)</string>
+<string name="menu_sort_by_last_unseen_date">Sorteeri viimase nähtu kuupäeva järgi\n(Kahanev: uusim)</string>
 <string name="menu_about">Valikud</string>
 <string name="menu_exit">Välju</string>
 <string name="menu_context_update">Uuenda</string>

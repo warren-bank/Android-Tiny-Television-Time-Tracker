@@ -15,8 +15,9 @@
 <string name="menu_search">Szukaj</string>
 <string name="menu_sort">Sortowanie pokazów</string>
 <string name="menu_sort_by_name">Sortuj według nazwy\n(rosnąco: kolejność alfabetyczna)</string>
-<string name="menu_sort_by_unseen_count">Sortuj wg liczby wyemitowanych epizodów niewiszonych\n(malejąco: najbardziej dostępny pierwszy)</string>
-<string name="menu_sort_by_last_unseen_date">Sortuj według daty ostatnio wyemitowanego epizodu nieobserwowanego\n(malejąco: najnowszy pierwszy)</string>
+<string name="menu_sort_by_unseen_count">Sortuj według liczby nieobserwowanych, wyemitowanych epizodów\n(malejąco: najbardziej dostępny pierwszy)</string>
+<string name="menu_sort_by_next_unseen_date">Sortuj według daty następnego nieobserwowanego odcinka\n(rosnąco: najstarsze)</string>
+<string name="menu_sort_by_last_unseen_date">Sortuj według daty ostatniego nieobserwowanego odcinka\n(malejąco: najnowszy pierwszy)</string>
 <string name="menu_about">Opcje</string>
 <string name="menu_exit">Wyjdź</string>
 <string name="menu_context_update">Aktualizacja</string>

@@ -15,8 +15,9 @@
 <string name="menu_search">தேடு</string>
 <string name="menu_sort">வரிசைப்படுத்தப்பட்ட காட்டி</string>
 <string name="menu_sort_by_name">பெயரால் வரிசைப்படுத்து\n(மேற்கோள்கள்:)</string>
-<string name="menu_sort_by_unseen_count">காண்பிக்கப்படாத எண்களின் எண்ணிக்கை மூலம் வரிசைப்படுத்து\n(இறக்குமதி: பெரும்பாலான முதலாவது)</string>
-<string name="menu_sort_by_last_unseen_date">பெரும்பாலான அண்மையில் காணப்படாத எத்தனை தேதியின் மூலம் வரிசைப்படுத்து\n(இறக்குமதி: புனித முதலாவது)</string>
+<string name="menu_sort_by_unseen_count">காணப்படாத பக்கங்களின் எண்ணிக்கை மூலம் வரிசைப்படுத்து\n(இறக்குமதி: பெரும்பாலான முதலாவது)</string>
+<string name="menu_sort_by_next_unseen_date">அடுத்த இல்லையென்றால் வரிசைப்படுத்து\n(மேற்கோள்: பழமையான முதல்)</string>
+<string name="menu_sort_by_last_unseen_date">கடைசியாக காணப்படாத எத்தனை தேதியின் மூலம் வரிசையாக்கம்\n(இறக்குமதி: புனித முதலாவது)</string>
 <string name="menu_about">விருப்பங்கள்</string>
 <string name="menu_exit">வெளியேறு</string>
 <string name="menu_context_update">புதுப்பி</string>

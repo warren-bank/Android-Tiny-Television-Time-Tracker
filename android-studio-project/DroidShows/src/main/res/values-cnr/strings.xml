@@ -15,8 +15,9 @@
 <string name="menu_search">Traži</string>
 <string name="menu_sort">Neka vrsta predstave.</string>
 <string name="menu_sort_by_name">Neka vrsta po imenu\n(Uzlazno po abecednom redu)</string>
-<string name="menu_sort_by_unseen_count">Sortiraj po broju emitovanih neviđenih epizoda\n(silazni: najdostupniji prvi)</string>
-<string name="menu_sort_by_last_unseen_date">Neka vrsta po datumu zadnje emitirane epizode.\n(silazni: najnoviji prvi)</string>
+<string name="menu_sort_by_unseen_count">Sortiraj po neviđenim emitovanim epizodama.\n(silazni: najdostupniji prvi)</string>
+<string name="menu_sort_by_next_unseen_date">Neka vrsta po datumu sledeće neviđene epizode.\n(Uzlazi: Najstariji prvi)</string>
+<string name="menu_sort_by_last_unseen_date">Neka vrsta po datumu zadnje neviđene epizode\n(silazni: najnoviji prvi)</string>
 <string name="menu_about">Opcije</string>
 <string name="menu_exit">Izađi.</string>
 <string name="menu_context_update">Ažuriranje</string>

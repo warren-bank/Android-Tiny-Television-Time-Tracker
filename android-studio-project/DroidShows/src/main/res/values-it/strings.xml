@@ -15,8 +15,9 @@
 <string name="menu_search">Cerca</string>
 <string name="menu_sort">Ordina mostra</string>
 <string name="menu_sort_by_name">Ordina per nome\n(ascendente: ordine alfabetico)</string>
-<string name="menu_sort_by_unseen_count">Ordina per conteggio di episodi non visti in onda\n(discesa: la maggior parte disponibile prima)</string>
-<string name="menu_sort_by_last_unseen_date">Ordina per data dell\'episodio non visto più recentemente andato in onda\n(discesa: newest primo)</string>
+<string name="menu_sort_by_unseen_count">Ordina per conteggio di episodi in onda non visti\n(discesa: la maggior parte disponibile prima)</string>
+<string name="menu_sort_by_next_unseen_date">Ordina per data del prossimo episodio non visto\n(ascendente: primo primo)</string>
+<string name="menu_sort_by_last_unseen_date">Ordina per data dell\'ultimo episodio non visto\n(discesa: newest primo)</string>
 <string name="menu_about">Opzioni</string>
 <string name="menu_exit">Esci</string>
 <string name="menu_context_update">Aggiorna</string>
