@@ -16,7 +16,7 @@
 <string name="menu_sort">Sorteringsprogram</string>
 <string name="menu_sort_by_name">Sortera efter namn\n(stigande: alfabetisk ordning)</string>
 <string name="menu_sort_by_unseen_count">Sortera efter antal visade osedda händelser\n(nedåtgående: de flesta tillgängliga först)</string>
-<string name="menu_sort_by_unseen_date">Sortera efter datum för senast sänkt osedd episod\n(nedåtgående: nyaste först)</string>
+<string name="menu_sort_by_last_unseen_date">Sortera efter datum för senast sänkt osedd episod\n(nedåtgående: nyaste först)</string>
 <string name="menu_about">Optioner</string>
 <string name="menu_exit">Avsluta</string>
 <string name="menu_context_update">Uppdatera</string>

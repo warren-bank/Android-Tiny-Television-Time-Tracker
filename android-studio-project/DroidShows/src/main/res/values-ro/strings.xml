@@ -16,7 +16,7 @@
 <string name="menu_sort">Un fel arată</string>
 <string name="menu_sort_by_name">Sortează după nume\n(ascendent: ordine alfabetică)</string>
 <string name="menu_sort_by_unseen_count">Sortează după numărătoarea episoadelor nevăzute difuzate\n(descendent: cel mai disponibil primul)</string>
-<string name="menu_sort_by_unseen_date">Sortează după data de cel mai recent difuzat episod nevăzut\n(descendent: cel mai nou)</string>
+<string name="menu_sort_by_last_unseen_date">Sortează după data de cel mai recent difuzat episod nevăzut\n(descendent: cel mai nou)</string>
 <string name="menu_about">Opțiuni</string>
 <string name="menu_exit">Ieșire</string>
 <string name="menu_context_update">Actualizare</string>

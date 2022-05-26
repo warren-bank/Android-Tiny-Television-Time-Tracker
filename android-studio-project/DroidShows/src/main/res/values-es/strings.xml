@@ -16,7 +16,7 @@
 <string name="menu_sort">Programas de clasificación</string>
 <string name="menu_sort_by_name">Ordenar por nombre\n(ascendente: orden alfabético)</string>
 <string name="menu_sort_by_unseen_count">Ordenar por recuento de episodios no vistos transmitidos\n(descendente: la mayoría de los primeros)</string>
-<string name="menu_sort_by_unseen_date">Ordenar por fecha de episodio no visto recientemente emitido\n(descendente: el más nuevo primero)</string>
+<string name="menu_sort_by_last_unseen_date">Ordenar por fecha de episodio no visto recientemente emitido\n(descendente: el más nuevo primero)</string>
 <string name="menu_about">Opciones</string>
 <string name="menu_exit">Salir</string>
 <string name="menu_context_update">Actualizar</string>

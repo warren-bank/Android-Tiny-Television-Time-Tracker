@@ -16,7 +16,7 @@
 <string name="menu_sort">Sortiervorgänge</string>
 <string name="menu_sort_by_name">Nach Name sortieren\n(Aufsteigend: alphabetische Reihenfolge)</string>
 <string name="menu_sort_by_unseen_count">Sortieren nach Anzahl der ausgestrahlten unsichtbaren Episoden\n(absteigend: Die meisten verfügbaren)</string>
-<string name="menu_sort_by_unseen_date">Sortieren nach Datum der letzten nicht gesehenen Episode\n(absteigend: neueste zuerst)</string>
+<string name="menu_sort_by_last_unseen_date">Sortieren nach Datum der letzten nicht gesehenen Episode\n(absteigend: neueste zuerst)</string>
 <string name="menu_about">Einstellungen</string>
 <string name="menu_exit">Beenden</string>
 <string name="menu_context_update">Aktualisieren</string>

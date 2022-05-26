@@ -16,7 +16,7 @@
 <string name="menu_sort">Taispeáin sórtáil</string>
 <string name="menu_sort_by_name">Sórtáil de réir ainm\n(Clár: alphabetic)</string>
 <string name="menu_sort_by_unseen_count">Sórtáil de réir líon na n-eileoidí gan choinne\n(descending: an chuid is mó ar fáil)</string>
-<string name="menu_sort_by_unseen_date">Sórtáil de réir an dáta is déanaí arfheicthe unseen episode\n(Scanú:)</string>
+<string name="menu_sort_by_last_unseen_date">Sórtáil de réir an dáta is déanaí arfheicthe unseen episode\n(Scanú:)</string>
 <string name="menu_about">Roghanna</string>
 <string name="menu_exit">Scoir</string>
 <string name="menu_context_update">Nuashonraigh</string>

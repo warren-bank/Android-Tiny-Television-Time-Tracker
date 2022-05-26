@@ -16,7 +16,7 @@
 <string name="menu_sort">Sorter viser</string>
 <string name="menu_sort_by_name">Sorter etter navn\n(stigende: alfabetisk rekkefølge)</string>
 <string name="menu_sort_by_unseen_count">Sorter etter telling av aired usette episoder\n(synkende: mest tilgjengelig først)</string>
-<string name="menu_sort_by_unseen_date">Sorter etter dato for det meste nylig aired usette episode\n(synkende: nyeste først)</string>
+<string name="menu_sort_by_last_unseen_date">Sorter etter dato for det meste nylig aired usette episode\n(synkende: nyeste først)</string>
 <string name="menu_about">Alternativer</string>
 <string name="menu_exit">Avslutt</string>
 <string name="menu_context_update">Oppdatering</string>

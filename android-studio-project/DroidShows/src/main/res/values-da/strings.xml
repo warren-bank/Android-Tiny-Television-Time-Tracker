@@ -16,7 +16,7 @@
 <string name="menu_sort">Sortér programmer</string>
 <string name="menu_sort_by_name">Sortér efter navn\n(stigende: alfabetisk rækkefølge)</string>
 <string name="menu_sort_by_unseen_count">Sortér efter optælling af ikke-set afsnit\n(faldende: de fleste tilgængelige først)</string>
-<string name="menu_sort_by_unseen_date">Sortér efter dato for nylig aired unseen episode\n(nedladende: nevest først)</string>
+<string name="menu_sort_by_last_unseen_date">Sortér efter dato for nylig aired unseen episode\n(nedladende: nevest først)</string>
 <string name="menu_about">Optioner</string>
 <string name="menu_exit">Afslut</string>
 <string name="menu_context_update">Opdatering</string>

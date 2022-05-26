@@ -16,7 +16,7 @@
 <string name="menu_sort">Sorteerprogramma\'s</string>
 <string name="menu_sort_by_name">Sorteren op naam\n(oplopend: alfabetische volgorde)</string>
 <string name="menu_sort_by_unseen_count">Sorteren op aantal uitgezonden ongelezen afleveringen\n(aflopend: meest beschikbaar eerste)</string>
-<string name="menu_sort_by_unseen_date">Sorteren op datum van meest recent uitgezonden aflevering\n(aflopend: nieuwste eerste)</string>
+<string name="menu_sort_by_last_unseen_date">Sorteren op datum van meest recent uitgezonden aflevering\n(aflopend: nieuwste eerste)</string>
 <string name="menu_about">Opties</string>
 <string name="menu_exit">Afsluiten</string>
 <string name="menu_context_update">Bijwerken</string>

@@ -16,7 +16,7 @@
 <string name="menu_sort">排序显示</string>
 <string name="menu_sort_by_name">按名称排序\n(升序: 字母顺序)</string>
 <string name="menu_sort_by_unseen_count">按播出的未见集数排序\n(降序 : 大多数可用)</string>
-<string name="menu_sort_by_unseen_date">按最新播出的未见集的日期排序\n(降序 : 最新第一个)</string>
+<string name="menu_sort_by_last_unseen_date">按最新播出的未见集的日期排序\n(降序 : 最新第一个)</string>
 <string name="menu_about">选项</string>
 <string name="menu_exit">退出</string>
 <string name="menu_context_update">更新</string>

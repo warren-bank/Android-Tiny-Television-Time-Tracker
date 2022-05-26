@@ -16,7 +16,7 @@
 <string name="menu_sort">Papar paparan</string>
 <string name="menu_sort_by_name">Isih mengikut nama\n(Tertib menaik: abjad abjad)</string>
 <string name="menu_sort_by_unseen_count">Isih mengikut kiraan bagi episod ghaib yang tidak dapat dilihat\n(Menurun: paling tersedia dahulu)</string>
-<string name="menu_sort_by_unseen_date">Isih mengikut tarikh terkini bagi episod yang tidak dilihat baru-baru ini\n(Turun: terbaru pertama)</string>
+<string name="menu_sort_by_last_unseen_date">Isih mengikut tarikh terkini bagi episod yang tidak dilihat baru-baru ini\n(Turun: terbaru pertama)</string>
 <string name="menu_about">Pilihan</string>
 <string name="menu_exit">Keluar</string>
 <string name="menu_context_update">Kemaskini</string>

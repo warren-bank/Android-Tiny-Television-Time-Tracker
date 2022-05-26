@@ -16,7 +16,7 @@
 <string name="menu_sort">Rendezés show</string>
 <string name="menu_sort_by_name">Rendezés név szerint\n(Növekvő: betűrendben)</string>
 <string name="menu_sort_by_unseen_count">Rendezés a láthatatlan epizódok száma alapján\n(Csökkenő: a legtöbb elérhető első)</string>
-<string name="menu_sort_by_unseen_date">Rendezés a legutóbbi, láthatatlan epizód szerint\n(Csökkenő: legújabb első)</string>
+<string name="menu_sort_by_last_unseen_date">Rendezés a legutóbbi, láthatatlan epizód szerint\n(Csökkenő: legújabb első)</string>
 <string name="menu_about">Beállítások</string>
 <string name="menu_exit">Kilép</string>
 <string name="menu_context_update">Frissítés</string>

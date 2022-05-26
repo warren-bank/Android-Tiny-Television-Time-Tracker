@@ -159,10 +159,11 @@ public class DroidShows extends ListActivity
   private static boolean excludeSeen;
 
   // Sort shows...
-  private static final String SORT_PREF_NAME = "sort";
-  private static final int SORT_BY_NAME = 0;
-  private static final int SORT_BY_UNSEEN_COUNT = 1;
-  private static final int SORT_BY_UNSEEN_DATE = 2;
+  private static final String SORT_PREF_NAME        = "sort";
+  private static final int SORT_BY_NAME             = 0;
+  private static final int SORT_BY_UNSEEN_COUNT     = 1;
+  private static final int SORT_BY_NEXT_UNSEEN_DATE = 2;
+  private static final int SORT_BY_LAST_UNSEEN_DATE = 3;
   private static int sortOption;
 
   // ==============
@@ -1694,7 +1695,32 @@ public class DroidShows extends ListActivity
           return compared;
         }
 
-        case SORT_BY_UNSEEN_DATE: {
+        case SORT_BY_NEXT_UNSEEN_DATE: {
+          int compared;
+
+          Date nextAir1 = object1.getNextAir();
+          Date nextAir2 = object2.getNextAir();
+
+          if ((nextAir1 == null) && (nextAir2 == null))
+            compared = 0;
+          else if (nextAir1 == null)
+            compared = 1;
+          else if (nextAir2 == null)
+            compared = -1;
+          else
+            compared = nextAir1.compareTo(nextAir2); // ascending
+
+          if (compared == 0) {
+            // dates for airing of next episode are equal.
+            // perform a secondary (final) sort that is ordered by the name of the show (ascending: alphabetic order)
+
+            compared = object1.getName().compareToIgnoreCase(object2.getName());
+          }
+
+          return compared;
+        }
+
+        case SORT_BY_LAST_UNSEEN_DATE: {
           Date unwatchedLastAired1 = object1.getUnwatchedLastAired();
           Date unwatchedLastAired2 = object2.getUnwatchedLastAired();
           int compared;

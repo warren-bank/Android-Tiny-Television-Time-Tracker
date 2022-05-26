@@ -16,7 +16,7 @@
 <string name="menu_sort">Classificação de mostra</string>
 <string name="menu_sort_by_name">Ordenar por nome\n(ascenção: ordem alfabética)</string>
 <string name="menu_sort_by_unseen_count">Classificação por contagem de episódios invistos veiculados\n(decrescente: mais disponível primeiro)</string>
-<string name="menu_sort_by_unseen_date">Classificação por data do episódio não visto mais recentemente exibido\n(decrescente: mais novo primeiro)</string>
+<string name="menu_sort_by_last_unseen_date">Classificação por data do episódio não visto mais recentemente exibido\n(decrescente: mais novo primeiro)</string>
 <string name="menu_about">Opções</string>
 <string name="menu_exit">Saída</string>
 <string name="menu_context_update">Atualização</string>

@@ -16,7 +16,7 @@
 <string name="menu_sort">ソートの表示</string>
 <string name="menu_sort_by_name">名前でソート\n(昇順: アルファベット順)</string>
 <string name="menu_sort_by_unseen_count">放送されていないエピソードの数のカウントでソート\n(降順: 使用可能な最初の最初)</string>
-<string name="menu_sort_by_unseen_date">最新の放送されていないエピソードの日付でソート\n(降順: 先頭)</string>
+<string name="menu_sort_by_last_unseen_date">最新の放送されていないエピソードの日付でソート\n(降順: 先頭)</string>
 <string name="menu_about">オプション</string>
 <string name="menu_exit">出口</string>
 <string name="menu_context_update">アップデート</string>

@@ -16,7 +16,7 @@
 <string name="menu_sort">Třídit zobrazení</string>
 <string name="menu_sort_by_name">Řadit podle názvu\n(vzestupné: abecední pořadí)</string>
 <string name="menu_sort_by_unseen_count">Řadit podle počtu vysílané neviditelné epizody\n(sestupně: většina byla k dispozici první)</string>
-<string name="menu_sort_by_unseen_date">Řadit podle data nejnověji vysílané neviditelné epizody\n(sestupné: nejnovější jako první)</string>
+<string name="menu_sort_by_last_unseen_date">Řadit podle data nejnověji vysílané neviditelné epizody\n(sestupné: nejnovější jako první)</string>
 <string name="menu_about">Možnosti</string>
 <string name="menu_exit">Ukončit</string>
 <string name="menu_context_update">Aktualizovat</string>

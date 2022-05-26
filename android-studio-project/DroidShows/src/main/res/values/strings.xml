@@ -15,8 +15,9 @@
 <string name="menu_search">Search</string>
 <string name="menu_sort">Sort shows</string>
 <string name="menu_sort_by_name">Sort by name\n(ascending: alphabetic order)</string>
-<string name="menu_sort_by_unseen_count">Sort by count of aired unseen episodes\n(descending: most available first)</string>
-<string name="menu_sort_by_unseen_date">Sort by date of most recently aired unseen episode\n(descending: newest first)</string>
+<string name="menu_sort_by_unseen_count">Sort by count of unseen aired episodes\n(descending: most available first)</string>
+<string name="menu_sort_by_next_unseen_date">Sort by date of next unseen episode\n(ascending: oldest first)</string>
+<string name="menu_sort_by_last_unseen_date">Sort by date of last unseen episode\n(descending: newest first)</string>
 <string name="menu_about">Options</string>
 <string name="menu_exit">Exit</string>
 <string name="menu_context_update">Update</string>

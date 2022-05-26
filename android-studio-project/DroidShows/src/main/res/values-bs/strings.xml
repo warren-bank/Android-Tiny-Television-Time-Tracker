@@ -16,7 +16,7 @@
 <string name="menu_sort">Sortiranje pokazuje</string>
 <string name="menu_sort_by_name">Sortiraj po imenu\n(uzlazno: abecedni poredak)</string>
 <string name="menu_sort_by_unseen_count">Sortiraj po broju emitovanih neviđenih epizoda\n(silazni: najdostupniji prvi)</string>
-<string name="menu_sort_by_unseen_date">Sortiraj po datumu zadnje emitirane epizode\n(silazni: najnoviji prvi)</string>
+<string name="menu_sort_by_last_unseen_date">Sortiraj po datumu zadnje emitirane epizode\n(silazni: najnoviji prvi)</string>
 <string name="menu_about">Opcije</string>
 <string name="menu_exit">Izlaz</string>
 <string name="menu_context_update">Ažuriraj</string>

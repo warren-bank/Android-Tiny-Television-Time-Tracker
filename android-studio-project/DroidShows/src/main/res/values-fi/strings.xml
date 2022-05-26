@@ -16,7 +16,7 @@
 <string name="menu_sort">Lajittele</string>
 <string name="menu_sort_by_name">Lajittele nimen mukaan\n(Nouseva: aakkosjärjestys)</string>
 <string name="menu_sort_by_unseen_count">Lajittele näkymättömien jaksojen määrän mukaan\n(Laskeva: useimmat käytettävissä olevat)</string>
-<string name="menu_sort_by_unseen_date">Lajittele viimeksi näkymättömän jakson mukaan.\n(Laskeva: uusin ensimmäinen)</string>
+<string name="menu_sort_by_last_unseen_date">Lajittele viimeksi näkymättömän jakson mukaan.\n(Laskeva: uusin ensimmäinen)</string>
 <string name="menu_about">Valinnat</string>
 <string name="menu_exit">Poistuminen</string>
 <string name="menu_context_update">Päivitä</string>

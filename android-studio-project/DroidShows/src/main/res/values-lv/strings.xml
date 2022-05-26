@@ -16,7 +16,7 @@
 <string name="menu_sort">Kārtot parāda</string>
 <string name="menu_sort_by_name">Kārtot pēc nosaukuma\n(augšupeja: alfabētiskais pasūtījums)</string>
 <string name="menu_sort_by_unseen_count">Kārtot pēc sapāroto neredzētu epizožu skaita\n(dilstošā: lielākā daļa no)</string>
-<string name="menu_sort_by_unseen_date">Kārtot pēc datuma, kas nesen aired neredzētu epizode\n(dilstošā: jaunākā pirmā)</string>
+<string name="menu_sort_by_last_unseen_date">Kārtot pēc datuma, kas nesen aired neredzētu epizode\n(dilstošā: jaunākā pirmā)</string>
 <string name="menu_about">Opcijas</string>
 <string name="menu_exit">Iziešana</string>
 <string name="menu_context_update">Atjauninājums</string>

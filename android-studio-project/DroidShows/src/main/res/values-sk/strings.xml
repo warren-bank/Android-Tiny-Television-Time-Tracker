@@ -16,7 +16,7 @@
 <string name="menu_sort">Zobraziť zoradenie</string>
 <string name="menu_sort_by_name">Zoradiť podľa názvu\n(vzostupne: abecedné poradie)</string>
 <string name="menu_sort_by_unseen_count">Zoradiť podľa počtu spárovaných nepozorovaných epizíd\n(zostupne: najdostupne prvý)</string>
-<string name="menu_sort_by_unseen_date">Zoradiť podľa dátumu poslednej spárovanej nevidenej epizódy\n(zostupne: najnovšie ako prvé)</string>
+<string name="menu_sort_by_last_unseen_date">Zoradiť podľa dátumu poslednej spárovanej nevidenej epizódy\n(zostupne: najnovšie ako prvé)</string>
 <string name="menu_about">Možnosti</string>
 <string name="menu_exit">Ukončiť</string>
 <string name="menu_context_update">Aktualizovať</string>

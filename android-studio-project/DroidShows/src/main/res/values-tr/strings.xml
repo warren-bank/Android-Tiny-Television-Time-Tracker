@@ -16,7 +16,7 @@
 <string name="menu_sort">Sıralama gösterileri</string>
 <string name="menu_sort_by_name">Ada göre sırala\n(yükselen: alfabetik sıra)</string>
 <string name="menu_sort_by_unseen_count">Görünmeyen bölümlerin sayısına göre sırala\n(alçalan: en çok kullanılabilir)</string>
-<string name="menu_sort_by_unseen_date">En son görülmeyen bölüm tarihine göre sırala\n(alçalan: en yeni ilk)</string>
+<string name="menu_sort_by_last_unseen_date">En son görülmeyen bölüm tarihine göre sırala\n(alçalan: en yeni ilk)</string>
 <string name="menu_about">Seçenekler</string>
 <string name="menu_exit">Çıkış</string>
 <string name="menu_context_update">Güncelleştir</string>

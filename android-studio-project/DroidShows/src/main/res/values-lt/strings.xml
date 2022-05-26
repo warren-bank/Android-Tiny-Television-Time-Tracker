@@ -16,7 +16,7 @@
 <string name="menu_sort">Rikiuoti</string>
 <string name="menu_sort_by_name">Rikiuoti pagal pavadinimą\n(didėjimo tvarka: abėcėlinis nurodymas)</string>
 <string name="menu_sort_by_unseen_count">Rūšiuoti pagal suporuotas nepamatuotas epizodų\n(mažėjimo tvarka: labiausiai prieinama)</string>
-<string name="menu_sort_by_unseen_date">Rikiuoti pagal neseniai suporuoto neregėto epizodo datą\n(mažėjimo tvarka: naujausiame)</string>
+<string name="menu_sort_by_last_unseen_date">Rikiuoti pagal neseniai suporuoto neregėto epizodo datą\n(mažėjimo tvarka: naujausiame)</string>
 <string name="menu_about">Parinktys</string>
 <string name="menu_exit">Išvykimas</string>
 <string name="menu_context_update">Atnaujinti</string>

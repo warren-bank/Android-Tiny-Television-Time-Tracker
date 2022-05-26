@@ -16,7 +16,7 @@
 <string name="menu_sort">Сортирање приказује</string>
 <string name="menu_sort_by_name">Сортирај по имену\n(растући: абецедни редослед)</string>
 <string name="menu_sort_by_unseen_count">Сортирај по броју приказаних невидљивих епизода\n(спуштања: најдоступније прво)</string>
-<string name="menu_sort_by_unseen_date">Сортирај по датуму од недавно емитоване невидљиве епизоде\n(опадајуће: најновији први)</string>
+<string name="menu_sort_by_last_unseen_date">Сортирај по датуму од недавно емитоване невидљиве епизоде\n(опадајуће: најновији први)</string>
 <string name="menu_about">Опције</string>
 <string name="menu_exit">Изађи</string>
 <string name="menu_context_update">Ажурирање</string>

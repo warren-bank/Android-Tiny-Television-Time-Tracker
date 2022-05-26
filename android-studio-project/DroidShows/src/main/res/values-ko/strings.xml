@@ -16,7 +16,7 @@
 <string name="menu_sort">정렬 표시</string>
 <string name="menu_sort_by_name">이름순으로 정렬하기\n(오름차순: 영문자 순서)</string>
 <string name="menu_sort_by_unseen_count">표시되지 않은 방송 횟수별로 정렬하기\n(내림차순: 가장 많이 사용 가능한 첫 번째)</string>
-<string name="menu_sort_by_unseen_date">가장 최근에 방송되지 않은 에피소드의 날짜순으로 정렬합니다.\n(내림차순: 최신 첫 번째)</string>
+<string name="menu_sort_by_last_unseen_date">가장 최근에 방송되지 않은 에피소드의 날짜순으로 정렬합니다.\n(내림차순: 최신 첫 번째)</string>
 <string name="menu_about">옵션</string>
 <string name="menu_exit">종료</string>
 <string name="menu_context_update">업데이트</string>

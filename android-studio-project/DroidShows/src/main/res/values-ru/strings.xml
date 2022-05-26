@@ -16,7 +16,7 @@
 <string name="menu_sort">Сортировка</string>
 <string name="menu_sort_by_name">Сортировать по имени\n(по возрастанию: алфавитный порядок)</string>
 <string name="menu_sort_by_unseen_count">Сортировать по количеству невиданных эпизодов\n(по убыванию: большинство доступных первых)</string>
-<string name="menu_sort_by_unseen_date">Сортировать по дате последнего невиданного эпизода\n(по убыванию: самые новые)</string>
+<string name="menu_sort_by_last_unseen_date">Сортировать по дате последнего невиданного эпизода\n(по убыванию: самые новые)</string>
 <string name="menu_about">Настройки</string>
 <string name="menu_exit">Выход</string>
 <string name="menu_context_update">Обновить</string>

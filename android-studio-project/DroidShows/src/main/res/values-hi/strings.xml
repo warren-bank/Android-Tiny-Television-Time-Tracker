@@ -16,7 +16,7 @@
 <string name="menu_sort">सॉर्ट शो</string>
 <string name="menu_sort_by_name">नाम से छांटें\n(आरोही क्रम में)</string>
 <string name="menu_sort_by_unseen_count">देखे गए अदृश्य प्रसंगों की गणना के द्वारा क्रमबद्ध करें\n(अवरोही: सबसे पहले उपलब्ध)</string>
-<string name="menu_sort_by_unseen_date">हाल ही में प्रसारित किए गए अदृश्य प्रकरण की तिथि के अनुसार क्रमबद्ध करें\n(अवरोही: नवीनतम)</string>
+<string name="menu_sort_by_last_unseen_date">हाल ही में प्रसारित किए गए अदृश्य प्रकरण की तिथि के अनुसार क्रमबद्ध करें\n(अवरोही: नवीनतम)</string>
 <string name="menu_about">विकल्प</string>
 <string name="menu_exit">बाहर निकलें</string>
 <string name="menu_context_update">अद्यतन</string>
