@@ -153,6 +153,11 @@ public class ViewEpisode extends Activity
         TextView firstAiredV = (TextView) findViewById(R.id.firstAired);
         firstAiredV.setText(firstAired);
         firstAiredV.setVisibility(View.VISIBLE);
+
+        // only allow click events to trigger calendarEvent() when the episode will air at a future date
+        if ((epDate == null) || (epDate.compareTo(Calendar.getInstance().getTime()) <= 0)) {
+          firstAiredV.setEnabled(false);
+        }
       }
   
       if (!overview.equalsIgnoreCase("null") && !overview.equals("")) {
