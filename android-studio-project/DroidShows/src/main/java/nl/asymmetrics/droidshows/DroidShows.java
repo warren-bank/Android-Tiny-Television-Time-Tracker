@@ -221,6 +221,7 @@ public class DroidShows extends ListActivity
 
   // -----
 
+  private static Bitmap defaultIcon = null;
   public static Thread deleteTh = null;
   public static Thread updateShowTh = null;
   public static Thread updateAllShowsTh = null;
@@ -300,6 +301,8 @@ public class DroidShows extends ListActivity
     langCode               = sharedPrefs.getString(LANGUAGE_CODE_NAME, getString(R.string.lang_code));
 
     // -----
+
+    defaultIcon = PosterThumb.decodeSampledBitmapFromResource(this, R.drawable.noposter, PosterThumb.getIconWidthPx(this));
 
     updateDatabase();
 
@@ -2149,7 +2152,7 @@ public class DroidShows extends ListActivity
                 holder.icon.setImageBitmap(icon);
               }
               else {
-                holder.icon.setImageResource(R.drawable.noposter);
+                holder.icon.setImageBitmap(defaultIcon);
               }
             }
             holder.icon.setVisibility(View.VISIBLE);
@@ -2193,7 +2196,7 @@ public class DroidShows extends ListActivity
                 holder.icon.setImageBitmap(icon);
               }
               else {
-                holder.icon.setImageResource(R.drawable.noposter);
+                holder.icon.setImageBitmap(defaultIcon);
               }
             }
             holder.icon.setVisibility(View.VISIBLE);

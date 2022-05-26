@@ -19,7 +19,9 @@ import android.util.Log;
 public class PosterThumb {
 
   /*
-   * post-condition: sToAdd.getPosterThumb() returns a String containing the filepath to a 100x100 Bitmap image, or null (if creation of the Bitmap failed)
+   * post-condition: sToAdd.getPosterThumb() returns a String containing the filepath to a Bitmap image
+   *                 that is 100dp wide with a height that preserves its original aspect ratio,
+   *                 or null (if creation of the Bitmap failed)
    *
    * notes:
    *   * instances of TVShowItem are constructed in 2x places:
@@ -29,7 +31,9 @@ public class PosterThumb {
    *         * the constructor is passed only: (String) icon
    *         * getDIcon() return null
    *   * for all instances:
-   *       - getIcon() returns a String containing the filepath to a 100x100 Bitmap image, or null (if creation of the Bitmap failed)
+   *       - getIcon() returns a String containing the filepath to a Bitmap image,
+   *         that is 100dp wide with a height that preserves its original aspect ratio,
+   *         or null (if creation of the Bitmap failed)
    */
 
   public static void save(Context context, Serie sToAdd, String TAG) {
@@ -64,9 +68,7 @@ public class PosterThumb {
       return;
     }
 
-    // convert 100dp to pixels based on density of screen
-    int show_icon_px = (int) (context.getResources().getInteger(R.integer.show_icon_dp) * context.getResources().getDisplayMetrics().density);
-    Bitmap resizedBitmap = PosterThumb.decodeSampledBitmapFromFile(posterThumbPath, show_icon_px, show_icon_px);
+    Bitmap resizedBitmap = PosterThumb.decodeSampledBitmapFromFile(posterThumbPath, PosterThumb.getIconWidthPx(context));
     if (resizedBitmap == null) {
       Log.e(TAG, "Corrupt or unknown poster file type: "+ posterThumbPath);
       return;
@@ -91,7 +93,7 @@ public class PosterThumb {
 
   // ----- public, but only used privately -----
 
-  public static Bitmap decodeSampledBitmapFromFile(String pathName, int reqWidth, int reqHeight) {
+  public static Bitmap decodeSampledBitmapFromFile(String pathName, int reqWidth) {
     File file = new File(pathName);
     if (!file.exists()) return null;
 
@@ -103,54 +105,80 @@ public class PosterThumb {
     BitmapFactory.decodeFile(pathName, options);
 
     // Calculate inSampleSize
-    options.inSampleSize = PosterThumb.calculateInSampleSize(options, reqWidth, reqHeight);
+    options.inSampleSize = PosterThumb.calculateInSampleSize(options, reqWidth);
 
     // Decode bitmap with inSampleSize set
     options.inJustDecodeBounds = false;
     bm = BitmapFactory.decodeFile(pathName, options);
 
-    // Crop bitmap to desired dimensions
-    bm = PosterThumb.centerCropBitmap(bm, reqWidth, reqHeight);
+    // Resize bitmap to desired width while maintaining original aspect ratio
+    bm = PosterThumb.resizeBitmap(bm, options, reqWidth);
 
     return bm;
   }
 
-  public static int calculateInSampleSize(BitmapFactory.Options options, int reqWidth, int reqHeight) {
-    // Raw height and width of image
-    final int height = options.outHeight;
+  public static int calculateInSampleSize(BitmapFactory.Options options, int reqWidth) {
+    // width of original image
     final int width = options.outWidth;
+
     int inSampleSize = 1;
 
-    if ((height > reqHeight) || (width > reqWidth)) {
-      final int halfHeight = height / 2;
+    if (width > reqWidth) {
       final int halfWidth = width / 2;
 
-      // Calculate the largest inSampleSize value that is a power of 2 and keeps both
-      // height and width larger than the requested height and width.
-      while (((halfHeight / inSampleSize) > reqHeight) && ((halfWidth / inSampleSize) > reqWidth)) {
+      // Calculate the largest inSampleSize value that is a power of 2 and keeps width larger than the requested width.
+      while ((halfWidth / inSampleSize) > reqWidth) {
         inSampleSize *= 2;
       }
     }
     return inSampleSize;
   }
 
-  public static Bitmap centerCropBitmap(Bitmap source, int reqWidth, int reqHeight) {
-    int sourceWidth = source.getWidth();
-    int sourceHeight = source.getHeight();
+  public static Bitmap resizeBitmap(Bitmap source, BitmapFactory.Options options, int reqWidth) {
+    // width of subsampled image
+    int widthIcon = source.getWidth();
 
-    if (sourceWidth < reqWidth)
-      reqWidth = sourceWidth;
-
-    if (sourceHeight < reqHeight)
-      reqHeight = sourceHeight;
-
-    if ((sourceWidth == reqWidth) && (sourceHeight == reqHeight))
+    if (widthIcon <= reqWidth)
       return source;
 
-    int offset_x = (int) (sourceWidth  - reqWidth )/2;
-    int offset_y = (int) (sourceHeight - reqHeight)/2;
+    // dimensions of original image
+    final int   widthPoster  = options.outWidth;
+    final int   heightPoster = options.outHeight;
+    final float aspectRatio  = heightPoster / widthPoster;
 
-    return Bitmap.createBitmap(source, offset_x, offset_y, reqWidth, reqHeight);
+    // height of resized image
+    final int reqHeight = (int) (aspectRatio * reqWidth);
+
+    return Bitmap.createScaledBitmap(source, reqWidth, reqHeight, true);
+  }
+
+  // ----- public -----
+
+  public static int getIconWidthPx(Context context) {
+    // convert 100dp to pixels based on density of screen
+    int series_icon_width_px = (int) (context.getResources().getInteger(R.integer.series_icon_width_dp) * context.getResources().getDisplayMetrics().density);
+    return series_icon_width_px;
+  }
+
+  public static Bitmap decodeSampledBitmapFromResource(Context context, int resId, int reqWidth) {
+    Bitmap bm;
+
+    // First decode with inJustDecodeBounds=true to check dimensions
+    final BitmapFactory.Options options = new BitmapFactory.Options();
+    options.inJustDecodeBounds = true;
+    BitmapFactory.decodeResource(context.getResources(), resId, options);
+
+    // Calculate inSampleSize
+    options.inSampleSize = PosterThumb.calculateInSampleSize(options, reqWidth);
+
+    // Decode bitmap with inSampleSize set
+    options.inJustDecodeBounds = false;
+    bm = BitmapFactory.decodeResource(context.getResources(), resId, options);
+
+    // Resize bitmap to desired width while maintaining original aspect ratio
+    bm = PosterThumb.resizeBitmap(bm, options, reqWidth);
+
+    return bm;
   }
 
 }
