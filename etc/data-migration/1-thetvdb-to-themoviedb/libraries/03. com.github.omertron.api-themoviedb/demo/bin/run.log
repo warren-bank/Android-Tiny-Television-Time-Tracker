@@ -1,0 +1,610 @@
+> Task :app:compileJava
+> Task :app:processResources NO-SOURCE
+> Task :app:classes
+
+> Task :app:run
+----------------------------------------------------------------------
+TV series:
+{
+  "id" : 4614,
+  "media_type" : "TV",
+  "backdrop_path" : "/qmcoEOrTm6BcgR4iO7KBQKE9AKT.jpg",
+  "poster_path" : "/lSTchtc26YNdOjdKvZtLs22SokL.jpg",
+  "popularity" : 300.399,
+  "vote_average" : 7.6,
+  "vote_count" : 1781,
+  "name" : "NCIS",
+  "original_name" : "NCIS",
+  "first_air_date" : "2003-09-23",
+  "origin_country" : [ "US" ],
+  "rating" : -1.0,
+  "genre_ids" : null,
+  "original_language" : "en",
+  "overview" : "From murder and espionage to terrorism and stolen submarines, a team of special agents investigates any crime that has a shred of evidence connected to Navy and Marine Corps personnel, regardless of rank or position.",
+  "created_by" : [ {
+    "id" : 160145,
+    "name" : "Donald P. Bellisario",
+    "profile_path" : "/8xjZRZvWfn0aaZVHlYxRUtlqJIR.jpg"
+  }, {
+    "id" : 1218788,
+    "name" : "Don McGill",
+    "profile_path" : "/9QMLJDoA3hYlWdOhQyTVqimPok9.jpg"
+  } ],
+  "episode_run_time" : [ 45 ],
+  "genres" : [ {
+    "id" : 80,
+    "name" : "Crime"
+  }, {
+    "id" : 10759,
+    "name" : "Action & Adventure"
+  }, {
+    "id" : 18,
+    "name" : "Drama"
+  } ],
+  "homepage" : "http://www.cbs.com/shows/ncis/",
+  "in_production" : true,
+  "languages" : [ "en" ],
+  "last_air_date" : "2022-05-23",
+  "networks" : [ {
+    "id" : 16,
+    "name" : "CBS"
+  } ],
+  "number_of_episodes" : 435,
+  "number_of_seasons" : 19,
+  "production_companies" : [ {
+    "id" : 446,
+    "name" : "thinkfilm"
+  }, {
+    "id" : 9223,
+    "name" : "Paramount Television Studios"
+  }, {
+    "id" : 23341,
+    "name" : "Belisarius Productions"
+  } ],
+  "seasons" : [ {
+    "id" : 14081,
+    "air_date" : "2003-04-22",
+    "poster_path" : "/FlzeiA7DV0KQQ6FOExjTaHWBjs.jpg",
+    "season_number" : 0,
+    "episode_count" : 121
+  }, {
+    "id" : 14073,
+    "air_date" : "2003-09-23",
+    "poster_path" : "/8A5k8VsuisshScddYswcd630EXt.jpg",
+    "season_number" : 1,
+    "episode_count" : 23
+  }, {
+    "id" : 14076,
+    "air_date" : "2004-09-28",
+    "poster_path" : "/6gbca4bGoqOGFzlnjRheiXXMmM5.jpg",
+    "season_number" : 2,
+    "episode_count" : 23
+  }, {
+    "id" : 14077,
+    "air_date" : "2005-09-20",
+    "poster_path" : "/tS64hCnGsAl3dceUlVx5cDlOP2t.jpg",
+    "season_number" : 3,
+    "episode_count" : 24
+  }, {
+    "id" : 14075,
+    "air_date" : "2006-09-19",
+    "poster_path" : "/ermXCC1Nz1PrcG7dna7vcrXN4zY.jpg",
+    "season_number" : 4,
+    "episode_count" : 24
+  }, {
+    "id" : 14074,
+    "air_date" : "2007-09-25",
+    "poster_path" : "/nLinif1UCp6dMXBJKRixiCxyKLA.jpg",
+    "season_number" : 5,
+    "episode_count" : 19
+  }, {
+    "id" : 14072,
+    "air_date" : "2008-09-23",
+    "poster_path" : "/oxs7PozBPGSTw6YXi7KwgBSnEwp.jpg",
+    "season_number" : 6,
+    "episode_count" : 25
+  }, {
+    "id" : 14078,
+    "air_date" : "2009-09-22",
+    "poster_path" : "/fTflbVcM48B7rhiGDpwHwifeICH.jpg",
+    "season_number" : 7,
+    "episode_count" : 24
+  }, {
+    "id" : 14079,
+    "air_date" : "2010-09-21",
+    "poster_path" : "/mJHZYjWMo03AsIqgnQA1Z8Oa7FP.jpg",
+    "season_number" : 8,
+    "episode_count" : 24
+  }, {
+    "id" : 14080,
+    "air_date" : "2011-09-20",
+    "poster_path" : "/d2ud6bmKP4eWwaMnpYT1YR0miDO.jpg",
+    "season_number" : 9,
+    "episode_count" : 24
+  }, {
+    "id" : 14082,
+    "air_date" : "2012-09-25",
+    "poster_path" : "/3G9B4F7R6fkiSGeJvEzibpwwzk2.jpg",
+    "season_number" : 10,
+    "episode_count" : 24
+  }, {
+    "id" : 14083,
+    "air_date" : "2013-09-24",
+    "poster_path" : "/aGHnemk8i1amzACZRjCtHQjCmYR.jpg",
+    "season_number" : 11,
+    "episode_count" : 24
+  }, {
+    "id" : 62834,
+    "air_date" : "2014-09-23",
+    "poster_path" : "/gTMzMkGAbygR1Cy8IyO5OC6Cj2.jpg",
+    "season_number" : 12,
+    "episode_count" : 24
+  }, {
+    "id" : 70439,
+    "air_date" : "2015-09-22",
+    "poster_path" : "/VfG3LekB3PQpfjCt4qbX0H6Ake.jpg",
+    "season_number" : 13,
+    "episode_count" : 24
+  }, {
+    "id" : 79755,
+    "air_date" : "2016-09-20",
+    "poster_path" : "/q9TVqJSHfJPsEJGHtxHuBvOdKu9.jpg",
+    "season_number" : 14,
+    "episode_count" : 24
+  }, {
+    "id" : 91258,
+    "air_date" : "2017-09-26",
+    "poster_path" : "/qqncrGicxaM7opeliVZNiVo70xw.jpg",
+    "season_number" : 15,
+    "episode_count" : 24
+  }, {
+    "id" : 106151,
+    "air_date" : "2018-09-25",
+    "poster_path" : "/sQz8u7UpRE02SthffFgIywogoKS.jpg",
+    "season_number" : 16,
+    "episode_count" : 24
+  }, {
+    "id" : 126158,
+    "air_date" : "2019-09-24",
+    "poster_path" : "/gK2yIQjtMGYmlLjIbHQuSadzJ9n.jpg",
+    "season_number" : 17,
+    "episode_count" : 20
+  }, {
+    "id" : 167653,
+    "air_date" : "2020-11-17",
+    "poster_path" : "/gYeIW2bgvQEwTFdkxufkzximplS.jpg",
+    "season_number" : 18,
+    "episode_count" : 16
+  }, {
+    "id" : 201998,
+    "air_date" : "2021-09-20",
+    "poster_path" : "/lSTchtc26YNdOjdKvZtLs22SokL.jpg",
+    "season_number" : 19,
+    "episode_count" : 21
+  } ],
+  "status" : "Returning Series",
+  "type" : "Scripted",
+  "alternative_titles" : [ ],
+  "changes" : [ ],
+  "content_ratings" : [ {
+    "iso_3166_1" : "DE",
+    "rating" : "16"
+  }, {
+    "iso_3166_1" : "AU",
+    "rating" : "MA15+"
+  }, {
+    "iso_3166_1" : "US",
+    "rating" : "TV-14"
+  }, {
+    "iso_3166_1" : "FR",
+    "rating" : "12"
+  }, {
+    "iso_3166_1" : "GB",
+    "rating" : "15"
+  }, {
+    "iso_3166_1" : "BR",
+    "rating" : "14"
+  }, {
+    "iso_3166_1" : "HU",
+    "rating" : "12"
+  }, {
+    "iso_3166_1" : "ES",
+    "rating" : "16"
+  } ],
+  "credits" : {
+    "id" : 0,
+    "cast" : [ {
+      "credit_id" : "525776cd760ee36aaa5304fa",
+      "id" : 1230381,
+      "profile_path" : "/r1kuDqWZbPR35Y2Ab7wQi72fgVk.jpg",
+      "name" : "Sean Murray",
+      "cast_id" : 0,
+      "character" : "Timothy McGee",
+      "order" : 1
+    }, {
+      "credit_id" : "5846a53692514166ba020564",
+      "id" : 18975,
+      "profile_path" : "/ApA03vxxobrGauXmQ3LpGM5EKjD.jpg",
+      "name" : "Wilmer Valderrama",
+      "cast_id" : 0,
+      "character" : "Nick Torres",
+      "order" : 2
+    }, {
+      "credit_id" : "5b712e0d0e0a267ef418ea50",
+      "id" : 1470346,
+      "profile_path" : "/1X7UkPIA6hnGlOMAoq4gHxIChY2.jpg",
+      "name" : "Diona Reasonover",
+      "cast_id" : 0,
+      "character" : "Kasie Hines",
+      "order" : 5
+    }, {
+      "credit_id" : "525776cd760ee36aaa5304aa",
+      "id" : 24813,
+      "profile_path" : "/47no2X4533Ehk2VO3BvVqUBqMUd.jpg",
+      "name" : "David McCallum",
+      "cast_id" : 0,
+      "character" : "Donald \"Ducky\" Mallard",
+      "order" : 7
+    }, {
+      "credit_id" : "56822eea9251417ddd0130a6",
+      "id" : 27448,
+      "profile_path" : "/pqjqmRChGqhDXXY7Etka3bmOatN.jpg",
+      "name" : "Rocky Carroll",
+      "cast_id" : 0,
+      "character" : "Leon Vance",
+      "order" : 1725
+    }, {
+      "credit_id" : "525776cd760ee36aaa530594",
+      "id" : 1213580,
+      "profile_path" : "/e1hveayXLbgBi8Gu3zMs5tmxwpl.jpg",
+      "name" : "Brian Dietzen",
+      "cast_id" : 0,
+      "character" : "Jimmy Palmer",
+      "order" : 1725
+    }, {
+      "credit_id" : "6061feed0e64af003e1aeb6c",
+      "id" : 164930,
+      "profile_path" : "/y7LzCN8BaoPPSXDBo0UwPQ4UwSB.jpg",
+      "name" : "Katrina Law",
+      "cast_id" : 0,
+      "character" : "Jessica Knight",
+      "order" : 1736
+    } ],
+    "guest_stars" : [ ],
+    "crew" : [ {
+      "credit_id" : "564bff7e9251414dcb005838",
+      "id" : 160145,
+      "profile_path" : "/8xjZRZvWfn0aaZVHlYxRUtlqJIR.jpg",
+      "name" : "Donald P. Bellisario",
+      "department" : "Production",
+      "job" : "Executive Producer"
+    } ]
+  },
+  "external_ids" : {
+    "id" : 0,
+    "imdb_id" : "tt0364845",
+    "freebase_mid" : "/m/03m8sg",
+    "freebase_id" : "/en/ncis",
+    "tvdb_id" : "72108",
+    "tvrage_id" : "4628",
+    "facebook_id" : "NCIS",
+    "twitter_id" : "NCIS_CBS"
+  },
+  "images" : [ ],
+  "keywords" : [ ],
+  "translations" : [ ],
+  "similar" : [ ],
+  "videos" : [ ]
+}
+----------------------------------------------------------------------
+TV episode:
+{
+  "id" : 334430,
+  "media_type" : "EPISODE",
+  "backdrop_path" : null,
+  "poster_path" : null,
+  "popularity" : 0.0,
+  "vote_average" : 6.5,
+  "vote_count" : 19,
+  "air_date" : "2003-09-23",
+  "season_number" : 1,
+  "episode_number" : 1,
+  "name" : "Yankee White",
+  "overview" : "While on Air Force One, a Navy commanding officer dies.  Agents from the Navy NCIS decide to take the investigation into their own hands and also force a Secret Service Agent to help.  Now the NCIS team has to figure out if the Navy Officer's death was of natural causes or not.",
+  "still_path" : "/1nQMJ5o9X3gSTXLtF6azUtXMQ3U.jpg",
+  "show_id" : null,
+  "crew" : [ {
+    "credit_id" : "52577677760ee36aaa524f06",
+    "id" : 160145,
+    "profile_path" : "/8xjZRZvWfn0aaZVHlYxRUtlqJIR.jpg",
+    "name" : "Donald P. Bellisario",
+    "department" : "Directing",
+    "job" : "Director"
+  }, {
+    "credit_id" : "52577678760ee36aaa52522f",
+    "id" : 1218788,
+    "profile_path" : "/9QMLJDoA3hYlWdOhQyTVqimPok9.jpg",
+    "name" : "Don McGill",
+    "department" : "Writing",
+    "job" : "Writer"
+  }, {
+    "credit_id" : "52577677760ee36aaa524ec4",
+    "id" : 160145,
+    "profile_path" : "/8xjZRZvWfn0aaZVHlYxRUtlqJIR.jpg",
+    "name" : "Donald P. Bellisario",
+    "department" : "Writing",
+    "job" : "Writer"
+  }, {
+    "credit_id" : "52577665760ee36aaa5232af",
+    "id" : 1218791,
+    "profile_path" : null,
+    "name" : "Dennis Smith",
+    "department" : "Directing",
+    "job" : "Director"
+  }, {
+    "credit_id" : "59cbe8c1c3a3687761015cac",
+    "id" : 1176289,
+    "profile_path" : null,
+    "name" : "William Webb",
+    "department" : "Camera",
+    "job" : "Director of Photography"
+  }, {
+    "credit_id" : "61572f92156cc7004566fb43",
+    "id" : 1235200,
+    "profile_path" : null,
+    "name" : "David Bellisario",
+    "department" : "Production",
+    "job" : "Producer"
+  }, {
+    "credit_id" : "61572fdcec18790062c341ca",
+    "id" : 1237600,
+    "profile_path" : "/v3cXk3LoN0tY0Lz1NBPvkniwYui.jpg",
+    "name" : "Steven D. Binder",
+    "department" : "Production",
+    "job" : "Producer"
+  }, {
+    "credit_id" : "61572ff81c635b0063018eac",
+    "id" : 162156,
+    "profile_path" : null,
+    "name" : "Philip DeGuere Jr.",
+    "department" : "Production",
+    "job" : "Consulting Producer"
+  }, {
+    "credit_id" : "615730084d6791008b8033d5",
+    "id" : 3255268,
+    "profile_path" : null,
+    "name" : "Avery C. Drewe",
+    "department" : "Production",
+    "job" : "Producer"
+  }, {
+    "credit_id" : "6157301707e281002da95bf3",
+    "id" : 169466,
+    "profile_path" : null,
+    "name" : "Doris Egan",
+    "department" : "Production",
+    "job" : "Supervising Producer"
+  }, {
+    "credit_id" : "615730258e2ba600433f90cd",
+    "id" : 163105,
+    "profile_path" : "/vHDiMyIE42rCAshI8Oc4UdIMNqu.jpg",
+    "name" : "Mark Horowitz",
+    "department" : "Production",
+    "job" : "Co-Executive Producer"
+  }, {
+    "credit_id" : "615730314d6791002ce14aff",
+    "id" : 1219884,
+    "profile_path" : null,
+    "name" : "Chas. Floyd Johnson",
+    "department" : "Production",
+    "job" : "Co-Executive Producer"
+  }, {
+    "credit_id" : "6157304adcb6a30063b1b991",
+    "id" : 1218788,
+    "profile_path" : "/9QMLJDoA3hYlWdOhQyTVqimPok9.jpg",
+    "name" : "Don McGill",
+    "department" : "Production",
+    "job" : "Supervising Producer"
+  }, {
+    "credit_id" : "6157305c4d6791006278e340",
+    "id" : 2587354,
+    "profile_path" : null,
+    "name" : "Mark R. Schilz",
+    "department" : "Production",
+    "job" : "Producer"
+  }, {
+    "credit_id" : "61573068ec1879008c708097",
+    "id" : 1218781,
+    "profile_path" : null,
+    "name" : "Jeff Vlaming",
+    "department" : "Production",
+    "job" : "Producer"
+  }, {
+    "credit_id" : "61573073156cc7009401a4f1",
+    "id" : 1266581,
+    "profile_path" : null,
+    "name" : "Julie B. Watson",
+    "department" : "Production",
+    "job" : "Coordinating Producer"
+  }, {
+    "credit_id" : "6157309107e2810063285891",
+    "id" : 1462281,
+    "profile_path" : null,
+    "name" : "Steven Bramson",
+    "department" : "Sound",
+    "job" : "Music"
+  }, {
+    "credit_id" : "615730b06f8d95006693d68e",
+    "id" : 1397261,
+    "profile_path" : null,
+    "name" : "Stephen Michael",
+    "department" : "Editing",
+    "job" : "Editor"
+  }, {
+    "credit_id" : "564bff7e9251414dcb005838",
+    "id" : 160145,
+    "profile_path" : "/8xjZRZvWfn0aaZVHlYxRUtlqJIR.jpg",
+    "name" : "Donald P. Bellisario",
+    "department" : "Production",
+    "job" : "Executive Producer"
+  } ],
+  "guest_stars" : [ {
+    "credit_id" : "52577676760ee36aaa524d8e",
+    "id" : 68180,
+    "profile_path" : "/uXJG4skJTElTQ5BJ9pkJjzfKIDv.jpg",
+    "name" : "Gary Grubbs",
+    "cast_id" : 0,
+    "character" : "Elmo Poke",
+    "order" : 2
+  }, {
+    "credit_id" : "52577677760ee36aaa524dc8",
+    "id" : 21142,
+    "profile_path" : "/lUACgFTvuhRhAC3GwnpcWMGLxo4.jpg",
+    "name" : "Gregory Itzin",
+    "cast_id" : 0,
+    "character" : "Director Charlie",
+    "order" : 3
+  }, {
+    "credit_id" : "52577677760ee36aaa524e3c",
+    "id" : 19468,
+    "profile_path" : "/il1r1Iym5WFJyo8SQon60aqu4nC.jpg",
+    "name" : "Gerry Becker",
+    "cast_id" : 0,
+    "character" : "William Baer",
+    "order" : 5
+  }, {
+    "credit_id" : "58f0a4acc3a3686b5d00e7b1",
+    "id" : 159452,
+    "profile_path" : "/6vFIdfu6uL0vEkOC2vWTjstIHZj.jpg",
+    "name" : "Dane Northcutt",
+    "cast_id" : 0,
+    "character" : "Timothy Kerry",
+    "order" : 1016
+  }, {
+    "credit_id" : "58f0a51392514125b800f2e3",
+    "id" : 166684,
+    "profile_path" : "/8yCC7RJc02xoyff3s0Jd4J9KqAR.jpg",
+    "name" : "Gerald Downey",
+    "cast_id" : 0,
+    "character" : "Ray Trapp",
+    "order" : 1017
+  }, {
+    "credit_id" : "58f0a56192514125b800f343",
+    "id" : 65715,
+    "profile_path" : "/m5VFO9gpBoQx3CVxQzcwBIYYUUu.jpg",
+    "name" : "Robert Bagnell",
+    "cast_id" : 0,
+    "character" : "Leonard Rush",
+    "order" : 1018
+  }, {
+    "credit_id" : "58f0a582c3a3686b9f00f06b",
+    "id" : 144524,
+    "profile_path" : "/s5aB1r59AKspJhsGXUQJ9lsXCzl.jpg",
+    "name" : "Gerald McCullouch",
+    "cast_id" : 0,
+    "character" : "FBI Agent",
+    "order" : 1019
+  }, {
+    "credit_id" : "58f0a604c3a3686b4d00ec6c",
+    "id" : 1497322,
+    "profile_path" : "/aYMEJIL6XbpxSyFTFMqZhu2nmUz.jpg",
+    "name" : "Michael Adler",
+    "cast_id" : 0,
+    "character" : "Captain Burger",
+    "order" : 1021
+  }, {
+    "credit_id" : "58f0a61b92514125b800f3f1",
+    "id" : 1231894,
+    "profile_path" : "/foMJjrpTZP3TEMKDwtccqXSGnwG.jpg",
+    "name" : "Steve Bridges",
+    "cast_id" : 0,
+    "character" : "George W. Bush",
+    "order" : 1022
+  }, {
+    "credit_id" : "58f0a638c3a3686b6b00d630",
+    "id" : 1218790,
+    "profile_path" : "/78c54L9kkkzNg7hCKH7QSrD0arl.jpg",
+    "name" : "Michael Maize",
+    "cast_id" : 0,
+    "character" : "Security Guard",
+    "order" : 1023
+  }, {
+    "credit_id" : "58f0a658c3a3686b8e00ed71",
+    "id" : 181757,
+    "profile_path" : "/rvFP9svUnaexxDg9xWsGEEYcHm9.jpg",
+    "name" : "Richard Anthony Crenna",
+    "cast_id" : 0,
+    "character" : "Chief Steward",
+    "order" : 1024
+  }, {
+    "credit_id" : "58f0a67f92514125a900f552",
+    "id" : 1225903,
+    "profile_path" : "/aaK0u2Vc52JftN9nDc52O1BwbA1.jpg",
+    "name" : "Asante Jones",
+    "cast_id" : 0,
+    "character" : "Andy Kochofis",
+    "order" : 1025
+  }, {
+    "credit_id" : "58f0a6b4925141259800eb3b",
+    "id" : 1619475,
+    "profile_path" : "/abM5Wj0Ii85iOTRSjU1ORFbSbc2.jpg",
+    "name" : "Jeremy Overstreet",
+    "cast_id" : 0,
+    "character" : "Agent Bowman",
+    "order" : 1026
+  }, {
+    "credit_id" : "58f0a6d3925141259800eb51",
+    "id" : 1216009,
+    "profile_path" : "/oN3D3xoEMdYgW20BXhV6UcGEFsD.jpg",
+    "name" : "Darcas Macopson",
+    "cast_id" : 0,
+    "character" : "Carl Pritchard",
+    "order" : 1027
+  }, {
+    "credit_id" : "58f0a5a2c3a3686b6b00d5c6",
+    "id" : 62150,
+    "profile_path" : "/mvAaZccfae6mOAX7VYtNOdYzIMe.jpg",
+    "name" : "Pancho Demmings",
+    "cast_id" : 0,
+    "character" : "Gerald Jackson",
+    "order" : 1519
+  }, {
+    "credit_id" : "52577676760ee36aaa524d4e",
+    "id" : 52760,
+    "profile_path" : "/3BcpSoKBOwHX0wxaPZpOJ5buO89.jpg",
+    "name" : "Alan Dale",
+    "cast_id" : 0,
+    "character" : "Tom Morrow",
+    "order" : 1755
+  }, {
+    "credit_id" : "52577665760ee36aaa523435",
+    "id" : 8192,
+    "profile_path" : "/rHiJspLrlb4uDmWfchwd8Fv13k7.jpg",
+    "name" : "Joe Spano",
+    "cast_id" : 0,
+    "character" : "Tobias Fornell",
+    "order" : 1756
+  } ],
+  "production_code" : "101",
+  "credits" : {
+    "id" : 0,
+    "cast" : [ ],
+    "guest_stars" : [ ],
+    "crew" : [ ]
+  },
+  "external_ids" : {
+    "id" : 0,
+    "imdb_id" : "tt0658039",
+    "freebase_mid" : "/m/0286v3l",
+    "freebase_id" : null,
+    "tvdb_id" : "74098",
+    "tvrage_id" : "123486",
+    "facebook_id" : null,
+    "twitter_id" : null
+  },
+  "images" : [ ],
+  "videos" : [ ]
+}
+----------------------------------------------------------------------
+
+BUILD SUCCESSFUL in 3s
+2 actionable tasks: 2 executed

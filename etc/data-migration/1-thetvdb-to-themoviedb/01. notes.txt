@@ -1,0 +1,233 @@
+--------------------------------------------------------------------------------
+
+SQLite DB Schema:
+=================
+
+* series.id (primary)
+  - is thetvdb series ID
+  - is different from series.serieId
+  - is used as a foreign key in several tables,
+    despite the fact that these fields are all named 'serieId'
+* series.serieId
+  - can be null, and often is
+
+----------------------------------------
+
+fields that are either not supported by TMDB or simply unused, and should be removed:
+
+  - TABLE:  series
+    FIELDS: serieId, banner, zap2ItId, airsDayOfWeek, airsTime, fanart, posterInCache
+    NOTES:  posterInCache:
+            - is a string that functions as a boolean
+            - is redundant
+              * posterThumb holds the path to a file
+              * posterInCache indicates whether or not posterThumb contains a value
+              * it would be just as easy to query posterThumb directly and test whether or not its value is empty
+    NOTES:  airsDayOfWeek, airsTime
+            - it's sad to remove these 2x fields
+            - TMDB simply doesn't provide this information
+
+  - TABLE:  episodes
+    FIELDS: combinedEpisodeNumber, combinedSeason, dvdChapter, dvdDiscId, dvdEpisodeNumber, dvdSeason, epImgFlag, language, productionCode, absoluteNumber, filename, seasonId
+
+----------------------------------------
+
+strategy:
+=========
+
+* rather than trying to keep all existing data, and update "id" values across all records..
+  I think it would make more sense to:
+  - cherry pick the important data:
+    * series.id             // (VARCHAR) thetvdb series "id"
+    * series.passiveStatus  // (INTEGER) is archived? (0 or 1)
+    * series.extResources   // (VARCHAR) user-supplied URLs
+    * episodes.seen         // (INTEGER) unix timestamp, or 0
+    * // list of thetvdb series "id" that the user has chosen to "pin".
+      // before migration, this data is stored in SharedPreferences.
+      // after migration, this data will be stored in the DB.
+      SharedPreferences sharedPrefs = getSharedPreferences("DroidShowsPref", 0);
+      String pinnedShowsStr         = sharedPrefs.getString("pinned_shows", "")
+      List<String> pinnedShows      = new ArrayList<String>(Arrays.asList(pinnedShowsStr.replace("[", "").replace("]", "").split(", ")));
+  - store this data in new/temporary tables
+      DROP TABLE IF EXISTS tmdb_migration_series;
+      DROP TABLE IF EXISTS tmdb_migration_episodes;
+      CREATE TABLE IF NOT EXISTS tmdb_migration_series (
+        thetvdbid     VARCHAR NOT NULL PRIMARY KEY,
+        tmdbid        VARCHAR,  // result of API query
+        archived      INTEGER,  // passiveStatus
+        pinned        INTEGER,  // occurs in "pinned_shows"
+        extResources  VARCHAR
+      );
+      CREATE TABLE IF NOT EXISTS tmdb_migration_episodes (
+        thetvdbid     VARCHAR NOT NULL,
+        seasonNumber  INTEGER NOT NULL,
+        episodeNumber INTEGER NOT NULL,
+        seen          INTEGER,
+        PRIMARY KEY (thetvdbid, seasonNumber, episodeNumber)
+      );
+  - delete all existing tables
+  - delete all existing data
+    * thumbnail/icon image files
+  - recreate new tables with a smaller schema,
+    which is a subset of the old schema
+  - re-add each series one at a time
+    1) query the (tmdb) "id" of each series by its (thetvdb) "external_id"
+    2) add the series per usual
+  - merge the data in the temporary migration tables into the new schema
+  - delete the temporary migration tables
+
+----------------------------------------
+
+off-topic, but regarding deleting the thumbnail/icon image files:
+
+    // https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L253
+    File dir = new File(getApplicationContext().getFilesDir().getAbsolutePath() + "/thumbs");
+
+    // https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/org/apache/commons/io/FileUtils.java
+    //   add another helper method..
+
+    // https://commons.apache.org/proper/commons-io/javadocs/api-2.5/src-html/org/apache/commons/io/FileUtils.html#L1569
+    //   public static void deleteDirectory(final File directory) throws IOException {...}
+    //     note: I don't like this implementation..
+
+    // https://android.googlesource.com/platform/frameworks/base/+/android-5.0.0_r6/core/java/android/os/FileUtils.java#389
+    public static boolean deleteContents(File dir) {
+        File[] files = dir.listFiles();
+        boolean success = true;
+        if (files != null) {
+            for (File file : files) {
+                if (file.isDirectory()) {
+                    success &= deleteContents(file);
+                }
+                if (!file.delete()) {
+                    success = false;
+                }
+            }
+        }
+        return success;
+    }
+
+    if (!FileUtils.deleteContents(dir)) {
+      Log.w(TAG, "Failed to delete directory: " + dir);
+    }
+
+--------------------------------------------------------------------------------
+
+new/smaller DB Schema:
+======================
+
+CREATE TABLE IF NOT EXISTS droidseries (version VARCHAR);
+
+INSERT INTO droidseries (version) VALUES ('0.1.5-7G6');
+
+CREATE TABLE IF NOT EXISTS series (
+    id                   VARCHAR NOT NULL PRIMARY KEY,
+    serieName            VARCHAR,
+    overview             TEXT,
+
+    seasonCount          INTEGER,
+    status               VARCHAR,
+    firstAired           VARCHAR,
+    imdbId               VARCHAR,
+    rating               VARCHAR,
+    network              VARCHAR,
+    runtime              VARCHAR,
+    contentRating        VARCHAR,
+    language             VARCHAR,
+    poster               VARCHAR,  /* URL for image */
+
+    posterThumb          VARCHAR,  /* local filepath for poster image that has been downloaded and resized to an "icon" image */
+
+    archived             INTEGER NOT NULL DEFAULT 0,  /* passiveStatus */
+    pinned               INTEGER NOT NULL DEFAULT 0,
+    extResources         VARCHAR NOT NULL DEFAULT '',
+
+    unwatched            INTEGER,
+    unwatchedAired       INTEGER,
+    nextAir              VARCHAR,
+    nextEpisode          VARCHAR,
+    unwatchedLastAired   VARCHAR,
+    unwatchedLastEpisode VARCHAR,
+
+    lastUpdated          VARCHAR
+);
+
+CREATE TABLE IF NOT EXISTS episodes (
+    id                   VARCHAR NOT NULL,
+    serieId              VARCHAR NOT NULL,
+    seasonNumber         INTEGER NOT NULL,
+    episodeNumber        INTEGER NOT NULL,
+    episodeName          VARCHAR,
+    overview             TEXT,
+    firstAired           VARCHAR,
+    imdbId               VARCHAR,
+    rating               VARCHAR,
+    seen                 INTEGER NOT NULL DEFAULT 0,
+
+    PRIMARY KEY (serieId, id),
+    FOREIGN KEY (serieId) REFERENCES series (id)
+);
+
+CREATE INDEX idx_episodes_serieid_seasonnumber ON episodes (serieId, seasonNumber);
+
+CREATE TABLE IF NOT EXISTS serie_seasons (
+    serieId VARCHAR NOT NULL,
+    season  VARCHAR NOT NULL,
+
+    FOREIGN KEY (serieId) REFERENCES series (id)
+);
+
+CREATE INDEX idx_serie_seasons_serieid ON serie_seasons (serieId);
+
+CREATE TABLE IF NOT EXISTS genres (
+    serieId VARCHAR NOT NULL,
+    genre   VARCHAR NOT NULL,
+
+    FOREIGN KEY (serieId) REFERENCES series (id)
+);
+
+CREATE INDEX idx_genres_serieid ON genres (serieId);
+
+CREATE TABLE IF NOT EXISTS actors (
+    serieId VARCHAR NOT NULL,
+    actor   VARCHAR NOT NULL,
+
+    FOREIGN KEY (serieId) REFERENCES series (id)
+);
+
+CREATE INDEX idx_actors_serieid ON actors (serieId);
+
+CREATE TABLE IF NOT EXISTS writers (
+    serieId   VARCHAR NOT NULL,
+    episodeId VARCHAR NOT NULL,
+    writer    VARCHAR NOT NULL,
+
+    FOREIGN KEY (serieId)   REFERENCES series   (id),
+    FOREIGN KEY (episodeId) REFERENCES episodes (id)
+);
+
+CREATE INDEX idx_writers_serieid_episodeid ON writers (serieId, episodeId);
+
+CREATE TABLE IF NOT EXISTS directors (
+    serieId   VARCHAR NOT NULL,
+    episodeId VARCHAR NOT NULL,
+    director  VARCHAR NOT NULL,
+
+    FOREIGN KEY (serieId)   REFERENCES series   (id),
+    FOREIGN KEY (episodeId) REFERENCES episodes (id)
+);
+
+CREATE INDEX idx_directors_serieid_episodeid ON directors (serieId, episodeId);
+
+CREATE TABLE IF NOT EXISTS guestStars (
+    serieId   VARCHAR NOT NULL,
+    episodeId VARCHAR NOT NULL,
+    guestStar VARCHAR NOT NULL,
+
+    FOREIGN KEY (serieId)   REFERENCES series   (id),
+    FOREIGN KEY (episodeId) REFERENCES episodes (id)
+);
+
+CREATE INDEX idx_gueststars_serieid_episodeid ON guestStars (serieId, episodeId);
+
+--------------------------------------------------------------------------------

@@ -1,0 +1,289 @@
+--------------------------------------------------------------------------------
+
+context:
+========
+
+https://github.com/red-coracle/episodes/issues/43
+https://github.com/red-coracle/episodes/commits/tmdb
+https://github.com/red-coracle/episodes/commit/9e015cfab0f0b5dfb760eb4f36b19aa401d37d79
+  This is another app.
+  This commit implements its migration from 'thetvdb' to 'themoviedb'.
+  For purposes of testing, their TMDB api_key is: '1553d2e4fa2912fc0953305d4d3e7c44'
+
+--------------------------------------------------------------------------------
+
+example requests:
+=================
+
+https://developers.themoviedb.org/3/find/find-by-id
+  get data for series by external ID
+
+https://api.themoviedb.org/3/find/72108?api_key=1553d2e4fa2912fc0953305d4d3e7c44&language=en-US&external_source=tvdb_id
+  where:
+    api_key         = 1553d2e4fa2912fc0953305d4d3e7c44
+    external_source = tvdb_id
+    external_id     = 72108
+
+----------------------------------------
+
+https://developers.themoviedb.org/3/search/search-tv-shows
+  search for series by name
+
+https://api.themoviedb.org/3/search/tv?api_key=1553d2e4fa2912fc0953305d4d3e7c44&language=en-US&page=1&include_adult=false&query=NCIS
+  where:
+    api_key = 1553d2e4fa2912fc0953305d4d3e7c44
+    query   = NCIS
+
+----------------------------------------
+
+https://developers.themoviedb.org/3/tv/get-tv-details
+  get data for series by internal ID
+
+https://api.themoviedb.org/3/tv/4614?api_key=1553d2e4fa2912fc0953305d4d3e7c44&language=en-US
+https://api.themoviedb.org/3/tv/4614?api_key=1553d2e4fa2912fc0953305d4d3e7c44&language=en-US&append_to_response=external_ids
+https://api.themoviedb.org/3/tv/4614?api_key=1553d2e4fa2912fc0953305d4d3e7c44&language=en-US&append_to_response=credits
+https://api.themoviedb.org/3/tv/4614?api_key=1553d2e4fa2912fc0953305d4d3e7c44&language=en-US&append_to_response=content_ratings
+https://api.themoviedb.org/3/tv/4614?api_key=1553d2e4fa2912fc0953305d4d3e7c44&language=en-US&append_to_response=external_ids,credits,content_ratings
+  where:
+    api_key = 1553d2e4fa2912fc0953305d4d3e7c44
+    tv_id   = 4614
+
+---------------------------------------- subset of results:
+
+https://developers.themoviedb.org/3/tv/get-tv-external-ids
+  get external IDs for series by internal ID
+
+https://api.themoviedb.org/3/tv/4614/external_ids?api_key=1553d2e4fa2912fc0953305d4d3e7c44
+  where:
+    api_key = 1553d2e4fa2912fc0953305d4d3e7c44
+    tv_id   = 4614
+
+---------------------------------------- subset of results:
+
+https://developers.themoviedb.org/3/tv/get-tv-credits
+  get actor credits for series by internal ID
+
+https://api.themoviedb.org/3/tv/4614/credits?api_key=1553d2e4fa2912fc0953305d4d3e7c44
+  where:
+    api_key = 1553d2e4fa2912fc0953305d4d3e7c44
+    tv_id   = 4614
+
+---------------------------------------- subset of results:
+
+https://developers.themoviedb.org/3/tv/get-tv-content-ratings
+  get content ratings for series by internal ID
+
+https://api.themoviedb.org/3/tv/4614/content_ratings?api_key=1553d2e4fa2912fc0953305d4d3e7c44
+  where:
+    api_key = 1553d2e4fa2912fc0953305d4d3e7c44
+    tv_id   = 4614
+
+----------------------------------------
+
+https://developers.themoviedb.org/3/tv-seasons/get-tv-season-details
+  get data for episodes in one season of series by internal ID
+
+https://api.themoviedb.org/3/tv/4614/season/1?api_key=1553d2e4fa2912fc0953305d4d3e7c44&language=en-US
+  where:
+    api_key       = 1553d2e4fa2912fc0953305d4d3e7c44
+    tv_id         = 4614
+    season_number = 1
+
+----------------------------------------
+
+https://developers.themoviedb.org/3/tv-seasons/get-tv-season-external-ids
+  notes:
+    the external ids associated with one season DON'T:
+      * support IMDb
+      * extend into the individual episodes
+
+https://api.themoviedb.org/3/tv/4614/season/1?api_key=1553d2e4fa2912fc0953305d4d3e7c44&language=en-US&append_to_response=external_ids
+https://api.themoviedb.org/3/tv/4614/season/1/external_ids?api_key=1553d2e4fa2912fc0953305d4d3e7c44
+
+----------------------------------------
+
+https://developers.themoviedb.org/3/tv-episodes/get-tv-episode-details
+  get data for one episode of series by internal ID
+
+https://api.themoviedb.org/3/tv/4614/season/1/episode/1?api_key=1553d2e4fa2912fc0953305d4d3e7c44&language=en-US
+https://api.themoviedb.org/3/tv/4614/season/1/episode/1?api_key=1553d2e4fa2912fc0953305d4d3e7c44&language=en-US&append_to_response=external_ids
+  where:
+    api_key        = 1553d2e4fa2912fc0953305d4d3e7c44
+    tv_id          = 4614
+    season_number  = 1
+    episode_number = 1
+
+----------------------------------------
+
+https://developers.themoviedb.org/3/getting-started/images
+
+https://developers.themoviedb.org/3/configuration/get-api-configuration
+  get configuration data
+
+https://api.themoviedb.org/3/configuration?api_key=1553d2e4fa2912fc0953305d4d3e7c44
+  where:
+    api_key = 1553d2e4fa2912fc0953305d4d3e7c44
+
+--------------------------------------------------------------------------------
+
+notes:
+======
+
+* get data for series by external ID
+  - produces:
+    * the (internal) series ID for one unique (external) series ID
+  - supports:
+    * thetvdb
+      - which will make DB migration possible
+    * IMDb
+
+* search for series by name
+  - produces:
+    * the series ID for all possible matches
+
+* get data for series by internal ID
+  - produces:
+    * genres
+      -> genres.genre
+    * seasons
+      -> serie_seasons.season
+    * id
+      -> series.serieId
+    * languages
+      -> series.language
+    * name
+      -> series.serieName
+    * overview
+      -> series.overview
+    * first_air_date
+      -> series.firstAired
+    * networks
+      -> series.network
+    * vote_average
+      -> series.rating
+    * episode_run_time
+      -> series.runtime
+    * status
+      -> series.status
+    * poster_path
+      -> series.poster
+    * next_episode_to_air
+      -> series.nextEpisode
+      -> series.nextAir
+
+* get data for series by internal ID - with external IDs
+  - produces:
+    * external_ids.imdb_id
+      -> series.imdbId
+
+* get data for series by internal ID - with actor credits
+  - produces:
+    * credits.cast
+      -> actors.actor
+
+* get data for series by internal ID - with content ratings
+  - produces:
+    * content_ratings.results.rating
+      -> series.contentRating
+
+* get data for episodes in one season of series by internal ID
+  - produces:
+    * episodes.crew
+      -> directors.director
+      -> writers.writer
+    * episodes.guest_stars
+      -> guestStars.guestStar
+    * episodes.id
+      -> episodes.id
+    * episodes.season_number
+      -> episodes.seasonNumber
+      -> episodes.combinedSeason
+      -> episodes.dvdSeason
+    * episodes.episode_number
+      -> episodes.episodeNumber
+      -> episodes.combinedEpisodeNumber
+      -> episodes.dvdEpisodeNumber
+    * episodes.name
+      -> episodes.episodeName
+    * episodes.air_date
+      -> episodes.firstAired
+    * episodes.overview
+      -> episodes.overview
+    * episodes.production_code
+      -> episodes.productionCode
+    * episodes.vote_average
+      -> episodes.rating
+    * episodes.still_path
+      -> episodes.filename
+
+* get data for one episode of series by internal ID
+  - produces:
+    * [the exact same fields as results for an entire season, but for only 1x episode]
+
+* get data for one episode of series by internal ID - with external IDs
+  - produces:
+    * external_ids.imdb_id
+      -> episodes.imdbId
+
+* get configuration data
+  - produces:
+    * images.base_url
+    * images.backdrop_sizes
+    * images.poster_sizes
+  - where:
+    * format of URL request for a backdrop image is:
+        "${base_url}/${backdrop_size}/${backdrop_path}"
+    * format of URL request for a poster image is:
+        "${base_url}/${poster_size}/${poster_path}"
+  - example:
+    * backdrop:
+      - original:
+        * url  = http://image.tmdb.org/t/p/original/qmcoEOrTm6BcgR4iO7KBQKE9AKT.jpg
+        * size = 3840 x 2160 px
+    * poster:
+      - original:
+        * url  = http://image.tmdb.org/t/p/original/lSTchtc26YNdOjdKvZtLs22SokL.jpg
+        * size = 2000 x 3000 px
+      - w154
+        * url  = http://image.tmdb.org/t/p/w154/lSTchtc26YNdOjdKvZtLs22SokL.jpg
+        * size = 154 x 231 px
+
+--------------------------------------------------------------------------------
+
+SQLite DB Schema:
+=================
+
+----------------------------------------
+
+Tables w/ fields that are all fully supported by TMDB API:
+
+* TABLE: writers
+* TABLE: directors
+* TABLE: actors
+* TABLE: guestStars
+* TABLE: genres
+* TABLE: serie_seasons
+
+----------------------------------------
+
+Tables w/ fields that are NOT supported by TMDB API:
+
+* TABLE: series
+  FIELDS:
+    - banner
+    - zap2ItId
+    - airsDayOfWeek
+    - airsTime
+    - fanart
+
+* TABLE: episodes
+  FIELDS:
+    - dvdChapter
+    - dvdDiscId
+    - epImgFlag
+    - language
+      * redundant: series.language
+    - absoluteNumber
+    - seasonId
+
+--------------------------------------------------------------------------------

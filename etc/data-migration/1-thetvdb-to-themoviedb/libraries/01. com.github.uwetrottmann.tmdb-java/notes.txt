@@ -1,0 +1,70 @@
+--------------------------------------------------------------------------------
+
+https://github.com/UweTrottmann/tmdb-java
+
+--------------------------------------------------------------------------------
+
+https://github.com/UweTrottmann/tmdb-java/blob/v2.7.0/src/main/java/com/uwetrottmann/tmdb2/services/TvService.java
+https://github.com/UweTrottmann/tmdb-java/blob/v2.7.0/src/main/java/com/uwetrottmann/tmdb2/services/TvSeasonsService.java
+https://github.com/UweTrottmann/tmdb-java/blob/v2.7.0/src/main/java/com/uwetrottmann/tmdb2/services/TvEpisodesService.java
+
+--------------------------------------------------------------------------------
+
+https://github.com/UweTrottmann/tmdb-java/blob/v2.7.0/src/test/java/com/uwetrottmann/tmdb2/services/TvServiceTest.java
+https://github.com/UweTrottmann/tmdb-java/blob/v2.7.0/src/test/java/com/uwetrottmann/tmdb2/services/TvSeasonsServiceTest.java
+https://github.com/UweTrottmann/tmdb-java/blob/v2.7.0/src/test/java/com/uwetrottmann/tmdb2/services/TvEpisodesServiceTest.java
+
+--------------------------------------------------------------------------------
+
+https://github.com/UweTrottmann/tmdb-java/tree/v2.7.0/src/main/java/com/uwetrottmann/tmdb2/entities
+
+https://github.com/UweTrottmann/tmdb-java/blob/v2.7.0/src/main/java/com/uwetrottmann/tmdb2/entities/BaseTvShow.java
+https://github.com/UweTrottmann/tmdb-java/blob/v2.7.0/src/main/java/com/uwetrottmann/tmdb2/entities/TvShow.java
+https://github.com/UweTrottmann/tmdb-java/blob/v2.7.0/src/main/java/com/uwetrottmann/tmdb2/entities/TvExternalIds.java
+
+https://github.com/UweTrottmann/tmdb-java/blob/v2.7.0/src/main/java/com/uwetrottmann/tmdb2/entities/BaseTvSeason.java
+https://github.com/UweTrottmann/tmdb-java/blob/v2.7.0/src/main/java/com/uwetrottmann/tmdb2/entities/TvSeason.java
+https://github.com/UweTrottmann/tmdb-java/blob/v2.7.0/src/main/java/com/uwetrottmann/tmdb2/entities/TvSeasonExternalIds.java
+
+https://github.com/UweTrottmann/tmdb-java/blob/v2.7.0/src/main/java/com/uwetrottmann/tmdb2/entities/BaseTvEpisode.java
+https://github.com/UweTrottmann/tmdb-java/blob/v2.7.0/src/main/java/com/uwetrottmann/tmdb2/entities/BaseTvEpisodeRatingObject.java
+https://github.com/UweTrottmann/tmdb-java/blob/v2.7.0/src/main/java/com/uwetrottmann/tmdb2/entities/TvEpisode.java
+https://github.com/UweTrottmann/tmdb-java/blob/v2.7.0/src/main/java/com/uwetrottmann/tmdb2/entities/TvEpisodeExternalIds.java
+
+--------------------------------------------------------------------------------
+
+initial observations:
+=====================
+
+* appears to be a very refined library
+* uses retrofit..
+  - my concerns are: size of library, support for our (intentionally low) minsdk
+
+https://github.com/UweTrottmann/tmdb-java/blob/v2.7.0/pom.xml#L49
+  retrofit2 2.9.0
+https://github.com/UweTrottmann/tmdb-java/blob/v2.7.0/pom.xml#L78
+  okhttp3 3.14.9
+
+----------------------------------------
+
+https://square.github.io/retrofit/#download
+  Retrofit requires at minimum Java 8+ or Android API 21+.
+
+https://github.com/square/retrofit/issues/403
+  older versions (of course) support lower minsdk
+
+https://stackoverflow.com/questions/57534167/retrofit-2-on-sdk-21
+  retrofit depends on OkHttp3, which raises the minsdk to 21
+  a workaround is to:
+  - use the current version of retrofit
+  - use an older version of OkHttp3
+  - use minsdk 9
+  how:
+    implementation("com.squareup.retrofit2:retrofit:2.9.0") {
+      exclude group: "com.squareup.okhttp3"
+    }
+    implementation "com.squareup.okhttp3:okhttp:3.12.13"
+  what you lose is:
+  - TLS 1.2
+
+--------------------------------------------------------------------------------

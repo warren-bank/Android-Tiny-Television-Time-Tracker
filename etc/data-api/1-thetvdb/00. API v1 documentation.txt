@@ -1,0 +1,33 @@
+https://web.archive.org/web/20130411183258/https://api.thetvdb.com/
+
+http://sourceforge.net/projects/tvdb/
+  has PHP scripts, but no documentation
+
+https://api.thetvdb.com/wiki/index.php?title=Programmers_API
+  offline, and not archived
+
+https://pkg.go.dev/github.com/garfunkel/go-tvdb
+  unofficial, but concise:
+
+    const (
+      // APIKey is the TheTVDB API key.
+      APIKey = "DECE3B6B5464C552"
+
+      // GetSeriesURL is used to get basic series information by name.
+      GetSeriesURL = "http://thetvdb.com/api/GetSeries.php?seriesname=%v"
+
+      // GetSeriesByIDURL is used to get basic series information by ID.
+      GetSeriesByIDURL = "http://thetvdb.com/api/%v/series/%v/en.xml"
+
+      // GetSeriesByIMDBIDURL is used to get basic series information by IMDb ID.
+      GetSeriesByIMDBIDURL = "http://thetvdb.com/api/GetSeriesByRemoteID.php?imdbid=%v"
+
+      // GetDetailURL is used to get detailed series/episode information by ID.
+      GetDetailURL = "http://thetvdb.com/api/%v/series/%v/all/en.xml"
+
+      // SearchSeriesURL is used for series web searches.
+      SearchSeriesURL = "http://thetvdb.com/?string=%v&searchseriesid=&tab=listseries&function=Search"
+
+      // SearchSeriesRegexPattern is used for series web search matching.
+      SearchSeriesRegexPattern = `(?P<before><a href="/\?tab=series&amp;id=)(?P<seriesId>\d+)(?P<after>\&amp;lid=\d*">)`
+    )

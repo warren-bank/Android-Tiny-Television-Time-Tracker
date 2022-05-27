@@ -1,0 +1,421 @@
+--------------------------------------------------------------------------------
+
+inspection of pre-existing usage in DroidShows app:
+===================================================
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1247
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1399
+  theTVDB = new TheTVDB("8AC675886350B3C3", useMirror);
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L153
+  theTVDB = new TheTVDB("8AC675886350B3C3", DroidShows.useMirror);
+
+----------------------------------------
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/thetvdb/TheTVDB.java#L15-L16
+  private static final String main   = "https://thetvdb.com";
+  private static final String mirror = "https://thetvdb.plexapp.com";
+
+----------------------------------------
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/thetvdb/TheTVDB.java#L24
+  xmlMirror = (useMirror ? mirror : main) +"/api/";
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/thetvdb/TheTVDB.java#L29
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/thetvdb/TheTVDB.java#L34
+  public List<Serie> searchSeries(String title, String language) {
+    String urlToXML = xmlMirror + "GetSeries.php?seriesname=" + URLEncoder.encode(title, "UTF-8") + (language!=null?"&language="+language:"");
+  }
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/thetvdb/TheTVDB.java#L57
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/thetvdb/TheTVDB.java#L62
+  public Serie getSerie(String id, String language) {
+    String urlToXML = xmlMirror + apiKey + "/series/" + id + "/all/" + (language!=null?language+".xml":"");
+  }
+
+----------------------------------------
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/thetvdb/TheTVDB.java#L25
+  bannerMirror = (useMirror ? mirror : main) +"/banners/";
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/thetvdb/TheTVDB.java#L119
+  series.setBanner(bannerMirror + tmpBanner);
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/thetvdb/TheTVDB.java#L166
+  series.setFanart(bannerMirror + tmpBanner);
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/thetvdb/TheTVDB.java#L174
+  series.setPoster(bannerMirror + tmpPoster);
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/thetvdb/TheTVDB.java#L262
+  episode.setFilename(bannerMirror + tmpFilename);
+
+--------------------------------------------------------------------------------
+
+example requests:
+=================
+
+https://thetvdb.com/api/GetSeries.php?seriesname=NCIS&language=en
+  search for series by name
+  where:
+    query = NCIS
+
+https://thetvdb.com/api/8AC675886350B3C3/series/72108/all/en.xml
+  get data for series by ID
+  where:
+    API Key   = 8AC675886350B3C3
+    series ID = 72108
+
+--------------------------------------------------------------------------------
+
+notes:
+======
+
+* search for series by name
+  - produces:
+    * the series ID for all possible matches
+
+* get data for series by ID
+  - produces:
+    * 1 <Series> node
+      - detailed information about the series
+      - regarding the image used by the app in lists:
+        * <poster>posters/72108-5.jpg</poster>
+        * https://thetvdb.com/banners/posters/72108-5.jpg
+        * size: 680 x 1000 px
+    * N <Episode> nodes
+      - detailed information about every episode in the series
+
+* regarding:
+  - model data:
+      series.setBanner(url)
+      series.setFanart(url)
+      series.setPoster(url)
+      episode.setFilename(url)
+  - origin of data:
+      <Series>
+        <banner>graphical/72108-g12.jpg</banner>
+        <fanart>fanart/original/72108-4.jpg</fanart>
+        <poster>posters/72108-5.jpg</poster>
+      </Series>
+      <Episode>
+        <filename>episodes/72108/74097.jpg</filename>
+        <thumb_height>360</thumb_height>
+        <thumb_width>640</thumb_width>
+      </Episode>
+  - the DroidShows app only appears to make use of:
+      series.setPoster(url)
+  - this occurs
+    * when a series is added:
+      - the "poster" image is downloaded to a filepath
+      - image is resized:
+          height = 1/4 of the screen's height
+          width  = determined by the aspect ratio of the image
+      - code:
+          https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L248
+          https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1286
+    * when a series is first displayed in a list
+      - image is read from disk
+      - bitmap is cached in memory for subsequent reuse
+      - code:
+          https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1886-L1896
+
+--------------------------------------------------------------------------------
+
+SQLite DB Schema:
+=================
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/utils/SQLiteStore.java#L1038-L1073
+
+----------------------------------------
+
+CREATE TABLE IF NOT EXISTS droidseries (version VARCHAR);
+
+INSERT INTO droidseries (version) VALUES ('0.1.5-7G3');
+
+CREATE TABLE IF NOT EXISTS directors (
+    serieId VARCHAR,
+    episodeId VARCHAR,
+    director VARCHAR
+);
+
+CREATE TABLE IF NOT EXISTS guestStars (
+    serieId VARCHAR,
+    episodeId VARCHAR,
+    guestStar VARCHAR
+);
+
+CREATE TABLE IF NOT EXISTS writers (
+    serieId VARCHAR,
+    episodeId VARCHAR,
+    writer VARCHAR
+);
+
+CREATE TABLE IF NOT EXISTS episodes (
+    serieId VARCHAR,
+    id VARCHAR,
+    combinedEpisodeNumber VARCHAR,
+    combinedSeason VARCHAR,
+    dvdChapter VARCHAR,
+    dvdDiscId VARCHAR,
+    dvdEpisodeNumber VARCHAR,
+    dvdSeason VARCHAR,
+    epImgFlag VARCHAR,
+    episodeName VARCHAR,
+    episodeNumber INT,
+    firstAired VARCHAR,
+    imdbId VARCHAR,
+    language VARCHAR,
+    overview TEXT,
+    productionCode VARCHAR,
+    rating VARCHAR,
+    seasonNumber INT,
+    absoluteNumber VARCHAR,
+    filename VARCHAR,lastUpdated VARCHAR,
+    seasonId VARCHAR,
+    seen INT
+);
+
+CREATE TABLE IF NOT EXISTS actors (
+    serieId VARCHAR,
+    actor VARCHAR
+);
+
+CREATE TABLE IF NOT EXISTS genres (
+    serieId VARCHAR,
+    genre VARCHAR
+);
+
+CREATE TABLE IF NOT EXISTS serie_seasons (
+    serieId VARCHAR,
+    season VARCHAR
+);
+
+CREATE TABLE IF NOT EXISTS series (
+    id VARCHAR PRIMARY KEY,
+    serieId VARCHAR,
+    language VARCHAR,
+    serieName VARCHAR,
+    banner VARCHAR,
+    overview TEXT,
+    firstAired VARCHAR,
+    imdbId VARCHAR,
+    zap2ItId VARCHAR,
+    airsDayOfWeek VARCHAR,
+    airsTime VARCHAR,
+    contentRating VARCHAR,
+    network VARCHAR,
+    rating VARCHAR,
+    runtime VARCHAR,
+    status VARCHAR,
+    fanart VARCHAR,
+    lastUpdated VARCHAR,
+    passiveStatus INTEGER DEFAULT 0,
+    poster VARCHAR,
+    posterInCache VARCHAR,
+    posterThumb VARCHAR,
+    seasonCount INTEGER,
+    unwatchedAired INTEGER,
+    unwatched INTEGER,
+    nextEpisode VARCHAR,
+    nextAir VARCHAR,
+    extResources VARCHAR NOT NULL DEFAULT ''
+);
+
+----------------------------------------
+
+notes:
+======
+
+* series.lastUpdated
+  - unix timestamp of last update from API
+* series.passiveStatus
+  - boolean (0 or 1) to indicate whether the show is "Archived"
+  - usage:
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L217
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L915-L916
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/utils/SQLiteStore.java#L767
+* series.posterInCache
+  - boolean ("true" or "false") to indicate whether an icon image has successfully been saved to disk
+  series.posterThumb
+  - disk filepath to icon image
+  - usage:
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L214
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L283-L284
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L218
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/thetvdb/model/Serie.java#L258
+* series.seasonCount
+  series.unwatchedAired
+  series.unwatched
+  series.nextEpisode
+  series.nextAir
+  - these fields contain calculated stats
+  - usage:
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/utils/SQLiteStore.java#L1094-L1099
+* series.extResources
+  - provided by the user
+
+* episodes.seen
+  - unix timestamp of when episode was watched, or <= 0 to indicate unseen
+
+--------------------------------------------------------------------------------
+
+inspection of pre-existing usage in DroidShows app:
+===================================================
+
+* the DB and (correspondingly) the model classes contain a lot of seemingly unnecessary information..
+* some data is required for internal use
+* some data is required for presentation to the user
+* lets do a quick survey..
+
+----------------------------------------
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/ViewSerie.java
+  series details
+  notes:
+  - Intent contains extras:
+      (String) "serieId"
+  - SQLiteStore runs query:
+      "SELECT serieName, posterThumb, poster, fanart, overview, status, firstAired, airsDayOfWeek, " + "airsTime, runtime, network, rating, contentRating, imdbId FROM series WHERE id = '" + serieId + "'";
+      "SELECT genre FROM genres WHERE serieId='"+ serieId + "'";
+      "SELECT actor FROM actors WHERE serieId='"+ serieId + "'";
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/res/layout/view_serie.xml#L11
+  <ImageView android:id="@+id/posterThumb" ... android:onClick="posterView"/>
+  notes:
+  - opens a WebView and loads an image: poster or fanart
+  - clicking on the image toggles between the two images
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/res/layout/view_serie.xml#L26
+  <TextView android:id="@+id/actors" ... android:onClick="IMDbNames"/>
+  notes:
+  - searches IMDb for the name of one actor
+
+----------------------------------------
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieSeasons.java
+  drilldown #1: list of season
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieSeasons.java#L197
+  private class SeriesSeasonsAdapter extends ArrayAdapter<Season> {
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieSeasons.java#L213
+    public SeriesSeasonsAdapter(Context context, int textViewResourceId, List<Season> seasons) {
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieSeasons.java#L221-L226
+    convertView        = vi.inflate(R.layout.row_serie_seasons, parent, false);
+    holder             = new ViewHolder();
+    holder.season      = (TextView) convertView.findViewById(R.id.serieseason);
+    holder.unwatched   = (TextView) convertView.findViewById(R.id.unwatched);
+    holder.nextEpisode = (TextView) convertView.findViewById(R.id.nextepisode);
+    holder.context     = (ImageView) convertView.findViewById(R.id.seriecontext);
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieSeasons.java#L233
+    Season s = items.get(position);
+        s.getSeason()
+        s.getSNumber()
+        s.getUnwatched()
+        s.getUnwatchedAired()
+        s.getNextEpisode()
+        s.getNextAir()
+
+----------------------------------------
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieEpisodes.java
+  drilldown #2: list of episodes in one season
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieEpisodes.java#L11
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieEpisodes.java#L44
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieEpisodes.java#L68
+  import nl.asymmetrics.droidshows.utils.SQLiteStore.EpisodeRow;
+  private List<EpisodeRow> episodes = null;
+  episodes = db.getEpisodeRows(serieId, seasonNumber);
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/utils/SQLiteStore.java#L1116-L1130
+  public class EpisodeRow {
+    public String id;
+    public String name;
+    public String aired;
+    public Date airedDate;
+    public long seen;
+  }
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/utils/SQLiteStore.java#L358-L363
+  notes:
+  - SQLiteStore runs query:
+      "SELECT id, episodeName, episodeNumber, seen, firstAired FROM episodes WHERE "
+			+ (episodeId.isEmpty() ? "" : "id="+ episodeId +" AND ")
+			+ "serieId='"+ serieId +"' AND seasonNumber="+ seasonNumber
+			+" ORDER BY episodeNumber ASC";
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieEpisodes.java#L130
+  public class EpisodesAdapter extends ArrayAdapter<EpisodeRow> {
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieEpisodes.java#L139
+    public EpisodesAdapter(Context context, int textViewResourceId, List<EpisodeRow> episodes) {
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieEpisodes.java#L149-L155
+    convertView = vi.inflate(R.layout.row_serie_episodes, parent, false);
+    holder = new ViewHolder();
+    holder.name = (TextView) convertView.findViewById(R.id.name);
+    holder.aired = (TextView) convertView.findViewById(R.id.aired);
+    holder.seenTimestamp = (TextView) convertView.findViewById(R.id.seenTimestamp);
+    holder.seen = (CheckBox) convertView.findViewById(R.id.seen);
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieEpisodes.java#L168
+    EpisodeRow ep = items.get(position);
+        ep.name
+        ep.aired
+        ep.airedDate
+        ep.seen
+
+----------------------------------------
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/ViewEpisode.java
+  drilldown #3: episode details
+  notes:
+  - Intent contains extras:
+      (String) "serieId"
+      (String) "serieName"
+      (String) "episodeId"
+  - SQLiteStore runs query:
+      "SELECT seasonNumber, episodeNumber, episodeName, overview, rating, firstAired, imdbId, seen FROM episodes " + "WHERE id = '"+ episodeId +"' AND serieId='"+ serieId +"'";
+      "SELECT writer FROM writers WHERE episodeId='"+ episodeId +"' AND serieId='"+ serieId +"'";
+      "SELECT director FROM directors WHERE episodeId='"+ episodeId +"' AND serieId='"+ serieId +"'";
+      "SELECT guestStar FROM guestStars WHERE episodeId='"+ episodeId +"' AND serieId='"+ serieId +"'";
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/res/layout/view_episode.xml#L7
+  <TextView android:id="@+id/rating" ... android:onClick="IMDbDetails"/>
+  notes:
+  - starts an Intent to open the episode page on IMDb
+    * if IMDb ID for episode is in DB, then goes directly to page
+    * otherwise, searches by: name of series + name of episode
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/res/layout/view_episode.xml#L8
+  <TextView android:id="@+id/firstAired" ... android:onClick="calendarEvent"/>
+  notes:
+  - starts an Intent to add a Calendar event,
+    which only makes sense when the episode has not yet aired,
+    but there is no such conditional check
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/res/layout/view_episode.xml#L12
+  <CheckBox android:id="@+id/seen" ... android:onClick="check"/>
+  notes:
+  - marks the episode as "seen" (by adding a timestamp to the DB record), or toggles it as "unseen" (by setting DB field to "0")
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/res/layout/view_episode.xml#L23
+  <TextView android:id="@+id/writer" ... android:onClick="IMDbNames"/>
+  notes:
+  - searches IMDb for the name of one writer
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/res/layout/view_episode.xml#L28
+  <TextView android:id="@+id/director" ... android:onClick="IMDbNames"/>
+  notes:
+  - searches IMDb for the name of one director
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/res/layout/view_episode.xml#L33
+  <TextView android:id="@+id/guestStars" ... android:onClick="IMDbNames"/>
+  notes:
+  - searches IMDb for the name of one actor
+
+--------------------------------------------------------------------------------

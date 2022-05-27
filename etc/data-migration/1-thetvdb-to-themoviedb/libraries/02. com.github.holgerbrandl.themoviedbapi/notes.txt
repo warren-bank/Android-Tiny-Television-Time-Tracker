@@ -1,0 +1,133 @@
+--------------------------------------------------------------------------------
+
+https://github.com/holgerbrandl/themoviedbapi
+
+https://github.com/holgerbrandl/themoviedbapi/tree/v1.12/src/main/java/info/movito/themoviedbapi
+https://github.com/holgerbrandl/themoviedbapi/blob/v1.12/src/main/java/info/movito/themoviedbapi/TmdbTV.java
+https://github.com/holgerbrandl/themoviedbapi/blob/v1.12/src/main/java/info/movito/themoviedbapi/TmdbTvSeasons.java
+https://github.com/holgerbrandl/themoviedbapi/blob/v1.12/src/main/java/info/movito/themoviedbapi/TmdbTvEpisodes.java
+
+https://github.com/holgerbrandl/themoviedbapi/tree/v1.12/src/main/java/info/movito/themoviedbapi/model/core
+https://github.com/holgerbrandl/themoviedbapi/blob/v1.12/src/main/java/info/movito/themoviedbapi/model/core/IdElement.java
+https://github.com/holgerbrandl/themoviedbapi/blob/v1.12/src/main/java/info/movito/themoviedbapi/model/core/NamedIdElement.java
+
+https://github.com/holgerbrandl/themoviedbapi/tree/v1.12/src/main/java/info/movito/themoviedbapi/model/tv
+https://github.com/holgerbrandl/themoviedbapi/blob/v1.12/src/main/java/info/movito/themoviedbapi/model/tv/AbstractTvElement.java
+https://github.com/holgerbrandl/themoviedbapi/blob/v1.12/src/main/java/info/movito/themoviedbapi/model/tv/TvSeries.java
+https://github.com/holgerbrandl/themoviedbapi/blob/v1.12/src/main/java/info/movito/themoviedbapi/model/tv/TvSeason.java
+https://github.com/holgerbrandl/themoviedbapi/blob/v1.12/src/main/java/info/movito/themoviedbapi/model/tv/TvEpisode.java
+
+--------------------------------------------------------------------------------
+
+https://github.com/holgerbrandl/themoviedbapi/blob/v1.12/src/main/java/info/movito/themoviedbapi/TmdbTV.java#L41-L49
+    public TvSeries getSeries(int seriesId, String language, TvMethod... appendToResponse) {
+        ApiUrl apiUrl = new ApiUrl(TMDB_METHOD_TV, seriesId);
+        apiUrl.addLanguage(language);
+        apiUrl.appendToResponse(asStringArray(appendToResponse));
+        return mapJsonResult(apiUrl, TvSeries.class);
+    }
+
+https://github.com/holgerbrandl/themoviedbapi/blob/v1.12/src/main/java/info/movito/themoviedbapi/TmdbTvSeasons.java#L28-L36
+    public TvSeason getSeason(int seriesId, int seasonNumber, String language, SeasonMethod... appendToResponse) {
+        ApiUrl apiUrl = new ApiUrl(TMDB_METHOD_TV, seriesId, TMDB_METHOD_TV_SEASON, seasonNumber);
+        apiUrl.addLanguage(language);
+        apiUrl.appendToResponse(asStringArray(appendToResponse));
+        return mapJsonResult(apiUrl, TvSeason.class);
+    }
+
+https://github.com/holgerbrandl/themoviedbapi/blob/v1.12/src/main/java/info/movito/themoviedbapi/TmdbTvEpisodes.java#L32-L40
+    public TvEpisode getEpisode(int seriesId, int seasonNumber, int episodeNumber, String language, EpisodeMethod... appendToResponse) {
+        ApiUrl apiUrl = new ApiUrl(TMDB_METHOD_TV, seriesId, TMDB_METHOD_TV_SEASON, seasonNumber, TMDB_METHOD_TV_EPISODE, episodeNumber);
+        apiUrl.addLanguage(language);
+        apiUrl.appendToResponse(asStringArray(appendToResponse));
+        return mapJsonResult(apiUrl, TvEpisode.class);
+    }
+
+--------------------------------------------------------------------------------
+
+initial observations:
+=====================
+
+* very well-written library w/ a clean and well-organized design
+* the class methods used to access the TMDB API all support an arbitrary number of "appendToResponse" parameters
+  - which is vital
+* the model classes are (nearly) complete and (almost) support all fields used by DB Schema
+  - IdElement
+    * supports the fields:
+        [id]
+  - NamedIdElement extends IdElement
+    * supports the fields:
+        [name]
+  - AbstractTvElement extends NamedIdElement
+    * supports the fields:
+        [external_ids, credits]
+  - TvSeries extends AbstractTvElement
+    * supports the fields:
+        [genres, seasons, overview, first_air_date, networks, vote_average, episode_run_time, status, poster_path, content_ratings]
+    * missing the fields:
+        [languages, next_episode_to_air]
+  - TvEpisode extends AbstractTvElement
+    * supports the fields:
+        [season_number, episode_number, air_date, overview, vote_average, still_path]
+    * missing the fields:
+        [crew, guest_stars, production_code]
+
+--------------------------------------------------------------------------------
+
+digging into the internals:
+===========================
+
+https://github.com/holgerbrandl/themoviedbapi/blob/v1.12/src/main/java/info/movito/themoviedbapi/AbstractTmdbApi.java#L4
+https://github.com/holgerbrandl/themoviedbapi/blob/v1.12/src/main/java/info/movito/themoviedbapi/AbstractTmdbApi.java#L27
+    import com.fasterxml.jackson.databind.ObjectMapper;
+    protected static final ObjectMapper jsonMapper = new ObjectMapper();
+
+https://github.com/holgerbrandl/themoviedbapi/blob/v1.12/src/main/java/info/movito/themoviedbapi/AbstractTmdbApi.java#L57-L85
+    public <T> T mapJsonResult(ApiUrl apiUrl, Class<T> someClass, String jsonBody, RequestMethod requestMethod) {
+        String webpage = tmdbApi.requestWebPage(apiUrl, jsonBody, requestMethod);
+
+        ResponseStatus responseStatus = jsonMapper.readValue(webpage, ResponseStatus.class);
+        Integer statusCode = responseStatus.getStatusCode();
+        if (statusCode != null && !SUCCESS_STATUS_CODES.contains(statusCode))
+            throw new ResponseStatusException(responseStatus);
+
+        return jsonMapper.readValue(webpage, someClass);
+    }
+
+comments:
+=========
+* can it really be that simple?
+
+--------------------------------------------------------------------------------
+
+https://fasterxml.github.io/jackson-databind/javadoc/2.7/com/fasterxml/jackson/databind/ObjectMapper.html
+
+https://www.baeldung.com/jackson-object-mapper-tutorial
+
+observations:
+=============
+* AbstractTmdbApi does NOT configure ObjectMapper to ignore unknown properties
+  - the parser should fail with an Exception when the API response includes unsupported fields
+  - does it?
+
+to do:
+======
+* copy library to project
+  - as an internal directory,
+    rather than as an external dependency
+* make changes:
+  - configure ObjectMapper
+  - add missing fields to model classes
+* add a utility class with static methods
+  to convert from TMDB library model classes
+  to pre-existing app model classes
+  - straight forward mapping
+  - pass a limited subset of TMDB supported fields to each respective constructor
+
+comments:
+=========
+* any updates to the library can be sent upstream in PRs
+  - if they merge the necessary changes,
+    then the library could eventually be includes as an external dependency
+
+--------------------------------------------------------------------------------

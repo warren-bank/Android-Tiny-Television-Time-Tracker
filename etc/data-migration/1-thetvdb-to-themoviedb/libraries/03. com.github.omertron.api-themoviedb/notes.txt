@@ -1,0 +1,159 @@
+--------------------------------------------------------------------------------
+
+https://github.com/Omertron/api-themoviedb
+
+https://github.com/Omertron/api-themoviedb/tree/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/model
+https://github.com/Omertron/api-themoviedb/tree/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/model/tv
+
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/model/FindResults.java
+
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/model/AbstractJsonMapping.java
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/model/media/MediaBasic.java
+
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/model/tv/TVBasic.java
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/model/tv/TVInfo.java
+
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/model/tv/TVSeasonBasic.java
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/model/tv/TVSeasonInfo.java
+
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/model/tv/TVEpisodeBasic.java
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/model/tv/TVEpisodeInfo.java
+
+--------------------------------------------------------------------------------
+
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/TheMovieDbApi.java#L48
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/TheMovieDbApi.java#L172
+    import com.omertron.themoviedbapi.model.FindResults;
+    tmdbFind = new TmdbFind(apiKey, httpTools);
+
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/TheMovieDbApi.java#L678
+    public FindResults find(String id, ExternalSource externalSource, String language) throws MovieDbException {
+        return tmdbFind.find(id, externalSource, language);
+    }
+
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/methods/TmdbFind.java#L72
+    public FindResults find(String id, ExternalSource externalSource, String language) throws MovieDbException {
+        URL url = new ApiUrl(apiKey, MethodBase.FIND).buildUrl(parameters);
+        String webpage = httpTools.getRequest(url);
+        return MAPPER.readValue(webpage, FindResults.class);
+    }
+
+--------------------------------------------------------------------------------
+
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/TheMovieDbApi.java#L46
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/TheMovieDbApi.java#L181
+    import com.omertron.themoviedbapi.methods.TmdbTV;
+    tmdbTv = new TmdbTV(apiKey, httpTools);
+
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/TheMovieDbApi.java#L1448
+    public TVInfo getTVInfo(int tvID, String language, String... appendToResponse) throws MovieDbException {
+        return tmdbTv.getTVInfo(tvID, language, appendToResponse);
+    }
+
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/methods/TmdbTV.java#L23
+    import static com.omertron.themoviedbapi.methods.AbstractMethod.MAPPER;
+
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/methods/TmdbTV.java#L81
+    public TVInfo getTVInfo(int tvID, String language, String... appendToResponse) throws MovieDbException {
+        URL url = new ApiUrl(apiKey, MethodBase.TV).buildUrl(parameters);
+        String webpage = httpTools.getRequest(url);
+        return MAPPER.readValue(webpage, TVInfo.class);
+    }
+
+----------------------------------------
+
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/TheMovieDbApi.java#L45
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/TheMovieDbApi.java#L182
+    import com.omertron.themoviedbapi.methods.TmdbSeasons;
+    tmdbSeasons = new TmdbSeasons(apiKey, httpTools);
+
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/TheMovieDbApi.java#L1685
+    public TVSeasonInfo getSeasonInfo(int tvID, int seasonNumber, String language, String... appendToResponse) throws MovieDbException {
+        return tmdbSeasons.getSeasonInfo(tvID, seasonNumber, language, appendToResponse);
+    }
+
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/methods/TmdbSeasons.java#L23
+    import static com.omertron.themoviedbapi.methods.AbstractMethod.MAPPER;
+
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/methods/TmdbSeasons.java#L71
+    public TVSeasonInfo getSeasonInfo(int tvID, int seasonNumber, String language, String... appendToResponse) throws MovieDbException {
+        URL url = new ApiUrl(apiKey, MethodBase.SEASON).buildUrl(parameters);
+        String webpage = httpTools.getRequest(url);
+        return MAPPER.readValue(webpage, TVSeasonInfo.class);
+    }
+
+----------------------------------------
+
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/TheMovieDbApi.java#L35
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/TheMovieDbApi.java#L183
+    import com.omertron.themoviedbapi.methods.TmdbEpisodes;
+    tmdbEpisodes = new TmdbEpisodes(apiKey, httpTools);
+
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/TheMovieDbApi.java#L1785
+    public TVEpisodeInfo getEpisodeInfo(int tvID, int seasonNumber, int episodeNumber, String language, String... appendToResponse) throws MovieDbException {
+        return tmdbEpisodes.getEpisodeInfo(tvID, seasonNumber, episodeNumber, language, appendToResponse);
+    }
+
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/methods/TmdbEpisodes.java#L23
+    import static com.omertron.themoviedbapi.methods.AbstractMethod.MAPPER;
+
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/methods/TmdbEpisodes.java#L78
+    public TVEpisodeInfo getEpisodeInfo(int tvID, int seasonNumber, int episodeNumber, String language, String... appendToResponse) throws MovieDbException {
+        URL url = new ApiUrl(apiKey, MethodBase.EPISODE).buildUrl(parameters);
+        String webpage = httpTools.getRequest(url);
+        return MAPPER.readValue(webpage, TVEpisodeInfo.class);
+    }
+
+--------------------------------------------------------------------------------
+
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/methods/AbstractMethod.java#L23
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/src/main/java/com/omertron/themoviedbapi/methods/AbstractMethod.java#L70
+    import com.fasterxml.jackson.databind.ObjectMapper;
+    protected static final ObjectMapper MAPPER = new ObjectMapper();
+
+--------------------------------------------------------------------------------
+
+initial observations:
+=====================
+
+* very well-written library w/ a clean and well-organized design
+* the class methods used to access the TMDB API all support an arbitrary number of "appendToResponse" parameters
+  - which is vital
+* the internal are nearly identical to library #2: com.github.holgerbrandl.themoviedbapi
+* the model classes are (100%) complete and (fully) support all fields used by DB Schema
+  - summary:
+    * series:
+        [genres, seasons, id, languages, name, overview, first_air_date, networks, vote_average, episode_run_time, status, poster_path, next_episode_to_air, external_ids.imdb_id, credits.cast, content_ratings.results.rating]
+    * episode:
+        [crew, guest_stars, id, season_number, episode_number, name, air_date, overview, production_code, vote_average, still_path, external_ids.imdb_id]
+  - class fields:
+    * MediaBasic
+        [id, vote_average, poster_path]
+    * TVBasic extends MediaBasic
+        [name, overview, first_air_date]
+    * TVInfo extends TVBasic
+        [genres, seasons, languages, networks, episode_run_time, status, externalIDs, credits, contentRatings]
+    * TVEpisodeBasic extends MediaBasic
+        [season_number, episode_number, name, air_date, overview, still_path]
+    * TVEpisodeInfo extends TVEpisodeBasic
+        [crew, guest_stars, production_code, externalIDs]
+  - missing fields (that are included in the DB Schema, are returned by JSON API, but are missing from the Java model):
+    * series.next_episode_to_air
+      - in the current design of the app, this field is determined internally by a DB query
+      - so long as the API provides data about episodes in the current season that have yet to air, we can just continue the same methodology
+* I believe we have a winner..
+
+--------------------------------------------------------------------------------
+
+https://mvnrepository.com/artifact/com.omertron/themoviedbapi
+  Maven repo
+
+----------------------------------------
+
+https://omertron.github.io/api-themoviedb/apidocs/index.html
+  javadoc class reference
+
+https://github.com/Omertron/api-themoviedb/tree/gh-pages
+https://github.com/Omertron/api-themoviedb/tree/gh-pages/apidocs
+
+--------------------------------------------------------------------------------

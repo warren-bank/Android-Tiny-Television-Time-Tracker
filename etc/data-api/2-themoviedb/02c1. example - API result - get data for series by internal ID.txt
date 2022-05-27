@@ -1,0 +1,261 @@
+{
+    "adult": false,
+    "backdrop_path": "/qmcoEOrTm6BcgR4iO7KBQKE9AKT.jpg",
+    "created_by": [{
+        "id": 160145,
+        "credit_id": "540dcbbf0e0a262b3d0069a8",
+        "name": "Donald P. Bellisario",
+        "gender": 2,
+        "profile_path": "/8xjZRZvWfn0aaZVHlYxRUtlqJIR.jpg"
+    }, {
+        "id": 1218788,
+        "credit_id": "525776ce760ee36aaa5306f0",
+        "name": "Don McGill",
+        "gender": 2,
+        "profile_path": "/9QMLJDoA3hYlWdOhQyTVqimPok9.jpg"
+    }],
+    "episode_run_time": [45],
+    "first_air_date": "2003-09-23",
+    "genres": [{
+        "id": 80,
+        "name": "Crime"
+    }, {
+        "id": 10759,
+        "name": "Action & Adventure"
+    }, {
+        "id": 18,
+        "name": "Drama"
+    }],
+    "homepage": "http://www.cbs.com/shows/ncis/",
+    "id": 4614,
+    "in_production": true,
+    "languages": ["en"],
+    "last_air_date": "2022-03-28",
+    "last_episode_to_air": {
+        "air_date": "2022-03-28",
+        "episode_number": 17,
+        "id": 3589929,
+        "name": "Starting Over",
+        "overview": "NCIS investigates the apparent suicide of a retired Navy officer who was in Palmer and Knight's grief group; Torres gets a call from NCIS Special Agent Jane Tennant to come to Hawai'i.",
+        "production_code": "",
+        "season_number": 19,
+        "still_path": "/8defjzI1x3uzdORc6C2jnOboWgK.jpg",
+        "vote_average": 7.0,
+        "vote_count": 1
+    },
+    "name": "NCIS",
+    "next_episode_to_air": {
+        "air_date": "2022-04-18",
+        "episode_number": 18,
+        "id": 3620105,
+        "name": "Last Dance",
+        "overview": "",
+        "production_code": "",
+        "season_number": 19,
+        "still_path": null,
+        "vote_average": 0.0,
+        "vote_count": 0
+    },
+    "networks": [{
+        "name": "CBS",
+        "id": 16,
+        "logo_path": "/nm8d7P7MJNiBLdgIzUK0gkuEA4r.png",
+        "origin_country": "US"
+    }],
+    "number_of_episodes": 432,
+    "number_of_seasons": 19,
+    "origin_country": ["US"],
+    "original_language": "en",
+    "original_name": "NCIS",
+    "overview": "From murder and espionage to terrorism and stolen submarines, a team of special agents investigates any crime that has a shred of evidence connected to Navy and Marine Corps personnel, regardless of rank or position.",
+    "popularity": 534.887,
+    "poster_path": "/lSTchtc26YNdOjdKvZtLs22SokL.jpg",
+    "production_companies": [{
+        "id": 446,
+        "logo_path": "/d9EQKqrGy25s61Bsh10nO0BfzPF.png",
+        "name": "thinkfilm",
+        "origin_country": "US"
+    }, {
+        "id": 9223,
+        "logo_path": "/of4mmVt6egYaO9oERJbuUxMOTkj.png",
+        "name": "Paramount Television Studios",
+        "origin_country": "US"
+    }, {
+        "id": 23341,
+        "logo_path": null,
+        "name": "Belisarius Productions",
+        "origin_country": "US"
+    }],
+    "production_countries": [],
+    "seasons": [{
+        "air_date": "2003-04-22",
+        "episode_count": 121,
+        "id": 14081,
+        "name": "Specials",
+        "overview": "",
+        "poster_path": "/FlzeiA7DV0KQQ6FOExjTaHWBjs.jpg",
+        "season_number": 0
+    }, {
+        "air_date": "2003-09-23",
+        "episode_count": 23,
+        "id": 14073,
+        "name": "Season 1",
+        "overview": "The first season of the police procedural drama NCIS was originally broadcast between September 23, 2003 and May 25, 2004, the first season essentially dealt with introducing the characters and their strengths, skills and weaknesses. It also introduced the main foe for the first two seasons, Ari Haswari, two recurring characters in the form of Timothy McGee and Jimmy Palmer after Gerald Jackson, Ducky's assistant, was shot, and Special Agent Caitlin Todd as Special Agent Vivian Blackadder's replacement.",
+        "poster_path": "/8A5k8VsuisshScddYswcd630EXt.jpg",
+        "season_number": 1
+    }, {
+        "air_date": "2004-09-28",
+        "episode_count": 23,
+        "id": 14076,
+        "name": "Season 2",
+        "overview": "The second season of the police procedural drama NCIS was originally broadcast between September 28, 2004 and May 24, 2005, the second season shifts away from the naval setting of the show somewhat, and includes more character development than the first season.\n\nWith the episode \"Lt Jane Doe\", the show also introduced the foofs, a black and white \"preview\" which was shown at the beginning of each act of that episode and has continued to be used to this day.\n\nSeason 2 saw Norfolk Case Agent Timothy McGee being promoted to a full-time field agent, and transferring to NCIS HQ in Washington to work with the Major Case Response Team. Tony DiNozzo nearly died of the pneumonic plague in \"SWAK\" while the season finale, \"Twilight\", ended with a shocking and unexpected twist: Caitlin Todd was shot and killed by Ari Haswari.\n\nThis is also the second and final DVD to feature Sasha Alexander who plays Caitlin Todd on the cover. Alexander left the show for good after her character, Todd was killed in the Season 2 finale.\n\nIn addition, this is the first DVD cover that Sean Murray who plays Timothy McGee appears on, having become a permanent member of Gibbs' team at the end of the Season 2 opening episode, \"See No Evil\" which also saw Murray being added to the opening credits as well. Despite having first appeared in Season 1, Murray's appearances were very limited and during the times he appeared, he was credited as a guest star.",
+        "poster_path": "/6gbca4bGoqOGFzlnjRheiXXMmM5.jpg",
+        "season_number": 2
+    }, {
+        "air_date": "2005-09-20",
+        "episode_count": 24,
+        "id": 14077,
+        "name": "Season 3",
+        "overview": "The third season of the police procedural drama NCIS was originally broadcast between September 20, 2005 and May 16, 2006, the third season opens in the aftermath of \"Twilight\", with the entire team in shock and Gibbs on a vendetta to seek revenge for Kate's murder. Matters are complicated by the intervention of Gibbs' former lover and new NCIS Director Jenny Shepard, and Mossad Officer Ziva David.",
+        "poster_path": "/tS64hCnGsAl3dceUlVx5cDlOP2t.jpg",
+        "season_number": 3
+    }, {
+        "air_date": "2006-09-19",
+        "episode_count": 24,
+        "id": 14075,
+        "name": "Season 4",
+        "overview": "The fourth season of the police procedural drama NCIS was originally broadcast between September 19, 2006 and May 22, 2007. Special Agent Gibbs left NCIS at the end of season 3 after a terrorist attack had been successful because his superiors did not heed his warnings in time. The team is now led by DiNozzo for a short time until Gibbs' eventual return. New characters introduced in this season are Michelle Lee, who was briefly on DiNozzo's team and was transferred to the legal department upon Gibbs' return, and Gibbs' former boss and mentor Mike Franks, both as recurring characters. Also, albeit later in the season, Army CID Lieutenant Colonel Hollis Mann is introduced as another love interest for Gibbs.\n\nIn December 2006, Bill Keveney from USA Today announced that the \"CBS investigative drama NCIS topped the Nielsen viewership list for the first time with 17.4 million. CBS was the No. 1 network in viewers and young adults for the week of Dec. 11-17.\"\n\nTV Guide reported on May 5, 2007 that creator and showrunner Donald Bellisario would step down and leave the series due to a disagreement with series star Mark Harmon. Because of Bellisario's \"chaotic management style\", Harmon threatened to leave NCIS. Co-executive producer Chas. Floyd Johnson and headwriter Shane Brennan replaced Bellisario as showrunner.",
+        "poster_path": "/ermXCC1Nz1PrcG7dna7vcrXN4zY.jpg",
+        "season_number": 4
+    }, {
+        "air_date": "2007-09-25",
+        "episode_count": 19,
+        "id": 14074,
+        "name": "Season 5",
+        "overview": "The fifth season of the police procedural drama NCIS premiered on September 25, 2007 and marks the end of Donald P. Bellisario's involvement as show runner. It concludes the La Grenouille storyline which ended with a cliffhanger in season four's finale, \"Angel of Death\". The fifth season also reveals more background information about Gibbs' past before NCIS.\n\nThe Writers Guild strike limited episode production and the DVD set had five discs instead of six. The season ended with its 19th episode on May 20, 2008; the strike-caused gap is between episodes 11 and 12. The season ended with a two-part season finale called \"Judgment Day\". The season featured the departure of recurring characters Colonel Hollis Mann and Jeanne Benoit, as well as the death of Jenny Shepard, one of the main characters.\n\nFrom this season on, the opening sequence was shortened to an even 30 second duration instead of the normal 37–44 second duration in the previous seasons.",
+        "poster_path": "/nLinif1UCp6dMXBJKRixiCxyKLA.jpg",
+        "season_number": 5
+    }, {
+        "air_date": "2008-09-23",
+        "episode_count": 25,
+        "id": 14072,
+        "name": "Season 6",
+        "overview": "The sixth season of the police procedural drama NCIS premiered on September 23, 2008. The new NCIS Director Leon Vance became a regular cast character and Agent Gibbs' new team members were introduced: NCIS Agents Michelle Lee from Legal, Daniel Keating from Cybercrime, and Special Agent Brent Langer from the FBI. Langer was killed in the first episode of the season. After the end of the second episode, McGee, Ziva and Tony had returned to the team, while Lee and Keating were transferred back to Legal and Cybercrime respectively.\n\nThe two-part episode \"Legend\" introduced the team who would later go on to appear in the spin-off TV series NCIS: Los Angeles.\n\nThis is also the first DVD cover to feature Rocky Carroll who plays Leon Vance.",
+        "poster_path": "/oxs7PozBPGSTw6YXi7KwgBSnEwp.jpg",
+        "season_number": 6
+    }, {
+        "air_date": "2009-09-22",
+        "episode_count": 24,
+        "id": 14078,
+        "name": "Season 7",
+        "overview": "The seventh season of the police procedural drama NCIS premiered on on September 22, 2009 with NCIS: Los Angeles premiering afterwards. At the end of season 6 Ziva had left the NCIS team in Israel, returning to work as a Mossad officer. In the closing seconds of the sixth season, Ziva was shown to have been captured and tortured for information about NCIS.\n\nIn the first episode of season 7, Ziva was rescued by Gibbs, Tony and McGee and upon her return to Washington, she eventually became an NCIS agent after resigning from Mossad for good. Much of the season's story arc then focused on the Mexican Drug War and Colonel Merton Bell, a suspected murderer who hired the lawyer M. Allison Hart to represent him. Hart quickly became a thorn in Gibbs' side by regularly showing up and protecting possible suspects while they were being investigated, claiming that they were her clients.\n\nThe season drew to a close as Gibbs was later kidnapped by someone working for Paloma Reynosa, the daughter of the late Pedro Hernandez, a drug dealer Gibbs himself shot dead twenty years previously as Hernandez had been responsible for killing Gibbs' first wife Shannon and daughter Kelly. While being held prisoner, Paloma informed Gibbs that he would work for her or she would have everyone he ever knew and cared about die if he didn't go through with her demands.",
+        "poster_path": "/fTflbVcM48B7rhiGDpwHwifeICH.jpg",
+        "season_number": 7
+    }, {
+        "air_date": "2010-09-21",
+        "episode_count": 24,
+        "id": 14079,
+        "name": "Season 8",
+        "overview": "The eighth season of the police procedural drama NCIS premiered on September 21, 2010 in the same time slot as the previous season. The season story arc involved Ziva's largely unseen boyfriend, Ray, and the CIA continuing to meddle in NCIS's day-to-day workings. Notable events included the terrorism and internal affairs threat during the Enemies two-parter, and the arrival of another Major Case Response Team from Rota, Spain, the team that Tony was offered to be lead of in the beginning of season 4. The season ended on a five part story arc involving the Port-to-Port killer that menaced both teams. The finale aired on May 17, 2011. The DVD cover is the first cover portraying Brian Dietzen.",
+        "poster_path": "/mJHZYjWMo03AsIqgnQA1Z8Oa7FP.jpg",
+        "season_number": 8
+    }, {
+        "air_date": "2011-09-20",
+        "episode_count": 24,
+        "id": 14080,
+        "name": "Season 9",
+        "overview": "The ninth season of the police procedural drama NCIS premiered on September 20, 2011, in the same time slot as the previous season. Season nine introduced several new recurring guest stars, most notably Dr. Samantha Ryan, a love interest for Gibbs.\n\nBy the end of the season, NCIS and the Navy had found themselves under threat from a new and dangerous enemy: insurance CEO-turned terrorist, Harper Dearing, who lost his son in a fire aboard a Navy ship and is out for revenge against the Navy for not solving the problem that led to the fire and then not updating ships with the same problem. He also has a grudge against NCIS, as his son wouldn't have been on the ship if they had not transferred him.\n\nManaging to get a hold of powerful explosives, Dearing started firebombing Navy ships. However, towards the end of the season, Dearing stepped up his game: he had Director Vance abducted. Whilst NCIS found him quickly, it transpired that Dearing was only after Vance for his car, managing to rig up explosives in the car seat so that Vance would unknowingly deliver a car bomb to the Navy Yard. By the time Gibbs realized, it was nearly too late; the bomb detonated, resulting in major damage to the NCIS building, as well as many deaths and injuries and leaving the fates of Gibbs, Tony, McGee, Abby, Ziva and Vance unknown. Upon learning of the destruction, Ducky suffered a heart attack on the beaches of Miami. The finale aired on May 15, 2012.",
+        "poster_path": "/d2ud6bmKP4eWwaMnpYT1YR0miDO.jpg",
+        "season_number": 9
+    }, {
+        "air_date": "2012-09-25",
+        "episode_count": 24,
+        "id": 14082,
+        "name": "Season 10",
+        "overview": "The tenth season of the police procedural drama NCIS premiered on September 25, 2012, in the same time slot as the previous seasons, Tuesdays at 8pm. The season premiere was seen by 20.48 million viewers, focusing on the aftermath of the bombing of the Navy Yard from the ninth-season finale and culminating with the apprehension of Harper Dearing, who is killed when he attempts to resist arrest.\n\nThe season continues with mostly standalone episodes until the \"Shabbat Shalom\" and \"Shiva\" story arc, which focuses on the deaths of Eli David and Jackie Vance and sets the rest of the season into motion. Leon Vance and Ziva David soon discover that Mossad Deputy Director Ilan Bodnar was behind the attack, and set out for revenge. They track Bodnar to Berlin, but later learn that he had never left the United States. Going against orders from the Department of Homeland Security, Ziva finds Bodnar on a ship headed for South Africa and kills him. This sparks a massive investigation by the Department of Defense, headed by Richard Parsons. His sneaky and unprofessional methods cause the team to question his true intentions. Everyone soon realizes that he is not interested in Ziva or Vance, but has instead set his sights on Gibbs. Parsons pressures Gibbs to admit that he and his team have broken the law on countless occasions and to come forward and admit everything that he has done. After a long feud, Gibbs is freed of his charges and sent on a top-priority mission, while Ziva, DiNozzo, and McGee resign from the agency. The season ends with a cut to four months later, showing Gibbs aiming a sniper rifle at FBI agent Tobias Fornell. The season finale aired on May 14, 2013.",
+        "poster_path": "/3G9B4F7R6fkiSGeJvEzibpwwzk2.jpg",
+        "season_number": 10
+    }, {
+        "air_date": "2013-09-24",
+        "episode_count": 24,
+        "id": 14083,
+        "name": "Season 11",
+        "overview": "The eleventh season of the police procedural drama NCIS premiered on September 24, 2013, in the same time slot as the previous seasons, Tuesdays at 8pm. The character of Special Agent Ziva David, portrayed by Cote de Pablo, will depart during the season.",
+        "poster_path": "/aGHnemk8i1amzACZRjCtHQjCmYR.jpg",
+        "season_number": 11
+    }, {
+        "air_date": "2014-09-23",
+        "episode_count": 24,
+        "id": 62834,
+        "name": "Season 12",
+        "overview": "Explore the inner workings of the government agency that investigates all crimes involving Navy and Marine Corps personnel, regardless of rank or position. Leading this team is NCIS Special Agent Leroy Jethro Gibbs, a skilled investigator and interrogator who is smart, tough and willing to bend the rules to get the job done",
+        "poster_path": "/gTMzMkGAbygR1Cy8IyO5OC6Cj2.jpg",
+        "season_number": 12
+    }, {
+        "air_date": "2015-09-22",
+        "episode_count": 24,
+        "id": 70439,
+        "name": "Season 13",
+        "overview": "",
+        "poster_path": "/VfG3LekB3PQpfjCt4qbX0H6Ake.jpg",
+        "season_number": 13
+    }, {
+        "air_date": "2016-09-20",
+        "episode_count": 24,
+        "id": 79755,
+        "name": "Season 14",
+        "overview": "",
+        "poster_path": "/q9TVqJSHfJPsEJGHtxHuBvOdKu9.jpg",
+        "season_number": 14
+    }, {
+        "air_date": "2017-09-26",
+        "episode_count": 24,
+        "id": 91258,
+        "name": "Season 15",
+        "overview": "",
+        "poster_path": "/qqncrGicxaM7opeliVZNiVo70xw.jpg",
+        "season_number": 15
+    }, {
+        "air_date": "2018-09-25",
+        "episode_count": 24,
+        "id": 106151,
+        "name": "Season 16",
+        "overview": "",
+        "poster_path": "/sQz8u7UpRE02SthffFgIywogoKS.jpg",
+        "season_number": 16
+    }, {
+        "air_date": "2019-09-24",
+        "episode_count": 20,
+        "id": 126158,
+        "name": "Season 17",
+        "overview": "",
+        "poster_path": "/gK2yIQjtMGYmlLjIbHQuSadzJ9n.jpg",
+        "season_number": 17
+    }, {
+        "air_date": "2020-11-17",
+        "episode_count": 16,
+        "id": 167653,
+        "name": "Season 18",
+        "overview": "",
+        "poster_path": "/gYeIW2bgvQEwTFdkxufkzximplS.jpg",
+        "season_number": 18
+    }, {
+        "air_date": "2021-09-20",
+        "episode_count": 18,
+        "id": 201998,
+        "name": "Season 19",
+        "overview": "",
+        "poster_path": "/lSTchtc26YNdOjdKvZtLs22SokL.jpg",
+        "season_number": 19
+    }],
+    "spoken_languages": [{
+        "english_name": "English",
+        "iso_639_1": "en",
+        "name": "English"
+    }],
+    "status": "Returning Series",
+    "tagline": "",
+    "type": "Scripted",
+    "vote_average": 7.6,
+    "vote_count": 1758
+}
