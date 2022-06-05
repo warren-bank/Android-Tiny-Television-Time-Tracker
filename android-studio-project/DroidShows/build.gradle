@@ -5,8 +5,6 @@ android {
   compileSdkVersion project.ext.compileSdkVersion
   buildToolsVersion project.ext.buildToolsVersion
 
-  useLibrary 'org.apache.http.legacy'
-
   compileOptions {
     sourceCompatibility project.ext.javaVersion
     targetCompatibility project.ext.javaVersion
