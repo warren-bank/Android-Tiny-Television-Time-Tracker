@@ -1,1 +1,7 @@
 include ':DroidShows'
+
+include ':org-yamj-api-common'
+include ':api-themoviedb'
+
+project(':org-yamj-api-common').projectDir = new File(rootDir, 'libs/org-yamj-api-common')
+project(':api-themoviedb'     ).projectDir = new File(rootDir, 'libs/api-themoviedb')

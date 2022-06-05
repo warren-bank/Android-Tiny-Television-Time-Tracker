@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">da</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">Ingen programmer fundet.</string>
 <string name="layout_search_no_items">Ingen programmer fundet.</string>
 <string name="layout_seasons_no_items">Ingen sæsoner, der skal vises.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">Kan ikke udføre sikkerhedskopiering!</string>
 <string name="dialog_backup_usefolder">Brug folder til daglige backups</string>
 <string name="dialog_change_language">Synopsis-sprog</string>
-<string name="dialog_use_mirror">Brug TheTVDB Spejl (prøv dette, hvis opdateringer er for langsomme)</string>
 <string name="dialog_restore">Gendan</string>
 <string name="dialog_restore_now">Genindlæsning af en sikkerhedskopi fjerner alle oplysninger, der aktuelt er i DroidShows. Fortsæt?</string>
 <string name="dialog_restore_done">Database er gendannet</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">Annullér</string>
 <string name="dialog_search">Søgestreng:</string>
 <string name="dialog_update_series">Er du sikker på, at du vil opdatere alle viste programmer nu?</string>
-<string name="dialog_update_speedup">\n\nDu kan sætte skub i denne proces med indstillingen Opdatering af \' seneste sæson.</string>
-<string name="dialog_latest_season">Opdatering viser kun \' seneste sæson</string>
 <string name="dialog_include_specials">Inkludér specialer i ikke-set antal</string>
 <string name="dialog_full_line_check">Brug hele linjen til at markere afsnit</string>
 <string name="dialog_switch_swipe_direction">Swipe højre-til-venstre for at gå tilbage</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">Arkivér</string>
 <string name="menu_unarchive">Recover</string>
 <string name="messages_title_updating_series">Opdaterer programmer</string>
-<string name="messages_title_updating_db">Opdaterer database</string>
-<string name="messages_update_serie">Indsamler oplysninger ...</string>
 <string name="messages_no_internet">Der er ingen tilgængelig internetforbindelse</string>
 <string name="messages_title_update_series">Opdatering vises</string>
-<string name="messages_update_series">Indsamling viser oplysninger. Denne operation vil tage et stykke tid ...</string>
 <string name="messages_episodes">episoder</string>
 <string name="messages_new_episodes">nye afsnit</string>
 <string name="messages_new_episode">ny episode</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">Episodeoplysninger</string>
 <string name="messsages_edit_seen_timestamp">Redigér set tidsstempel</string>
 <string name="messages_calendar_app_error">Ingen kalenderapp fundet!</string>
-<string name="messages_thetvdb_con_error">Fejl ved tilslutning til TheTVDB. Prøv igen.</string>
+<string name="messages_api_con_error">Fejl ved tilslutning til TMDb API. Prøv igen.</string>
 <string name="messages_marked_seen">markeret som set</string>
 <string name="messages_marked_unseen">markeret som ikke-set</string>
 <string name="messages_context_mark_seasonunseen">Markér alle afsnit som ikke-set</string>

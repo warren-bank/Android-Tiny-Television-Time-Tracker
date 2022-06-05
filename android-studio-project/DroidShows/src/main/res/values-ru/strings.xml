@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ru</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">Сериалы не найдены. Для добавления сералов используйте соответствующий пункт меню</string>
 <string name="layout_search_no_items">Сериалы не найдены.</string>
 <string name="layout_seasons_no_items">Сезонов нет.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">Невозможно создать резервную копию!</string>
 <string name="dialog_backup_usefolder">Использовать для ежедневного резервного копирования</string>
 <string name="dialog_change_language">Язык краткого описания</string>
-<string name="dialog_use_mirror">Используйте TheTVDb зеркало (попробуйте так, если обновления слишком медленны)</string>
 <string name="dialog_restore">Восстановить</string>
 <string name="dialog_restore_now">Востановление безвовратно удалит текущие данные. Продолжить?</string>
 <string name="dialog_restore_done">Данные успешно восстановлены</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">Отмена</string>
 <string name="dialog_search">Искать:</string>
 <string name="dialog_update_series">Начать обновление информации о сериалах?</string>
-<string name="dialog_update_speedup">\n\nВы можете ускорить процесс в Меню > Настройки.</string>
-<string name="dialog_latest_season">Обновить только последние сезоны</string>
 <string name="dialog_include_specials">Включить доп. видео в количество просмотренных</string>
 <string name="dialog_full_line_check">Вся строка помечает просмотренным</string>
 <string name="dialog_switch_swipe_direction">Проведите справа налево, чтобы вернуться назад</string>
@@ -84,11 +80,8 @@
 <string name="menu_archive">Архивировать</string>
 <string name="menu_unarchive">Разархивировать</string>
 <string name="messages_title_updating_series">Обновить сериалы</string>
-<string name="messages_title_updating_db">База данных обновляется</string>
-<string name="messages_update_serie">Получение информации о сериале…</string>
 <string name="messages_no_internet">Подключение к интернету отсутствует</string>
 <string name="messages_title_update_series">Обновление сериалов</string>
-<string name="messages_update_series">Получение информации о сериалах. Может занять какое-то время…</string>
 <string name="messages_episodes">серии</string>
 <string name="messages_new_episodes">новые серии</string>
 <string name="messages_new_episode">новая серия</string>
@@ -113,7 +106,7 @@
 <string name="messsages_view_ep_details">Показать информацию о серии</string>
 <string name="messsages_edit_seen_timestamp">Изменить дату просмотра</string>
 <string name="messages_calendar_app_error">Приложение Календаря не найдено!</string>
-<string name="messages_thetvdb_con_error">Ошибка подключения к TheTVDB. Попробуйте снова.</string>
+<string name="messages_api_con_error">Ошибка подключения к TMDb API. Попробуйте снова.</string>
 <string name="messages_marked_seen">пометить просмотренным</string>
 <string name="messages_marked_unseen">пометить непросмотренным</string>
 <string name="messages_context_mark_seasonunseen">Пометить все серии просмотренными</string>

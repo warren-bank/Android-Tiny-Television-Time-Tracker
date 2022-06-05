@@ -1,0 +1,1126 @@
+--------------------------------------------------------------------------------
+
+observations:
+=============
+
+* thetvdb API produces a gigantic monolithic dump of data for a series
+* tmdb API is more granular
+  - data needs to be requested in pieces
+* for example, with tmdb
+  - series data doesn't include episodes data
+  - each episode needs to be requested individually
+* some redesign is needed:
+  - there is (currently) no class that manages passing data from the api to the database
+  - with thetvdb, a single api request produces a model class that contains everything..
+    and there are a lot of places in the code where this occurs..
+    and the model class is then passed to a method that will add/update the DB
+  - with tmdb, this will need to be better orchestrated
+    * which presents the opportunity to improve efficiency..
+      since updates can:
+      - query the API for the total number of episodes in each season
+      - query the local DB to determine which (if any) episodes have not already been retrieved
+      - query the API for only the new episodes
+
+--------------------------------------------------------------------------------
+
+list of places in code where such a class should be used:
+=========================================================
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1248
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1256
+    private void updateSerie(TVShowItem serie, final String langCode, int position) {
+        Serie sToUpdate = theTVDB.getSerie(serieId, langCode == null ? currentLang : langCode);
+        db.updateSerie(sToUpdate, langCode == null ? latestSeasonOption == UPDATE_LATEST_SEASON_ONLY : false);
+    }
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1407
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1412
+    public void updateAllSeries(final int showArchive) {
+        Serie sToUpdate = theTVDB.getSerie(seriesToUpdate.get(i).getSerieId(), seriesToUpdate.get(i).getLanguage());
+        db.updateSerie(sToUpdate, latestSeasonOption == UPDATE_LATEST_SEASON_ONLY);
+    }
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L135
+    private void searchSeries(String searchQuery) {
+        ArrayList<Serie> search_series = theTVDB.searchSeries(searchQuery, langCode);
+
+        // results are then displayed in a ListView
+    }
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L210
+    private class AsyncAddSerie extends AsyncTask<Serie, Void, Boolean> {
+        protected Boolean doInBackground(Serie... params) {
+            sToAdd = theTVDB.getSerie(s.getId(), s.getLanguage());
+            addPosterThumb();                                                   // download poster, resize to icon, save to disk, add filepath to DB
+            sToAdd.setPassiveStatus((DroidShows.showArchive == 1 ? 1 : 0));
+            sToAdd.saveToDB(db);
+        }
+    }
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L220-L229
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/utils/SQLiteStore.java#L1093-L1100
+    note: apparently, the distinction between the model classes 'Serie' and 'TVShowItem'
+          is that the latter includes DB fields that are derived from API data by: SQLiteStore.updateShowStats()
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L245
+    private void addPosterThumb() {
+        // download the image referenced by the URL in 'poster', resize, save to disk, and update 'posterThumb' with its local filepath
+        //   via call to: sToAdd.setPosterThumb(posterThumbPath)
+    }
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/thetvdb/model/Serie.java#L258
+    public boolean saveToDB(SQLiteStore db) {
+        db.execQuery("INSERT INTO actors        (serieId, actor)  VALUES (...)");
+        db.execQuery("INSERT INTO genres        (serieId, genre)  VALUES (...)");
+        db.execQuery("INSERT INTO serie_seasons (serieId, season) VALUES (...)");
+        db.execQuery("INSERT INTO series        (id, serieId, language, serieName, banner, overview, firstAired, imdbId, zap2ItId, airsDayOfWeek, airsTime, contentRating, network, rating, runtime, status, fanart, lastUpdated, poster, posterInCache, posterThumb, passiveStatus) VALUES (...)");
+        for(int e=0; e < this.episodes.size(); e++) {
+            this.episodes.get(e).setSeriesId(this.id);
+            this.episodes.get(e).saveToDB(db);
+        }
+        db.updateShowStats(this.id);
+    }
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/thetvdb/model/Episode.java#L262
+    public boolean saveToDB(SQLiteStore db) {
+        db.execQuery("INSERT INTO directors  (serieId, episodeId, director)  VALUES (...)");
+        db.execQuery("INSERT INTO guestStars (serieId, episodeId, guestStar) VALUES (...)");
+        db.execQuery("INSERT INTO writers    (serieId, episodeId, writer)    VALUES (...)");
+        db.execQuery("INSERT INTO episodes   (serieId, id, combinedEpisodeNumber, combinedSeason, dvdChapter, dvdDiscId, dvdEpisodeNumber, dvdSeason, epImgFlag, episodeName, episodeNumber, firstAired, imdbId, language, overview, productionCode, rating, seasonNumber, "absoluteNumber, filename, lastUpdated, seasonId, seen) VALUES (...)");
+    }
+
+--------------------------------------------------------------------------------
+
+more detailed trace of event: adding a new TV series
+====================================================
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L135
+    private void searchSeries(String searchQuery) {
+        ArrayList<Serie> search_series = theTVDB.searchSeries(searchQuery, langCode);
+
+        // results are then displayed in a ListView
+    }
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L103
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L108
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L112-L114
+    context menu of each item in list of search results has option: "Add show"
+    clicking on this option calls: addSerie(Serie s)
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L340
+    clicking on an item in list of seach results opens an alert dialog,
+    which displays an overview of the series and has its positive button labeled: "ADD SHOW"
+    clicking on this button calls: addSerie(Serie s)
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L375
+    when displaying an individual row in the list of search results..
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L390-L396
+    boolean alreadyExists indicates whether the series in the search results has already been added.
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L408-L413
+    if not, then CheckedTextView is given the drawable "add" and an onclick event listener
+    clicking on this CheckedTextView calls: addSerie(Serie s)
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L179
+    private void addSerie(Serie s) {
+      addSerieTask = new AsyncAddSerie();
+      addSerieTask.execute(s);
+    }
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L189
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L198
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L210
+    private class AsyncAddSerie extends AsyncTask<Serie, Void, Boolean> {
+        protected Boolean doInBackground(Serie... params) {
+            sToAdd = theTVDB.getSerie(s.getId(), s.getLanguage());
+            addPosterThumb();                                                   // download poster, resize to icon, save to disk, add filepath to DB
+            sToAdd.setPassiveStatus((DroidShows.showArchive == 1 ? 1 : 0));
+            sToAdd.saveToDB(db);
+        }
+    }
+
+----------------------------------------
+
+summary:
+========
+
+* adding a new TV series:
+  1) .ui.AddSerie
+        -> AsyncAddSerie.doInBackground(Serie serie)
+  2) .thetvdb.TheTVDB
+        -> getSerie(String id, String language)
+  3) .thetvdb.model.Serie
+        -> saveToDB(SQLiteStore db)
+  4) .thetvdb.model.Episode
+        -> saveToDB(SQLiteStore db)
+  5) .util.SQLiteStore
+        ->execQuery(String query)
+        ->updateShowStats(String serieId)
+
+--------------------------------------------------------------------------------
+
+more detailed trace of event: updating one TV series
+====================================================
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L879
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L897-L898
+    context menu of each item in list of added shows has option: "Update"
+    clicking on this option calls: updateSerie(final TVShowItem serie, int position)
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L900-L910
+    context menu of each item in list of added shows has option: "Synopsis language"
+    clicking on this option opens an alert dialog with a list of all languages supported by the API.
+    clicking on any language in the list calls: updateSerie(TVShowItem serie, final String langCode, int position)
+    BUG: there is no check to prevent this API update when the chosen language is the same as the current language
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1233-L1235
+    private void updateSerie(final TVShowItem serie, int position) {
+        updateSerie(serie, null, position);
+    }
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1237
+    private void updateSerie(TVShowItem serie, final String langCode, int position) {
+        TheTVDB theTVDB = new TheTVDB("8AC675886350B3C3", useMirror);
+        Serie sToUpdate = theTVDB.getSerie(serieId, langCode == null ? currentLang : langCode);
+        db.updateSerie(sToUpdate, langCode == null ? latestSeasonOption == UPDATE_LATEST_SEASON_ONLY : false);
+        updatePosterThumb(serieId, sToUpdate);
+    }
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1277
+    public void updatePosterThumb(String serieId, Serie sToUpdate) {
+        // query DB for: 'poster, posterThumb'
+        // if 'posterThumb' is not empty, then do nothing
+        // otherwise, download the image referenced by the URL in 'poster', resize, save to disk, and update 'posterThumb' with its local filepath
+        //   via call to: db.execQuery("UPDATE series SET posterThumb='"+ posterThumbPath +"' WHERE id='"+ serieId +"'"")
+    }
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/utils/SQLiteStore.java#L781
+    public boolean updateSerie(Serie s, boolean last_season) {
+        // --------------------------------------- series:
+        // update series set ... where id=
+        // --------------------------------------- series mapping tables:
+        // delete from serie_seasons where serieId=
+        // loop(seasons):
+        //   insert into serie_seasons (serieId, season) values ()
+        // delete from actors where serieId=
+        // loop(actors):
+        //   insert into actors (serieId, actor) values ()
+        // delete from genres where serieId=
+        // loop(genres):
+        //   insert into genres (serieId, genre) values ()
+        // --------------------------------------- episodes mapping tables:
+        // delete from directors where serieId=
+        // delete from guestStars where serieId=
+        // delete from writers where serieId=
+        // --------------------------------------- episodes:
+        // delete from episodes where serieId=
+        // loop(episodes):
+        //   loop(directors):
+        //     insert into directors (serieId, episodeId, director) values ()
+        //   loop(guestStars):
+        //     insert into guestStars (serieId, episodeId, guestStar) values ()
+        //   loop(writers):
+        //     insert into writers (serieId, episodeId, writer) values ()
+        //   insert into episodes (...) values ()
+
+        updateShowStats(s.getId());
+    }
+
+----------------------------------------
+
+observations:
+=============
+
+* I would reorder the sequence of events
+  - rather than:
+    * call api to produce model
+    * call db to save model
+    * call db to update record
+      - ex: 'posterThumb'
+  - I would prefer the same methodology used when the series was first added:
+    * call api to produce model
+    * update model
+      - ex: sToUpdate.setPosterThumb(posterThumbPath)
+    * call db to save model
+  - of course, the addition of a class that manages the glue between API and DB would:
+    * reuse the same code for both
+    * do it as efficiently as possible
+
+* updateSerie() is crazy inefficient in how it updates each mapping table in a loop, rather than accumulating data into a single SQL statement to be performed after the loop
+
+* BUG (?):
+  - this is pretty much true of every call to: SQLiteStore.execQuery(String query)
+    * when the 'query' string if being constructed and text values are enclosed by single quotes,
+      I don't see any sanitizing of the text value to escape accidental inclusion of single quotes,
+      or any other unsafe content..
+  - what happens when a series' name or overview includes a single quote?
+    * name of test series: "Dr. Horrible's Sing-Along Blog"
+    * https://thetvdb.com/api/GetSeries.php?seriesname=Sing-Along+Blog&language=en
+        <SeriesName>Dr. Horrible's Sing-Along Blog</SeriesName>
+    * result:
+      - the app works fine: both to add and to update
+      - the field must be escaped somewhere else..
+  - update: I was wrong..
+    * when the 'query' string if being constructed and text values are enclosed by single quotes,
+      all of the vital fields are escaped with: DatabaseUtils.sqlEscapeString(value)
+    * example:
+      - code:
+          https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/utils/SQLiteStore.java#L921
+          https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/utils/SQLiteStore.java#L943
+          https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/utils/SQLiteStore.java#L953
+      - demo:
+          execQuery(
+              "INSERT INTO episodes (serieId, id, episodeName, overview) values ("
+            +   "'" + s.getId()                               + "'" + ", "
+            +   "'" + ep.getId()                              + "'" + ", "
+            +   "'" + DatabaseUtils.sqlEscapeString(name)     + "'" + ", "
+            +   "'" + DatabaseUtils.sqlEscapeString(overview) + "'"
+            + ")"
+          );
+
+* all this stuff about 'last_season' is pointless
+  - it doesn't request less data from the API
+  - it only limits how much of the API data is stored into the DB
+  - BUG:
+    * the DB field 'serie_seasons.season' is VARCHAR but this code parses it as an INTEGER
+    * because its a VARCHAR
+      - the query can't request only the largest value (ie: "order by season descending limit 1")
+      - instead.. the code has to query all values, parse each to an integer, loop and perform a O(n) sort
+    * although, interestly..
+      - code:
+          https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieSeasons.java#L121
+            Cursor cseasons = db.Query("SELECT season FROM serie_seasons WHERE serieId = '"+ serieId +"'  ORDER BY 0+season ASC");  // 0+ to treat VARCHAR as integer an sort properly
+      - so, even though it's still a bad DB Schema choice..
+        all of this looping could've been avoided by adding to the query: "order by 0+season descending limit 1"
+  - plus, I plan to use a more intelligent approach toward determining what data to request from the TMDB API..
+    since each episode needs to be requested individually;
+    basically for each update:
+    * determine what episodes exist
+      - based on the API result for a series including a list of all seasons,
+        which includes the total number of episodes in each
+    * determine which episodes we already have a record for
+    * request the difference
+    unless..
+    * the user has changed language;
+      in which case, all episodes need to be updated to obtain translated text;
+      which again.. is something that a special-purpose class can orchestrate much better.
+
+summary:
+========
+
+* updating one TV series:
+  1) DroidShows
+        -> updateSerie(TVShowItem serie, final String langCode, int position)
+  2) .thetvdb.TheTVDB
+        -> getSerie(String id, String language)
+  3) .util.SQLiteStore
+        ->updateSerie(Serie s, boolean last_season)
+        ->execQuery(String query)
+        ->updateShowStats(String serieId)
+
+--------------------------------------------------------------------------------
+
+more detailed trace of event: updating all TV series
+====================================================
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L327
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L336
+    public boolean onCreateOptionsMenu(Menu menu) {
+        menu.add(0, UPDATEALL_MENU_ITEM, 0, getString(R.string.menu_update)).setIcon(android.R.drawable.ic_menu_upload);
+    }
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L421
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L441-L442
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case UPDATEALL_MENU_ITEM :
+              updateAllSeriesDialog();
+              break;
+        }
+    }
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1361
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1370
+    public void updateAllSeriesDialog() {
+        // show alert dialog with positive button that calls: updateAllSeries(showArchive)
+        // where 'showArchive' is a class variable that functions as a boolean
+        // and toggles between whether or not the list is displaying archived shows (1) or non-archived shows (0).
+    }
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1382
+    public void updateAllSeries(final int showArchive) {
+        List<String> ids = db.getSeries(searching() ? 2 : showArchive, false, null);
+
+        final List<TVShowItem> seriesToUpdate = new ArrayList<TVShowItem>();
+        for (String id : ids)
+            seriesToUpdate.add(db.createTVShowItem(id));
+
+        for (int i = 0; i < seriesToUpdate.size(); i++) {
+            Serie sToUpdate = theTVDB.getSerie(seriesToUpdate.get(i).getSerieId(), seriesToUpdate.get(i).getLanguage());
+            db.updateSerie(sToUpdate, latestSeasonOption == UPDATE_LATEST_SEASON_ONLY);
+            updatePosterThumb(seriesToUpdate.get(i).getSerieId(), sToUpdate);
+        }
+    }
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/utils/SQLiteStore.java#L264
+    public List<String> getSeries(int showArchive, boolean filterNetworks, List<String> showNetworks) {
+        // where 'showArchive' can hold one of 3x values:
+        //   0: only return the series ID values for shows that are not archived
+        //   1: only return the series ID values for shows that are archived
+        //   2: return the series ID values for all shows
+
+        // select id from series where ...
+    }
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/utils/SQLiteStore.java#L118
+    public TVShowItem createTVShowItem(String serieId) {
+        Query("SELECT serieName, language, posterThumb, status, passiveStatus, seasonCount, unwatchedAired, unwatched, nextEpisode, nextAir, extResources FROM series WHERE id = '" + serieId + "'");
+        ...
+        return new TVShowItem(serieId, language, tmpPoster, null, name, seasonCount, nextEpisode, nextAir, unwatchedAired, unwatched, status, showStatus, extResources);
+    }
+
+----------------------------------------
+
+observations:
+=============
+
+* nearly identical to calling updateSerie() in a loop
+
+summary:
+========
+
+* updating all TV series:
+  1) DroidShows
+        -> updateAllSeries(final int showArchive)
+  2) .util.SQLiteStore
+        ->getSeries(int showArchive, boolean filterNetworks, List<String> showNetworks)
+        ->createTVShowItem(String serieId)
+  3) .thetvdb.TheTVDB
+        -> getSerie(String id, String language)
+  4) .util.SQLiteStore
+        ->updateSerie(Serie s, boolean last_season)
+        ->execQuery(String query)
+        ->updateShowStats(String serieId)
+
+--------------------------------------------------------------------------------
+
+list of places in code where one-off SQL queries are performed:
+===============================================================
+
+=======
+writes:
+=======
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1320
+    db.execQuery("UPDATE series SET posterInCache='true', poster='"+ poster +"', posterThumb='"+ posterThumbPath +"' WHERE id='"+ serieId +"'");
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1660
+    db.execQuery("UPDATE series SET unwatched="+ unwatched +", unwatchedAired="+ unwatchedAired +", nextEpisode='"+ nextEpisodeString +"' WHERE id="+ serieId);
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1663
+    db.execQuery("UPDATE series SET unwatched="+ unwatched +", unwatchedAired="+ unwatchedAired +" WHERE id="+ serieId);
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/thetvdb/model/Episode.java#L265
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/thetvdb/model/Episode.java#L269
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/thetvdb/model/Episode.java#L273
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/thetvdb/model/Episode.java#L284
+    public boolean saveToDB(SQLiteStore SQLS) {...}
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/thetvdb/model/Serie.java#L261
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/thetvdb/model/Serie.java#L266
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/thetvdb/model/Serie.java#L271
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/thetvdb/model/Serie.java#L279
+    public boolean saveToDB(SQLiteStore SQLS) {...}
+
+======
+reads:
+======
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1120
+    query = "SELECT imdbId, episodeName FROM episodes WHERE id = '"+ episode +"' AND serieId='"+ serieId +"'";
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1122
+    query = "SELECT imdbId, serieName FROM series WHERE id = '" + serieId + "'";
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1278
+    Cursor c = DroidShows.db.Query("SELECT posterInCache, poster, posterThumb FROM series WHERE id='"+ serieId +"'");
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieSeasons.java#L121
+    Cursor cseasons = db.Query("SELECT season FROM serie_seasons WHERE serieId = '"+ serieId +"'  ORDER BY 0+season ASC");  // 0+ to treat VARCHAR as integer an sort properly
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/ViewEpisode.java#L64
+    String query = "SELECT seasonNumber, episodeNumber, episodeName, overview, rating, firstAired, imdbId, seen FROM episodes WHERE id = '"+ episodeId +"' AND serieId='"+ serieId +"'";
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/ViewEpisode.java#L164
+    Cursor cwriters = db.Query("SELECT writer FROM writers WHERE episodeId='" + episodeId +"' AND serieId='"+ serieId +"'");
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/ViewEpisode.java#L182
+    Cursor cdirectors = db.Query("SELECT director FROM directors WHERE episodeId='"+ episodeId +"' AND serieId='"+ serieId +"'");
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/ViewEpisode.java#L200
+    Cursor cgs = db.Query("SELECT guestStar FROM guestStars WHERE episodeId='"+ episodeId +"' AND serieId='"+ serieId +"'");
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/ViewSerie.java#L56
+    String query = "SELECT serieName, posterThumb, poster, fanart, overview, status, firstAired, airsDayOfWeek, airsTime, runtime, network, rating, contentRating, imdbId FROM series WHERE id = '" + serieId + "'";
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/ViewSerie.java#L113
+    Cursor cgenres = db.Query("SELECT genre FROM genres WHERE serieId='"+ serieId + "'");
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/ViewSerie.java#L182
+    Cursor cactors = db.Query("SELECT actor FROM actors WHERE serieId='"+ serieId + "'");
+
+--------------------------------------------------------------------------------
+
+list of places in code where public methods in SQLiteStore class are used:
+==========================================================================
+
+==============
+(read methods)
+==============
+
+* createTVShowItem(String serieId)
+  - DroidShows
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1051
+        private void updateShowView(final TVShowItem serie)
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1389
+        public void updateAllSeries(final int showArchive)
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1499
+        private void getSeries(int showArchive, boolean filterNetworks)
+        BUG:
+          https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1497-L1499
+          https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1503-L1505
+            should notify the ListView adapter that the data has changed AFTER changes to the data are finished
+
+* getEpisodes(String serieId)
+  - N/A: method is not called
+
+* getSeries(int showArchive, boolean filterNetworks, List<String> showNetworks)
+  - DroidShows
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1387
+        public void updateAllSeries(final int showArchive)
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1495
+        getSeries(int showArchive, boolean filterNetworks)
+  - .ui.AddSerie
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L76
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L203
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L359
+        private List<String> series;
+        public void onCreate(Bundle savedInstanceState) {
+            series = db.getSeries(2, false, null);  // 2 = archive and current shows, false = don't filter networks, null = ignore networks filter
+        }
+        private class AsyncAddSerie extends AsyncTask<Serie, Void, Boolean> {
+            protected Boolean doInBackground(Serie... params) {
+                Serie s = params[0];
+
+                boolean alreadyExists = false;
+                for (String serieId : series) {
+                  if (serieId.equals(s.getId())) {
+                    alreadyExists = true;
+                    break;
+                  }
+                }
+                if (alreadyExists) return false;
+            }
+        }
+        protected void onListItemClick(ListView l, View v, int position, long id) {
+            // display alert dialog with series overview.
+            // disable the positive "add series" button if series has already been added:
+
+            final Serie sToAdd = AddSerie.search_series.get(position);
+
+            for (String serieId : series)
+              if (serieId.equals(sToAdd.getId())) {
+                sOverview.getButton(AlertDialog.BUTTON_POSITIVE).setEnabled(false);
+                break;
+              }
+            }
+        }
+
+* getNetworks()
+  - DroidShows
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L493
+        private void filterDialog()
+
+* getLog()
+  - DroidShows
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1501
+        private void getSeries(int showArchive, boolean filterNetworks)
+
+* getLog(int offset)
+  - DroidShows
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1523
+        public void getNextLogged()
+
+* getEpisodeRows(String serieId, int seasonNumber)
+* getEpisodeRow(String serieId, int seasonNumber, String episodeId)
+  - .ui.SerieEpisodes
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieEpisodes.java#L290
+        private List<EpisodeRow> episodes;
+        public void onCreate(Bundle savedInstanceState) {
+            episodes = db.getEpisodeRows(serieId, seasonNumber);
+        }
+        private void startViewEpisode(int position) {
+            backFromEpisode = position;
+            Intent viewEpisode = new Intent(SerieEpisodes.this, ViewEpisode.class);
+            viewEpisode.putExtra("serieId", serieId);
+            viewEpisode.putExtra("serieName", serieName);
+            viewEpisode.putExtra("episodeId", episodes.get(position).id);
+            startActivity(viewEpisode);
+        }
+        public void onRestart() {
+            if (backFromEpisode != -1) {
+                episodes.set(backFromEpisode, db.getEpisodeRow(serieId, seasonNumber, episodes.get(backFromEpisode).id));
+                episodesAdapter.notifyDataSetChanged();
+                backFromEpisode = -1;
+            }
+        }
+
+* convertSeenTimestamps()
+  - .utils.Update
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/utils/Update.java#L104
+        private boolean u0157GTo0157G3() {
+            if (!db.convertSeenTimestamps()) return false;
+            db.execQuery("UPDATE droidseries SET version='0.1.5-7G3'");
+        }
+
+* getSerieIMDbId(String serieId)
+  - DroidShows
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1127
+        private void IMDbDetails(String serieId, String serieName, String episode) {
+            // if episode is null, queries for: series.imdbId
+            // otherwise,          queries for: episode.imdbId
+
+            if (episode != null && imdbId.equals(db.getSerieIMDbId(serieId)))	// Sometimes the given episode's IMDb id is that of the show's
+                imdbId = "";	// So we want to search for the episode instead of go to the show's page
+        }
+
+* getSerieName(String serieId)
+  - .ui.SerieEpisodes
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieEpisodes.java#L65
+        public void onCreate(Bundle savedInstanceState) {
+            String serieId   = getIntent().getStringExtra("serieId");
+            String serieName = db.getSerieName(serieId);
+        }
+  - .ui.SerieSeasons
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieSeasons.java#L55
+        public void onCreate(Bundle savedInstanceState) {
+            String serieId   = getIntent().getStringExtra("serieId");
+            setTitle(db.getSerieName(serieId));
+        }
+
+* getEpsWatched(String serieId)
+  - .ui.ViewSerie
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/ViewSerie.java#L166
+        // if (getEpsWatched() > 0), then append to the text that indicates runtime length: "(hh:mm marked as seen)",
+        // where "hh:mm" are formatted from: (runtime in minutes / episode)*(count of episodes watched)
+
+* getEpsUnwatchedAired(String serieId)
+* getEpsUnwatched(String serieId)
+* getNextEpisode(String serieId)
+* getNextEpisodeString(NextEpisode nextEpisode, boolean showNextAiring)
+  - DroidShows
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1650
+        private static class AsyncInfo extends AsyncTask<Void, Void, Void> {
+            protected Void doInBackground(Void... params) {
+                for (int i = 0; i < series.size(); i++) {
+                    TVShowItem serie = series.get(i);
+
+                    String serieId     = serie.getSerieId();
+                    int unwatched      = db.getEpsUnwatched(serieId);
+                    int unwatchedAired = db.getEpsUnwatchedAired(serieId);
+                    if (unwatched != serie.getUnwatched() || unwatchedAired != serie.getUnwatchedAired()) {
+                        serie.setUnwatched(unwatched);
+                        serie.setUnwatchedAired(unwatchedAired);
+
+                        NextEpisode nextEpisode  = db.getNextEpisode(serieId);
+                        String nextEpisodeString = db.getNextEpisodeString(nextEpisode, true);
+                        serie.setNextEpisode(nextEpisodeString);
+
+                        db.execQuery("UPDATE series SET unwatched="+ unwatched +", unwatchedAired="+ unwatchedAired +", nextEpisode='"+ nextEpisodeString +"' WHERE id="+ serieId);
+                    }
+                }
+            }
+        }
+  - .ui.AddSerie
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L222
+        private class AsyncAddSerie extends AsyncTask<Serie, Void, Boolean> {
+            protected Boolean doInBackground(Serie... params) {
+                ...
+                // save new series to DB
+                addPosterThumb();
+                sToAdd.saveToDB(db);
+
+                // update ListView in DroidShows
+                int nseasons = db.getSeasonCount(sToAdd.getId());
+                SQLiteStore.NextEpisode nextEpisode = db.getNextEpisode(sToAdd.getId());
+                int unwatchedAired = db.getEpsUnwatchedAired(sToAdd.getId());
+                int unwatched = db.getEpsUnwatched(sToAdd.getId());
+                String nextEpisodeStr = db.getNextEpisodeString(nextEpisode, DroidShows.showNextAiring && 0 < unwatchedAired && unwatchedAired < unwatched);
+                Drawable d = Drawable.createFromPath(sToAdd.getPosterThumb());
+                TVShowItem tvsi = new TVShowItem(sToAdd.getId(), sToAdd.getLanguage(), sToAdd.getPosterThumb(), d, sToAdd.getSerieName(), nseasons,
+                  nextEpisodeStr, nextEpisode.firstAiredDate, unwatchedAired, unwatched, sToAdd.getPassiveStatus() == 1,
+                  (sToAdd.getStatus() == null ? "null" : sToAdd.getStatus()), "");
+                DroidShows.series.add(tvsi);
+                runOnUiThread(DroidShows.updateListView);
+            }
+        }
+
+* getSeasonCount(String serieId)
+  - .ui.AddSerie
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L220
+        private class AsyncAddSerie extends AsyncTask<Serie, Void, Boolean> {
+            protected Boolean doInBackground(Serie... params) {
+                ...
+                // save new series to DB
+                addPosterThumb();
+                sToAdd.saveToDB(db);
+
+                // update ListView in DroidShows
+                int nseasons = db.getSeasonCount(sToAdd.getId());
+                SQLiteStore.NextEpisode nextEpisode = db.getNextEpisode(sToAdd.getId());
+                int unwatchedAired = db.getEpsUnwatchedAired(sToAdd.getId());
+                int unwatched = db.getEpsUnwatched(sToAdd.getId());
+                String nextEpisodeStr = db.getNextEpisodeString(nextEpisode, DroidShows.showNextAiring && 0 < unwatchedAired && unwatchedAired < unwatched);
+                Drawable d = Drawable.createFromPath(sToAdd.getPosterThumb());
+                TVShowItem tvsi = new TVShowItem(sToAdd.getId(), sToAdd.getLanguage(), sToAdd.getPosterThumb(), d, sToAdd.getSerieName(), nseasons,
+                  nextEpisodeStr, nextEpisode.firstAiredDate, unwatchedAired, unwatched, sToAdd.getPassiveStatus() == 1,
+                  (sToAdd.getStatus() == null ? "null" : sToAdd.getStatus()), "");
+                DroidShows.series.add(tvsi);
+                runOnUiThread(DroidShows.updateListView);
+            }
+        }
+
+* getEpsUnwatchedAired(String serieId, int snumber)
+* getEpsUnwatched(String serieId, int snumber)
+* getNextEpisode(String serieId, int snumber)
+* getNextEpisodeString(NextEpisode nextEpisode)
+  - .ui.SerieSeasons
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieSeasons.java#L168
+        private static class AsyncInfo extends AsyncTask<Void, Void, Void> {
+            protected Void doInBackground(Void... params) {
+                for (int i = 0; i < seasons.size(); i++) {
+                    String serieId = seasons.get(i).getSerieId();
+                    int seasonNumber = seasons.get(i).getSNumber();
+                    int unwatchedAired = db.getEpsUnwatchedAired(serieId, seasonNumber);
+                    int unwatched = db.getEpsUnwatched(serieId, seasonNumber);
+                    seasons.get(i).setUnwatchedAired(unwatchedAired);
+                    seasons.get(i).setUnwatched(unwatched);
+                    if (unwatched > 0) {
+                      SQLiteStore.NextEpisode nextEpisode = db.getNextEpisode(serieId, seasonNumber);
+                      seasons.get(i).setNextAir(nextEpisode.firstAiredDate);
+                      seasons.get(i).setNextEpisode(db.getNextEpisodeString(nextEpisode));
+                    }
+                }
+            }
+        }
+
+* getNextEpisodeId(String serieId)
+  - DroidShows
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1077
+        private void episodeDetails(int position) {
+            String serieId = seriesAdapter.getItem(position).getSerieId();
+            String episodeId = "-1";
+            if (!logMode)
+              episodeId = db.getNextEpisodeId(serieId);
+            else
+              episodeId = seriesAdapter.getItem(position).getEpisodeId();
+            if (!episodeId.equals("-1")) {
+              backFromSeasonSerieId = serieId;
+              Intent viewEpisode = new Intent(DroidShows.this, ViewEpisode.class);
+              viewEpisode.putExtra("serieName", seriesAdapter.getItem(position).getName());
+              viewEpisode.putExtra("serieId", serieId);
+              viewEpisode.putExtra("episodeId", episodeId);
+              startActivity(viewEpisode);
+            }
+        }
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1175
+        private void extResources(String extResourcesString, final int position) {
+            final TVShowItem serie = seriesAdapter.getItem(position);
+
+            final String[] extResources = (
+                getString(R.string.menu_context_view_imdb) +"\n"+
+                getString(R.string.menu_context_view_ep_imdb) +"\n"+
+                getString(R.string.menu_context_search_on) +" FANDOM (Wikia)\n"+
+                getString(R.string.menu_context_search_on) +" Rotten Tomatoes\n"+
+                getString(R.string.menu_context_search_on) +" Wikipedia\n"+
+                extResourcesString
+                +"\u2026"
+            ).split("\\n");
+
+            new AlertDialog.Builder(this)
+              .setTitle(serie.getName())
+              .setItems(extResources, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int item) {
+                  switch(item) {
+                    case 0 :
+                      IMDbDetails(serie.getSerieId(), serie.getName(), null);
+                      break;
+                    case 1 :
+                      IMDbDetails(serie.getSerieId(), serie.getName(), logMode ? serie.getEpisodeId() : db.getNextEpisodeId(serie.getSerieId()));
+                      break;
+                    ...
+                  }
+                }
+              })
+              .show();
+        }
+
+* getNextEpisodeId(String serieId, boolean noFutureEp)
+  - DroidShows
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1007
+        private void markNextEpSeen(int position) {
+            TVShowItem serie = seriesAdapter.getItem(position);
+            String serieId = serie.getSerieId();
+            String nextEpisode = db.getNextEpisodeId(serieId, true);
+            if (!nextEpisode.equals("-1")) {
+              String episodeMarked = db.updateUnwatchedEpisode(serieId, nextEpisode);
+              Toast.makeText(getApplicationContext(), serie.getName() +" "+ episodeMarked +" "+ getString(R.string.messages_marked_seen), Toast.LENGTH_SHORT).show();
+              undo.add(new String[] {serieId, nextEpisode, serie.getName()});
+              updateShowView(serie);
+            }
+        }
+
+* getLastWatchedEpisode(String serieId)
+  - N/A: method is not called
+
+* getNextEpisode(String serieId)
+  - see above:
+    * DroidShows
+    * .ui.AddSerie
+  - .ui.SerieSeasons
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieSeasons.java#L63-L65
+        public void onCreate(Bundle savedInstanceState) {
+            listView.setSelection(getIntent().getIntExtra("season", 1) -1);
+            if (getIntent().getBooleanExtra("nextEpisode", false))
+              listView.setSelection(db.getNextEpisode(serieId).season -1);
+        }
+
+* getNextEpisode(String serieId, int snumber)
+  - see above:
+    * .ui.SerieSeasons
+  - .ui.SerieEpisodes
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieEpisodes.java#L74-L75
+        public void onCreate(Bundle savedInstanceState) {
+            if (getIntent().getBooleanExtra("nextEpisode", false))
+              listView.setSelection(db.getNextEpisode(serieId, seasonNumber).episode -3);
+        }
+        QUESTION: Why -3 (rather than -1)?
+        NOTE:     The list used by the ListView adapter is: db.getEpisodeRows(serieId, seasonNumber)
+
+* getNextEpisode(String serieId, boolean showNextAiring)
+  - N/A: method is not called
+
+* getNextEpisodeString(NextEpisode nextEpisode, boolean showNextAiring, boolean requireAiredDate)
+  - N/A: method is not called
+
+* getSeasonEpisodeCount(String serieId, int sNumber)
+  - .ui.SerieSeasons
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieSeasons.java#L240
+        private class SeriesSeasonsAdapter extends ArrayAdapter<Season> {
+            public View getView(int position, View convertView, ViewGroup parent) {
+                convertView = vi.inflate(R.layout.row_serie_seasons, parent, false);
+                ViewHolder holder = new ViewHolder();
+                holder.unwatched = (TextView) convertView.findViewById(R.id.unwatched);
+
+                String unwatchedText = db.getSeasonEpisodeCount(serieId, s.getSNumber()) + " " + strEps;
+                holder.unwatched.setText(unwatchedText);
+            }
+        }
+
+================
+(update methods)
+================
+
+* updateUnwatchedSeason(String serieId, int nseason)
+* updateWatchedSeason(String serieId, int nseason)
+  - .ui.SerieSeasons
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieSeasons.java#L81
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieSeasons.java#L90
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieSeasons.java#L85
+        public boolean onContextItemSelected(MenuItem item) {
+            AdapterContextMenuInfo info = (AdapterContextMenuInfo) item.getMenuInfo();
+
+            switch (item.getItemId()) {
+                case ALLEPSEEN_CONTEXT :
+                    db.updateUnwatchedSeason(serieId, seasonNumbers.get(info.position));
+                case ALLUPTOTHIS_CONTEXT :
+                    for (int i = 1; i <= seasonNumbers.get(info.position); i++) {
+                      db.updateUnwatchedSeason(serieId, i);
+                    }
+                case ALLEPUNSEEN_CONTEXT :
+                    db.updateWatchedSeason(serieId, seasonNumbers.get(info.position));
+            }
+        }
+
+* updateUnwatchedEpisode(String serieId, String episodeId)
+  - DroidShows
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1009
+        private void markNextEpSeen(int position) {
+            TVShowItem serie = seriesAdapter.getItem(position);
+            String serieId = serie.getSerieId();
+            String nextEpisode = db.getNextEpisodeId(serieId, true);
+            if (!nextEpisode.equals("-1")) {
+              String episodeMarked = db.updateUnwatchedEpisode(serieId, nextEpisode);
+              Toast.makeText(getApplicationContext(), serie.getName() +" "+ episodeMarked +" "+ getString(R.string.messages_marked_seen), Toast.LENGTH_SHORT).show();
+              undo.add(new String[] {serieId, nextEpisode, serie.getName()});
+              updateShowView(serie);
+            }
+        }
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1021
+        private void markLastEpUnseen() {
+            String[] episodeInfo = undo.get(undo.size()-1);
+            String serieId = episodeInfo[0];
+            String episodeId = episodeInfo[1];
+            String serieName = episodeInfo[2];
+            String episodeMarked = db.updateUnwatchedEpisode(serieId, episodeId);
+            undo.remove(undo.size()-1);
+            Toast.makeText(getApplicationContext(), serieName +" "+ episodeMarked +" "+ getString(R.string.messages_marked_unseen), Toast.LENGTH_SHORT).show();
+            listView.post(updateShowView(serieId));
+        }
+
+* updateUnwatchedEpisode(String serieId, String episodeId, long newSeen)
+  NOTE:
+    * if (newSeen == -1), the behavior of this method is to toggle the DB field
+      - if 0: update to current timestamp
+      - if contains a timestamp: update to 0
+  - .ui.SerieEpisodes
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieEpisodes.java#L240
+        // update method #1
+        protected void onListItemClick(ListView l, View v, int position, long id) {
+            if (DroidShows.fullLineCheckOption) {
+                CheckBox c = (CheckBox) v.findViewById(R.id.seen);
+                c.setChecked(!c.isChecked());
+                check(position, v, -1);
+            }
+        }
+        // update method #1
+        public boolean onContextItemSelected(MenuItem item) {
+            switch (item.getItemId()) {
+                // "Edit seen timestamp"
+                case SEENTIMESTAMP_CONTEXT:
+                    seenTimestamp(info.position);
+            }
+        }
+        private void seenTimestamp(final int position) {
+            // display a DatePickerDialog w/ a listener that eventually calls:
+            check(position, cal.getTimeInMillis() / 1000);
+        }
+        // call to DB
+        private void check(int position, long seen) {
+            check(position, getViewByPosition(position), seen);
+        }
+        private void check(int position, View v, long seen) {
+            db.updateUnwatchedEpisode(serieId, episodes.get(position).id, seen);
+        }
+  - .ui.ViewEpisode
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/ViewEpisode.java#L292
+        private long seen = 0;
+        public void onCreate(Bundle savedInstanceState) {
+            serieId = getIntent().getStringExtra("serieId");
+            serieName = getIntent().getStringExtra("serieName");
+            episodeId = getIntent().getStringExtra("episodeId");
+
+            String query = "SELECT seasonNumber, episodeNumber, episodeName, overview, rating, firstAired, imdbId, seen FROM episodes WHERE id = '"+ episodeId +"' AND serieId='"+ serieId +"'";
+
+            int seenCol = c.getColumnIndex("seen");
+            seen = c.getInt(seenCol);
+
+            final CheckBox seenCheckBox = (CheckBox) findViewById(R.id.seen);
+            seenCheckBox.setChecked(seen > 0);
+            check(seenCheckBox);
+            // BUG: 'onCreate' reads from the DB and immediately updates the 'seen' field with the current/unchanged value
+
+            seenCheckBox.setOnLongClickListener(new OnLongClickListener() {
+                // long click opens a DatePickerDialog w/ a listener that eventually calls:
+                seen = cal.getTimeInMillis() / 1000;
+                seenCheckBox.setChecked(seen > 1);
+                check(seenCheckBox);
+            });
+        }
+        public void check(View v) {
+            db.updateUnwatchedEpisode(serieId, episodeId, seen);
+        }
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/res/layout/view_episode.xml#L12
+        <CheckBox android:id="@+id/seen" ... android:onClick="check"/>
+
+* updateSerieStatus(String serieId, int passiveStatus)
+  - DroidShows
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L916
+        public boolean onContextItemSelected(MenuItem item) {
+            final AdapterContextMenuInfo info = (AdapterContextMenuInfo) item.getMenuInfo();
+
+            switch(item.getItemId()) {
+                case TOGGLE_ARCHIVED_CONTEXT :
+                    TVShowItem serie = seriesAdapter.getItem(info.position);
+                    boolean passiveStatus = serie.getPassiveStatus();
+                    db.updateSerieStatus(serie.getSerieId(), (passiveStatus ? 0 : 1));
+            }
+        }
+
+* updateExtResources(String serieId, String extResources)
+  - DroidShows
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1197
+        private void extResources(String extResourcesString, final int position) {
+            final TVShowItem serie = seriesAdapter.getItem(position);
+
+            final String[] extResources = (
+                getString(R.string.menu_context_view_imdb) +"\n"+
+                getString(R.string.menu_context_view_ep_imdb) +"\n"+
+                getString(R.string.menu_context_search_on) +" FANDOM (Wikia)\n"+
+                getString(R.string.menu_context_search_on) +" Rotten Tomatoes\n"+
+                getString(R.string.menu_context_search_on) +" Wikipedia\n"+
+                extResourcesString
+                +"\u2026"
+            ).split("\\n");
+
+            new AlertDialog.Builder(this)
+              .setTitle(serie.getName())
+              .setItems(extResources, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int item) {
+                  switch(item) {
+                    ...
+                    default :
+                        if (item == extResources.length-1) {
+                            // user clicked on last item in list: "..."
+                            // display an alert dialog with an EditText field.
+                            // the positive button has an event listener that calls:
+                            String resources = input.getText().toString().trim();
+                            serie.setExtResources(resources);
+                            db.updateExtResources(serie.getSerieId(), resources);
+                        }
+                  }
+                }
+              })
+              .show();
+        }
+
+* updateSerie(Serie s, boolean last_season)
+  IMPORTANT:
+  - DroidShows
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1256
+        private void updateSerie(TVShowItem serie, final String langCode, int position) {
+            final String serieId = serie.getSerieId();
+            final String currentLang = serie.getLanguage();
+            Serie sToUpdate = theTVDB.getSerie(serieId, langCode == null ? currentLang : langCode);
+            db.updateSerie(sToUpdate, langCode == null ? latestSeasonOption == UPDATE_LATEST_SEASON_ONLY : false);
+            updatePosterThumb(serieId, sToUpdate);
+        }
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1412
+        public void updateAllSeries(final int showArchive) {
+            List<String> ids = db.getSeries(searching() ? 2 : showArchive, false, null);
+
+            final List<TVShowItem> seriesToUpdate = new ArrayList<TVShowItem>();
+            for (String id : ids)
+                seriesToUpdate.add(db.createTVShowItem(id));
+
+            for (int i = 0; i < seriesToUpdate.size(); i++) {
+                Serie sToUpdate = theTVDB.getSerie(seriesToUpdate.get(i).getSerieId(), seriesToUpdate.get(i).getLanguage());
+                db.updateSerie(sToUpdate, latestSeasonOption == UPDATE_LATEST_SEASON_ONLY);
+                updatePosterThumb(seriesToUpdate.get(i).getSerieId(), sToUpdate);
+            }
+        }
+
+* deleteSerie(String serieId)
+  IMPORTANT:
+  - DroidShows
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L944
+        public boolean onContextItemSelected(MenuItem item) {
+            final AdapterContextMenuInfo info = (AdapterContextMenuInfo) item.getMenuInfo();
+
+            switch(item.getItemId()) {
+                case DELETE_CONTEXT :
+                    TVShowItem serie = seriesAdapter.getItem(position);
+                    db.deleteSerie(serie.getSerieId());
+            }
+        }
+
+* deleteEpisode(String serieId, String episodeId)
+  IMPORTANT:
+  - .ui.SerieEpisodes
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/SerieEpisodes.java#L96
+        public boolean onContextItemSelected(MenuItem item) {
+            AdapterContextMenuInfo info = (AdapterContextMenuInfo) item.getMenuInfo();
+
+            switch (item.getItemId()) {
+                case DELEP_CONTEXT:
+                    db.deleteEpisode(serieId, episodes.get(info.position).id);
+            }
+        }
+
+* updateShowStats()
+  IMPORTANT:
+  - DroidShows
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L239
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L234-L245
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L638
+        public void onCreate(Bundle savedInstanceState) {
+            // Update database
+            updateDS = new Update(db);
+            if (updateDS.needsUpdate()) {
+              backup(false, backupFolder);
+              updateDS.updateDroidShows();
+              db.updateShowStats();
+            }
+        }
+        private void updateShowStats() {
+            db.updateShowStats();
+        }
+        NOTE: updateShowStats() is called after:
+          * changes to several of the "Option" config values:
+              [R.id.include_specials, R.id.show_next_airing, R.id.mark_from_last_watched]
+          * updateAllSeries()
+
+* updateShowStats(String serieId)
+  IMPORTANT:
+  - .thetvdb.model.Serie
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/thetvdb/model/Serie.java#L294
+        public boolean saveToDB(SQLiteStore SQLS) {
+            // after running several SQL insert statements, and calling 'saveToDB' on all of the episodes model classes it holds..
+            SQLS.updateShowStats(this.id);
+        }
+
+* updateToday(String newToday)
+  - DroidShows
+      https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1643
+        private static class AsyncInfo extends AsyncTask<Void, Void, Void> {
+            protected Void doInBackground(Void... params) {
+                String newToday        = new SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime());	// thread needs own SimpleDateFormat to prevent collisions in formatting of other dates
+                String lastStatsUpdate = (showArchive == 0 ? lastStatsUpdateCurrent : lastStatsUpdateArchive);
+
+                if (!lastStatsUpdate.equals(newToday)) {
+                    db.updateToday(newToday);
+
+                    for (int i = 0; i < series.size(); i++) {
+                        ...
+                    }
+                }
+            }
+        }
+
+notes:
+======
+
+* methods that should be added to SQLiteStore:
+      public List<TVShowItem> createTVShowItems(int showArchive, boolean filterNetworks, List<String> showNetworks) {
+          final List<TVShowItem> items = new ArrayList<TVShowItem>();
+
+          List<String> ids = getSeries(showArchive, filterNetworks, showNetworks);
+          for (String id : ids)
+            items.add(createTVShowItem(id));
+
+          return items;
+      }
+      public boolean seriesExists(String serieId) {
+          // "select count(id) from series where id=" + serieId
+          return (count > 0);
+      }
+      public String savePosterThumb(String serieId) {
+          // if 'serie.posterThumb' is not empty, return its value
+          // otherwise: download the image at URL 'serie.poster', resize, save to disk, save its filepath to 'serie.posterThumb', return its filepath
+          // to consider: should this be public, or simply occur transparently as a part of adding/updating a row in 'serie'
+      }
+
+* methods that should be removed from SQLiteStore:
+  - convertSeenTimestamps()
+    * this belongs in: 'Update'
+    * only used once during a DB version update
+    * updates the data in the field: 'episodes.seen' INTEGER
+      - reads the value as an integer
+      - converts the value to a string
+      - parses the string value using the date format: 'yyyyMMdd'
+        * presumably, an earlier version of the app stored the date (as in integer) using this format
+        * ex: Jan 01, 1970 => 19700101
+      - updates the (integer) value in the DB field to a proper unix timestamp
+        * ie: seconds since epoch
+        * ex: Jan 01, 1970 => 0
+
+--------------------------------------------------------------------------------

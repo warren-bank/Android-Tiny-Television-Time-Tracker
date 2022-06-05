@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">el</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">Δεν βρέθηκαν παραστάσεις..</string>
 <string name="layout_search_no_items">Δεν βρέθηκαν παραστάσεις..</string>
 <string name="layout_seasons_no_items">Δεν υπάρχουν εποχές..</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">Δεν είναι δυνατή η εκτέλεση.!</string>
 <string name="dialog_backup_usefolder">Χρήση φακέλου για καθημερινή εφεδρική αποθήκευση</string>
 <string name="dialog_change_language">Περίληψη:</string>
-<string name="dialog_use_mirror">Χρήση: TheTVDB κατοπτρισμός (αν οι ενημερώσεις είναι πολύ αργές)</string>
 <string name="dialog_restore">Επαναφορά:</string>
 <string name="dialog_restore_now">Η επαναφορά ενός εφεδρικού αντιγράφου θα αφαιρέσει όλες τις πληροφορίες που υπάρχουν DroidShows. Συνέχεια:?</string>
 <string name="dialog_restore_done">Η βάση δεδομένων επέστρεψε</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">Ακύρωση.</string>
 <string name="dialog_search">Σειρά χαρακτήρων αναζήτησης:</string>
 <string name="dialog_update_series">Είστε βέβαιοι ότι θέλετε να ενημερώσετε όλες τις εμφανείς εκπομπές τώρα?</string>
-<string name="dialog_update_speedup">\n\nΜπορείτε να επιταχυνθεί αυτή η διαδικασία με την επιλογή Ενημέρωση μόνο για \' τελευταία σεζόν \'.</string>
-<string name="dialog_latest_season">Η ενημέρωση δείχνει \' τελευταία σεζόν μόνο</string>
 <string name="dialog_include_specials">Συμπερίληψη ειδικών σε μη παρακολουθήσεις.</string>
 <string name="dialog_full_line_check">Χρήση ολόκληρης γραμμής για τη σήμανση επεισοδίου</string>
 <string name="dialog_switch_swipe_direction">Σαρώστε δεξιά προς τα αριστερά για να πάει πίσω</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">\' Αρχείο</string>
 <string name="menu_unarchive">Ανάληψη.</string>
 <string name="messages_title_updating_series">Ενημέρωση εμφάνισης:</string>
-<string name="messages_title_updating_db">Ενημέρωση βάσης δεδομένων</string>
-<string name="messages_update_serie">Συλλογή πληροφοριών ...</string>
 <string name="messages_no_internet">Δεν υπάρχει διαθέσιμη σύνδεση Internet</string>
 <string name="messages_title_update_series">Ενημερώσεις:</string>
-<string name="messages_update_series">Η συγκέντρωση δείχνει πληροφορίες. Η επιχείρηση θα πάρει λίγο χρόνο ...</string>
 <string name="messages_episodes">επεισόδια:</string>
 <string name="messages_new_episodes">νέα επεισόδια:</string>
 <string name="messages_new_episode">νέο επεισόδιο:</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">Επεισόδια</string>
 <string name="messsages_edit_seen_timestamp">Τροποποίηση αποτυπώματος χρόνου</string>
 <string name="messages_calendar_app_error">Δεν βρέθηκε εφαρμογή ημερολογίου!</string>
-<string name="messages_thetvdb_con_error">Σφάλμα σύνδεσης με το TheTVDB. Δοκίμασε πάλι..</string>
+<string name="messages_api_con_error">Σφάλμα σύνδεσης με το TMDb API. Δοκίμασε πάλι..</string>
 <string name="messages_marked_seen">(\')</string>
 <string name="messages_marked_unseen">επισημασμένο ως μη ορατό.</string>
 <string name="messages_context_mark_seasonunseen">Σήμανση όλων των επεισοδίων ως unseen</string>

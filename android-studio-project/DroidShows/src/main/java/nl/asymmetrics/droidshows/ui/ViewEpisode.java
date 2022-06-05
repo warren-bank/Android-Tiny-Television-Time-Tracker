@@ -1,25 +1,25 @@
 package nl.asymmetrics.droidshows.ui;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-
 import nl.asymmetrics.droidshows.DroidShows;
 import nl.asymmetrics.droidshows.R;
-import nl.asymmetrics.droidshows.utils.SQLiteStore;
+import nl.asymmetrics.droidshows.common.Constants;
+import nl.asymmetrics.droidshows.common.DateFormats;
+import nl.asymmetrics.droidshows.database.DbGateway;
+import nl.asymmetrics.droidshows.database.model.DbDirector;
+import nl.asymmetrics.droidshows.database.model.DbEpisode;
+import nl.asymmetrics.droidshows.database.model.DbGuestStar;
+import nl.asymmetrics.droidshows.database.model.DbWriter;
 import nl.asymmetrics.droidshows.utils.SwipeDetect;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnLongClickListener;
@@ -29,227 +29,231 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-public class ViewEpisode extends Activity
-{
-  private String episodeName = "",
-      serieName = "",
-      serieId = "",
-      episodeId = "",
-      imdbId = "",
-      uri = "imdb:///";
-  private int seasonNumber, episodeNumber;
-  private Date epDate;
-  private long seen = 0;
-  private List<String> writers = new ArrayList<String>();
-  private List<String> directors = new ArrayList<String>();
-  private List<String> guestStars = new ArrayList<String>();
-  private SQLiteStore db;
-  private SwipeDetect swipeDetect = new SwipeDetect();
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
+public class ViewEpisode extends Activity {
+  private DbGateway db;
+  private DbEpisode dbEpisode;
+
+  private List<String> writers;
+  private List<String> directors;
+  private List<String> guestStars;
+
+  private int serieId, episodeId;
+  private String serieName, imdbUri;
+
+  private SwipeDetect swipeDetect;
   private DatePickerDialog dateDialog;
   private TimePickerDialog timeDialog;
-  private Calendar cal = Calendar.getInstance();
-  
+  private Calendar cal;
+  private Date epDate;
+
   @Override
   public void onCreate(Bundle savedInstanceState) {
     this.overridePendingTransition(R.anim.right_enter, R.anim.right_exit);
+
     super.onCreate(savedInstanceState);
     setContentView(R.layout.view_episode);
-    db = SQLiteStore.getInstance(this);
-    View view = findViewById(R.id.viewEpisodes);
-    view.setOnTouchListener(swipeDetect);
-    serieId = getIntent().getStringExtra("serieId");
-    serieName = getIntent().getStringExtra("serieName");
-    episodeId = getIntent().getStringExtra("episodeId");
-    
-    String query = "SELECT seasonNumber, episodeNumber, episodeName, overview, rating, firstAired, imdbId, seen FROM episodes "
-      + "WHERE id = '"+ episodeId +"' AND serieId='"+ serieId +"'";
-    Cursor c = db.Query(query);
-    c.moveToFirst();
-    if (c != null && c.isFirst()) {
-      int seasonNumberCol = c.getColumnIndex("seasonNumber");
-      int episodeNumberCol = c.getColumnIndex("episodeNumber");
-      int enameCol = c.getColumnIndex("episodeName");
-      int overviewCol = c.getColumnIndex("overview");
-      int ratingCol = c.getColumnIndex("rating");
-      int airedCol = c.getColumnIndex("firstAired");
-      int imdbIdCol = c.getColumnIndex("imdbId");
-      int seenCol = c.getColumnIndex("seen");
-  
-      String firstAired = c.getString(airedCol);
-      if (!firstAired.equals("") && !firstAired.equals("null")) {
-        try {
-          epDate = SQLiteStore.dateFormat.parse(firstAired);
-          firstAired = SimpleDateFormat.getDateInstance().format(epDate);
-        } catch (ParseException e) {
-          Log.e(SQLiteStore.TAG, e.getMessage());
-        }
-      } else {
-        firstAired = "";
-      }
-  
-      seasonNumber = c.getInt(seasonNumberCol);
-      episodeNumber = c.getInt(episodeNumberCol);
-      episodeName = c.getString(enameCol);
-      String overview = c.getString(overviewCol);
-      String rating = c.getString(ratingCol);
-      imdbId = c.getString(imdbIdCol);
-      seen = c.getInt(seenCol);
-      c.close();
-      
-      setTitle(serieName +" - "
-          + (getString(R.string.messages_ep).isEmpty() ? "" : getString(R.string.messages_ep) +" ")
-          + seasonNumber + (episodeNumber < 10 ? "x0" : "x") + episodeNumber);        
-      
-      TextView episodeNameV = (TextView) findViewById(R.id.episodeName);
-      episodeNameV.setText(episodeName);
-      
-      TextView ratingV = (TextView) findViewById(R.id.rating);
-      if (!rating.equalsIgnoreCase("null") && !rating.equals("") && !rating.equals("0"))
-        ratingV.setText("IMDb: "+ rating +" \u00b7 "
-          + (imdbId.startsWith("tt") ? getString(R.string.menu_context_view_ep_imdb) : getString(R.string.menu_search)));
-      else if (imdbId.startsWith("tt"))
-        ratingV.setText(getString(R.string.menu_context_view_ep_imdb));
-      else
-        ratingV.setText(getString(R.string.menu_context_search_on) + " IMDb");
-      ratingV.setOnTouchListener(swipeDetect);
-      
-      final CheckBox seenCheckBox = (CheckBox) findViewById(R.id.seen);
-      seenCheckBox.setChecked(seen > 0);
-      check(seenCheckBox);
-      seenCheckBox.setOnLongClickListener(new OnLongClickListener() {
-        public boolean onLongClick(View arg0) {
-          if (seen > 1)
-            cal.setTimeInMillis(seen * 1000);
-          else
-            cal.setTimeInMillis(System.currentTimeMillis());
-          int sYear = cal.get(Calendar.YEAR);
-          int sMonth = cal.get(Calendar.MONTH);
-          int sDay = cal.get(Calendar.DAY_OF_MONTH);
-          final int sHour = cal.get(Calendar.HOUR_OF_DAY);
-          final int sMinute = cal.get(Calendar.MINUTE);
 
-          dateDialog = new DatePickerDialog(seenCheckBox.getContext(), new DatePickerDialog.OnDateSetListener() {
-            public void onDateSet(DatePicker view, int year, int month, int day) {
-              cal.set(year, month, day);
-              timeDialog = new TimePickerDialog(seenCheckBox.getContext(), new TimePickerDialog.OnTimeSetListener() {
-                public void onTimeSet(TimePicker view, int hour, int minute) {
-                  cal.set(Calendar.HOUR_OF_DAY, hour);
-                  cal.set(Calendar.MINUTE, minute);
-                  seen = cal.getTimeInMillis() / 1000;
-                  seenCheckBox.setChecked(seen > 1);
-                  check(seenCheckBox);
-                }
-              }, sHour, sMinute, true);
-              timeDialog.show();
-            }
-          }, sYear, sMonth, sDay);
-          
-          dateDialog.show();
-          return true;
-        }
-      });
-      
-      if (!firstAired.equalsIgnoreCase("null") && !firstAired.equals("")) {
-        TextView firstAiredV = (TextView) findViewById(R.id.firstAired);
-        firstAiredV.setText(firstAired);
-        firstAiredV.setVisibility(View.VISIBLE);
+    Intent intent = getIntent();
+    serieId       = intent.getIntExtra("serieId",   -1);
+    episodeId     = intent.getIntExtra("episodeId", -1);
+    serieName     = intent.getStringExtra("serieName");
 
-        // only allow click events to trigger calendarEvent() when the episode will air at a future date
-        if ((epDate == null) || (epDate.compareTo(Calendar.getInstance().getTime()) <= 0)) {
-          firstAiredV.setEnabled(false);
-        }
+    // sanity check
+    if ((serieId <= 0) || (episodeId <= 0)) {
+      finish();
+      return;
+    }
+
+    db        = DbGateway.getInstance(this);
+    dbEpisode = db.getDbEpisode(serieId, episodeId);
+
+    List<DbWriter>    dbWriters    = db.getDbWriter   (serieId, episodeId);
+    List<DbDirector>  dbDirectors  = db.getDbDirector (serieId, episodeId);
+    List<DbGuestStar> dbGuestStars = db.getDbGuestStar(serieId, episodeId);
+
+    writers    = new ArrayList<String>();
+    directors  = new ArrayList<String>();
+    guestStars = new ArrayList<String>();
+
+    if ((dbWriters != null) && !dbWriters.isEmpty()) {
+      for (DbWriter dbWriter : dbWriters) {
+        writers.add(dbWriter.writer);
       }
-  
-      if (!overview.equalsIgnoreCase("null") && !overview.equals("")) {
-        TextView overviewV = (TextView) findViewById(R.id.overview);
-        overviewV.setText(overview);
-        findViewById(R.id.overviewField).setVisibility(View.VISIBLE);
+    }
+    if ((dbDirectors != null) && !dbDirectors.isEmpty()) {
+      for (DbDirector dbDirector : dbDirectors) {
+        directors.add(dbDirector.director);
       }
-      
-      Cursor cwriters = db.Query("SELECT writer FROM writers WHERE episodeId='" + episodeId
-        +"' AND serieId='"+ serieId +"'");
-      cwriters.moveToFirst();
-      if (cwriters != null && cwriters.isFirst()) {
-        do {
-          writers.add(cwriters.getString(0));
-        } while (cwriters.moveToNext());
-      }
-      cwriters.close();
-      if (!writers.isEmpty()) {
-        TextView writersV = (TextView) findViewById(R.id.writer);
-        writersV.setText(writers.toString().replace("]", "").replace("[", ""));
-        writersV.setOnTouchListener(swipeDetect);
-        View writerField = (View) findViewById(R.id.writerField);
-        writerField.setOnTouchListener(swipeDetect);
-        writerField.setVisibility(View.VISIBLE);
-      }
-      
-      Cursor cdirectors = db.Query("SELECT director FROM directors WHERE episodeId='"+ episodeId
-        +"' AND serieId='"+ serieId +"'");
-      cdirectors.moveToFirst();
-      if (cdirectors != null && cdirectors.isFirst()) {
-        do {
-          directors.add(cdirectors.getString(0));
-        } while (cdirectors.moveToNext());
-      }
-      cdirectors.close();
-      if (!directors.isEmpty()) {
-        TextView directorsV = (TextView) findViewById(R.id.director);
-        directorsV.setText(directors.toString().replace("]", "").replace("[", ""));
-        directorsV.setOnTouchListener(swipeDetect);
-        View directorField = (View) findViewById(R.id.directorField);
-        directorField.setOnTouchListener(swipeDetect);
-        directorField.setVisibility(View.VISIBLE);
-      }
-  
-      Cursor cgs = db.Query("SELECT guestStar FROM guestStars WHERE episodeId='"+ episodeId
-        +"' AND serieId='"+ serieId +"'");
-      cgs.moveToFirst();
-      if (cgs != null && cgs.isFirst()) {
-        do {
-          guestStars.add(cgs.getString(0));
-        } while (cgs.moveToNext());
-      }
-      cgs.close();
-      if (!guestStars.isEmpty()) {
-        TextView guestStarsV = (TextView) findViewById(R.id.guestStars);
-        guestStarsV.setText(guestStars.toString().replace("]", "").replace("[", ""));
-        guestStarsV.setOnTouchListener(swipeDetect);
-        View guestStarsField = (View) findViewById(R.id.guestStarsField);
-        guestStarsField.setOnTouchListener(swipeDetect);
-        guestStarsField.setVisibility(View.VISIBLE);
+    }
+    if ((dbGuestStars != null) && !dbGuestStars.isEmpty()) {
+      for (DbGuestStar dbGuestStar : dbGuestStars) {
+        guestStars.add(dbGuestStar.guestStar);
       }
     }
 
+    swipeDetect = new SwipeDetect();
+    View view   = findViewById(R.id.viewEpisodes);
+    view.setOnTouchListener(swipeDetect);
+
+    cal = Calendar.getInstance();
+
+    if (!TextUtils.isEmpty(dbEpisode.firstAired)) {
+      try {
+        epDate               = DateFormats.NORMALIZE_DATE.parse(dbEpisode.firstAired);
+        dbEpisode.firstAired = DateFormats.DISPLAY_DATE.format(epDate);
+      } catch (ParseException e) {
+        Log.e(Constants.LOG_TAG, e.getMessage());
+      }
+    } else {
+      epDate               = null;
+      dbEpisode.firstAired = "";
+    }
+
+    setTitle(serieName
+      + " - "
+      + (getString(R.string.messages_ep).isEmpty() ? "" : (getString(R.string.messages_ep) + " "))
+      + dbEpisode.seasonNumber
+      + ((dbEpisode.episodeNumber < 10) ? "x0" : "x")
+      + dbEpisode.episodeNumber
+    );
+
+    TextView episodeNameV = (TextView) findViewById(R.id.episodeName);
+    episodeNameV.setText(dbEpisode.name);
+
+    TextView ratingV = (TextView) findViewById(R.id.rating);
+    if (dbEpisode.reviewRating > 0)
+      ratingV.setText("IMDb: "
+        + String.format("%.02f", dbEpisode.reviewRating)
+        + " \u00b7 "
+        + ((!TextUtils.isEmpty(dbEpisode.imdbId) && dbEpisode.imdbId.startsWith("tt"))
+            ? getString(R.string.menu_context_view_ep_imdb)
+            : getString(R.string.menu_search)
+          )
+      );
+    else if (!TextUtils.isEmpty(dbEpisode.imdbId) && dbEpisode.imdbId.startsWith("tt"))
+      ratingV.setText(getString(R.string.menu_context_view_ep_imdb));
+    else
+      ratingV.setText(getString(R.string.menu_context_search_on) + " IMDb");
+    ratingV.setOnTouchListener(swipeDetect);
+
+    final CheckBox seenCheckBox = (CheckBox) findViewById(R.id.seen);
+    seenCheckBox.setChecked(dbEpisode.seen > 0);
+    check(seenCheckBox);
+    seenCheckBox.setOnLongClickListener(new OnLongClickListener() {
+      public boolean onLongClick(View arg0) {
+        if (dbEpisode.seen > 0)
+          cal.setTimeInMillis(DateFormats.convertSecondsToMs(dbEpisode.seen));
+        else
+          cal.setTimeInMillis(System.currentTimeMillis());
+
+        int sYear         = cal.get(Calendar.YEAR);
+        int sMonth        = cal.get(Calendar.MONTH);
+        int sDay          = cal.get(Calendar.DAY_OF_MONTH);
+        final int sHour   = cal.get(Calendar.HOUR_OF_DAY);
+        final int sMinute = cal.get(Calendar.MINUTE);
+
+        dateDialog = new DatePickerDialog(seenCheckBox.getContext(), new DatePickerDialog.OnDateSetListener() {
+          public void onDateSet(DatePicker view, int year, int month, int day) {
+            cal.set(year, month, day);
+            timeDialog = new TimePickerDialog(seenCheckBox.getContext(), new TimePickerDialog.OnTimeSetListener() {
+              public void onTimeSet(TimePicker view, int hour, int minute) {
+                cal.set(Calendar.HOUR_OF_DAY, hour);
+                cal.set(Calendar.MINUTE, minute);
+                dbEpisode.seen = DateFormats.convertMsToSeconds(cal.getTimeInMillis());
+                seenCheckBox.setChecked(dbEpisode.seen > 0);
+                check(seenCheckBox);
+              }
+            }, sHour, sMinute, true);
+            timeDialog.show();
+          }
+        }, sYear, sMonth, sDay);
+
+        dateDialog.show();
+        return true;
+      }
+    });
+
+    if (!TextUtils.isEmpty(dbEpisode.firstAired)) {
+      TextView firstAiredV = (TextView) findViewById(R.id.firstAired);
+      firstAiredV.setText(dbEpisode.firstAired);
+      firstAiredV.setVisibility(View.VISIBLE);
+
+      // only allow click events to trigger calendarEvent() when the episode will air at a future date
+      if ((epDate == null) || (epDate.compareTo(Calendar.getInstance().getTime()) <= 0)) {
+        firstAiredV.setEnabled(false);
+      }
+    }
+
+    if (!TextUtils.isEmpty(dbEpisode.overview)) {
+      TextView overviewV = (TextView) findViewById(R.id.overview);
+      overviewV.setText(dbEpisode.overview);
+      findViewById(R.id.overviewField).setVisibility(View.VISIBLE);
+    }
+
+    if (!writers.isEmpty()) {
+      TextView writersV = (TextView) findViewById(R.id.writer);
+      writersV.setText(writers.toString().replace("]", "").replace("[", ""));
+      writersV.setOnTouchListener(swipeDetect);
+      View writerField = (View) findViewById(R.id.writerField);
+      writerField.setOnTouchListener(swipeDetect);
+      writerField.setVisibility(View.VISIBLE);
+    }
+
+    if (!directors.isEmpty()) {
+      TextView directorsV = (TextView) findViewById(R.id.director);
+      directorsV.setText(directors.toString().replace("]", "").replace("[", ""));
+      directorsV.setOnTouchListener(swipeDetect);
+      View directorField = (View) findViewById(R.id.directorField);
+      directorField.setOnTouchListener(swipeDetect);
+      directorField.setVisibility(View.VISIBLE);
+    }
+
+    if (!guestStars.isEmpty()) {
+      TextView guestStarsV = (TextView) findViewById(R.id.guestStars);
+      guestStarsV.setText(guestStars.toString().replace("]", "").replace("[", ""));
+      guestStarsV.setOnTouchListener(swipeDetect);
+      View guestStarsField = (View) findViewById(R.id.guestStarsField);
+      guestStarsField.setOnTouchListener(swipeDetect);
+      guestStarsField.setVisibility(View.VISIBLE);
+    }
+
     Intent testForApp = new Intent(Intent.ACTION_VIEW, Uri.parse("imdb:///find"));
-    if (getApplicationContext().getPackageManager().resolveActivity(testForApp, 0) == null)
-      uri = "https://m.imdb.com/";
+    imdbUri = (getApplicationContext().getPackageManager().resolveActivity(testForApp, 0) == null)
+      ? "https://m.imdb.com/"
+      : "imdb:///";
   }
-  
+
   public void calendarEvent(View v) {
     Intent intent = new Intent(Intent.ACTION_EDIT);
     intent.setType("vnd.android.cursor.item/event");
-    intent.putExtra("title", serieName +" "+ seasonNumber +(episodeNumber < 10 ? "x0" : "x") + episodeNumber);
-    intent.putExtra("description", episodeName);
-    intent.putExtra("beginTime", epDate.getTime());
-    intent.putExtra("endTime", epDate.getTime());
-    intent.putExtra("allDay", true);
+    intent.putExtra("title",       serieName + " " + dbEpisode.seasonNumber + ((dbEpisode.episodeNumber < 10) ? "x0" : "x") + dbEpisode.episodeNumber);
+    intent.putExtra("description", dbEpisode.name);
+    intent.putExtra("beginTime",   epDate.getTime());
+    intent.putExtra("endTime",     epDate.getTime());
+    intent.putExtra("allDay",      true);
     try {
       startActivity(intent);
     } catch (Exception e) {
       Toast.makeText(getApplicationContext(), R.string.messages_calendar_app_error, Toast.LENGTH_LONG).show();
-      Log.e(SQLiteStore.TAG, e.getMessage());
+      Log.e(Constants.LOG_TAG, e.getMessage());
     }
   }
-  
+
   public void IMDbDetails(View v) {
     if (swipeDetect.value != 0) return;
-    String uri = this.uri;
-    if (imdbId.startsWith("tt")) {
-      uri += "title/"+ imdbId;
-    } else {
-      uri += "find?q="+ serieName.replaceAll(" \\(....\\)", "") +" "+ episodeName;
-    }
+
+    String uri = imdbUri
+      + ((!TextUtils.isEmpty(dbEpisode.imdbId) && dbEpisode.imdbId.startsWith("tt"))
+          ? ("title/"  + dbEpisode.imdbId)
+          : ("find?q=" + serieName.replaceAll(" \\(....\\)", "") + " " + dbEpisode.name)
+        );
+
     Intent imdb = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
     imdb.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
     startActivity(imdb);
@@ -257,13 +261,14 @@ public class ViewEpisode extends Activity
 
   public void IMDbNames(View v) {
     if (swipeDetect.value != 0) return;
+
     final List<String> names;
     int id = v.getId();
-    if (id == R.id.writer || id == R.id.writerField)
+    if ((id == R.id.writer) || (id == R.id.writerField))
       names = writers;
-    else if (id == R.id.director || id == R.id.directorField)
+    else if ((id == R.id.director) || (id == R.id.directorField))
       names = directors;
-    else if (id == R.id.guestStars || id == R.id.guestStarsField)
+    else if ((id == R.id.guestStars) || (id == R.id.guestStarsField))
       names = guestStars;
     else
       return;
@@ -272,31 +277,31 @@ public class ViewEpisode extends Activity
       .setTitle(R.string.menu_search)
       .setItems(names.toArray(new CharSequence[names.size()]), new DialogInterface.OnClickListener() {
         public void onClick(DialogInterface dialog, int item) {
-          Intent imdb = new Intent(Intent.ACTION_VIEW, Uri.parse(uri +"find?q="+ names.get(item)));
+          Intent imdb = new Intent(Intent.ACTION_VIEW, Uri.parse(imdbUri + "find?q=" + names.get(item)));
           imdb.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
           startActivity(imdb);
         }
       })
       .show();
   }
-  
+
   public void check(View v) {
     if (v != null) {
       CheckBox c = (CheckBox) findViewById(R.id.seen);
       TextView d = (TextView) findViewById(R.id.seenTimestamp);
       if (c.isChecked()) {
         d.setTextColor(getResources().getColor(android.R.color.white));
-        if (seen == 0)
-          seen = System.currentTimeMillis() / 1000;
-        d.setText(SimpleDateFormat.getDateTimeInstance().format(new Date(seen * 1000)));
-        DroidShows.removeEpisodeFromLog = "";
+        if (dbEpisode.seen == 0)
+          dbEpisode.seen = DateFormats.convertMsToSeconds(System.currentTimeMillis());
+        d.setText(DateFormats.DISPLAY_DATE_TIME.format(new Date(DateFormats.convertSecondsToMs(dbEpisode.seen))));
+        DroidShows.removeEpisodeIdFromLog = 0;
       } else {
         d.setText("");
-        seen = 0;
-        DroidShows.removeEpisodeFromLog = episodeId;
+        dbEpisode.seen = 0;
+        DroidShows.removeEpisodeIdFromLog = episodeId;
       }
     }
-    db.updateUnwatchedEpisode(serieId, episodeId, seen);
+    db.updateUnwatchedEpisode(serieId, episodeId, dbEpisode.seen);
   }
 
   @Override

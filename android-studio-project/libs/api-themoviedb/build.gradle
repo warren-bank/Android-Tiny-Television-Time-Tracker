@@ -1,0 +1,49 @@
+apply from: '../../constants.gradle'
+apply plugin: 'com.android.library'
+
+android {
+  compileSdkVersion project.ext.compileSdkVersion
+  buildToolsVersion project.ext.buildToolsVersion
+
+  compileOptions {
+    sourceCompatibility project.ext.javaVersion
+    targetCompatibility project.ext.javaVersion
+  }
+
+  defaultConfig {
+    minSdkVersion    project.ext.minSdkVersion
+    targetSdkVersion project.ext.targetSdkVersion
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled   true
+      proguardFiles = [
+        "proguard-rules.txt",
+        getDefaultProguardFile('proguard-android.txt')
+      ]
+    }
+    debug {
+      debuggable    true
+      jniDebuggable true
+    }
+  }
+
+  lintOptions {
+    disable 'MissingTranslation'
+    abortOnError false
+  }
+
+  packagingOptions {
+    exclude 'META-INF/*'
+  }
+}
+
+dependencies {
+  implementation project(':org-yamj-api-common')
+
+  implementation 'com.fasterxml.jackson.core:jackson-core:2.13.3'
+  implementation 'com.fasterxml.jackson.core:jackson-annotations:2.13.3'
+  implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.3'
+  implementation 'org.apache.commons:commons-lang3:3.9'
+}

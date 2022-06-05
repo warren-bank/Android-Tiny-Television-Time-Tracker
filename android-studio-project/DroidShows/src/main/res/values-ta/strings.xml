@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ta</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">காண்பிக்கப்படவில்லை.</string>
 <string name="layout_search_no_items">காண்பிக்கப்படவில்லை.</string>
 <string name="layout_seasons_no_items">காட்சிக்கு எதுவும் இல்லை.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">காப்பு செய்ய இயலவில்லை!</string>
 <string name="dialog_backup_usefolder">தினசரி காப்புப்பிரதிகளுக்கு கோப்புறையைப் பயன்படுத்தவும்</string>
 <string name="dialog_change_language">சுருக்கம் மொழி</string>
-<string name="dialog_use_mirror">பயன்படுத்து TheTVDB கண்ணாடி (இதை முயற்சி செய்தால் புதுப்பித்தல் மிகவும் மெதுவான)</string>
 <string name="dialog_restore">மீட்கவும்</string>
 <string name="dialog_restore_now">ஒரு காப்பகத்தை மீட்கவும் தற்போது எல்லா தகவல்களையும் நீக்குகிறது DroidShows. தொடர்ந்து?</string>
 <string name="dialog_restore_done">தரவுத்தளத்தை வெற்றிகரமாக மீ</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">ரத்து செய்</string>
 <string name="dialog_search">தேடு சரம்:</string>
 <string name="dialog_update_series">நீங்கள் தற்போது பட்டியலிடப்பட்ட அனைத்து பட்டியலை புதுப்பிக்கவேண்டுமா\??</string>
-<string name="dialog_update_speedup">\n\nநீங்கள் இந்த செயலை வேகமாக முடியும் விருப்பத்தேர்வு புதுப்பிக்கிறது \' சமீபத்திய காலம் மட்டும்.</string>
-<string name="dialog_latest_season">புதுப்பிக்கும் காலம் மட்டும் புதுப்பிக்கிறது</string>
 <string name="dialog_include_specials">பார்க்கப்படாத எண்ணிக்கையில் சிறப்புகள் சேர்க்கவும்</string>
 <string name="dialog_full_line_check">முழு கோட்டை குறி எத்தனை பயன்படுத்து</string>
 <string name="dialog_switch_swipe_direction">திரும்பிச் செல்ல வலமிருந்து இடமாக ஸ்வைப் செய்யவும்</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">காப்பகம்</string>
 <string name="menu_unarchive">மீட்க</string>
 <string name="messages_title_updating_series">புதுப்பிக்கப்படுகிறது</string>
-<string name="messages_title_updating_db">தரவுத்தளத்தை புதுப்பி</string>
-<string name="messages_update_serie">சேகரிக்கும் தகவல்களைக் காண்பித்தல்…</string>
 <string name="messages_no_internet">இணைய இணைப்பு இல்லை</string>
 <string name="messages_title_update_series">புதுப்பித்தல்</string>
-<string name="messages_update_series">சேகரித்தல் தகவல்களைக் காட்டுகிறது. இந்த பணி சிறிது நேரம் ஆகும்…</string>
 <string name="messages_episodes">விசைகள்</string>
 <string name="messages_new_episodes">புதிய குறும்படங்கள்</string>
 <string name="messages_new_episode">புதிய குறும்படம்</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">எப்போதும் விவரங்கள்</string>
 <string name="messsages_edit_seen_timestamp">பார்க்கப்பட்ட நேரத்தைக் காட்டு</string>
 <string name="messages_calendar_app_error">நாள்காட்டி பயன்பாடு இல்லை!</string>
-<string name="messages_thetvdb_con_error">இணைக்கும்போது பிழை TheTVDB. மீண்டும் முயற்சி.</string>
+<string name="messages_api_con_error">இணைக்கும்போது பிழை TMDb API. மீண்டும் முயற்சி.</string>
 <string name="messages_marked_seen">பார்க்கப்படாத</string>
 <string name="messages_marked_unseen">பார்க்கப்படாத</string>
 <string name="messages_context_mark_seasonunseen">அனைத்து குறியீடுகளையும் பார்க்கப்படாததால் குறி</string>

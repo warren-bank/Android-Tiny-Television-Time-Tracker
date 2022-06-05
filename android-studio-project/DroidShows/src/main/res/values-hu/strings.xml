@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">hu</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">Nem található látható.</string>
 <string name="layout_search_no_items">Nem található látható.</string>
 <string name="layout_seasons_no_items">Nincsenek megjeleníthető évszakok.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">A mentés nem hajtható végre!</string>
 <string name="dialog_backup_usefolder">Mappa használata a napi mentésekhez</string>
 <string name="dialog_change_language">Synopsis nyelv</string>
-<string name="dialog_use_mirror">Használat TheTVDB Tükör (próbálja meg, ha a frissítések túl lassúak)</string>
 <string name="dialog_restore">Visszaállítás</string>
 <string name="dialog_restore_now">A biztonsági mentés visszaállítása a jelenleg folyamatban lévő összes információt eltávolítja DroidShows. Folytatás?</string>
 <string name="dialog_restore_done">Adatbázis sikeresen visszaállítva</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">Mégse</string>
 <string name="dialog_search">Keresési karaktersorozat:</string>
 <string name="dialog_update_series">Biztosan frissíteni kívánja az összes felsorolt showt\??</string>
-<string name="dialog_update_speedup">\n\nA folyamat felgyorsíthatja a folyamatot a Frissítés csak \' legutóbbi évadot \'.</string>
-<string name="dialog_latest_season">Frissítés csak \' legutóbbi évadot tartalmaz</string>
 <string name="dialog_include_specials">Specialok tartalmazása a nem figyelt számlálásban</string>
 <string name="dialog_full_line_check">Teljes sor használata az epizód megjelöléséhez</string>
 <string name="dialog_switch_swipe_direction">Jobbra-balra-vissza.</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">Archívum</string>
 <string name="menu_unarchive">Átvétel</string>
 <string name="messages_title_updating_series">Frissítési sorozat</string>
-<string name="messages_title_updating_db">Adatbázis frissítése</string>
-<string name="messages_update_serie">A show információk összegyűjtése ...</string>
 <string name="messages_no_internet">Nincs elérhető internetkapcsolat</string>
 <string name="messages_title_update_series">Frissítési show</string>
-<string name="messages_update_series">A összegyűjtése információkat jelenít meg. Ez a művelet eltart egy darabig ...</string>
 <string name="messages_episodes">Epizódok</string>
 <string name="messages_new_episodes">új epizódok</string>
 <string name="messages_new_episode">új epizód</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">Fordította:</string>
 <string name="messsages_edit_seen_timestamp">Meglátott időpecsét szerkesztése</string>
 <string name="messages_calendar_app_error">Nem található naptáralkalmazás!</string>
-<string name="messages_thetvdb_con_error">Hiba a csatlakozáskor TheTVDB. Próbáld újra..</string>
+<string name="messages_api_con_error">Hiba a csatlakozáskor TMDb API. Próbáld újra..</string>
 <string name="messages_marked_seen">Megjelöltek szerint</string>
 <string name="messages_marked_unseen">Mintha láthatatlan lett volna</string>
 <string name="messages_context_mark_seasonunseen">Jelölje be az összes részt láthatatlanul</string>

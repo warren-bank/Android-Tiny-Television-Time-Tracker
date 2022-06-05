@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">nb</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">Ingen serier funnet.</string>
 <string name="layout_search_no_items">Ingen serier funnet.</string>
 <string name="layout_seasons_no_items">Ingen sesonger å vise.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">Kan ikke utføre sikkerhetskopiering!</string>
 <string name="dialog_backup_usefolder">Bruk mappe for daglige reservekopieringer</string>
 <string name="dialog_change_language">Synopsis språk</string>
-<string name="dialog_use_mirror">Bruk TheTVDB speil (prøv dette hvis oppdateringer er for trege)</string>
 <string name="dialog_restore">Gjenopprett</string>
 <string name="dialog_restore_now">Gjenoppretting av en sikkerhetskopi vil fjerne all informasjon for øyeblikket i DroidShows. Fortsett?</string>
 <string name="dialog_restore_done">Database gjenopprettet</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">Annuller</string>
 <string name="dialog_search">Søk i streng:</string>
 <string name="dialog_update_series">Er du sikker på at du vil oppdatere alle oppførte serier nå?</string>
-<string name="dialog_update_speedup">\n\nDu kan få fart i denne prosessen med alternativet Oppdater viser \' nyeste sesong.</string>
-<string name="dialog_latest_season">Oppdatering viser \' nyeste sesong</string>
 <string name="dialog_include_specials">Inkluder spesialiteter i uovervåket telling</string>
 <string name="dialog_full_line_check">Bruk hele linjen til å markere episode</string>
 <string name="dialog_switch_swipe_direction">Sveip høyre-til-venstre for å gå tilbake</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">Arkiv</string>
 <string name="menu_unarchive">Rekognomer</string>
 <string name="messages_title_updating_series">Oppdaterer serier</string>
-<string name="messages_title_updating_db">Oppdaterer database</string>
-<string name="messages_update_serie">Samler vis informasjon ...</string>
 <string name="messages_no_internet">Ingen Internett-tilkobling tilgjengelig</string>
 <string name="messages_title_update_series">Oppdatering viser</string>
-<string name="messages_update_series">Samler inn viser informasjon. Denne operasjonen vil ta en stund ...</string>
 <string name="messages_episodes">episoder</string>
 <string name="messages_new_episodes">nye episoder</string>
 <string name="messages_new_episode">ny episode</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">Episode detaljer</string>
 <string name="messsages_edit_seen_timestamp">Rediger sett tidsstempel</string>
 <string name="messages_calendar_app_error">Ingen kalenderapp funnet!</string>
-<string name="messages_thetvdb_con_error">Feil ved tilkobling til TheTVDB. Prøv igjen.</string>
+<string name="messages_api_con_error">Feil ved tilkobling til TMDb API. Prøv igjen.</string>
 <string name="messages_marked_seen">merket som sett</string>
 <string name="messages_marked_unseen">merket som usett</string>
 <string name="messages_context_mark_seasonunseen">Merk alle episoder som usett</string>

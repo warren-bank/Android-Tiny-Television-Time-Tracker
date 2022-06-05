@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">zh-TW</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">找不到顯示.</string>
 <string name="layout_search_no_items">找不到顯示.</string>
 <string name="layout_seasons_no_items">沒有季節可顯示.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">無法執行備份!</string>
 <string name="dialog_backup_usefolder">使用資料夾進行每日備份</string>
 <string name="dialog_change_language">Synopsis 語言</string>
-<string name="dialog_use_mirror">用 TheTVDB 鏡映（如果更新速度太慢，請嘗試此動作)</string>
 <string name="dialog_restore">還原</string>
 <string name="dialog_restore_now">還原備份將移除目前在中的所有資訊 DroidShows. 繼續?</string>
 <string name="dialog_restore_done">已順利還原資料庫</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">取消</string>
 <string name="dialog_search">搜尋字串:</string>
 <string name="dialog_update_series">您確定現在要更新所有列出的顯示畫面嗎？?</string>
-<string name="dialog_update_speedup">\n\n您可以使用選項更新顯示「僅限最新的季節」來加速此程序.</string>
-<string name="dialog_latest_season">僅更新顯示「最新的季節」</string>
 <string name="dialog_include_specials">併入未監看計數中的指定</string>
 <string name="dialog_full_line_check">使用整條線標記集</string>
 <string name="dialog_switch_swipe_direction">從右到左滑動以返回</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">Archive</string>
 <string name="menu_unarchive">Recover</string>
 <string name="messages_title_updating_series">正在更新顯示</string>
-<string name="messages_title_updating_db">正在更新資料庫</string>
-<string name="messages_update_serie">正在收集顯示資訊...</string>
 <string name="messages_no_internet">沒有可用的網際網路連線</string>
 <string name="messages_title_update_series">更新顯示</string>
-<string name="messages_update_series">收集顯示資訊。 此作業將需要一段時間...</string>
 <string name="messages_episodes">集</string>
 <string name="messages_new_episodes">新劇集</string>
 <string name="messages_new_episode">新一集</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">Episode 詳細資料</string>
 <string name="messsages_edit_seen_timestamp">編輯查看時間戳記</string>
 <string name="messages_calendar_app_error">找不到行事曆應用程式!</string>
-<string name="messages_thetvdb_con_error">連接時發生錯誤 TheTVDB. 再試一次.</string>
+<string name="messages_api_con_error">連接時發生錯誤 TMDb API. 再試一次.</string>
 <string name="messages_marked_seen">標示為已看到</string>
 <string name="messages_marked_unseen">標示為未看到</string>
 <string name="messages_context_mark_seasonunseen">將所有事件標示為未看到</string>

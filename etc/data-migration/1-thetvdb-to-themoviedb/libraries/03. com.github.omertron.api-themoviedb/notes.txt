@@ -150,10 +150,60 @@ https://mvnrepository.com/artifact/com.omertron/themoviedbapi
 
 ----------------------------------------
 
+https://omertron.github.io/api-themoviedb/dependencies.html
+  graph of all dependencies (both direct and transitive)
+
+    * com.omertron:themoviedbapi:jar:4.4-SNAPSHOT
+      * junit:junit:jar:4.12 (test)
+        * org.hamcrest:hamcrest-core:jar:1.3 (test)
+      * com.fasterxml.jackson.core:jackson-core:jar:2.8.7 (compile)
+      * com.fasterxml.jackson.core:jackson-annotations:jar:2.8.7 (compile)
+      * com.fasterxml.jackson.core:jackson-databind:jar:2.8.7 (compile)
+      * org.slf4j:slf4j-api:jar:1.7.24 (compile)
+      * org.slf4j:slf4j-jdk14:jar:1.7.24 (test)
+      * org.yamj:api-common:jar:2.1 (compile)
+        * org.apache.httpcomponents:httpclient:jar:4.5.3 (compile)
+          * org.apache.httpcomponents:httpcore:jar:4.4.6 (compile)
+          * commons-logging:commons-logging:jar:1.2 (compile)
+          * commons-codec:commons-codec:jar:1.9 (compile)
+      * org.apache.commons:commons-lang3:jar:3.5 (compile)
+      * commons-io:commons-io:jar:2.5 (test)
+
+----------------------------------------
+
 https://omertron.github.io/api-themoviedb/apidocs/index.html
   javadoc class reference
 
 https://github.com/Omertron/api-themoviedb/tree/gh-pages
 https://github.com/Omertron/api-themoviedb/tree/gh-pages/apidocs
+
+--------------------------------------------------------------------------------
+
+additional observations:
+========================
+
+* SimpleDateFormat is not thread-safe
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1640
+  DroidShows.AsyncInfo has a comment as to why a new instance is needed
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/utils/SQLiteStore.java#L31
+  presumably over reuse of the static: SQLiteStore.dateFormat
+  which is used elsewhere; most noteably by many methods in SQLiteStore
+  which are themselves called by all threads.
+
+* in any case,
+  one of the transitive dependencies that comes along with this library is Apache commons-lang3 v3.4
+* which includes a faster and thread-safe alternative to SimpleDateFormat, called FastDateFormat.
+  may as well use it.
+
+https://github.com/Omertron/api-themoviedb/blob/themoviedbapi-4.3/pom.xml#L128
+    <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>3.4</version>
+    </dependency>
+
+https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/time/FastDateFormat.html
+https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/time/FastDateParser.html
 
 --------------------------------------------------------------------------------

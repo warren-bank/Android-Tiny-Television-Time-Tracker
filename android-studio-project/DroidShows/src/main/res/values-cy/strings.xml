@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">cy</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">Heb ganfod sioeau.</string>
 <string name="layout_search_no_items">Heb ganfod sioeau.</string>
 <string name="layout_seasons_no_items">Dim tymhorau i\'w ddangos.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">Methu cyflawni copi wrth gefn!</string>
 <string name="dialog_backup_usefolder">Defnyddio plygell ar gyfer ups bob dydd</string>
 <string name="dialog_change_language">Name</string>
-<string name="dialog_use_mirror">Defnyddio TheTVDB drych (ceisiwch hyn os yw diweddariadau yn rhy araf)</string>
 <string name="dialog_restore">Adfer</string>
 <string name="dialog_restore_now">Bydd adfer copi wrth gefn yn dileu\'r holl wybodaeth sydd ar hyn o bryd DroidShows. Parhau?</string>
 <string name="dialog_restore_done">Name</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">Diddymu</string>
 <string name="dialog_search">Llinyn chwilio:</string>
 <string name="dialog_update_series">Ydych chi\'n siwr eich bod am ddiweddaru\'r holl sioeau rhestredig yn awr?</string>
-<string name="dialog_update_speedup">\n\nGallwch gyflymu\'r broses hon gyda\'r diweddariad dewis yn dangos \' tymor diweddaraf yn unig.</string>
-<string name="dialog_latest_season">Mae\'r diweddariad yn dangos \' tymor diweddaraf yn unig</string>
 <string name="dialog_include_specials">Cynnwys y rhai sydd heb eu gwylio</string>
 <string name="dialog_full_line_check">Defnyddio llinell gyfan i farcio \' r digwyddiad</string>
 <string name="dialog_switch_swipe_direction">Llusgwch dde-i-chwith i fynd yn ôl</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">Archif</string>
 <string name="menu_unarchive">Adfer</string>
 <string name="messages_title_updating_series">Diweddaru sioeau</string>
-<string name="messages_title_updating_db">Diweddaru cronfa ddata</string>
-<string name="messages_update_serie">Casglu gwybodaeth:</string>
 <string name="messages_no_internet">Dim cysylltiad Rhyngrwyd ar gael</string>
 <string name="messages_title_update_series">Dangos y diweddariad</string>
-<string name="messages_update_series">Mae casglu yn dangos gwybodaeth. Bydd y weithred hon yn cymryd amser ...</string>
 <string name="messages_episodes">episodau</string>
 <string name="messages_new_episodes">episodau</string>
 <string name="messages_new_episode">digwyddiad newydd</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">Manylion y bennod</string>
 <string name="messsages_edit_seen_timestamp">Golygu stamp amser</string>
 <string name="messages_calendar_app_error">Heb ganfod ap Calendr!</string>
-<string name="messages_thetvdb_con_error">Gwall wrth gysylltu TheTVDB. Ceisiwch eto.</string>
+<string name="messages_api_con_error">Gwall wrth gysylltu TMDb API. Ceisiwch eto.</string>
 <string name="messages_marked_seen">wedi ei farcio fel</string>
 <string name="messages_marked_unseen">wedi\'i farcio fel heb ei weld</string>
 <string name="messages_context_mark_seasonunseen">Marcio pob episodau fel heb ei weld</string>

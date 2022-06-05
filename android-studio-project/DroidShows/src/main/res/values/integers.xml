@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<integer name="series_icon_width_dp">100</integer> <!-- reminder: this value is also hardwired into the layout: DroidShows/src/main/res/layout/row.xml -->
+<integer name="images_small_width_dp" >100</integer> <!-- applies to ImageView in layout: DroidShows/src/main/res/layout/row.xml        -->
+<integer name="images_medium_width_dp">200</integer> <!-- applies to ImageView in layout: DroidShows/src/main/res/layout/view_serie.xml -->
 </resources>

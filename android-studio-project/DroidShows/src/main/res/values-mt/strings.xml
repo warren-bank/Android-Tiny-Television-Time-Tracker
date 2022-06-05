@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">mt</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">L-ebda turi misjuba.</string>
 <string name="layout_search_no_items">L-ebda turi misjuba.</string>
 <string name="layout_seasons_no_items">L-ebda staġuni għall-wiri.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">Ma jistgħux iwettqu backup!</string>
 <string name="dialog_backup_usefolder">Folder ta \' użu għall backups kuljum</string>
 <string name="dialog_change_language">Lingwa sinopsi</string>
-<string name="dialog_use_mirror">Użu TheTVDB mera (ipprova dan jekk l-aġġornamenti huma bil-mod wisq)</string>
 <string name="dialog_restore">Restawr</string>
 <string name="dialog_restore_now">Restawr ta \'backup se tneħħi l-informazzjoni kollha bħalissa f\' DroidShows. Kompli?</string>
 <string name="dialog_restore_done">Database restawrata b \'suċċess</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">Tħassir</string>
 <string name="dialog_search">Tfittxija string:</string>
 <string name="dialog_update_series">Inti żgur li inti tixtieq li taġġorna kollha elenkati turi issa?</string>
-<string name="dialog_update_speedup">\n\nTista \'tħaffef dan il-proċess bl-għażla Aġġornament turi\' l-aħħar staġun biss.</string>
-<string name="dialog_latest_season">Aġġornament juri \' l-aħħar staġun biss</string>
 <string name="dialog_include_specials">Jinkludu speals fl-għadd mhux segwit</string>
 <string name="dialog_full_line_check">Uża l-linja sħiħa għall-episodju tal-marka</string>
 <string name="dialog_switch_swipe_direction">Swip dritt-biex-xellug biex tmur lura</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">Arkivju</string>
 <string name="menu_unarchive">Irkupru</string>
 <string name="messages_title_updating_series">Aġġornament juri</string>
-<string name="messages_title_updating_db">Database tal-aġġornar</string>
-<string name="messages_update_serie">Ġbir juru informazzjoni ...</string>
 <string name="messages_no_internet">L-ebda konnessjoni Internet disponibbli</string>
 <string name="messages_title_update_series">Aġġornament juri</string>
-<string name="messages_update_series">Ġbir juri informazzjoni. Din l-operazzjoni se tieħu waqt ...</string>
 <string name="messages_episodes">episodji</string>
 <string name="messages_new_episodes">episodji ġodda</string>
 <string name="messages_new_episode">episodju ġdid</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">Dettalji tal-episodju</string>
 <string name="messsages_edit_seen_timestamp">Editja raw timebold</string>
 <string name="messages_calendar_app_error">Ebda app Kalendarju misjuba!</string>
-<string name="messages_thetvdb_con_error">Żball konnessjoni ma \' TheTVDB. Erġa \' pprova.</string>
+<string name="messages_api_con_error">Żball konnessjoni ma \' TMDb API. Erġa \' pprova.</string>
 <string name="messages_marked_seen">immarkat kif jidher</string>
 <string name="messages_marked_unseen">immarkat bħala mhux osservat</string>
 <string name="messages_context_mark_seasonunseen">Immarka l-episodji kollha bħala mhux osservati</string>

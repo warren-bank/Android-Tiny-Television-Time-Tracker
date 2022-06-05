@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ne</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">फेला परेन.</string>
 <string name="layout_search_no_items">फेला परेन.</string>
 <string name="layout_seasons_no_items">प्रदर्शन गर्न कुनै मौसम छैन.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">जगेडा प्रदर्शन गर्न असक्षम!</string>
 <string name="dialog_backup_usefolder">दैनिक ब्याकअपका लागि फोल्डर प्रयोग गर्नुहोस्</string>
 <string name="dialog_change_language">सिनोप्सिस भाषा</string>
-<string name="dialog_use_mirror">प्रयोग गर्नुहोस् TheTVDB दर्पण (यदि अद्यावधिक धेरै ढिलो भएमा यो प्रयास गर्नुहोस्)</string>
 <string name="dialog_restore">पूर्वावस्थामा ल्याउनुहोस्</string>
 <string name="dialog_restore_now">जगेडा पुन: स्थापना गर्दा हाल सबै सूचना हटाउनेछ DroidShows. जारी राख्नुहोस्?</string>
 <string name="dialog_restore_done">डाटाबेस सफलतापूर्वक बहाल</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">रद्द गर्नुहोस्</string>
 <string name="dialog_search">स्ट्रिङ खोजी गर्नुहोस्:</string>
 <string name="dialog_update_series">तपाईँ अहिले सबै सूचीबद्ध शोमा अद्यावधिक गर्न निश्चित हुनुहुन्छ?</string>
-<string name="dialog_update_speedup">\n\nतपाईँले यो प्रक्रियालाई विकल्प अद्यावधिक गरेर गति दिन सक्नुहुन्छ \' पछिल्लो समय मात्र.</string>
-<string name="dialog_latest_season">अद्यावधिक देखाउँछ \' पछिल्लो समय मात्र</string>
 <string name="dialog_include_specials">नहेरिएको गणमा विशेषताहरू समावेश गर्नुहोस्</string>
 <string name="dialog_full_line_check">श्रृङ्खलाकासाथ पूरा लाइन प्रयोग गर्नुहोस्</string>
 <string name="dialog_switch_swipe_direction">दायाँ-बायाँ जाने दायाँबायाँ</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">सङ्ग्रह</string>
 <string name="menu_unarchive">पुन: प्राप्त गर्नुहोस्</string>
 <string name="messages_title_updating_series">अद्यावधिक गर्दै</string>
-<string name="messages_title_updating_db">डाटाबेस अद्यावधिक गर्दै</string>
-<string name="messages_update_serie">प्रदान जानकारी देखाउँदछ…</string>
 <string name="messages_no_internet">इन्टरनेट जडान उपलब्ध छैन</string>
 <string name="messages_title_update_series">अद्यावधिक देखाउँछ</string>
-<string name="messages_update_series">गेटरिङले जानकारी देखाउँछ. यो शल्यक्रिया केही समय लाग्ने ...</string>
 <string name="messages_episodes">घटनाहरू</string>
 <string name="messages_new_episodes">नयाँ घटनाहरू</string>
 <string name="messages_new_episode">नयाँ प्रकरणको</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">एपिसोड विवरण</string>
 <string name="messsages_edit_seen_timestamp">देखा पर्ने टाइमस्ट्याम्प सम्पादन गर्नुहोस्</string>
 <string name="messages_calendar_app_error">क्यालेन्डर अनुप्रयोग फेला परेन!</string>
-<string name="messages_thetvdb_con_error">मा जडान गर्दा त्रुटि TheTVDB. फेरि प्रयास गर्नुहोस्.</string>
+<string name="messages_api_con_error">मा जडान गर्दा त्रुटि TMDb API. फेरि प्रयास गर्नुहोस्.</string>
 <string name="messages_marked_seen">देखिएको रूपमा चिन्ह लगायो</string>
 <string name="messages_marked_unseen">अदृश्य रूपमा चिन्ह लगायो</string>
 <string name="messages_context_mark_seasonunseen">सबै घटनाहरू अदृश्य रूपमा चिन्ह लगाउनुहोस्</string>

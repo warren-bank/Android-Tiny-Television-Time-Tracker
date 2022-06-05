@@ -14,6 +14,7 @@ SQLite DB Schema:
 ----------------------------------------
 
 fields that are either not supported by TMDB or simply unused, and should be removed:
+=====================================================================================
 
   - TABLE:  series
     FIELDS: serieId, banner, zap2ItId, airsDayOfWeek, airsTime, fanart, posterInCache
@@ -79,6 +80,7 @@ strategy:
 ----------------------------------------
 
 off-topic, but regarding deleting the thumbnail/icon image files:
+=================================================================
 
     // https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/AddSerie.java#L253
     File dir = new File(getApplicationContext().getFilesDir().getAbsolutePath() + "/thumbs");
@@ -111,6 +113,16 @@ off-topic, but regarding deleting the thumbnail/icon image files:
       Log.w(TAG, "Failed to delete directory: " + dir);
     }
 
+related:
+========
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L809-L814
+    private void restore(String backupFile) {
+        // as a part of this process, all files in the following directories are deleted:
+        //   * getApplicationContext().getFilesDir().getAbsolutePath() + "/thumbs/banners/posters"
+        //   * getApplicationInfo().dataDir + "/databases"
+    }
+
 --------------------------------------------------------------------------------
 
 new/smaller DB Schema:
@@ -121,24 +133,24 @@ CREATE TABLE IF NOT EXISTS droidseries (version VARCHAR);
 INSERT INTO droidseries (version) VALUES ('0.1.5-7G6');
 
 CREATE TABLE IF NOT EXISTS series (
-    id                   VARCHAR NOT NULL PRIMARY KEY,
-    serieName            VARCHAR,
+    id                   INTEGER NOT NULL PRIMARY KEY,
+    name                 VARCHAR,                     /* formerly: serieName        */
     overview             TEXT,
 
     seasonCount          INTEGER,
     status               VARCHAR,
     firstAired           VARCHAR,
     imdbId               VARCHAR,
-    rating               VARCHAR,
+    reviewRating         FLOAT,                       /* formerly: rating        */
     network              VARCHAR,
     runtime              VARCHAR,
     contentRating        VARCHAR,
     language             VARCHAR,
-    poster               VARCHAR,  /* URL for image */
+    largeImageUrl        VARCHAR,                     /* formerly: poster        */
+    smallImageFilePath   VARCHAR,                     /* formerly: posterThumb   */
+    mediumImageFilePath  VARCHAR,
 
-    posterThumb          VARCHAR,  /* local filepath for poster image that has been downloaded and resized to an "icon" image */
-
-    archived             INTEGER NOT NULL DEFAULT 0,  /* passiveStatus */
+    archived             INTEGER NOT NULL DEFAULT 0,  /* formerly: passiveStatus */
     pinned               INTEGER NOT NULL DEFAULT 0,
     extResources         VARCHAR NOT NULL DEFAULT '',
 
@@ -149,19 +161,19 @@ CREATE TABLE IF NOT EXISTS series (
     unwatchedLastAired   VARCHAR,
     unwatchedLastEpisode VARCHAR,
 
-    lastUpdated          VARCHAR
+    lastUpdated          INTEGER NOT NULL DEFAULT (cast(strftime('%s','now') as INTEGER))
 );
 
 CREATE TABLE IF NOT EXISTS episodes (
-    id                   VARCHAR NOT NULL,
-    serieId              VARCHAR NOT NULL,
+    id                   INTEGER NOT NULL,
+    serieId              INTEGER NOT NULL,
     seasonNumber         INTEGER NOT NULL,
     episodeNumber        INTEGER NOT NULL,
-    episodeName          VARCHAR,
+    name                 VARCHAR,                     /* formerly: episodeName        */
     overview             TEXT,
     firstAired           VARCHAR,
     imdbId               VARCHAR,
-    rating               VARCHAR,
+    reviewRating         FLOAT,
     seen                 INTEGER NOT NULL DEFAULT 0,
 
     PRIMARY KEY (serieId, id),
@@ -170,17 +182,18 @@ CREATE TABLE IF NOT EXISTS episodes (
 
 CREATE INDEX idx_episodes_serieid_seasonnumber ON episodes (serieId, seasonNumber);
 
-CREATE TABLE IF NOT EXISTS serie_seasons (
-    serieId VARCHAR NOT NULL,
-    season  VARCHAR NOT NULL,
+CREATE TABLE IF NOT EXISTS seasons (
+    serieId              INTEGER NOT NULL,
+    seasonNumber         INTEGER NOT NULL,
+    name                 VARCHAR,
+    episodeCount         INTEGER,
 
+    PRIMARY KEY (serieId, seasonNumber),
     FOREIGN KEY (serieId) REFERENCES series (id)
 );
 
-CREATE INDEX idx_serie_seasons_serieid ON serie_seasons (serieId);
-
 CREATE TABLE IF NOT EXISTS genres (
-    serieId VARCHAR NOT NULL,
+    serieId INTEGER NOT NULL,
     genre   VARCHAR NOT NULL,
 
     FOREIGN KEY (serieId) REFERENCES series (id)
@@ -189,7 +202,7 @@ CREATE TABLE IF NOT EXISTS genres (
 CREATE INDEX idx_genres_serieid ON genres (serieId);
 
 CREATE TABLE IF NOT EXISTS actors (
-    serieId VARCHAR NOT NULL,
+    serieId INTEGER NOT NULL,
     actor   VARCHAR NOT NULL,
 
     FOREIGN KEY (serieId) REFERENCES series (id)
@@ -198,8 +211,8 @@ CREATE TABLE IF NOT EXISTS actors (
 CREATE INDEX idx_actors_serieid ON actors (serieId);
 
 CREATE TABLE IF NOT EXISTS writers (
-    serieId   VARCHAR NOT NULL,
-    episodeId VARCHAR NOT NULL,
+    serieId   INTEGER NOT NULL,
+    episodeId INTEGER NOT NULL,
     writer    VARCHAR NOT NULL,
 
     FOREIGN KEY (serieId)   REFERENCES series   (id),
@@ -209,8 +222,8 @@ CREATE TABLE IF NOT EXISTS writers (
 CREATE INDEX idx_writers_serieid_episodeid ON writers (serieId, episodeId);
 
 CREATE TABLE IF NOT EXISTS directors (
-    serieId   VARCHAR NOT NULL,
-    episodeId VARCHAR NOT NULL,
+    serieId   INTEGER NOT NULL,
+    episodeId INTEGER NOT NULL,
     director  VARCHAR NOT NULL,
 
     FOREIGN KEY (serieId)   REFERENCES series   (id),
@@ -220,8 +233,8 @@ CREATE TABLE IF NOT EXISTS directors (
 CREATE INDEX idx_directors_serieid_episodeid ON directors (serieId, episodeId);
 
 CREATE TABLE IF NOT EXISTS guestStars (
-    serieId   VARCHAR NOT NULL,
-    episodeId VARCHAR NOT NULL,
+    serieId   INTEGER NOT NULL,
+    episodeId INTEGER NOT NULL,
     guestStar VARCHAR NOT NULL,
 
     FOREIGN KEY (serieId)   REFERENCES series   (id),

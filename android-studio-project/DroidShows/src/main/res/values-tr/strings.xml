@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">tr</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">Hiçbir gösteri bulunamadı.</string>
 <string name="layout_search_no_items">Hiçbir gösteri bulunamadı.</string>
 <string name="layout_seasons_no_items">Görüntülenecek mevsimler yok.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">Yedekleme gerçekleştirilemedi!</string>
 <string name="dialog_backup_usefolder">Günlük yedeklemeler için klasör kullan</string>
 <string name="dialog_change_language">Özet dili</string>
-<string name="dialog_use_mirror">Kullan TheTVDB ayna (güncellemeler çok yavaşsa bunu deneyin)</string>
 <string name="dialog_restore">Geri Yükle</string>
 <string name="dialog_restore_now">Bir yedeği geri yükleme işlemi şu anda bulunan tüm bilgileri kaldırır DroidShows. Devam?</string>
 <string name="dialog_restore_done">Veritabanı başarıyla geri yüklendi</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">İptal</string>
 <string name="dialog_search">Arama dizgisi:</string>
 <string name="dialog_update_series">Listelenen tüm programları şimdi güncelleştirmek istediğinizden emin misiniz\??</string>
-<string name="dialog_update_speedup">\n\nBu işlemi, \'Update show\' (yalnızca en son sezon) seçeneğini kullanarak hızlayabilirsiniz..</string>
-<string name="dialog_latest_season">Güncelleme programları yalnızca \'en son sezon\'</string>
 <string name="dialog_include_specials">İzlenmeyen sayıma özel bilgileri dahil et</string>
 <string name="dialog_full_line_check">Bölümü işaretlemek için tüm satırı kullan</string>
 <string name="dialog_switch_swipe_direction">Geri dönmek için sağdan sola doğru kaydırın</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">Arşivle</string>
 <string name="menu_unarchive">Kurtar</string>
 <string name="messages_title_updating_series">Gösterileri güncelleştirme</string>
-<string name="messages_title_updating_db">Veritabanı güncelleniyor</string>
-<string name="messages_update_serie">Show bilgileri toplanıyor ...</string>
 <string name="messages_no_internet">İnternet bağlantısı yok</string>
 <string name="messages_title_update_series">Güncelleme gösterilir</string>
-<string name="messages_update_series">Toplantı bilgileri toplanıyor. Bu işlem biraz zaman alacak ...</string>
 <string name="messages_episodes">bölümler</string>
 <string name="messages_new_episodes">yeni bölümler</string>
 <string name="messages_new_episode">yeni bölüm</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">Bölüm ayrıntıları</string>
 <string name="messsages_edit_seen_timestamp">Görülme zaman damgasını düzenle</string>
 <string name="messages_calendar_app_error">Takvim uygulaması bulunamadı!</string>
-<string name="messages_thetvdb_con_error">Bağlantı kurulurken hata oluştu TheTVDB. Yeniden deneyin.</string>
+<string name="messages_api_con_error">Bağlantı kurulurken hata oluştu TMDb API. Yeniden deneyin.</string>
 <string name="messages_marked_seen">görüldüğü gibi işaretlendi</string>
 <string name="messages_marked_unseen">görünmeyen</string>
 <string name="messages_context_mark_seasonunseen">Tüm bölümleri görünmeyen olarak işaretle</string>

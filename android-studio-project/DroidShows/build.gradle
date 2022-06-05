@@ -5,6 +5,8 @@ android {
   compileSdkVersion project.ext.compileSdkVersion
   buildToolsVersion project.ext.buildToolsVersion
 
+  useLibrary 'org.apache.http.legacy'
+
   compileOptions {
     sourceCompatibility project.ext.javaVersion
     targetCompatibility project.ext.javaVersion
@@ -38,6 +40,17 @@ android {
 
   lintOptions {
     disable 'MissingTranslation'
-    abortOnError true
+    abortOnError false
   }
+
+  packagingOptions {
+    exclude 'META-INF/*'
+  }
+}
+
+dependencies {
+  implementation project(':org-yamj-api-common')
+  implementation project(':api-themoviedb')
+
+  implementation 'org.apache.commons:commons-lang3:3.9'
 }

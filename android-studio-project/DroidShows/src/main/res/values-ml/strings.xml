@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ml</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">കാണിച്ചിരുന്നതൊന്നും കാണുന്നില്ല.</string>
 <string name="layout_search_no_items">കാണിച്ചിരുന്നതൊന്നും കാണുന്നില്ല.</string>
 <string name="layout_seasons_no_items">പ്രദര്ശിപ്പിക്കാന് ഋതുക്കളില്ല.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">ബാക്കപ്പ് ചെയ്യാന് കഴിഞ്ഞില്ല!</string>
 <string name="dialog_backup_usefolder">ദിവസേന ബാക്കപ്പുകള്ക്കായി ഫോള്ഡര് ഉപയോഗിക്കുക</string>
 <string name="dialog_change_language">Synopsis language</string>
-<string name="dialog_use_mirror">ഉപയോഗിക്കുക TheTVDB കണ്ണാടി (അപ്ഡേറ്റുകൾ വളരെ പതുക്കെ))</string>
 <string name="dialog_restore">വീണ്ടെടുക്കുക</string>
 <string name="dialog_restore_now">ഒരു ബാക്കപ്പ് വീണ്ടെടുക്കുന്നു ഇപ്പോള് എല്ലാ വിവരങ്ങളും നീക്കം ചെയ്യും DroidShows. തുടരുക?</string>
 <string name="dialog_restore_done">ഡാറ്റാബേസ് വിജയകരമായി വീണ്ടെടുത്ത</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">റദ്ദാക്കുക</string>
 <string name="dialog_search">തെരച്ചില് സ്ട്രിങ്:</string>
 <string name="dialog_update_series">നിങ്ങള്ക്കിപ്പോള് എല്ലാ പട്ടികകളെയും കാണിക്കണമെന്നുറപ്പാണോ\??</string>
-<string name="dialog_update_speedup">\n\nഈ പ്രക്രിയക്ക് വേഗത വേഗത പുതുക്കാന് കഴിയും. \'ഏറ്റവും പുതിയ സീസൺ\' എന്ന ഐച്ഛികം.</string>
-<string name="dialog_latest_season">പരിഷ്കരിക്കുക \' ഏറ്റവും പുതിയ സീസൺ മാത്രം</string>
 <string name="dialog_include_specials">നിരീക്ഷിച്ച എണ്ണത്തില് പ്രത്യേകതകളെ ഉള്പ്പെടുത്തുക</string>
 <string name="dialog_full_line_check">എപ്പിസോഡിലേക്ക് മുഴുവന് വരി ഉപയോഗിക്കുക</string>
 <string name="dialog_switch_swipe_direction">വലത്തേക്ക് തിരിച്ചു പോകുക</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">ശേഖരം</string>
 <string name="menu_unarchive">Recover</string>
 <string name="messages_title_updating_series">പ്രദര്ശനം കാണിക്കുന്നു</string>
-<string name="messages_title_updating_db">ഡാറ്റാബേസ് പുതുക്കുന്നു</string>
-<string name="messages_update_serie">Gathering show information ...</string>
 <string name="messages_no_internet">ഇന്റര്നെറ്റ് ബന്ധം ലഭ്യമല്ല</string>
 <string name="messages_title_update_series">പരിഷ്കരിക്കുക</string>
-<string name="messages_update_series">ഗാത്തറിംഗ് വിവരങ്ങള് കാണിക്കുന്നു. ഈ ഓപ്പറേഷന് കുറച്ചു സമയമെടുത്ത് ...</string>
 <string name="messages_episodes">പ്രശസ്തി</string>
 <string name="messages_new_episodes">പുതിയ പ്രദര്ശനം</string>
 <string name="messages_new_episode">പുതിയ അദ്ധ്യായം</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">എപ്പിസോഡിന്റെ വിവരങ്ങള്</string>
 <string name="messsages_edit_seen_timestamp">കാണുന്ന സമയസ്റ്റാമ്പ് ചിട്ടപ്പെടുത്തുക</string>
 <string name="messages_calendar_app_error">കലണ്ടര് ആപ്പ് ലഭ്യമല്ല!</string>
-<string name="messages_thetvdb_con_error">ബന്ധിപ്പിക്കുന്നതില് പിശക് TheTVDB. വീണ്ടും ശ്രമിക്കുക.</string>
+<string name="messages_api_con_error">ബന്ധിപ്പിക്കുന്നതില് പിശക് TMDb API. വീണ്ടും ശ്രമിക്കുക.</string>
 <string name="messages_marked_seen">കാണുന്നതുപോലെ അടയാളപ്പെടുത്തിയിരിക്കുന്നു</string>
 <string name="messages_marked_unseen">കാണപ്പെടുന്നതുപോലെ അടയാളപ്പെടുത്തിയിരിക്കുന്നു</string>
 <string name="messages_context_mark_seasonunseen">എല്ലാ അക്ഷരങ്ങളെയും കാണുന്നതുപോലെ അടയാളപ്പെടുത്തുക</string>

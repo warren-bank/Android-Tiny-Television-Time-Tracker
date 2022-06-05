@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">lv</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">Nav atrasts neviens.</string>
 <string name="layout_search_no_items">Nav atrasts neviens.</string>
 <string name="layout_seasons_no_items">Nav sezonas, lai parādītu.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">Neizdevās veikt rezerves kopēšanu!</string>
 <string name="dialog_backup_usefolder">Lietot mapi ikdienas backups</string>
 <string name="dialog_change_language">Sinopsis valoda</string>
-<string name="dialog_use_mirror">Lietošanas veids TheTVDB spogulis (izmēģiniet šo, ja atjauninājumi ir pārāk lēns)</string>
 <string name="dialog_restore">Atjaunot</string>
 <string name="dialog_restore_now">Rezerves kopiju atjaunošana likvidēs visu informāciju, kas pašlaik atrodas DroidShows. Turpināt?</string>
 <string name="dialog_restore_done">Datubāze veiksmīgi atjaunota</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">Atcelt</string>
 <string name="dialog_search">Meklēšanas virkne:</string>
 <string name="dialog_update_series">Vai esat pārliecināts, ka vēlaties atjaunināt visas uzskaitītās rāda tagad?</string>
-<string name="dialog_update_speedup">\n\nJūs varat paātrināt šo procesu ar opciju Update rāda \' jaunāko sezonu tikai.</string>
-<string name="dialog_latest_season">Update rāda \' jaunāko sezonu tikai</string>
 <string name="dialog_include_specials">Iekļaut specials nevērotu skaitu</string>
 <string name="dialog_full_line_check">Lietot visu rindu, lai atzīmētu epizodi</string>
 <string name="dialog_switch_swipe_direction">Pārvelciet pa labi pa kreisi, lai atgrieztos</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">Arhīvs</string>
 <string name="menu_unarchive">Atgūt</string>
 <string name="messages_title_updating_series">Atjaunināšanas parāda</string>
-<string name="messages_title_updating_db">Atjaunina datubāzi</string>
-<string name="messages_update_serie">Vākt informāciju ...</string>
 <string name="messages_no_internet">Nav pieejams interneta pieslēgums</string>
 <string name="messages_title_update_series">Atjaunot parāda</string>
-<string name="messages_update_series">Apkopošana parāda informāciju. Šī operācija aizņems kādu laiku ...</string>
 <string name="messages_episodes">,</string>
 <string name="messages_new_episodes">jaunas epizodes</string>
 <string name="messages_new_episode">jauna epizode</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">Epizode</string>
 <string name="messsages_edit_seen_timestamp">Rediģēt redzēto laika zīmogu</string>
 <string name="messages_calendar_app_error">Nav atrasta neviena kalendāra lietotne!</string>
-<string name="messages_thetvdb_con_error">Kļūda, kas savieno TheTVDB. Mēģiniet vēlreiz.</string>
+<string name="messages_api_con_error">Kļūda, kas savieno TMDb API. Mēģiniet vēlreiz.</string>
 <string name="messages_marked_seen">iezīmēts kā redzams</string>
 <string name="messages_marked_unseen">iezīmēts kā neredzēts</string>
 <string name="messages_context_mark_seasonunseen">Atzīmēt visas epizodes kā neredzētas</string>

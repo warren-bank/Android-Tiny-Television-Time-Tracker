@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">de</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">Keine Serien gefunden.</string>
 <string name="layout_search_no_items">Keine Serien gefunden.</string>
 <string name="layout_seasons_no_items">Keine Staffeln gefunden.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">Datensicherung fehlgeschlagen!</string>
 <string name="dialog_backup_usefolder">Für tägliche Sicherung verwenden</string>
 <string name="dialog_change_language">Sprache der Seriendetails</string>
-<string name="dialog_use_mirror">TheTVDB Spiegel verwenden (falls Updates zu lange dauern)</string>
 <string name="dialog_restore">Einlesen</string>
 <string name="dialog_restore_now">Während der Datenwiederherstellung werden alle Daten in DroidShows überschrieben. Fortfahren?</string>
 <string name="dialog_restore_done">Datenwiederherstellung fertig</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">Abbrechen</string>
 <string name="dialog_search">Suchbegriff:</string>
 <string name="dialog_update_series">Sollen jetzt alle Serien aktualisiert werden?</string>
-<string name="dialog_update_speedup">\n\nUnter Einstellungen kann festgelegt werden, dass nur die letzte Folge aktualisiert wird.</string>
-<string name="dialog_latest_season">Nur letzte Folge aktualisieren</string>
 <string name="dialog_include_specials">Besondere Folgen in der Übersicht zeigen</string>
 <string name="dialog_full_line_check">Tippen auf ganze Zeile markiert Folge als gesehen</string>
 <string name="dialog_switch_swipe_direction">Von rechts nach links wischen, um zurück zu gehen</string>
@@ -86,11 +82,8 @@
 <string name="menu_archive">Archivieren</string>
 <string name="menu_unarchive">Aus dem Archiv entfernen</string>
 <string name="messages_title_updating_series">Serien aktualisieren</string>
-<string name="messages_title_updating_db">Datenbank aktualisieren</string>
-<string name="messages_update_serie">Seriendetails werden heruntergeladen…</string>
 <string name="messages_no_internet">Keine Internetverbindung vorhanden</string>
 <string name="messages_title_update_series">Serien aktualisieren</string>
-<string name="messages_update_series">Seriendetails werden heruntergeladen. Dies kann einen Moment dauern…</string>
 <string name="messages_episodes">Folgen</string>
 <string name="messages_new_episodes">neue Folgen</string>
 <string name="messages_new_episode">neue Folge</string>
@@ -115,7 +108,7 @@
 <string name="messsages_view_ep_details">Details der Folge anzeigen</string>
 <string name="messsages_edit_seen_timestamp">Anschau-Zeitpunkt ändern</string>
 <string name="messages_calendar_app_error">Keine Kalender-App gefunden!</string>
-<string name="messages_thetvdb_con_error">Verbindung zu TheTVDB nicht möglich. Versuche es erneut.</string>
+<string name="messages_api_con_error">Verbindung zu TMDb API nicht möglich. Versuche es erneut.</string>
 <string name="messages_marked_seen">als gesehen markiert</string>
 <string name="messages_marked_unseen">als ungesehen markiert</string>
 <string name="messages_context_mark_seasonunseen">Alle Folgen als ungesehen markieren</string>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">lt</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">Nerasta jokių duomenų.</string>
 <string name="layout_search_no_items">Nerasta jokių duomenų.</string>
 <string name="layout_seasons_no_items">Nėra sezonų rodyti.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">Nepavyko atlikti pastiprinimo!</string>
 <string name="dialog_backup_usefolder">Naudoti aplanką kasdienėms atsargėms</string>
 <string name="dialog_change_language">Synopsis kalba</string>
-<string name="dialog_use_mirror">Naudoti TheTVDB veidrodis (pabandykite tai, jei atnaujinimai yra per lėtai)</string>
 <string name="dialog_restore">Atstatyti</string>
 <string name="dialog_restore_now">Atsarginės kopijos atkūrimas pašalins visą šiuo metu DroidShows. Tęsti?</string>
 <string name="dialog_restore_done">Sėkmingai atkurta duomenų bazė</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">Atšaukti</string>
 <string name="dialog_search">Paieškos eilutė:</string>
 <string name="dialog_update_series">Ar tikrai norite atnaujinti visus išvardintus rodo dabar?</string>
-<string name="dialog_update_speedup">\n\nJūs galite pagreitinti šį procesą su galimybe Atnaujinti rodo \" Naujausias sezonas.</string>
-<string name="dialog_latest_season">Atnaujinti šou \" Naujausias sezonas</string>
 <string name="dialog_include_specials">Įtraukti atmainas nestebimų skaičiaus</string>
 <string name="dialog_full_line_check">Naudoti visą liniją pažymėti epizodas</string>
 <string name="dialog_switch_swipe_direction">Braukite į dešinę-į kairę, kad grįžtų</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">Archyvas</string>
 <string name="menu_unarchive">Susigrąžinimas</string>
 <string name="messages_title_updating_series">Atnaujinimui rodo</string>
-<string name="messages_title_updating_db">Atnaujinama duomenų bazė</string>
-<string name="messages_update_serie">Rinkti informaciją ...</string>
 <string name="messages_no_internet">Interneto ryšio nėra</string>
 <string name="messages_title_update_series">Atnaujinti rodo</string>
-<string name="messages_update_series">Rinkimas rodo informaciją. Ši operacija užtruks ...</string>
 <string name="messages_episodes">-</string>
 <string name="messages_new_episodes">Naujų epizodų</string>
 <string name="messages_new_episode">naujas epizodas</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">Epizodo duomenys</string>
 <string name="messsages_edit_seen_timestamp">Keisti laiko žymę</string>
 <string name="messages_calendar_app_error">Nerasta kalendoriaus app!</string>
-<string name="messages_thetvdb_con_error">Klaida, jungianti TheTVDB. Bandykite dar.</string>
+<string name="messages_api_con_error">Klaida, jungianti TMDb API. Bandykite dar.</string>
 <string name="messages_marked_seen">pažymėti kaip matyti</string>
 <string name="messages_marked_unseen">pažymėta kaip nematė</string>
 <string name="messages_context_mark_seasonunseen">Žymėti visus epizodus, kaip nematė</string>

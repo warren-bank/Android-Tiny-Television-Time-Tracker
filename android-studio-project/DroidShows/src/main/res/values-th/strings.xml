@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">th</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">ไม่พบรายการ.</string>
 <string name="layout_search_no_items">ไม่พบรายการ.</string>
 <string name="layout_seasons_no_items">ไม่มีฤดูกาลที่จะแสดง.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">ไม่สามารถทำการสำรองข้อมูลได้!</string>
 <string name="dialog_backup_usefolder">ใช้โฟลเดอร์สำหรับการสำรองข้อมูลรายวัน</string>
 <string name="dialog_change_language">ภาษาเรื่องย่อ</string>
-<string name="dialog_use_mirror">ใช้ TheTVDB Mirror (ลองนี้ถ้าการอัพเดตช้าเกินไป)</string>
 <string name="dialog_restore">เรียกคืน</string>
 <string name="dialog_restore_now">การเรียกคืนข้อมูลสำรองจะลบข้อมูลทั้งหมดที่อยู่ในปัจจุบัน DroidShows. ดำเนินการต่อ?</string>
 <string name="dialog_restore_done">เรียกคืนฐานข้อมูลได้สำเร็จ</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">ยกเลิก</string>
 <string name="dialog_search">สตริงการค้นหา:</string>
 <string name="dialog_update_series">คุณแน่ใจว่าต้องการอัพเดตรายการที่แสดงทั้งหมดในขณะนี้?</string>
-<string name="dialog_update_speedup">\n\nคุณสามารถเพิ่มความเร็วของกระบวนการนี้ด้วยอ็อพชันอัพเดตแสดงเฉพาะฤดูกาลล่าสุดเท่านั้น.</string>
-<string name="dialog_latest_season">อัพเดตแสดงเฉพาะฤดูกาลล่าสุด</string>
 <string name="dialog_include_specials">รวมพิเศษในการนับที่ไม่ได้ดู</string>
 <string name="dialog_full_line_check">ใช้บรรทัดทั้งหมดเพื่อทำเครื่องหมายตอน</string>
 <string name="dialog_switch_swipe_direction">ปัดจากขวาไปซ้ายเพื่อกลับไปที่</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">เก็บถาวร</string>
 <string name="menu_unarchive">กู้คืน</string>
 <string name="messages_title_updating_series">การอัพเดตรายการ</string>
-<string name="messages_title_updating_db">การอัพเดตฐานข้อมูล</string>
-<string name="messages_update_serie">กำลังรวบรวมข้อมูลแสดง ...</string>
 <string name="messages_no_internet">ไม่มีการเชื่อมต่ออินเตอร์เน็ต</string>
 <string name="messages_title_update_series">อัพเดตที่แสดง</string>
-<string name="messages_update_series">การรวบรวมแสดงข้อมูล การดำเนินการนี้จะใช้เวลาสักครู่...</string>
 <string name="messages_episodes">ตอน</string>
 <string name="messages_new_episodes">ตอนใหม่</string>
 <string name="messages_new_episode">ตอนใหม่</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">รายละเอียดตอนที่</string>
 <string name="messsages_edit_seen_timestamp">แก้ไขการประทับเวลาที่เห็น</string>
 <string name="messages_calendar_app_error">ไม่พบแอ็พปฏิทิน!</string>
-<string name="messages_thetvdb_con_error">ข้อผิดพลาดในการเชื่อมต่อกับ TheTVDB. ลองอีกครั้ง.</string>
+<string name="messages_api_con_error">ข้อผิดพลาดในการเชื่อมต่อกับ TMDb API. ลองอีกครั้ง.</string>
 <string name="messages_marked_seen">ทำเครื่องหมายเป็นเห็นแล้ว</string>
 <string name="messages_marked_unseen">ทำเครื่องหมายเป็นมองไม่เห็น</string>
 <string name="messages_context_mark_seasonunseen">ทำเครื่องหมายทุกตอนเป็นไม่สามารถเห็นได้</string>

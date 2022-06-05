@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">sv</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">Inga program hittades.</string>
 <string name="layout_search_no_items">Inga program hittades.</string>
 <string name="layout_seasons_no_items">Inga säsonger att visa.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">Kan inte utföra säkerhetskopiering!</string>
 <string name="dialog_backup_usefolder">Använd mapp för dagliga säkerhetskopieringar</string>
 <string name="dialog_change_language">Synopsisspråket</string>
-<string name="dialog_use_mirror">Användning TheTVDB spegel (försök med detta om uppdateringar är för långsamma)</string>
 <string name="dialog_restore">Återställ</string>
 <string name="dialog_restore_now">Om du återställer en säkerhetskopia tas all information som för närvarande är i DroidShows. Fortsätt?</string>
 <string name="dialog_restore_done">Databasen återställdes</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">Avbryt</string>
 <string name="dialog_search">Söksträng:</string>
 <string name="dialog_update_series">Är du säker på att du vill uppdatera alla listade program nu?</string>
-<string name="dialog_update_speedup">\n\nDu kan uppdatera den här processen med alternativet Uppdatera, endast för senaste säsong.</string>
-<string name="dialog_latest_season">Uppdatering visar endast den senaste säsongen</string>
 <string name="dialog_include_specials">Inkludera specialare i antal oövervakade antal</string>
 <string name="dialog_full_line_check">Använd hela linjen för att markera avsnitt</string>
 <string name="dialog_switch_swipe_direction">Svep åt höger-till-vänster för att gå tillbaka</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">Arkivera</string>
 <string name="menu_unarchive">Återskapa</string>
 <string name="messages_title_updating_series">Uppdaterar program</string>
-<string name="messages_title_updating_db">Uppdaterar databas</string>
-<string name="messages_update_serie">Samlar in information ...</string>
 <string name="messages_no_internet">Ingen internetanslutning tillgänglig</string>
 <string name="messages_title_update_series">Uppdateringsprogram</string>
-<string name="messages_update_series">Samling visar information. Denna operation tar ett tag…</string>
 <string name="messages_episodes">episoder</string>
 <string name="messages_new_episodes">nya episoder</string>
 <string name="messages_new_episode">nytt avsnitt</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">Episod-detaljer</string>
 <string name="messsages_edit_seen_timestamp">Redigera sett tidsstämpel</string>
 <string name="messages_calendar_app_error">Ingen kalenderapp hittades!</string>
-<string name="messages_thetvdb_con_error">Fel vid anslutning till TheTVDB. Försök igen.</string>
+<string name="messages_api_con_error">Fel vid anslutning till TMDb API. Försök igen.</string>
 <string name="messages_marked_seen">markerad som sedd</string>
 <string name="messages_marked_unseen">markerad som ej sedd</string>
 <string name="messages_context_mark_seasonunseen">Markera alla episoder som ej sedda</string>

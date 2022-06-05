@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">bg</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">Не са намерени..</string>
 <string name="layout_search_no_items">Не са намерени..</string>
 <string name="layout_seasons_no_items">Няма сезони за показване.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">Не може да се изпълни архивиране!</string>
 <string name="dialog_backup_usefolder">Използване на папка за дневни архиви</string>
 <string name="dialog_change_language">Език на синопсис</string>
-<string name="dialog_use_mirror">Употреба: TheTVDB огледално (опитайте това, ако актуализациите са твърде бавно)</string>
 <string name="dialog_restore">Възстановяване!</string>
 <string name="dialog_restore_now">Възстановяването на архивно копие ще премахне цялата информация в момента в DroidShows. Продължи:?</string>
 <string name="dialog_restore_done">Базата данни е възстановена успешно</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">Отмяна\?</string>
 <string name="dialog_search">Низ за търсене:</string>
 <string name="dialog_update_series">Сигурни ли сте, че желаете да актуализирате всички изброени предавания сега?</string>
-<string name="dialog_update_speedup">\n\nМожете да ускорирате този процес с опцията Актуализация показва \' последният сезон само.</string>
-<string name="dialog_latest_season">Актуализация показва \' последният сезон само</string>
 <string name="dialog_include_specials">Включете специалитетите в негледани брони.</string>
 <string name="dialog_full_line_check">Използвайте цялата линия, за да отбележат епизод</string>
 <string name="dialog_switch_swipe_direction">Плъзнете надясно наляво, за да се върнете.</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">Архив.</string>
 <string name="menu_unarchive">Възстановяване:</string>
 <string name="messages_title_updating_series">Обновяване на предавания</string>
-<string name="messages_title_updating_db">Обновяване на БД</string>
-<string name="messages_update_serie">Събиране на информация за показване ...</string>
 <string name="messages_no_internet">Няма достъпна интернет връзка</string>
 <string name="messages_title_update_series">Показване на предавания</string>
-<string name="messages_update_series">Събирането показва информация. Тази операция ще отнеме време ...</string>
 <string name="messages_episodes">4.</string>
 <string name="messages_new_episodes">нови епизоди:</string>
 <string name="messages_new_episode">Нов епизод</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">Подробности за епизод</string>
 <string name="messsages_edit_seen_timestamp">Редактиране на видян времеви индикатор</string>
 <string name="messages_calendar_app_error">Не е намерено приложение календар!</string>
-<string name="messages_thetvdb_con_error">Грешка при свързване с TheTVDB. Опитай пак..</string>
+<string name="messages_api_con_error">Грешка при свързване с TMDb API. Опитай пак..</string>
 <string name="messages_marked_seen">маркиран като видим</string>
 <string name="messages_marked_unseen">маркирани като ненаблюдавани</string>
 <string name="messages_context_mark_seasonunseen">Отбележат всички епизоди като невиждани</string>

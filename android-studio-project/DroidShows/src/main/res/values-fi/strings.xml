@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">fi</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">Ei löytynyt.</string>
 <string name="layout_search_no_items">Ei löytynyt.</string>
 <string name="layout_seasons_no_items">Ei vuodenaikoja näytettäväksi.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">Varmistuskopiointi ei onnistu!</string>
 <string name="dialog_backup_usefolder">Käytä päivittäisiä varmuuskopioita</string>
 <string name="dialog_change_language">Synopsis-kieli</string>
-<string name="dialog_use_mirror">Käytä TheTVDB Peili (yritä tätä, jos päivitykset ovat liian hitaita)</string>
 <string name="dialog_restore">Palautus</string>
 <string name="dialog_restore_now">Varmistuskopioinnin palautus poistaa kaikki tällä hetkellä olevat tiedot DroidShows. Jatka?</string>
 <string name="dialog_restore_done">Tietokannan palautus on onnistunut</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">Peruuta</string>
 <string name="dialog_search">Hakumerkkijono:</string>
 <string name="dialog_update_series">Haluatko varmasti päivittää kaikki luetellut ohjelmat nyt?</string>
-<string name="dialog_update_speedup">\n\nVoit nopeuttaa tätä prosessia siten, että vaihtoehdosta näkyy vain viimeisin kausi.</string>
-<string name="dialog_latest_season">Päivitys näyttää vain viimeisimmän kauden</string>
 <string name="dialog_include_specials">Sisältää erikoiset, joita ei lasketa</string>
 <string name="dialog_full_line_check">Käytä koko rivin merkkiin asti</string>
 <string name="dialog_switch_swipe_direction">Pyyhi oikealta vasemmalle.</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">Arkisto</string>
 <string name="menu_unarchive">Vastaanotto</string>
 <string name="messages_title_updating_series">Päivittäiset ohjelmat</string>
-<string name="messages_title_updating_db">Päivitä tietokanta</string>
-<string name="messages_update_serie">Näytötietojen keruu ...</string>
 <string name="messages_no_internet">Internet-yhteyttä ei ole käytettävissä</string>
 <string name="messages_title_update_series">Päivitys</string>
-<string name="messages_update_series">Kerääminen paljastaa tietoja. Tämä operaatio kestää jonkin aikaa ...</string>
 <string name="messages_episodes">Jaksot</string>
 <string name="messages_new_episodes">Uudet jaksot</string>
 <string name="messages_new_episode">Uusi jakso</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">Episode-tiedot</string>
 <string name="messsages_edit_seen_timestamp">Muokkaa aikaleima</string>
 <string name="messages_calendar_app_error">Kalenter-sovellusta ei löytynyt!</string>
-<string name="messages_thetvdb_con_error">Virhe yhteyden muodostuksessa TheTVDB. Yritä uudelleen.</string>
+<string name="messages_api_con_error">Virhe yhteyden muodostuksessa TMDb API. Yritä uudelleen.</string>
 <string name="messages_marked_seen">Merkitty näkyväksi</string>
 <string name="messages_marked_unseen">Merkitty näkymättömäksi</string>
 <string name="messages_context_mark_seasonunseen">Merkitse kaikki jaksot näkymättömiksi</string>

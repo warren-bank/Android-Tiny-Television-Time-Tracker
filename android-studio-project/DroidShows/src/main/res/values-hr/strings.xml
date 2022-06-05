@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">hr</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">Nisu pronađene nikakve serije.</string>
 <string name="layout_search_no_items">Nisu pronađene nikakve serije.</string>
 <string name="layout_seasons_no_items">Nema sezona za prikaz.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">Ne može se izvesti sigurnosno kopiranje!</string>
 <string name="dialog_backup_usefolder">Koristi folder za dnevna sigurnosna kopiranja</string>
 <string name="dialog_change_language">Jezik synopsis</string>
-<string name="dialog_use_mirror">Koristi TheTVDB zrcaljenje (pokušajte ovo ako su ažuriranja prespora)</string>
 <string name="dialog_restore">Vraćanje</string>
 <string name="dialog_restore_now">Vraćanje sigurnosne kopije će ukloniti sve informacije koje su trenutno u DroidShows. Nastavi?</string>
 <string name="dialog_restore_done">Baza podataka uspješno vraćena</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">Otkaži</string>
 <string name="dialog_search">Niz za traženje:</string>
 <string name="dialog_update_series">Jeste li sigurni da želite ažurirati sve ispisane serije sada?</string>
-<string name="dialog_update_speedup">\n\nOvaj proces možete ubrzati s opcijom Ažuriranja opcija samo za najnovija sezona.</string>
-<string name="dialog_latest_season">Ažuriranje pokazuje samo najnovija sezona</string>
 <string name="dialog_include_specials">Uključi specijalitete u nepromatračni brojač</string>
 <string name="dialog_full_line_check">Koristite cijelu liniju za označitu epizodu</string>
 <string name="dialog_switch_swipe_direction">Swipe desno-na-lijevo za povratak</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">Arhiva</string>
 <string name="menu_unarchive">Obnavljanje</string>
 <string name="messages_title_updating_series">Ažuriranje pokazuje</string>
-<string name="messages_title_updating_db">Ažuriranje baze podataka</string>
-<string name="messages_update_serie">Skupljanje informacija o prikazu ...</string>
 <string name="messages_no_internet">Nema dostupne Internet veze</string>
 <string name="messages_title_update_series">Ažuriranje pokazuje</string>
-<string name="messages_update_series">Prikupljanje pokazuje informacije. Ova operacija će potrajati ...</string>
 <string name="messages_episodes">epizode</string>
 <string name="messages_new_episodes">nove epizode</string>
 <string name="messages_new_episode">nova epizoda</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">Detalji epizode</string>
 <string name="messsages_edit_seen_timestamp">Uredi viđeni vremenski okvir</string>
 <string name="messages_calendar_app_error">Nije Pronađena aplikacija kalendara!</string>
-<string name="messages_thetvdb_con_error">Greška kod povezivanja s TheTVDB. Pokušajte ponovno.</string>
+<string name="messages_api_con_error">Greška kod povezivanja s TMDb API. Pokušajte ponovno.</string>
 <string name="messages_marked_seen">označeno kao viđeno</string>
 <string name="messages_marked_unseen">označeno kao neviđeno</string>
 <string name="messages_context_mark_seasonunseen">Označi sve epizode kao neviđeni</string>

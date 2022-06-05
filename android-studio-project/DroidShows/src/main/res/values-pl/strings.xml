@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">pl</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">Nie znaleziono żadnych pokazów.</string>
 <string name="layout_search_no_items">Nie znaleziono żadnych pokazów.</string>
 <string name="layout_seasons_no_items">Brak pór roku do wyświetlenia.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">Nie można wykonać kopii zapasowej!</string>
 <string name="dialog_backup_usefolder">Użyj folderu do codziennego tworzenia kopii zapasowych</string>
 <string name="dialog_change_language">Język synopsis</string>
-<string name="dialog_use_mirror">Użyj TheTVDB zapis lustrzany (spróbuj, jeśli aktualizacje są zbyt wolne)</string>
 <string name="dialog_restore">Odtwórz</string>
 <string name="dialog_restore_now">Odtwarzanie kopii zapasowej spowoduje usunięcie wszystkich informacji znajdujących się obecnie w DroidShows. Kontynuuj?</string>
 <string name="dialog_restore_done">Pomyślnie odtworzono bazę danych</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">Anuluj</string>
 <string name="dialog_search">Łańcuch wyszukiwania:</string>
 <string name="dialog_update_series">Czy na pewno chcesz zaktualizować wszystkie pokazy wyświetlone teraz?</string>
-<string name="dialog_update_speedup">\n\nMożesz przyspieszyć ten proces, korzystając z opcji Update show \' tylko w ostatnim sezonie.</string>
-<string name="dialog_latest_season">Aktualizacja pokazuje \' tylko najnowszy sezon</string>
 <string name="dialog_include_specials">Uwzględnij specjały w liczbie nieobserwowanych</string>
 <string name="dialog_full_line_check">Użyj całej linii do zaznaczania odcinka</string>
 <string name="dialog_switch_swipe_direction">Przesuń w prawo od prawej do lewej, aby wrócić</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">Archiwum</string>
 <string name="menu_unarchive">Odzyskaj</string>
 <string name="messages_title_updating_series">Aktualizowanie pokazów</string>
-<string name="messages_title_updating_db">Aktualizowanie bazy danych</string>
-<string name="messages_update_serie">Zbieranie informacji o pokazie ...</string>
 <string name="messages_no_internet">Brak dostępnego połączenia z Internetem</string>
 <string name="messages_title_update_series">Pokazy aktualizacji</string>
-<string name="messages_update_series">Zbieranie informacji zawiera informacje. Ta operacja zajmie trochę czasu ...</string>
 <string name="messages_episodes">epizody</string>
 <string name="messages_new_episodes">nowe odcinki</string>
 <string name="messages_new_episode">nowy odcinek</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">Szczegóły epizodu</string>
 <string name="messsages_edit_seen_timestamp">Edytuj widziany znacznik czasu</string>
 <string name="messages_calendar_app_error">Nie znaleziono aplikacji kalendarza!</string>
-<string name="messages_thetvdb_con_error">Błąd podczas nawiązywania połączenia z TheTVDB. Spróbuj ponownie.</string>
+<string name="messages_api_con_error">Błąd podczas nawiązywania połączenia z TMDb API. Spróbuj ponownie.</string>
 <string name="messages_marked_seen">oznaczone jako widoczne</string>
 <string name="messages_marked_unseen">oznaczone jako niewidoczne</string>
 <string name="messages_context_mark_seasonunseen">Oznacz wszystkie odcinki jako niewidoczne</string>

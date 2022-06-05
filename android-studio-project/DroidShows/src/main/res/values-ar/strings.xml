@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ar</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">لم يتم ايجاد أية عروض.</string>
 <string name="layout_search_no_items">لم يتم ايجاد أية عروض.</string>
 <string name="layout_seasons_no_items">لا توجد مواسم للعرض.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">لا يمكن تنفيذ النسخة الاحتياطية!</string>
 <string name="dialog_backup_usefolder">استخدام الحافظة للنسخ الاحتياطية اليومية</string>
 <string name="dialog_change_language">لغة التوليف</string>
-<string name="dialog_use_mirror">الاستخدام TheTVDB mirror (حاول هذا اذا كانت التعديلات بطيئة جدا)</string>
 <string name="dialog_restore">استعادة</string>
 <string name="dialog_restore_now">استعادة النسخة الاحتياطية سيؤدي الى ازالة كل المعلومات الموجودة حاليا DroidShows. استمرار?</string>
 <string name="dialog_restore_done">استعادة قاعدة البيانات بنجاح</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">الغاء</string>
 <string name="dialog_search">عبارة البحث:</string>
 <string name="dialog_update_series">هل أنت متأكد من أنك تريد تحديث كل البرامج المعروضة الآن?</string>
-<string name="dialog_update_speedup">\n\nيمكنك تسريع هذه العملية باستخدام الاختيار تعديل يعرض \' الموسم الأخير فقط.</string>
-<string name="dialog_latest_season">تحديث يبين \' الموسم الأخير فقط</string>
 <string name="dialog_include_specials">تضمين العروض الخاصة في عدد غير مراقب</string>
 <string name="dialog_full_line_check">استخدام الخط بالكامل لتعليم الحلقة</string>
 <string name="dialog_switch_swipe_direction">سيمسح يمين-الى اليسار للخلف</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">تخزين</string>
 <string name="menu_unarchive">استعادة</string>
 <string name="messages_title_updating_series">جاري تعديل العروض</string>
-<string name="messages_title_updating_db">جاري تعديل قاعدة البيانات</string>
-<string name="messages_update_serie">جاري تجميع معلومات العرض ...</string>
 <string name="messages_no_internet">لا توجد وصلة انترنت متاحة</string>
 <string name="messages_title_update_series">تعديل العروض</string>
-<string name="messages_update_series">تقوم عملية تجميع البيانات بعرض المعلومات. ... هذه العملية ستستغرق بعض الوقت</string>
 <string name="messages_episodes">حلقات</string>
 <string name="messages_new_episodes">حلقات جديدة</string>
 <string name="messages_new_episode">حلقة جديدة</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">تفاصيل الحلقة</string>
 <string name="messsages_edit_seen_timestamp">تحرير خاتم الوقت</string>
 <string name="messages_calendar_app_error">لم يتم ايجاد تطبيق التقويم!</string>
-<string name="messages_thetvdb_con_error">خطأ في الاتصال الى TheTVDB. حاول مرة أخرى.</string>
+<string name="messages_api_con_error">خطأ في الاتصال الى TMDb API. حاول مرة أخرى.</string>
 <string name="messages_marked_seen">ملحوظ كما تم مشاهدته</string>
 <string name="messages_marked_unseen">تم تعليمه كغير معلم</string>
 <string name="messages_context_mark_seasonunseen">وضع علامة على كل الحلقات كغيرها</string>

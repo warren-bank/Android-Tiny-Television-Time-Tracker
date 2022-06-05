@@ -1,10 +1,11 @@
 package nl.asymmetrics.droidshows.utils;
 
+import nl.asymmetrics.droidshows.DroidShows;
+import nl.asymmetrics.droidshows.ui.ViewSerie;
+
 import android.app.Activity;
 import android.view.MotionEvent;
 import android.view.View;
-import nl.asymmetrics.droidshows.DroidShows;
-import nl.asymmetrics.droidshows.ui.ViewSerie;
 
 public class SwipeDetect implements View.OnTouchListener {
   private int vWidth, onDownX, onDownY;

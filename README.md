@@ -88,10 +88,9 @@ __Update__:
 __Other__:
 
 \+ Click on an episode air date to add it to your calendar<br>
-\+ Option to use a mirror if TheTVDB.com is too slow in your region<br>
 \+ Menu (overflow) button should show up in Android 3.0+<br>
 \+ Dutch, French, German, Spanish and Russian translations<br>
-\+ Choose which synopsis language to fetch from TheTVDB<br>
+\+ Choose which synopsis language to fetch from TMDB<br>
 \+ Modern looking layout<br>
 \+ Swipe left-to-right acts as back button<br>
 \+ Animations that help understand the app's structure<br>
@@ -109,7 +108,11 @@ __Other__:
 __Copyright Ownership and Public Licensing__:
 
 &copy;2010 [Carlos Limpinho, Paulo Cabido](https://code.google.com/p/droidseries) under GPLv3<br>
-Modified by Mikael Berthe<br>
-&copy;2014-2018 Guillaume under GPLv3<br>
-New icon is a mix of work by [Thrasos Varnava](https://iconeasy.com/icon/tv-shows-2-icon) and [Taenggo](https://wallalay.com/wallpapers-for-android-67-177682-desktop-background.html)<br>
-&copy;2022 [Warren Bank](https://github.com/warren-bank) under GPLv3
+Modified by [Mikael Berthe](https://gitorious.org/droidseries/mckaels-droidseries)<br>
+&copy;2014-2018 [Guillaume](https://github.com/ltGuillaume/DroidShows) under GPLv3<br>
+&copy;2022 [Warren Bank](https://github.com/warren-bank) under GPLv3<br>
+New icon is a mix of work by [Thrasos Varnava](https://iconeasy.com/icon/tv-shows-2-icon) and [Taenggo](https://wallalay.com/wallpapers-for-android-67-177682-desktop-background.html)
+
+__TMDB API Attribution__:
+
+This product uses the [TMDB API](https://www.themoviedb.org/documentation/api) but is not endorsed or certified by TMDB.

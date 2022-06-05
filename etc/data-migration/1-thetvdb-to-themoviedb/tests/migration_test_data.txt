@@ -1,0 +1,27 @@
+data to migrate:
+================
+series:
+  (1977, tt0075572) Roots
+      language      = de
+      archived      = 1
+      pinned        = 1
+      extResources  = "Roots\n*https://en.wikipedia.org/w/index.php?search=1977+miniseries+Roots"
+      episodes seen = S0E02, S1E3
+  (1978, tt0077025) Holocaust
+      language      = fr
+      archived      = 1
+      pinned        = 0
+      extResources  = "Holocaust\n*https://en.wikipedia.org/w/index.php?search=1978+miniseries+Holocaust"
+      episodes seen = S1E2
+  (2002, tt0303461) Firefly
+      language      = es
+      archived      = 0
+      pinned        = 1
+      extResources  = "Firefly\n*https://en.wikipedia.org/w/index.php?search=2002+series+Firefly"
+      episodes seen = S0E2, S0E4, S1E3, S1E5, S1E6
+  (2008, tt1227926) Dr. Horrible's Sing-Along Blog
+      language      = en
+      archived      = 0
+      pinned        = 0
+      extResources  = "Dr. Horrible\n*https://en.wikipedia.org/w/index.php?search=2008+miniseries+Dr+Horrible"
+      episodes seen = S1E1, S1E2, S1E3

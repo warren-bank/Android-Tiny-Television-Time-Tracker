@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ja</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">表示されない.</string>
 <string name="layout_search_no_items">表示されない.</string>
 <string name="layout_seasons_no_items">表示する季節がない.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">バックアップを実行できません!</string>
 <string name="dialog_backup_usefolder">日次バックアップ用のフォルダーの使用</string>
 <string name="dialog_change_language">シノプシス語</string>
-<string name="dialog_use_mirror">用途 TheTVDB ミラー ( 更新の速度が遅すぎる場合に試行する)</string>
 <string name="dialog_restore">復元</string>
 <string name="dialog_restore_now">バックアップを復元すると、現在指定されているすべての情報が DroidShows. 続行?</string>
 <string name="dialog_restore_done">データベースを正常に復元</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">キャンセル</string>
 <string name="dialog_search">検索ストリング:</string>
 <string name="dialog_update_series">リストされているすべての図を今すぐ更新しますか \??</string>
-<string name="dialog_update_speedup">\n\nオプションの「更新」の「最新のシーズンのみ」を使用して、このプロセスを高速化する.</string>
-<string name="dialog_latest_season">更新は最新のシーズンのみを表示する</string>
 <string name="dialog_include_specials">ウォッチされていないカウントに指定された</string>
 <string name="dialog_full_line_check">エピソードにライン全体を使用</string>
 <string name="dialog_switch_swipe_direction">右から左へスワイプする</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">アーカイブ</string>
 <string name="menu_unarchive">リカバリー中</string>
 <string name="messages_title_updating_series">表示の更新</string>
-<string name="messages_title_updating_db">データベースの更新</string>
-<string name="messages_update_serie">情報を収集しています ...</string>
 <string name="messages_no_internet">インターネット接続がありません</string>
 <string name="messages_title_update_series">更新の表示</string>
-<string name="messages_update_series">収集する情報が表示されます。 この操作にはしばらく時間がかかります ...</string>
 <string name="messages_episodes">エピソード</string>
 <string name="messages_new_episodes">新しいエピソード</string>
 <string name="messages_new_episode">新規エピソード</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">エピソードの詳細</string>
 <string name="messsages_edit_seen_timestamp">表示タイム・スタンプ</string>
 <string name="messages_calendar_app_error">カレンダーアプリケーションが見つかりません!</string>
-<string name="messages_thetvdb_con_error">接続中のエラー TheTVDB. 再試行.</string>
+<string name="messages_api_con_error">接続中のエラー TMDb API. 再試行.</string>
 <string name="messages_marked_seen">見られるという</string>
 <string name="messages_marked_unseen">目に見えない</string>
 <string name="messages_context_mark_seasonunseen">すべてのエピソードに未確認のマークを付ける</string>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ur</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">کوئی شو نہیں ملا.</string>
 <string name="layout_search_no_items">کوئی شو نہیں ملا.</string>
 <string name="layout_seasons_no_items">ڈسپلے کرنے کے لئے کوئی موسموں.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">بیک اپ انجام دینے کے قابل!</string>
 <string name="dialog_backup_usefolder">روزانہ بیک اپ کے لیے فولڈر کا استعمال کریں</string>
 <string name="dialog_change_language">سائنوسس زبان</string>
-<string name="dialog_use_mirror">استعمال TheTVDB عکس (اس بات کی کوشش کریں اگر اپ ڈیٹس بہت سست ہیں)</string>
 <string name="dialog_restore">بے چین</string>
 <string name="dialog_restore_now">ایک بیک اپ کی بحالی میں فی الحال تمام معلومات کو دور کریں گے DroidShows. Continue reading →?</string>
 <string name="dialog_restore_done">ڈیٹا بیس کامیابی سے بحال</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">منسوخ</string>
 <string name="dialog_search">سرچ سٹرنگ:</string>
 <string name="dialog_update_series">کیا آپ کو یقین ہے کہ آپ تمام درج شوز اپ ڈیٹ کرنا چاہتے ہیں اب?</string>
-<string name="dialog_update_speedup">\n\nآپ اس عمل کو تیز کر سکتے ہیں اس عمل کے آپشن اپ ڈیٹ شو کے ساتھ \' تازہ ترین موسم صرف.</string>
-<string name="dialog_latest_season">اپ ڈیٹ شو \' تازہ ترین موسم صرف</string>
 <string name="dialog_include_specials">غیر محفوظ شمار میں متعین خصوصی شامل</string>
 <string name="dialog_full_line_check">پرکرن کے لئے پوری لائن استعمال کریں</string>
 <string name="dialog_switch_swipe_direction">سومٹا دائیں-بائیں جانے کے لئے</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">محفوظہ</string>
 <string name="menu_unarchive">ریپر</string>
 <string name="messages_title_updating_series">اپڈیٹنگ شو</string>
-<string name="messages_title_updating_db">ڈیٹا بیس اپ ڈیٹ</string>
-<string name="messages_update_serie">اجتماع شو کی معلومات ...</string>
 <string name="messages_no_internet">کوئی انٹرنیٹ کنکشن دستیاب نہیں</string>
 <string name="messages_title_update_series">اپ ڈیٹ شو</string>
-<string name="messages_update_series">اجتماع سے پتہ چلتا ہے. اس آپریشن میں تھوڑی دیر لگے گی ...</string>
 <string name="messages_episodes">اقساط</string>
 <string name="messages_new_episodes">نئی اقساط</string>
 <string name="messages_new_episode">نئی قسط</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">قسط کی تفصیلات</string>
 <string name="messsages_edit_seen_timestamp">تدوین کا ٹائم ٹکٹ دیکھا</string>
 <string name="messages_calendar_app_error">کوئی کیلنڈر ایپ نہیں ملا!</string>
-<string name="messages_thetvdb_con_error">سے منسلک Error to TheTVDB. پھر کوشش کریں.</string>
+<string name="messages_api_con_error">سے منسلک Error to TMDb API. پھر کوشش کریں.</string>
 <string name="messages_marked_seen">جیسا کہ دیکھا گیا</string>
 <string name="messages_marked_unseen">غیب کی نشان دہی</string>
 <string name="messages_context_mark_seasonunseen">مارک تمام اقساط بطور غیب</string>

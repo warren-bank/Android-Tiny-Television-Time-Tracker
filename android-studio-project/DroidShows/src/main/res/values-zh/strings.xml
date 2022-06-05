@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">zh</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">未找到任何显示.</string>
 <string name="layout_search_no_items">未找到任何显示.</string>
 <string name="layout_seasons_no_items">没有要显示的季节.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">无法执行备份!</string>
 <string name="dialog_backup_usefolder">每日备份的使用文件夹</string>
 <string name="dialog_change_language">概要语言</string>
-<string name="dialog_use_mirror">使用 TheTVDB 镜像 (如果更新太慢，请尝试此)</string>
 <string name="dialog_restore">恢复</string>
 <string name="dialog_restore_now">复原备份将除去当前在 DroidShows. 继续?</string>
 <string name="dialog_restore_done">已成功复原数据库</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">取消</string>
 <string name="dialog_search">搜索字符串:</string>
 <string name="dialog_update_series">确定要立即更新所有列出的显示?</string>
-<string name="dialog_update_speedup">\n\n您可以使用选项 Update 仅显示最新的季节来加快此流程.</string>
-<string name="dialog_latest_season">更新仅显示最新季节</string>
 <string name="dialog_include_specials">包含未受监视的计数</string>
 <string name="dialog_full_line_check">使用整条线标记集中</string>
 <string name="dialog_switch_swipe_direction">从右到左转回</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">档案</string>
 <string name="menu_unarchive">恢复</string>
 <string name="messages_title_updating_series">正在更新显示</string>
-<string name="messages_title_updating_db">正在更新数据库</string>
-<string name="messages_update_serie">正在收集显示信息...</string>
 <string name="messages_no_internet">无因特网连接可用</string>
 <string name="messages_title_update_series">更新显示</string>
-<string name="messages_update_series">收集显示信息。 此操作将需要一段时间 ...</string>
 <string name="messages_episodes">集数</string>
 <string name="messages_new_episodes">新集</string>
 <string name="messages_new_episode">新集</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">事件详细信息</string>
 <string name="messsages_edit_seen_timestamp">编辑看到的时间戳记</string>
 <string name="messages_calendar_app_error">找不到日历应用程序!</string>
-<string name="messages_thetvdb_con_error">连接至 TheTVDB. 再试一次.</string>
+<string name="messages_api_con_error">连接至 TMDb API. 再试一次.</string>
 <string name="messages_marked_seen">已标记为所见</string>
 <string name="messages_marked_unseen">标记为未显示</string>
 <string name="messages_context_mark_seasonunseen">将所有事件标记为未显示</string>

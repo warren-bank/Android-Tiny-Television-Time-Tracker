@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ko</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">발견된 쇼가 없음.</string>
 <string name="layout_search_no_items">발견된 쇼가 없음.</string>
 <string name="layout_seasons_no_items">표시할 계절이 없음.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">백업을 수행할 수 없음!</string>
 <string name="dialog_backup_usefolder">일별 백업 폴더 사용</string>
 <string name="dialog_change_language">시놉시스 언어</string>
-<string name="dialog_use_mirror">사용 TheTVDB 미러 (업데이트가 너무 느리면 이를 시도하십시오.)</string>
 <string name="dialog_restore">복원</string>
 <string name="dialog_restore_now">백업을 복원하면 현재 있는 모든 정보가 제거됩니다. DroidShows. 계속?</string>
 <string name="dialog_restore_done">데이터베이스 복원 성공</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">취소</string>
 <string name="dialog_search">검색 문자열:</string>
 <string name="dialog_update_series">이제 나열된 모든 표시를 업데이트하시겠습니까\??</string>
-<string name="dialog_update_speedup">\n\n옵션 업데이트 시 \'최신 시즌만 표시\' 옵션을 사용하여 이 프로세스의 속도를 높일 수 있습니다..</string>
-<string name="dialog_latest_season">업데이트 시 \' 최신 시즌만 표시 \'</string>
 <string name="dialog_include_specials">감시되지 않은 계수에 특별 항목 포함</string>
 <string name="dialog_full_line_check">전체 행을 사용하여 에피소드 표시</string>
 <string name="dialog_switch_swipe_direction">다시 돌아가기 위해 오른쪽에서 왼쪽으로 쓸어넘기기</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">아카이브</string>
 <string name="menu_unarchive">복구</string>
 <string name="messages_title_updating_series">업데이트하기</string>
-<string name="messages_title_updating_db">데이터베이스 업데이트하기</string>
-<string name="messages_update_serie">정보를 수집하는 중 ...</string>
 <string name="messages_no_internet">사용 가능한 인터넷 연결 없음</string>
 <string name="messages_title_update_series">업데이트 쇼</string>
-<string name="messages_update_series">정보를 수집하는 중입니다. 이 작업은 시간이 다소 소요됩니다 ...</string>
 <string name="messages_episodes">에피소드</string>
 <string name="messages_new_episodes">새로운 에피소드</string>
 <string name="messages_new_episode">새 에피소드</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">에피소드 세부사항</string>
 <string name="messsages_edit_seen_timestamp">편집된 시간소인 편집</string>
 <string name="messages_calendar_app_error">일정관리 애플리케이션을 찾을 수 없음!</string>
-<string name="messages_thetvdb_con_error">연결 오류 TheTVDB. 다시 시도하기.</string>
+<string name="messages_api_con_error">연결 오류 TMDb API. 다시 시도하기.</string>
 <string name="messages_marked_seen">표시된 것으로 표시</string>
 <string name="messages_marked_unseen">보이지 않는 것으로 표시된</string>
 <string name="messages_context_mark_seasonunseen">모든 에피소드를 볼 수 없는 것으로 표시</string>

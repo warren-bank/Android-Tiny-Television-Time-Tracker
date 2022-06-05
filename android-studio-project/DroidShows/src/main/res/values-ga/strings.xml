@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ga</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">Níor aimsíodh aon taispeánadh.</string>
 <string name="layout_search_no_items">Níor aimsíodh aon taispeánadh.</string>
 <string name="layout_seasons_no_items">Níl aon séasúir le taispeáint.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">Ní féidir cúltaca a dhéanamh!</string>
 <string name="dialog_backup_usefolder">Úsáid fillteán le haghaidh cúllíne laethúil</string>
 <string name="dialog_change_language">Teanga synopsis</string>
-<string name="dialog_use_mirror">Úsáid: TheTVDB scáthánaigh (Bain triail as seo má tá nuashonruithe ró-íseal)</string>
 <string name="dialog_restore">Athchóirigh</string>
 <string name="dialog_restore_now">Athsheoladh cúltaca cúltaca gach eolas faoi láthair i DroidShows. Lean?</string>
 <string name="dialog_restore_done">\@ info: inbox</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">Cealaigh</string>
 <string name="dialog_search">Teaghrán cuardaigh:</string>
 <string name="dialog_update_series">An bhfuil tú cinnte gur mian leat gach seónna atá liostaithe a nuashonrú anois.?</string>
-<string name="dialog_update_speedup">\n\nIs féidir leat luas a chur suas leis an rogha seo leis an rogha rogha Léiríonn \' séasúr is déanaí amháin.</string>
-<string name="dialog_latest_season">Nuashonraigh an séasúr is déanaí ach amháin</string>
 <string name="dialog_include_specials">Cuir specials i gcomhróidí gan amharc</string>
 <string name="dialog_full_line_check">Bain úsáid as líne ar fad a mharcáil episode</string>
 <string name="dialog_switch_swipe_direction">Swipe ceart-go-fágtha chun dul ar ais</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">Cartlann</string>
 <string name="menu_unarchive">Aisghabháil</string>
 <string name="messages_title_updating_series">Taispeáin nuashonrú</string>
-<string name="messages_title_updating_db">Bunachar sonraí á nuashonrú</string>
-<string name="messages_update_serie">Taispeáin an t-eolas a thaispeáint ...</string>
 <string name="messages_no_internet">Níl aon nasc Idirlín ar fáil</string>
 <string name="messages_title_update_series">Taispeánann Nuashonrú</string>
-<string name="messages_update_series">Taispeánann Gathering eolas. Beidh an oibríocht seo a ghlacadh le linn ...</string>
 <string name="messages_episodes">ceodes</string>
 <string name="messages_new_episodes">eipeasóid nua</string>
 <string name="messages_new_episode">eipeasóid nua</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">Sonraí Eipeasóid</string>
 <string name="messsages_edit_seen_timestamp">Cuir an stampa ama in eagar</string>
 <string name="messages_calendar_app_error">Níor aimsíodh aon phreabfhuinneog!</string>
-<string name="messages_thetvdb_con_error">Earráid agus á nascadh le TheTVDB. Bain triail as.</string>
+<string name="messages_api_con_error">Earráid agus á nascadh le TMDb API. Bain triail as.</string>
 <string name="messages_marked_seen">marcáilte mar atá</string>
 <string name="messages_marked_unseen">marcáilte mar nach bhfuil siad</string>
 <string name="messages_context_mark_seasonunseen">Marcáil gach episodes mar nach bhfuil le feiceáil</string>

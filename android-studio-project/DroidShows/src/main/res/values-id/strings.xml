@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">id</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">Tidak ada acara yang ditemukan.</string>
 <string name="layout_search_no_items">Tidak ada acara yang ditemukan.</string>
 <string name="layout_seasons_no_items">Tidak ada musim untuk ditampilkan.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">Tidak dapat melakukan backup!</string>
 <string name="dialog_backup_usefolder">Gunakan folder untuk backup harian</string>
 <string name="dialog_change_language">Bahasa Sinopsis</string>
-<string name="dialog_use_mirror">Gunakan TheTVDB mirror (coba ini jika pemutakhiran terlalu lambat)</string>
 <string name="dialog_restore">Pulihkan</string>
 <string name="dialog_restore_now">Mengembalikan cadangan akan menghapus semua informasi yang ada saat ini DroidShows. Lanjutkan?</string>
 <string name="dialog_restore_done">Basis data dipulihkan</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">Batalkan</string>
 <string name="dialog_search">Cari string:</string>
 <string name="dialog_update_series">Apakah Anda yakin ingin memperbarui semua acara yang terdaftar sekarang\??</string>
-<string name="dialog_update_speedup">\n\nAnda dapat mempercepat proses ini dengan opsi Update menunjukkan \' musim terbaru saja.</string>
-<string name="dialog_latest_season">Update menunjukkan \' musim terbaru saja</string>
 <string name="dialog_include_specials">Sertakan menu spesial dalam hitungan yang tidak diawasi</string>
 <string name="dialog_full_line_check">Gunakan seluruh baris untuk menandai episode</string>
 <string name="dialog_switch_swipe_direction">Geser kanan-ke-kiri untuk kembali</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">Arsip</string>
 <string name="menu_unarchive">Pulihkan</string>
 <string name="messages_title_updating_series">Memperbarui menunjukkan</string>
-<string name="messages_title_updating_db">Memperbarui basis data</string>
-<string name="messages_update_serie">Mengumpulkan informasi acara ...</string>
 <string name="messages_no_internet">Tidak ada koneksi Internet yang tersedia</string>
 <string name="messages_title_update_series">Pemutakhiran menunjukkan</string>
-<string name="messages_update_series">Mengumpulkan informasi menunjukkan informasi. Operasi ini akan memakan waktu cukup lama ...</string>
 <string name="messages_episodes">Episode</string>
 <string name="messages_new_episodes">episode baru</string>
 <string name="messages_new_episode">episode baru</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">Rincian episode</string>
 <string name="messsages_edit_seen_timestamp">Sunting timestamp dilihat</string>
 <string name="messages_calendar_app_error">Tidak ada aplikasi kalender yang ditemukan!</string>
-<string name="messages_thetvdb_con_error">Kesalahan dalam menghubungkan ke TheTVDB. Coba lagi.</string>
+<string name="messages_api_con_error">Kesalahan dalam menghubungkan ke TMDb API. Coba lagi.</string>
 <string name="messages_marked_seen">Ditandai sebagai terlihat</string>
 <string name="messages_marked_unseen">ditandai sebagai tak terlihat</string>
 <string name="messages_context_mark_seasonunseen">Tandai semua episode sebagai tak terlihat</string>

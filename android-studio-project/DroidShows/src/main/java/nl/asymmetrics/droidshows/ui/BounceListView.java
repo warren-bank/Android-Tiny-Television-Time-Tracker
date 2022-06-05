@@ -1,6 +1,7 @@
 package nl.asymmetrics.droidshows.ui;
 
 import nl.asymmetrics.droidshows.DroidShows;
+
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;

@@ -118,9 +118,18 @@ https://api.themoviedb.org/3/tv/4614/season/1/episode/1?api_key=1553d2e4fa2912fc
 https://developers.themoviedb.org/3/getting-started/images
 
 https://developers.themoviedb.org/3/configuration/get-api-configuration
-  get configuration data
+  get API configuration data
 
 https://api.themoviedb.org/3/configuration?api_key=1553d2e4fa2912fc0953305d4d3e7c44
+  where:
+    api_key = 1553d2e4fa2912fc0953305d4d3e7c44
+
+----------------------------------------
+
+https://developers.themoviedb.org/3/configuration/get-languages
+  get list of supported languages
+
+https://api.themoviedb.org/3/configuration/languages?api_key=1553d2e4fa2912fc0953305d4d3e7c44
   where:
     api_key = 1553d2e4fa2912fc0953305d4d3e7c44
 

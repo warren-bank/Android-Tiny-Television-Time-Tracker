@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">sk</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">Nenašli sa žiadne zobrazenie.</string>
 <string name="layout_search_no_items">Nenašli sa žiadne zobrazenie.</string>
 <string name="layout_seasons_no_items">Žiadne sezóny na zobrazenie.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">Nie je možné vykonať zálohovanie!</string>
 <string name="dialog_backup_usefolder">Použiť zložku pre denné zálohovania</string>
 <string name="dialog_change_language">Jazyk Synopsis</string>
-<string name="dialog_use_mirror">Použitie TheTVDB zrkadlo (skúste to, ak sú aktualizácie príliš pomalé)</string>
 <string name="dialog_restore">Obnoviť</string>
 <string name="dialog_restore_now">Obnovenie zálohy odstráni všetky aktuálne informácie DroidShows. Pokračovať?</string>
 <string name="dialog_restore_done">Databáza bola úspešne obnovená</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">Zrušiť</string>
 <string name="dialog_search">Vyhľadávací reťazec:</string>
 <string name="dialog_update_series">Ste si istý, že chcete aktualizovať všetky zobrazené zobrazené teraz?</string>
-<string name="dialog_update_speedup">\n\nTento proces môžete urýchliť s voľbou Update show len na poslednú sezónu..</string>
-<string name="dialog_latest_season">Aktualizácia zobrazí len poslednú sezónu</string>
 <string name="dialog_include_specials">Zahrnúť špeciály do nesledovaného počtu</string>
 <string name="dialog_full_line_check">Použiť celú linku na označenie epizóde</string>
 <string name="dialog_switch_swipe_direction">Otočiť doprava na prednú časť vrátiť</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">Archív</string>
 <string name="menu_unarchive">Obnoviť</string>
 <string name="messages_title_updating_series">Aktualizácia zobrazuje</string>
-<string name="messages_title_updating_db">Aktualizuje sa databáza</string>
-<string name="messages_update_serie">Získavanie informácií o zobrazovaní ...</string>
 <string name="messages_no_internet">Nie je k dispozícii internetové pripojenie</string>
 <string name="messages_title_update_series">Aktualizovať zobrazenie</string>
-<string name="messages_update_series">Zhromažďovanie zobrazuje informácie. Táto operácia bude chvíľu trvať ...</string>
 <string name="messages_episodes">Epizódy</string>
 <string name="messages_new_episodes">nové epizódy</string>
 <string name="messages_new_episode">nová epizóda</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">Podrobné informácie o</string>
 <string name="messsages_edit_seen_timestamp">Upraviť zobrazenie časovej značky</string>
 <string name="messages_calendar_app_error">Nenašla sa žiadna aplikácia Calendar!</string>
-<string name="messages_thetvdb_con_error">Nastala chyba pri pripájaní k TheTVDB. Skúsiť znova.</string>
+<string name="messages_api_con_error">Nastala chyba pri pripájaní k TMDb API. Skúsiť znova.</string>
 <string name="messages_marked_seen">označené ako viditeľné</string>
 <string name="messages_marked_unseen">označené ako neviditeľné</string>
 <string name="messages_context_mark_seasonunseen">Označiť všetky epizódy ako neviditeľné</string>

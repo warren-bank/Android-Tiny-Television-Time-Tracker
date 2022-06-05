@@ -1,0 +1,123 @@
+--------------------------------------------------------------------------------
+
+comments:
+=========
+
+* as previously mentioned, several classes are touching the API and also the DB..
+* I'd like to inspect which classes are using models,
+  and whether those models are:
+  - for the API
+  - for the DB
+  - unnecessary.. when certain functionality is centralized to a class that manages the interaction between the API and DB
+* strictly speaking:
+  - the only class that should be using API models is this API gateway class,
+    which is the only place that API calls should occur
+  - all other classes should be using models that represent the DB
+  - the only class that should be reading from or writing to the DB is a centralized DB gateway class (ex: SQLiteStore),
+    and all other classes should use this class to obtain DB models
+
+--------------------------------------------------------------------------------
+
+classes:
+========
+
+* DroidShows
+  - DB models:
+    * TVShowItem
+  - API gateway:
+    * TheTVDB
+  - API models:
+    * Serie
+  - notes:
+    * TheTVDB and Serie are used by methods:
+      - updateSerie
+      - updateAllSeries
+      - updatePosterThumb
+    * all of these methods belong within a centralized API gateway
+    * the only model this class should use is: TVShowItem
+
+* .ui.AddSerie
+  - DB models:
+    * TVShowItem
+  - API gateway:
+    * TheTVDB
+  - API models:
+    * Serie
+  - notes:
+    * TheTVDB is used by methods:
+      - searchSeries
+      - AsyncAddSerie.doInBackground
+    * Serie is used instead of a proper class to represent a search result
+      - the entire class uses it, including the ListView adapter
+      - when it comes time to save the series to the DB,
+        the id of this search result is used to query the API for another more complete instance of Serie;
+        this is the model that is updated (ex: path to icon) and eventually saved to the DB.
+    * TVShowItem is only used after a new series has been added to the DB;
+      its constructor is called and the instance is pushed onto the list of shows held/displayed by DroidShows.
+    * fields that are used in class that represents a search result:
+      - series id
+      - name
+      - language (optional)
+      - overview
+
+* .ui.SerieSeasons
+  - DB models:
+    * Season
+    * .utils.SQLiteStore.NextEpisode
+  - notes:
+    * 'getSeasons' method performs its own DB query and loops through the results.. calling the 'Season' constructor for each;
+      this code should be relocated to a DB gateway class (ex: SQLiteStore)
+    * 'onCreate' method makes one call that returns an instance of the 'NextEpisode' model class, and one field is immediately consumed;
+      this class actually models one Episode (regardless of whether or not it is "next").
+
+* .ui.SerieEpisodes
+  - DB models:
+    * .utils.SQLiteStore.EpisodeRow
+    * .utils.SQLiteStore.NextEpisode
+  - notes:
+    * aside from the fact that the 'EpisodeRow' model class isn't located in the same package as the other models,
+      but rather is a subclass of the DB gateway class..
+      this is a good/minimal model
+    * 'onCreate' method makes one call that returns an instance of the 'NextEpisode' model class, and one field is immediately consumed;
+      this class actually models one Episode (regardless of whether or not it is "next").
+
+* .ui.ViewEpisode
+  - DB models: N/A
+  - notes:
+    * 'onCreate' method performs its own DB queries
+
+* .ui.ViewSerie
+  - DB models: N/A
+  - notes:
+    * 'onCreate' method performs its own DB queries
+
+--------------------------------------------------------------------------------
+
+observations:
+=============
+
+* unrelated, but something I just noticed..
+  - classes:
+      .DroidShows
+      .ui.ViewSerie
+  - both includes this code:
+
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/DroidShows.java#L1721-L1729
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/ui/ViewSerie.java#L206-L214
+    private String translateStatus(String statusValue) {
+        if (statusValue.equalsIgnoreCase("Continuing")) {
+            return getString(R.string.showstatus_continuing);
+        }
+        else if (statusValue.equalsIgnoreCase("Ended")) {
+            return getString(R.string.showstatus_ended);
+        }
+        else {
+            return statusValue;
+        }
+    }
+
+* these conditionals will need to be updated, based on whatever values the new API returns for its 'statusValue' field
+  - since both of these classes will be using a DB model of a series that is retrieved from a DB gateway class,
+    this logic should be relocated there, so the translation happens transparently for classes that use the model.
+
+--------------------------------------------------------------------------------

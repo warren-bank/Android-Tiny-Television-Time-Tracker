@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">he</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">לא נמצאו תצוגות..</string>
 <string name="layout_search_no_items">לא נמצאו תצוגות..</string>
 <string name="layout_seasons_no_items">אין עונות להצגה..</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">לא ניתן לבצע גיבוי!</string>
 <string name="dialog_backup_usefolder">שימוש בתיקיה עבור גיבויים יומיים</string>
 <string name="dialog_change_language">שפת Synopsis</string>
-<string name="dialog_use_mirror">שימוש TheTVDB מראה (נסה את זה אם העדכונים איטיים מדי)</string>
 <string name="dialog_restore">שחזור</string>
 <string name="dialog_restore_now">שחזור גיבוי יסיר את כל המידע כעת DroidShows. המשך?</string>
 <string name="dialog_restore_done">מסד הנתונים שוחזר בהצלחה</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">ביטול</string>
 <string name="dialog_search">מחרוזת חיפוש:</string>
 <string name="dialog_update_series">אתם בטוחים שברצונכם לעדכן את כל המופעים הרשומים כעת\??</string>
-<string name="dialog_update_speedup">\n\nניתן להאיץ את התהליך עם האפשרות \'עדכון\' מציג את העונה האחרונה בלבד.</string>
-<string name="dialog_latest_season">עדכון מציג את העונה האחרונה בלבד</string>
 <string name="dialog_include_specials">הכללת מנות מיוחדות בספירת שלא נצפה</string>
 <string name="dialog_full_line_check">שימוש בשורה שלמה לסימון פרק</string>
 <string name="dialog_switch_swipe_direction">מחיקה מימין לשמאל כדי לחזור.</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">ארכיב</string>
 <string name="menu_unarchive">שחזור</string>
 <string name="messages_title_updating_series">עדכון מופעים</string>
-<string name="messages_title_updating_db">מעדכן בסיס נתונים</string>
-<string name="messages_update_serie">פרטי הצגת מידע ...</string>
 <string name="messages_no_internet">אין חיבור אינטרנט זמין</string>
 <string name="messages_title_update_series">עדכון מופעים</string>
-<string name="messages_update_series">איסוף מידע מציג מידע. פעולה זו תיקח זמן מה ...</string>
 <string name="messages_episodes">פרקים</string>
 <string name="messages_new_episodes">פרקים חדשים</string>
 <string name="messages_new_episode">פרק חדש</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">פרק זמן</string>
 <string name="messsages_edit_seen_timestamp">עריכת חותמת זמן</string>
 <string name="messages_calendar_app_error">לא נמצאה יישום יומן!</string>
-<string name="messages_thetvdb_con_error">שגיאה בחיבור ל - TheTVDB. נסו שוב.</string>
+<string name="messages_api_con_error">שגיאה בחיבור ל - TMDb API. נסו שוב.</string>
 <string name="messages_marked_seen">מסומן כפי שנראה</string>
 <string name="messages_marked_unseen">מסומן כבלתי נראה</string>
 <string name="messages_context_mark_seasonunseen">לסמן את כל הפרקים כבלתי נראים.</string>

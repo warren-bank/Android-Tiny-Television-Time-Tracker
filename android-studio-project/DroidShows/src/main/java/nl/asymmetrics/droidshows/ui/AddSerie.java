@@ -1,18 +1,15 @@
 package nl.asymmetrics.droidshows.ui;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
 import nl.asymmetrics.droidshows.DroidShows;
 import nl.asymmetrics.droidshows.R;
-import nl.asymmetrics.droidshows.thetvdb.TheTVDB;
-import nl.asymmetrics.droidshows.thetvdb.model.Serie;
-import nl.asymmetrics.droidshows.thetvdb.model.TVShowItem;
-import nl.asymmetrics.droidshows.thetvdb.utils.PosterThumb;
-import nl.asymmetrics.droidshows.utils.SQLiteStore;
+import nl.asymmetrics.droidshows.api.ApiGateway;
+import nl.asymmetrics.droidshows.common.Constants;
+import nl.asymmetrics.droidshows.database.DbGateway;
+import nl.asymmetrics.droidshows.ui.model.SearchResult;
+import nl.asymmetrics.droidshows.ui.model.TVShowItem;
+import nl.asymmetrics.droidshows.utils.NetworkUtils;
 import nl.asymmetrics.droidshows.utils.SwipeDetect;
-import nl.asymmetrics.droidshows.utils.Utils;
+
 import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
@@ -20,58 +17,69 @@ import android.app.SearchManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Looper;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.ContextMenu;
+import android.view.ContextMenu.ContextMenuInfo;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.ContextMenu.ContextMenuInfo;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.ArrayAdapter;
 import android.widget.CheckedTextView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.AdapterView.AdapterContextMenuInfo;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public class AddSerie extends ListActivity
 {
-  private static List<Serie> search_series = null;
-  private TheTVDB theTVDB;
-  private SeriesSearchAdapter seriessearch_adapter;
-  /* DIALOGS */
-  private ProgressDialog m_ProgressDialog = null;
-  /* Option Menus */
-  private static final int ADD_SERIE_MENU_ITEM = Menu.FIRST;
-  /* Context Menus */
-  private static final int ADD_CONTEXT = Menu.FIRST;
+  private static final int ADD_SERIE_MENU_ITEM    = Menu.FIRST;
+  private static final int ADD_CONTEXT            = Menu.FIRST;
+
+  private ApiGateway api;
+  private DbGateway db;
+  private List<Integer> serieIds;
+  private String langCode;
+  private String searchQuery;
+  private List<SearchResult> searchResults;
+  private SeriesSearchAdapter searchAdapter;
+  private AsyncAddSerie addSerieTask;
+  private ProgressDialog m_ProgressDialog;
   private ListView listView;
-  static String searchQuery = "";
-  private SQLiteStore db;
-  private List<String> series;
-  private String langCode = DroidShows.langCode;
-  private AsyncAddSerie addSerieTask = null;
-  private Serie sToAdd;
-  
+
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.add_serie);
-    db = SQLiteStore.getInstance(this);
-    series = db.getSeries(2, false, null);  // 2 = archive and current shows, false = don't filter networks, null = ignore networks filter
-    List<Serie> search_series = new ArrayList<Serie>();
-    this.seriessearch_adapter = new SeriesSearchAdapter(this, R.layout.row_search_series, search_series);
-    setListAdapter(seriessearch_adapter);
-    ((TextView) findViewById(R.id.change_language)).setText(getString(R.string.dialog_change_language) +" ("+ langCode +")");
-    Intent intent = getIntent();
+
+    connectAPI();
+    this.db               = DbGateway.getInstance(this);
+    this.serieIds         = db.getSerieIds(2, false, null); // all series
+    this.langCode         = DroidShows.langCode;
+    this.searchQuery      = "";
+    this.searchResults    = new ArrayList<SearchResult>();
+    this.searchAdapter    = new SeriesSearchAdapter(this, R.layout.row_search_series, this.searchResults);
+    this.addSerieTask     = null;
+    this.m_ProgressDialog = null;
+    this.listView         = null;
+
+    setListAdapter(this.searchAdapter);
+    ((TextView) findViewById(R.id.change_language)).setText(getString(R.string.dialog_change_language) + " (" + langCode + ")");
+    getSearchResults(getIntent());
+  }
+
+  @Override
+  protected void onNewIntent(Intent intent) {
     getSearchResults(intent);
   }
 
@@ -92,61 +100,38 @@ public class AddSerie extends ListActivity
     return super.onOptionsItemSelected(item);
   }
 
-  /* context menu */
-  public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
-    super.onCreateContextMenu(menu, v, menuInfo);
-    menu.add(0, ADD_CONTEXT, 0, getString(R.string.menu_context_add_serie));
-  }
+  private boolean connectAPI() {
+    if (api != null) return true;
 
-  public boolean onContextItemSelected(MenuItem item) {
-    final AdapterContextMenuInfo info = (AdapterContextMenuInfo) item.getMenuInfo();
-    final ListView serieList = getListView();
-    switch (item.getItemId()) {
-      case ADD_CONTEXT :
-        final Serie tmpSerie = (Serie) serieList.getAdapter().getItem(info.position);
-        addSerie(tmpSerie);
-        return true;
-      default :
-        return super.onContextItemSelected(item);
-    }
-  }
-  private Runnable loadSearchSeries = new Runnable() {
-    public void run() {
-      seriessearch_adapter.clear();
-      if (search_series != null && search_series.size() > 0) {
-        for (int i = 0; i < search_series.size(); i++)
-          seriessearch_adapter.add(search_series.get(i));
-      }
-      seriessearch_adapter.notifyDataSetChanged();
-      m_ProgressDialog.dismiss();
-    }
-  };
-
-  private void searchSeries(String searchQuery) {
     try {
-      search_series = new ArrayList<Serie>();
-      search_series = theTVDB.searchSeries(searchQuery, langCode);
-      if (search_series == null) {
-        m_ProgressDialog.dismiss();
-        Looper.prepare();
-          Toast.makeText(getApplicationContext(), R.string.messages_thetvdb_con_error, Toast.LENGTH_LONG).show();
-        Looper.loop();
-      } else {
-        runOnUiThread(loadSearchSeries);
-      }
-    } catch (Exception e) {
-      Log.e(SQLiteStore.TAG, e.getMessage());
+      api = ApiGateway.getInstance(this);
+      return true;
+    }
+    catch(Exception e) {
+      api = null;
+      Toast.makeText(getApplicationContext(), R.string.menu_context_updated, Toast.LENGTH_LONG).show();
+      return false;
     }
   }
 
-  private void Search() {
-    m_ProgressDialog = ProgressDialog.show(AddSerie.this, getString(R.string.messages_title_search_series), getString(R.string.messages_search_series), true, true);
-    new Thread(new Runnable() {
-      public void run() {
-        theTVDB = new TheTVDB("8AC675886350B3C3", DroidShows.useMirror);
-        searchSeries(searchQuery);
+  // ---------------------------------------------------------------------------
+  // perform search and display the results
+  // ---------------------------------------------------------------------------
+
+  private void getSearchResults(Intent intent) {
+    if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+      searchQuery = intent.getStringExtra(SearchManager.QUERY);
+      if (searchQuery.length() == 0) {
+        onSearchRequested();
+        return;
       }
-    }).start();
+      TextView title = (TextView) findViewById(R.id.add_serie_title);
+      title.setText(getString(R.string.dialog_search) + " " + searchQuery);
+      doSearch();
+    }
+    listView = getListView();
+    listView.setOnTouchListener(new SwipeDetect());
+    registerForContextMenu(listView);
   }
 
   public void changeLanguage(View v) {
@@ -163,139 +148,64 @@ public class AddSerie extends ListActivity
       .show();
   }
 
+  private void doSearch() {
+    if (!NetworkUtils.isNetworkAvailable(AddSerie.this)) {
+      Toast.makeText(getApplicationContext(), R.string.messages_no_internet, Toast.LENGTH_LONG).show();
+    } else if ((m_ProgressDialog == null) || !m_ProgressDialog.isShowing()) {
+      if (!connectAPI()) return;
+
+      m_ProgressDialog = ProgressDialog.show(AddSerie.this, getString(R.string.messages_title_search_series), getString(R.string.messages_search_series), true, true);
+
+      new Thread(new Runnable() {
+        public void run() {
+          try {
+            searchResults = api.searchSeries(searchQuery, langCode);
+            runOnUiThread(updateSearchResults);
+          } catch (Exception e) {
+            Log.e(Constants.LOG_TAG, e.getMessage());
+          }
+        }
+      }).start();
+    }
+  }
+
+  private Runnable updateSearchResults = new Runnable() {
+    public void run() {
+      searchAdapter.clear();
+      if ((searchResults != null) && !searchResults.isEmpty()) {
+        for (SearchResult searchResult : searchResults) {
+          searchAdapter.add(searchResult);
+        }
+        searchResults = null;
+      }
+      searchAdapter.notifyDataSetChanged();
+      m_ProgressDialog.dismiss();
+    }
+  };
+
   @Override
   protected void onSaveInstanceState(Bundle outState) {
     m_ProgressDialog.dismiss();
     super.onSaveInstanceState(outState);
   }
-  
-  private void addSerie(Serie s) {
-    if (addSerieTask == null || addSerieTask.getStatus() != AsyncTask.Status.RUNNING) {
-      addSerieTask = new AsyncAddSerie();
-      addSerieTask.execute(s);
-    } else {
-      Log.d(SQLiteStore.TAG, "Still busy, not adding "+ s.getSerieName());
-      Toast.makeText(getApplicationContext(), R.string.messages_error_dbupdate, Toast.LENGTH_SHORT).show();
-    }
-  }
 
-  private class AsyncAddSerie extends AsyncTask<Serie, Void, Boolean> {
-    String msg = null;
-    
-    @Override
-    protected void onPreExecute() {
-      super.onPreExecute();
-      m_ProgressDialog = ProgressDialog.show(AddSerie.this, getString(R.string.messages_title_adding_serie), getString(R.string.messages_adding_serie), true, false);
-    }
+  // ---------------------------------------------------------------------------
+  // handle clicks to ListView => on one search result
+  // ---------------------------------------------------------------------------
 
-    protected Boolean doInBackground(Serie... params) {
-      Serie s = params[0];
-      Boolean success = false;
-      
-      boolean alreadyExists = false;
-      for (String serieId : series)
-        if (serieId.equals(s.getId())) {
-          alreadyExists = true;
-          break;
-        }
-      if (alreadyExists) return false;
-      
-      sToAdd = theTVDB.getSerie(s.getId(), s.getLanguage());
-      if (sToAdd == null) {
-        msg = getString(R.string.messages_thetvdb_con_error);
-      } else {
-        addPosterThumb();
-        try {
-          Log.d(SQLiteStore.TAG, "Adding "+ sToAdd.getSerieName() +": saving TV show to database");
-          sToAdd.setPassiveStatus((DroidShows.showArchive == 1 ? 1 : 0));
-          sToAdd.saveToDB(db);
-          Log.d(SQLiteStore.TAG, "Adding "+ sToAdd.getSerieName() +": creating the TV show item");
-          int nseasons = db.getSeasonCount(sToAdd.getId());
-          SQLiteStore.NextEpisode nextEpisode = db.getNextEpisode(sToAdd.getId());
-          SQLiteStore.UnwatchedLastAiredEpisode newestEpisode = db.getUnwatchedLastAiredEpisode(sToAdd.getId());
-          int unwatchedAired = db.getEpsUnwatchedAired(sToAdd.getId());
-          int unwatched = db.getEpsUnwatched(sToAdd.getId());
-          String nextEpisodeStr = db.getNextEpisodeString(nextEpisode, DroidShows.showNextAiring && 0 < unwatchedAired && unwatchedAired < unwatched);
-          String newestEpisodeStr = db.getNextEpisodeString(newestEpisode, /* boolean showNextAiring= */ false, /* boolean requireAiredDate= */ true);
-          Bitmap dicon = BitmapFactory.decodeFile(sToAdd.getPosterThumb());
-          TVShowItem tvsi = new TVShowItem(sToAdd.getId(), sToAdd.getLanguage(), sToAdd.getPosterThumb(), dicon, sToAdd.getSerieName(), nseasons,
-            nextEpisodeStr, nextEpisode.firstAiredDate, newestEpisodeStr, newestEpisode.firstAiredDate, unwatchedAired, unwatched, sToAdd.getPassiveStatus() == 1,
-            (sToAdd.getStatus() == null ? "null" : sToAdd.getStatus()), "");
-          DroidShows.series.add(tvsi);
-          series.add(sToAdd.getId());
-          runOnUiThread(DroidShows.updateListView);
-          success = true;
-        } catch (Exception e) {
-          Log.e(SQLiteStore.TAG, "Error adding "+ sToAdd.getSerieName());
-        }
-        if (success) {
-          msg = String.format(getString(R.string.messages_series_success), sToAdd.getSerieName())
-            + (DroidShows.showArchive == 1 ? " ("+ getString(R.string.messages_context_archived) +")": "");
-        }
-      }
-      sToAdd = null;
-      return success;
-    }
-    
-    private void addPosterThumb() {
-      PosterThumb.save(getApplicationContext(), sToAdd, SQLiteStore.TAG);
-    }
-
-    @Override
-    protected void onPostExecute(Boolean result) {
-      super.onPostExecute(result);
-      seriessearch_adapter.notifyDataSetChanged();
-      if (msg != null) Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
-      m_ProgressDialog.dismiss();
-    }
-
-    @Override
-    protected void onCancelled(Boolean result) {
-      this.onPostExecute(result);
-      super.onCancelled();
-    }
-  }
-  
-  // Guillaume: searches from within this activity were discarded
-  @Override
-  protected void onNewIntent(Intent intent) {
-    getSearchResults(intent);
-  }
-
-  private void getSearchResults(Intent intent) {
-    if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
-      searchQuery = intent.getStringExtra(SearchManager.QUERY);
-      if (searchQuery.length() == 0) {
-        onSearchRequested();
-        return;
-      }
-      TextView title = (TextView) findViewById(R.id.add_serie_title);
-      title.setText(getString(R.string.dialog_search) + " " + searchQuery);
-      doSearch();
-    }
-    listView = getListView();
-    listView.setOnTouchListener(new SwipeDetect());
-    registerForContextMenu(getListView());
-  }
-  
-  private void doSearch() {
-    if (Utils.isNetworkAvailable(AddSerie.this))
-      Search();
-    else
-      Toast.makeText(getApplicationContext(), R.string.messages_no_internet, Toast.LENGTH_LONG).show();
-  }
-  
   @Override
   protected void onListItemClick(ListView l, View v, int position, long id) {
-    final Serie sToAdd = AddSerie.search_series.get(position);
+    final SearchResult searchResult  = searchAdapter.getItem(position);
+    final boolean      alreadyExists = serieExists(searchResult.serieId);
+
     AlertDialog sOverview = new AlertDialog.Builder(this)
     .setIcon(R.drawable.icon)
-    .setTitle(sToAdd.getSerieName())
-    .setMessage(sToAdd.getOverview())
+    .setTitle(searchResult.name)
+    .setMessage(searchResult.overview)
     .setPositiveButton(getString(R.string.menu_context_add_serie), new DialogInterface.OnClickListener() {
       public void onClick(DialogInterface dialog, int id) {
         dialog.dismiss();
-        addSerie(sToAdd);
+        addSerie(searchResult);
       }
     })
     .setNegativeButton(getString(R.string.dialog_cancel), new DialogInterface.OnClickListener() {
@@ -304,21 +214,136 @@ public class AddSerie extends ListActivity
       }
     })
     .show();
-    
-    for (String serieId : series)
-      if (serieId.equals(sToAdd.getId())) {
-        sOverview.getButton(AlertDialog.BUTTON_POSITIVE).setEnabled(false);
+
+    if (alreadyExists)
+      sOverview.getButton(AlertDialog.BUTTON_POSITIVE).setEnabled(false);
+  }
+
+  // ---------------------------------------------------------------------------
+  // handle clicks to ContextMenu => for one search result
+  // ---------------------------------------------------------------------------
+
+  public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
+    super.onCreateContextMenu(menu, v, menuInfo);
+    menu.add(0, ADD_CONTEXT, 0, getString(R.string.menu_context_add_serie));
+  }
+
+  public boolean onContextItemSelected(MenuItem item) {
+    final AdapterContextMenuInfo info = (AdapterContextMenuInfo) item.getMenuInfo();
+    final ListView searchResultsList = getListView();
+    switch (item.getItemId()) {
+      case ADD_CONTEXT :
+        final SearchResult searchResult = (SearchResult) searchResultsList.getAdapter().getItem(info.position);
+        addSerie(searchResult);
+        return true;
+      default :
+        return super.onContextItemSelected(item);
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // add Series
+  // ---------------------------------------------------------------------------
+
+  private void addSerie(SearchResult searchResult) {
+    boolean isBusy = false;
+
+    if (!NetworkUtils.isNetworkAvailable(AddSerie.this)) {
+      Toast.makeText(getApplicationContext(), R.string.messages_no_internet, Toast.LENGTH_LONG).show();
+    } else if ((m_ProgressDialog == null) || !m_ProgressDialog.isShowing()) {
+      if (!connectAPI()) return;
+
+      if ((addSerieTask == null) || (addSerieTask.getStatus() != AsyncTask.Status.RUNNING)) {
+        addSerieTask = new AsyncAddSerie();
+        addSerieTask.execute(searchResult);
+      } else {
+        isBusy = true;
+      }
+    }
+    else {
+      isBusy = true;
+    }
+
+    if (isBusy) {
+      Log.d(Constants.LOG_TAG, "Still busy, not adding " + searchResult.name);
+      Toast.makeText(getApplicationContext(), R.string.messages_db_error_update, Toast.LENGTH_SHORT).show();
+    }
+  }
+
+  private class AsyncAddSerie extends AsyncTask<SearchResult, Void, Boolean> {
+    String msg = null;
+
+    @Override
+    protected void onPreExecute() {
+      super.onPreExecute();
+      m_ProgressDialog = ProgressDialog.show(AddSerie.this, getString(R.string.messages_title_adding_serie), getString(R.string.messages_adding_serie), true, false);
+    }
+
+    protected Boolean doInBackground(SearchResult... params) {
+      SearchResult searchResult = params[0];
+
+      boolean alreadyExists = serieExists(searchResult.serieId);
+      if (alreadyExists) return false;
+
+      boolean archived = (DroidShows.showArchive == 1);
+      boolean result   = api.addSeries(searchResult.serieId, langCode, archived);
+
+      if (result) {
+        serieIds.add(searchResult.serieId);
+
+        TVShowItem tvsi = db.createTVShowItem(searchResult.serieId);
+        DroidShows.series.add(tvsi);
+        runOnUiThread(DroidShows.updateListView);
+
+        msg = getString(R.string.messages_series_success, searchResult.name)
+          + (archived ? (" (" + getString(R.string.messages_context_archived) + ")") : "");
+      }
+
+      return result;
+    }
+
+    @Override
+    protected void onPostExecute(Boolean result) {
+      super.onPostExecute(result);
+      searchAdapter.notifyDataSetChanged();
+      m_ProgressDialog.dismiss();
+
+      if (!TextUtils.isEmpty(msg))
+        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    protected void onCancelled(Boolean result) {
+      this.onPostExecute(result);
+      super.onCancelled();
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Helpers
+  // ---------------------------------------------------------------------------
+
+  private boolean serieExists(int needle) {
+    boolean alreadyExists = false;
+    for (Integer serieId : serieIds) {
+      if (serieId == needle) {
+        alreadyExists = true;
         break;
       }
+    }
+    return alreadyExists;
   }
-  
-  private class SeriesSearchAdapter extends ArrayAdapter<Serie>
-  {
-    private List<Serie> items;
 
-    public SeriesSearchAdapter(Context context, int textViewResourceId, List<Serie> series) {
-      super(context, textViewResourceId, series);
-      this.items = series;
+  // ---------------------------------------------------------------------------
+  // SeriesSearchAdapter
+  // ---------------------------------------------------------------------------
+
+  private class SeriesSearchAdapter extends ArrayAdapter<SearchResult> {
+    private List<SearchResult> searchResults;
+
+    public SeriesSearchAdapter(Context context, int textViewResourceId, List<SearchResult> searchResults) {
+      super(context, textViewResourceId, searchResults);
+      this.searchResults = searchResults;
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -327,37 +352,38 @@ public class AddSerie extends ListActivity
         LayoutInflater vi = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         v = vi.inflate(R.layout.row_search_series, parent, false);
       }
-      final Serie o = items.get(position);
-      if (o != null) {
-        TextView sn = (TextView) v.findViewById(R.id.seriename);
+      final SearchResult searchResult = searchResults.get(position);
+
+      if (searchResult != null) {
+        TextView        sn  = (TextView) v.findViewById(R.id.seriename);
         CheckedTextView ctv = (CheckedTextView) v.findViewById(R.id.addserieBtn);
+
         if (sn != null) {
-          String lang = (o.getLanguage() == null ? "" : " ("+ o.getLanguage() +")");
-          sn.setText(o.getSerieName() + lang);
+          String lang = TextUtils.isEmpty(searchResult.language)
+            ? ""
+            : (" (" + searchResult.language + ")");
+
+          sn.setText(searchResult.name + lang);
         }
         if (ctv != null) {
-          boolean alreadyExists = false;
-          for (String serieId : series) {
-            if (serieId.equals(o.getId())) {
-              alreadyExists = true;
-              break;
-            }
-          }
+          boolean alreadyExists = serieExists(searchResult.serieId);
+
           if (alreadyExists) {
-            ctv.setCheckMarkDrawable(getResources().getDrawable(R.drawable.star));
             // ctv.setVisibility(View.GONE);
+            ctv.setCheckMarkDrawable(getResources().getDrawable(R.drawable.star));
             ctv.setOnClickListener(new OnClickListener() {
               public void onClick(View v) {
-                // does nothing
+                // no op
                 return;
               }
             });
-          } else {
+          }
+          else {
             // ctv.setVisibility(View.VISIBLE);
             ctv.setCheckMarkDrawable(getResources().getDrawable(R.drawable.add));
             ctv.setOnClickListener(new OnClickListener() {
               public void onClick(View v) {
-                addSerie(o);
+                addSerie(searchResult);
               }
             });
           }
@@ -366,4 +392,5 @@ public class AddSerie extends ListActivity
       return v;
     }
   }
+
 }

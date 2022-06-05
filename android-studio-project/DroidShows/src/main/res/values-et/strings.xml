@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">et</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">Ühtegi näitust ei leitud.</string>
 <string name="layout_search_no_items">Ühtegi näitust ei leitud.</string>
 <string name="layout_seasons_no_items">Pole hooaega, et näidata.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">Varukoopia tegemine nurjus!</string>
 <string name="dialog_backup_usefolder">Kaustade kasutamine igapäevaste varukoopiate jaoks</string>
 <string name="dialog_change_language">Synopsis keel</string>
-<string name="dialog_use_mirror">Kasutamine TheTVDB peegli (proovige seda, kui uuendused on liiga aeglane)</string>
 <string name="dialog_restore">Taasta</string>
 <string name="dialog_restore_now">Varukoopia taastamine eemaldab kogu info DroidShows. Jätka?</string>
 <string name="dialog_restore_done">Andmebaas on edukalt taastatud</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">Loobu</string>
 <string name="dialog_search">Otsimisstring:</string>
 <string name="dialog_update_series">Kas oled kindel, et soovid värskendada kõik loetletud näitused nüüd?</string>
-<string name="dialog_update_speedup">\n\nSelle protsessi saab kiirendada koos valikuga Uuenda ainult uusimaid hooaega.</string>
-<string name="dialog_latest_season">Uuendab ainult \'viimast hooaega\'</string>
 <string name="dialog_include_specials">Erialade kaasamine jälgimata loendamisse</string>
 <string name="dialog_full_line_check">Terve rea kasutamine episoodi tähistamiseks</string>
 <string name="dialog_switch_swipe_direction">Nipsake paremalt vasakule, et tagasi minna</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">Arhiiv</string>
 <string name="menu_unarchive">Taastamine</string>
 <string name="messages_title_updating_series">Näitab</string>
-<string name="messages_title_updating_db">Andmebaasi uuendamine</string>
-<string name="messages_update_serie">Teabe kogumine ...</string>
 <string name="messages_no_internet">Internetiühendus puudub</string>
 <string name="messages_title_update_series">Uuenda</string>
-<string name="messages_update_series">Kogunemine näitab infot. See operatsioon võtab aega ...</string>
 <string name="messages_episodes">episoodid</string>
 <string name="messages_new_episodes">uued episoodid</string>
 <string name="messages_new_episode">uus episood</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">Episoodide üksikasjad</string>
 <string name="messsages_edit_seen_timestamp">Redigeerimine vaata ajatemplit</string>
 <string name="messages_calendar_app_error">Kalendrirakendus ei leitud!</string>
-<string name="messages_thetvdb_con_error">Viga ühendumisel TheTVDB. Proovi uuesti.</string>
+<string name="messages_api_con_error">Viga ühendumisel TMDb API. Proovi uuesti.</string>
 <string name="messages_marked_seen">tähistatud kui nähtu</string>
 <string name="messages_marked_unseen">märgistamata</string>
 <string name="messages_context_mark_seasonunseen">Kõigi episoodide märkimine</string>

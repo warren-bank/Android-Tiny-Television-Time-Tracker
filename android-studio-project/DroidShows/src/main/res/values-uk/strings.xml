@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">uk</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">Не знайдено жодного показника.</string>
 <string name="layout_search_no_items">Не знайдено жодного показника.</string>
 <string name="layout_seasons_no_items">Немає сезонів для показу.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">Неможливо виконати резервну копію!</string>
 <string name="dialog_backup_usefolder">Використовувати теку для щоденних резервних копій</string>
 <string name="dialog_change_language">Мова синопсиса</string>
-<string name="dialog_use_mirror">Використовувати TheTVDB дзеркало (спробуйте це, якщо оновлення занадто повільні)</string>
 <string name="dialog_restore">Відновити</string>
 <string name="dialog_restore_now">Відновлення резервування призведе до вилучення всієї інформації, що зараз перебуває у DroidShows. Продовжити?</string>
 <string name="dialog_restore_done">Базу даних успішно відновлено</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">Скасувати</string>
 <string name="dialog_search">Рядок пошуку:</string>
 <string name="dialog_update_series">Ви впевнені, що хочете оновлювати всі перелічені покази?</string>
-<string name="dialog_update_speedup">\n\nВи можете прискорити цей процес за допомогою пункту меню Оновити \"останній сезон\".</string>
-<string name="dialog_latest_season">Оновлення лише для останнього сезону</string>
 <string name="dialog_include_specials">Включити спеціальні значення у непереглянутому підрахунку</string>
 <string name="dialog_full_line_check">Використовувати цілу лінію для позначення епізоду</string>
 <string name="dialog_switch_swipe_direction">Проведіть проведіть праворуч вліво, щоб повернутися назад</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">Архівувати</string>
 <string name="menu_unarchive">Відновити</string>
 <string name="messages_title_updating_series">Оновлення показів</string>
-<string name="messages_title_updating_db">Оновлення бази даних</string>
-<string name="messages_update_serie">Збір інформації про показ ...</string>
 <string name="messages_no_internet">З \' єднання з інтернетом</string>
 <string name="messages_title_update_series">Оновлення показів</string>
-<string name="messages_update_series">Збір інформації. Ця операція займе трохи часу ...</string>
 <string name="messages_episodes">Епізоди</string>
 <string name="messages_new_episodes">нові епізоди</string>
 <string name="messages_new_episode">нова серія</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">Подробиці про серію</string>
 <string name="messsages_edit_seen_timestamp">Змінити часову позначку часу</string>
 <string name="messages_calendar_app_error">Не знайдено додатка календаря!</string>
-<string name="messages_thetvdb_con_error">Помилка з \' єднання з TheTVDB. Спробувати ще раз.</string>
+<string name="messages_api_con_error">Помилка з \' єднання з TMDb API. Спробувати ще раз.</string>
 <string name="messages_marked_seen">Позначений як</string>
 <string name="messages_marked_unseen">Позначений як</string>
 <string name="messages_context_mark_seasonunseen">Позначити всі епізоди як небачених</string>

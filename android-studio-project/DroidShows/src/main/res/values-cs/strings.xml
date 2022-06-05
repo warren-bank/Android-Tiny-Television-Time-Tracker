@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">cs</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">Nebyly nalezeny žádné zobrazení.</string>
 <string name="layout_search_no_items">Nebyly nalezeny žádné zobrazení.</string>
 <string name="layout_seasons_no_items">Žádné roční období k zobrazení.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">Nelze provést zálohování!</string>
 <string name="dialog_backup_usefolder">Použít složku pro denní zálohování</string>
 <string name="dialog_change_language">Synopse language</string>
-<string name="dialog_use_mirror">Použijte TheTVDB zrcadlo (zkuste to, pokud jsou aktualizace příliš pomalé)</string>
 <string name="dialog_restore">Obnovit</string>
 <string name="dialog_restore_now">Obnova zálohy odebere všechny informace, které jsou momentálně v DroidShows. Pokračovat?</string>
 <string name="dialog_restore_done">Databáze byla úspěšně obnovena</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">Storno</string>
 <string name="dialog_search">Hledaný řetězec:</string>
 <string name="dialog_update_series">Jste si jisti, že chcete aktualizovat všechny zobrazené položky nyní?</string>
-<string name="dialog_update_speedup">\n\nTento proces můžete urychlit pomocí volby Aktualizace zobrazí pouze nejnovější období..</string>
-<string name="dialog_latest_season">Aktualizace zobrazí pouze poslední sezonu</string>
 <string name="dialog_include_specials">Zahrnout speciály v nesledovaný počet</string>
 <string name="dialog_full_line_check">Použít celý řádek k označení epizody</string>
 <string name="dialog_switch_swipe_direction">Přejeďte prstem doprava a vraťte se zpět</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">Archív</string>
 <string name="menu_unarchive">Obnovit</string>
 <string name="messages_title_updating_series">Aktualizace zobrazení</string>
-<string name="messages_title_updating_db">Aktualizace databáze</string>
-<string name="messages_update_serie">Shromažďování informací o zobrazení ...</string>
 <string name="messages_no_internet">Není k dispozici připojení k Internetu</string>
 <string name="messages_title_update_series">Aktualizovat zobrazení</string>
-<string name="messages_update_series">Shromažďování zobrazuje informace. Tato operace bude trvat určitou dobu ...</string>
 <string name="messages_episodes">epizody</string>
 <string name="messages_new_episodes">nové epizody</string>
 <string name="messages_new_episode">nová epizoda</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">Detaily epizody</string>
 <string name="messsages_edit_seen_timestamp">Upravit časové razítko</string>
 <string name="messages_calendar_app_error">Nebyla nalezena žádná aplikace kalendáře!</string>
-<string name="messages_thetvdb_con_error">Chyba připojení k TheTVDB. Zkuste to znovu.</string>
+<string name="messages_api_con_error">Chyba připojení k TMDb API. Zkuste to znovu.</string>
 <string name="messages_marked_seen">označeno jako viditelné</string>
 <string name="messages_marked_unseen">označeno jako neviditelné</string>
 <string name="messages_context_mark_seasonunseen">Označit všechny epizody jako neviditelné</string>

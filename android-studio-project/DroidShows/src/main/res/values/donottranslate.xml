@@ -1,67 +1,403 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="copyright">DroidShows v{v}
-\n&#169;2010 C. Limpinho, P. Cabido: code.google.com/p/droidseries
+<string name="layout_app_name" translatable="false">DroidShows</string>
+<string name="api_key" translatable="false">c9eb196aaf70baf91d4ce4f0fea6a360</string>
+<string name="databases_directory_name"  translatable="false">databases</string>
+<string name="images_small_directory_name"  translatable="false">images_small</string>
+<string name="images_medium_directory_name" translatable="false">images_medium</string>
+<string name="copyright" translatable="false">DroidShows v{v}
+\n&#169;2010-{y} C. Limpinho, P. Cabido (GPLv3): code.google.com/p/droidseries
 \nModified by M. Berthe: gitorious.org/droidseries/mckaels-droidseries
 \n&#169;2014-{y} Guillaume (GPLv3): ltGuillaume.github.io/DroidShows
-\nReleases: github.com/ltGuillaume/DroidShows/releases
+\n&#169;2022-{y} Warren Bank (GPLv3): github.com/warren-bank/fork-Android-DroidShows
+\n
+\nReleases: github.com/warren-bank/fork-Android-DroidShows/releases
 \nForum/Changelog: forum.xda-developers.com/showthread.php?p=58437755
-\n\nIcon is a mix of iconeasy.com/icon/tv-shows-2-icon (Thrasos Varnava) and wallalay.com/wallpapers-for-android-67-177682-desktop-background.html (Taenggo)
-\nMaterial icon by Listy2021 and ltGuillaume (XDA)</string>
-<string-array name="languages">
-  <item>All</item>
-  <item> עברית</item>
-  <item>čeština</item>
-  <item>Dansk</item>
-  <item>Deutsch</item>
+\n
+\nIcon is a mix of iconeasy.com/icon/tv-shows-2-icon (Thrasos Varnava) and wallalay.com/wallpapers-for-android-67-177682-desktop-background.html (Taenggo)
+\nMaterial icon by Listy2021 and ltGuillaume (XDA)
+\n
+\nThis product uses the TMDB API but is not endorsed or certified by TMDB.</string>
+<string-array name="languages" translatable="false">
+  <item>Abkhazian</item>
+  <item>Afar</item>
+  <item>Afrikaans</item>
+  <item>Akan</item>
+  <item>Albanian</item>
+  <item>Amharic</item>
+  <item>Arabic</item>
+  <item>Aragonese</item>
+  <item>Armenian</item>
+  <item>Assamese</item>
+  <item>Avaric</item>
+  <item>Avestan</item>
+  <item>Aymara</item>
+  <item>Azerbaijani</item>
+  <item>Bambara</item>
+  <item>Bashkir</item>
+  <item>Basque</item>
+  <item>Belarusian</item>
+  <item>Bengali</item>
+  <item>Bislama</item>
+  <item>Bosnian</item>
+  <item>Breton</item>
+  <item>Bulgarian</item>
+  <item>Burmese</item>
+  <item>Cantonese</item>
+  <item>Catalan</item>
+  <item>Chamorro</item>
+  <item>Chechen</item>
+  <item>Chichewa; Nyanja</item>
+  <item>Chuvash</item>
+  <item>Cornish</item>
+  <item>Corsican</item>
+  <item>Cree</item>
+  <item>Croatian</item>
+  <item>Czech</item>
+  <item>Danish</item>
+  <item>Divehi</item>
+  <item>Dutch</item>
+  <item>Dzongkha</item>
   <item>English</item>
-  <item>Español</item>
-  <item>Français</item>
-  <item>Hrvatski</item>
-  <item>Italiano</item>
-  <item>Magyar</item>
-  <item>Nederlands</item>
-  <item>Norsk</item>
-  <item>Polski</item>
-  <item>Português</item>
-  <item>Slovenski</item>
-  <item>Suomeksi</item>
-  <item>Svenska</item>
-  <item>Türkçe</item>
-  <item>Ελληνικά</item>
-  <item>русский язык</item>
-  <item>한국어</item>
-  <item>中文</item>
-  <item>日本語</item>
+  <item>Esperanto</item>
+  <item>Estonian</item>
+  <item>Ewe</item>
+  <item>Faroese</item>
+  <item>Fijian</item>
+  <item>Finnish</item>
+  <item>French</item>
+  <item>Frisian</item>
+  <item>Fulah</item>
+  <item>Gaelic</item>
+  <item>Galician</item>
+  <item>Ganda</item>
+  <item>Georgian</item>
+  <item>German</item>
+  <item>Greek</item>
+  <item>Guarani</item>
+  <item>Gujarati</item>
+  <item>Haitian; Haitian Creole</item>
+  <item>Hausa</item>
+  <item>Hebrew</item>
+  <item>Herero</item>
+  <item>Hindi</item>
+  <item>Hiri Motu</item>
+  <item>Hungarian</item>
+  <item>Icelandic</item>
+  <item>Ido</item>
+  <item>Igbo</item>
+  <item>Indonesian</item>
+  <item>Interlingua</item>
+  <item>Interlingue</item>
+  <item>Inuktitut</item>
+  <item>Inupiaq</item>
+  <item>Irish</item>
+  <item>Italian</item>
+  <item>Japanese</item>
+  <item>Javanese</item>
+  <item>Kalaallisut</item>
+  <item>Kannada</item>
+  <item>Kanuri</item>
+  <item>Kashmiri</item>
+  <item>Kazakh</item>
+  <item>Khmer</item>
+  <item>Kikuyu</item>
+  <item>Kinyarwanda</item>
+  <item>Kirghiz</item>
+  <item>Komi</item>
+  <item>Kongo</item>
+  <item>Korean</item>
+  <item>Kuanyama</item>
+  <item>Kurdish</item>
+  <item>Lao</item>
+  <item>Latin</item>
+  <item>Latvian</item>
+  <item>Letzeburgesch</item>
+  <item>Limburgish</item>
+  <item>Lingala</item>
+  <item>Lithuanian</item>
+  <item>Luba-Katanga</item>
+  <item>Macedonian</item>
+  <item>Malagasy</item>
+  <item>Malay</item>
+  <item>Malayalam</item>
+  <item>Maltese</item>
+  <item>Mandarin</item>
+  <item>Manx</item>
+  <item>Maori</item>
+  <item>Marathi</item>
+  <item>Marshall</item>
+  <item>Moldavian</item>
+  <item>Mongolian</item>
+  <item>Nauru</item>
+  <item>Navajo</item>
+  <item>Ndebele</item>
+  <item>Ndebele</item>
+  <item>Ndonga</item>
+  <item>Nepali</item>
+  <item>No Language</item>
+  <item>Northern Sami</item>
+  <item>Norwegian</item>
+  <item>Norwegian Bokm�l</item>
+  <item>Norwegian Nynorsk</item>
+  <item>Occitan</item>
+  <item>Ojibwa</item>
+  <item>Oriya</item>
+  <item>Oromo</item>
+  <item>Ossetian; Ossetic</item>
+  <item>Pali</item>
+  <item>Persian</item>
+  <item>Polish</item>
+  <item>Portuguese</item>
+  <item>Punjabi</item>
+  <item>Pushto</item>
+  <item>Quechua</item>
+  <item>Raeto-Romance</item>
+  <item>Romanian</item>
+  <item>Rundi</item>
+  <item>Russian</item>
+  <item>Samoan</item>
+  <item>Sango</item>
+  <item>Sanskrit</item>
+  <item>Sardinian</item>
+  <item>Serbian</item>
+  <item>Serbo-Croatian</item>
+  <item>Shona</item>
+  <item>Sindhi</item>
+  <item>Sinhalese</item>
+  <item>Slavic</item>
+  <item>Slovak</item>
+  <item>Slovenian</item>
+  <item>Somali</item>
+  <item>Sotho</item>
+  <item>Spanish</item>
+  <item>Sundanese</item>
+  <item>Swahili</item>
+  <item>Swati</item>
+  <item>Swedish</item>
+  <item>Tagalog</item>
+  <item>Tahitian</item>
+  <item>Tajik</item>
+  <item>Tamil</item>
+  <item>Tatar</item>
+  <item>Telugu</item>
+  <item>Thai</item>
+  <item>Tibetan</item>
+  <item>Tigrinya</item>
+  <item>Tonga</item>
+  <item>Tsonga</item>
+  <item>Tswana</item>
+  <item>Turkish</item>
+  <item>Turkmen</item>
+  <item>Twi</item>
+  <item>Uighur</item>
+  <item>Ukrainian</item>
+  <item>Urdu</item>
+  <item>Uzbek</item>
+  <item>Venda</item>
+  <item>Vietnamese</item>
+  <item>Volap�k</item>
+  <item>Walloon</item>
+  <item>Welsh</item>
+  <item>Wolof</item>
+  <item>Xhosa</item>
+  <item>Yi</item>
+  <item>Yiddish</item>
+  <item>Yoruba</item>
+  <item>Zhuang</item>
+  <item>Zulu</item>
 </string-array>
-<string-array name="langcodes">
-    <item>all</item>
-  <item>he</item>
+<string-array name="langcodes" translatable="false">
+  <item>ab</item>
+  <item>aa</item>
+  <item>af</item>
+  <item>ak</item>
+  <item>sq</item>
+  <item>am</item>
+  <item>ar</item>
+  <item>an</item>
+  <item>hy</item>
+  <item>as</item>
+  <item>av</item>
+  <item>ae</item>
+  <item>ay</item>
+  <item>az</item>
+  <item>bm</item>
+  <item>ba</item>
+  <item>eu</item>
+  <item>be</item>
+  <item>bn</item>
+  <item>bi</item>
+  <item>bs</item>
+  <item>br</item>
+  <item>bg</item>
+  <item>my</item>
+  <item>cn</item>
+  <item>ca</item>
+  <item>ch</item>
+  <item>ce</item>
+  <item>ny</item>
+  <item>cv</item>
+  <item>kw</item>
+  <item>co</item>
+  <item>cr</item>
+  <item>hr</item>
   <item>cs</item>
   <item>da</item>
-  <item>de</item>
-  <item>en</item>
-  <item>es</item>
-  <item>fr</item>
-  <item>hr</item>
-  <item>it</item>
-  <item>hu</item>
+  <item>dv</item>
   <item>nl</item>
+  <item>dz</item>
+  <item>en</item>
+  <item>eo</item>
+  <item>et</item>
+  <item>ee</item>
+  <item>fo</item>
+  <item>fj</item>
+  <item>fi</item>
+  <item>fr</item>
+  <item>fy</item>
+  <item>ff</item>
+  <item>gd</item>
+  <item>gl</item>
+  <item>lg</item>
+  <item>ka</item>
+  <item>de</item>
+  <item>el</item>
+  <item>gn</item>
+  <item>gu</item>
+  <item>ht</item>
+  <item>ha</item>
+  <item>he</item>
+  <item>hz</item>
+  <item>hi</item>
+  <item>ho</item>
+  <item>hu</item>
+  <item>is</item>
+  <item>io</item>
+  <item>ig</item>
+  <item>id</item>
+  <item>ia</item>
+  <item>ie</item>
+  <item>iu</item>
+  <item>ik</item>
+  <item>ga</item>
+  <item>it</item>
+  <item>ja</item>
+  <item>jv</item>
+  <item>kl</item>
+  <item>kn</item>
+  <item>kr</item>
+  <item>ks</item>
+  <item>kk</item>
+  <item>km</item>
+  <item>ki</item>
+  <item>rw</item>
+  <item>ky</item>
+  <item>kv</item>
+  <item>kg</item>
+  <item>ko</item>
+  <item>kj</item>
+  <item>ku</item>
+  <item>lo</item>
+  <item>la</item>
+  <item>lv</item>
+  <item>lb</item>
+  <item>li</item>
+  <item>ln</item>
+  <item>lt</item>
+  <item>lu</item>
+  <item>mk</item>
+  <item>mg</item>
+  <item>ms</item>
+  <item>ml</item>
+  <item>mt</item>
+  <item>zh</item>
+  <item>gv</item>
+  <item>mi</item>
+  <item>mr</item>
+  <item>mh</item>
+  <item>mo</item>
+  <item>mn</item>
+  <item>na</item>
+  <item>nv</item>
+  <item>nd</item>
+  <item>nr</item>
+  <item>ng</item>
+  <item>ne</item>
+  <item>xx</item>
+  <item>se</item>
   <item>no</item>
+  <item>nb</item>
+  <item>nn</item>
+  <item>oc</item>
+  <item>oj</item>
+  <item>or</item>
+  <item>om</item>
+  <item>os</item>
+  <item>pi</item>
+  <item>fa</item>
   <item>pl</item>
   <item>pt</item>
-  <item>sl</item>
-  <item>fi</item>
-  <item>sv</item>
-  <item>tr</item>
-  <item>el</item>
+  <item>pa</item>
+  <item>ps</item>
+  <item>qu</item>
+  <item>rm</item>
+  <item>ro</item>
+  <item>rn</item>
   <item>ru</item>
-  <item>ko</item>
-  <item>zh</item>
-  <item>ja</item>
+  <item>sm</item>
+  <item>sg</item>
+  <item>sa</item>
+  <item>sc</item>
+  <item>sr</item>
+  <item>sh</item>
+  <item>sn</item>
+  <item>sd</item>
+  <item>si</item>
+  <item>cu</item>
+  <item>sk</item>
+  <item>sl</item>
+  <item>so</item>
+  <item>st</item>
+  <item>es</item>
+  <item>su</item>
+  <item>sw</item>
+  <item>ss</item>
+  <item>sv</item>
+  <item>tl</item>
+  <item>ty</item>
+  <item>tg</item>
+  <item>ta</item>
+  <item>tt</item>
+  <item>te</item>
+  <item>th</item>
+  <item>bo</item>
+  <item>ti</item>
+  <item>to</item>
+  <item>ts</item>
+  <item>tn</item>
+  <item>tr</item>
+  <item>tk</item>
+  <item>tw</item>
+  <item>ug</item>
+  <item>uk</item>
+  <item>ur</item>
+  <item>uz</item>
+  <item>ve</item>
+  <item>vi</item>
+  <item>vo</item>
+  <item>wa</item>
+  <item>cy</item>
+  <item>wo</item>
+  <item>xh</item>
+  <item>ii</item>
+  <item>yi</item>
+  <item>yo</item>
+  <item>za</item>
+  <item>zu</item>
 </string-array>
-<string name="messages_error_dbupdate">Database error while updating</string>
-<string-array name="menu_sort_options">
+<string name="default_lang_code" translatable="false">en</string>
+<string-array name="menu_sort_options" translatable="false">
   <item>@string/menu_sort_by_name</item>
   <item>@string/menu_sort_by_unseen_count</item>
   <item>@string/menu_sort_by_next_unseen_date</item>

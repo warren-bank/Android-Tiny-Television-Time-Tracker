@@ -1,0 +1,294 @@
+-------------------------------------------------------------------------------- issue #01:
+
+this test data revealed an interesting edge-case..
+
+the following series migrated successfully:
+  * (1977, tt0075572) Roots
+  * (1978, tt0077025) Holocaust
+  * (2002, tt0303461) Firefly
+
+the following series produced an error:
+  * (2008, tt1227926) Dr. Horrible's Sing-Along Blog
+
+--------------------------------------------------------------------------------
+
+the problem resulted while importing episodes:
+
+http://api.themoviedb.org/3/tv/5739/season/0/episode/1?api_key=1553d2e4fa2912fc0953305d4d3e7c44&append_to_response=external_ids&language=en
+  404
+    => com.omertron.themoviedbapi.MovieDbException: ExceptionType=HTTP_404_ERROR, ResponseCode=404, URL=http://api.themoviedb.org/3/tv/5739/season/0/episode/1?api_key=1553d2e4fa2912fc0953305d4d3e7c44&append_to_response=external_ids&language=en
+
+http://api.themoviedb.org/3/tv/5739/season/0/episode/2?api_key=1553d2e4fa2912fc0953305d4d3e7c44&append_to_response=external_ids&language=en
+  404
+    => com.omertron.themoviedbapi.MovieDbException: ExceptionType=HTTP_404_ERROR, ResponseCode=404, URL=http://api.themoviedb.org/3/tv/5739/season/0/episode/2?api_key=1553d2e4fa2912fc0953305d4d3e7c44&append_to_response=external_ids&language=en
+
+http://api.themoviedb.org/3/tv/5739/season/0/episode/3?api_key=1553d2e4fa2912fc0953305d4d3e7c44&append_to_response=external_ids&language=en
+  200
+    => {"air_date":"2008-07-15","crew":[],"episode_number":3,"guest_stars":[],"name":"The Making of Doctor Horrible's Sing-Along Blog - Part 1 - The Movie","overview":"Part 1 of a mini documentary series that consists of interviews with cast and crew alike on the makings of 'Dr Horrible's Sing-Along Blog'","id":366720,"production_code":"","runtime":14,"season_number":0,"still_path":"/9DUmRl0JNhVqhhBnTDr6926gStc.jpg","vote_average":0.0,"vote_count":0,"external_ids":{"imdb_id":null,"freebase_mid":"/m/0w1k432","freebase_id":null,"tvdb_id":null,"tvrage_id":null}}
+
+--------------------------------------------------------------------------------
+
+because 1 or more episodes did not "add" successfully..
+the entire series was marked as unsuccessful..
+which bubbled up and marked the overall migration as unsuccessful.
+
+the current state of the code isn't in git;
+so anyone who may be reading this will only see working code once it has been commit;
+but at the moment, I can choose to proceed in either/both of the following ways..
+
+1) in the class: '.database.Update'
+   - ignore the result of calls to: 'api.addSeries(...)'
+   - attempt to proceed with DB rehydration.. by importing user metadata from temporary tables
+
+2) add a new/optional parameter to: 'api.addSeries(..., boolean ignoreMissingEpisodes)'
+   - defaults to true
+   - if true, then 404 responses for individual episodes wouldn't result in an unsuccessful return value
+
+I'm leaning toward doing both..
+add/update operations would also benefit from a 'ignoreMissingEpisodes' parameter..
+and migration should always attempt to rehydrate (ie: update) what rows were successfully inserted.
+
+-------------------------------------------------------------------------------- issue #02:
+
+now that that's fixed..
+and TV series having missing episodes can add/update/translate/restore successfully..
+this test migration still fails..
+for another unrelated reason.
+
+the exception indicates that it doesn't like the syntax of the SQL statements in this code:
+
+      // rehydrate the DB: import user metadata from temporary tables
+      if (result) {
+        try {
+          queries = new ArrayList<String>();
+
+          queries.add("UPDATE series"
+            + " SET"
+            + "   pinned       = migrate.pinned,"
+            + "   extResources = migrate.extResources"
+            + " FROM"
+            + "   ("
+            +      " SELECT tmdbid AS id, pinned, extResources FROM tmdb_migration_series"
+            + "   ) AS migrate"
+            + " WHERE"
+            + "   series.id = migrate.id"
+          );
+
+          queries.add("UPDATE episodes"
+            + " SET"
+            + "   seen = migrate.seen"
+            + " FROM"
+            + "   ("
+            +      " SELECT tmdbid AS serieId, seasonNumber, episodeNumber, seen FROM tmdb_migration_episodes"
+            + "   ) AS migrate"
+            + " WHERE"
+            + "   episodes.serieId = migrate.serieId"
+            + " AND"
+            + "   episodes.seasonNumber = migrate.seasonNumber"
+            + " AND"
+            + "   episodes.episodeNumber = migrate.episodeNumber"
+          );
+
+          result = db.execTransaction(queries);
+        }
+        catch(Exception e) {
+          Log.e(Constants.LOG_TAG, "Error importing user metadata for TV series from temporary tables to new schema.", e);
+          result = false;
+        }
+      }
+
+--------------------------------------------------------------------------------
+
+https://www.sqlite.org/lang_update.html#update_from
+
+the official documentation says that SQLite supports this UPDATE-FROM syntax..
+and it gives an example that's nearly verbatim identical in structure to the above.
+
+--------------------------------------------------------------------------------
+
+https://www.sqlite.org/changes.html#version_3_33_0
+
+turns out..
+that this type of statement syntax was added to SQLite v3.33.0
+
+--------------------------------------------------------------------------------
+
+https://developer.android.com/reference/android/database/sqlite/package-summary.html
+
+per Android documentation..
+the version of SQLite depends on the version of Android:
+
+Android API     SQLite Version
+===========     ==============
+API 31          3.32
+API 30          3.28
+API 28          3.22
+API 27          3.19
+API 26          3.18
+API 24          3.9
+API 21          3.8
+API 11          3.7
+API 8           3.6
+API 3           3.5
+API 1           3.4
+
+--------------------------------------------------------------------------------
+
+https://en.wikipedia.org/wiki/Android_version_history#Android_12
+
+so..
+the code to perform migration of the database..
+from the (old) TheTVDB branch..
+to the (new) TMDB branch..
+will/should work..
+but only on API 31 (Android 12) or higher.
+
+to be clear..
+the app itself still supports very old versions of Android..
+and if the DB were to be:
+  - exported from an old device
+    * running the (old) TheTVDB branch
+  - imported on a new (ie: API 31+) device
+    * running the (new) TMDB branch
+  - exported from the new device,
+    after its schema update completes
+  - imported back onto the old device
+    * now running the (new) TMDB branch
+then..
+it will/should work (nearly) perfectly.
+
+the only aspect of the migration that wouldn't work as intended..
+is that "pinned" series should be migrated into the new DB schema,
+but since the (old) TheTVDB branch stores this data in SharedPreferences..
+it would be lost by the aforementioned procedure.
+
+on the one hand..
+it's just a lot to ask of a user.
+
+on the other hand..
+being able to keep old data while upgrading (major version)..
+is a nice-to-have feature, but not absolutely vital..
+
+if a user feels strongly about it,
+then they'd be inclined to buy/beg/borrow/steal a newer device
+for the 5 minutes that it takes to convert a DB schema.
+
+--------------------------------------------------------------------------------
+
+https://stackoverflow.com/questions/28668817/update-column-with-value-from-another-table-using-sqlite
+
+date     = Feb, 2015
+question = Update column with value from another table using SQLite?
+answer   =
+
+UPDATE
+  table1
+SET
+  status = (SELECT t2.status FROM table2 t2 WHERE t2.trans_id = table1.id),
+    name = (SELECT t2.name   FROM table2 t2 WHERE t2.trans_id = table1.id)
+WHERE
+  id IN (SELECT trans_id FROM table2 t2 WHERE t2.trans_id= table1.id);
+
+--------------------------------------------------------------------------------
+
+so..
+UPDATE-FROM is syntactic sugar that I don't fundamentally need.
+
+I can rewrite my update statements..
+
+--------------------------------------------------------------------------------
+
+from (SQLite v3.33.0+):
+
+UPDATE
+  series
+SET
+  pinned       = migrate.pinned,
+  extResources = migrate.extResources
+FROM
+  (
+    SELECT tmdbid AS id, pinned, extResources FROM tmdb_migration_series
+  ) AS migrate
+WHERE
+  series.id = migrate.id;
+
+UPDATE
+  episodes
+SET
+  seen = migrate.seen
+FROM
+  (
+    SELECT tmdbid AS serieId, seasonNumber, episodeNumber, seen FROM tmdb_migration_episodes
+  ) AS migrate
+WHERE
+  episodes.serieId = migrate.serieId
+AND
+  episodes.seasonNumber = migrate.seasonNumber
+AND
+  episodes.episodeNumber = migrate.episodeNumber;
+
+--------------------------------------------------------------------------------
+
+to (older versions of SQLite):
+
+UPDATE
+  series
+SET
+  pinned       = (SELECT migrate.pinned       FROM tmdb_migration_series AS migrate WHERE migrate.tmdbid = series.id),
+  extResources = (SELECT migrate.extResources FROM tmdb_migration_series AS migrate WHERE migrate.tmdbid = series.id)
+WHERE
+  id IN (SELECT tmdbid FROM tmdb_migration_series AS migrate WHERE migrate.tmdbid = series.id);
+
+UPDATE
+  episodes
+SET
+  seen = (SELECT migrate.seen FROM tmdb_migration_episodes AS migrate WHERE migrate.tmdbid = episodes.serieId AND migrate.seasonNumber = episodes.seasonNumber AND migrate.episodeNumber = episodes.episodeNumber)
+WHERE
+  serieId IN (SELECT tmdbid FROM tmdb_migration_episodes AS migrate WHERE migrate.tmdbid = episodes.serieId AND migrate.seasonNumber = episodes.seasonNumber AND migrate.episodeNumber = episodes.episodeNumber);
+
+--------------------------------------------------------------------------------
+
+if this syntax is supported by the versions of SQLite in older versions of Android..
+then the following code should work as a drop-in replacement:
+
+      // rehydrate the DB: import user metadata from temporary tables
+      if (result) {
+        try {
+          queries = new ArrayList<String>();
+
+          queries.add("UPDATE series"
+            + " SET"
+            + "   pinned       = (SELECT migrate.pinned       FROM tmdb_migration_series AS migrate WHERE migrate.tmdbid = series.id),"
+            + "   extResources = (SELECT migrate.extResources FROM tmdb_migration_series AS migrate WHERE migrate.tmdbid = series.id)"
+            + " WHERE"
+            + "   id IN (SELECT tmdbid FROM tmdb_migration_series AS migrate WHERE migrate.tmdbid = series.id)"
+          );
+
+          queries.add("UPDATE episodes"
+            + " SET"
+            + "   seen = (SELECT migrate.seen FROM tmdb_migration_episodes AS migrate WHERE migrate.tmdbid = episodes.serieId AND migrate.seasonNumber = episodes.seasonNumber AND migrate.episodeNumber = episodes.episodeNumber)"
+            + " WHERE"
+            + "   serieId IN (SELECT tmdbid FROM tmdb_migration_episodes AS migrate WHERE migrate.tmdbid = episodes.serieId AND migrate.seasonNumber = episodes.seasonNumber AND migrate.episodeNumber = episodes.episodeNumber)"
+          );
+
+          result = db.execTransaction(queries);
+        }
+        catch(Exception e) {
+          Log.e(Constants.LOG_TAG, "Error importing user metadata for TV series from temporary tables to new schema.", e);
+          result = false;
+        }
+      }
+
+--------------------------------------------------------------------------------
+
+test results:
+=============
+
+* Android 4.4
+  - migration completed successfully
+    * albeit slowly..
+      since the initial migration is effectively re-adding every series from scratch
+    * subsequent updates should be relatively quick..
+      since only new episodes are retrieved
+
+--------------------------------------------------------------------------------

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">vi</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">Không tìm thấy hiển thị.</string>
 <string name="layout_search_no_items">Không tìm thấy hiển thị.</string>
 <string name="layout_seasons_no_items">Không có mùa để hiển thị.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">Không thể thực hiện sao lưu!</string>
 <string name="dialog_backup_usefolder">Dùng thư mục cho các bản sao hàng ngày</string>
 <string name="dialog_change_language">Ngôn ngữ synopsis</string>
-<string name="dialog_use_mirror">Dùng TheTVDB (hãy thử cập nhật nếu quá chậm)</string>
 <string name="dialog_restore">Khôi phục</string>
 <string name="dialog_restore_now">Khôi phục sao lưu sẽ gỡ bỏ mọi thông tin hiện tại DroidShows. Tiếp tục?</string>
 <string name="dialog_restore_done">Đã khôi phục thành công</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">Hủy</string>
 <string name="dialog_search">Chuỗi tìm kiếm:</string>
 <string name="dialog_update_series">Bạn có chắc là muốn cập nhật tất cả các hiển thị được liệt kê?</string>
-<string name="dialog_update_speedup">\n\nBạn có thể tăng tốc quy trình này với Cập nhật tùy chọn chỉ hiển thị mùa mới nhất.</string>
-<string name="dialog_latest_season">Cập nhật cho thấy mùa mới nhất chỉ có</string>
 <string name="dialog_include_specials">Bao gồm các chương trình đặc biệt trong sô ́ lượng</string>
 <string name="dialog_full_line_check">Dùng toàn bộ dòng để đánh dấu tập</string>
 <string name="dialog_switch_swipe_direction">Xoay sang trái để quay lại</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">Kho lưu</string>
 <string name="menu_unarchive">Phục hồi</string>
 <string name="messages_title_updating_series">Đang cập nhật</string>
-<string name="messages_title_updating_db">Đang cập nhật</string>
-<string name="messages_update_serie">Ðang thu thập thông tin ...</string>
 <string name="messages_no_internet">Không có kết nối Internet</string>
 <string name="messages_title_update_series">Cập nhật cho</string>
-<string name="messages_update_series">Thu thập thông tin. Thao tác này sẽ mất một lúc ...</string>
 <string name="messages_episodes"></string>
 <string name="messages_new_episodes">các tập mới</string>
 <string name="messages_new_episode">Tập mới</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">Chi tiết Tập</string>
 <string name="messsages_edit_seen_timestamp">Sửa nhãn thời gian đã xem</string>
 <string name="messages_calendar_app_error">Không tìm thấy ứng dụng Calendar!</string>
-<string name="messages_thetvdb_con_error">Lỗi khi kết nối vào TheTVDB. Thử lại.</string>
+<string name="messages_api_con_error">Lỗi khi kết nối vào TMDb API. Thử lại.</string>
 <string name="messages_marked_seen">được đánh dấu là</string>
 <string name="messages_marked_unseen">đã được đánh dấu</string>
 <string name="messages_context_mark_seasonunseen">Đánh dấu tất cả các tập như không</string>

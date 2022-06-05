@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">te</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">ఏ ప్రదర్శన కనబడలేదు.</string>
 <string name="layout_search_no_items">ఏ ప్రదర్శన కనబడలేదు.</string>
 <string name="layout_seasons_no_items">ప్రదర్శించుటకు ఋషులు లేదు.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">బ్యాకప్ చేయలేకపొయాను!</string>
 <string name="dialog_backup_usefolder">రోజువారీ బ్యాకప్ కొరకు ఫోల్డర్ను వుపయోగించుము</string>
 <string name="dialog_change_language">సినోపిసిస్ భాష</string>
-<string name="dialog_use_mirror">వుపయోగించుము TheTVDB మిరణం (ప్రవేశాలు చాలా నెమ్మదైన ఉంటే దీనిని ప్రయత్నించుము)</string>
 <string name="dialog_restore">పునఃప్రారంభించు</string>
 <string name="dialog_restore_now">బ్యాకప్ పునఃప్రారంభించుటలో ప్రస్తుతం అన్ని సమాచారమును తీసివేస్తుంది DroidShows. కొనసాగించు?</string>
 <string name="dialog_restore_done">డాటాబేసు సమర్ధవంతంగా తిరిగి</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">రద్దు</string>
 <string name="dialog_search">స్ట్రీన్ శోధన:</string>
 <string name="dialog_update_series">మీరు అన్ని జాబితా ప్రదర్శనలను నవీకరణ చేయాలనుకుంటున్నారా?</string>
-<string name="dialog_update_speedup">\n\nమీరు ఈ ప్రక్రియ వేగంగా ఎంపిక చేయవచ్చు..</string>
-<string name="dialog_latest_season">అదనపు సీజన్ మాత్రమే ఆధునికత</string>
 <string name="dialog_include_specials">కనిపెట్టిన లెక్కలో ప్రత్యేకత</string>
 <string name="dialog_full_line_check">సంపూర్ణ వరుసను గుర్తుకు ఉపయోగించు</string>
 <string name="dialog_switch_swipe_direction">తిరిగి వెళ్ళడానికి కుడి నుండి ఎడమకు స్వైప్ చేయండి</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">ఆర్కైవ్</string>
 <string name="menu_unarchive">రికార్డు</string>
 <string name="messages_title_updating_series">ప్రదర్శన నవీకరిస్తోంది</string>
-<string name="messages_title_updating_db">డాటాబేస్ నవీకరిస్తోంది</string>
-<string name="messages_update_serie">గాథింగ్ షో సమాచారం ...</string>
 <string name="messages_no_internet">ఇంటర్నెట్ అనుసంధానం అందుబాటలేదు</string>
 <string name="messages_title_update_series">అదనపు ప్రదర్శన</string>
-<string name="messages_update_series">గాథింగ్ సమాచారం చూపిస్తుంది. ఈ ఆపరేషన్ కొంతకాలం పడుతుంది ...</string>
 <string name="messages_episodes">భాగములు</string>
 <string name="messages_new_episodes">కొత్త భాగములు</string>
 <string name="messages_new_episode">కొత్త ధారావాదము</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">ఎపిసోడ్ వివరాలు</string>
 <string name="messsages_edit_seen_timestamp">టైమ్‌స్టాంప్ చూసిన సవరణ</string>
 <string name="messages_calendar_app_error">క్యాలెండర్ యాప్ను కనబడలేదు!</string>
-<string name="messages_thetvdb_con_error">అనుసంధానించు దోషము TheTVDB. మళ్ళీ ప్రయత్నించండి.</string>
+<string name="messages_api_con_error">అనుసంధానించు దోషము TMDb API. మళ్ళీ ప్రయత్నించండి.</string>
 <string name="messages_marked_seen">చూడగా గుర్తించబడిందిName</string>
 <string name="messages_marked_unseen">కనిపించినట్లుగా గుర్తించబడినది</string>
 <string name="messages_context_mark_seasonunseen">అన్ని ధారావాహికలను కనిపించినట్లుగా మార్క్ చేయుము</string>

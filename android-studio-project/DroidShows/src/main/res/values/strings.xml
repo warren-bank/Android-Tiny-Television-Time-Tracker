@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">en</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">No shows found.</string>
 <string name="layout_search_no_items">No shows found.</string>
 <string name="layout_seasons_no_items">No seasons to display.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">Unable to perform backup!</string>
 <string name="dialog_backup_usefolder">Use folder for daily backups</string>
 <string name="dialog_change_language">Synopsis language</string>
-<string name="dialog_use_mirror">Use TheTVDB mirror (try this if updates are too slow)</string>
 <string name="dialog_restore">Restore</string>
 <string name="dialog_restore_now">Restoring a backup will remove all information currently in DroidShows. Continue?</string>
 <string name="dialog_restore_done">Database restored successfully</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">Cancel</string>
 <string name="dialog_search">Search string:</string>
 <string name="dialog_update_series">Are you sure you want to update all listed shows now?</string>
-<string name="dialog_update_speedup">\n\nYou can speed up this process with the option Update shows\' latest season only.</string>
-<string name="dialog_latest_season">Update shows\' latest season only</string>
 <string name="dialog_include_specials">Include specials in unwatched count</string>
 <string name="dialog_full_line_check">Use entire line to mark episode</string>
 <string name="dialog_switch_swipe_direction">Swipe right-to-left to go back</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">Archive</string>
 <string name="menu_unarchive">Recover</string>
 <string name="messages_title_updating_series">Updating shows</string>
-<string name="messages_title_updating_db">Updating database</string>
-<string name="messages_update_serie">Gathering show information…</string>
 <string name="messages_no_internet">No Internet connection available</string>
 <string name="messages_title_update_series">Update shows</string>
-<string name="messages_update_series">Gathering shows information. This operation will take a while…</string>
 <string name="messages_episodes">episodes</string>
 <string name="messages_new_episodes">new episodes</string>
 <string name="messages_new_episode">new episode</string>
@@ -100,7 +93,10 @@
 <string name="messsages_view_ep_details">Episode details</string>
 <string name="messsages_edit_seen_timestamp">Edit seen timestamp</string>
 <string name="messages_calendar_app_error">No Calendar app found!</string>
-<string name="messages_thetvdb_con_error">Error connecting to TheTVDB. Try again.</string>
+<string name="messages_db_error_update">Database error while updating</string>
+<string name="messages_db_error_delete_serie">Database error while deleting show</string>
+<string name="messages_db_error_delete_episode">Database error while deleting episode</string>
+<string name="messages_api_con_error">Error connecting to TMDb API. Try again.</string>
 <string name="messages_marked_seen">marked as seen</string>
 <string name="messages_marked_unseen">marked as unseen</string>
 <string name="messages_context_mark_seasonunseen">Mark all episodes as unseen</string>

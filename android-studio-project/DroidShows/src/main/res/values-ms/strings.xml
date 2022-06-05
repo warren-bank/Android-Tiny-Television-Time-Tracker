@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ms</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">Tiada paparan ditemui.</string>
 <string name="layout_search_no_items">Tiada paparan ditemui.</string>
 <string name="layout_seasons_no_items">Tiada musim untuk dipaparkan.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">Tidak boleh buat sandar!</string>
 <string name="dialog_backup_usefolder">Guna folder untuk sandar harian</string>
 <string name="dialog_change_language">Bahasa Synopsis</string>
-<string name="dialog_use_mirror">Guna TheTVDB cermin (cuba ini jika kemaskini terlalu perlahan)</string>
 <string name="dialog_restore">Pulih</string>
 <string name="dialog_restore_now">Memulihkan sandar akan membuang semua maklumat yang sedang dalam DroidShows. Teruskan?</string>
 <string name="dialog_restore_done">Pangkalan data berjaya dipulihkan</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">Batal</string>
 <string name="dialog_search">Rentetan gelintar:</string>
 <string name="dialog_update_series">Anda pasti hendak kemaskini semua paparan yang tersenarai sekarang?</string>
-<string name="dialog_update_speedup">\n\nAnda boleh mempercepatkan proses ini dengan pilihan kemaskini menunjukkan \' musim terbaru sahaja.</string>
-<string name="dialog_latest_season">Kemaskini memaparkan \' musim terbaru sahaja</string>
 <string name="dialog_include_specials">Sertakan khusus dalam kiraan yang tidak ditonton</string>
 <string name="dialog_full_line_check">Guna keseluruhan baris untuk menandakan episod</string>
 <string name="dialog_switch_swipe_direction">Leret ke kiri ke kiri untuk kembali</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">Arkib</string>
 <string name="menu_unarchive">Pulih</string>
 <string name="messages_title_updating_series">Mengemaskini paparan</string>
-<string name="messages_title_updating_db">Kemaskini pangkalan data</string>
-<string name="messages_update_serie">Mengumpulkan maklumat ...</string>
 <string name="messages_no_internet">Tiada sambungan Internet tersedia</string>
 <string name="messages_title_update_series">Kemaskini menunjukkan</string>
-<string name="messages_update_series">Berkumpul menunjukkan maklumat. Operasi ini akan mengambil masa ...</string>
 <string name="messages_episodes">episod</string>
 <string name="messages_new_episodes">episod baru</string>
 <string name="messages_new_episode">episod baru</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">Perincian episod</string>
 <string name="messsages_edit_seen_timestamp">Sunting setem masa</string>
 <string name="messages_calendar_app_error">Tiada aplikasi Kalendar ditemui!</string>
-<string name="messages_thetvdb_con_error">Ralat menyambung ke TheTVDB. Cuba lagi.</string>
+<string name="messages_api_con_error">Ralat menyambung ke TMDb API. Cuba lagi.</string>
 <string name="messages_marked_seen">ditanda sebagai dilihat</string>
 <string name="messages_marked_unseen">Ditanda sebagai ghaib</string>
 <string name="messages_context_mark_seasonunseen">Tandakan semua episod sebagai ghaib</string>

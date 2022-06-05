@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">gu</string>
-<string name="layout_app_name">DroidShows</string>
 <string name="layout_main_no_items">કોઈ શોધ શોધાયુ નથી.</string>
 <string name="layout_search_no_items">કોઈ શોધ શોધાયુ નથી.</string>
 <string name="layout_seasons_no_items">દર્શાવવા માટે ઋતુઓ નથી.</string>
@@ -47,7 +46,6 @@
 <string name="dialog_backup_failed">બેકઅપ ચલાવવાનું અસમર્થ!</string>
 <string name="dialog_backup_usefolder">હરોળ બેકઅપ માટે ફોલ્ડરને વાપરો</string>
 <string name="dialog_change_language">સારાંશ ભાષા</string>
-<string name="dialog_use_mirror">વાપરો TheTVDB મિરર (જો સુધારાઓ ખૂબ ધીમી હોય તો આ પ્રયત્ન કરો)</string>
 <string name="dialog_restore">પુનઃસંગ્રહો</string>
 <string name="dialog_restore_now">બેકઅપ પુન: સંગ્રહ કરવાનું વર્તમાનમાં બધી જાણકારી દૂર કરશે DroidShows. ચાલુ રાખો?</string>
 <string name="dialog_restore_done">ડેટાબેઝ સફળતાપૂર્વક</string>
@@ -58,8 +56,6 @@
 <string name="dialog_cancel">રદ કરો</string>
 <string name="dialog_search">શબ્દમાળા શોધો:</string>
 <string name="dialog_update_series">શું તમે ખરેખર બધા યાદી બતાવવાનું હવે સુધારવા માંગો છો?</string>
-<string name="dialog_update_speedup">\n\nતમે આ પ્રક્રિયાને ઝડપથી સુધારી શકો છો વિકલ્પ સુધારો બતાવે છે \' તાજેતરની સીઝન ફક્ત.</string>
-<string name="dialog_latest_season">સુધારો બતાવે છે \' તાજેતરની સીઝન ફક્ત</string>
 <string name="dialog_include_specials">અસંખ્ય ગણતરીમાં સ્પષ્ટીઓ સમાવો</string>
 <string name="dialog_full_line_check">સમગ્ર લીટી ને ચિહ્નિત કરવા માટે વાપરો</string>
 <string name="dialog_switch_swipe_direction">પાછા જવા માટે જમણેથી ડાબે સ્વાઇપ કરો</string>
@@ -71,11 +67,8 @@
 <string name="menu_archive">પેટી</string>
 <string name="menu_unarchive">પાછા મેળવો</string>
 <string name="messages_title_updating_series">બતાવે છે</string>
-<string name="messages_title_updating_db">ડેટાબેઝ સુધારી રહ્યા છે</string>
-<string name="messages_update_serie">એકત્રીકરણ બતાવો માહિતી…</string>
 <string name="messages_no_internet">ઇન્ટરનેટ જોડાણ ઉપલબ્ધ નથી</string>
 <string name="messages_title_update_series">સુધારો બતાવે છે</string>
-<string name="messages_update_series">ગેથરીંગ માહિતી બતાવે છે. આ પ્રક્રિયા થોડો થઇ જશે ...</string>
 <string name="messages_episodes">ભાગો</string>
 <string name="messages_new_episodes">નવી ભાગો</string>
 <string name="messages_new_episode">નવો અંક</string>
@@ -100,7 +93,7 @@
 <string name="messsages_view_ep_details">અઠવાડિયાનો વિગતો</string>
 <string name="messsages_edit_seen_timestamp">જોયેલ ટાઇમસ્ટેમ્પમાં ફેરફાર કરો</string>
 <string name="messages_calendar_app_error">કોઈ કેલેન્ડર એપ મળ્યુ નથી!</string>
-<string name="messages_thetvdb_con_error">જોડાઇ રહ્યા હોય ત્યારે ભૂલ TheTVDB. ફરીથી પ્રયત્ન કરો.</string>
+<string name="messages_api_con_error">જોડાઇ રહ્યા હોય ત્યારે ભૂલ TMDb API. ફરીથી પ્રયત્ન કરો.</string>
 <string name="messages_marked_seen">જોયેલ તરીકે ચિહ્નિત થયેલ છે</string>
 <string name="messages_marked_unseen">જોયેલ તરીકે ચિહ્નિત થયેલ છે</string>
 <string name="messages_context_mark_seasonunseen">બધા ભાગો અસ્તિત્વમાં ચિહ્નિત કરો</string>
