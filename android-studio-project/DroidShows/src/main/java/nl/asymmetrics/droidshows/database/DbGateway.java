@@ -216,6 +216,8 @@ public class DbGateway {
 
             case "id":
             case "seasonCount":
+            case "archived":
+            case "pinned":
             case "unwatched":
             case "unwatchedAired":
             case "lastUpdated":
@@ -224,11 +226,6 @@ public class DbGateway {
 
             case "reviewRating":
               columnType = "float";
-              break;
-
-            case "archived":
-            case "pinned":
-              columnType = "boolean";
               break;
 
             default:
