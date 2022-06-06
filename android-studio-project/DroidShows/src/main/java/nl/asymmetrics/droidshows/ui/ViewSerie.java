@@ -8,6 +8,7 @@ import nl.asymmetrics.droidshows.database.model.DbActor;
 import nl.asymmetrics.droidshows.database.model.DbGenre;
 import nl.asymmetrics.droidshows.database.model.DbSeries;
 import nl.asymmetrics.droidshows.utils.SwipeDetect;
+import nl.asymmetrics.droidshows.utils.UrlUtils;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -180,7 +181,7 @@ public class ViewSerie extends Activity {
     String uri = imdbUri
       + ((!TextUtils.isEmpty(dbSeries.imdbId) && dbSeries.imdbId.startsWith("tt"))
           ? ("title/"  + dbSeries.imdbId)
-          : ("find?q=" + dbSeries.name.replaceAll(" \\(....\\)", ""))
+          : ("find?q=" + UrlUtils.encodeSerieNameForQuerystringValue(dbSeries.name))
         );
 
     Intent imdb = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
@@ -195,7 +196,7 @@ public class ViewSerie extends Activity {
       .setTitle(R.string.menu_search)
       .setItems(actors.toArray(new CharSequence[actors.size()]), new DialogInterface.OnClickListener() {
         public void onClick(DialogInterface dialog, int item) {
-          Intent imdb = new Intent(Intent.ACTION_VIEW, Uri.parse(imdbUri + "find?q=" + actors.get(item)));
+          Intent imdb = new Intent(Intent.ACTION_VIEW, Uri.parse(imdbUri + "find?q=" + UrlUtils.encodeURIComponent(actors.get(item))));
           imdb.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
           startActivity(imdb);
         }

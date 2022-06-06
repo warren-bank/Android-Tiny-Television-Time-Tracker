@@ -19,6 +19,7 @@ import nl.asymmetrics.droidshows.utils.HardwareUtils;
 import nl.asymmetrics.droidshows.utils.ImageUtils;
 import nl.asymmetrics.droidshows.utils.NetworkUtils;
 import nl.asymmetrics.droidshows.utils.SwipeDetect;
+import nl.asymmetrics.droidshows.utils.UrlUtils;
 
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
@@ -1259,14 +1260,13 @@ public class DroidShows extends ListActivity implements Update.DatabaseUpdateLis
   }
 
   private void Search(String url, String serieName) {
-    serieName = serieName.replaceAll(" \\(....\\)", "");
+    serieName = UrlUtils.encodeSerieNameForQuerystringValue(serieName);
     Intent rt = new Intent(Intent.ACTION_VIEW, Uri.parse(url + serieName));
     rt.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
     startActivity(rt);
   }
 
-  private void WikiDetails(String serieName) {
-    serieName = serieName.replaceAll(" \\(....\\)", "");
+  private void WikiDetails(String serieName, String serieLangCode) {
     Intent wiki;
     String wikiApp = null;
       if (getApplicationContext().getPackageManager().getLaunchIntentForPackage("org.wikipedia") != null)
@@ -1274,10 +1274,12 @@ public class DroidShows extends ListActivity implements Update.DatabaseUpdateLis
       else if (getApplicationContext().getPackageManager().getLaunchIntentForPackage("org.wikipedia.beta") != null)
         wikiApp = "org.wikipedia.beta";
       if (wikiApp == null) {
-        String uri = "https://"+ (langCode.equals("all") ? "" : langCode +".") +"m.wikipedia.org/wiki/index.php?search="+ serieName
-          + (langCode.equals("en") ? " (TV series)" : "");
+        serieName = serieName + " (" + getString(R.string.wiki_search_query_suffix) + ")";
+        serieName = UrlUtils.encodeSerieNameForQuerystringValue(serieName);
+        String uri = "https://" + serieLangCode + ".m.wikipedia.org/w/index.php?search=" + serieName;
         wiki = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
       } else {
+        serieName = UrlUtils.encodeSerieNameForIntentExtra(serieName);
         wiki = new Intent(Intent.ACTION_SEND)
           .putExtra(Intent.EXTRA_TEXT, serieName)
           .setType("text/plain")
@@ -1306,7 +1308,7 @@ public class DroidShows extends ListActivity implements Update.DatabaseUpdateLis
 
     uri += ((imdbId != null) && imdbId.startsWith("tt"))
       ? ("title/"  + imdbId)
-      : ("find?q=" + serieName.replaceAll(" \\(....\\)", ""));
+      : ("find?q=" + UrlUtils.encodeSerieNameForQuerystringValue(serieName));
 
     Intent imdb = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
     imdb.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -1353,7 +1355,7 @@ public class DroidShows extends ListActivity implements Update.DatabaseUpdateLis
               Search("https://www.rottentomatoes.com/search/?search=", serie.getName());
               break;
             case 4 :
-              WikiDetails(serie.getName());
+              WikiDetails(serie.getName(), serie.getLanguage());
               break;
             default :
               if (item == extResources.length-1) {

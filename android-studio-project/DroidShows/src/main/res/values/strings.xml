@@ -117,4 +117,5 @@
 <string name="series_actors">Actors:</string>
 <string name="showstatus_continuing">continuing</string>
 <string name="showstatus_ended">ended</string>
+<string name="wiki_search_query_suffix">television series</string>
 </resources>

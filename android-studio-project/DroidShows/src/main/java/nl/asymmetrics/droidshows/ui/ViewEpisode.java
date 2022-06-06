@@ -10,6 +10,7 @@ import nl.asymmetrics.droidshows.database.model.DbEpisode;
 import nl.asymmetrics.droidshows.database.model.DbGuestStar;
 import nl.asymmetrics.droidshows.database.model.DbWriter;
 import nl.asymmetrics.droidshows.utils.SwipeDetect;
+import nl.asymmetrics.droidshows.utils.UrlUtils;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -251,7 +252,7 @@ public class ViewEpisode extends Activity {
     String uri = imdbUri
       + ((!TextUtils.isEmpty(dbEpisode.imdbId) && dbEpisode.imdbId.startsWith("tt"))
           ? ("title/"  + dbEpisode.imdbId)
-          : ("find?q=" + serieName.replaceAll(" \\(....\\)", "") + " " + dbEpisode.name)
+          : ("find?q=" + UrlUtils.encodeSerieNameForQuerystringValue(serieName + " " + dbEpisode.name))
         );
 
     Intent imdb = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
@@ -277,7 +278,7 @@ public class ViewEpisode extends Activity {
       .setTitle(R.string.menu_search)
       .setItems(names.toArray(new CharSequence[names.size()]), new DialogInterface.OnClickListener() {
         public void onClick(DialogInterface dialog, int item) {
-          Intent imdb = new Intent(Intent.ACTION_VIEW, Uri.parse(imdbUri + "find?q=" + names.get(item)));
+          Intent imdb = new Intent(Intent.ACTION_VIEW, Uri.parse(imdbUri + "find?q=" + UrlUtils.encodeURIComponent(names.get(item))));
           imdb.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
           startActivity(imdb);
         }
