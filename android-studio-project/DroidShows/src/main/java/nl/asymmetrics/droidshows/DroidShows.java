@@ -367,37 +367,49 @@ public class DroidShows extends ListActivity implements Update.DatabaseUpdateLis
     updateDS.updateDatabase(DroidShows.this, mode, passthrough);
   }
 
-  @Override
-  public void preDatabaseUpdate(int mode, int oldVersion) {
-    backup(false, backupFolder);
+  @Override // Update.DatabaseUpdateListener
+  public void preDatabaseUpdate(int mode, int oldVersion, boolean willUpdate) {
+    switch (mode) {
+      case Update.MODE_INSTALL: {
+        if (willUpdate) {
+          backup(false, backupFolder);
+        }
+        break;
+      }
 
-    if (mode == Update.MODE_RESTORE)
-      FileUtils.cleanAllImageDirectories(DroidShows.this);
+      case Update.MODE_RESTORE: {
+        FileUtils.cleanAllImageDirectories(DroidShows.this);
+        break;
+      }
+    }
   }
 
-  @Override
-  public void postDatabaseUpdate(int mode, int oldVersion, boolean result, boolean didUpdateAllSeries, Object passthrough) {
-    if (!result) {
+  @Override // Update.DatabaseUpdateListener
+  public void postDatabaseUpdate(int mode, int oldVersion, boolean didUpdateFail, boolean didUpdateSucceed, boolean didUpdateAllSeries, Object passthrough) {
+    if (didUpdateFail) {
       String error = getString(R.string.messages_db_error_update);
       Toast.makeText(DroidShows.this, error, Toast.LENGTH_LONG).show();
     }
 
     switch (mode) {
       case Update.MODE_INSTALL: {
-        if (result) {
+        if (didUpdateSucceed) {
           updateShowStats();
         }
         break;
       }
 
       case Update.MODE_RESTORE: {
-        if (result) {
-          FileUtils.cleanDatabaseDirectory(DroidShows.this);
-          undo.clear();
-
+        if (!didUpdateFail) {
           String backupFile = (String) passthrough;
           String toastTxt   = getString(R.string.dialog_restore_done) + "\n(" + backupFile + ")";
           Toast.makeText(DroidShows.this, toastTxt, Toast.LENGTH_LONG).show();
+
+          FileUtils.cleanDatabaseDirectory(DroidShows.this);
+          undo.clear();
+
+          if (!didUpdateAllSeries)
+            db.updateSerieRemoveAllImageFilePaths();
 
           if (BuildConfig.DEBUG || didUpdateAllSeries) {
             updateShowStats();
@@ -1000,6 +1012,8 @@ public class DroidShows extends ListActivity implements Update.DatabaseUpdateLis
     }
 
     try {
+      backup(false, backupFolder);
+
       copy(source, destination);
     }
     catch (IOException e) {

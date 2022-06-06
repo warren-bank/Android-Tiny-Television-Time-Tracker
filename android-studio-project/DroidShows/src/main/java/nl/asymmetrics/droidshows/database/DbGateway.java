@@ -1642,6 +1642,17 @@ public class DbGateway {
 
   // ---------------------------------------------------------------------------
 
+  public boolean updateSerieRemoveAllImageFilePaths() {
+    String query = "UPDATE series"
+      + " SET"
+      + "   smallImageFilePath  = NULL,"
+      + "   mediumImageFilePath = NULL";
+
+    return db.execQuery(query);
+  }
+
+  // ---------------------------------------------------------------------------
+
   public boolean updateSerieArchived(int serieId, boolean archived) {
     String query = "UPDATE series"
       + " SET"

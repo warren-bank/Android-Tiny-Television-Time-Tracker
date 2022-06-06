@@ -32,12 +32,14 @@ public class Update {
   public static final int MODE_RESTORE = 2;
 
   public interface DatabaseUpdateListener {
-    public void preDatabaseUpdate (int mode, int oldVersion);
-    public void postDatabaseUpdate(int mode, int oldVersion, boolean result, boolean didUpdateAllSeries, Object passthrough);
+    public void preDatabaseUpdate (int mode, int oldVersion, boolean willUpdate);
+    public void postDatabaseUpdate(int mode, int oldVersion, boolean didUpdateFail, boolean didUpdateSucceed, boolean didUpdateAllSeries, Object passthrough);
   }
 
   private Context context;
   private SQLiteStore db;
+  private boolean didUpdateFail;
+  private boolean didUpdateSucceed;
   private boolean didUpdateAllSeries;
 
   public Update(Context context) {
@@ -49,29 +51,36 @@ public class Update {
   public void updateDatabase(DatabaseUpdateListener listener, int mode, Object passthrough) {
     Runnable updateDatabase = new Runnable() {
       public void run() {
+        Looper.prepare();
         Log.d(Constants.LOG_TAG, "Database update routine");
-        if (needsUpdate()) {
+
+        didUpdateFail      = false;
+        didUpdateSucceed   = false;
+        didUpdateAllSeries = false;
+
+        int     oldVersion = getVersionNumber();
+        boolean willUpdate = needsUpdate();
+
+        if (listener != null)
+          listener.preDatabaseUpdate(mode, oldVersion, willUpdate);
+
+        if (willUpdate) {
           Log.d(Constants.LOG_TAG, "Database needs update");
-          Looper.prepare();
 
-          int oldVersion = getVersionNumber();
-
-          if (listener != null)
-            listener.preDatabaseUpdate(mode, oldVersion);
-
-          didUpdateAllSeries = false;
-          boolean result = updateDatabaseVersion();
-
-          if (result)
-            Log.d(Constants.LOG_TAG, "Database updated");
-          else
-            Log.e(Constants.LOG_TAG, "Attempt to update version of database schema failed");
-
-          if (listener != null)
-            listener.postDatabaseUpdate(mode, oldVersion, result, didUpdateAllSeries, passthrough);
-
-          Looper.loop();
+          updateDatabaseVersion();
         }
+
+        if (didUpdateFail)
+          Log.e(Constants.LOG_TAG, "Attempt to update version of database schema has failed");
+        else if (didUpdateSucceed)
+          Log.d(Constants.LOG_TAG, "Version of database schema has been updated");
+        else
+          Log.d(Constants.LOG_TAG, "Version of database schema did not require an update");
+
+        if (listener != null)
+          listener.postDatabaseUpdate(mode, oldVersion, didUpdateFail, didUpdateSucceed, didUpdateAllSeries, passthrough);
+
+        Looper.loop();
       }
     };
     Thread updateDatabaseTh = new Thread(updateDatabase);
@@ -125,42 +134,72 @@ public class Update {
     return -1;
   }
 
-  private boolean updateDatabaseVersion() {
-    String version = getVersion();
-    boolean done = false;
-    if (version.equals("0.1.5-6") || version.equals("0")) {
-      done = u0156To0157();
-      version = getVersion();
+  private void updateDatabaseVersion() {
+    boolean didUpdate, result;
+    int version;
+
+    didUpdate        = false;
+    didUpdateSucceed = true;
+    version          = getVersionNumber();
+
+    if (!didUpdateFail && (version == 1)) {
+      didUpdate           = true;
+      result              = update_version_001();
+      didUpdateSucceed   &= result;
+      didUpdateFail      |= !result;
+      version             = getVersionNumber();
     }
-    if (version.equals("0.1.5-7")) {
-      done = u0157To0157G();
-      version = getVersion();
+    if (!didUpdateFail && (version == 2)) {
+      didUpdate           = true;
+      result              = update_version_002();
+      didUpdateSucceed   &= result;
+      didUpdateFail      |= !result;
+      version             = getVersionNumber();
     }
-    if (version.equals("0.1.5-7G")) {
-      done = u0157GTo0157G2();
-      version = getVersion();
+    if (!didUpdateFail && (version == 3)) {
+      didUpdate           = true;
+      result              = update_version_003();
+      didUpdateSucceed   &= result;
+      didUpdateFail      |= !result;
+      version             = getVersionNumber();
     }
-    if (version.equals("0.1.5-7G2")) {
-      done = u0157GTo0157G3();
-      version = getVersion();
+    if (!didUpdateFail && (version == 4)) {
+      didUpdate           = true;
+      result              = update_version_004();
+      didUpdateSucceed   &= result;
+      didUpdateFail      |= !result;
+      version             = getVersionNumber();
     }
-    if (version.equals("0.1.5-7G3")) {
-      done = u0157GTo0157G4();
-      version = getVersion();
+    if (!didUpdateFail && (version == 5)) {
+      didUpdate           = true;
+      result              = update_version_005();
+      didUpdateSucceed   &= result;
+      didUpdateFail      |= !result;
+      version             = getVersionNumber();
     }
-    if (version.equals("0.1.5-7G4")) {
-      done = u0157GTo0157G5();
-      version = getVersion();
+    if (!didUpdateFail && (version == 6)) {
+      didUpdate           = true;
+      result              = update_version_006();
+      didUpdateSucceed   &= result;
+      didUpdateFail      |= !result;
+      version             = getVersionNumber();
     }
-    if (version.equals("0.1.5-7G5")) {
-      done = u0157GTo0157G6();
-      didUpdateAllSeries |= done;
-      version = getVersion();
+    if (!didUpdateFail && (version == 7)) {
+      didUpdate           = true;
+      result              = update_version_007();
+      didUpdateAllSeries |= result;
+      didUpdateSucceed   &= result;
+      didUpdateFail      |= !result;
+      version             = getVersionNumber();
     }
-    return done;
+    if (!didUpdateFail && (version == 8)) {
+      // noop: version of schema is up-to-date
+    }
+
+    didUpdateSucceed &= didUpdate;
   }
 
-  private boolean u0156To0157() {
+  private boolean update_version_001() {
     Log.d(Constants.LOG_TAG, "UPDATING TO VERSION 0.1.5-7");
     try {
       db.execQuery("ALTER TABLE series ADD COLUMN passiveStatus INTEGER DEFAULT 0");
@@ -173,7 +212,7 @@ public class Update {
     }
   }
 
-  private boolean u0157To0157G() {
+  private boolean update_version_002() {
     Log.d(Constants.LOG_TAG, "UPDATING TO VERSION 0.1.5-7G");
     try {
       db.execQuery("ALTER TABLE series ADD COLUMN seasonCount INTEGER DEFAULT -1");
@@ -190,7 +229,7 @@ public class Update {
     }
   }
 
-  private boolean u0157GTo0157G2() {
+  private boolean update_version_003() {
     Log.d(Constants.LOG_TAG, "UPDATING TO VERSION 0.1.5-7G2");
     try {
       db.execQuery("ALTER TABLE series ADD COLUMN extResources VARCHAR NOT NULL DEFAULT ''");
@@ -203,7 +242,7 @@ public class Update {
     }
   }
 
-  private boolean u0157GTo0157G3() {
+  private boolean update_version_004() {
     Log.d(Constants.LOG_TAG, "UPDATING TO VERSION 0.1.5-7G3");
     try {
       if (!convertSeenTimestamps()) return false;
@@ -216,7 +255,7 @@ public class Update {
     }
   }
 
-  private boolean u0157GTo0157G4() {
+  private boolean update_version_005() {
     Log.d(Constants.LOG_TAG, "UPDATING TO VERSION 0.1.5-7G4");
     try {
       db.execQuery("ALTER TABLE series ADD COLUMN unwatchedLastAired VARCHAR");
@@ -229,7 +268,7 @@ public class Update {
     }
   }
 
-  private boolean u0157GTo0157G5() {
+  private boolean update_version_006() {
     Log.d(Constants.LOG_TAG, "UPDATING TO VERSION 0.1.5-7G5");
     try {
       db.execQuery("ALTER TABLE series ADD COLUMN unwatchedLastEpisode VARCHAR");
@@ -242,7 +281,7 @@ public class Update {
     }
   }
 
-  private boolean u0157GTo0157G6() {
+  private boolean update_version_007() {
     Log.d(Constants.LOG_TAG, "UPDATING TO VERSION 0.1.5-7G6");
     try {
       if (!doTmdbApiMigration()) return false;
