@@ -9,6 +9,7 @@ import nl.asymmetrics.droidshows.database.model.DbDirector;
 import nl.asymmetrics.droidshows.database.model.DbEpisode;
 import nl.asymmetrics.droidshows.database.model.DbGuestStar;
 import nl.asymmetrics.droidshows.database.model.DbWriter;
+import nl.asymmetrics.droidshows.utils.RuntimePermissionUtils;
 import nl.asymmetrics.droidshows.utils.SwipeDetect;
 import nl.asymmetrics.droidshows.utils.UrlUtils;
 
@@ -36,7 +37,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-public class ViewEpisode extends Activity {
+public class ViewEpisode extends Activity implements RuntimePermissionUtils.RuntimePermissionListener {
   private DbGateway db;
   private DbEpisode dbEpisode;
 
@@ -230,7 +231,31 @@ public class ViewEpisode extends Activity {
       : "imdb:///";
   }
 
-  public void calendarEvent(View v) {
+  public void addCalendarEventPermissionCheck(View v) {
+    String[] allRequestedPermissions = new String[]{"android.permission.WRITE_CALENDAR"};
+
+    int requestCode = Constants.PERMISSION_CHECK_REQUEST_CODE_ADD_CALENDAR_EVENT;
+
+    RuntimePermissionUtils.requestPermissions(ViewEpisode.this, ViewEpisode.this, allRequestedPermissions, requestCode);
+  }
+
+  @Override
+  public void onRequestPermissionsResult (int requestCode, String[] permissions, int[] grantResults) {
+    RuntimePermissionUtils.onRequestPermissionsResult(ViewEpisode.this, ViewEpisode.this, requestCode, permissions, grantResults);
+  }
+
+  @Override // RuntimePermissionUtils.RuntimePermissionListener
+  public void onRequestPermissionsGranted(int requestCode, Object passthrough) {
+    if (requestCode == Constants.PERMISSION_CHECK_REQUEST_CODE_ADD_CALENDAR_EVENT)
+      addCalendarEvent();
+  }
+
+  @Override // RuntimePermissionUtils.RuntimePermissionListener
+  public void onRequestPermissionsDenied(int requestCode, Object passthrough, String[] missingPermissions) {
+    Toast.makeText(getApplicationContext(), R.string.messages_no_permission, Toast.LENGTH_LONG).show();
+  }
+
+  private void addCalendarEvent() {
     Intent intent = new Intent(Intent.ACTION_EDIT);
     intent.setType("vnd.android.cursor.item/event");
     intent.putExtra("title",       serieName + " " + dbEpisode.seasonNumber + ((dbEpisode.episodeNumber < 10) ? "x0" : "x") + dbEpisode.episodeNumber);

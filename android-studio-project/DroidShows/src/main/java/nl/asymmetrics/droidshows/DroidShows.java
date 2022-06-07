@@ -18,6 +18,7 @@ import nl.asymmetrics.droidshows.utils.FileUtils;
 import nl.asymmetrics.droidshows.utils.HardwareUtils;
 import nl.asymmetrics.droidshows.utils.ImageUtils;
 import nl.asymmetrics.droidshows.utils.NetworkUtils;
+import nl.asymmetrics.droidshows.utils.RuntimePermissionUtils;
 import nl.asymmetrics.droidshows.utils.SwipeDetect;
 import nl.asymmetrics.droidshows.utils.UrlUtils;
 
@@ -87,7 +88,7 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 
-public class DroidShows extends ListActivity implements Update.DatabaseUpdateListener {
+public class DroidShows extends ListActivity implements RuntimePermissionUtils.RuntimePermissionListener, Update.DatabaseUpdateListener {
   /* Menus */
   private static final int UNDO_MENU_ITEM = Menu.FIRST;
   private static final int FILTER_MENU_ITEM = UNDO_MENU_ITEM + 1;
@@ -372,7 +373,28 @@ public class DroidShows extends ListActivity implements Update.DatabaseUpdateLis
     switch (mode) {
       case Update.MODE_INSTALL: {
         if (willUpdate) {
-          backup(false, backupFolder);
+          // =====================================
+          // notes:
+          //  * cannot call:
+          //      backupPermissionCheck(false, backupFolder);
+          //    because it would create a race condition
+          //    - update would immediately begin to change the version of the database schema
+          //    - an attempt to backup the DB would occur asynchronously,
+          //      after the user has granted permission to do so
+          //  * I can't think of a good way to do this that doesn't require a major rewrite
+          //    - the simplest option is to only perform a backup if the permission has already been granted,
+          //      and forego any backup otherwise
+          //    - not ideal..
+          //      but since this would only occur after the app has been updated from an older version,
+          //      the permission *should* have already been granted
+          // =====================================
+
+          String[] allRequestedPermissions = new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"};
+          boolean hasAllPermissions = RuntimePermissionUtils.hasAllPermissions(DroidShows.this, allRequestedPermissions);
+
+          if (hasAllPermissions) {
+            backup(false, backupFolder);
+          }
         }
         break;
       }
@@ -855,17 +877,85 @@ public class DroidShows extends ListActivity implements Update.DatabaseUpdateLis
 
   private void backup(boolean auto) {
     if (auto) {
-      backup(auto, backupFolder);
-    } else {
+      backupPermissionCheck(auto, backupFolder);
+    }
+    else {
       File folder = new File(backupFolder);
       if (!folder.isDirectory())
         folder.mkdir();
-      filePicker(backupFolder, false);
+      filePickerPermissionCheck(backupFolder, false);
     }
   }
 
   private void restore() {
-    filePicker(backupFolder, true);
+    filePickerPermissionCheck(backupFolder, true);
+  }
+
+  private void filePickerPermissionCheck(final String folderString, final boolean restoring) {
+    String[] allRequestedPermissions = new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"};
+
+    int requestCode = restoring
+      ? Constants.PERMISSION_CHECK_REQUEST_CODE_RESTORE_DATABASE_FILEPICKER
+      : Constants.PERMISSION_CHECK_REQUEST_CODE_BACKUP_DATABASE_FILEPICKER;
+
+    Object passthrough = (Object) folderString;
+
+    RuntimePermissionUtils.requestPermissions(DroidShows.this, DroidShows.this, allRequestedPermissions, requestCode, passthrough);
+  }
+
+  private class PassthroughBackup {
+    protected boolean auto;
+    protected String  backupFolder;
+
+    protected PassthroughBackup(boolean auto, String backupFolder) {
+      this.auto = auto;
+      this.backupFolder = backupFolder;
+    }
+  }
+
+  private void backupPermissionCheck(boolean auto, String backupFolder) {
+    if (auto && !autoBackup) return;
+
+    String[] allRequestedPermissions = new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"};
+
+    int requestCode = Constants.PERMISSION_CHECK_REQUEST_CODE_BACKUP_DATABASE;
+
+    Object passthrough = (Object) new PassthroughBackup(auto, backupFolder);
+
+    RuntimePermissionUtils.requestPermissions(DroidShows.this, DroidShows.this, allRequestedPermissions, requestCode, passthrough);
+  }
+
+  @Override
+  public void onRequestPermissionsResult (int requestCode, String[] permissions, int[] grantResults) {
+    RuntimePermissionUtils.onRequestPermissionsResult(DroidShows.this, DroidShows.this, requestCode, permissions, grantResults);
+  }
+
+  @Override // RuntimePermissionUtils.RuntimePermissionListener
+  public void onRequestPermissionsGranted(int requestCode, Object passthrough) {
+    switch(requestCode) {
+      case Constants.PERMISSION_CHECK_REQUEST_CODE_RESTORE_DATABASE_FILEPICKER: {
+          String folderString = (String) passthrough;
+          boolean restoring   = true;
+          filePicker(folderString, restoring);
+        }
+        break;
+      case Constants.PERMISSION_CHECK_REQUEST_CODE_BACKUP_DATABASE_FILEPICKER: {
+          String folderString = (String) passthrough;
+          boolean restoring   = false;
+          filePicker(folderString, restoring);
+        }
+        break;
+      case Constants.PERMISSION_CHECK_REQUEST_CODE_BACKUP_DATABASE: {
+          PassthroughBackup pb = (PassthroughBackup) passthrough;
+          backup(pb.auto, pb.backupFolder);
+        }
+        break;
+    }
+  }
+
+  @Override // RuntimePermissionUtils.RuntimePermissionListener
+  public void onRequestPermissionsDenied(int requestCode, Object passthrough, String[] missingPermissions) {
+    Toast.makeText(getApplicationContext(), R.string.messages_no_permission, Toast.LENGTH_LONG).show();
   }
 
   private void filePicker(final String folderString, final boolean restoring) {

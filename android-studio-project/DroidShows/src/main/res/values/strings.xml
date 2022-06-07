@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Recover</string>
 <string name="messages_title_updating_series">Updating shows</string>
 <string name="messages_no_internet">No Internet connection available</string>
+<string name="messages_no_permission">Insufficient permission to perform the requested operation</string>
 <string name="messages_title_update_series">Update shows</string>
 <string name="messages_episodes">episodes</string>
 <string name="messages_new_episodes">new episodes</string>
