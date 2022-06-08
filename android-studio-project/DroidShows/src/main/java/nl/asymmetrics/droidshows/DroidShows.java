@@ -1073,7 +1073,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
         .show();
     }
     if (!auto && listView != null) {
-      Toast.makeText(getApplicationContext(), getString(toastTxt) + " ("+ backupFolder +")", Toast.LENGTH_LONG).show();
+      Toast.makeText(getApplicationContext(), getString(toastTxt) + "\n("+ backupFolder +")", Toast.LENGTH_LONG).show();
       asyncInfo = new AsyncInfo();
       asyncInfo.execute();
     }
@@ -1626,7 +1626,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
           updateShowStats();
 
           if (!failedSerieNames.isEmpty()) {
-            String toastMsg = getString(R.string.messages_db_error_update) + ": " + TextUtils.join(", ", failedSerieNames);
+            String toastMsg = getString(R.string.messages_db_error_update) + ((failedSerieNames.size() > 1) ? ":\n" : ": ") + TextUtils.join(", ", failedSerieNames);
             Log.d(Constants.LOG_TAG, toastMsg);
 
             Looper.prepare();
