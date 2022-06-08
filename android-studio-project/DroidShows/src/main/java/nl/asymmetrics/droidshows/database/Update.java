@@ -32,8 +32,8 @@ public class Update {
   public static final int MODE_RESTORE = 2;
 
   public interface DatabaseUpdateListener {
-    public void preDatabaseUpdate (int mode, int oldVersion, boolean willUpdate);
-    public void postDatabaseUpdate(int mode, int oldVersion, boolean didUpdateFail, boolean didUpdateSucceed, boolean didUpdateAllSeries, Object passthrough);
+    public boolean preDatabaseUpdate (int mode, int oldVersion, boolean willUpdate);
+    public void    postDatabaseUpdate(int mode, int oldVersion, boolean didUpdateFail, boolean didUpdateSucceed, boolean didUpdateAllSeries, Object passthrough);
   }
 
   private Context context;
@@ -48,7 +48,17 @@ public class Update {
     this.db      = SQLiteStore.getInstance(context);
   }
 
+  public void updateDatabase(DatabaseUpdateListener listener, int mode) {
+    Object passthrough = null;
+    updateDatabase(listener, mode, passthrough);
+  }
+
   public void updateDatabase(DatabaseUpdateListener listener, int mode, Object passthrough) {
+    boolean skipPreDatabaseUpdateCallback = false;
+    updateDatabase(listener, mode, passthrough, skipPreDatabaseUpdateCallback);
+  }
+
+  public void updateDatabase(DatabaseUpdateListener listener, int mode, Object passthrough, boolean skipPreDatabaseUpdateCallback) {
     Runnable updateDatabase = new Runnable() {
       public void run() {
         Looper.prepare();
@@ -61,8 +71,12 @@ public class Update {
         int     oldVersion = getVersionNumber();
         boolean willUpdate = needsUpdate();
 
-        if (listener != null)
-          listener.preDatabaseUpdate(mode, oldVersion, willUpdate);
+        if (!skipPreDatabaseUpdateCallback) {
+          if (listener != null) {
+            boolean proceed = listener.preDatabaseUpdate(mode, oldVersion, willUpdate);
+            if (!proceed) return;
+          }
+        }
 
         if (willUpdate) {
           Log.d(Constants.LOG_TAG, "Database needs update");

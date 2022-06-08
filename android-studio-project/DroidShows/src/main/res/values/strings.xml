@@ -44,6 +44,8 @@
 <string name="dialog_backup">Backup</string>
 <string name="dialog_backup_done">Database backup completed</string>
 <string name="dialog_backup_failed">Unable to perform backup!</string>
+<string name="dialog_backup_preupdate_title">Database Update Is Required</string>
+<string name="dialog_backup_preupdate_message">You have installed a newer version of this application. The version of the database also needs to be updated. Saving a backup before this operation is recommended; any error will corrupt the database. To do so, you must first grant permission to save the backup file to external storage. Would you like to save a backup before the required update?</string>
 <string name="dialog_backup_usefolder">Use folder for daily backups</string>
 <string name="dialog_change_language">Synopsis language</string>
 <string name="dialog_restore">Restore</string>
