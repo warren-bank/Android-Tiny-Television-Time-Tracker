@@ -44,6 +44,8 @@
 <string name="dialog_backup">ব্যাকআপ</string>
 <string name="dialog_backup_done">ডাটাবেস ব্যাকআপ সম্পন্ন</string>
 <string name="dialog_backup_failed">ব্যাকআপ করা যায়নি!</string>
+<string name="dialog_backup_preupdate_title">ডেটাবেস আপডেট প্রয়োজন</string>
+<string name="dialog_backup_preupdate_message">আপনি এই অ্যাপলিকেশনের একটি নতুন সংস্করণ ইনস্টল করেছেন. ডাটাবেসের সংস্করণও হালনাগাদ করা প্রয়োজন. এই অপারেশনের সুপারিশ করার পূর্বে একটি ব্যাকআপ সংরক্ষণ করে; কোনো ত্রুটি ডাটাবেস দুর্নীতিগ্রস্ত হবে. তাই আপনাকে প্রথমে ব্যাকআপ ফাইল বাইরের স্টোরেজে সংরক্ষণ করার অনুমতি দিতে হবে. আবশ্যক আপডেট করার পূর্বে আপনি একটি ব্যাকআপ সংরক্ষণ করতে চান?</string>
 <string name="dialog_backup_usefolder">দৈনিক ব্যাকআপ জন্য ফোল্ডার ব্যবহার করা হবে</string>
 <string name="dialog_change_language">সংক্ষিপ্তসার ভাষা</string>
 <string name="dialog_restore">পুনরুদ্ধার করুন</string>

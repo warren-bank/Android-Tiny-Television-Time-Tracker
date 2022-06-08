@@ -44,6 +44,8 @@
 <string name="dialog_backup">Forstærkning</string>
 <string name="dialog_backup_done">Databasesikkerhedskopiering er udført</string>
 <string name="dialog_backup_failed">Kan ikke udføre sikkerhedskopiering!</string>
+<string name="dialog_backup_preupdate_title">Databaseopdatering er påkrævet</string>
+<string name="dialog_backup_preupdate_message">Du har installeret en nyere version af denne applikation. Versionen af databasen skal også opdateres. Hvis du gemmer en sikkerhedskopi, før denne funktion anbefales, vil en fejl blive ødelagt af databasen. For at gøre det skal du først give tilladelse til at gemme sikkerhedskopifilen til eksternt lager. Vil du gemme en sikkerhedskopi før den nødvendige opdatering?</string>
 <string name="dialog_backup_usefolder">Brug folder til daglige backups</string>
 <string name="dialog_change_language">Synopsis-sprog</string>
 <string name="dialog_restore">Gendan</string>

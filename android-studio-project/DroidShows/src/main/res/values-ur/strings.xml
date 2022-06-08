@@ -44,6 +44,8 @@
 <string name="dialog_backup">بیک اپ</string>
 <string name="dialog_backup_done">ڈیٹا بیس بیک اپ مکمل</string>
 <string name="dialog_backup_failed">بیک اپ انجام دینے کے قابل!</string>
+<string name="dialog_backup_preupdate_title">ڈیٹا بیس اپ ڈیٹ کیا جاتا ہے</string>
+<string name="dialog_backup_preupdate_message">آپ نے اس درخواست کا ایک نیا ورژن انسٹال کیا ہے. ڈیٹا بیس کا ورژن بھی اپ ڈیٹ کرنے کی ضرورت ہے. اس آپریشن سے پہلے ایک بیک اپ کو بچانے کی سفارش کی ہے. کسی بھی خرابی کو ڈیٹا بیس کرپٹ کرے گا. ایسا کرنے کے لئے, آپ کو سب سے پہلے بیرونی ذخیرہ کرنے کے لئے بیک اپ فائل کو بچانے کے لئے اجازت دینے ضروری ہے. مطلوبہ اپ ڈیٹ سے پہلے اپ ایک بیک اپ بچانا پسند کریں گے?</string>
 <string name="dialog_backup_usefolder">روزانہ بیک اپ کے لیے فولڈر کا استعمال کریں</string>
 <string name="dialog_change_language">سائنوسس زبان</string>
 <string name="dialog_restore">بے چین</string>

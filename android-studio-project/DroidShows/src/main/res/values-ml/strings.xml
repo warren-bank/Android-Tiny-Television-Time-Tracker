@@ -44,6 +44,8 @@
 <string name="dialog_backup">ബാക്കപ്പ്</string>
 <string name="dialog_backup_done">ഡാറ്റാബേസ് പിന്തുണയുള്ള</string>
 <string name="dialog_backup_failed">ബാക്കപ്പ് ചെയ്യാന് കഴിഞ്ഞില്ല!</string>
+<string name="dialog_backup_preupdate_title">ഡാറ്റാബേസ് പരിഷ്കരണം ആവശ്യമാണ്</string>
+<string name="dialog_backup_preupdate_message">നിങ്ങള് ഈ പ്രയോഗത്തിന്റെ ഒരു പുതിയ പതിപ്പ് ഇന്സ്റ്റോള് ചെയ്തിരിക്കുന്നു. ഡാറ്റാബേസിന്റെ പതിപ്പും പരിഷ്കരിക്കേണ്ടതുണ്ട്. ഈ ഓപ്പറേഷന് ശുപാർശ ചെയ്യുന്നതിനുമുമ്പ് ഒരു ബാക്കപ്പ് സൂക്ഷിക്കുക; ഏതെങ്കിലും പിശകു് ഡാറ്റാബേസ് ദുഷിപ്പിക്കും. അങ്ങനെ ചെയ്യാന്, ബാക്കപ്പ് ഫയല് സൂക്ഷിക്കുന്നതിനായി ആദ്യം അനുമതി നല്കേണ്ടതുണ്ട്. ആവശ്യമായ പുതുക്കുന്നതിന് മുന്പ് ഒരു ബാക്കപ്പ് സൂക്ഷിക്കണമോ\??</string>
 <string name="dialog_backup_usefolder">ദിവസേന ബാക്കപ്പുകള്ക്കായി ഫോള്ഡര് ഉപയോഗിക്കുക</string>
 <string name="dialog_change_language">Synopsis language</string>
 <string name="dialog_restore">വീണ്ടെടുക്കുക</string>

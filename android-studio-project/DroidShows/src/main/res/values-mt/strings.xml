@@ -44,6 +44,8 @@
 <string name="dialog_backup">Backup</string>
 <string name="dialog_backup_done">Bażi tad-dejta kompluta</string>
 <string name="dialog_backup_failed">Ma jistgħux iwettqu backup!</string>
+<string name="dialog_backup_preupdate_title">Aġġornament Database Hija Meħtieġa</string>
+<string name="dialog_backup_preupdate_message">Inti installat verżjoni aktar ġdida ta \' din l-applikazzjoni. Il-verżjoni tad-database teħtieġ ukoll li tiġi aġġornata. Iffrankar ta \' backup qabel din l-operazzjoni huwa rakkomandat; kwalunkwe żball se korrotti l-bażi tad-data. Biex tagħmel dan, inti trid l-ewwel għotja permess biex isalva l-fajl backup għall-ħażna esterna. Tixtieq tiffranka backup qabel l-aġġornament meħtieġ?</string>
 <string name="dialog_backup_usefolder">Folder ta \' użu għall backups kuljum</string>
 <string name="dialog_change_language">Lingwa sinopsi</string>
 <string name="dialog_restore">Restawr</string>

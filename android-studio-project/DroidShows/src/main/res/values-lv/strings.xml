@@ -44,6 +44,8 @@
 <string name="dialog_backup">Rezerves kopija</string>
 <string name="dialog_backup_done">Datu bāzes dublēšana pabeigta</string>
 <string name="dialog_backup_failed">Neizdevās veikt rezerves kopēšanu!</string>
+<string name="dialog_backup_preupdate_title">Datu Bāzes Atjaunināšana Ir Nepieciešama</string>
+<string name="dialog_backup_preupdate_message">Jums ir instalēta jaunāka versija šo pieteikumu. Datu bāzes versija arī ir jāatjaunina. Saglabā rezerves kopiju, pirms šī operācija ir ieteicama; jebkura kļūda būs korumpēts datu bāzi. Lai to izdarītu, jums ir vispirms piešķirt atļauju, lai saglabātu rezerves failu uz ārējo uzglabāšanu. Vai vēlaties saglabāt rezerves kopiju pirms nepieciešamās atjaunināšanas?</string>
 <string name="dialog_backup_usefolder">Lietot mapi ikdienas backups</string>
 <string name="dialog_change_language">Sinopsis valoda</string>
 <string name="dialog_restore">Atjaunot</string>

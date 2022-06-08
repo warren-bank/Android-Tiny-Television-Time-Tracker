@@ -44,6 +44,8 @@
 <string name="dialog_backup">バックアップ</string>
 <string name="dialog_backup_done">データベース・バックアップ完了</string>
 <string name="dialog_backup_failed">バックアップを実行できません!</string>
+<string name="dialog_backup_preupdate_title">データベースの更新が必要です</string>
+<string name="dialog_backup_preupdate_message">このアプリケーションの新しいバージョンがインストールされました。 また、データベースのバージョンを更新する必要があります。 この操作を推奨する前にバックアップを保存することをお勧めします。エラーはデータベースを破壊する これを行うには、まずバックアップ・ファイルを外部ストレージに保存する権限を付与する必要があります。 必要な更新の前にバックアップを保存しますか?</string>
 <string name="dialog_backup_usefolder">日次バックアップ用のフォルダーの使用</string>
 <string name="dialog_change_language">シノプシス語</string>
 <string name="dialog_restore">復元</string>

@@ -44,6 +44,8 @@
 <string name="dialog_backup">Sigurnosna kopija</string>
 <string name="dialog_backup_done">Backup baze podataka je završen</string>
 <string name="dialog_backup_failed">Ne mogu izvesti backup!</string>
+<string name="dialog_backup_preupdate_title">Ažuriranje Baze Podataka Je Obavezno</string>
+<string name="dialog_backup_preupdate_message">Instalirali ste noviju verziju ove aplikacije. Verzija baze podataka također mora biti ažurirana. Spremanje sigurnosne kopije prije ove operacije je preporučeno; svaka greška će oštetiti bazu podataka. Da biste to učinili, morate prvo dodijeliti dozvolu za spremanje sigurnosne kopije datoteke u vanjsku memoriju. Da li želite da spremite sigurnosnu kopiju prije obaveznog ažuriranja?</string>
 <string name="dialog_backup_usefolder">Koristi direktorij za dnevnu sigurnosnu kopiju</string>
 <string name="dialog_change_language">Jezik sinopsisa</string>
 <string name="dialog_restore">Vrati</string>

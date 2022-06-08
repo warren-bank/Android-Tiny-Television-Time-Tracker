@@ -45,6 +45,8 @@
 <string name="dialog_backup_done">Backup del database completato</string>
 <string name="dialog_backup_failed">Impossibile eseguire il backup!</string>
 <string name="dialog_change_language">Linguaggio sinossi</string>
+<string name="dialog_backup_preupdate_title">Aggiornamento database È obbligatorio</string>
+<string name="dialog_backup_preupdate_message">È stata installata una versione più recente di questa applicazione. Anche la versione del database deve essere aggiornata. Salvataggio di un backup prima che questa operazione sia consigliata; qualsiasi errore corromperà il database. Per farlo è necessario prima concedere l\'autorizzazione per salvare il file di backup in memoria esterna. Si desidera salvare un backup prima dell\'aggiornamento richiesto?</string>
 <string name="dialog_backup_usefolder">Usa per seguridad diaria</string>
 <string name="dialog_restore">Ripristina</string>
 <string name="dialog_restore_now">Ripristinare un backup rimuoverà tutte le informazioni correnti in DroidShows. Continuare?</string>

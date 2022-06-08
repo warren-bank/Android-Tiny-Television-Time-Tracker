@@ -44,6 +44,8 @@
 <string name="dialog_backup">Back-up maken</string>
 <string name="dialog_backup_done">Back-up voltooid</string>
 <string name="dialog_backup_failed">Kon back-up niet voltooien!</string>
+<string name="dialog_backup_preupdate_title">Database-update Is Vereist</string>
+<string name="dialog_backup_preupdate_message">U hebt een nieuwere versie van deze toepassing geïnstalleerd. De versie van de database moet ook worden bijgewerkt. Als u een backup opslaat voordat deze bewerking wordt uitgevoerd, wordt de database beschadigd. Om dit te doen, moet u eerst toestemming verlenen om het backupbestand op te slaan in externe opslag. Wilt u een backup opslaan voordat de vereiste update wordt uitgevoerd?</string>
 <string name="dialog_backup_usefolder">Voor dagelijkse back-ups gebruiken</string>
 <string name="dialog_change_language">Taal synopsis</string>
 <string name="dialog_restore">Herstellen</string>

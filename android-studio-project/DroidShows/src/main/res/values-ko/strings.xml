@@ -44,6 +44,8 @@
 <string name="dialog_backup">백업</string>
 <string name="dialog_backup_done">데이터베이스 백업 완료</string>
 <string name="dialog_backup_failed">백업을 수행할 수 없음!</string>
+<string name="dialog_backup_preupdate_title">데이터베이스 업데이트 필요</string>
+<string name="dialog_backup_preupdate_message">이 애플리케이션의 새 버전을 설치했습니다. 데이터베이스 버전도 업데이트해야 합니다. 이 조작을 수행하기 전에 백업을 저장하는 것이 좋습니다. 오류가 발생하면 데이터베이스가 손상됩니다. 이를 수행하려면 먼저 백업 파일을 외부 스토리지에 저장할 수 있는 권한을 부여해야 합니다. 필요한 업데이트 전에 백업을 저장하시겠습니까\??</string>
 <string name="dialog_backup_usefolder">일별 백업 폴더 사용</string>
 <string name="dialog_change_language">시놉시스 언어</string>
 <string name="dialog_restore">복원</string>

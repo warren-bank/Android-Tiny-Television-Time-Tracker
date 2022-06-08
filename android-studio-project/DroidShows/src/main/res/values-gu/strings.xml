@@ -44,6 +44,8 @@
 <string name="dialog_backup">બેકઅપ</string>
 <string name="dialog_backup_done">ડેટાબેઝ બેકઅપ સમાપ્ત</string>
 <string name="dialog_backup_failed">બેકઅપ ચલાવવાનું અસમર્થ!</string>
+<string name="dialog_backup_preupdate_title">ડેટાબેઝ સુધારો જરૂરી છે</string>
+<string name="dialog_backup_preupdate_message">તમે આ કાર્યક્રમની નવી આવૃત્તિ સ્થાપિત કરી છે. ડેટાબેઝની આવૃત્તિ પણ સુધારવા જરૂરી છે. આ ક્રિયાને સૂચિત કરતાં પહેલાં બેકઅપ સંગ્રહ કરો; કોઇપણ ભૂલ ડેટાબેઝને બચાવશે. આમ કરવા માટે, તમે બેકઅપ ફાઈલને બાહ્ય સંગ્રહસ્થાન સંગ્રહવા માટે પહેલા પરવાનગી આપવી જ પડશે. શું તમે જરૂરી સુધારા પહેલાં બેકઅપ સંગ્રહવા માંગો છો?</string>
 <string name="dialog_backup_usefolder">હરોળ બેકઅપ માટે ફોલ્ડરને વાપરો</string>
 <string name="dialog_change_language">સારાંશ ભાષા</string>
 <string name="dialog_restore">પુનઃસંગ્રહો</string>

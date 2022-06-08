@@ -44,6 +44,8 @@
 <string name="dialog_backup">Backup</string>
 <string name="dialog_backup_done">Cadangan basis data selesai</string>
 <string name="dialog_backup_failed">Tidak dapat melakukan backup!</string>
+<string name="dialog_backup_preupdate_title">Pembaruan Basis Data Diperlukan</string>
+<string name="dialog_backup_preupdate_message">Anda telah menginstal versi yang lebih baru dari aplikasi ini. Versi basis data juga perlu diperbarui. Menyimpan cadangan sebelum operasi ini direkomendasikan; setiap kesalahan akan merusak basis data. Untuk melakukan hal tersebut, Anda harus terlebih dahulu memberikan izin untuk menyimpan file cadangan ke penyimpanan eksternal. Apakah Anda ingin menyimpan cadangan sebelum pembaruan yang diperlukan?</string>
 <string name="dialog_backup_usefolder">Gunakan folder untuk backup harian</string>
 <string name="dialog_change_language">Bahasa Sinopsis</string>
 <string name="dialog_restore">Pulihkan</string>

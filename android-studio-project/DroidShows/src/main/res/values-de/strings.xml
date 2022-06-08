@@ -44,6 +44,8 @@
 <string name="dialog_backup">Sichern</string>
 <string name="dialog_backup_done">Datensicherung fertig</string>
 <string name="dialog_backup_failed">Datensicherung fehlgeschlagen!</string>
+<string name="dialog_backup_preupdate_title">Datenbankaktualisierung ist erforderlich</string>
+<string name="dialog_backup_preupdate_message">Sie haben eine neuere Version dieser Anwendung installiert. Die Version der Datenbank muss ebenfalls aktualisiert werden. Es wird empfohlen, eine Sicherung zu speichern, bevor diese Operation empfohlen wird. Bei Fehlern wird die Datenbank beschädigt. Dazu müssen Sie zunächst die Berechtigung zum Speichern der Sicherungsdatei in einem externen Speicher erteilen. Möchten Sie eine Sicherung vor der erforderlichen Aktualisierung speichern\??</string>
 <string name="dialog_backup_usefolder">Für tägliche Sicherung verwenden</string>
 <string name="dialog_change_language">Sprache der Seriendetails</string>
 <string name="dialog_restore">Einlesen</string>

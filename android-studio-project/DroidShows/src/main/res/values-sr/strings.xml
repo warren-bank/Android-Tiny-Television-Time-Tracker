@@ -44,6 +44,8 @@
 <string name="dialog_backup">Резерва</string>
 <string name="dialog_backup_done">Резервна копија базе података</string>
 <string name="dialog_backup_failed">Не могу да извршим подршку!</string>
+<string name="dialog_backup_preupdate_title">Потребно је ажурирање базе података</string>
+<string name="dialog_backup_preupdate_message">Инсталирали сте новију верзију ове апликације. Верзија базе података такође треба да се ажурира. Чување резервне копије пре ове операције је препоручено; свака грешка ће оштетити базу података. Да бисте то урадили, морате прво да одобрите дозволу да бисте сачували резервну датотеку у спољни складишни простор. Желите ли да сачувате резервну копију пре него што је потребно ажурирање?</string>
 <string name="dialog_backup_usefolder">Користи фасциклу за свакодневне резервне копије</string>
 <string name="dialog_change_language">Синопсис језик</string>
 <string name="dialog_restore">Врати</string>

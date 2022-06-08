@@ -44,6 +44,8 @@
 <string name="dialog_backup">बैकअप</string>
 <string name="dialog_backup_done">डाटाबेस बैकअप पूरा किया गया</string>
 <string name="dialog_backup_failed">बैकअप करने में असमर्थ!</string>
+<string name="dialog_backup_preupdate_title">डेटाबेस अद्यतन आवश्यक है</string>
+<string name="dialog_backup_preupdate_message">आप इस अनुप्रयोग का एक नया संस्करण स्थापित किया है. डेटाबेस के संस्करण को भी अद्यतन किए जाने की आवश्यकता है. इस ऑपरेशन से पहले बैकअप सहेज लें; कोई भी त्रुटि डेटाबेस को भ्रष्ट कर देगा. ऐसा करने के लिए, आपको बैकअप फ़ाइल को बाहरी भंडारण के लिए सहेजने के लिए पहले अनुमति लेनी होगी. क्या आप आवश्यक अद्यतन से पहले किसी बैकअप को सहेजना चाहेंगे\??</string>
 <string name="dialog_backup_usefolder">दैनिक बैकअप के लिए फ़ोल्डर का उपयोग करें</string>
 <string name="dialog_change_language">सिनोपसिस भाषा</string>
 <string name="dialog_restore">बहाल करें</string>

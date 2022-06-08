@@ -44,6 +44,8 @@
 <string name="dialog_backup">Резервирование</string>
 <string name="dialog_backup_done">Резервная копия создана</string>
 <string name="dialog_backup_failed">Невозможно создать резервную копию!</string>
+<string name="dialog_backup_preupdate_title">Требуется Обновление Базы Данных</string>
+<string name="dialog_backup_preupdate_message">Вы установили более новую версию этого приложения. Необходимо также обновить версию базы данных. Сохранение резервной копии перед этой операцией рекомендуется; любая ошибка приведет к повреждению базы данных. Для этого необходимо сначала предоставить разрешение на сохранение файла резервной копии во внешнюю память. Сохранить резервную копию перед обновлением?</string>
 <string name="dialog_backup_usefolder">Использовать для ежедневного резервного копирования</string>
 <string name="dialog_change_language">Язык краткого описания</string>
 <string name="dialog_restore">Восстановить</string>

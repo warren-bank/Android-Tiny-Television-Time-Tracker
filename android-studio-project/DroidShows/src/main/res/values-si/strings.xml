@@ -44,6 +44,8 @@
 <string name="dialog_backup">පසුපසින්ම</string>
 <string name="dialog_backup_done">දත්ත උපස්ථ කිරීම සම්පූර්ණයි</string>
 <string name="dialog_backup_failed">උපස්ථ කිරීමට නොහැකි විය!</string>
+<string name="dialog_backup_preupdate_title">දත්ත ගබඩාව යාවත්කාලීන කිරීම</string>
+<string name="dialog_backup_preupdate_message">ඔබ විසින් මෙම යෙදුම නවතම සංස්කරණයක් ස්ථාපනය කර ඇත. දත්ත ගබඩාවේ සංස්කරණයත් යාවත්කාලීන කරන්න ඕන. මෙම මෙහෙයුමට පෙර උපස්ථ සෙවීම නිර්දේශය; ඕනෑම දෝෂයක් දත්ත ගබඩාව දූෂිත කරයි. එසේ කිරීමට ඔබ ප්රථමයෙන් අවසර ලබා දිය යුතු අතර උපස්ථ ගොනුව බාහිරව ගබඩා කිරීමට අවසර ලබාදිය යුතුය. අවශ්ය යාවත්කාලීන කිරීමට පෙර සහයක් සුරැකීමට කැමතිද?</string>
 <string name="dialog_backup_usefolder">දිනපතා බැකප් සඳහා බහලුම භාවිත කරන්න</string>
 <string name="dialog_change_language">Synopsis language</string>
 <string name="dialog_restore">ප්රථිස්ථාපනය කරන්න</string>

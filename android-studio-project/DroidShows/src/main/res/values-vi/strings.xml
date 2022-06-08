@@ -44,6 +44,8 @@
 <string name="dialog_backup">Sao lưu</string>
 <string name="dialog_backup_done">Sao lưu cơ sở dữ</string>
 <string name="dialog_backup_failed">Không thể thực hiện sao lưu!</string>
+<string name="dialog_backup_preupdate_title">Yêu Cầu Cập Nhật Cơ Sở</string>
+<string name="dialog_backup_preupdate_message">Bạn đã cài đặt phiên bản mới hơn của ứng dụng này. Phiên bản của cơ sở dữ liệu cũng cần được cập nhật. Lưu trư ̃ trước khi thao tác này được đê ̀ xuất; bất kỳ lỗi nào sẽ làm hỏng cơ sở dư ̃ Để làm được điều đó, đầu tiên bạn phải cấp phép để lưu tập tin sao lưu sang bộ lưu trữ bên ngoài. Bạn có muốn lưu bản sao trước khi cập nhật yêu cầu?</string>
 <string name="dialog_backup_usefolder">Dùng thư mục cho các bản sao hàng ngày</string>
 <string name="dialog_change_language">Ngôn ngữ synopsis</string>
 <string name="dialog_restore">Khôi phục</string>

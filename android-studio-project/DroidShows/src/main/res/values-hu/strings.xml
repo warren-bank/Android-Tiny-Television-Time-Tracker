@@ -44,6 +44,8 @@
 <string name="dialog_backup">Mentés</string>
 <string name="dialog_backup_done">Adatbázis mentése befejeződött</string>
 <string name="dialog_backup_failed">A mentés nem hajtható végre!</string>
+<string name="dialog_backup_preupdate_title">Az adatbázis-frissítés szükséges</string>
+<string name="dialog_backup_preupdate_message">Telepítette az alkalmazás újabb változatát. Az adatbázis verziószámát is frissíteni kell. Biztonsági mentés mentése a művelet előtt; minden hiba megrontja az adatbázist. Ehhez először engedélyt kell adnia a mentési fájl külső tárolóba mentésére. Mentést szeretne menteni a szükséges frissítés előtt?</string>
 <string name="dialog_backup_usefolder">Mappa használata a napi mentésekhez</string>
 <string name="dialog_change_language">Synopsis nyelv</string>
 <string name="dialog_restore">Visszaállítás</string>

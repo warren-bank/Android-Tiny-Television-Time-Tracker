@@ -44,6 +44,8 @@
 <string name="dialog_backup">Sikkerhetskopiering</string>
 <string name="dialog_backup_done">Database sikkerhetskopiering fullført</string>
 <string name="dialog_backup_failed">Kan ikke utføre sikkerhetskopiering!</string>
+<string name="dialog_backup_preupdate_title">Databaseoppdatering er nødvendig</string>
+<string name="dialog_backup_preupdate_message">Du har installert en nyere versjon av denne søknaden. Versjonen av databasen trenger også å bli oppdatert. Å lagre en sikkerhetskopi før denne operasjonen anbefales ; eventuelle feil vil korrumpere databasen. For å gjøre det må du først gi tillatelse til å lagre reservensjonsfilen til eksternt lager. Ønsker du å lagre en sikkerhetskopi før den nødvendige oppdateringen?</string>
 <string name="dialog_backup_usefolder">Bruk mappe for daglige reservekopieringer</string>
 <string name="dialog_change_language">Synopsis språk</string>
 <string name="dialog_restore">Gjenopprett</string>

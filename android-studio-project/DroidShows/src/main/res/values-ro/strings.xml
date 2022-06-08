@@ -44,6 +44,8 @@
 <string name="dialog_backup">Backup</string>
 <string name="dialog_backup_done">Backup baze de date completate</string>
 <string name="dialog_backup_failed">Imposibil de efectuat backup!</string>
+<string name="dialog_backup_preupdate_title">Actualizarea bazei de date este necesară</string>
+<string name="dialog_backup_preupdate_message">Ați instalat o versiune mai nouă a acestei aplicații. Versiunea bazei de date trebuie, de asemenea, să fie actualizată. Salvarea unui backup inainte de aceasta operatiune este recomandata; orice eroare va corupe baza de date. Pentru a face acest lucru, trebuie să acordați mai întâi permisiunea de a salva fișierul de rezervă la stocarea externă. Doriți să salvați o copie de rezervă înainte de actualizarea necesară?</string>
 <string name="dialog_backup_usefolder">Utilizați dosarul pentru backup-uri zilnice</string>
 <string name="dialog_change_language">Limba sinopsis</string>
 <string name="dialog_restore">Restabilește</string>

@@ -44,6 +44,8 @@
 <string name="dialog_backup">备份</string>
 <string name="dialog_backup_done">数据库备份已完成</string>
 <string name="dialog_backup_failed">无法执行备份!</string>
+<string name="dialog_backup_preupdate_title">需要数据库更新</string>
+<string name="dialog_backup_preupdate_message">您已安装此应用程序的较新版本。 数据库的版本也需要更新。 建议在此操作之前保存备份 ; 任何错误都会损坏数据库。 为此，必须先授予许可权以将备份文件保存到外部存储器。 是否要在必需的更新之前保存备份?</string>
 <string name="dialog_backup_usefolder">每日备份的使用文件夹</string>
 <string name="dialog_change_language">概要语言</string>
 <string name="dialog_restore">恢复</string>

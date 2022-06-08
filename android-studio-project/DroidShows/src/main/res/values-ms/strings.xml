@@ -44,6 +44,8 @@
 <string name="dialog_backup">Sandaran</string>
 <string name="dialog_backup_done">Sandar pangkalan data selesai</string>
 <string name="dialog_backup_failed">Tidak boleh buat sandar!</string>
+<string name="dialog_backup_preupdate_title">Kemaskini Pangkalan Data Diperlukan</string>
+<string name="dialog_backup_preupdate_message">Anda telah memasang versi baru aplikasi ini. Versi pangkalan data juga perlu dikemas kini. Menyimpan sandaran sebelum operasi ini disarankan; sebarang ralat akan merosakkan pangkalan data. Untuk berbuat demikian, anda mesti diberi keizinan pertama untuk menyimpan fail sandar ke storan luaran. Adakah anda ingin menyimpan sandaran sebelum kemaskini yang diperlukan?</string>
 <string name="dialog_backup_usefolder">Guna folder untuk sandar harian</string>
 <string name="dialog_change_language">Bahasa Synopsis</string>
 <string name="dialog_restore">Pulih</string>

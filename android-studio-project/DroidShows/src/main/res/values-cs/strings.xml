@@ -44,6 +44,8 @@
 <string name="dialog_backup">Zálohovat</string>
 <string name="dialog_backup_done">Zálohování databáze bylo dokončeno</string>
 <string name="dialog_backup_failed">Nelze provést zálohování!</string>
+<string name="dialog_backup_preupdate_title">Aktualizace databáze je povinná</string>
+<string name="dialog_backup_preupdate_message">Nainstalovali jste novější verzi této aplikace. Je třeba aktualizovat také verzi databáze. Uložení zálohy před touto operací se doporučuje; jakákoli chyba poškodí databázi. Chcete-li to provést, musíte nejprve udělit oprávnění k uložení záložního souboru do externího úložiště. Chtěli byste uložit zálohu před požadovanou aktualizací?</string>
 <string name="dialog_backup_usefolder">Použít složku pro denní zálohování</string>
 <string name="dialog_change_language">Synopse language</string>
 <string name="dialog_restore">Obnovit</string>

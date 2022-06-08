@@ -44,6 +44,8 @@
 <string name="dialog_backup">-Ενισχύσεις.</string>
 <string name="dialog_backup_done">Ολοκλήρωση εφεδρικής βάσης δεδομένων</string>
 <string name="dialog_backup_failed">Δεν είναι δυνατή η εκτέλεση.!</string>
+<string name="dialog_backup_preupdate_title">Απαιτείται Ενημέρωση Βάσης Δεδομένων</string>
+<string name="dialog_backup_preupdate_message">Έχετε εγκαταστήσει μια νεότερη έκδοση της εφαρμογής. Η έκδοση της βάσης δεδομένων πρέπει επίσης να ενημερωθεί. Η αποθήκευση ενός εφεδρικού αντιγράφου πριν από αυτή τη λειτουργία συνιστάται. Κάθε σφάλμα θα αλλοιώσει τη βάση δεδομένων. Για να το κάνετε αυτό, πρέπει πρώτα να εκχωρήσετε το δικαίωμα αποθήκευσης του εφεδρικού αντιγράφου σε εξωτερική αποθήκευση. Θέλετε να αποθηκεύσετε ένα εφεδρικό αντίγραφο πριν από την απαιτούμενη ενημέρωση?</string>
 <string name="dialog_backup_usefolder">Χρήση φακέλου για καθημερινή εφεδρική αποθήκευση</string>
 <string name="dialog_change_language">Περίληψη:</string>
 <string name="dialog_restore">Επαναφορά:</string>

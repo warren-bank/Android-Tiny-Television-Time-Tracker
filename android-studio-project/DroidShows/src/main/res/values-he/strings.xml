@@ -44,6 +44,8 @@
 <string name="dialog_backup">גיבוי</string>
 <string name="dialog_backup_done">גיבוי מסד הנתונים הושלם</string>
 <string name="dialog_backup_failed">לא ניתן לבצע גיבוי!</string>
+<string name="dialog_backup_preupdate_title">נדרש עדכון מסד נתונים</string>
+<string name="dialog_backup_preupdate_message">התקנתם גרסה חדשה יותר של יישום זה. יש לעדכן גם את מהדורת בסיס הנתונים. שמירת גיבוי לפני פעולה זו מומלצת, כל שגיאה תשחית את מסד הנתונים. לשם כך, עליכם להעניק הרשאה ראשונה כדי לשמור את קובץ הגיבוי לאחסון חיצוני. האם ברצונכם לשמור גיבוי לפני העדכון הנדרש?</string>
 <string name="dialog_backup_usefolder">שימוש בתיקיה עבור גיבויים יומיים</string>
 <string name="dialog_change_language">שפת Synopsis</string>
 <string name="dialog_restore">שחזור</string>

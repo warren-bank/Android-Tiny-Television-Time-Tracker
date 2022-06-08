@@ -44,6 +44,8 @@
 <string name="dialog_backup">Архивиране.</string>
 <string name="dialog_backup_done">Архивиране на база данни</string>
 <string name="dialog_backup_failed">Не може да се изпълни архивиране!</string>
+<string name="dialog_backup_preupdate_title">Изисква се обновяване на базата данни</string>
+<string name="dialog_backup_preupdate_message">Инсталирали сте по-нова версия на това приложение. Версията на базата данни също трябва да бъде актуализирана. Запазване на архив преди тази операция да бъде препоръчана; всяка грешка ще повреди базата данни. За да направите това, трябва първо да предостаните разрешение за запазване на архивния файл за външно съхранение. Желаете ли да запазите архивно копие, преди изискваната актуализация?</string>
 <string name="dialog_backup_usefolder">Използване на папка за дневни архиви</string>
 <string name="dialog_change_language">Език на синопсис</string>
 <string name="dialog_restore">Възстановяване!</string>

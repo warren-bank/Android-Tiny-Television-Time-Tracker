@@ -44,6 +44,8 @@
 <string name="dialog_backup">Backup</string>
 <string name="dialog_backup_done">資料庫備份已完成</string>
 <string name="dialog_backup_failed">無法執行備份!</string>
+<string name="dialog_backup_preupdate_title">需要更新資料庫</string>
+<string name="dialog_backup_preupdate_message">您已安裝此應用程式的新版本。 資料庫的版本也需要更新。 在建議此作業之前儲存備份；任何錯誤都會毀損資料庫。 如果要這樣做，您必須先授與許可權，才能將備份檔儲存至外部儲存體。 在必要更新之前，您要儲存備份嗎?</string>
 <string name="dialog_backup_usefolder">使用資料夾進行每日備份</string>
 <string name="dialog_change_language">Synopsis 語言</string>
 <string name="dialog_restore">還原</string>

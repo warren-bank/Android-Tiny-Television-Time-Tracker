@@ -44,6 +44,8 @@
 <string name="dialog_backup">Kopia zapasowa</string>
 <string name="dialog_backup_done">Składowanie bazy danych zostało zakończone</string>
 <string name="dialog_backup_failed">Nie można wykonać kopii zapasowej!</string>
+<string name="dialog_backup_preupdate_title">Wymagana Jest Aktualizacja Bazy Danych</string>
+<string name="dialog_backup_preupdate_message">Zainstalowano nowszą wersję tej aplikacji. Wersja bazy danych również musi zostać zaktualizowana. Zapisywanie kopii zapasowej przed wykonaniem tej operacji jest zalecane; dowolny błąd spowoduje uszkodzenie bazy danych. W tym celu należy najpierw nadać uprawnienia do zapisania pliku kopii zapasowej w zewnętrznej pamięci masowej. Czy chcesz zapisać kopię zapasową przed wymaganą aktualizacją?</string>
 <string name="dialog_backup_usefolder">Użyj folderu do codziennego tworzenia kopii zapasowych</string>
 <string name="dialog_change_language">Język synopsis</string>
 <string name="dialog_restore">Odtwórz</string>

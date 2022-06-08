@@ -44,6 +44,8 @@
 <string name="dialog_backup">Pojačanje.</string>
 <string name="dialog_backup_done">Baza podataka je završena.</string>
 <string name="dialog_backup_failed">Ne mogu da izvršim podršku.!</string>
+<string name="dialog_backup_preupdate_title">Potrebna je promjena baze podataka.</string>
+<string name="dialog_backup_preupdate_message">Instalirao si noviju verziju ove aplikacije. I verzija baze podataka treba da se ažurira. Spremanje sigurnosne kopije prije nego što se ova operacija preporučuje; svaka greška će oštetiti bazu podataka. Da biste to učinili, morate prvo odobriti dozvolu da spremite datoteku sigurnosne kopije u vanjsku pohranu. Želite li da sačuvate sigurnosnu kopiju prije obaveznog ažuriranja\??</string>
 <string name="dialog_backup_usefolder">Koristite mapu za dnevne kopije</string>
 <string name="dialog_change_language">Jezik sinopsisa.</string>
 <string name="dialog_restore">Povrati</string>

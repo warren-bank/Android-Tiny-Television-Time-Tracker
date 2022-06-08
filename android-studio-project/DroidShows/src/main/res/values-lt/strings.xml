@@ -44,6 +44,8 @@
 <string name="dialog_backup">Kopijavimas</string>
 <string name="dialog_backup_done">Duomenų bazės atsarginės kopijos</string>
 <string name="dialog_backup_failed">Nepavyko atlikti pastiprinimo!</string>
+<string name="dialog_backup_preupdate_title">Būtina Atnaujinti Duomenų Bazę</string>
+<string name="dialog_backup_preupdate_message">Jūs esate įdiegę naujesnę versiją šios programos. Duomenų bazės versija taip pat turi būti atnaujinta. Išsaugoti atsarginę kopiją prieš šią operaciją rekomenduojama; bet kokia klaida sugadins duomenų bazę. Norėdami tai padaryti, pirmiausia turite duoti leidimą išsaugoti atsarginės kopijos išorės saugojimui. Ar norėtumėte išsaugoti atsarginę kopiją prieš reikiamą atnaujinimą?</string>
 <string name="dialog_backup_usefolder">Naudoti aplanką kasdienėms atsargėms</string>
 <string name="dialog_change_language">Synopsis kalba</string>
 <string name="dialog_restore">Atstatyti</string>

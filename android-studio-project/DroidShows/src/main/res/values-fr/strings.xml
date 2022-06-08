@@ -44,6 +44,8 @@
 <string name="dialog_backup">Sauvegarder</string>
 <string name="dialog_backup_done">Sauvegarde de la base de donnée effectuée</string>
 <string name="dialog_backup_failed">Impossible d\'effectuer la sauvegarde!</string>
+<string name="dialog_backup_preupdate_title">Mise à jour de base de données requise</string>
+<string name="dialog_backup_preupdate_message">Vous avez installé une version plus récente de cette application. La version de la base de données doit également être mise à jour. L\'enregistrement d\'une sauvegarde avant cette opération est recommandé ; toute erreur va endommager la base de données. Pour ce faire, vous devez d\'abord accorder la permission de sauvegarder le fichier de sauvegarde dans un espace de stockage externe. Souhaitez-vous enregistrer une sauvegarde avant la mise à jour requise?</string>
 <string name="dialog_backup_usefolder">Utiliser pour des sauvegardes journalières</string>
 <string name="dialog_change_language">Langue du synopsis</string>
 <string name="dialog_restore">Restaurer</string>

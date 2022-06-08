@@ -44,6 +44,8 @@
 <string name="dialog_backup">Copia de seguridad</string>
 <string name="dialog_backup_done">La copia de seguridad de la base de datos ha sido completada</string>
 <string name="dialog_backup_failed">¡No se ha podido hacer la copia de seguridad!</string>
+<string name="dialog_backup_preupdate_title">La Actualización De Base De Datos</string>
+<string name="dialog_backup_preupdate_message">Ha instalado una versión más reciente de esta aplicación. También es necesario actualizar la versión de la base de datos. Se recomienda guardar una copia de seguridad antes de que se recomiende esta operación; cualquier error dañará la base de datos. Para ello, primero debe otorgar permiso para guardar el archivo de copia de seguridad en el almacenamiento externo. ¿Desea guardar una copia de seguridad antes de la actualización necesaria\??</string>
 <string name="dialog_backup_usefolder">Uso para seguridad diaria</string>
 <string name="dialog_change_language">Idioma de las sinopsis</string>
 <string name="dialog_restore">Restaurar</string>

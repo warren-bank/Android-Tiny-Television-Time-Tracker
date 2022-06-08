@@ -44,6 +44,8 @@
 <string name="dialog_backup">Varnostna kopija</string>
 <string name="dialog_backup_done">Kopiranje baze podatkov je končano</string>
 <string name="dialog_backup_failed">Ni moč izvesti izdelave varnostne kopije!</string>
+<string name="dialog_backup_preupdate_title">Posodobitev baze podatkov je obvezna</string>
+<string name="dialog_backup_preupdate_message">Namestili ste novejšo različico te aplikacije. Posodobiti je treba tudi različico baze podatkov. Shranjevanje varnostne kopije pred to operacijo je priporočena ; vsaka napaka bo pokvarila bazo podatkov. To storite tako, da najprej odobrite dovoljenje za shranjevanje varnostne kopije datoteke v zunanji pomnilnik. Ali želite varnostno kopijo shraniti pred zahtevano posodobilo?</string>
 <string name="dialog_backup_usefolder">Uporabi mapo za dnevne varnostne kopije</string>
 <string name="dialog_change_language">Jezik Synopsis</string>
 <string name="dialog_restore">Obnovi</string>

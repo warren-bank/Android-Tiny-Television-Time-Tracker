@@ -44,6 +44,8 @@
 <string name="dialog_backup">نسخة احتياطية</string>
 <string name="dialog_backup_done">النسخة الاحتياطية لقاعدة البيانات</string>
 <string name="dialog_backup_failed">لا يمكن تنفيذ النسخة الاحتياطية!</string>
+<string name="dialog_backup_preupdate_title">تعديل قاعدة البيانات مطلوب</string>
+<string name="dialog_backup_preupdate_message">لقد قمت بتركيب نسخة أحدث من هذا التطبيق. ومن الضروري أيضا تحديث نسخة قاعدة البيانات هذه. حفظ نسخة احتياطية قبل أن يتم التوصية بهذه العملية ؛ أي خطأ سيؤدي الى تلف قاعدة البيانات. للقيام بذلك ، يجب أن تقوم أولا بمنح تصريح لحفظ ملف النسخة الاحتياطية في وحدة تخزين خارجية. هل ترغب في حفظ نسخة احتياطية قبل التعديل المطلوب?</string>
 <string name="dialog_backup_usefolder">استخدام الحافظة للنسخ الاحتياطية اليومية</string>
 <string name="dialog_change_language">لغة التوليف</string>
 <string name="dialog_restore">استعادة</string>

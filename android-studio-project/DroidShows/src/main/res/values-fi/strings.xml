@@ -44,6 +44,8 @@
 <string name="dialog_backup">Backup</string>
 <string name="dialog_backup_done">Tietokannan varmistuskopiointi</string>
 <string name="dialog_backup_failed">Varmistuskopiointi ei onnistu!</string>
+<string name="dialog_backup_preupdate_title">Tietokannan päivitys on pakollinen</string>
+<string name="dialog_backup_preupdate_message">Olet asentanut tämän sovelluksen uudemman version. Myös tietokannan versio on päivitettävä. Varmistuskopiointi on suositeltavaa, ennen kuin tämä toiminto on käytössä. Jos haluat tehdä niin, sinun on ensin myönnettävä käyttöoikeudet varmistuskopion tallentamiseen ulkoiseen varastoon. Haluatko tallentaa varmistuskopion ennen päivitystä\??</string>
 <string name="dialog_backup_usefolder">Käytä päivittäisiä varmuuskopioita</string>
 <string name="dialog_change_language">Synopsis-kieli</string>
 <string name="dialog_restore">Palautus</string>

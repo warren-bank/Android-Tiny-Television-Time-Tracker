@@ -44,6 +44,8 @@
 <string name="dialog_backup">जगेडा</string>
 <string name="dialog_backup_done">डाटाबेस जगेडा पूरा भयो</string>
 <string name="dialog_backup_failed">जगेडा प्रदर्शन गर्न असक्षम!</string>
+<string name="dialog_backup_preupdate_title">डाटाबेस अद्यावधिक आवश्यक छ</string>
+<string name="dialog_backup_preupdate_message">तपाईँले यो अनुप्रयोगको नयाँ संस्करण स्थापना गर्नुभएको छ. डाटाबेसको संस्करण पनि अद्यावधिक गर्न आवश्यक छ. यो सञ्चालन भन्दा पहिले जगेडा बचत गर्न सिफारिस गरिएको छ; कुनै पनि त्रुटिले डाटाबेस नष्ट गर्नेछ. गर्न, तपाईँले बाह्य भण्डारण गर्न जगेडा फाइल बचत गर्न पहिले अनुमति दिनु पर्दछ. आवश्यक अद्यावधिक अगाडि जगेडा बचत गर्न चाहनुहुन्छ भने?</string>
 <string name="dialog_backup_usefolder">दैनिक ब्याकअपका लागि फोल्डर प्रयोग गर्नुहोस्</string>
 <string name="dialog_change_language">सिनोप्सिस भाषा</string>
 <string name="dialog_restore">पूर्वावस्थामा ल्याउनुहोस्</string>

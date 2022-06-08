@@ -44,6 +44,8 @@
 <string name="dialog_backup">Yedekle</string>
 <string name="dialog_backup_done">Veritabanı yedekleme işlemi tamamlandı</string>
 <string name="dialog_backup_failed">Yedekleme gerçekleştirilemedi!</string>
+<string name="dialog_backup_preupdate_title">Veritabanı Güncellemesi Gerekiyor</string>
+<string name="dialog_backup_preupdate_message">Bu uygulamanın daha yeni bir sürümünü kurdun. Veritabanının sürümü de güncelleştirilmesi gerekiyor. Bu işlem önerilmeden önce bir yedeğin kaydedilmesi önerilir; herhangi bir hata veri tabanını bozacaktır. Bunu yapmak için, önce yedek dosyasını dış depolamaya kaydetmeniz için izin vermeniz gerekir. Gerekli güncelleştirmeden önce bir yedek kaydetmek istiyor musunuz\??</string>
 <string name="dialog_backup_usefolder">Günlük yedeklemeler için klasör kullan</string>
 <string name="dialog_change_language">Özet dili</string>
 <string name="dialog_restore">Geri Yükle</string>

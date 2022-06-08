@@ -44,6 +44,8 @@
 <string name="dialog_backup">Cúltaca</string>
 <string name="dialog_backup_done">Bunachar sonraí cúltaca críochnaithe</string>
 <string name="dialog_backup_failed">Ní féidir cúltaca a dhéanamh!</string>
+<string name="dialog_backup_preupdate_title">Tá Nuashonrú Bunachar Sonraí Ag Teastáil</string>
+<string name="dialog_backup_preupdate_message">Tá leagan agat as leagan amach ar an iarratas seo. Ní mór an leagan an bhunachar sonraí freisin a thabhairt cothrom le dáta. Sábháil cúltaca sula moltar an oibríocht seo; beidh aon earráid truaillithe ar an mbunachar sonraí. Chun é sin a dhéanamh, ní mór duit cead a thabhairt ar dtús cead a shábháil ar an comhad cúltaca a stóráil seachtrach. Ar mhaith leat cúltaca a shábháil roimh an nuashonrú is gá?</string>
 <string name="dialog_backup_usefolder">Úsáid fillteán le haghaidh cúllíne laethúil</string>
 <string name="dialog_change_language">Teanga synopsis</string>
 <string name="dialog_restore">Athchóirigh</string>

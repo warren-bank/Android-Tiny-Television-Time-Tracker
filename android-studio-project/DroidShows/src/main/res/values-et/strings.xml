@@ -44,6 +44,8 @@
 <string name="dialog_backup">Varundamine</string>
 <string name="dialog_backup_done">Andmebaasi varundamine valmis</string>
 <string name="dialog_backup_failed">Varukoopia tegemine nurjus!</string>
+<string name="dialog_backup_preupdate_title">Andmebaasi Uuendamine On Nõutav</string>
+<string name="dialog_backup_preupdate_message">Oled paigaldatud käesoleva rakenduse uuema versiooni. Samuti on vaja ajakohastada andmebaasi versiooni. Varukoopia salvestamine, enne kui see toiming on soovitatav, iga viga on andmebaasi korrumpeerunud. Selleks peate esmalt andma loa varukoopia salvestamiseks välishoidjale. Kas soovid varukoopia salvestada enne nõutud uuendamist?</string>
 <string name="dialog_backup_usefolder">Kaustade kasutamine igapäevaste varukoopiate jaoks</string>
 <string name="dialog_change_language">Synopsis keel</string>
 <string name="dialog_restore">Taasta</string>

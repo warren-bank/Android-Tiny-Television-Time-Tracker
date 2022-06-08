@@ -44,6 +44,8 @@
 <string name="dialog_backup">Säkerhetskopia</string>
 <string name="dialog_backup_done">säkerhetskopiering av databas</string>
 <string name="dialog_backup_failed">Kan inte utföra säkerhetskopiering!</string>
+<string name="dialog_backup_preupdate_title">Databasuppdatering krävs</string>
+<string name="dialog_backup_preupdate_message">Du har installerat en nyare version av det här programmet. Versionen av databasen behöver också uppdateras. Spara en säkerhetskopia innan den här åtgärden rekommenderas. Alla fel kommer att korrumpera databasen. För att kunna göra det måste du först ge behörighet att spara säkerhetskopian till extern lagring. Vill du spara en säkerhetskopia innan den nödvändiga uppdateringen?</string>
 <string name="dialog_backup_usefolder">Använd mapp för dagliga säkerhetskopieringar</string>
 <string name="dialog_change_language">Synopsisspråket</string>
 <string name="dialog_restore">Återställ</string>

@@ -44,6 +44,8 @@
 <string name="dialog_backup">బ్యాక్అప్</string>
 <string name="dialog_backup_done">డాటాబేస్ బ్యాకప్ పూర్తీ</string>
 <string name="dialog_backup_failed">బ్యాకప్ చేయలేకపొయాను!</string>
+<string name="dialog_backup_preupdate_title">డేటాబేసు నవీకరణ అభ్యర్ధన</string>
+<string name="dialog_backup_preupdate_message">మీరు ఈ అనువర్తనానికి ఒక నూతనమైన వెర్షన్ను స్థాపించారు. డేటాబేస్ యొక్క వెర్షన్ కూడా నవీకరిస్తుంది. ఈ ఆపరేషన్ సిఫార్సు చేయకముందే బ్యాకప్ ను దాచుతుంది; ఏ దోషము డేటాబేస్ చెడిపోతుంది. అలా చేయడానికి ముందుగా బ్యాకర్ నిల్వకు బ్యాకప్ ఫైల్ ను రక్షించుటకు మీరు ముందుగా అనుమతి అనుమతించాలి. మీరు అవసరమైన నవీకరణకు ముందు ఒక బ్యాకప్ ను రక్షించాలని అనుకుంటున్నారా?</string>
 <string name="dialog_backup_usefolder">రోజువారీ బ్యాకప్ కొరకు ఫోల్డర్ను వుపయోగించుము</string>
 <string name="dialog_change_language">సినోపిసిస్ భాష</string>
 <string name="dialog_restore">పునఃప్రారంభించు</string>

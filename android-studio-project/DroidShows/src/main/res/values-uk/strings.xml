@@ -44,6 +44,8 @@
 <string name="dialog_backup">Резервування</string>
 <string name="dialog_backup_done">Створення резервної копії завершено</string>
 <string name="dialog_backup_failed">Неможливо виконати резервну копію!</string>
+<string name="dialog_backup_preupdate_title">Потрібна оновлення бази даних</string>
+<string name="dialog_backup_preupdate_message">Ви встановили новішу версію цієї програми. Крім того, версія бази даних також має бути оновлена. Рекомендуємо зберегти резервну копію перед цією операцією; будь-яка помилка пошкодить базу даних. Щоб зробити це, вам слід спочатку надати дозвіл на збереження резервних файлів на зовнішній склад. Ви бажаєте зберегти резервну копію перед оновленням?</string>
 <string name="dialog_backup_usefolder">Використовувати теку для щоденних резервних копій</string>
 <string name="dialog_change_language">Мова синопсиса</string>
 <string name="dialog_restore">Відновити</string>

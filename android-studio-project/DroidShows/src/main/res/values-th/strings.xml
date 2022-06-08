@@ -44,6 +44,8 @@
 <string name="dialog_backup">สำรองข้อมูล</string>
 <string name="dialog_backup_done">การสำรองข้อมูลฐานข้อมูลเสร็จสมบูรณ์</string>
 <string name="dialog_backup_failed">ไม่สามารถทำการสำรองข้อมูลได้!</string>
+<string name="dialog_backup_preupdate_title">จำเป็นต้องอัพเดตฐานข้อมูล</string>
+<string name="dialog_backup_preupdate_message">คุณได้ติดตั้งเวอร์ชันใหม่กว่าของแอ็พพลิเคชันนี้ เวอร์ชันของฐานข้อมูลยังต้องถูกอัพเดตด้วย ขอแนะนำให้บันทึกข้อมูลสำรองก่อนปฏิบัติการนี้ข้อผิดพลาดใดๆจะทำให้ฐานข้อมูลเสียหาย เมื่อต้องการทำสิ่งนี้, คุณต้องกำหนดสิทธิ์เพื่อบันทึกไฟล์สำรองข้อมูลไปยังหน่วยเก็บข้อมูลภายนอกก่อน คุณต้องการบันทึกการสำรองข้อมูลก่อนอัพเดตที่จำเป็น?</string>
 <string name="dialog_backup_usefolder">ใช้โฟลเดอร์สำหรับการสำรองข้อมูลรายวัน</string>
 <string name="dialog_change_language">ภาษาเรื่องย่อ</string>
 <string name="dialog_restore">เรียกคืน</string>

@@ -44,6 +44,8 @@
 <string name="dialog_backup">Wrth Gefn</string>
 <string name="dialog_backup_done">Cwblhawyd cronfa ddata wrth gefn</string>
 <string name="dialog_backup_failed">Methu cyflawni copi wrth gefn!</string>
+<string name="dialog_backup_preupdate_title">Mae Angen Diweddaru Cronfa Ddata</string>
+<string name="dialog_backup_preupdate_message">Rydych wedi gosod fersiwn mwy newydd o\'r rhaglen hon. Mae angen diweddaru\'r fersiwn o\'r gronfa ddata hefyd. Arbed copi wrth gefn cyn i\'r weithred hon gael ei argymell; bydd unrhyw wall yn llygru \' r gronfa ddata. I wneud hynny, rhaid i chi roi caniatâd grant cyntaf i gadw\'r ffeil wrth gefn i storio allanol. Hoffech chi gadw copi wrth gefn cyn y diweddariad gofynnol?</string>
 <string name="dialog_backup_usefolder">Defnyddio plygell ar gyfer ups bob dydd</string>
 <string name="dialog_change_language">Name</string>
 <string name="dialog_restore">Adfer</string>
