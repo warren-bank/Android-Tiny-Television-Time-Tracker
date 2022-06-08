@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Recuperare</string>
 <string name="messages_title_updating_series">Actualizarea emisiunilor</string>
 <string name="messages_no_internet">Nu există conexiune la Internet</string>
+<string name="messages_no_permission">Permisiunea insuficientă de efectuare a operațiunii solicitate</string>
 <string name="messages_title_update_series">Actualizare arată</string>
 <string name="messages_episodes">episoade</string>
 <string name="messages_new_episodes">Episoade noi</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Detalii despre episod</string>
 <string name="messsages_edit_seen_timestamp">Editați timestamp văzut</string>
 <string name="messages_calendar_app_error">Nici o aplicație Calendar găsit!</string>
+<string name="messages_db_error_update">Eroare de baze de date</string>
+<string name="messages_db_error_delete_serie">Eroare de baze de date în timpul ștergerii</string>
+<string name="messages_db_error_delete_episode">Eroare de baze de date în timpul episodului</string>
 <string name="messages_api_con_error">Eroare la conectarea la TMDb API. Încercați din nou.</string>
 <string name="messages_marked_seen">marcat ca văzut</string>
 <string name="messages_marked_unseen">marcat ca nevăzut</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">Actori:</string>
 <string name="showstatus_continuing">continuare</string>
 <string name="showstatus_ended">Încheiat</string>
+<string name="wiki_search_query_suffix">seriale de televiziune</string>
 </resources>

@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Återskapa</string>
 <string name="messages_title_updating_series">Uppdaterar program</string>
 <string name="messages_no_internet">Ingen internetanslutning tillgänglig</string>
+<string name="messages_no_permission">Otillräcklig behörighet för att utföra den begärda åtgärden</string>
 <string name="messages_title_update_series">Uppdateringsprogram</string>
 <string name="messages_episodes">episoder</string>
 <string name="messages_new_episodes">nya episoder</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Episod-detaljer</string>
 <string name="messsages_edit_seen_timestamp">Redigera sett tidsstämpel</string>
 <string name="messages_calendar_app_error">Ingen kalenderapp hittades!</string>
+<string name="messages_db_error_update">Databasfel vid uppdatering</string>
+<string name="messages_db_error_delete_serie">Databasfel vid borttagning av program</string>
+<string name="messages_db_error_delete_episode">Databasfel vid borttagning av avsnitt</string>
 <string name="messages_api_con_error">Fel vid anslutning till TMDb API. Försök igen.</string>
 <string name="messages_marked_seen">markerad som sedd</string>
 <string name="messages_marked_unseen">markerad som ej sedd</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">Aktörer:</string>
 <string name="showstatus_continuing">fortsätta</string>
 <string name="showstatus_ended">avslutad</string>
+<string name="wiki_search_query_suffix">TV-serie</string>
 </resources>

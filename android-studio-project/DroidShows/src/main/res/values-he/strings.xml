@@ -68,6 +68,7 @@
 <string name="menu_unarchive">שחזור</string>
 <string name="messages_title_updating_series">עדכון מופעים</string>
 <string name="messages_no_internet">אין חיבור אינטרנט זמין</string>
+<string name="messages_no_permission">אין הרשאות מספיקות לביצוע הפעולה המבוקשת</string>
 <string name="messages_title_update_series">עדכון מופעים</string>
 <string name="messages_episodes">פרקים</string>
 <string name="messages_new_episodes">פרקים חדשים</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">פרק זמן</string>
 <string name="messsages_edit_seen_timestamp">עריכת חותמת זמן</string>
 <string name="messages_calendar_app_error">לא נמצאה יישום יומן!</string>
+<string name="messages_db_error_update">שגיאת מסד נתונים במהלך עדכון</string>
+<string name="messages_db_error_delete_serie">שגיאת מסד נתונים בזמן מחיקת התוכנית</string>
+<string name="messages_db_error_delete_episode">שגיאת מסד נתונים בזמן מחיקת פרק</string>
 <string name="messages_api_con_error">שגיאה בחיבור ל - TMDb API. נסו שוב.</string>
 <string name="messages_marked_seen">מסומן כפי שנראה</string>
 <string name="messages_marked_unseen">מסומן כבלתי נראה</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">שחקנים:</string>
 <string name="showstatus_continuing">המשך</string>
 <string name="showstatus_ended">הסתיים</string>
+<string name="wiki_search_query_suffix">סדרת טלוויזיה</string>
 </resources>

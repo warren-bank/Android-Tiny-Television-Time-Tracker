@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Възстановяване:</string>
 <string name="messages_title_updating_series">Обновяване на предавания</string>
 <string name="messages_no_internet">Няма достъпна интернет връзка</string>
+<string name="messages_no_permission">Недостатъчни права за изпълнение на заявената операция</string>
 <string name="messages_title_update_series">Показване на предавания</string>
 <string name="messages_episodes">4.</string>
 <string name="messages_new_episodes">нови епизоди:</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Подробности за епизод</string>
 <string name="messsages_edit_seen_timestamp">Редактиране на видян времеви индикатор</string>
 <string name="messages_calendar_app_error">Не е намерено приложение календар!</string>
+<string name="messages_db_error_update">Грешка в базата данни при актуализиране</string>
+<string name="messages_db_error_delete_serie">Грешка в базата данни при изтриване на шоу</string>
+<string name="messages_db_error_delete_episode">Грешка в базата данни при изтриването на епизод</string>
 <string name="messages_api_con_error">Грешка при свързване с TMDb API. Опитай пак..</string>
 <string name="messages_marked_seen">маркиран като видим</string>
 <string name="messages_marked_unseen">маркирани като ненаблюдавани</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">Актьори::</string>
 <string name="showstatus_continuing">продължаващо.</string>
 <string name="showstatus_ended">Край.</string>
+<string name="wiki_search_query_suffix">телевизионна серия</string>
 </resources>

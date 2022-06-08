@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Phục hồi</string>
 <string name="messages_title_updating_series">Đang cập nhật</string>
 <string name="messages_no_internet">Không có kết nối Internet</string>
+<string name="messages_no_permission">Không đủ quyền để thực hiện thao tác yêu cầu</string>
 <string name="messages_title_update_series">Cập nhật cho</string>
 <string name="messages_episodes"></string>
 <string name="messages_new_episodes">các tập mới</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Chi tiết Tập</string>
 <string name="messsages_edit_seen_timestamp">Sửa nhãn thời gian đã xem</string>
 <string name="messages_calendar_app_error">Không tìm thấy ứng dụng Calendar!</string>
+<string name="messages_db_error_update">Lỗi cơ sở dư ̃ liệu</string>
+<string name="messages_db_error_delete_serie">Lỗi cơ sở dữ liệu khi xóa chương trình</string>
+<string name="messages_db_error_delete_episode">Lỗi cơ sở dữ liệu trong khi xóa tập</string>
 <string name="messages_api_con_error">Lỗi khi kết nối vào TMDb API. Thử lại.</string>
 <string name="messages_marked_seen">được đánh dấu là</string>
 <string name="messages_marked_unseen">đã được đánh dấu</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">Diễn viên:</string>
 <string name="showstatus_continuing">tiếp tục</string>
 <string name="showstatus_ended">đã kết thúc</string>
+<string name="wiki_search_query_suffix">phim truyền hình</string>
 </resources>

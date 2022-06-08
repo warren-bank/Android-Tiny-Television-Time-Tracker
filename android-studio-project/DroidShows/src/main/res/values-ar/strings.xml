@@ -68,6 +68,7 @@
 <string name="menu_unarchive">استعادة</string>
 <string name="messages_title_updating_series">جاري تعديل العروض</string>
 <string name="messages_no_internet">لا توجد وصلة انترنت متاحة</string>
+<string name="messages_no_permission">تصريح غير كافي لتنفيذ العملية المطلوبة</string>
 <string name="messages_title_update_series">تعديل العروض</string>
 <string name="messages_episodes">حلقات</string>
 <string name="messages_new_episodes">حلقات جديدة</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">تفاصيل الحلقة</string>
 <string name="messsages_edit_seen_timestamp">تحرير خاتم الوقت</string>
 <string name="messages_calendar_app_error">لم يتم ايجاد تطبيق التقويم!</string>
+<string name="messages_db_error_update">حدث خطأ في قاعدة البيانات أثناء التعديل</string>
+<string name="messages_db_error_delete_serie">حدث خطأ في قاعدة البيانات أثناء حذف العرض</string>
+<string name="messages_db_error_delete_episode">حدث خطأ في قاعدة البيانات أثناء حذف الحلقة</string>
 <string name="messages_api_con_error">خطأ في الاتصال الى TMDb API. حاول مرة أخرى.</string>
 <string name="messages_marked_seen">ملحوظ كما تم مشاهدته</string>
 <string name="messages_marked_unseen">تم تعليمه كغير معلم</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">الجهات الفاعلة:</string>
 <string name="showstatus_continuing">استمرار</string>
 <string name="showstatus_ended">تم الانتهاء</string>
+<string name="wiki_search_query_suffix">مسلسل تلفزيوني</string>
 </resources>

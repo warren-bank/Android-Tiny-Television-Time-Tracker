@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Pulih</string>
 <string name="messages_title_updating_series">Mengemaskini paparan</string>
 <string name="messages_no_internet">Tiada sambungan Internet tersedia</string>
+<string name="messages_no_permission">Keizinan tidak mencukupi untuk melaksanakan operasi yang diminta</string>
 <string name="messages_title_update_series">Kemaskini menunjukkan</string>
 <string name="messages_episodes">episod</string>
 <string name="messages_new_episodes">episod baru</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Perincian episod</string>
 <string name="messsages_edit_seen_timestamp">Sunting setem masa</string>
 <string name="messages_calendar_app_error">Tiada aplikasi Kalendar ditemui!</string>
+<string name="messages_db_error_update">Ralat pangkalan data semasa mengemaskini</string>
+<string name="messages_db_error_delete_serie">Ralat pangkalan data semasa memadam persembahan</string>
+<string name="messages_db_error_delete_episode">Ralat pangkalan data semasa memadam episod</string>
 <string name="messages_api_con_error">Ralat menyambung ke TMDb API. Cuba lagi.</string>
 <string name="messages_marked_seen">ditanda sebagai dilihat</string>
 <string name="messages_marked_unseen">Ditanda sebagai ghaib</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">Pelakon:</string>
 <string name="showstatus_continuing">berterusan</string>
 <string name="showstatus_ended">berakhir</string>
+<string name="wiki_search_query_suffix">Siri televisyen</string>
 </resources>

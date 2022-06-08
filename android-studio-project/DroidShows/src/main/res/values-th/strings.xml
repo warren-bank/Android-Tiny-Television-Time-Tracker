@@ -68,6 +68,7 @@
 <string name="menu_unarchive">กู้คืน</string>
 <string name="messages_title_updating_series">การอัพเดตรายการ</string>
 <string name="messages_no_internet">ไม่มีการเชื่อมต่ออินเตอร์เน็ต</string>
+<string name="messages_no_permission">สิทธิไม่เพียงพอในการดำเนินการที่ร้องขอ</string>
 <string name="messages_title_update_series">อัพเดตที่แสดง</string>
 <string name="messages_episodes">ตอน</string>
 <string name="messages_new_episodes">ตอนใหม่</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">รายละเอียดตอนที่</string>
 <string name="messsages_edit_seen_timestamp">แก้ไขการประทับเวลาที่เห็น</string>
 <string name="messages_calendar_app_error">ไม่พบแอ็พปฏิทิน!</string>
+<string name="messages_db_error_update">ฐานข้อมูลมีข้อผิดพลาดขณะอัพเดต</string>
+<string name="messages_db_error_delete_serie">เกิดข้อผิดพลาดเกี่ยวกับฐานข้อมูลขณะลบรายการ</string>
+<string name="messages_db_error_delete_episode">ข้อผิดพลาดฐานข้อมูลขณะลบตอน</string>
 <string name="messages_api_con_error">ข้อผิดพลาดในการเชื่อมต่อกับ TMDb API. ลองอีกครั้ง.</string>
 <string name="messages_marked_seen">ทำเครื่องหมายเป็นเห็นแล้ว</string>
 <string name="messages_marked_unseen">ทำเครื่องหมายเป็นมองไม่เห็น</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">นักแสดง:</string>
 <string name="showstatus_continuing">ดำเนินการต่อ</string>
 <string name="showstatus_ended">สิ้นสุด</string>
+<string name="wiki_search_query_suffix">รายการโทรทัศน์</string>
 </resources>

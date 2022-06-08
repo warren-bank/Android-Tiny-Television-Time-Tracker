@@ -83,6 +83,7 @@
 <string name="menu_unarchive">Terughalen</string>
 <string name="messages_title_updating_series">Series bijwerken</string>
 <string name="messages_no_internet">Er is geen internetverbinding</string>
+<string name="messages_no_permission">Onvoldoende machtiging om de gevraagde bewerking uit te voeren</string>
 <string name="messages_title_update_series">Series bijwerken</string>
 <string name="messages_episodes">afleveringen</string>
 <string name="messages_new_episodes">afleveringen</string>
@@ -108,6 +109,9 @@
 <string name="messsages_view_ep_details">Details aflevering</string>
 <string name="messsages_edit_seen_timestamp">Tijdstip gezien wijzigen</string>
 <string name="messages_calendar_app_error">Geen Agenda-app gevonden!</string>
+<string name="messages_db_error_update">Databasefout tijdens bijwerken</string>
+<string name="messages_db_error_delete_serie">Databasefout bij wissen van show</string>
+<string name="messages_db_error_delete_episode">Databasefout bij wissen van aflevering</string>
 <string name="messages_api_con_error">Kan geen verbinding maken met TMDb API. Probeer opnieuw.</string>
 <string name="messages_marked_seen">gemarkeerd als gezien</string>
 <string name="messages_marked_unseen">gemarkeerd als niet gezien</string>
@@ -129,4 +133,5 @@
 <string name="series_actors">Acteurs:</string>
 <string name="showstatus_continuing">loopt</string>
 <string name="showstatus_ended">afgelopen</string>
+<string name="wiki_search_query_suffix">televisieseries</string>
 </resources>

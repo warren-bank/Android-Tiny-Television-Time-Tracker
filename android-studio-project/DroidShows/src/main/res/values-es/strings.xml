@@ -80,6 +80,7 @@
 <string name="menu_unarchive">Recuperar</string>
 <string name="messages_title_updating_series">Actualizando las series</string>
 <string name="messages_no_internet">La conexión a internet no está disponible</string>
+<string name="messages_no_permission">Permiso insuficiente para realizar la operación solicitada</string>
 <string name="messages_title_update_series">Actualiza todas las series</string>
 <string name="messages_episodes">episodios</string>
 <string name="messages_new_episodes">nuevos episodios</string>
@@ -105,6 +106,9 @@
 <string name="messsages_view_ep_details">Ver los detalles del episodio</string>
 <string name="messsages_edit_seen_timestamp">Editar la fecha de visionado</string>
 <string name="messages_calendar_app_error">No se ha encontrado ninguna aplicación de calendario!</string>
+<string name="messages_db_error_update">Error de la base de datos</string>
+<string name="messages_db_error_delete_serie">Error de base de datos al suprimir mostrar</string>
+<string name="messages_db_error_delete_episode">Error de base de datos al suprimir episodio</string>
 <string name="messages_api_con_error">Error al conectar a TMDb API. Inténtalo de nuevo.</string>
 <string name="messages_marked_seen">marcado como visto</string>
 <string name="messages_marked_unseen">marcado como no visto</string>
@@ -126,4 +130,5 @@
 <string name="series_actors">Actores:</string>
 <string name="showstatus_continuing">Emitiendo</string>
   <string name="showstatus_ended">Finalizada</string>
+<string name="wiki_search_query_suffix">serie de televisión</string>
 </resources>

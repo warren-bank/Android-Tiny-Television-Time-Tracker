@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Aisghabháil</string>
 <string name="messages_title_updating_series">Taispeáin nuashonrú</string>
 <string name="messages_no_internet">Níl aon nasc Idirlín ar fáil</string>
+<string name="messages_no_permission">Ní leor cead chun an oibríocht iarrtha a chomhlíonadh</string>
 <string name="messages_title_update_series">Taispeánann Nuashonrú</string>
 <string name="messages_episodes">ceodes</string>
 <string name="messages_new_episodes">eipeasóid nua</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Sonraí Eipeasóid</string>
 <string name="messsages_edit_seen_timestamp">Cuir an stampa ama in eagar</string>
 <string name="messages_calendar_app_error">Níor aimsíodh aon phreabfhuinneog!</string>
+<string name="messages_db_error_update">Earráid bunachar sonraí agus nuashonrú á nuashonrú</string>
+<string name="messages_db_error_delete_serie">Earráid bunachair sonraí le linn a scriosadh</string>
+<string name="messages_db_error_delete_episode">Earráid agus an bunachar sonraí á scriosadh</string>
 <string name="messages_api_con_error">Earráid agus á nascadh le TMDb API. Bain triail as.</string>
 <string name="messages_marked_seen">marcáilte mar atá</string>
 <string name="messages_marked_unseen">marcáilte mar nach bhfuil siad</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">Gníomhaithe:</string>
 <string name="showstatus_continuing">leanúnach</string>
 <string name="showstatus_ended">dar críoch</string>
+<string name="wiki_search_query_suffix">sraith teilifíse</string>
 </resources>

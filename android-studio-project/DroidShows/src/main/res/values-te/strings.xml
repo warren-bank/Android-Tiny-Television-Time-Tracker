@@ -68,6 +68,7 @@
 <string name="menu_unarchive">రికార్డు</string>
 <string name="messages_title_updating_series">ప్రదర్శన నవీకరిస్తోంది</string>
 <string name="messages_no_internet">ఇంటర్నెట్ అనుసంధానం అందుబాటలేదు</string>
+<string name="messages_no_permission">అభ్యర్ధన ఆపరేషన్ నిర్వహించడానికి తగిన అనుమతి</string>
 <string name="messages_title_update_series">అదనపు ప్రదర్శన</string>
 <string name="messages_episodes">భాగములు</string>
 <string name="messages_new_episodes">కొత్త భాగములు</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">ఎపిసోడ్ వివరాలు</string>
 <string name="messsages_edit_seen_timestamp">టైమ్‌స్టాంప్ చూసిన సవరణ</string>
 <string name="messages_calendar_app_error">క్యాలెండర్ యాప్ను కనబడలేదు!</string>
+<string name="messages_db_error_update">డేటాబేసు దోషం</string>
+<string name="messages_db_error_delete_serie">డెల్టింగ్ ప్రదర్శనలో డాటాబేసు దోషం</string>
+<string name="messages_db_error_delete_episode">ఎపిసోర్ను డెల్టాబేసు చేయుటలో దోషము</string>
 <string name="messages_api_con_error">అనుసంధానించు దోషము TMDb API. మళ్ళీ ప్రయత్నించండి.</string>
 <string name="messages_marked_seen">చూడగా గుర్తించబడిందిName</string>
 <string name="messages_marked_unseen">కనిపించినట్లుగా గుర్తించబడినది</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">ఆక్టర్లు:</string>
 <string name="showstatus_continuing">కొనసాగుతోంది</string>
 <string name="showstatus_ended">ముగిసింది</string>
+<string name="wiki_search_query_suffix">టెలివిజన్ సిరీస్</string>
 </resources>

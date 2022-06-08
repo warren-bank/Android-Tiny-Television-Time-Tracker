@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Recover</string>
 <string name="messages_title_updating_series">Opdaterer programmer</string>
 <string name="messages_no_internet">Der er ingen tilgængelig internetforbindelse</string>
+<string name="messages_no_permission">Utilstrækkelig tilladelse til at udføre den ønskede funktion</string>
 <string name="messages_title_update_series">Opdatering vises</string>
 <string name="messages_episodes">episoder</string>
 <string name="messages_new_episodes">nye afsnit</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Episodeoplysninger</string>
 <string name="messsages_edit_seen_timestamp">Redigér set tidsstempel</string>
 <string name="messages_calendar_app_error">Ingen kalenderapp fundet!</string>
+<string name="messages_db_error_update">Databasefejl under opdatering</string>
+<string name="messages_db_error_delete_serie">Databasefejl under sletning af program</string>
+<string name="messages_db_error_delete_episode">Databasefejl under sletning af afsnit</string>
 <string name="messages_api_con_error">Fejl ved tilslutning til TMDb API. Prøv igen.</string>
 <string name="messages_marked_seen">markeret som set</string>
 <string name="messages_marked_unseen">markeret som ikke-set</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">Skuespillere:</string>
 <string name="showstatus_continuing">fortsætter</string>
 <string name="showstatus_ended">afsluttet</string>
+<string name="wiki_search_query_suffix">TV-serie</string>
 </resources>

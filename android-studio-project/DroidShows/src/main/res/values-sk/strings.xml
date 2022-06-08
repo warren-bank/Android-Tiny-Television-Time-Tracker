@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Obnoviť</string>
 <string name="messages_title_updating_series">Aktualizácia zobrazuje</string>
 <string name="messages_no_internet">Nie je k dispozícii internetové pripojenie</string>
+<string name="messages_no_permission">Nedostatočné oprávnenie na vykonanie požadovanej operácie</string>
 <string name="messages_title_update_series">Aktualizovať zobrazenie</string>
 <string name="messages_episodes">Epizódy</string>
 <string name="messages_new_episodes">nové epizódy</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Podrobné informácie o</string>
 <string name="messsages_edit_seen_timestamp">Upraviť zobrazenie časovej značky</string>
 <string name="messages_calendar_app_error">Nenašla sa žiadna aplikácia Calendar!</string>
+<string name="messages_db_error_update">Nastala databázová chyba počas aktualizácie</string>
+<string name="messages_db_error_delete_serie">Nastala databázová chyba počas vymazávania</string>
+<string name="messages_db_error_delete_episode">Nastala chyba databázy počas vymazávania epizódy</string>
 <string name="messages_api_con_error">Nastala chyba pri pripájaní k TMDb API. Skúsiť znova.</string>
 <string name="messages_marked_seen">označené ako viditeľné</string>
 <string name="messages_marked_unseen">označené ako neviditeľné</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">Herci:</string>
 <string name="showstatus_continuing">pokračovanie</string>
 <string name="showstatus_ended">ukončené</string>
+<string name="wiki_search_query_suffix">séria televíznych programov</string>
 </resources>

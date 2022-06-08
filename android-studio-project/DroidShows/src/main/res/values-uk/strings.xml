@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Відновити</string>
 <string name="messages_title_updating_series">Оновлення показів</string>
 <string name="messages_no_internet">З \' єднання з інтернетом</string>
+<string name="messages_no_permission">Недостатньо прав для виконання запиту на запитану</string>
 <string name="messages_title_update_series">Оновлення показів</string>
 <string name="messages_episodes">Епізоди</string>
 <string name="messages_new_episodes">нові епізоди</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Подробиці про серію</string>
 <string name="messsages_edit_seen_timestamp">Змінити часову позначку часу</string>
 <string name="messages_calendar_app_error">Не знайдено додатка календаря!</string>
+<string name="messages_db_error_update">Помилка під час оновлення бази даних</string>
+<string name="messages_db_error_delete_serie">Помилка бази даних під час вилучення показу</string>
+<string name="messages_db_error_delete_episode">Помилка бази даних під час вилучення епізоду</string>
 <string name="messages_api_con_error">Помилка з \' єднання з TMDb API. Спробувати ще раз.</string>
 <string name="messages_marked_seen">Позначений як</string>
 <string name="messages_marked_unseen">Позначений як</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">Актори:</string>
 <string name="showstatus_continuing">Продовжити</string>
 <string name="showstatus_ended">завершено</string>
+<string name="wiki_search_query_suffix">телесеріал</string>
 </resources>

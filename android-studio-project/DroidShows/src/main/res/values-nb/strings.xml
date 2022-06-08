@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Rekognomer</string>
 <string name="messages_title_updating_series">Oppdaterer serier</string>
 <string name="messages_no_internet">Ingen Internett-tilkobling tilgjengelig</string>
+<string name="messages_no_permission">Ikke tilstrekkelig tillatelse til å utføre den forespurte operasjonen</string>
 <string name="messages_title_update_series">Oppdatering viser</string>
 <string name="messages_episodes">episoder</string>
 <string name="messages_new_episodes">nye episoder</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Episode detaljer</string>
 <string name="messsages_edit_seen_timestamp">Rediger sett tidsstempel</string>
 <string name="messages_calendar_app_error">Ingen kalenderapp funnet!</string>
+<string name="messages_db_error_update">Databasefeil ved oppdatering av</string>
+<string name="messages_db_error_delete_serie">Databasefeil ved sletting av show</string>
+<string name="messages_db_error_delete_episode">Databasefeil ved sletting av episode</string>
 <string name="messages_api_con_error">Feil ved tilkobling til TMDb API. Prøv igjen.</string>
 <string name="messages_marked_seen">merket som sett</string>
 <string name="messages_marked_unseen">merket som usett</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">Skuespillere:</string>
 <string name="showstatus_continuing">fortsetter</string>
 <string name="showstatus_ended">avsluttet</string>
+<string name="wiki_search_query_suffix">TV-serier</string>
 </resources>

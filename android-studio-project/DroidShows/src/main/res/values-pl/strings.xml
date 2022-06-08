@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Odzyskaj</string>
 <string name="messages_title_updating_series">Aktualizowanie pokazów</string>
 <string name="messages_no_internet">Brak dostępnego połączenia z Internetem</string>
+<string name="messages_no_permission">Niewystarczające uprawnienia do wykonania żądanej operacji</string>
 <string name="messages_title_update_series">Pokazy aktualizacji</string>
 <string name="messages_episodes">epizody</string>
 <string name="messages_new_episodes">nowe odcinki</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Szczegóły epizodu</string>
 <string name="messsages_edit_seen_timestamp">Edytuj widziany znacznik czasu</string>
 <string name="messages_calendar_app_error">Nie znaleziono aplikacji kalendarza!</string>
+<string name="messages_db_error_update">Błąd bazy danych podczas aktualizowania</string>
+<string name="messages_db_error_delete_serie">Błąd bazy danych podczas usuwania pokazu</string>
+<string name="messages_db_error_delete_episode">Błąd bazy danych podczas usuwania epizodu</string>
 <string name="messages_api_con_error">Błąd podczas nawiązywania połączenia z TMDb API. Spróbuj ponownie.</string>
 <string name="messages_marked_seen">oznaczone jako widoczne</string>
 <string name="messages_marked_unseen">oznaczone jako niewidoczne</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">Aktorzy:</string>
 <string name="showstatus_continuing">kontynuowanie</string>
 <string name="showstatus_ended">zakończone</string>
+<string name="wiki_search_query_suffix">serial telewizyjny</string>
 </resources>

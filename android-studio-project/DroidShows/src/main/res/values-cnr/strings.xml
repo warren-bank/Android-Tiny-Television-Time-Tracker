@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Vrati se.</string>
 <string name="messages_title_updating_series">Ažuriranje pokazuje</string>
 <string name="messages_no_internet">Nema internet veze.</string>
+<string name="messages_no_permission">Nema dovoljno dozvole za obavljanje tražene operacije.</string>
 <string name="messages_title_update_series">Novosti.</string>
 <string name="messages_episodes">Epizoda</string>
 <string name="messages_new_episodes">Nove epizode.</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Detalji epizoda</string>
 <string name="messsages_edit_seen_timestamp">Uređivanje viđene vremenske oznake</string>
 <string name="messages_calendar_app_error">Nije pronađena aplikacija Kalendar!</string>
+<string name="messages_db_error_update">Greška u bazi podataka kod ažuriranja</string>
+<string name="messages_db_error_delete_serie">Greška u bazi podataka za vrijeme brisanja</string>
+<string name="messages_db_error_delete_episode">Greška u bazi podataka kod brisanja epizode</string>
 <string name="messages_api_con_error">Greška u povezivanju sa TMDb API. Pokušajte ponovo..</string>
 <string name="messages_marked_seen">Označeno kao viđeno.</string>
 <string name="messages_marked_unseen">Označeno kao nevidljivo</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">Glumci:</string>
 <string name="showstatus_continuing">Nastavljamo.</string>
 <string name="showstatus_ended">Završeno.</string>
+<string name="wiki_search_query_suffix">Televizija.</string>
 </resources>

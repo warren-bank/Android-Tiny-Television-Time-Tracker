@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Obnovit</string>
 <string name="messages_title_updating_series">Aktualizace zobrazení</string>
 <string name="messages_no_internet">Není k dispozici připojení k Internetu</string>
+<string name="messages_no_permission">Nedostatečné oprávnění k provedení požadované operace.</string>
 <string name="messages_title_update_series">Aktualizovat zobrazení</string>
 <string name="messages_episodes">epizody</string>
 <string name="messages_new_episodes">nové epizody</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Detaily epizody</string>
 <string name="messsages_edit_seen_timestamp">Upravit časové razítko</string>
 <string name="messages_calendar_app_error">Nebyla nalezena žádná aplikace kalendáře!</string>
+<string name="messages_db_error_update">Chyba databáze při aktualizaci</string>
+<string name="messages_db_error_delete_serie">Chyba databáze při odstraňování prezentace</string>
+<string name="messages_db_error_delete_episode">Chyba databáze při odstraňování epizody</string>
 <string name="messages_api_con_error">Chyba připojení k TMDb API. Zkuste to znovu.</string>
 <string name="messages_marked_seen">označeno jako viditelné</string>
 <string name="messages_marked_unseen">označeno jako neviditelné</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">Aktéři:</string>
 <string name="showstatus_continuing">pokračování</string>
 <string name="showstatus_ended">ukončen</string>
+<string name="wiki_search_query_suffix">televizní seriál</string>
 </resources>

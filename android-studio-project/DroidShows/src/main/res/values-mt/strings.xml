@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Irkupru</string>
 <string name="messages_title_updating_series">Aġġornament juri</string>
 <string name="messages_no_internet">L-ebda konnessjoni Internet disponibbli</string>
+<string name="messages_no_permission">Permess insuffiċjenti biex titwettaq l-operazzjoni mitluba</string>
 <string name="messages_title_update_series">Aġġornament juri</string>
 <string name="messages_episodes">episodji</string>
 <string name="messages_new_episodes">episodji ġodda</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Dettalji tal-episodju</string>
 <string name="messsages_edit_seen_timestamp">Editja raw timebold</string>
 <string name="messages_calendar_app_error">Ebda app Kalendarju misjuba!</string>
+<string name="messages_db_error_update">Żball database waqt l-aġġornament</string>
+<string name="messages_db_error_delete_serie">Żball database filwaqt li tħassar juru</string>
+<string name="messages_db_error_delete_episode">Żball database waqt li tħassar episodju</string>
 <string name="messages_api_con_error">Żball konnessjoni ma \' TMDb API. Erġa \' pprova.</string>
 <string name="messages_marked_seen">immarkat kif jidher</string>
 <string name="messages_marked_unseen">immarkat bħala mhux osservat</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">Atturi:</string>
 <string name="showstatus_continuing">tkomplija</string>
 <string name="showstatus_ended">spiċċat</string>
+<string name="wiki_search_query_suffix">serje televiżiva</string>
 </resources>

@@ -68,6 +68,7 @@
 <string name="menu_unarchive">복구</string>
 <string name="messages_title_updating_series">업데이트하기</string>
 <string name="messages_no_internet">사용 가능한 인터넷 연결 없음</string>
+<string name="messages_no_permission">요청된 조작을 수행할 수 있는 권한이 충분하지 않습니다.</string>
 <string name="messages_title_update_series">업데이트 쇼</string>
 <string name="messages_episodes">에피소드</string>
 <string name="messages_new_episodes">새로운 에피소드</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">에피소드 세부사항</string>
 <string name="messsages_edit_seen_timestamp">편집된 시간소인 편집</string>
 <string name="messages_calendar_app_error">일정관리 애플리케이션을 찾을 수 없음!</string>
+<string name="messages_db_error_update">업데이트 중에 데이터베이스 오류 발생</string>
+<string name="messages_db_error_delete_serie">표시를 삭제하는 중에 데이터베이스 오류 발생</string>
+<string name="messages_db_error_delete_episode">에피소드 삭제 중 데이터베이스 오류 발생</string>
 <string name="messages_api_con_error">연결 오류 TMDb API. 다시 시도하기.</string>
 <string name="messages_marked_seen">표시된 것으로 표시</string>
 <string name="messages_marked_unseen">보이지 않는 것으로 표시된</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">액터:</string>
 <string name="showstatus_continuing">계속</string>
 <string name="showstatus_ended">끝이다</string>
+<string name="wiki_search_query_suffix">텔레비전 시리즈</string>
 </resources>

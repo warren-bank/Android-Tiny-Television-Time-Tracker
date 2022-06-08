@@ -68,6 +68,7 @@
 <string name="menu_unarchive">リカバリー中</string>
 <string name="messages_title_updating_series">表示の更新</string>
 <string name="messages_no_internet">インターネット接続がありません</string>
+<string name="messages_no_permission">要求された操作を実行するには、</string>
 <string name="messages_title_update_series">更新の表示</string>
 <string name="messages_episodes">エピソード</string>
 <string name="messages_new_episodes">新しいエピソード</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">エピソードの詳細</string>
 <string name="messsages_edit_seen_timestamp">表示タイム・スタンプ</string>
 <string name="messages_calendar_app_error">カレンダーアプリケーションが見つかりません!</string>
+<string name="messages_db_error_update">更新中のデータベース・エラー</string>
+<string name="messages_db_error_delete_serie">表示削除中のデータベースエラー</string>
+<string name="messages_db_error_delete_episode">エピソード削除中のデータベース・エラー</string>
 <string name="messages_api_con_error">接続中のエラー TMDb API. 再試行.</string>
 <string name="messages_marked_seen">見られるという</string>
 <string name="messages_marked_unseen">目に見えない</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">俳優:</string>
 <string name="showstatus_continuing">継続</string>
 <string name="showstatus_ended">終了</string>
+<string name="wiki_search_query_suffix">テレビシリーズ</string>
 </resources>

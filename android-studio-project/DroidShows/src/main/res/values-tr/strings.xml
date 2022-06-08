@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Kurtar</string>
 <string name="messages_title_updating_series">Gösterileri güncelleştirme</string>
 <string name="messages_no_internet">İnternet bağlantısı yok</string>
+<string name="messages_no_permission">İstenen işlemi gerçekleştirmek için izin yetersiz</string>
 <string name="messages_title_update_series">Güncelleme gösterilir</string>
 <string name="messages_episodes">bölümler</string>
 <string name="messages_new_episodes">yeni bölümler</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Bölüm ayrıntıları</string>
 <string name="messsages_edit_seen_timestamp">Görülme zaman damgasını düzenle</string>
 <string name="messages_calendar_app_error">Takvim uygulaması bulunamadı!</string>
+<string name="messages_db_error_update">Güncelleme sırasında veritabanı hatası oluştu</string>
+<string name="messages_db_error_delete_serie">Show silinirken veritabanı hatası oluştu</string>
+<string name="messages_db_error_delete_episode">Bölüm silinirken veritabanı hatası oluştu</string>
 <string name="messages_api_con_error">Bağlantı kurulurken hata oluştu TMDb API. Yeniden deneyin.</string>
 <string name="messages_marked_seen">görüldüğü gibi işaretlendi</string>
 <string name="messages_marked_unseen">görünmeyen</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">Oyuncular:</string>
 <string name="showstatus_continuing">devam etme</string>
 <string name="showstatus_ended">sona erdirildi</string>
+<string name="wiki_search_query_suffix">televizyon dizisi</string>
 </resources>

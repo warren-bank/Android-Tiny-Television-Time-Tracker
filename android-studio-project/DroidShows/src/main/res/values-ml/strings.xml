@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Recover</string>
 <string name="messages_title_updating_series">പ്രദര്ശനം കാണിക്കുന്നു</string>
 <string name="messages_no_internet">ഇന്റര്നെറ്റ് ബന്ധം ലഭ്യമല്ല</string>
+<string name="messages_no_permission">ആവശ്യപ്പെട്ട പ്രക്രിയ പ്രവര്ത്തിപ്പിക്കാന് ആവശ്യമായ അനുവാദം</string>
 <string name="messages_title_update_series">പരിഷ്കരിക്കുക</string>
 <string name="messages_episodes">പ്രശസ്തി</string>
 <string name="messages_new_episodes">പുതിയ പ്രദര്ശനം</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">എപ്പിസോഡിന്റെ വിവരങ്ങള്</string>
 <string name="messsages_edit_seen_timestamp">കാണുന്ന സമയസ്റ്റാമ്പ് ചിട്ടപ്പെടുത്തുക</string>
 <string name="messages_calendar_app_error">കലണ്ടര് ആപ്പ് ലഭ്യമല്ല!</string>
+<string name="messages_db_error_update">ഡാറ്റാബേസ് പിശക്</string>
+<string name="messages_db_error_delete_serie">കാണിക്കുമ്പോള് ഡാറ്റാബേസ് പിശക്</string>
+<string name="messages_db_error_delete_episode">ഡാറ്റാബേസ് പിശക്</string>
 <string name="messages_api_con_error">ബന്ധിപ്പിക്കുന്നതില് പിശക് TMDb API. വീണ്ടും ശ്രമിക്കുക.</string>
 <string name="messages_marked_seen">കാണുന്നതുപോലെ അടയാളപ്പെടുത്തിയിരിക്കുന്നു</string>
 <string name="messages_marked_unseen">കാണപ്പെടുന്നതുപോലെ അടയാളപ്പെടുത്തിയിരിക്കുന്നു</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">ആക്ടേഴ്സ്:</string>
 <string name="showstatus_continuing">തുടരുന്നു</string>
 <string name="showstatus_ended">അവസാനിച്ചിരിക്കുന്നു</string>
+<string name="wiki_search_query_suffix">ടെലിവിഷൻ സീരീസ്</string>
 </resources>

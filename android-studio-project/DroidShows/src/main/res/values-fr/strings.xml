@@ -76,6 +76,7 @@
 <string name="menu_unarchive">Ne pas archiver</string>
 <string name="messages_title_updating_series">Mise à jour des séries</string>
 <string name="messages_no_internet">Aucune connexion internet</string>
+<string name="messages_no_permission">Droits insuffisants pour effectuer l\'opération demandée</string>
 <string name="messages_title_update_series">Mettre à jour les séries</string>
 <string name="messages_episodes">épisodes</string>
 <string name="messages_new_episodes">nouveaux épisodes</string>
@@ -101,6 +102,9 @@
 <string name="messsages_view_ep_details">Détail de l\'épisode</string>
 <string name="messsages_edit_seen_timestamp">Modifier l\'horodatage de visualisation</string>
 <string name="messages_calendar_app_error">Aucune application Calendrier trouvée!</string>
+<string name="messages_db_error_update">Erreur lors de la mise à jour</string>
+<string name="messages_db_error_delete_serie">Erreur de base de données lors de la suppression du</string>
+<string name="messages_db_error_delete_episode">Erreur lors de la suppression d\'un épisode</string>
 <string name="messages_api_con_error">Erreur de connexion à TMDb API. Essayez à nouveau.</string>
 <string name="messages_marked_seen">marqué comme vu</string>
 <string name="messages_marked_unseen">marqué comme non vu</string>
@@ -122,4 +126,5 @@
 <string name="series_actors">Acteurs:</string>
 <string name="showstatus_continuing">à suivre</string>
 <string name="showstatus_ended">terminé</string>
+<string name="wiki_search_query_suffix">Série télévisée</string>
 </resources>

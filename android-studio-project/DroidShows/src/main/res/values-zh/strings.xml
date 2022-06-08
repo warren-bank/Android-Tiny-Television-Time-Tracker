@@ -68,6 +68,7 @@
 <string name="menu_unarchive">恢复</string>
 <string name="messages_title_updating_series">正在更新显示</string>
 <string name="messages_no_internet">无因特网连接可用</string>
+<string name="messages_no_permission">许可权不足，无法执行请求的操作</string>
 <string name="messages_title_update_series">更新显示</string>
 <string name="messages_episodes">集数</string>
 <string name="messages_new_episodes">新集</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">事件详细信息</string>
 <string name="messsages_edit_seen_timestamp">编辑看到的时间戳记</string>
 <string name="messages_calendar_app_error">找不到日历应用程序!</string>
+<string name="messages_db_error_update">更新时发生数据库错误</string>
+<string name="messages_db_error_delete_serie">删除显示时发生数据库错误</string>
+<string name="messages_db_error_delete_episode">删除事件时发生数据库错误</string>
 <string name="messages_api_con_error">连接至 TMDb API. 再试一次.</string>
 <string name="messages_marked_seen">已标记为所见</string>
 <string name="messages_marked_unseen">标记为未显示</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">演员:</string>
 <string name="showstatus_continuing">继续</string>
 <string name="showstatus_ended">终结</string>
+<string name="wiki_search_query_suffix">电视剧</string>
 </resources>

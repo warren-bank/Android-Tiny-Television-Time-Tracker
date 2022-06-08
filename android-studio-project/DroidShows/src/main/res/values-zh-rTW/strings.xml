@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Recover</string>
 <string name="messages_title_updating_series">正在更新顯示</string>
 <string name="messages_no_internet">沒有可用的網際網路連線</string>
+<string name="messages_no_permission">權限不足，無法執行所要求的作業</string>
 <string name="messages_title_update_series">更新顯示</string>
 <string name="messages_episodes">集</string>
 <string name="messages_new_episodes">新劇集</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Episode 詳細資料</string>
 <string name="messsages_edit_seen_timestamp">編輯查看時間戳記</string>
 <string name="messages_calendar_app_error">找不到行事曆應用程式!</string>
+<string name="messages_db_error_update">更新時發生資料庫錯誤</string>
+<string name="messages_db_error_delete_serie">刪除顯示時發生資料庫錯誤</string>
+<string name="messages_db_error_delete_episode">刪除事件時發生資料庫錯誤</string>
 <string name="messages_api_con_error">連接時發生錯誤 TMDb API. 再試一次.</string>
 <string name="messages_marked_seen">標示為已看到</string>
 <string name="messages_marked_unseen">標示為未看到</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">動作者:</string>
 <string name="showstatus_continuing">繼續</string>
 <string name="showstatus_ended">已結束</string>
+<string name="wiki_search_query_suffix">電視劇</string>
 </resources>

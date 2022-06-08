@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Obnovi</string>
 <string name="messages_title_updating_series">Posodabljanje prikazuje</string>
 <string name="messages_no_internet">Internetna povezava ni na voljo</string>
+<string name="messages_no_permission">Nezadostno dovoljenje za izvedbo zahtevane operacije</string>
 <string name="messages_title_update_series">Posodobitve kažejo</string>
 <string name="messages_episodes">epizode</string>
 <string name="messages_new_episodes">nove epizode</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Podrobnosti epizdela</string>
 <string name="messsages_edit_seen_timestamp">Urejanje vidnega časovnega žiga</string>
 <string name="messages_calendar_app_error">Najdena ni bila nobena aplikacija koledarja!</string>
+<string name="messages_db_error_update">Napaka baze podatkov med posodabljanja</string>
+<string name="messages_db_error_delete_serie">Napaka baze podatkov med brisanju</string>
+<string name="messages_db_error_delete_episode">Napaka baze podatkov med brisanju epizod</string>
 <string name="messages_api_con_error">Napaka pri povezovanju z TMDb API. Poskusite znova..</string>
 <string name="messages_marked_seen">označen kot viden</string>
 <string name="messages_marked_unseen">označena kot nevidna</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">Igralci:</string>
 <string name="showstatus_continuing">nadaljevanje</string>
 <string name="showstatus_ended">se je končal</string>
+<string name="wiki_search_query_suffix">serija televizijskih programov</string>
 </resources>

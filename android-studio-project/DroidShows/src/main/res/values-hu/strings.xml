@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Átvétel</string>
 <string name="messages_title_updating_series">Frissítési sorozat</string>
 <string name="messages_no_internet">Nincs elérhető internetkapcsolat</string>
+<string name="messages_no_permission">Nem elegendő engedély a kért művelet végrehajtásához</string>
 <string name="messages_title_update_series">Frissítési show</string>
 <string name="messages_episodes">Epizódok</string>
 <string name="messages_new_episodes">új epizódok</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Fordította:</string>
 <string name="messsages_edit_seen_timestamp">Meglátott időpecsét szerkesztése</string>
 <string name="messages_calendar_app_error">Nem található naptáralkalmazás!</string>
+<string name="messages_db_error_update">Adatbázis hiba a frissítés során</string>
+<string name="messages_db_error_delete_serie">Adatbázis hiba a show törlése során</string>
+<string name="messages_db_error_delete_episode">Adatbázis hiba az epizód törlése során</string>
 <string name="messages_api_con_error">Hiba a csatlakozáskor TMDb API. Próbáld újra..</string>
 <string name="messages_marked_seen">Megjelöltek szerint</string>
 <string name="messages_marked_unseen">Mintha láthatatlan lett volna</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">Actor:</string>
 <string name="showstatus_continuing">Folyamatos</string>
 <string name="showstatus_ended">Befejeződött</string>
+<string name="wiki_search_query_suffix">Televíziós sorozat</string>
 </resources>

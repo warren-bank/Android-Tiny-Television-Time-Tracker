@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Atgūt</string>
 <string name="messages_title_updating_series">Atjaunināšanas parāda</string>
 <string name="messages_no_internet">Nav pieejams interneta pieslēgums</string>
+<string name="messages_no_permission">Nepietiekama atļauja, lai veiktu pieprasīto darbību</string>
 <string name="messages_title_update_series">Atjaunot parāda</string>
 <string name="messages_episodes">,</string>
 <string name="messages_new_episodes">jaunas epizodes</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Epizode</string>
 <string name="messsages_edit_seen_timestamp">Rediģēt redzēto laika zīmogu</string>
 <string name="messages_calendar_app_error">Nav atrasta neviena kalendāra lietotne!</string>
+<string name="messages_db_error_update">Datu bāzes kļūda atjauninot</string>
+<string name="messages_db_error_delete_serie">Datu bāzes kļūda dzēšot šovu</string>
+<string name="messages_db_error_delete_episode">Datubāzes kļūda dzēšot epizodi</string>
 <string name="messages_api_con_error">Kļūda, kas savieno TMDb API. Mēģiniet vēlreiz.</string>
 <string name="messages_marked_seen">iezīmēts kā redzams</string>
 <string name="messages_marked_unseen">iezīmēts kā neredzēts</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">Aktori:</string>
 <string name="showstatus_continuing">,</string>
 <string name="showstatus_ended">, kas</string>
+<string name="wiki_search_query_suffix">televīzijas seriāls</string>
 </resources>

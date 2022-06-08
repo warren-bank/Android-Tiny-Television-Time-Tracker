@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Pulihkan</string>
 <string name="messages_title_updating_series">Memperbarui menunjukkan</string>
 <string name="messages_no_internet">Tidak ada koneksi Internet yang tersedia</string>
+<string name="messages_no_permission">Tidak cukup izin untuk melakukan operasi yang diminta</string>
 <string name="messages_title_update_series">Pemutakhiran menunjukkan</string>
 <string name="messages_episodes">Episode</string>
 <string name="messages_new_episodes">episode baru</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Rincian episode</string>
 <string name="messsages_edit_seen_timestamp">Sunting timestamp dilihat</string>
 <string name="messages_calendar_app_error">Tidak ada aplikasi kalender yang ditemukan!</string>
+<string name="messages_db_error_update">Kesalahan basis data saat memperbarui</string>
+<string name="messages_db_error_delete_serie">Kesalahan basis data ketika sedang menghapus</string>
+<string name="messages_db_error_delete_episode">Galat basis data saat menghapus episode</string>
 <string name="messages_api_con_error">Kesalahan dalam menghubungkan ke TMDb API. Coba lagi.</string>
 <string name="messages_marked_seen">Ditandai sebagai terlihat</string>
 <string name="messages_marked_unseen">ditandai sebagai tak terlihat</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">Para Aktor:</string>
 <string name="showstatus_continuing">Lanjutkan</string>
 <string name="showstatus_ended">Berakhir</string>
+<string name="wiki_search_query_suffix">Serial Televisi</string>
 </resources>

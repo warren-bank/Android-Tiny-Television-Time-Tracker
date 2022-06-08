@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Vastaanotto</string>
 <string name="messages_title_updating_series">Päivittäiset ohjelmat</string>
 <string name="messages_no_internet">Internet-yhteyttä ei ole käytettävissä</string>
+<string name="messages_no_permission">Pyydetyn toiminnon toteutus ei riitä</string>
 <string name="messages_title_update_series">Päivitys</string>
 <string name="messages_episodes">Jaksot</string>
 <string name="messages_new_episodes">Uudet jaksot</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Episode-tiedot</string>
 <string name="messsages_edit_seen_timestamp">Muokkaa aikaleima</string>
 <string name="messages_calendar_app_error">Kalenter-sovellusta ei löytynyt!</string>
+<string name="messages_db_error_update">Tietokantavirhe päivitettäessä</string>
+<string name="messages_db_error_delete_serie">Tietokantavirhe ohjelman poiston aikana</string>
+<string name="messages_db_error_delete_episode">Tietokantavirhe jakson poiston aikana</string>
 <string name="messages_api_con_error">Virhe yhteyden muodostuksessa TMDb API. Yritä uudelleen.</string>
 <string name="messages_marked_seen">Merkitty näkyväksi</string>
 <string name="messages_marked_unseen">Merkitty näkymättömäksi</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">Näyttelijät:</string>
 <string name="showstatus_continuing">Jatkuu</string>
 <string name="showstatus_ended">Päättyi</string>
+<string name="wiki_search_query_suffix">Televisiosarja</string>
 </resources>

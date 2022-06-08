@@ -68,6 +68,7 @@
 <string name="menu_unarchive">পুনরুত্থান</string>
 <string name="messages_title_updating_series">প্রদর্শন করা হচ্ছে</string>
 <string name="messages_no_internet">কোনো ইন্টারনেট সংযোগ বিদ্যমান নেই</string>
+<string name="messages_no_permission">অনুরোধ করা অপারেশন সম্পাদন করার জন্য অপর্যাপ্ত অনুমতি</string>
 <string name="messages_title_update_series">আপডেট প্রদর্শন</string>
 <string name="messages_episodes">পর্ব</string>
 <string name="messages_new_episodes">নতুন পর্ব</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">এপিসোড বিবরণ</string>
 <string name="messsages_edit_seen_timestamp">সময়-স্ট্যাম্প সম্পাদনা</string>
 <string name="messages_calendar_app_error">কোনো ক্যালেন্ডার অ্যাপ পাওয়া যায়নি!</string>
+<string name="messages_db_error_update">ডেটাবেজ সংক্রান্ত ত্রুটি</string>
+<string name="messages_db_error_delete_serie">প্রদর্শন মুছে ফেলার সময় ডেটাবেজ ত্রুটি</string>
+<string name="messages_db_error_delete_episode">পর্ব মুছে ফেলার সময় ডেটাবেজ ত্রুটি</string>
 <string name="messages_api_con_error">সংযোগ করতে সমস্যা হয়েছে TMDb API. পুনরায় চেষ্টা করুন.</string>
 <string name="messages_marked_seen">চিহ্নিত হিসাবে চিহ্নিত করা হয়েছে</string>
 <string name="messages_marked_unseen">অদেখা হিসাবে চিহ্নিত</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">অ্যাক্টরস:</string>
 <string name="showstatus_continuing">ক্রমাগত</string>
 <string name="showstatus_ended">শেষ হয়েছে</string>
+<string name="wiki_search_query_suffix">টেলিভিশন সিরিজ</string>
 </resources>

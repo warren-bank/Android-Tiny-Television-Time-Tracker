@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Taastamine</string>
 <string name="messages_title_updating_series">Näitab</string>
 <string name="messages_no_internet">Internetiühendus puudub</string>
+<string name="messages_no_permission">Soovitud toimingu sooritamiseks ei ole piisavalt luba</string>
 <string name="messages_title_update_series">Uuenda</string>
 <string name="messages_episodes">episoodid</string>
 <string name="messages_new_episodes">uued episoodid</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Episoodide üksikasjad</string>
 <string name="messsages_edit_seen_timestamp">Redigeerimine vaata ajatemplit</string>
 <string name="messages_calendar_app_error">Kalendrirakendus ei leitud!</string>
+<string name="messages_db_error_update">Andmebaasi viga uuendamisel</string>
+<string name="messages_db_error_delete_serie">Andmebaasi kustutamise ajal viga</string>
+<string name="messages_db_error_delete_episode">Andmebaasi viga episoodi kustutamisel</string>
 <string name="messages_api_con_error">Viga ühendumisel TMDb API. Proovi uuesti.</string>
 <string name="messages_marked_seen">tähistatud kui nähtu</string>
 <string name="messages_marked_unseen">märgistamata</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">Osalejad:</string>
 <string name="showstatus_continuing">jätkates</string>
 <string name="showstatus_ended">lõppenud</string>
+<string name="wiki_search_query_suffix">teleseriaal</string>
 </resources>

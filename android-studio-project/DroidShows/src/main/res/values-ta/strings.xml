@@ -68,6 +68,7 @@
 <string name="menu_unarchive">மீட்க</string>
 <string name="messages_title_updating_series">புதுப்பிக்கப்படுகிறது</string>
 <string name="messages_no_internet">இணைய இணைப்பு இல்லை</string>
+<string name="messages_no_permission">கோரப்பட்ட செயல்பாட்டை செயல்படுத்துவதற்கு தவறான அனுமதி</string>
 <string name="messages_title_update_series">புதுப்பித்தல்</string>
 <string name="messages_episodes">விசைகள்</string>
 <string name="messages_new_episodes">புதிய குறும்படங்கள்</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">எப்போதும் விவரங்கள்</string>
 <string name="messsages_edit_seen_timestamp">பார்க்கப்பட்ட நேரத்தைக் காட்டு</string>
 <string name="messages_calendar_app_error">நாள்காட்டி பயன்பாடு இல்லை!</string>
+<string name="messages_db_error_update">தரவுத்தளத்தின் பிழை</string>
+<string name="messages_db_error_delete_serie">அழிக்கும் போது தரவுத்தள பிழை</string>
+<string name="messages_db_error_delete_episode">அழிக்கும் போது தரவுத்தள பிழை</string>
 <string name="messages_api_con_error">இணைக்கும்போது பிழை TMDb API. மீண்டும் முயற்சி.</string>
 <string name="messages_marked_seen">பார்க்கப்படாத</string>
 <string name="messages_marked_unseen">பார்க்கப்படாத</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">நடிகர்கள்:</string>
 <string name="showstatus_continuing">தொடர்ந்து</string>
 <string name="showstatus_ended">முடிவடைந்தது</string>
+<string name="wiki_search_query_suffix">தொலைக்காட்சி தொடர்</string>
 </resources>

@@ -83,6 +83,7 @@
 <string name="menu_unarchive">Aus dem Archiv entfernen</string>
 <string name="messages_title_updating_series">Serien aktualisieren</string>
 <string name="messages_no_internet">Keine Internetverbindung vorhanden</string>
+<string name="messages_no_permission">Die Berechtigung zum Ausführen der angeforderten Operation ist nicht ausreichend.</string>
 <string name="messages_title_update_series">Serien aktualisieren</string>
 <string name="messages_episodes">Folgen</string>
 <string name="messages_new_episodes">neue Folgen</string>
@@ -108,6 +109,9 @@
 <string name="messsages_view_ep_details">Details der Folge anzeigen</string>
 <string name="messsages_edit_seen_timestamp">Anschau-Zeitpunkt ändern</string>
 <string name="messages_calendar_app_error">Keine Kalender-App gefunden!</string>
+<string name="messages_db_error_update">Datenbankfehler beim Aktualisieren</string>
+<string name="messages_db_error_delete_serie">Datenbankfehler beim Löschen der Show</string>
+<string name="messages_db_error_delete_episode">Datenbankfehler beim Löschen von Episode</string>
 <string name="messages_api_con_error">Verbindung zu TMDb API nicht möglich. Versuche es erneut.</string>
 <string name="messages_marked_seen">als gesehen markiert</string>
 <string name="messages_marked_unseen">als ungesehen markiert</string>
@@ -129,4 +133,5 @@
 <string name="series_actors">Schauspieler:</string>
 <string name="showstatus_continuing">läuft</string>
 <string name="showstatus_ended">beendet</string>
+<string name="wiki_search_query_suffix">Fernsehserie</string>
 </resources>

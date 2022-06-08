@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Recuperar</string>
 <string name="messages_title_updating_series">Atualização de shows</string>
 <string name="messages_no_internet">Sem conexão à Internet disponível</string>
+<string name="messages_no_permission">Permissão insuficiente para realizar a operação solicitada</string>
 <string name="messages_title_update_series">Programas de atualização</string>
 <string name="messages_episodes">episódios</string>
 <string name="messages_new_episodes">novos episódios</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Detalhes do episódio</string>
 <string name="messsages_edit_seen_timestamp">Editar timestamp visto</string>
 <string name="messages_calendar_app_error">Nenhum app Agenda encontrado!</string>
+<string name="messages_db_error_update">Erro do banco de dados enquanto</string>
+<string name="messages_db_error_delete_serie">Erro do banco de dados enquanto exclui show</string>
+<string name="messages_db_error_delete_episode">Erro do banco de dados ao excluir episódio</string>
 <string name="messages_api_con_error">Erro ao conectar ao TMDb API. Tente novamente.</string>
 <string name="messages_marked_seen">marcou como visto</string>
 <string name="messages_marked_unseen">marcado como invisto</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">Atores:</string>
 <string name="showstatus_continuing">continuas</string>
 <string name="showstatus_ended">finalizado</string>
+<string name="wiki_search_query_suffix">série de televisão</string>
 </resources>

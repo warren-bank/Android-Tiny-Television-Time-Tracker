@@ -68,6 +68,7 @@
 <string name="menu_unarchive">ریپر</string>
 <string name="messages_title_updating_series">اپڈیٹنگ شو</string>
 <string name="messages_no_internet">کوئی انٹرنیٹ کنکشن دستیاب نہیں</string>
+<string name="messages_no_permission">مطلوبہ کارروائی انجام دینے کی اجازت</string>
 <string name="messages_title_update_series">اپ ڈیٹ شو</string>
 <string name="messages_episodes">اقساط</string>
 <string name="messages_new_episodes">نئی اقساط</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">قسط کی تفصیلات</string>
 <string name="messsages_edit_seen_timestamp">تدوین کا ٹائم ٹکٹ دیکھا</string>
 <string name="messages_calendar_app_error">کوئی کیلنڈر ایپ نہیں ملا!</string>
+<string name="messages_db_error_update">ڈیٹا بیس کی خرابی کو جبکہ اپ ڈیٹ</string>
+<string name="messages_db_error_delete_serie">ڈیٹنگ شو کرتے ہوئے ڈیٹا بیس کی خرابی</string>
+<string name="messages_db_error_delete_episode">پرکرن کو خارج کرتے ہوئے ڈیٹا بیس کی خرابی</string>
 <string name="messages_api_con_error">سے منسلک Error to TMDb API. پھر کوشش کریں.</string>
 <string name="messages_marked_seen">جیسا کہ دیکھا گیا</string>
 <string name="messages_marked_unseen">غیب کی نشان دہی</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">اداکار:</string>
 <string name="showstatus_continuing">جاری</string>
 <string name="showstatus_ended">ختم ہوا</string>
+<string name="wiki_search_query_suffix">ٹیلی ویژن سیریز</string>
 </resources>

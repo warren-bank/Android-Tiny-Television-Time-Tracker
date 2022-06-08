@@ -68,6 +68,7 @@
 <string name="menu_unarchive">પાછા મેળવો</string>
 <string name="messages_title_updating_series">બતાવે છે</string>
 <string name="messages_no_internet">ઇન્ટરનેટ જોડાણ ઉપલબ્ધ નથી</string>
+<string name="messages_no_permission">સૂચિત પ્રક્રિયા કરવા માટે અપૂરતી પરવાનગી આપો</string>
 <string name="messages_title_update_series">સુધારો બતાવે છે</string>
 <string name="messages_episodes">ભાગો</string>
 <string name="messages_new_episodes">નવી ભાગો</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">અઠવાડિયાનો વિગતો</string>
 <string name="messsages_edit_seen_timestamp">જોયેલ ટાઇમસ્ટેમ્પમાં ફેરફાર કરો</string>
 <string name="messages_calendar_app_error">કોઈ કેલેન્ડર એપ મળ્યુ નથી!</string>
+<string name="messages_db_error_update">ડેટાબેઝ ભૂલ જ્યારે સુધારી રહ્યા હોય</string>
+<string name="messages_db_error_delete_serie">બતાવતી વખતે ડેટાબેઝ ભૂલ</string>
+<string name="messages_db_error_delete_episode">ડેટાબેઝ ભૂલ જ્યારે કાઢી રહ્યા હોય ત્યારે</string>
 <string name="messages_api_con_error">જોડાઇ રહ્યા હોય ત્યારે ભૂલ TMDb API. ફરીથી પ્રયત્ન કરો.</string>
 <string name="messages_marked_seen">જોયેલ તરીકે ચિહ્નિત થયેલ છે</string>
 <string name="messages_marked_unseen">જોયેલ તરીકે ચિહ્નિત થયેલ છે</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">એક્ટર:</string>
 <string name="showstatus_continuing">ચાલુ રાખો</string>
 <string name="showstatus_ended">અંત</string>
+<string name="wiki_search_query_suffix">ટેલિવિઝન શ્રેણી</string>
 </resources>

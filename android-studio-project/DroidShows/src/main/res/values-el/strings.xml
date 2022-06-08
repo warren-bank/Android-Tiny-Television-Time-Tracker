@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Ανάληψη.</string>
 <string name="messages_title_updating_series">Ενημέρωση εμφάνισης:</string>
 <string name="messages_no_internet">Δεν υπάρχει διαθέσιμη σύνδεση Internet</string>
+<string name="messages_no_permission">Ανεπαρκής άδεια εκτέλεσης της ζητούμενης λειτουργίας.</string>
 <string name="messages_title_update_series">Ενημερώσεις:</string>
 <string name="messages_episodes">επεισόδια:</string>
 <string name="messages_new_episodes">νέα επεισόδια:</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Επεισόδια</string>
 <string name="messsages_edit_seen_timestamp">Τροποποίηση αποτυπώματος χρόνου</string>
 <string name="messages_calendar_app_error">Δεν βρέθηκε εφαρμογή ημερολογίου!</string>
+<string name="messages_db_error_update">Σφάλμα βάσης δεδομένων κατά την ενημέρωση</string>
+<string name="messages_db_error_delete_serie">Σφάλμα βάσης δεδομένων κατά τη διαγραφή εμφάνισης</string>
+<string name="messages_db_error_delete_episode">Σφάλμα βάσης δεδομένων κατά τη διαγραφή επεισοδίων</string>
 <string name="messages_api_con_error">Σφάλμα σύνδεσης με το TMDb API. Δοκίμασε πάλι..</string>
 <string name="messages_marked_seen">(\')</string>
 <string name="messages_marked_unseen">επισημασμένο ως μη ορατό.</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">\' Ηθικοί:</string>
 <string name="showstatus_continuing">\')</string>
 <string name="showstatus_ended">Τέλος.</string>
+<string name="wiki_search_query_suffix">τηλεοπτικές σειρές:</string>
 </resources>

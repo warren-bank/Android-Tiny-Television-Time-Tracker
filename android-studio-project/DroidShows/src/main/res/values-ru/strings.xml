@@ -81,6 +81,7 @@
 <string name="menu_unarchive">Разархивировать</string>
 <string name="messages_title_updating_series">Обновить сериалы</string>
 <string name="messages_no_internet">Подключение к интернету отсутствует</string>
+<string name="messages_no_permission">Недостаточно прав для выполнения запрошенной операции</string>
 <string name="messages_title_update_series">Обновление сериалов</string>
 <string name="messages_episodes">серии</string>
 <string name="messages_new_episodes">новые серии</string>
@@ -106,6 +107,9 @@
 <string name="messsages_view_ep_details">Показать информацию о серии</string>
 <string name="messsages_edit_seen_timestamp">Изменить дату просмотра</string>
 <string name="messages_calendar_app_error">Приложение Календаря не найдено!</string>
+<string name="messages_db_error_update">Ошибка базы данных при обновлении</string>
+<string name="messages_db_error_delete_serie">Ошибка базы данных при удалении отображения</string>
+<string name="messages_db_error_delete_episode">Ошибка базы данных при удалении эпизода</string>
 <string name="messages_api_con_error">Ошибка подключения к TMDb API. Попробуйте снова.</string>
 <string name="messages_marked_seen">пометить просмотренным</string>
 <string name="messages_marked_unseen">пометить непросмотренным</string>
@@ -127,4 +131,5 @@
 <string name="series_actors">В ролях:</string>
 <string name="showstatus_continuing">продолжается</string>
 <string name="showstatus_ended">закончен</string>
+<string name="wiki_search_query_suffix">телесериалы</string>
 </resources>

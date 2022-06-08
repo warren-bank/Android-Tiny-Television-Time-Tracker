@@ -68,6 +68,7 @@
 <string name="menu_unarchive">पुन: प्राप्त गर्नुहोस्</string>
 <string name="messages_title_updating_series">अद्यावधिक गर्दै</string>
 <string name="messages_no_internet">इन्टरनेट जडान उपलब्ध छैन</string>
+<string name="messages_no_permission">अनुरोध गरिएको सञ्चालन सम्पादन गर्न अपर्याप्त अनुमति</string>
 <string name="messages_title_update_series">अद्यावधिक देखाउँछ</string>
 <string name="messages_episodes">घटनाहरू</string>
 <string name="messages_new_episodes">नयाँ घटनाहरू</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">एपिसोड विवरण</string>
 <string name="messsages_edit_seen_timestamp">देखा पर्ने टाइमस्ट्याम्प सम्पादन गर्नुहोस्</string>
 <string name="messages_calendar_app_error">क्यालेन्डर अनुप्रयोग फेला परेन!</string>
+<string name="messages_db_error_update">अद्यावधिक गर्दा डाटाबेस त्रुटि</string>
+<string name="messages_db_error_delete_serie">डेटाबेस त्रुटि देखाउँदा त्रुटि</string>
+<string name="messages_db_error_delete_episode">घटना मेट्दा डाटाबेस त्रुटि</string>
 <string name="messages_api_con_error">मा जडान गर्दा त्रुटि TMDb API. फेरि प्रयास गर्नुहोस्.</string>
 <string name="messages_marked_seen">देखिएको रूपमा चिन्ह लगायो</string>
 <string name="messages_marked_unseen">अदृश्य रूपमा चिन्ह लगायो</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">एक्टर:</string>
 <string name="showstatus_continuing">जारी</string>
 <string name="showstatus_ended">समाप्त भयो</string>
+<string name="wiki_search_query_suffix">टेलिभिजन श्रृङ्खला</string>
 </resources>

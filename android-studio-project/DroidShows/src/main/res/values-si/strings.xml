@@ -68,6 +68,7 @@
 <string name="menu_unarchive">සුවය</string>
 <string name="messages_title_updating_series">පෙන්වන්නේ</string>
 <string name="messages_no_internet">අන්තර්ජාල සබඳතාව නොපවතී</string>
+<string name="messages_no_permission">ඉල්ලුම් කළ මෙහෙයුම සිදු කිරීමට ප්රමාණවත් අවසරයක්</string>
 <string name="messages_title_update_series">යාවත්කාලීන පෙන්වීම</string>
 <string name="messages_episodes">කොටස්</string>
 <string name="messages_new_episodes">නව කොටස්</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">කොටස විස්තර කරන්න.</string>
 <string name="messsages_edit_seen_timestamp">සංස්කාරකය දුඹුරු කාලරාමු</string>
 <string name="messages_calendar_app_error">කිසිඳු දිනදර්ශක ඇප් එකක් හමු නොවුනි!</string>
+<string name="messages_db_error_update">යාවත්කාලීන කරන අතර දත්ත ගබඩාව</string>
+<string name="messages_db_error_delete_serie">පෙන්වීම අතරතුර දත්ත ගබඩාව දෝෂයක්</string>
+<string name="messages_db_error_delete_episode">දත්ත මැවීම අතරතුර දත්ත ගබඩාව</string>
 <string name="messages_api_con_error">සම්බන්ධ කරමින් දෝෂයක් TMDb API. නැවත උත්සාහ කරන්න.</string>
 <string name="messages_marked_seen">ලෙස සලකුණු කර ඇත.</string>
 <string name="messages_marked_unseen">නොපෙනෙන ලෙස සලකුණු කරන්න</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">නළු නිළියන්:</string>
 <string name="showstatus_continuing">දිගටම</string>
 <string name="showstatus_ended">අවසන් විය</string>
+<string name="wiki_search_query_suffix">රූපවාහිනිය</string>
 </resources>

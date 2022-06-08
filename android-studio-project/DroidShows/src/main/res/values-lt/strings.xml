@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Susigrąžinimas</string>
 <string name="messages_title_updating_series">Atnaujinimui rodo</string>
 <string name="messages_no_internet">Interneto ryšio nėra</string>
+<string name="messages_no_permission">Nepakankamas leidimas atlikti prašomą operaciją</string>
 <string name="messages_title_update_series">Atnaujinti rodo</string>
 <string name="messages_episodes">-</string>
 <string name="messages_new_episodes">Naujų epizodų</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Epizodo duomenys</string>
 <string name="messsages_edit_seen_timestamp">Keisti laiko žymę</string>
 <string name="messages_calendar_app_error">Nerasta kalendoriaus app!</string>
+<string name="messages_db_error_update">Duomenų bazės klaida atnaujinant</string>
+<string name="messages_db_error_delete_serie">Duomenų bazės klaida, kai ištrinama</string>
+<string name="messages_db_error_delete_episode">Duomenų bazės klaida trinant epizodą</string>
 <string name="messages_api_con_error">Klaida, jungianti TMDb API. Bandykite dar.</string>
 <string name="messages_marked_seen">pažymėti kaip matyti</string>
 <string name="messages_marked_unseen">pažymėta kaip nematė</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">Aktoriai:</string>
 <string name="showstatus_continuing">Tęstinis</string>
 <string name="showstatus_ended">baigėsi</string>
+<string name="wiki_search_query_suffix">Televizijos kameros</string>
 </resources>

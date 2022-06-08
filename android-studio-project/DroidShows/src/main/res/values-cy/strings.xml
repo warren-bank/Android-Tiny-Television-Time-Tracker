@@ -68,6 +68,7 @@
 <string name="menu_unarchive">Adfer</string>
 <string name="messages_title_updating_series">Diweddaru sioeau</string>
 <string name="messages_no_internet">Dim cysylltiad Rhyngrwyd ar gael</string>
+<string name="messages_no_permission">Caniatâd annigonol i gyflawni\'r gweithrediad a ofynwyd amdano</string>
 <string name="messages_title_update_series">Dangos y diweddariad</string>
 <string name="messages_episodes">episodau</string>
 <string name="messages_new_episodes">episodau</string>
@@ -93,6 +94,9 @@
 <string name="messsages_view_ep_details">Manylion y bennod</string>
 <string name="messsages_edit_seen_timestamp">Golygu stamp amser</string>
 <string name="messages_calendar_app_error">Heb ganfod ap Calendr!</string>
+<string name="messages_db_error_update">Gwall cronfa ddata wrth ddiweddaru</string>
+<string name="messages_db_error_delete_serie">Gwall cronfa ddata wrth ddileu sioe</string>
+<string name="messages_db_error_delete_episode">Gwall cronfa ddata wrth ddileu \' r digwyddiad</string>
 <string name="messages_api_con_error">Gwall wrth gysylltu TMDb API. Ceisiwch eto.</string>
 <string name="messages_marked_seen">wedi ei farcio fel</string>
 <string name="messages_marked_unseen">wedi\'i farcio fel heb ei weld</string>
@@ -114,4 +118,5 @@
 <string name="series_actors">Actorion:</string>
 <string name="showstatus_continuing">parhau</string>
 <string name="showstatus_ended">dod i ben</string>
+<string name="wiki_search_query_suffix">cyfres deledu</string>
 </resources>
