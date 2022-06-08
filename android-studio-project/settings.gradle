@@ -1,4 +1,4 @@
-include ':DroidShows'
+include ':TV-Tracker'
 
 include ':org-yamj-api-common'
 include ':api-themoviedb'

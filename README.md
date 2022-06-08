@@ -1,5 +1,10 @@
-# [DroidShows](https://github.com/warren-bank/fork-Android-DroidShows)
+# [Tiny Television Time Tracker](https://github.com/warren-bank/Android-Tiny-Television-Time-Tracker)
+> <small>aka: _TV Tracker_</small><br>
 > <small>forked from: <a href="https://github.com/ltGuillaume/DroidShows">ltGuillaume/DroidShows</a></small>
+
+### Tiny Television Time Tracker: A Reboot of DroidShows
+
+This fork adds quite a bunch of features, among which a data API migration from TheTVDB v1 to TMDB v3.
 
 ### DroidShows: A Reboot of DroidSeries Offline TV Shows Tracker
 
