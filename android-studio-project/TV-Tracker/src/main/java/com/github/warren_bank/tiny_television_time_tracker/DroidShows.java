@@ -21,6 +21,8 @@ import com.github.warren_bank.tiny_television_time_tracker.utils.NetworkUtils;
 import com.github.warren_bank.tiny_television_time_tracker.utils.RuntimePermissionUtils;
 import com.github.warren_bank.tiny_television_time_tracker.utils.SwipeDetect;
 import com.github.warren_bank.tiny_television_time_tracker.utils.UrlUtils;
+import com.github.warren_bank.tiny_television_time_tracker.utils.WakeLockMgr;
+import com.github.warren_bank.tiny_television_time_tracker.utils.WifiLockMgr;
 
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
@@ -390,6 +392,12 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
         break;
       }
     }
+
+    if (willUpdate && (oldVersion < 8)) {
+      WakeLockMgr.acquire(DroidShows.this);
+      WifiLockMgr.acquire(DroidShows.this);
+    }
+
     return true;
   }
 
@@ -436,6 +444,11 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
         }
         break;
       }
+    }
+
+    if (oldVersion < 8) {
+      WakeLockMgr.release();
+      WifiLockMgr.release();
     }
   }
 
@@ -1641,6 +1654,9 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
           String       serieName;
           boolean      result;
 
+          WakeLockMgr.acquire(DroidShows.this);
+          WifiLockMgr.acquire(DroidShows.this);
+
           for (TVShowItem serie : items) {
             serieId   = serie.getSerieId();
             serieName = serie.getName();
@@ -1658,6 +1674,9 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
 
           m_ProgressDialog.dismiss();
           updateShowStats();
+
+          WakeLockMgr.release();
+          WifiLockMgr.release();
 
           if (!failedSerieNames.isEmpty()) {
             String toastMsg = getString(R.string.messages_db_error_update) + ((failedSerieNames.size() > 1) ? ":\n" : ": ") + TextUtils.join(", ", failedSerieNames);
@@ -1903,6 +1922,10 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
   protected void onStop() {
     if (autoBackup && asyncInfo.getStatus() != AsyncTask.Status.RUNNING)  // not updating
       backup(true);
+
+    WakeLockMgr.release();
+    WifiLockMgr.release();
+
     super.onStop();
   }
 
