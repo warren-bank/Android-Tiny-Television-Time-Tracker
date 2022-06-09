@@ -1156,8 +1156,6 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
     }
 
     try {
-      backup(false, backupFolder);
-
       copy(source, destination);
     }
     catch (IOException e) {
