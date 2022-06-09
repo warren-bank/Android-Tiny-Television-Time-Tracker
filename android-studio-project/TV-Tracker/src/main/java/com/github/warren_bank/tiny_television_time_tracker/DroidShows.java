@@ -216,6 +216,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
   public static Thread updateShowTh               = null;
   public static Thread updateAllShowsTh           = null;
   public static boolean logMode                   = false;
+  public static boolean isUpdating                = false;
   public static int removeEpisodeIdFromLog        = 0;
   public static ApiGateway api;
   public static DbGateway db;
@@ -371,12 +372,17 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
   }
 
   private void updateDatabase(int mode, Object passthrough, boolean skipPreDatabaseUpdateCallback) {
+    cancelAsyncInfo();
+
     Update updateDS = new Update(DroidShows.this);
     updateDS.updateDatabase(DroidShows.this, mode, passthrough, skipPreDatabaseUpdateCallback);
   }
 
   @Override // Update.DatabaseUpdateListener
   public boolean preDatabaseUpdate(int mode, int oldVersion, boolean willUpdate) {
+    cancelAsyncInfo();
+    isUpdating = true;
+
     switch (mode) {
       case Update.MODE_INSTALL: {
         if (willUpdate) {
@@ -450,6 +456,8 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
       WakeLockMgr.release();
       WifiLockMgr.release();
     }
+
+    isUpdating = false;
   }
 
   private void setFastScroll() {
@@ -1121,8 +1129,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
     }
     if (!auto && listView != null) {
       Toast.makeText(getApplicationContext(), getString(toastTxt) + "\n("+ backupFolder +")", Toast.LENGTH_LONG).show();
-      asyncInfo = new AsyncInfo();
-      asyncInfo.execute();
+      startAsyncInfo();
     }
   }
 
@@ -1238,7 +1245,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
           .show();
         return true;
       case TOGGLE_ARCHIVED_CONTEXT :
-        asyncInfo.cancel(true);
+        cancelAsyncInfo();
         boolean archived = !serie.getArchived();
         db.updateSerieArchived(serie.getSerieId(), archived);
         String message = serie.getName() + " " +
@@ -1249,8 +1256,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
         else
           serie.setArchived(archived);
         listView.post(updateListView);
-        asyncInfo = new AsyncInfo();
-        asyncInfo.execute();
+        startAsyncInfo();
         return true;
       case PIN_CONTEXT :
         boolean pinned = !serie.getPinned();
@@ -1259,7 +1265,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
         listView.post(updateListView);
         return true;
       case DELETE_CONTEXT :
-        asyncInfo.cancel(true);
+        cancelAsyncInfo();
         final Runnable deleteserie = new Runnable() {
           public void run() {
             String sname = serie.getName();
@@ -1270,8 +1276,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
             listView.post(updateListView);
             Looper.prepare();  // Threads don't have a message loop
             Toast.makeText(getApplicationContext(), sname +" "+ toastMsg, Toast.LENGTH_LONG).show();
-            asyncInfo = new AsyncInfo();
-            asyncInfo.execute();
+            startAsyncInfo();
             Looper.loop();
           }
         };
@@ -1642,6 +1647,9 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
       Toast.makeText(getApplicationContext(), R.string.messages_no_internet, Toast.LENGTH_LONG).show();
     } else if ((m_ProgressDialog == null) || !m_ProgressDialog.isShowing()) {
       if (!connectAPI()) return;
+      if (isUpdating)    return;
+
+      isUpdating = true;
 
       List<TVShowItem> items = db.createTVShowItems((searching() ? 2 : showArchive), false, null);
       int series_count = items.size();
@@ -1677,6 +1685,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
 
           WakeLockMgr.release();
           WifiLockMgr.release();
+          isUpdating = false;
 
           if (!failedSerieNames.isEmpty()) {
             String toastMsg = getString(R.string.messages_db_error_update) + ((failedSerieNames.size() > 1) ? ":\n" : ": ") + TextUtils.join(", ", failedSerieNames);
@@ -1713,8 +1722,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
 
   private void getSeries(int showArchive, boolean filterNetworks) {
     main.setVisibility(View.INVISIBLE);
-    if (asyncInfo != null)
-      asyncInfo.cancel(true);
+    cancelAsyncInfo();
     try {
       List<TVShowItem> items = logMode
         ? db.getLog()
@@ -1736,8 +1744,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
     setFastScroll();
     findViewById(R.id.add_show).setVisibility(!logMode ? View.VISIBLE : View.GONE);
     main.setVisibility(View.VISIBLE);
-    asyncInfo = new AsyncInfo();
-    asyncInfo.execute();
+    startAsyncInfo();
   }
 
   public void getNextLogged() {
@@ -1920,11 +1927,13 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
 
   @Override
   protected void onStop() {
-    if (autoBackup && asyncInfo.getStatus() != AsyncTask.Status.RUNNING)  // not updating
-      backup(true);
+    if (!isUpdating) {
+      WakeLockMgr.release();
+      WifiLockMgr.release();
 
-    WakeLockMgr.release();
-    WifiLockMgr.release();
+      if (autoBackup)
+        backup(true);
+    }
 
     super.onStop();
   }
@@ -1957,55 +1966,90 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
       findViewById(R.id.search).setVisibility(View.VISIBLE);
       listView.requestFocus();
     }
-    if (!logMode && (asyncInfo == null || asyncInfo.getStatus() != AsyncTask.Status.RUNNING)) {
-      asyncInfo = new AsyncInfo();
-      asyncInfo.execute();
+    if (!logMode) {
+      startAsyncInfo();
     }
   }
 
-  private static class AsyncInfo extends AsyncTask<Void, Void, Void> {
+  private void startAsyncInfo() {
+    if (!isUpdating && ((asyncInfo == null) || (asyncInfo.getStatus() != AsyncTask.Status.RUNNING))) {
+      String newToday        = DateFormats.NORMALIZE_DATE.format(Calendar.getInstance().getTime());
+      String lastStatsUpdate = (showArchive == 0) ? lastStatsUpdateCurrent : lastStatsUpdateArchive;
+      if (!lastStatsUpdate.equals(newToday)) {
+        Log.d(Constants.LOG_TAG, "AsyncInfo RUNNING | Today = " + newToday);
+
+        isUpdating = true;
+        WakeLockMgr.acquire(DroidShows.this);
+        WifiLockMgr.acquire(DroidShows.this);
+
+        asyncInfo = new AsyncInfo();
+        asyncInfo.execute(newToday);
+      }
+    }
+  }
+
+  private void cancelAsyncInfo() {
+    if (asyncInfo != null) {
+      asyncInfo.cancel(true);
+      asyncInfo = null;
+
+      WakeLockMgr.release();
+      WifiLockMgr.release();
+    }
+  }
+
+  private static class AsyncInfo extends AsyncTask<String, Void, Void> {
     @Override
-    protected Void doInBackground(Void... params) {
-  //  Log.d(Constants.LOG_TAG, "AsyncInfo Initializing");
+    protected Void doInBackground(String... params) {
       try {
+        String newToday    = params[0];
         int showArchiveTmp = showArchive;
-        String newToday = DateFormats.NORMALIZE_DATE.format(Calendar.getInstance().getTime());
-        String lastStatsUpdate = (showArchiveTmp == 0 ? lastStatsUpdateCurrent : lastStatsUpdateArchive);
-        if (!lastStatsUpdate.equals(newToday)) {
-          db.updateToday(newToday);
-  //      Log.d(Constants.LOG_TAG, "AsyncInfo RUNNING | Today = "+ newToday);
-          for (int i = 0; i < series.size(); i++) {
-            TVShowItem serie = series.get(i);
-            if (isCancelled()) return null;
-            int serieId        = serie.getSerieId();
-            int unwatched      = db.getEpsUnwatched(serieId);
-            int unwatchedAired = db.getEpsUnwatchedAired(serieId);
-            if ((unwatched != serie.getUnwatched()) || (unwatchedAired != serie.getUnwatchedAired())) {
-              if (isCancelled()) return null;
-              serie.setUnwatched(unwatched);
-              serie.setUnwatchedAired(unwatchedAired);
-              String nextEpisodeString = null;
-              if (showNextAiring && (unwatchedAired > 0)) {
-                NextEpisode nextEpisode = db.getNextEpisode(serieId);
-                nextEpisodeString       = db.getNextEpisodeString(nextEpisode, true);
-                serie.setNextEpisode(nextEpisodeString);
-              }
-              if (isCancelled()) return null;
-              db.updateShowStats(serieId, unwatched, unwatchedAired, nextEpisodeString);
-            }
-          }
+
+        db.updateToday(newToday);
+
+        for (int i = 0; i < series.size(); i++) {
+          TVShowItem serie = series.get(i);
           if (isCancelled()) return null;
-          listView.post(updateListView);
-          if (showArchiveTmp == 0 || showArchiveTmp == 2)
-            lastStatsUpdateCurrent = newToday;
-          if (showArchiveTmp > 0)
-            lastStatsUpdateArchive = newToday;
-  //      Log.d(Constants.LOG_TAG, "Updated show stats for "+ (showArchiveTmp == 0 ? "current" : "archive") +" on "+ newToday);
+          int serieId        = serie.getSerieId();
+          int unwatched      = db.getEpsUnwatched(serieId);
+          int unwatchedAired = db.getEpsUnwatchedAired(serieId);
+          if ((unwatched != serie.getUnwatched()) || (unwatchedAired != serie.getUnwatchedAired())) {
+            if (isCancelled()) return null;
+            serie.setUnwatched(unwatched);
+            serie.setUnwatchedAired(unwatchedAired);
+            String nextEpisodeString = null;
+            if (showNextAiring && (unwatchedAired > 0)) {
+              NextEpisode nextEpisode = db.getNextEpisode(serieId);
+              nextEpisodeString       = db.getNextEpisodeString(nextEpisode, true);
+              serie.setNextEpisode(nextEpisodeString);
+            }
+            if (isCancelled()) return null;
+            db.updateShowStats(serieId, unwatched, unwatchedAired, nextEpisodeString);
+          }
         }
+        if (isCancelled()) return null;
+        listView.post(updateListView);
+        if (showArchiveTmp == 0 || showArchiveTmp == 2)
+          lastStatsUpdateCurrent = newToday;
+        if (showArchiveTmp > 0)
+          lastStatsUpdateArchive = newToday;
       } catch (Exception e) {
         e.printStackTrace();
       }
       return null;
+    }
+
+    @Override
+    protected void onPostExecute(Void result) {
+      super.onPostExecute(result);
+
+      DroidShows.isUpdating = false;
+    }
+
+    @Override
+    protected void onCancelled(Void result) {
+      this.onPostExecute(result);
+      super.onCancelled();
     }
   }
 

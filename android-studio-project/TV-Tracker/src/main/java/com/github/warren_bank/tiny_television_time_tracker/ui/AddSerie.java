@@ -9,6 +9,8 @@ import com.github.warren_bank.tiny_television_time_tracker.ui.model.SearchResult
 import com.github.warren_bank.tiny_television_time_tracker.ui.model.TVShowItem;
 import com.github.warren_bank.tiny_television_time_tracker.utils.NetworkUtils;
 import com.github.warren_bank.tiny_television_time_tracker.utils.SwipeDetect;
+import com.github.warren_bank.tiny_television_time_tracker.utils.WakeLockMgr;
+import com.github.warren_bank.tiny_television_time_tracker.utils.WifiLockMgr;
 
 import android.app.AlertDialog;
 import android.app.ListActivity;
@@ -285,6 +287,9 @@ public class AddSerie extends ListActivity
       boolean alreadyExists = serieExists(searchResult.serieId);
       if (alreadyExists) return false;
 
+      WakeLockMgr.acquire(AddSerie.this);
+      WifiLockMgr.acquire(AddSerie.this);
+
       boolean archived = (DroidShows.showArchive == 1);
       boolean result   = api.addSeries(searchResult.serieId, langCode, archived);
 
@@ -307,6 +312,9 @@ public class AddSerie extends ListActivity
       super.onPostExecute(result);
       searchAdapter.notifyDataSetChanged();
       m_ProgressDialog.dismiss();
+
+      WakeLockMgr.release();
+      WifiLockMgr.release();
 
       if (!TextUtils.isEmpty(msg))
         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
@@ -391,6 +399,20 @@ public class AddSerie extends ListActivity
       }
       return v;
     }
+  }
+
+  // ---------------------------------------------------------------------------
+  // release resources when stopped
+  // ---------------------------------------------------------------------------
+
+  @Override
+  protected void onStop() {
+    if ((addSerieTask == null) || (addSerieTask.getStatus() != AsyncTask.Status.RUNNING)) {
+      WakeLockMgr.release();
+      WifiLockMgr.release();
+    }
+
+    super.onStop();
   }
 
 }
