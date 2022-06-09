@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">th</string>
+<string name="app_name_long">ตัวติดตามเวลาโทรทัศน์ขนาดเล็ก</string>
 <string name="layout_main_no_items">ไม่พบรายการ.</string>
 <string name="layout_search_no_items">ไม่พบรายการ.</string>
 <string name="layout_seasons_no_items">ไม่มีฤดูกาลที่จะแสดง.</string>
+<string name="active">แอ็คทีฟ</string>
 <string name="archive">เก็บถาวร</string>
 <string name="addserie_hint">แสดงเพื่อเพิ่ม...</string>
 <string name="search_hint">ค้นหา...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">ใช้โฟลเดอร์สำหรับการสำรองข้อมูลรายวัน</string>
 <string name="dialog_change_language">ภาษาเรื่องย่อ</string>
 <string name="dialog_restore">เรียกคืน</string>
+<string name="dialog_restore_now">การเรียกคืนข้อมูลสำรองจะแทนที่ข้อมูลทั้งหมดที่อยู่ในฐานข้อมูลในปัจจุบัน ดำเนินการต่อ?</string>
 <string name="dialog_restore_done">เรียกคืนฐานข้อมูลได้สำเร็จ</string>
 <string name="dialog_restore_failed">ไม่สามารถเรียกคืนฐานข้อมูลได้!</string>
 <string name="dialog_restore_notfound">ไม่พบการสำรองข้อมูลบนหน่วยเก็บข้อมูลภายนอก!</string>

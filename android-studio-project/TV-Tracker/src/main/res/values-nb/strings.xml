@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">nb</string>
+<string name="app_name_long">Tiny TelTV Time Tracker</string>
 <string name="layout_main_no_items">Ingen serier funnet.</string>
 <string name="layout_search_no_items">Ingen serier funnet.</string>
 <string name="layout_seasons_no_items">Ingen sesonger å vise.</string>
+<string name="active">Aktiv</string>
 <string name="archive">Arkiv</string>
 <string name="addserie_hint">Vis for å legge til ...</string>
 <string name="search_hint">Søk ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Bruk mappe for daglige reservekopieringer</string>
 <string name="dialog_change_language">Synopsis språk</string>
 <string name="dialog_restore">Gjenopprett</string>
+<string name="dialog_restore_now">Det å gjenopprette en sikkerhetskopi vil helt erstatte all informasjon som for tiden befinner seg i databasen. Fortsett?</string>
 <string name="dialog_restore_done">Database gjenopprettet</string>
 <string name="dialog_restore_failed">Kan ikke gjenopprette database!</string>
 <string name="dialog_restore_notfound">Kunne ikke finne backup på eksternt lager!</string>

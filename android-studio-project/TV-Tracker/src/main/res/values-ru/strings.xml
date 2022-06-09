@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ru</string>
+<string name="app_name_long">Крошечный телевизионный трекер</string>
 <string name="layout_main_no_items">Сериалы не найдены. Для добавления сералов используйте соответствующий пункт меню</string>
 <string name="layout_search_no_items">Сериалы не найдены.</string>
 <string name="layout_seasons_no_items">Сезонов нет.</string>
+<string name="active">Активно</string>
 <string name="archive">Архив</string>
 <string name="addserie_hint">Добавить сериал…</string>
 <string name="search_hint">Поиск…</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Использовать для ежедневного резервного копирования</string>
 <string name="dialog_change_language">Язык краткого описания</string>
 <string name="dialog_restore">Восстановить</string>
+<string name="dialog_restore_now">Восстановление резервной копии полностью заменит всю информацию, которая в настоящее время находится в базе данных. Продолжить?</string>
 <string name="dialog_restore_done">Данные успешно восстановлены</string>
 <string name="dialog_restore_failed">Невозможно восстановить!</string>
 <string name="dialog_restore_notfound">Резервная копия не найдена на внешнем носителе!</string>

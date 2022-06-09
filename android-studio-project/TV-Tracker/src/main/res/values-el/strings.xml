@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">el</string>
+<string name="app_name_long">Tiny Τηλεόραση Time Tracker</string>
 <string name="layout_main_no_items">Δεν βρέθηκαν παραστάσεις..</string>
 <string name="layout_search_no_items">Δεν βρέθηκαν παραστάσεις..</string>
 <string name="layout_seasons_no_items">Δεν υπάρχουν εποχές..</string>
+<string name="active">Ενεργός.</string>
 <string name="archive">\' Αρχείο</string>
 <string name="addserie_hint">Εμφάνιση για προσθήκη ...</string>
 <string name="search_hint">Αναζήτηση ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Χρήση φακέλου για καθημερινή εφεδρική αποθήκευση</string>
 <string name="dialog_change_language">Περίληψη:</string>
 <string name="dialog_restore">Επαναφορά:</string>
+<string name="dialog_restore_now">Η επαναφορά ενός εφεδρικού αντιγράφου θα αντικαταστήσει πλήρως όλες τις πληροφορίες στη βάση δεδομένων. Συνέχεια:?</string>
 <string name="dialog_restore_done">Η βάση δεδομένων επέστρεψε</string>
 <string name="dialog_restore_failed">Αδυναμία επαναφοράς βάσης δεδομένων!</string>
 <string name="dialog_restore_notfound">Δεν βρέθηκε εφεδρική αποθήκευση στο εξωτερικό χώρο αποθήκευσης.!</string>

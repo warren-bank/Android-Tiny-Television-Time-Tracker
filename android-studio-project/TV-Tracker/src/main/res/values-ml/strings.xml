@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ml</string>
+<string name="app_name_long">ചെറിയ ടെലിവിഷൻ ടൈം ട്രാക്കർ</string>
 <string name="layout_main_no_items">കാണിച്ചിരുന്നതൊന്നും കാണുന്നില്ല.</string>
 <string name="layout_search_no_items">കാണിച്ചിരുന്നതൊന്നും കാണുന്നില്ല.</string>
 <string name="layout_seasons_no_items">പ്രദര്ശിപ്പിക്കാന് ഋതുക്കളില്ല.</string>
+<string name="active">സജീവമാക്കുക</string>
 <string name="archive">ശേഖരം</string>
 <string name="addserie_hint">ചേര്ക്കാന് കാണിക്കുക ...</string>
 <string name="search_hint">തെരയുക ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">ദിവസേന ബാക്കപ്പുകള്ക്കായി ഫോള്ഡര് ഉപയോഗിക്കുക</string>
 <string name="dialog_change_language">Synopsis language</string>
 <string name="dialog_restore">വീണ്ടെടുക്കുക</string>
+<string name="dialog_restore_now">ഒരു ബാക്കപ്പ് വീണ്ടെടുക്കുവാന് ഈ ഡാറ്റാബേസില് ഇപ്പോള് എല്ലാ വിവരങ്ങളും പൂര്ണ്ണമായി മാറ്റും. തുടരുക?</string>
 <string name="dialog_restore_done">ഡാറ്റാബേസ് വിജയകരമായി വീണ്ടെടുത്ത</string>
 <string name="dialog_restore_failed">ഡാറ്റാബേസ് വീണ്ടെടുക്കുവാന് സാധ്യമായില്ല!</string>
 <string name="dialog_restore_notfound">ബാഹ്യ സംഭരണിയില് ബാക്കപ്പ് കണ്ടെത്തുവാന് സാധ്യമായില്ല!</string>

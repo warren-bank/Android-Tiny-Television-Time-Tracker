@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">da</string>
+<string name="app_name_long">Tiny Television Time Tracker</string>
 <string name="layout_main_no_items">Ingen programmer fundet.</string>
 <string name="layout_search_no_items">Ingen programmer fundet.</string>
 <string name="layout_seasons_no_items">Ingen sæsoner, der skal vises.</string>
+<string name="active">Aktiv</string>
 <string name="archive">Arkivér</string>
 <string name="addserie_hint">Vis for at tilføje ...</string>
 <string name="search_hint">Søg ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Brug folder til daglige backups</string>
 <string name="dialog_change_language">Synopsis-sprog</string>
 <string name="dialog_restore">Gendan</string>
+<string name="dialog_restore_now">Genindlæsning af en sikkerhedskopi vil helt erstatte alle de oplysninger, der i øjeblikket findes i databasen. Fortsæt?</string>
 <string name="dialog_restore_done">Database er gendannet</string>
 <string name="dialog_restore_failed">Kan ikke gendanne databasen!</string>
 <string name="dialog_restore_notfound">Kan ikke finde sikkerhedskopi på eksternt lager!</string>

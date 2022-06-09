@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">uk</string>
+<string name="app_name_long">Стеження за часовим часом</string>
 <string name="layout_main_no_items">Не знайдено жодного показника.</string>
 <string name="layout_search_no_items">Не знайдено жодного показника.</string>
 <string name="layout_seasons_no_items">Немає сезонів для показу.</string>
+<string name="active">Активний</string>
 <string name="archive">Архівувати</string>
 <string name="addserie_hint">Показати, щоб додати ...</string>
 <string name="search_hint">Пошук ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Використовувати теку для щоденних резервних копій</string>
 <string name="dialog_change_language">Мова синопсиса</string>
 <string name="dialog_restore">Відновити</string>
+<string name="dialog_restore_now">Відновлення резервної копії повністю замінить всю інформацію в базі даних. Продовжити?</string>
 <string name="dialog_restore_done">Базу даних успішно відновлено</string>
 <string name="dialog_restore_failed">Не вдалося відновити базу даних!</string>
 <string name="dialog_restore_notfound">Не вдалося знайти резервну копію на зовнішньому сховищі!</string>

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">hi</string>
+<string name="app_name_long">छोटा टेलीविजन समय ट्रेकर</string>
 <string name="layout_main_no_items">कोई शो नहीं मिला.</string>
 <string name="layout_search_no_items">कोई शो नहीं मिला.</string>
 <string name="layout_seasons_no_items">दिखाने के लिए कोई मौसम नहीं.</string>
+<string name="active">सक्रिय</string>
 <string name="archive">अभिलेखागार</string>
 <string name="addserie_hint">जोड़ने के लिए दिखाएँ ...</string>
 <string name="search_hint">ढूंढें ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">दैनिक बैकअप के लिए फ़ोल्डर का उपयोग करें</string>
 <string name="dialog_change_language">सिनोपसिस भाषा</string>
 <string name="dialog_restore">बहाल करें</string>
+<string name="dialog_restore_now">डेटाबेस में वर्तमान में सभी जानकारी को पूरी तरह से बदल देगा एक बैकअप बहाल करें. जारी रखें?</string>
 <string name="dialog_restore_done">डेटाबेस सफलतापूर्वक बहाल</string>
 <string name="dialog_restore_failed">डाटाबेस बहाल करने में असमर्थ!</string>
 <string name="dialog_restore_notfound">बाहरी भंडार पर बैकअप नहीं पा सका!</string>

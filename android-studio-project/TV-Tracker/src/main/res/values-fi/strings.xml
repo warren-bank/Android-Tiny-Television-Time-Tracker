@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">fi</string>
+<string name="app_name_long">Pienen televisioajan jäljitin</string>
 <string name="layout_main_no_items">Ei löytynyt.</string>
 <string name="layout_search_no_items">Ei löytynyt.</string>
 <string name="layout_seasons_no_items">Ei vuodenaikoja näytettäväksi.</string>
+<string name="active">Käytössä</string>
 <string name="archive">Arkisto</string>
 <string name="addserie_hint">Lisää ...</string>
 <string name="search_hint">Etsi ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Käytä päivittäisiä varmuuskopioita</string>
 <string name="dialog_change_language">Synopsis-kieli</string>
 <string name="dialog_restore">Palautus</string>
+<string name="dialog_restore_now">Varmistusvarmistuskopioinnin palautus korvaa kaikki tietokannassa olevat tiedot. Jatka?</string>
 <string name="dialog_restore_done">Tietokannan palautus on onnistunut</string>
 <string name="dialog_restore_failed">Tietokannan palautus ei onnistu!</string>
 <string name="dialog_restore_notfound">Ulkoista tallennustilaa ei löytynyt!</string>

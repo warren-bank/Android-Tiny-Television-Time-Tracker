@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">de</string>
+<string name="app_name_long">Tiny Television Time Tracker</string>
 <string name="layout_main_no_items">Keine Serien gefunden.</string>
 <string name="layout_search_no_items">Keine Serien gefunden.</string>
 <string name="layout_seasons_no_items">Keine Staffeln gefunden.</string>
+<string name="active">Aktiv</string>
 <string name="archive">Archiv</string>
 <string name="addserie_hint">Serie hinzufügen</string>
 <string name="search_hint">Serie suchen</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Für tägliche Sicherung verwenden</string>
 <string name="dialog_change_language">Sprache der Seriendetails</string>
 <string name="dialog_restore">Einlesen</string>
+<string name="dialog_restore_now">Durch das Wiederherstellen einer Sicherung werden alle derzeit in der Datenbank enthaltenen Informationen vollständig ersetzt. Weiter?</string>
 <string name="dialog_restore_done">Datenwiederherstellung fertig</string>
 <string name="dialog_restore_failed">Datenwiederherstellung fehlgeschlagen!</string>
 <string name="dialog_restore_notfound">Sicherungskopie nicht gefunden!</string>

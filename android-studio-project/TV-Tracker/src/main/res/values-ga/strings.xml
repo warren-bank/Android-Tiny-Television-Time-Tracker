@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ga</string>
+<string name="app_name_long">Rianóir Ama an Teilifíse Beag</string>
 <string name="layout_main_no_items">Níor aimsíodh aon taispeánadh.</string>
 <string name="layout_search_no_items">Níor aimsíodh aon taispeánadh.</string>
 <string name="layout_seasons_no_items">Níl aon séasúir le taispeáint.</string>
+<string name="active">Gníomhach</string>
 <string name="archive">Cartlann</string>
 <string name="addserie_hint">Taispeáin go dtí an ...</string>
 <string name="search_hint">Cuardaigh ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Úsáid fillteán le haghaidh cúllíne laethúil</string>
 <string name="dialog_change_language">Teanga synopsis</string>
 <string name="dialog_restore">Athchóirigh</string>
+<string name="dialog_restore_now">Beidh cúltaca cúltaca a chur in ionad gach eolas faoi láthair sa bhunachar sonraí. Lean?</string>
 <string name="dialog_restore_done">\@ info: inbox</string>
 <string name="dialog_restore_failed">Ní féidir bunachar sonraí a athchóiriú!</string>
 <string name="dialog_restore_notfound">Níorbh fhéidir cúltaca ar stóráil seachtrach a aimsiú!</string>

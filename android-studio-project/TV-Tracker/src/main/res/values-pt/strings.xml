@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">pt</string>
+<string name="app_name_long">Pequeno Tracker de Tempo de Televisão</string>
 <string name="layout_main_no_items">Nenhum mostra encontrado.</string>
 <string name="layout_search_no_items">Nenhum mostra encontrado.</string>
 <string name="layout_seasons_no_items">Sem estações para exibir.</string>
+<string name="active">Ativo</string>
 <string name="archive">Arquivo</string>
 <string name="addserie_hint">Mostrar para adicionar ...</string>
 <string name="search_hint">Pesquisar ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Usar pasta para backups diários</string>
 <string name="dialog_change_language">Linguagem de sinopse</string>
 <string name="dialog_restore">Restauração</string>
+<string name="dialog_restore_now">A restauração de um backup substituirá completamente todas as informações atualmente no banco de dados. Continuar?</string>
 <string name="dialog_restore_done">Banco de dados restaurado</string>
 <string name="dialog_restore_failed">Incapaz de restaurar banco de dados!</string>
 <string name="dialog_restore_notfound">Não foi possível encontrar backup no armazenamento externo!</string>

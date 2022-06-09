@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">sr</string>
+<string name="app_name_long">Мали телевизијски трагач времена</string>
 <string name="layout_main_no_items">Нема пронађених серија.</string>
 <string name="layout_search_no_items">Нема пронађених серија.</string>
 <string name="layout_seasons_no_items">Нема годишњих доба за приказ.</string>
+<string name="active">Активно</string>
 <string name="archive">Архива</string>
 <string name="addserie_hint">Прикажи да додаш ...</string>
 <string name="search_hint">Претражи ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Користи фасциклу за свакодневне резервне копије</string>
 <string name="dialog_change_language">Синопсис језик</string>
 <string name="dialog_restore">Врати</string>
+<string name="dialog_restore_now">Враћање резервне копије потпуно ће заменити све информације које су тренутно у бази података. Настави?</string>
 <string name="dialog_restore_done">База података је успешно обновљена</string>
 <string name="dialog_restore_failed">Не могу да вратим базу података!</string>
 <string name="dialog_restore_notfound">Не могу да нађем подршку на спољном складишту!</string>

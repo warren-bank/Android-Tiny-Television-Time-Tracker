@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">es</string>
+<string name="app_name_long">Diminuta Televisión Time Tracker</string>
 <string name="layout_main_no_items">No has añadido series.</string>
 <string name="layout_search_no_items">No se encontró ninguna serie.</string>
 <string name="layout_seasons_no_items">No hay temporadas que mostrar.</string>
+<string name="active">Activo</string>
 <string name="archive">Ver las series archivadas</string>
 <string name="addserie_hint">Nombre de la serie…</string>
 <string name="search_hint">Buscar…</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Uso para seguridad diaria</string>
 <string name="dialog_change_language">Idioma de las sinopsis</string>
 <string name="dialog_restore">Restaurar</string>
+<string name="dialog_restore_now">La restauración de una copia de seguridad sustituirá completamente toda la información actualmente en la base de datos. Continuar?</string>
 <string name="dialog_restore_done">Base de datos restaurada correctamente</string>
 <string name="dialog_restore_failed">¡No se ha podido restaurar la base de datos!</string>
 <string name="dialog_restore_notfound">¡No se ha podido encontrar la copia de seguridad en el almacenamiento externo!</string>

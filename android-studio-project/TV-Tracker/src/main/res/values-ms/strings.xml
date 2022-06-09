@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ms</string>
+<string name="app_name_long">Penjejak Masa Televisyen Kecil</string>
 <string name="layout_main_no_items">Tiada paparan ditemui.</string>
 <string name="layout_search_no_items">Tiada paparan ditemui.</string>
 <string name="layout_seasons_no_items">Tiada musim untuk dipaparkan.</string>
+<string name="active">&amp; Aktif</string>
 <string name="archive">Arkib</string>
 <string name="addserie_hint">Papar untuk tambah ...</string>
 <string name="search_hint">Gelintar ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Guna folder untuk sandar harian</string>
 <string name="dialog_change_language">Bahasa Synopsis</string>
 <string name="dialog_restore">Pulih</string>
+<string name="dialog_restore_now">Memulihkan sandar sepenuhnya akan menggantikan semua maklumat yang sedang dalam pangkalan data. Teruskan?</string>
 <string name="dialog_restore_done">Pangkalan data berjaya dipulihkan</string>
 <string name="dialog_restore_failed">Tidak dapat memulihkan pangkalan data!</string>
 <string name="dialog_restore_notfound">Tidak dapat cari sandar pada storan luaran!</string>

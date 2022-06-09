@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">gu</string>
+<string name="app_name_long">Tiny Television Time Tracker</string>
 <string name="layout_main_no_items">કોઈ શોધ શોધાયુ નથી.</string>
 <string name="layout_search_no_items">કોઈ શોધ શોધાયુ નથી.</string>
 <string name="layout_seasons_no_items">દર્શાવવા માટે ઋતુઓ નથી.</string>
+<string name="active">સક્રિય</string>
 <string name="archive">પેટી</string>
 <string name="addserie_hint">ઉમેરવા માટે બતાવો ...</string>
 <string name="search_hint">શોધ ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">હરોળ બેકઅપ માટે ફોલ્ડરને વાપરો</string>
 <string name="dialog_change_language">સારાંશ ભાષા</string>
 <string name="dialog_restore">પુનઃસંગ્રહો</string>
+<string name="dialog_restore_now">બેકઅપ પુનઃસંગ્રહવાનું વર્તમાનમાં ડેટાબેઝમાં બધી જાણકારી સંપૂર્ણપણે બદલશે. ચાલુ રાખો?</string>
 <string name="dialog_restore_done">ડેટાબેઝ સફળતાપૂર્વક</string>
 <string name="dialog_restore_failed">ડેટાબેઝ પુન: સંગ્રહ કરવામાં અસમર્થ!</string>
 <string name="dialog_restore_notfound">બાહ્ય સંગ્રહ પર બેકઅપ શોધી શક્યા નહિં!</string>

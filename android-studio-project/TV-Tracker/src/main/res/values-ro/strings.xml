@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ro</string>
+<string name="app_name_long">Mic de televiziune Time Tracker</string>
 <string name="layout_main_no_items">Nu există spectacole găsite.</string>
 <string name="layout_search_no_items">Nu există spectacole găsite.</string>
 <string name="layout_seasons_no_items">Nici un sezon pentru a afișa.</string>
+<string name="active">Activ</string>
 <string name="archive">Arhiva</string>
 <string name="addserie_hint">Arată pentru a adăuga ...</string>
 <string name="search_hint">Căutare ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Utilizați dosarul pentru backup-uri zilnice</string>
 <string name="dialog_change_language">Limba sinopsis</string>
 <string name="dialog_restore">Restabilește</string>
+<string name="dialog_restore_now">Restaurarea unui backup va înlocui complet toate informațiile aflate în prezent în baza de date. Continuă?</string>
 <string name="dialog_restore_done">Baza de date restaurată</string>
 <string name="dialog_restore_failed">Nu se poate restaura baza!</string>
 <string name="dialog_restore_notfound">Nu a putut găsi de rezervă pe stocare externă!</string>

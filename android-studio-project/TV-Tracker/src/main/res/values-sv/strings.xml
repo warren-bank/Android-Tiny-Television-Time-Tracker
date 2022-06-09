@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">sv</string>
+<string name="app_name_long">Tiny Television Time Tracker</string>
 <string name="layout_main_no_items">Inga program hittades.</string>
 <string name="layout_search_no_items">Inga program hittades.</string>
 <string name="layout_seasons_no_items">Inga säsonger att visa.</string>
+<string name="active">Aktiv</string>
 <string name="archive">Arkivera</string>
 <string name="addserie_hint">Visa att lägga till ...</string>
 <string name="search_hint">Sök ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Använd mapp för dagliga säkerhetskopieringar</string>
 <string name="dialog_change_language">Synopsisspråket</string>
 <string name="dialog_restore">Återställ</string>
+<string name="dialog_restore_now">Om du återställer en säkerhetskopia ersätts all information som finns i databasen helt och hållet. Fortsätt?</string>
 <string name="dialog_restore_done">Databasen återställdes</string>
 <string name="dialog_restore_failed">Det går inte att återställa databasen!</string>
 <string name="dialog_restore_notfound">Det gick inte att hitta säkerhetskopian för extern lagring!</string>

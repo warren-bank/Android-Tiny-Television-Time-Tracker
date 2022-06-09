@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">fr-CA</string>
+<string name="app_name_long">Tiny Television Time Tracker</string>
 <string name="layout_main_no_items">Aucun spectacle trouvé.</string>
 <string name="layout_search_no_items">Aucun spectacle trouvé.</string>
 <string name="layout_seasons_no_items">Aucune saison à afficher.</string>
+<string name="active">Actif</string>
 <string name="archive">Archive</string>
 <string name="addserie_hint">Afficher à ajouter ...</string>
 <string name="search_hint">Rechercher ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Utiliser le dossier pour les sauvegardes quotidiennes</string>
 <string name="dialog_change_language">Langue de synthèse</string>
 <string name="dialog_restore">Restauration</string>
+<string name="dialog_restore_now">La restauration d\'une sauvegarde remplacera complètement toutes les informations figurant actuellement dans la base de données. Continuer?</string>
 <string name="dialog_restore_done">Base de données restaurée</string>
 <string name="dialog_restore_failed">Impossible de restaurer la base!</string>
 <string name="dialog_restore_notfound">Impossible de trouver la sauvegarde sur le stockage externe!</string>

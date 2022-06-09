@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">bs</string>
+<string name="app_name_long">Tiny Television Time</string>
 <string name="layout_main_no_items">Nema nađenih serija.</string>
 <string name="layout_search_no_items">Nema nađenih serija.</string>
 <string name="layout_seasons_no_items">Nema godišnjih doba za prikazivanje.</string>
+<string name="active">Aktivno</string>
 <string name="archive">Arhiva</string>
 <string name="addserie_hint">Pokaži da dodaš ...</string>
 <string name="search_hint">Traži ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Koristi direktorij za dnevnu sigurnosnu kopiju</string>
 <string name="dialog_change_language">Jezik sinopsisa</string>
 <string name="dialog_restore">Vrati</string>
+<string name="dialog_restore_now">Vraćanje sigurnosne kopije će u potpunosti zamijeniti sve informacije koje se trenutno nalaze u bazi podataka. Nastavi?</string>
 <string name="dialog_restore_done">Baza podataka uspješno obnovljena</string>
 <string name="dialog_restore_failed">Ne mogu da vratim bazu podataka!</string>
 <string name="dialog_restore_notfound">Nisam mogao pronaći backup na vanjskoj memoriji!</string>

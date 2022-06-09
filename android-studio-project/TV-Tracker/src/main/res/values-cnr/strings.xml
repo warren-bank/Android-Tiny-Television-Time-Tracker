@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">cnr</string>
+<string name="app_name_long">Tiny Television Time Tracker</string>
 <string name="layout_main_no_items">Nema pronađenih serija..</string>
 <string name="layout_search_no_items">Nema pronađenih serija..</string>
 <string name="layout_seasons_no_items">Nema godišnjih doba..</string>
+<string name="active">Aktivno</string>
 <string name="archive">Arhiva</string>
 <string name="addserie_hint">Pokaži da dodaš ...</string>
 <string name="search_hint">Traži ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Koristite mapu za dnevne kopije</string>
 <string name="dialog_change_language">Jezik sinopsisa.</string>
 <string name="dialog_restore">Povrati</string>
+<string name="dialog_restore_now">Vraćanje sigurnosne kopije će u potpunosti zamijeniti sve informacije koje su trenutno u bazi podataka. Nastavite.?</string>
 <string name="dialog_restore_done">Baza podataka je uspješno obnovljena.</string>
 <string name="dialog_restore_failed">Ne mogu da vratim bazu podataka.!</string>
 <string name="dialog_restore_notfound">Ne može se naći sigurnosna kopija na vanjskoj memoriji!</string>

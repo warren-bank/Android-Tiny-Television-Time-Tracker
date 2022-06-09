@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">mt</string>
+<string name="app_name_long">Ċkejkna Televiżjoni Time Tracker</string>
 <string name="layout_main_no_items">L-ebda turi misjuba.</string>
 <string name="layout_search_no_items">L-ebda turi misjuba.</string>
 <string name="layout_seasons_no_items">L-ebda staġuni għall-wiri.</string>
+<string name="active">Attiv</string>
 <string name="archive">Arkivju</string>
 <string name="addserie_hint">Uri li żżid ...</string>
 <string name="search_hint">Fittex ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Folder ta \' użu għall backups kuljum</string>
 <string name="dialog_change_language">Lingwa sinopsi</string>
 <string name="dialog_restore">Restawr</string>
+<string name="dialog_restore_now">Restawr ta \' backup se tissostitwixxi kompletament l-informazzjoni kollha attwalment fil-bażi tad-dejta. Kompli?</string>
 <string name="dialog_restore_done">Database restawrata b \'suċċess</string>
 <string name="dialog_restore_failed">Ma jistgħux jirrestawraw database!</string>
 <string name="dialog_restore_notfound">Ma setgħux isibu backup fuq ħażna esterna!</string>

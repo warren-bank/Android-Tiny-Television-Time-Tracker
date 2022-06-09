@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">hu</string>
+<string name="app_name_long">Pici Television Time Tracker</string>
 <string name="layout_main_no_items">Nem található látható.</string>
 <string name="layout_search_no_items">Nem található látható.</string>
 <string name="layout_seasons_no_items">Nincsenek megjeleníthető évszakok.</string>
+<string name="active">Aktív</string>
 <string name="archive">Archívum</string>
 <string name="addserie_hint">Megjelenítés megjelenítése ...</string>
 <string name="search_hint">Keresés ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Mappa használata a napi mentésekhez</string>
 <string name="dialog_change_language">Synopsis nyelv</string>
 <string name="dialog_restore">Visszaállítás</string>
+<string name="dialog_restore_now">A biztonsági mentés visszaállítása teljesen lecseréli az adatbázisban lévő összes információt. Folytatás?</string>
 <string name="dialog_restore_done">Adatbázis sikeresen visszaállítva</string>
 <string name="dialog_restore_failed">Az adatbázis nem állítható vissza!</string>
 <string name="dialog_restore_notfound">Nem található biztonsági mentés külső tárolón!</string>

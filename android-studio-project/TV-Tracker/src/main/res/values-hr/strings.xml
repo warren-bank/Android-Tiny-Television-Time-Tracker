@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">hr</string>
+<string name="app_name_long">Maleni Televizijski Tragač</string>
 <string name="layout_main_no_items">Nisu pronađene nikakve serije.</string>
 <string name="layout_search_no_items">Nisu pronađene nikakve serije.</string>
 <string name="layout_seasons_no_items">Nema sezona za prikaz.</string>
+<string name="active">Aktivan</string>
 <string name="archive">Arhiva</string>
 <string name="addserie_hint">Prikaži za dodavanje ...</string>
 <string name="search_hint">Pretraži ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Koristi folder za dnevna sigurnosna kopiranja</string>
 <string name="dialog_change_language">Jezik synopsis</string>
 <string name="dialog_restore">Vraćanje</string>
+<string name="dialog_restore_now">Vraćanje sigurnosne kopije će u potpunosti zamijeniti sve informacije koje su trenutno u bazi podataka. Nastavi?</string>
 <string name="dialog_restore_done">Baza podataka uspješno vraćena</string>
 <string name="dialog_restore_failed">Ne može se vratiti baza podataka!</string>
 <string name="dialog_restore_notfound">Ne može se naći sigurnosno kopiranje na vanjskoj memoriji!</string>

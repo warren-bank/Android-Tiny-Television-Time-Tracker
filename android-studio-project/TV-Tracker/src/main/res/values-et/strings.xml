@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">et</string>
+<string name="app_name_long">Tilluke TV-aja tracker</string>
 <string name="layout_main_no_items">Ühtegi näitust ei leitud.</string>
 <string name="layout_search_no_items">Ühtegi näitust ei leitud.</string>
 <string name="layout_seasons_no_items">Pole hooaega, et näidata.</string>
+<string name="active">Aktiivne</string>
 <string name="archive">Arhiiv</string>
 <string name="addserie_hint">Näita, et lisada ...</string>
 <string name="search_hint">Otsi ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Kaustade kasutamine igapäevaste varukoopiate jaoks</string>
 <string name="dialog_change_language">Synopsis keel</string>
 <string name="dialog_restore">Taasta</string>
+<string name="dialog_restore_now">Varukoopia taastamine asendab täielikult kogu andmebaasis oleva teabe. Jätka?</string>
 <string name="dialog_restore_done">Andmebaas on edukalt taastatud</string>
 <string name="dialog_restore_failed">Andmebaasi taastamine nurjus!</string>
 <string name="dialog_restore_notfound">Välist salvestust varukoopia ei leita!</string>

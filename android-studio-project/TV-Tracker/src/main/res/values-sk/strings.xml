@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">sk</string>
+<string name="app_name_long">Malý televízny čas tracker</string>
 <string name="layout_main_no_items">Nenašli sa žiadne zobrazenie.</string>
 <string name="layout_search_no_items">Nenašli sa žiadne zobrazenie.</string>
 <string name="layout_seasons_no_items">Žiadne sezóny na zobrazenie.</string>
+<string name="active">Aktívny</string>
 <string name="archive">Archív</string>
 <string name="addserie_hint">Zobraziť &amp; pridať ...</string>
 <string name="search_hint">Hľadať ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Použiť zložku pre denné zálohovania</string>
 <string name="dialog_change_language">Jazyk Synopsis</string>
 <string name="dialog_restore">Obnoviť</string>
+<string name="dialog_restore_now">Obnovenie zálohy úplne nahradí všetky informácie, ktoré sa aktuálne nachádzajú v databáze. Pokračovať?</string>
 <string name="dialog_restore_done">Databáza bola úspešne obnovená</string>
 <string name="dialog_restore_failed">Nie je možné obnoviť databázu!</string>
 <string name="dialog_restore_notfound">Nebolo možné nájsť zálohu na externom úložnom priestore!</string>

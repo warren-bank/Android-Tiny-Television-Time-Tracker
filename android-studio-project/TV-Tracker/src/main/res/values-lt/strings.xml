@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">lt</string>
+<string name="app_name_long">Tiny Television time Tracker</string>
 <string name="layout_main_no_items">Nerasta jokių duomenų.</string>
 <string name="layout_search_no_items">Nerasta jokių duomenų.</string>
 <string name="layout_seasons_no_items">Nėra sezonų rodyti.</string>
+<string name="active">Aktyvus</string>
 <string name="archive">Archyvas</string>
 <string name="addserie_hint">Rodyti ...</string>
 <string name="search_hint">Ieškoti ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Naudoti aplanką kasdienėms atsargėms</string>
 <string name="dialog_change_language">Synopsis kalba</string>
 <string name="dialog_restore">Atstatyti</string>
+<string name="dialog_restore_now">Atsarginės kopijos atkūrimas visiškai pakeis visą informaciją, kuri šiuo metu yra duomenų bazėje. Tęsti?</string>
 <string name="dialog_restore_done">Sėkmingai atkurta duomenų bazė</string>
 <string name="dialog_restore_failed">Nepavyksta atstatyti duomenų bazės!</string>
 <string name="dialog_restore_notfound">Nepavyko rasti atsarginės kopijos išorės saugojimui!</string>

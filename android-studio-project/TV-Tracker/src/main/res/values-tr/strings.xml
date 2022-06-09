@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">tr</string>
+<string name="app_name_long">Minik Television Time Tracker</string>
 <string name="layout_main_no_items">Hiçbir gösteri bulunamadı.</string>
 <string name="layout_search_no_items">Hiçbir gösteri bulunamadı.</string>
 <string name="layout_seasons_no_items">Görüntülenecek mevsimler yok.</string>
+<string name="active">Etkin</string>
 <string name="archive">Arşivle</string>
 <string name="addserie_hint">Eklemek için göster ...</string>
 <string name="search_hint">Ara ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Günlük yedeklemeler için klasör kullan</string>
 <string name="dialog_change_language">Özet dili</string>
 <string name="dialog_restore">Geri Yükle</string>
+<string name="dialog_restore_now">Bir yedeği geri yükleme işlemi, veritabanında bulunan tüm bilgileri tamamen değiştirir. Devam?</string>
 <string name="dialog_restore_done">Veritabanı başarıyla geri yüklendi</string>
 <string name="dialog_restore_failed">Veritabanı geri yüklenemiyor!</string>
 <string name="dialog_restore_notfound">Dış depolamadaki yedekleme bulunamadı!</string>

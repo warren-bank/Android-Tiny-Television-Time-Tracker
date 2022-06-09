@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">te</string>
+<string name="app_name_long">టినీ టెలివిజన్ టైమ్ ట్రాకర్</string>
 <string name="layout_main_no_items">ఏ ప్రదర్శన కనబడలేదు.</string>
 <string name="layout_search_no_items">ఏ ప్రదర్శన కనబడలేదు.</string>
 <string name="layout_seasons_no_items">ప్రదర్శించుటకు ఋషులు లేదు.</string>
+<string name="active">క్రియాశీలము</string>
 <string name="archive">ఆర్కైవ్</string>
 <string name="addserie_hint">జతచేయుటకు చూపించు ...</string>
 <string name="search_hint">శోధన ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">రోజువారీ బ్యాకప్ కొరకు ఫోల్డర్ను వుపయోగించుము</string>
 <string name="dialog_change_language">సినోపిసిస్ భాష</string>
 <string name="dialog_restore">పునఃప్రారంభించు</string>
+<string name="dialog_restore_now">బ్యాకప్ పునఃస్థాపన పూర్తిగా అన్ని సమాచారమును డేటాబేస్ లో పునఃస్థాపించుకుంటుంది. కొనసాగించు?</string>
 <string name="dialog_restore_done">డాటాబేసు సమర్ధవంతంగా తిరిగి</string>
 <string name="dialog_restore_failed">దత్తాంశమును తిరిగి చెల్లించలేక పోయింది!</string>
 <string name="dialog_restore_notfound">బాహ్య నిపుణంపై బ్యాకప్ ను కనుగొనలేక పోయింది!</string>

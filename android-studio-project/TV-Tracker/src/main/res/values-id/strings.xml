@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">id</string>
+<string name="app_name_long">Pelacak Waktu Televisi Kecil</string>
 <string name="layout_main_no_items">Tidak ada acara yang ditemukan.</string>
 <string name="layout_search_no_items">Tidak ada acara yang ditemukan.</string>
 <string name="layout_seasons_no_items">Tidak ada musim untuk ditampilkan.</string>
+<string name="active">Aktif</string>
 <string name="archive">Arsip</string>
 <string name="addserie_hint">Tampilkan untuk menambahkan ...</string>
 <string name="search_hint">Cari ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Gunakan folder untuk backup harian</string>
 <string name="dialog_change_language">Bahasa Sinopsis</string>
 <string name="dialog_restore">Pulihkan</string>
+<string name="dialog_restore_now">Memulihkan cadangan akan sepenuhnya menggantikan semua informasi yang ada pada basis data. Lanjutkan?</string>
 <string name="dialog_restore_done">Basis data dipulihkan</string>
 <string name="dialog_restore_failed">Tak bisa mengembalikan basis data!</string>
 <string name="dialog_restore_notfound">Tidak dapat menemukan cadangan pada penyimpanan eksternal!</string>

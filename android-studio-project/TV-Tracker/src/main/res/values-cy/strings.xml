@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">cy</string>
+<string name="app_name_long">Comment</string>
 <string name="layout_main_no_items">Heb ganfod sioeau.</string>
 <string name="layout_search_no_items">Heb ganfod sioeau.</string>
 <string name="layout_seasons_no_items">Dim tymhorau i\'w ddangos.</string>
+<string name="active">Gweithredol</string>
 <string name="archive">Archif</string>
 <string name="addserie_hint">Dangos i ychwanegu ...</string>
 <string name="search_hint">Chwilio ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Defnyddio plygell ar gyfer ups bob dydd</string>
 <string name="dialog_change_language">Name</string>
 <string name="dialog_restore">Adfer</string>
+<string name="dialog_restore_now">Bydd adfer copi wrth gefn yn disodli\'r holl wybodaeth sydd yn y gronfa ddata ar hyn o bryd. Parhau?</string>
 <string name="dialog_restore_done">Name</string>
 <string name="dialog_restore_failed">Methu adfer y gronfa ddata!</string>
 <string name="dialog_restore_notfound">Methu canfod copi wrth gefn ar storfa allanol!</string>

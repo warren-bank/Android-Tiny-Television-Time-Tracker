@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ja</string>
+<string name="app_name_long">タイニー・テレビタイム・トラッカー</string>
 <string name="layout_main_no_items">表示されない.</string>
 <string name="layout_search_no_items">表示されない.</string>
 <string name="layout_seasons_no_items">表示する季節がない.</string>
+<string name="active">アクティブ</string>
 <string name="archive">アーカイブ</string>
 <string name="addserie_hint">追加するものを表示 ...</string>
 <string name="search_hint">検索...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">日次バックアップ用のフォルダーの使用</string>
 <string name="dialog_change_language">シノプシス語</string>
 <string name="dialog_restore">復元</string>
+<string name="dialog_restore_now">バックアップを復元すると、現在データベース内にあるすべての情報が完全に置き換えられます。 続行?</string>
 <string name="dialog_restore_done">データベースを正常に復元</string>
 <string name="dialog_restore_failed">データベースを復元できません!</string>
 <string name="dialog_restore_notfound">外部ストレージ上にバックアップが見つかりませんでした!</string>

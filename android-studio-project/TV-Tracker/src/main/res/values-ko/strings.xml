@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ko</string>
+<string name="app_name_long">Tiny Television Time Tracker</string>
 <string name="layout_main_no_items">발견된 쇼가 없음.</string>
 <string name="layout_search_no_items">발견된 쇼가 없음.</string>
 <string name="layout_seasons_no_items">표시할 계절이 없음.</string>
+<string name="active">활성</string>
 <string name="archive">아카이브</string>
 <string name="addserie_hint">추가하기 위해 표시 ...</string>
 <string name="search_hint">검색 ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">일별 백업 폴더 사용</string>
 <string name="dialog_change_language">시놉시스 언어</string>
 <string name="dialog_restore">복원</string>
+<string name="dialog_restore_now">백업을 복원하면 현재 데이터베이스에 있는 모든 정보가 완전히 바뀝니다. 계속?</string>
 <string name="dialog_restore_done">데이터베이스 복원 성공</string>
 <string name="dialog_restore_failed">데이터베이스를 복원할 수 없음!</string>
 <string name="dialog_restore_notfound">외부 스토리지에서 백업을 찾을 수 없음!</string>

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">vi</string>
+<string name="app_name_long">Trình theo dõi thời gian truyền hình nhỏ</string>
 <string name="layout_main_no_items">Không tìm thấy hiển thị.</string>
 <string name="layout_search_no_items">Không tìm thấy hiển thị.</string>
 <string name="layout_seasons_no_items">Không có mùa để hiển thị.</string>
+<string name="active">Hoạt động</string>
 <string name="archive">Kho lưu</string>
 <string name="addserie_hint">Hiển thị để thêm ...</string>
 <string name="search_hint">Tìm kiếm ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Dùng thư mục cho các bản sao hàng ngày</string>
 <string name="dialog_change_language">Ngôn ngữ synopsis</string>
 <string name="dialog_restore">Khôi phục</string>
+<string name="dialog_restore_now">Khôi phục sao lưu sẽ thay thế hoàn toàn mọi thông tin hiện tại trong cơ sở dữ liệu. Tiếp tục?</string>
 <string name="dialog_restore_done">Đã khôi phục thành công</string>
 <string name="dialog_restore_failed">Không thể khôi phục cơ sở!</string>
 <string name="dialog_restore_notfound">Không tìm thấy sao lưu trên lưu trữ bên ngoài!</string>

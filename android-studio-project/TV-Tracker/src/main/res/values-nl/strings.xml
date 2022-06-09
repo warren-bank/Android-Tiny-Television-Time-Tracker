@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">nl</string>
+<string name="app_name_long">Kleine TV-tijdtracker</string>
 <string name="layout_main_no_items">Geen series gevonden.</string>
 <string name="layout_search_no_items">Geen series gevonden.</string>
 <string name="layout_seasons_no_items">Geen seizoenen gevonden.</string>
+<string name="active">Actief</string>
 <string name="archive">Archief</string>
 <string name="addserie_hint">Nieuwe serie zoeken…</string>
 <string name="search_hint">Zoeken…</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Voor dagelijkse back-ups gebruiken</string>
 <string name="dialog_change_language">Taal synopsis</string>
 <string name="dialog_restore">Herstellen</string>
+<string name="dialog_restore_now">Als u een backup herstelt, wordt alle informatie in de database volledig vervangen. Doorgaan?</string>
 <string name="dialog_restore_done">Database hersteld</string>
 <string name="dialog_restore_failed">Kon herstel niet voltooien!</string>
 <string name="dialog_restore_notfound">Geen back-up gevonden op externe opslag!</string>

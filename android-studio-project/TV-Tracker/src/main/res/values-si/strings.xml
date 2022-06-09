@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">si</string>
+<string name="app_name_long">Tiny Television Time Tracker</string>
 <string name="layout_main_no_items">නැත පෙන්වන්නේ නැත.</string>
 <string name="layout_search_no_items">නැත පෙන්වන්නේ නැත.</string>
 <string name="layout_seasons_no_items">දර්ශණය කිරීමට සෘතු නැත.</string>
+<string name="active">සක්රීය</string>
 <string name="archive">සංරක්ෂණය</string>
 <string name="addserie_hint">එක් කිරීමට පෙන්වන්න ...</string>
 <string name="search_hint">සොයන්න ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">දිනපතා බැකප් සඳහා බහලුම භාවිත කරන්න</string>
 <string name="dialog_change_language">Synopsis language</string>
 <string name="dialog_restore">ප්රථිස්ථාපනය කරන්න</string>
+<string name="dialog_restore_now">සහයක් නැවත පිහිටුවීම දැනට දත්ත ගබඩාවේ ඇති සියළු තොරතුරු සම්පූර්ණයෙන්ම ප්රතිස්ථාපනය කරයි. ඉදිරියට යන්න?</string>
 <string name="dialog_restore_done">දත්ත ගබඩාව සාර්ථකව</string>
 <string name="dialog_restore_failed">දත්ත ගබඩාව පිහිටුවීමට නොහැකි විය!</string>
 <string name="dialog_restore_notfound">බාහිර ගබඩා මත සහය සොයාගත නොහැක!</string>

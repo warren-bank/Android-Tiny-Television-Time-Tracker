@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">bn</string>
+<string name="app_name_long">Tiny Television Time Tracker</string>
 <string name="layout_main_no_items">কোন শো পাওয়া যায়নি.</string>
 <string name="layout_search_no_items">কোন শো পাওয়া যায়নি.</string>
 <string name="layout_seasons_no_items">প্রদর্শন করার কোন ঋতু নেই.</string>
+<string name="active">সক্রিয়</string>
 <string name="archive">আর্কাইভ</string>
 <string name="addserie_hint">যোগ করতে দেখাও ...</string>
 <string name="search_hint">অনুসন্ধান ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">দৈনিক ব্যাকআপ জন্য ফোল্ডার ব্যবহার করা হবে</string>
 <string name="dialog_change_language">সংক্ষিপ্তসার ভাষা</string>
 <string name="dialog_restore">পুনরুদ্ধার করুন</string>
+<string name="dialog_restore_now">একটি ব্যাকআপ পুনরুদ্ধার করা হবে বর্তমানে ডাটাবেসে সব তথ্য সম্পূর্ণ প্রতিস্থাপন করবে. \@ title: group?</string>
 <string name="dialog_restore_done">ডেটাবেজ সফলভাবে পুনরুদ্ধার</string>
 <string name="dialog_restore_failed">ডাটাবেস পুনরুদ্ধার করতে ব্যর্থ!</string>
 <string name="dialog_restore_notfound">বহিঃস্থ স্টোরেজের ব্যাকআপ পাওয়া যায়নি!</string>

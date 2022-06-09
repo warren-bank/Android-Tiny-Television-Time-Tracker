@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ta</string>
+<string name="app_name_long">Tiny Television Time Tracker</string>
 <string name="layout_main_no_items">காண்பிக்கப்படவில்லை.</string>
 <string name="layout_search_no_items">காண்பிக்கப்படவில்லை.</string>
 <string name="layout_seasons_no_items">காட்சிக்கு எதுவும் இல்லை.</string>
+<string name="active">செயற்பாடு</string>
 <string name="archive">காப்பகம்</string>
 <string name="addserie_hint">சேர்க்க காட்டு</string>
 <string name="search_hint">தேடு ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">தினசரி காப்புப்பிரதிகளுக்கு கோப்புறையைப் பயன்படுத்தவும்</string>
 <string name="dialog_change_language">சுருக்கம் மொழி</string>
 <string name="dialog_restore">மீட்கவும்</string>
+<string name="dialog_restore_now">ஒரு காப்பகத்தை மீட்கவும் தற்போது தரவுத்தளத்தில் அனைத்து தகவல்களையும் முழுமையாக மாற்றும். தொடர்ந்து?</string>
 <string name="dialog_restore_done">தரவுத்தளத்தை வெற்றிகரமாக மீ</string>
 <string name="dialog_restore_failed">தரவுத்தளத்தை மீட்டமைக்க முடியவில்லை!</string>
 <string name="dialog_restore_notfound">வெளி சேமிப்பில் காப்பு காணவில்லை!</string>

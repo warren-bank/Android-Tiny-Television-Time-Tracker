@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">cs</string>
+<string name="app_name_long">Tiny Television Time Tracker</string>
 <string name="layout_main_no_items">Nebyly nalezeny žádné zobrazení.</string>
 <string name="layout_search_no_items">Nebyly nalezeny žádné zobrazení.</string>
 <string name="layout_seasons_no_items">Žádné roční období k zobrazení.</string>
+<string name="active">Aktivní.</string>
 <string name="archive">Archív</string>
 <string name="addserie_hint">Zobrazit pro přidání ...</string>
 <string name="search_hint">Hledat ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Použít složku pro denní zálohování</string>
 <string name="dialog_change_language">Synopse language</string>
 <string name="dialog_restore">Obnovit</string>
+<string name="dialog_restore_now">Obnova zálohy zcela nahradí všechny informace, které jsou momentálně v databázi. Pokračovat?</string>
 <string name="dialog_restore_done">Databáze byla úspěšně obnovena</string>
 <string name="dialog_restore_failed">Nelze obnovit databázi!</string>
 <string name="dialog_restore_notfound">Nelze najít zálohu na externím úložišti!</string>

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">he</string>
+<string name="app_name_long">טרקר זמן טלפתי קטן</string>
 <string name="layout_main_no_items">לא נמצאו תצוגות..</string>
 <string name="layout_search_no_items">לא נמצאו תצוגות..</string>
 <string name="layout_seasons_no_items">אין עונות להצגה..</string>
+<string name="active">פעיל</string>
 <string name="archive">ארכיב</string>
 <string name="addserie_hint">הצגה להוספה ...</string>
 <string name="search_hint">חיפוש ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">שימוש בתיקיה עבור גיבויים יומיים</string>
 <string name="dialog_change_language">שפת Synopsis</string>
 <string name="dialog_restore">שחזור</string>
+<string name="dialog_restore_now">שחזור גיבוי יחליף לחלוטין את כל המידע כעת במסד הנתונים. המשך?</string>
 <string name="dialog_restore_done">מסד הנתונים שוחזר בהצלחה</string>
 <string name="dialog_restore_failed">לא ניתן לשחזר את בסיס הנתונים!</string>
 <string name="dialog_restore_notfound">לא ניתן למצוא גיבוי באחסון חיצוני!</string>

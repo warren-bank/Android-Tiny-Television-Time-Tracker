@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">pl</string>
+<string name="app_name_long">Tiny Television Time Tracker</string>
 <string name="layout_main_no_items">Nie znaleziono żadnych pokazów.</string>
 <string name="layout_search_no_items">Nie znaleziono żadnych pokazów.</string>
 <string name="layout_seasons_no_items">Brak pór roku do wyświetlenia.</string>
+<string name="active">Aktywne</string>
 <string name="archive">Archiwum</string>
 <string name="addserie_hint">Pokaż do dodania ...</string>
 <string name="search_hint">Szukaj ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Użyj folderu do codziennego tworzenia kopii zapasowych</string>
 <string name="dialog_change_language">Język synopsis</string>
 <string name="dialog_restore">Odtwórz</string>
+<string name="dialog_restore_now">Odtwarzanie kopii zapasowej całkowicie zastąpi wszystkie informacje znajdujące się obecnie w bazie danych. Kontynuuj?</string>
 <string name="dialog_restore_done">Pomyślnie odtworzono bazę danych</string>
 <string name="dialog_restore_failed">Nie można odtworzyć bazy danych!</string>
 <string name="dialog_restore_notfound">Nie można znaleźć kopii zapasowej na zewnętrznej pamięci masowej!</string>

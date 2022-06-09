@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">it</string>
+<string name="app_name_long">Tiny Television Time Tracker</string>
 <string name="layout_main_no_items">Nessuna serie trovata.</string>
 <string name="layout_search_no_items">Nessuna serie trovata.</string>
 <string name="layout_seasons_no_items">Nessuna stagione da mostrare.</string>
+<string name="active">Attivo</string>
 <string name="archive">Archivio</string>
 <string name="addserie_hint">Serie da aggiungere…</string>
 <string name="search_hint">Cerca…</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_preupdate_message">È stata installata una versione più recente di questa applicazione. Anche la versione del database deve essere aggiornata. Salvataggio di un backup prima che questa operazione sia consigliata; qualsiasi errore corromperà il database. Per farlo è necessario prima concedere l\'autorizzazione per salvare il file di backup in memoria esterna. Si desidera salvare un backup prima dell\'aggiornamento richiesto?</string>
 <string name="dialog_backup_usefolder">Usa per seguridad diaria</string>
 <string name="dialog_restore">Ripristina</string>
+<string name="dialog_restore_now">Il ripristino di un backup sostituirà completamente tutte le informazioni attualmente presenti nella banca dati. Continua?</string>
 <string name="dialog_restore_done">Database ripristinato con successo</string>
 <string name="dialog_restore_failed">Impossibile ripristinare il database!</string>
 <string name="dialog_restore_notfound">Backup sulla memoria esterna non trovato!</string>

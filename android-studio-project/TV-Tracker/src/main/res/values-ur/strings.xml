@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ur</string>
+<string name="app_name_long">ٹنی ٹیلی ویژن ٹائم ٹریکر</string>
 <string name="layout_main_no_items">کوئی شو نہیں ملا.</string>
 <string name="layout_search_no_items">کوئی شو نہیں ملا.</string>
 <string name="layout_seasons_no_items">ڈسپلے کرنے کے لئے کوئی موسموں.</string>
+<string name="active">فعال</string>
 <string name="archive">محفوظہ</string>
 <string name="addserie_hint">شامل کرنے کے لئے شو ...</string>
 <string name="search_hint">تلاش ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">روزانہ بیک اپ کے لیے فولڈر کا استعمال کریں</string>
 <string name="dialog_change_language">سائنوسس زبان</string>
 <string name="dialog_restore">بے چین</string>
+<string name="dialog_restore_now">ایک بیک اپ کی بحالی مکمل طور پر ڈیٹا بیس میں فی الحال تمام معلومات کی جگہ لے لے گا. Continue reading →?</string>
 <string name="dialog_restore_done">ڈیٹا بیس کامیابی سے بحال</string>
 <string name="dialog_restore_failed">ڈیٹا بیس بحال کرنے کا امکان!</string>
 <string name="dialog_restore_notfound">بیرونی سٹوریج پر بیک اپ نہیں مل سکا!</string>

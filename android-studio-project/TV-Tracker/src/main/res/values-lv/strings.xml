@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">lv</string>
+<string name="app_name_long">Tiny Television Time Tracker</string>
 <string name="layout_main_no_items">Nav atrasts neviens.</string>
 <string name="layout_search_no_items">Nav atrasts neviens.</string>
 <string name="layout_seasons_no_items">Nav sezonas, lai parādītu.</string>
+<string name="active">Aktīvais</string>
 <string name="archive">Arhīvs</string>
 <string name="addserie_hint">Rādīt, lai pievienotu ...</string>
 <string name="search_hint">Meklēt ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Lietot mapi ikdienas backups</string>
 <string name="dialog_change_language">Sinopsis valoda</string>
 <string name="dialog_restore">Atjaunot</string>
+<string name="dialog_restore_now">Atjaunot backup pilnībā aizstāt visu informāciju, kas pašlaik datu bāzē. Turpināt?</string>
 <string name="dialog_restore_done">Datubāze veiksmīgi atjaunota</string>
 <string name="dialog_restore_failed">Neizdevās atjaunot datubāzi!</string>
 <string name="dialog_restore_notfound">Neizdevās atrast rezerves kopiju ārējai uzglabāšanai!</string>

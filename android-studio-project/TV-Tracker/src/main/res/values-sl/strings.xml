@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">sl</string>
+<string name="app_name_long">Mali Sledilnik Drobnega Televizijskega Programa</string>
 <string name="layout_main_no_items">Najden ni bil noben prikazan.</string>
 <string name="layout_search_no_items">Najden ni bil noben prikazan.</string>
 <string name="layout_seasons_no_items">Ni sezon za prikaz.</string>
+<string name="active">Aktivno</string>
 <string name="archive">Arhiv</string>
 <string name="addserie_hint">Pokaži, da dodate ...</string>
 <string name="search_hint">Išči ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Uporabi mapo za dnevne varnostne kopije</string>
 <string name="dialog_change_language">Jezik Synopsis</string>
 <string name="dialog_restore">Obnovi</string>
+<string name="dialog_restore_now">Če obnovite varnostno kopijo, boste v celoti zamenjali vse informacije, ki so trenutno v bazi podatkov. Nadaljuj?</string>
 <string name="dialog_restore_done">Baza podatkov uspešno obnovljena</string>
 <string name="dialog_restore_failed">Baze podatkov ni mogoče obnoviti!</string>
 <string name="dialog_restore_notfound">Varnostnega kopica ni bilo mogoče najti v zunanjem pomnilniku!</string>

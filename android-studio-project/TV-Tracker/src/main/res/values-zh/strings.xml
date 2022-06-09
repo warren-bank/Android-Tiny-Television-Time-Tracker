@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">zh</string>
+<string name="app_name_long">小型电视时间跟踪器</string>
 <string name="layout_main_no_items">未找到任何显示.</string>
 <string name="layout_search_no_items">未找到任何显示.</string>
 <string name="layout_seasons_no_items">没有要显示的季节.</string>
+<string name="active">活动</string>
 <string name="archive">档案</string>
 <string name="addserie_hint">显示以添加...</string>
 <string name="search_hint">搜索 ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">每日备份的使用文件夹</string>
 <string name="dialog_change_language">概要语言</string>
 <string name="dialog_restore">恢复</string>
+<string name="dialog_restore_now">复原备份将完全替换数据库中当前的所有信息。 继续?</string>
 <string name="dialog_restore_done">已成功复原数据库</string>
 <string name="dialog_restore_failed">无法复原数据库!</string>
 <string name="dialog_restore_notfound">在外部存储器上找不到备份!</string>

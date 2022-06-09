@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ar</string>
+<string name="app_name_long">Tiny Television Teacker</string>
 <string name="layout_main_no_items">لم يتم ايجاد أية عروض.</string>
 <string name="layout_search_no_items">لم يتم ايجاد أية عروض.</string>
 <string name="layout_seasons_no_items">لا توجد مواسم للعرض.</string>
+<string name="active">فعال</string>
 <string name="archive">تخزين</string>
 <string name="addserie_hint">عرض لاضافته ...</string>
 <string name="search_hint">بحث ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">استخدام الحافظة للنسخ الاحتياطية اليومية</string>
 <string name="dialog_change_language">لغة التوليف</string>
 <string name="dialog_restore">استعادة</string>
+<string name="dialog_restore_now">ستقوم عملية استعادة نسخة احتياطية باستبدال كل المعلومات الموجودة حاليا في قاعدة البيانات. استمرار?</string>
 <string name="dialog_restore_done">استعادة قاعدة البيانات بنجاح</string>
 <string name="dialog_restore_failed">لا يمكن استعادة قاعدة البيانات!</string>
 <string name="dialog_restore_notfound">لا يمكن ايجاد نسخة احتياطية على مساحة تخزين خارجية!</string>

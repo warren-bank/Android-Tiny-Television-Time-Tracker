@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">zh-TW</string>
+<string name="app_name_long">小型電視時間追踪器</string>
 <string name="layout_main_no_items">找不到顯示.</string>
 <string name="layout_search_no_items">找不到顯示.</string>
 <string name="layout_seasons_no_items">沒有季節可顯示.</string>
+<string name="active">作用中</string>
 <string name="archive">Archive</string>
 <string name="addserie_hint">顯示以新增...</string>
 <string name="search_hint">搜尋...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">使用資料夾進行每日備份</string>
 <string name="dialog_change_language">Synopsis 語言</string>
 <string name="dialog_restore">還原</string>
+<string name="dialog_restore_now">還原備份將完全取代目前在資料庫中的所有資訊。 繼續?</string>
 <string name="dialog_restore_done">已順利還原資料庫</string>
 <string name="dialog_restore_failed">無法還原資料庫!</string>
 <string name="dialog_restore_notfound">在外部儲存體上找不到備份!</string>

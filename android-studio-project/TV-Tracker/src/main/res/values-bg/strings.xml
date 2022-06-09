@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">bg</string>
+<string name="app_name_long">Малък телевизионен тайм тракер</string>
 <string name="layout_main_no_items">Не са намерени..</string>
 <string name="layout_search_no_items">Не са намерени..</string>
 <string name="layout_seasons_no_items">Няма сезони за показване.</string>
+<string name="active">Активен</string>
 <string name="archive">Архив.</string>
 <string name="addserie_hint">Показване за добавяне ...</string>
 <string name="search_hint">-Търси ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">Използване на папка за дневни архиви</string>
 <string name="dialog_change_language">Език на синопсис</string>
 <string name="dialog_restore">Възстановяване!</string>
+<string name="dialog_restore_now">Възстановяването на архивно копие напълно ще замени цялата информация, която понастоящем е в базата данни. Продължи:?</string>
 <string name="dialog_restore_done">Базата данни е възстановена успешно</string>
 <string name="dialog_restore_failed">Невъзможно възстановяване на база данни!</string>
 <string name="dialog_restore_notfound">Не можа да се намери архивиране на външното хранилище!</string>

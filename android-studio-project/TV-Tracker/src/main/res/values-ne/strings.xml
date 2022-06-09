@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ne</string>
+<string name="app_name_long">टिनी टेलिभिजन समय ट्र्याकर</string>
 <string name="layout_main_no_items">फेला परेन.</string>
 <string name="layout_search_no_items">फेला परेन.</string>
 <string name="layout_seasons_no_items">प्रदर्शन गर्न कुनै मौसम छैन.</string>
+<string name="active">सक्रिय</string>
 <string name="archive">सङ्ग्रह</string>
 <string name="addserie_hint">थप्न देखाउनुहोस् ...</string>
 <string name="search_hint">खोजी गर्नुहोस् ...</string>
@@ -49,6 +51,7 @@
 <string name="dialog_backup_usefolder">दैनिक ब्याकअपका लागि फोल्डर प्रयोग गर्नुहोस्</string>
 <string name="dialog_change_language">सिनोप्सिस भाषा</string>
 <string name="dialog_restore">पूर्वावस्थामा ल्याउनुहोस्</string>
+<string name="dialog_restore_now">जगेडा पूर्वावस्थामा ल्याउनका लागि हालै डाटाबेसमा सबै सूचनाहरू पूर्णरूपमा प्रतिस्थापन गर्नेछ. जारी राख्नुहोस्?</string>
 <string name="dialog_restore_done">डाटाबेस सफलतापूर्वक बहाल</string>
 <string name="dialog_restore_failed">डाटाबेस पूर्वावस्थामा ल्याउन असक्षम!</string>
 <string name="dialog_restore_notfound">बाह्य भण्डारणमा जगेडा फेला पार्न सकेन!</string>
