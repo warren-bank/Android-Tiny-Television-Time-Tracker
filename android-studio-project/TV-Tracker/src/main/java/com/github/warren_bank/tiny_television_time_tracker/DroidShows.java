@@ -548,8 +548,11 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
       }));
     listView.postDelayed(new Runnable() {
       public void run() {
+        int textColor = (new TextView(DroidShows.this)).getTextColors().getDefaultColor();
+        ((TextView) spinner.getSelectedView()).setTextColor(textColor);
         spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
           public void onItemSelected(AdapterView<?> parent, View v, int position, long id) {
+            ((TextView) v).setTextColor(textColor);
             logMode = position == 2;
             showArchive = ((position == 2) ? showArchive : position);
             if (logMode)
