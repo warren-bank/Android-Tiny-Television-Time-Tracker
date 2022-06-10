@@ -34,7 +34,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.ArrayAdapter;
-import android.widget.CheckedTextView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -363,8 +363,8 @@ public class AddSerie extends ListActivity
       final SearchResult searchResult = searchResults.get(position);
 
       if (searchResult != null) {
-        TextView        sn  = (TextView) v.findViewById(R.id.seriename);
-        CheckedTextView ctv = (CheckedTextView) v.findViewById(R.id.addserieBtn);
+        TextView  sn  = (TextView)  v.findViewById(R.id.seriename);
+        ImageView btn = (ImageView) v.findViewById(R.id.addserieBtn);
 
         if (sn != null) {
           String lang = TextUtils.isEmpty(searchResult.language)
@@ -373,13 +373,13 @@ public class AddSerie extends ListActivity
 
           sn.setText(searchResult.name + lang);
         }
-        if (ctv != null) {
+        if (btn != null) {
           boolean alreadyExists = serieExists(searchResult.serieId);
 
           if (alreadyExists) {
-            // ctv.setVisibility(View.GONE);
-            ctv.setCheckMarkDrawable(getResources().getDrawable(R.drawable.star));
-            ctv.setOnClickListener(new OnClickListener() {
+            // btn.setVisibility(View.GONE);
+            btn.setImageDrawable(getResources().getDrawable(R.drawable.star));
+            btn.setOnClickListener(new OnClickListener() {
               public void onClick(View v) {
                 // no op
                 return;
@@ -387,9 +387,9 @@ public class AddSerie extends ListActivity
             });
           }
           else {
-            // ctv.setVisibility(View.VISIBLE);
-            ctv.setCheckMarkDrawable(getResources().getDrawable(R.drawable.add));
-            ctv.setOnClickListener(new OnClickListener() {
+            // btn.setVisibility(View.VISIBLE);
+            btn.setImageDrawable(getResources().getDrawable(R.drawable.add));
+            btn.setOnClickListener(new OnClickListener() {
               public void onClick(View v) {
                 addSerie(searchResult);
               }

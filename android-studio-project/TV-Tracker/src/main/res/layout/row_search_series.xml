@@ -5,31 +5,45 @@
   android:layout_width="fill_parent"
   android:layout_height="wrap_content"
   android:orientation="horizontal"
-  android:paddingVertical="2dp"
+  android:paddingVertical="9dp"
   android:paddingHorizontal="6dp">
 
   <TextView
     android:id="@+id/seriename"
-    android:layout_width="wrap_content"
+    android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:layout_weight="1"
+    android:maxLines="3"
     android:ellipsize="end"
-    android:layout_gravity="center_vertical"
     android:gravity="left"
+    android:layout_gravity="center_vertical"
     android:paddingRight="2dp"
-    android:textSize="16sp"
+    android:textSize="18sp"
     android:textStyle="bold"/>
 
-  <CheckedTextView
+  <ImageView
     android:id="@+id/addserieBtn"
-    android:layout_width="wrap_content"
-    android:layout_height="75dp"
+    android:scaleType="fitXY"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
     android:layout_weight="0"
+    android:gravity="right"
     android:layout_gravity="center_vertical"
-    android:gravity="center"
-    android:checkMark="@drawable/add"
+    android:src="@drawable/add"
+    android:adjustViewBounds="false"
+    android:cropToPadding="false"
     android:focusable="false"
     android:focusableInTouchMode="false"
     android:text=""/>
 
 </LinearLayout>
+
+<!--
+height of 1 line of text = 18 + (9)(2) = 36
+padding to right of image = 6
+
+if the vertical distance between images on adjacent rows = 6
+then vertical padding of each image = 3
+
+height of each image = 36 - (3)(2) = 30
+-->
