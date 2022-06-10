@@ -29,7 +29,7 @@
     android:layout_weight="0"
     android:gravity="right"
     android:layout_gravity="center_vertical"
-    android:src="@drawable/add"
+    android:src="@android:drawable/ic_menu_add"
     android:adjustViewBounds="false"
     android:cropToPadding="false"
     android:focusable="false"

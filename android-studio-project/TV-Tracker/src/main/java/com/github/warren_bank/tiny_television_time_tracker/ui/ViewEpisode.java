@@ -315,14 +315,17 @@ public class ViewEpisode extends Activity implements RuntimePermissionUtils.Runt
     if (v != null) {
       CheckBox c = (CheckBox) findViewById(R.id.seen);
       TextView d = (TextView) findViewById(R.id.seenTimestamp);
+      String seenMsg;
       if (c.isChecked()) {
         d.setTextColor(getResources().getColor(android.R.color.white));
         if (dbEpisode.seen == 0)
           dbEpisode.seen = DateFormats.convertMsToSeconds(System.currentTimeMillis());
-        d.setText(DateFormats.DISPLAY_DATE_TIME.format(new Date(DateFormats.convertSecondsToMs(dbEpisode.seen))));
+        seenMsg = getString(R.string.messages_marked_seen) + " " + getString(R.string.messages_on) + ": " + DateFormats.DISPLAY_DATE_TIME.format(new Date(DateFormats.convertSecondsToMs(dbEpisode.seen)));
+        d.setText(seenMsg);
         DroidShows.removeEpisodeIdFromLog = 0;
       } else {
-        d.setText("");
+        seenMsg = getString(R.string.messages_marked_unseen);
+        d.setText(seenMsg);
         dbEpisode.seen = 0;
         DroidShows.removeEpisodeIdFromLog = episodeId;
       }

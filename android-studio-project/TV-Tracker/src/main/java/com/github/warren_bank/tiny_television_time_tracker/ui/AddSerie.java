@@ -378,7 +378,7 @@ public class AddSerie extends ListActivity
 
           if (alreadyExists) {
             // btn.setVisibility(View.GONE);
-            btn.setImageDrawable(getResources().getDrawable(R.drawable.star));
+            btn.setImageDrawable(getResources().getDrawable(android.R.drawable.btn_star_big_on));
             btn.setOnClickListener(new OnClickListener() {
               public void onClick(View v) {
                 // no op
@@ -388,7 +388,7 @@ public class AddSerie extends ListActivity
           }
           else {
             // btn.setVisibility(View.VISIBLE);
-            btn.setImageDrawable(getResources().getDrawable(R.drawable.add));
+            btn.setImageDrawable(getResources().getDrawable(android.R.drawable.ic_menu_add));
             btn.setOnClickListener(new OnClickListener() {
               public void onClick(View v) {
                 addSerie(searchResult);
