@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">es</string>
-<string name="app_name_long">Diminuta Televisión Time Tracker</string>
+<string name="app_name_long">Pequeño rastreador de tiempo para televisión</string>
 <string name="layout_main_no_items">No has añadido series.</string>
 <string name="layout_search_no_items">No se encontró ninguna serie.</string>
 <string name="layout_seasons_no_items">No hay temporadas que mostrar.</string>

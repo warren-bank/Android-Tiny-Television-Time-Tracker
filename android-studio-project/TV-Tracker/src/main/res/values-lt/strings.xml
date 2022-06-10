@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">lt</string>
-<string name="app_name_long">Tiny Television time Tracker</string>
+<string name="app_name_long">Maža laiko sekiklis televizoriui</string>
 <string name="layout_main_no_items">Nerasta jokių duomenų.</string>
 <string name="layout_search_no_items">Nerasta jokių duomenų.</string>
 <string name="layout_seasons_no_items">Nėra sezonų rodyti.</string>

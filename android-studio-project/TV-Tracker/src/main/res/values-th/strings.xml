@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">th</string>
-<string name="app_name_long">ตัวติดตามเวลาโทรทัศน์ขนาดเล็ก</string>
+<string name="app_name_long">ตัวติดตามตัวน้อยสำหรับโทรทัศน์</string>
 <string name="layout_main_no_items">ไม่พบรายการ.</string>
 <string name="layout_search_no_items">ไม่พบรายการ.</string>
 <string name="layout_seasons_no_items">ไม่มีฤดูกาลที่จะแสดง.</string>

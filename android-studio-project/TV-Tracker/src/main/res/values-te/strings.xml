@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">te</string>
-<string name="app_name_long">టినీ టెలివిజన్ టైమ్ ట్రాకర్</string>
+<string name="app_name_long">టెలివిజన్ కోసం టెలికాల్ ట్రాకర్</string>
 <string name="layout_main_no_items">ఏ ప్రదర్శన కనబడలేదు.</string>
 <string name="layout_search_no_items">ఏ ప్రదర్శన కనబడలేదు.</string>
 <string name="layout_seasons_no_items">ప్రదర్శించుటకు ఋషులు లేదు.</string>

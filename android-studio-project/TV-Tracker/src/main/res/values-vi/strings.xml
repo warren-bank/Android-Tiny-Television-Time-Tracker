@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">vi</string>
-<string name="app_name_long">Trình theo dõi thời gian truyền hình nhỏ</string>
+<string name="app_name_long">Trình theo dõi thời gian nhỏ</string>
 <string name="layout_main_no_items">Không tìm thấy hiển thị.</string>
 <string name="layout_search_no_items">Không tìm thấy hiển thị.</string>
 <string name="layout_seasons_no_items">Không có mùa để hiển thị.</string>

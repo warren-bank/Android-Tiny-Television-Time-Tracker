@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ur</string>
-<string name="app_name_long">ٹنی ٹیلی ویژن ٹائم ٹریکر</string>
+<string name="app_name_long">ٹیلی ویژن کے لئے چھوٹے وقت کے ٹریکر</string>
 <string name="layout_main_no_items">کوئی شو نہیں ملا.</string>
 <string name="layout_search_no_items">کوئی شو نہیں ملا.</string>
 <string name="layout_seasons_no_items">ڈسپلے کرنے کے لئے کوئی موسموں.</string>

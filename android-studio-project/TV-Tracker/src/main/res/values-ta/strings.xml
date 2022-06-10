@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ta</string>
-<string name="app_name_long">Tiny Television Time Tracker</string>
+<string name="app_name_long">தொலைக்காட்சித் தொலைக்காட்சி</string>
 <string name="layout_main_no_items">காண்பிக்கப்படவில்லை.</string>
 <string name="layout_search_no_items">காண்பிக்கப்படவில்லை.</string>
 <string name="layout_seasons_no_items">காட்சிக்கு எதுவும் இல்லை.</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ko</string>
-<string name="app_name_long">Tiny Television Time Tracker</string>
+<string name="app_name_long">텔레비전의 조그마한 시간 추적기</string>
 <string name="layout_main_no_items">발견된 쇼가 없음.</string>
 <string name="layout_search_no_items">발견된 쇼가 없음.</string>
 <string name="layout_seasons_no_items">표시할 계절이 없음.</string>

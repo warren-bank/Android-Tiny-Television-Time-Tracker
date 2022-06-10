@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ru</string>
-<string name="app_name_long">Крошечный телевизионный трекер</string>
+<string name="app_name_long">крошечный трекер для телевидения</string>
 <string name="layout_main_no_items">Сериалы не найдены. Для добавления сералов используйте соответствующий пункт меню</string>
 <string name="layout_search_no_items">Сериалы не найдены.</string>
 <string name="layout_seasons_no_items">Сезонов нет.</string>

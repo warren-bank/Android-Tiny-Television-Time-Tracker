@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">hr</string>
-<string name="app_name_long">Maleni Televizijski Tragač</string>
+<string name="app_name_long">sićušni tragač vremena za televiziju</string>
 <string name="layout_main_no_items">Nisu pronađene nikakve serije.</string>
 <string name="layout_search_no_items">Nisu pronađene nikakve serije.</string>
 <string name="layout_seasons_no_items">Nema sezona za prikaz.</string>

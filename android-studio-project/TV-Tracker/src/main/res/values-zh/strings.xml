@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">zh</string>
-<string name="app_name_long">小型电视时间跟踪器</string>
+<string name="app_name_long">电视小追踪器</string>
 <string name="layout_main_no_items">未找到任何显示.</string>
 <string name="layout_search_no_items">未找到任何显示.</string>
 <string name="layout_seasons_no_items">没有要显示的季节.</string>

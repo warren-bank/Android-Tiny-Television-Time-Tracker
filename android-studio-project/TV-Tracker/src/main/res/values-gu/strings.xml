@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">gu</string>
-<string name="app_name_long">Tiny Television Time Tracker</string>
+<string name="app_name_long">ટેલિવિઝન માટે ઘણી વખત ટ્રેકર</string>
 <string name="layout_main_no_items">કોઈ શોધ શોધાયુ નથી.</string>
 <string name="layout_search_no_items">કોઈ શોધ શોધાયુ નથી.</string>
 <string name="layout_seasons_no_items">દર્શાવવા માટે ઋતુઓ નથી.</string>

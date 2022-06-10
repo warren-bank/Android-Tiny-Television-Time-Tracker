@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">sr</string>
-<string name="app_name_long">Мали телевизијски трагач времена</string>
+<string name="app_name_long">мали временски трагач за телевизију</string>
 <string name="layout_main_no_items">Нема пронађених серија.</string>
 <string name="layout_search_no_items">Нема пронађених серија.</string>
 <string name="layout_seasons_no_items">Нема годишњих доба за приказ.</string>

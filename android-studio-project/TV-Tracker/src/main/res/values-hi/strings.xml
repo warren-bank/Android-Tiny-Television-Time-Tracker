@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">hi</string>
-<string name="app_name_long">छोटा टेलीविजन समय ट्रेकर</string>
+<string name="app_name_long">टेलीविजन के लिए छोटे समय के ट्रेकर</string>
 <string name="layout_main_no_items">कोई शो नहीं मिला.</string>
 <string name="layout_search_no_items">कोई शो नहीं मिला.</string>
 <string name="layout_seasons_no_items">दिखाने के लिए कोई मौसम नहीं.</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">pt</string>
-<string name="app_name_long">Pequeno Tracker de Tempo de Televisão</string>
+<string name="app_name_long">minúsculo tempo rastreador para televisão</string>
 <string name="layout_main_no_items">Nenhum mostra encontrado.</string>
 <string name="layout_search_no_items">Nenhum mostra encontrado.</string>
 <string name="layout_seasons_no_items">Sem estações para exibir.</string>

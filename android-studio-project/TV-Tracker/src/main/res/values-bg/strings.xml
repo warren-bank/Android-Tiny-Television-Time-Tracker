@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">bg</string>
-<string name="app_name_long">Малък телевизионен тайм тракер</string>
+<string name="app_name_long">Малък тракер за телевизията.</string>
 <string name="layout_main_no_items">Не са намерени..</string>
 <string name="layout_search_no_items">Не са намерени..</string>
 <string name="layout_seasons_no_items">Няма сезони за показване.</string>

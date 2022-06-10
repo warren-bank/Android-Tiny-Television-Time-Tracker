@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ml</string>
-<string name="app_name_long">ചെറിയ ടെലിവിഷൻ ടൈം ട്രാക്കർ</string>
+<string name="app_name_long">ടെലിവിഷനിൽ ചെറിയ സമയത്തുള്ള ട്രാക്കർ</string>
 <string name="layout_main_no_items">കാണിച്ചിരുന്നതൊന്നും കാണുന്നില്ല.</string>
 <string name="layout_search_no_items">കാണിച്ചിരുന്നതൊന്നും കാണുന്നില്ല.</string>
 <string name="layout_seasons_no_items">പ്രദര്ശിപ്പിക്കാന് ഋതുക്കളില്ല.</string>

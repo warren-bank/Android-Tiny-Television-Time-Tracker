@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ga</string>
-<string name="app_name_long">Rianóir Ama an Teilifíse Beag</string>
+<string name="app_name_long">tarracóir ama beag le haghaidh teilifíse</string>
 <string name="layout_main_no_items">Níor aimsíodh aon taispeánadh.</string>
 <string name="layout_search_no_items">Níor aimsíodh aon taispeánadh.</string>
 <string name="layout_seasons_no_items">Níl aon séasúir le taispeáint.</string>

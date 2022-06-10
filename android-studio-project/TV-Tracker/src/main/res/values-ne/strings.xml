@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ne</string>
-<string name="app_name_long">टिनी टेलिभिजन समय ट्र्याकर</string>
+<string name="app_name_long">टेलिभिजनका लागि टाइट टाइम ट्र्याकर</string>
 <string name="layout_main_no_items">फेला परेन.</string>
 <string name="layout_search_no_items">फेला परेन.</string>
 <string name="layout_seasons_no_items">प्रदर्शन गर्न कुनै मौसम छैन.</string>

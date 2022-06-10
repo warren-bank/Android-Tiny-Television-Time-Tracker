@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">bs</string>
-<string name="app_name_long">Tiny Television Time</string>
+<string name="app_name_long">sitni vremenski tracker za televiziju</string>
 <string name="layout_main_no_items">Nema nađenih serija.</string>
 <string name="layout_search_no_items">Nema nađenih serija.</string>
 <string name="layout_seasons_no_items">Nema godišnjih doba za prikazivanje.</string>

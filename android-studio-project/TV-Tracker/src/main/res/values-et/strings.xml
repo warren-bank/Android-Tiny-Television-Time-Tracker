@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">et</string>
-<string name="app_name_long">Tilluke TV-aja tracker</string>
+<string name="app_name_long">tilluke aeg tracker televisioonis</string>
 <string name="layout_main_no_items">Ühtegi näitust ei leitud.</string>
 <string name="layout_search_no_items">Ühtegi näitust ei leitud.</string>
 <string name="layout_seasons_no_items">Pole hooaega, et näidata.</string>

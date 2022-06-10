@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">tr</string>
-<string name="app_name_long">Minik Television Time Tracker</string>
+<string name="app_name_long">televizyon için minik zaman izleyici</string>
 <string name="layout_main_no_items">Hiçbir gösteri bulunamadı.</string>
 <string name="layout_search_no_items">Hiçbir gösteri bulunamadı.</string>
 <string name="layout_seasons_no_items">Görüntülenecek mevsimler yok.</string>

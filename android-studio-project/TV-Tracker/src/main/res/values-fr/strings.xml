@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">fr</string>
-<string name="app_name_long">Tiny Television Time Tracker</string>
+<string name="app_name_long">Petit tracker de temps pour la télévision</string>
 <string name="layout_main_no_items">Aucune série trouvée.</string>
 <string name="layout_search_no_items">Aucune série trouvée.</string>
 <string name="layout_seasons_no_items">Aucune saison à afficher.</string>

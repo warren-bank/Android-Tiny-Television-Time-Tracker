@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">fi</string>
-<string name="app_name_long">Pienen televisioajan jäljitin</string>
+<string name="app_name_long">Pieni televisiotoiminnan jäljittäjä</string>
 <string name="layout_main_no_items">Ei löytynyt.</string>
 <string name="layout_search_no_items">Ei löytynyt.</string>
 <string name="layout_seasons_no_items">Ei vuodenaikoja näytettäväksi.</string>

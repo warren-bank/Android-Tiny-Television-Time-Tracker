@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">cy</string>
-<string name="app_name_long">Comment</string>
+<string name="app_name_long">traciwr amser bach ar gyfer y teledu</string>
 <string name="layout_main_no_items">Heb ganfod sioeau.</string>
 <string name="layout_search_no_items">Heb ganfod sioeau.</string>
 <string name="layout_seasons_no_items">Dim tymhorau i\'w ddangos.</string>

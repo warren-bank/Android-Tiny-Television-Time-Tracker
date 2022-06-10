@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">nl</string>
-<string name="app_name_long">Kleine TV-tijdtracker</string>
+<string name="app_name_long">Kleine tijdzoeker voor televisie</string>
 <string name="layout_main_no_items">Geen series gevonden.</string>
 <string name="layout_search_no_items">Geen series gevonden.</string>
 <string name="layout_seasons_no_items">Geen seizoenen gevonden.</string>

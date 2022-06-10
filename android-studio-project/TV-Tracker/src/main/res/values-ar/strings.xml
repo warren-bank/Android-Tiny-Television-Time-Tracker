@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ar</string>
-<string name="app_name_long">Tiny Television Teacker</string>
+<string name="app_name_long">متعقب وقت صغير للتليفزيون</string>
 <string name="layout_main_no_items">لم يتم ايجاد أية عروض.</string>
 <string name="layout_search_no_items">لم يتم ايجاد أية عروض.</string>
 <string name="layout_seasons_no_items">لا توجد مواسم للعرض.</string>

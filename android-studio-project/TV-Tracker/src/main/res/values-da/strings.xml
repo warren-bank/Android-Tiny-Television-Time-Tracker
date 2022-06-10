@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">da</string>
-<string name="app_name_long">Tiny Television Time Tracker</string>
+<string name="app_name_long">lillebitte tidssenderen for tv</string>
 <string name="layout_main_no_items">Ingen programmer fundet.</string>
 <string name="layout_search_no_items">Ingen programmer fundet.</string>
 <string name="layout_seasons_no_items">Ingen sæsoner, der skal vises.</string>

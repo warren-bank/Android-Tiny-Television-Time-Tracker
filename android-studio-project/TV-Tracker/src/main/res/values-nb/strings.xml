@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">nb</string>
-<string name="app_name_long">Tiny TelTV Time Tracker</string>
+<string name="app_name_long">bittesmå tidssporer for TV</string>
 <string name="layout_main_no_items">Ingen serier funnet.</string>
 <string name="layout_search_no_items">Ingen serier funnet.</string>
 <string name="layout_seasons_no_items">Ingen sesonger å vise.</string>

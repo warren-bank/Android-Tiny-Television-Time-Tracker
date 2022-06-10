@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">el</string>
-<string name="app_name_long">Tiny Τηλεόραση Time Tracker</string>
+<string name="app_name_long">μικροσκοπικός χρόνος εντοπισμού για την τηλεόραση</string>
 <string name="layout_main_no_items">Δεν βρέθηκαν παραστάσεις..</string>
 <string name="layout_search_no_items">Δεν βρέθηκαν παραστάσεις..</string>
 <string name="layout_seasons_no_items">Δεν υπάρχουν εποχές..</string>

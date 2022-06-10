@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ro</string>
-<string name="app_name_long">Mic de televiziune Time Tracker</string>
+<string name="app_name_long">mic timp tracker pentru televiziune</string>
 <string name="layout_main_no_items">Nu există spectacole găsite.</string>
 <string name="layout_search_no_items">Nu există spectacole găsite.</string>
 <string name="layout_seasons_no_items">Nici un sezon pentru a afișa.</string>

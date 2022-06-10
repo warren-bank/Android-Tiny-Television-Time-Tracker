@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">bn</string>
-<string name="app_name_long">Tiny Television Time Tracker</string>
+<string name="app_name_long">টেলিভিশনের জন্য ছোট সময় ট্র্যাকার</string>
 <string name="layout_main_no_items">কোন শো পাওয়া যায়নি.</string>
 <string name="layout_search_no_items">কোন শো পাওয়া যায়নি.</string>
 <string name="layout_seasons_no_items">প্রদর্শন করার কোন ঋতু নেই.</string>

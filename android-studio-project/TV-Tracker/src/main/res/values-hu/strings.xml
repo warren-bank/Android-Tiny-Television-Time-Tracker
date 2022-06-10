@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">hu</string>
-<string name="app_name_long">Pici Television Time Tracker</string>
+<string name="app_name_long">Apró időjeladó a televízióhoz</string>
 <string name="layout_main_no_items">Nem található látható.</string>
 <string name="layout_search_no_items">Nem található látható.</string>
 <string name="layout_seasons_no_items">Nincsenek megjeleníthető évszakok.</string>

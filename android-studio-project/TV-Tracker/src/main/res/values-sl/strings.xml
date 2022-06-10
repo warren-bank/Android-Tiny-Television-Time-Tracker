@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">sl</string>
-<string name="app_name_long">Mali Sledilnik Drobnega Televizijskega Programa</string>
+<string name="app_name_long">majhen časovni sledilec za televizijo</string>
 <string name="layout_main_no_items">Najden ni bil noben prikazan.</string>
 <string name="layout_search_no_items">Najden ni bil noben prikazan.</string>
 <string name="layout_seasons_no_items">Ni sezon za prikaz.</string>

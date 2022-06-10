@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">uk</string>
-<string name="app_name_long">Стеження за часовим часом</string>
+<string name="app_name_long">крихітний інструмент стеження за часом</string>
 <string name="layout_main_no_items">Не знайдено жодного показника.</string>
 <string name="layout_search_no_items">Не знайдено жодного показника.</string>
 <string name="layout_seasons_no_items">Немає сезонів для показу.</string>

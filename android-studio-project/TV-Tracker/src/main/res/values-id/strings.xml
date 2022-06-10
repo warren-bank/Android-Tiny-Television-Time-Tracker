@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">id</string>
-<string name="app_name_long">Pelacak Waktu Televisi Kecil</string>
+<string name="app_name_long">pelacak waktu kecil untuk televisi</string>
 <string name="layout_main_no_items">Tidak ada acara yang ditemukan.</string>
 <string name="layout_search_no_items">Tidak ada acara yang ditemukan.</string>
 <string name="layout_seasons_no_items">Tidak ada musim untuk ditampilkan.</string>

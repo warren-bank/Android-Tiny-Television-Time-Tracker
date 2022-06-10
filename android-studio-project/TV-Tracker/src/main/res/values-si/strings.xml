@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">si</string>
-<string name="app_name_long">Tiny Television Time Tracker</string>
+<string name="app_name_long">රූපවාහිනිය සඳහා කුඩා කාලයේ ට්රැකර්</string>
 <string name="layout_main_no_items">නැත පෙන්වන්නේ නැත.</string>
 <string name="layout_search_no_items">නැත පෙන්වන්නේ නැත.</string>
 <string name="layout_seasons_no_items">දර්ශණය කිරීමට සෘතු නැත.</string>

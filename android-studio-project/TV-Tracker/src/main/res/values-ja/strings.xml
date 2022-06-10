@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ja</string>
-<string name="app_name_long">タイニー・テレビタイム・トラッカー</string>
+<string name="app_name_long">テレビのための小さな時のトラッカー</string>
 <string name="layout_main_no_items">表示されない.</string>
 <string name="layout_search_no_items">表示されない.</string>
 <string name="layout_seasons_no_items">表示する季節がない.</string>
