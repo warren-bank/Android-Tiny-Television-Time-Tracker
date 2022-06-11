@@ -41,6 +41,28 @@ public class FileUtils {
     return fileName;
   }
 
+  public static String getFileName(String fileName, String fileExtension, boolean auto, boolean isPreUpdate, boolean isPostUpdate, int oldVersion) {
+    StringBuilder sb = new StringBuilder(64);
+    sb.append(fileName);
+    if (!auto) {
+      sb.append("." + DateFormats.getNormalizedDateTime());
+    }
+    if (isPreUpdate && !isPostUpdate) {
+      sb.append(".preupdate");
+      if (oldVersion > 0) {
+        sb.append("-v" + oldVersion);
+      }
+    }
+    if (!isPreUpdate && isPostUpdate) {
+      sb.append(".update");
+      if (oldVersion > 0) {
+        sb.append("-v" + oldVersion);
+      }
+    }
+    sb.append("." + fileExtension);
+    return sb.toString();
+  }
+
   public static boolean exists(String path) {
     File file = FileUtils.getFile(path);
     return ((file != null) && file.exists());
@@ -62,17 +84,7 @@ public class FileUtils {
   public static String getDatabaseFileName(Context context, boolean auto, boolean isPreUpdate, int oldVersion) {
     context = context.getApplicationContext();
     String fileName = context.getString(R.string.database_file_name);
-    if (!auto) {
-      fileName += "." + DateFormats.getNormalizedDateTime();
-    }
-    if (isPreUpdate) {
-      fileName += ".preupdate";
-      if (oldVersion > 0) {
-        fileName += "-v" + oldVersion;
-      }
-    }
-    fileName += ".db";
-    return fileName;
+    return FileUtils.getFileName(fileName, /* fileExtension */ "db", auto, isPreUpdate, /* isPostUpdate */ false, oldVersion);
   }
 
   public static String getDatabaseFileNameForBackupVersion(String fileName, int backupVersion) {
@@ -224,6 +236,33 @@ public class FileUtils {
 
     result &= FileUtils.cleanImageDirectory(context, R.string.images_small_directory_name);
     result &= FileUtils.cleanImageDirectory(context, R.string.images_medium_directory_name);
+
+    return result;
+  }
+
+  // --------------------------------------------------------------------------- output: generic
+
+  public static boolean writeToFile(String content, File file) {
+    boolean append = false;
+    return FileUtils.writeToFile(content, file, append);
+  }
+
+  public static boolean writeToFile(String content, File file, boolean append) {
+    boolean result = true;
+
+    FileOutputStream fos = null;
+    try {
+      fos = new FileOutputStream(file, append);
+      fos.write(content.getBytes());
+    }
+    catch(Exception e) {
+      result = false;
+    }
+
+    try {
+      if (fos != null) fos.close();
+    }
+    catch(Exception e) {}
 
     return result;
   }

@@ -36,6 +36,7 @@ import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 // -----------------------------------------------------------------------------
 // API library references:
@@ -68,17 +69,45 @@ public class ApiGateway {
 
   // --------------------------------------------------------------------------- Find:
 
-  public int findSeriesByExternalId(String externalId) {
-    ExternalSource origin = ExternalSource.TVDB_ID;
-    return findSeriesByExternalId(externalId, origin);
-  }
-
-  public int findSeriesByExternalId(String externalId, ExternalSource origin) {
+  public int findSeriesByExternalId(Map<String,String> origins) {
     String language = null;
-    return findSeriesByExternalId(externalId, origin, language);
+    return findSeriesByExternalId(origins, language);
   }
 
-  public int findSeriesByExternalId(String externalId, ExternalSource origin, String language) {
+  public int findSeriesByExternalId(Map<String,String> origins, String language) {
+    int internalId = -1;
+
+    if (origins != null) {
+      String origin, externalId;
+
+      for(Map.Entry<String, String> entry : origins.entrySet()){
+        origin     = entry.getKey();
+        externalId = entry.getValue();
+        internalId = findSeriesByExternalId(origin, externalId, language);
+
+        if (internalId > 0) break;
+      }
+    }
+
+    return internalId;
+  }
+
+  public int findSeriesByExternalId(String origin, String externalId, String language) {
+    if (TextUtils.isEmpty(origin) || TextUtils.isEmpty(externalId)) return -1;
+
+    switch(origin.toLowerCase()) {
+      case "tvdb":
+      case "thetvdb":
+        return findSeriesByExternalId(ExternalSource.TVDB_ID, externalId, language);
+      case "imdb":
+        return findSeriesByExternalId(ExternalSource.IMDB_ID, externalId, language);
+    }
+    return -1;
+  }
+
+  public int findSeriesByExternalId(ExternalSource origin, String externalId, String language) {
+    if (TextUtils.isEmpty(externalId)) return -1;
+
     try {
       FindResults response = api.find(externalId, origin, language);
 

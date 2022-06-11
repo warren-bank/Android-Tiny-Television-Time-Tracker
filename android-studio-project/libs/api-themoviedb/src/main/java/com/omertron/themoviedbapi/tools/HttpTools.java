@@ -80,7 +80,7 @@ public class HttpTools {
      * @throws MovieDbException exception
      */
     public String getRequest(final URL url) throws MovieDbException {
-        HashMap<String, String> headers = new HashMap<String, String>();
+        Map<String, String> headers = new HashMap<String, String>();
         headers.put("Accept", APPLICATION_JSON);
 
         DigestedResponse response = requestContent(url, "GET", headers, /* String body */ null, /* int retryCount */ 0);
@@ -95,7 +95,7 @@ public class HttpTools {
      * @throws MovieDbException exception
      */
     public String deleteRequest(final URL url) throws MovieDbException {
-        DigestedResponse response = requestContent(url, "DELETE", /* HashMap headers */ null, /* String body */ null, /* int retryCount */ 0);
+        DigestedResponse response = requestContent(url, "DELETE", /* Map headers */ null, /* String body */ null, /* int retryCount */ 0);
         return validateResponse(response, url);
     }
 
@@ -108,7 +108,7 @@ public class HttpTools {
      * @throws MovieDbException exception
      */
     public String postRequest(final URL url, final String jsonBody) throws MovieDbException {
-        HashMap<String, String> headers = new HashMap<String, String>();
+        Map<String, String> headers = new HashMap<String, String>();
         headers.put("Content-Type", APPLICATION_JSON);
         headers.put("Accept",       APPLICATION_JSON);
 
@@ -134,7 +134,7 @@ public class HttpTools {
         }
     }
 
-    private DigestedResponse requestContent(final URL url, final String method, final HashMap<String, String> headers, final String body, int retryCount) {
+    private DigestedResponse requestContent(final URL url, final String method, final Map<String, String> headers, final String body, int retryCount) {
       int statusCode = SC_SERVICE_UNAVAILABLE;
       String content = "";
 

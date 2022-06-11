@@ -6,6 +6,7 @@ import com.github.warren_bank.tiny_television_time_tracker.common.Constants;
 import com.github.warren_bank.tiny_television_time_tracker.common.DateFormats;
 import com.github.warren_bank.tiny_television_time_tracker.database.DbGateway;
 import com.github.warren_bank.tiny_television_time_tracker.database.Update;
+import com.github.warren_bank.tiny_television_time_tracker.database.Update.DatabaseUpdateResult;
 import com.github.warren_bank.tiny_television_time_tracker.ui.AddSerie;
 import com.github.warren_bank.tiny_television_time_tracker.ui.BounceListView;
 import com.github.warren_bank.tiny_television_time_tracker.ui.SerieSeasons;
@@ -116,6 +117,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
   private static final int DELETE_CONTEXT = SYNOPSIS_LANGUAGE + 1;
   private static AlertDialog m_AlertDlg;
   private static ProgressDialog m_ProgressDialog = null;
+  private static String m_ProgressDialogMsg;
   public static SeriesAdapter seriesAdapter;
   private static BounceListView listView = null;
   private static int backFromSeasonSerieId = 0;
@@ -226,7 +228,6 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
   private SwipeDetect swipeDetect;
   private Vibrator vib;
   private Spinner spinner;
-  private String dialogMsg;
   private InputMethodManager keyboard;
   private int padding;
   private TVShowItem lastSerie;
@@ -410,22 +411,19 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
   }
 
   @Override // Update.DatabaseUpdateListener
-  public void postDatabaseUpdate(int mode, int oldVersion, boolean didUpdateFail, boolean didUpdateSucceed, boolean didUpdateAllSeries, Object passthrough) {
-    if (didUpdateFail) {
-      String error = getString(R.string.messages_db_error_update);
-      Toast.makeText(DroidShows.this, error, Toast.LENGTH_LONG).show();
-    }
+  public void postDatabaseUpdate(int mode, int oldVersion, DatabaseUpdateResult result, Object passthrough) {
+    Update.handleDatabaseUpdateResultErrors(DroidShows.this, oldVersion, result, backupFolder);
 
     switch (mode) {
       case Update.MODE_INSTALL: {
-        if (didUpdateSucceed) {
+        if (result.didUpdateSucceed) {
           updateShowStats();
         }
         break;
       }
 
       case Update.MODE_RESTORE: {
-        if (!didUpdateFail) {
+        if (!result.didUpdateFail) {
           String backupFile = (String) passthrough;
           String toastTxt   = getString(R.string.dialog_restore_done) + "\n(" + backupFile + ")";
           Toast.makeText(DroidShows.this, toastTxt, Toast.LENGTH_LONG).show();
@@ -433,10 +431,10 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
           FileUtils.cleanDatabaseDirectory(DroidShows.this);
           undo.clear();
 
-          if (!didUpdateAllSeries)
+          if (!result.didUpdateAllSeries)
             db.updateSerieRemoveAllImageFilePaths();
 
-          if (BuildConfig.DEBUG || didUpdateAllSeries) {
+          if (BuildConfig.DEBUG || result.didUpdateAllSeries) {
             updateShowStats();
           }
           else {
@@ -1627,7 +1625,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
 
   private Runnable changeMessage = new Runnable() {
     public void run() {
-      m_ProgressDialog.setMessage(dialogMsg);
+      m_ProgressDialog.setMessage(m_ProgressDialogMsg);
       m_ProgressDialog.show();
     }
   };
@@ -1696,7 +1694,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
             serieId   = serie.getSerieId();
             serieName = serie.getName();
 
-            dialogMsg = serieName + "\u2026";
+            m_ProgressDialogMsg = serieName + "\u2026";
             runOnUiThread(changeMessage);
 
             result = api.updateSeries(serieId);

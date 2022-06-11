@@ -5,7 +5,10 @@ import com.github.warren_bank.tiny_television_time_tracker.api.ApiGateway;
 import com.github.warren_bank.tiny_television_time_tracker.common.Constants;
 import com.github.warren_bank.tiny_television_time_tracker.common.DateFormats;
 import com.github.warren_bank.tiny_television_time_tracker.utils.FileUtils;
+import com.github.warren_bank.tiny_television_time_tracker.utils.RuntimePermissionUtils;
 
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -18,12 +21,15 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
+import java.io.File;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Update {
   protected static final String currentVersion = "0.1.5-7G6";
@@ -31,20 +37,46 @@ public class Update {
   public static final int MODE_INSTALL = 1;
   public static final int MODE_RESTORE = 2;
 
+  public class DatabaseUpdateResult {
+    public boolean didUpdateFail;
+    public boolean didUpdateSucceed;
+    public boolean didUpdateAllSeries;
+    public TmdbApiMigrationResult tmdbApiMigrationResult;
+
+    public DatabaseUpdateResult() {
+      this.didUpdateFail          = false;
+      this.didUpdateSucceed       = false;
+      this.didUpdateAllSeries     = false;
+      this.tmdbApiMigrationResult = new TmdbApiMigrationResult();
+    }
+  }
+
+  public class TmdbApiMigrationResult {
+    public List<String>  tvdbSeriesIdsThatFailedToResolve;
+    public List<String>  seriesNamesThatFailedToResolve;
+    public List<Integer> tmdbSeriesIdsThatFailedToAdd;
+    public List<String>  seriesNamesThatFailedToAdd;
+
+    public TmdbApiMigrationResult() {
+      this.tvdbSeriesIdsThatFailedToResolve = new ArrayList<String>();
+      this.seriesNamesThatFailedToResolve   = new ArrayList<String>();
+      this.tmdbSeriesIdsThatFailedToAdd     = new ArrayList<Integer>();
+      this.seriesNamesThatFailedToAdd       = new ArrayList<String>();
+    }
+  }
+
   public interface DatabaseUpdateListener {
     public boolean preDatabaseUpdate (int mode, int oldVersion, boolean willUpdate);
-    public void    postDatabaseUpdate(int mode, int oldVersion, boolean didUpdateFail, boolean didUpdateSucceed, boolean didUpdateAllSeries, Object passthrough);
+    public void    postDatabaseUpdate(int mode, int oldVersion, DatabaseUpdateResult result, Object passthrough);
   }
 
   private Context context;
   private SQLiteStore db;
-  private boolean didUpdateFail;
-  private boolean didUpdateSucceed;
-  private boolean didUpdateAllSeries;
+  private DatabaseUpdateResult databaseUpdateResult;
 
-  public Update(Context context) {
+  public Update(Activity context) {
     // IMPORTANT: Do NOT use "context.getApplicationContext()". Context must be for an Activity (NOT an Application) to create a ProgressDialog.
-    this.context = context;
+    this.context = (Context) context;
     this.db      = SQLiteStore.getInstance(context);
   }
 
@@ -64,9 +96,7 @@ public class Update {
         Looper.prepare();
         Log.d(Constants.LOG_TAG, "Database update routine");
 
-        didUpdateFail      = false;
-        didUpdateSucceed   = false;
-        didUpdateAllSeries = false;
+        databaseUpdateResult = new DatabaseUpdateResult();
 
         int     oldVersion = getVersionNumber();
         boolean willUpdate = needsUpdate();
@@ -84,15 +114,15 @@ public class Update {
           updateDatabaseVersion();
         }
 
-        if (didUpdateFail)
+        if (databaseUpdateResult.didUpdateFail)
           Log.e(Constants.LOG_TAG, "Attempt to update version of database schema has failed");
-        else if (didUpdateSucceed)
+        else if (databaseUpdateResult.didUpdateSucceed)
           Log.d(Constants.LOG_TAG, "Version of database schema has been updated");
         else
           Log.d(Constants.LOG_TAG, "Version of database schema did not require an update");
 
         if (listener != null)
-          listener.postDatabaseUpdate(mode, oldVersion, didUpdateFail, didUpdateSucceed, didUpdateAllSeries, passthrough);
+          listener.postDatabaseUpdate(mode, oldVersion, databaseUpdateResult, passthrough);
 
         Looper.loop();
       }
@@ -152,65 +182,65 @@ public class Update {
     boolean didUpdate, result;
     int version;
 
-    didUpdate        = false;
-    didUpdateSucceed = true;
-    version          = getVersionNumber();
+    databaseUpdateResult.didUpdateSucceed = true;
+    didUpdate                             = false;
+    version                               = getVersionNumber();
 
-    if (!didUpdateFail && (version == 1)) {
-      didUpdate           = true;
-      result              = update_version_001();
-      didUpdateSucceed   &= result;
-      didUpdateFail      |= !result;
-      version             = getVersionNumber();
+    if (!databaseUpdateResult.didUpdateFail && (version == 1)) {
+      didUpdate                                = true;
+      result                                   = update_version_001();
+      databaseUpdateResult.didUpdateSucceed   &= result;
+      databaseUpdateResult.didUpdateFail      |= !result;
+      version                                  = getVersionNumber();
     }
-    if (!didUpdateFail && (version == 2)) {
-      didUpdate           = true;
-      result              = update_version_002();
-      didUpdateSucceed   &= result;
-      didUpdateFail      |= !result;
-      version             = getVersionNumber();
+    if (!databaseUpdateResult.didUpdateFail && (version == 2)) {
+      didUpdate                                = true;
+      result                                   = update_version_002();
+      databaseUpdateResult.didUpdateSucceed   &= result;
+      databaseUpdateResult.didUpdateFail      |= !result;
+      version                                  = getVersionNumber();
     }
-    if (!didUpdateFail && (version == 3)) {
-      didUpdate           = true;
-      result              = update_version_003();
-      didUpdateSucceed   &= result;
-      didUpdateFail      |= !result;
-      version             = getVersionNumber();
+    if (!databaseUpdateResult.didUpdateFail && (version == 3)) {
+      didUpdate                                = true;
+      result                                   = update_version_003();
+      databaseUpdateResult.didUpdateSucceed   &= result;
+      databaseUpdateResult.didUpdateFail      |= !result;
+      version                                  = getVersionNumber();
     }
-    if (!didUpdateFail && (version == 4)) {
-      didUpdate           = true;
-      result              = update_version_004();
-      didUpdateSucceed   &= result;
-      didUpdateFail      |= !result;
-      version             = getVersionNumber();
+    if (!databaseUpdateResult.didUpdateFail && (version == 4)) {
+      didUpdate                                = true;
+      result                                   = update_version_004();
+      databaseUpdateResult.didUpdateSucceed   &= result;
+      databaseUpdateResult.didUpdateFail      |= !result;
+      version                                  = getVersionNumber();
     }
-    if (!didUpdateFail && (version == 5)) {
-      didUpdate           = true;
-      result              = update_version_005();
-      didUpdateSucceed   &= result;
-      didUpdateFail      |= !result;
-      version             = getVersionNumber();
+    if (!databaseUpdateResult.didUpdateFail && (version == 5)) {
+      didUpdate                                = true;
+      result                                   = update_version_005();
+      databaseUpdateResult.didUpdateSucceed   &= result;
+      databaseUpdateResult.didUpdateFail      |= !result;
+      version                                  = getVersionNumber();
     }
-    if (!didUpdateFail && (version == 6)) {
-      didUpdate           = true;
-      result              = update_version_006();
-      didUpdateSucceed   &= result;
-      didUpdateFail      |= !result;
-      version             = getVersionNumber();
+    if (!databaseUpdateResult.didUpdateFail && (version == 6)) {
+      didUpdate                                = true;
+      result                                   = update_version_006();
+      databaseUpdateResult.didUpdateSucceed   &= result;
+      databaseUpdateResult.didUpdateFail      |= !result;
+      version                                  = getVersionNumber();
     }
-    if (!didUpdateFail && (version == 7)) {
-      didUpdate           = true;
-      result              = update_version_007();
-      didUpdateAllSeries |= result;
-      didUpdateSucceed   &= result;
-      didUpdateFail      |= !result;
-      version             = getVersionNumber();
+    if (!databaseUpdateResult.didUpdateFail && (version == 7)) {
+      didUpdate                                = true;
+      result                                   = update_version_007();
+      databaseUpdateResult.didUpdateAllSeries |= result;
+      databaseUpdateResult.didUpdateSucceed   &= result;
+      databaseUpdateResult.didUpdateFail      |= !result;
+      version                                  = getVersionNumber();
     }
-    if (!didUpdateFail && (version == 8)) {
+    if (!databaseUpdateResult.didUpdateFail && (version == 8)) {
       // noop: version of schema is up-to-date
     }
 
-    didUpdateSucceed &= didUpdate;
+    databaseUpdateResult.didUpdateSucceed &= didUpdate;
   }
 
   private boolean update_version_001() {
@@ -383,6 +413,13 @@ public class Update {
   // Used by: VERSION 0.1.5-7G6
   // ---------------------------------------------------------------------------
 
+  private boolean doTmdbApiMigration() {
+    boolean abortOnMissingSeriesId   = false;
+    boolean abortOnErrorAddingSeries = false;
+
+    return doTmdbApiMigration(abortOnMissingSeriesId, abortOnErrorAddingSeries);
+  }
+
   // 1. backup user metadata to temporary tables
   //    a) this includes migrating "pinned" series from app preferences to the DB
   // 2. delete old schema
@@ -393,7 +430,7 @@ public class Update {
   //    a) re-adding series
   //    b) importing user metadata from temporary tables
   // 5. remove temporary tables
-  private boolean doTmdbApiMigration() {
+  private boolean doTmdbApiMigration(boolean abortOnMissingSeriesId, boolean abortOnErrorAddingSeries) {
       boolean result = true;
 
       ApiGateway api = null;
@@ -456,8 +493,10 @@ public class Update {
             queries.add("UPDATE tmdb_migration_series SET pinned = 1 WHERE thetvdbid IN (" + TextUtils.join(", ", pinnedShows) + ")");
 
           List<String> thetvdbids = new ArrayList<String>();
+          List<String> imdbids    = new ArrayList<String>();
+          List<String> serieNames = new ArrayList<String>();
           {
-            String query = "SELECT id FROM series";
+            String query = "SELECT id, imdbId, serieName FROM series";
 
             Cursor c = null;
             try {
@@ -466,6 +505,8 @@ public class Update {
               if ((c != null) && c.moveToFirst() && c.isFirst()) {
                 do {
                   thetvdbids.add(c.getString(0));
+                  imdbids.add   (c.isNull(1) ? "" : c.getString(1));
+                  serieNames.add(c.isNull(2) ? "" : c.getString(2));
                 } while (c.moveToNext());
               }
             }
@@ -475,15 +516,27 @@ public class Update {
             if (c != null) c.close();
           }
 
-          for (String thetvdbid : thetvdbids) {
-            int tmdbid = api.findSeriesByExternalId(thetvdbid);
+          for (int i=0; i < thetvdbids.size(); i++) {
+            String thetvdbid = thetvdbids.get(i);
+            String imdbid    = imdbids.get(i);
+            int tmdbid;
+
+            Map<String,String> origins = new HashMap<String, String>();
+            origins.put("thetvdb", thetvdbid);
+            origins.put("imdb",    imdbid);
+
+            tmdbid = api.findSeriesByExternalId(origins);
 
             if (tmdbid > 0) {
               queries.add("UPDATE tmdb_migration_series   SET tmdbid = " + tmdbid + " WHERE thetvdbid = " + thetvdbid);
               queries.add("UPDATE tmdb_migration_episodes SET tmdbid = " + tmdbid + " WHERE thetvdbid = " + thetvdbid);
             }
-            else {
+            else if (abortOnMissingSeriesId) {
               throw new Exception("TMDB API failed to return the (internal) TMDB ID for a TV series that is identified by the (external) TVDB ID: " + thetvdbid);
+            }
+            else {
+              databaseUpdateResult.tmdbApiMigrationResult.tvdbSeriesIdsThatFailedToResolve.add(thetvdbid);
+              databaseUpdateResult.tmdbApiMigrationResult.seriesNamesThatFailedToResolve.add(serieNames.get(i));
             }
           }
 
@@ -592,30 +645,41 @@ public class Update {
               );
 
               do {
-                serieId  = c.getInt(0);
-                name     = c.getString(1);
-                language = c.getString(2);
-                archived = c.getInt(3);
+                try {
+                  serieId  = c.getInt(0);
+                  name     = c.getString(1);
+                  language = c.getString(2);
+                  archived = c.getInt(3);
 
-                progressViewer.updateProgressDialog(/* title */ null, /* message */ (name + "\u2026"), /* increment */ false);
+                  progressViewer.updateProgressDialog(/* title */ null, /* message */ (name + "\u2026"), /* increment */ false);
 
-                // at this stage, don't halt reimport
-                oneResult = api.addSeries(serieId, language, (archived == 1));
+                  // at this stage, don't halt reimport
+                  oneResult = api.addSeries(serieId, language, (archived == 1));
 
-                if (!oneResult) {
-                  Toast.makeText(context, "Failed to re-add series: '" + name + "'.\nNot all data was loaded from API.", Toast.LENGTH_LONG).show();
-                  Log.e(Constants.LOG_TAG, "Failed to re-add series: serieId=" + serieId + ", name='" + name + "', langCode=" + language + ", archived=" + ((archived == 1) ? "true" : "false"));
+                  if (!oneResult) {
+                    databaseUpdateResult.tmdbApiMigrationResult.tmdbSeriesIdsThatFailedToAdd.add(serieId);
+                    databaseUpdateResult.tmdbApiMigrationResult.seriesNamesThatFailedToAdd.add(name);
+
+                    Toast.makeText(context, "Failed to re-add series: '" + name + "'.\nNot all data was loaded from API.", Toast.LENGTH_LONG).show();
+                    throw new Exception("Failed to re-add series: serieId=" + serieId + ", name='" + name + "', langCode=" + language + ", archived=" + ((archived == 1) ? "true" : "false"));
+                  }
                 }
-
-                progressViewer.updateProgressDialog(/* title */ null, /* message */ null, /* increment */ true);
+                catch (Exception e) {
+                  if (abortOnErrorAddingSeries)
+                    throw e;
+                  else
+                    Log.e(Constants.LOG_TAG, e.getMessage());
+                }
+                finally {
+                  progressViewer.updateProgressDialog(/* title */ null, /* message */ null, /* increment */ true);
+                }
               } while (c.moveToNext());
             }
           }
-          catch (SQLiteException e) {
-            Log.e(Constants.LOG_TAG, e.getMessage());
+          finally {
+            if (c != null) c.close();
+            if (progressViewer != null) progressViewer.dismissProgressDialog();
           }
-          if (c != null) c.close();
-          if (progressViewer != null) progressViewer.dismissProgressDialog();
         }
         catch(Exception e) {
           Log.e(Constants.LOG_TAG, "Error re-adding TV series to new schema.", e);
@@ -789,6 +853,110 @@ public class Update {
     public void dismissProgressDialog() {
       uiHandler.post(dismissProgressDialogRunnable);
     }
+  }
+
+  // ---------------------------------------------------------------------------
+
+  public static void handleDatabaseUpdateResultErrors(Activity context, int oldVersion, DatabaseUpdateResult result, String logFolder) {
+    if (result.didUpdateFail) {
+      String error = context.getString(R.string.messages_db_error_update);
+      Toast.makeText(context, error, Toast.LENGTH_LONG).show();
+    }
+
+    if (
+      (oldVersion < 8) &&
+      (
+        !result.tmdbApiMigrationResult.tvdbSeriesIdsThatFailedToResolve.isEmpty() ||
+        !result.tmdbApiMigrationResult.tmdbSeriesIdsThatFailedToAdd.isEmpty()
+      )
+    ) {
+      // if permission to write to external storage has already been granted,
+      // then write a log file to the default backup folder.
+      String dialogMsg = null;
+
+      String[] allRequestedPermissions = new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"};
+      boolean hasAllPermissions = RuntimePermissionUtils.hasAllPermissions(context, allRequestedPermissions);
+
+      if (hasAllPermissions) {
+        StringBuilder content = new StringBuilder(256);
+        String divider = (new String(new char[50]).replace("\0", "-")) + "\n";
+
+        if (
+          !result.tmdbApiMigrationResult.tvdbSeriesIdsThatFailedToResolve.isEmpty() &&
+          (result.tmdbApiMigrationResult.tvdbSeriesIdsThatFailedToResolve.size() == result.tmdbApiMigrationResult.seriesNamesThatFailedToResolve.size())
+        ) {
+          content.append(divider);
+          content.append(context.getString(R.string.db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve));
+          content.append("\n\n");
+
+          for (int i=0; i < result.tmdbApiMigrationResult.tvdbSeriesIdsThatFailedToResolve.size(); i++) {
+            content.append("  ");
+            content.append(result.tmdbApiMigrationResult.tvdbSeriesIdsThatFailedToResolve.get(i));
+            content.append(", ");
+            content.append(result.tmdbApiMigrationResult.seriesNamesThatFailedToResolve.get(i));
+            content.append("\n");
+          }
+        }
+
+        if (
+          !result.tmdbApiMigrationResult.tmdbSeriesIdsThatFailedToAdd.isEmpty() &&
+          (result.tmdbApiMigrationResult.tmdbSeriesIdsThatFailedToAdd.size() == result.tmdbApiMigrationResult.seriesNamesThatFailedToAdd.size())
+        ) {
+          content.append(divider);
+          content.append(context.getString(R.string.db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add));
+          content.append("\n\n");
+
+          for (int i=0; i < result.tmdbApiMigrationResult.tmdbSeriesIdsThatFailedToAdd.size(); i++) {
+            content.append("  ");
+            content.append(result.tmdbApiMigrationResult.tmdbSeriesIdsThatFailedToAdd.get(i));
+            content.append(", ");
+            content.append(result.tmdbApiMigrationResult.seriesNamesThatFailedToAdd.get(i));
+            content.append("\n");
+          }
+        }
+
+        content.append(divider);
+
+        String  logFileName = FileUtils.getFileName(/* fileName */ "log", /* fileExtension */ "txt", /* auto */ false, /* isPreUpdate */ false, /* isPostUpdate */ true, oldVersion);
+        File    logFile     = new File(logFolder, logFileName);
+        boolean didWrite    = FileUtils.writeToFile(content.toString(), logFile);
+
+        if (didWrite) {
+          dialogMsg = context.getString(R.string.dialog_update_db_tmdb_migration_errors_log_file, logFile.getAbsolutePath());
+        }
+      }
+
+      if (dialogMsg == null) {
+        // either insufficient permission to write a log file,
+        // or the attempt to do so has failed.
+
+        List<String> allNames = new ArrayList<String>();
+        allNames.addAll(result.tmdbApiMigrationResult.seriesNamesThatFailedToResolve);
+        allNames.addAll(result.tmdbApiMigrationResult.seriesNamesThatFailedToAdd);
+        allNames.sort(null);
+
+        dialogMsg = context.getString(R.string.dialog_update_db_tmdb_migration_errors) + TextUtils.join(", ", allNames);
+      }
+
+      Update.showDialog(context, R.string.messages_db_error_update, dialogMsg);
+    }
+  }
+
+  private static void showDialog(final Activity context, final int titleResId, final String dialogMsg) {
+    try {
+      Handler uiHandler = new Handler(Looper.getMainLooper());
+      Runnable showDialogRunnable = new Runnable() {
+        public void run() {
+          new AlertDialog.Builder(context)
+            .setTitle(titleResId)
+            .setMessage(dialogMsg)
+            .setPositiveButton(R.string.dialog_ok, null)
+            .show();
+        }
+      };
+      uiHandler.post(showDialogRunnable);
+    }
+    catch(Exception e) {}
   }
 
   // ---------------------------------------------------------------------------

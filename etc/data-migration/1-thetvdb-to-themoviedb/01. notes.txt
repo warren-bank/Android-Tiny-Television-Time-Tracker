@@ -1,7 +1,110 @@
 --------------------------------------------------------------------------------
 
-SQLite DB Schema:
-=================
+https://github.com/ltGuillaume/DroidShows/blob/7.11.2/src/nl/asymmetrics/droidshows/utils/SQLiteStore.java#L1038
+
+----------------------------------------
+
+current DB Schema:
+==================
+
+CREATE TABLE IF NOT EXISTS droidseries (version VARCHAR);
+
+INSERT INTO droidseries (version) VALUES ('0.1.5-7G3');
+
+CREATE TABLE IF NOT EXISTS directors (
+    serieId VARCHAR,
+    episodeId VARCHAR,
+    director VARCHAR
+);
+
+CREATE TABLE IF NOT EXISTS guestStars (
+    serieId VARCHAR,
+    episodeId VARCHAR,
+    guestStar VARCHAR
+);
+
+CREATE TABLE IF NOT EXISTS writers (
+    serieId VARCHAR,
+    episodeId VARCHAR,
+    writer VARCHAR
+);
+
+CREATE TABLE IF NOT EXISTS episodes (
+    serieId VARCHAR,
+    id VARCHAR,
+    combinedEpisodeNumber VARCHAR,
+    combinedSeason VARCHAR,
+    dvdChapter VARCHAR,
+    dvdDiscId VARCHAR,
+    dvdEpisodeNumber VARCHAR,
+    dvdSeason VARCHAR,
+    epImgFlag VARCHAR,
+    episodeName VARCHAR,
+    episodeNumber INT,
+    firstAired VARCHAR,
+    imdbId VARCHAR,
+    language VARCHAR,
+    overview TEXT,
+    productionCode VARCHAR,
+    rating VARCHAR,
+    seasonNumber INT,
+    absoluteNumber VARCHAR,
+    filename VARCHAR,
+    lastUpdated VARCHAR,
+    seasonId VARCHAR,
+    seen INT
+);
+
+CREATE TABLE IF NOT EXISTS actors (
+    serieId VARCHAR,
+    actor VARCHAR
+);
+
+CREATE TABLE IF NOT EXISTS genres (
+    serieId VARCHAR,
+    genre VARCHAR
+);
+
+CREATE TABLE IF NOT EXISTS serie_seasons (
+    serieId VARCHAR,
+    season VARCHAR
+);
+
+CREATE TABLE IF NOT EXISTS series (
+    id VARCHAR PRIMARY KEY,
+    serieId VARCHAR,
+    language VARCHAR,
+    serieName VARCHAR,
+    banner VARCHAR,
+    overview TEXT,
+    firstAired VARCHAR,
+    imdbId VARCHAR,
+    zap2ItId VARCHAR,
+    airsDayOfWeek VARCHAR,
+    airsTime VARCHAR,
+    contentRating VARCHAR,
+    network VARCHAR,
+    rating VARCHAR,
+    runtime VARCHAR,
+    status VARCHAR,
+    fanart VARCHAR,
+    lastUpdated VARCHAR,
+    passiveStatus INTEGER DEFAULT 0,
+    poster VARCHAR,
+    posterInCache VARCHAR,
+    posterThumb VARCHAR,
+    seasonCount INTEGER,
+    unwatchedAired INTEGER,
+    unwatched INTEGER,
+    nextEpisode VARCHAR,
+    nextAir VARCHAR,
+    extResources VARCHAR NOT NULL DEFAULT ''
+);
+
+--------------------------------------------------------------------------------
+
+observations:
+=============
 
 * series.id (primary)
   - is thetvdb series ID
