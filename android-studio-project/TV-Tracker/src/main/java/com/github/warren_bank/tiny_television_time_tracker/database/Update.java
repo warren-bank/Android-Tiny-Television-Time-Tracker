@@ -922,7 +922,7 @@ public class Update {
         boolean didWrite    = FileUtils.writeToFile(content.toString(), logFile);
 
         if (didWrite) {
-          dialogMsg = context.getString(R.string.dialog_update_db_tmdb_migration_errors_log_file, logFile.getAbsolutePath());
+          dialogMsg = context.getString(R.string.dialog_update_db_tmdb_migration_errors) + ".\n\n" + context.getString(R.string.dialog_update_db_tmdb_migration_errors_log_file, logFile.getAbsolutePath());
         }
       }
 
@@ -935,7 +935,7 @@ public class Update {
         allNames.addAll(result.tmdbApiMigrationResult.seriesNamesThatFailedToAdd);
         allNames.sort(null);
 
-        dialogMsg = context.getString(R.string.dialog_update_db_tmdb_migration_errors) + TextUtils.join(", ", allNames);
+        dialogMsg = context.getString(R.string.dialog_update_db_tmdb_migration_errors) + ":\n\n" + TextUtils.join(", ", allNames);
       }
 
       Update.showDialog(context, R.string.messages_db_error_update, dialogMsg);

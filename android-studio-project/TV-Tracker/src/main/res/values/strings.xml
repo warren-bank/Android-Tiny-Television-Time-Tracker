@@ -123,8 +123,8 @@
 <string name="showstatus_continuing">continuing</string>
 <string name="showstatus_ended">ended</string>
 <string name="wiki_search_query_suffix">television series</string>
-<string name="dialog_update_db_tmdb_migration_errors"         >Database update encountered TV series that were unable to migrate:\n\n</string>
-<string name="dialog_update_db_tmdb_migration_errors_log_file">Database update encountered TV series that were unable to migrate.\n\nA complete log was written to:\n(%s)</string>
+<string name="dialog_update_db_tmdb_migration_errors">Database update encountered TV series that were unable to migrate</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">A complete log was written to:\n(%s)</string>
 <string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">The following is a list of TVDB ID values\nalong with the name of each corresponding series\nthat were present in the database prior to upgrade,\nbut could not be resolved to a corresponding TMDB ID value:</string>
 <string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >The following is a list of TMDB ID values\nalong with the name of each corresponding series\nthat were present in the database prior to upgrade,\nbut could not be added using the TMDB API:</string>
 </resources>
