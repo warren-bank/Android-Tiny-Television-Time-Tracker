@@ -29,7 +29,6 @@ import android.util.Log;
 
 import java.text.ParseException;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
@@ -51,7 +50,7 @@ public class DbGateway {
   private DbGateway(Context context) {
     this.context = context;
     this.db      = SQLiteStore.getInstance(context);
-    this.today   = DateFormats.NORMALIZE_DATE.format(Calendar.getInstance().getTime());
+    this.today   = DateFormats.getNormalizedDate();
   }
 
   public SQLiteStore getSQLiteStore() {

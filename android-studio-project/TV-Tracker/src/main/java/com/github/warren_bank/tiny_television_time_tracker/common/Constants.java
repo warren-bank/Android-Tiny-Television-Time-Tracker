@@ -1,7 +1,7 @@
 package com.github.warren_bank.tiny_television_time_tracker.common;
 
 public class Constants {
-  public static final String LOG_TAG = "DroidShows";
+  public static final String LOG_TAG = "TV-Tracker";
 
   /* Runtime Permissions */
   public static final int PERMISSION_CHECK_REQUEST_CODE_RESTORE_DATABASE_FILEPICKER = 1;

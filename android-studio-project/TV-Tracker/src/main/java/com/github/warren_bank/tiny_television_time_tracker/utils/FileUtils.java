@@ -1,6 +1,7 @@
 package com.github.warren_bank.tiny_television_time_tracker.utils;
 
 import com.github.warren_bank.tiny_television_time_tracker.R;
+import com.github.warren_bank.tiny_television_time_tracker.common.DateFormats;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -48,14 +49,34 @@ public class FileUtils {
   // --------------------------------------------------------------------------- get paths: for DB
 
   public static String getDatabaseFileName(Context context) {
+    boolean auto = true;
+    return FileUtils.getDatabaseFileName(context, auto);
+  }
+
+  public static String getDatabaseFileName(Context context, boolean auto) {
+    boolean isPreUpdate = false;
+    int     oldVersion  = -1;
+    return FileUtils.getDatabaseFileName(context, auto, isPreUpdate, oldVersion);
+  }
+
+  public static String getDatabaseFileName(Context context, boolean auto, boolean isPreUpdate, int oldVersion) {
     context = context.getApplicationContext();
-    String fileName = context.getString(R.string.app_name_legacy) + ".db";
+    String fileName = context.getString(R.string.database_file_name);
+    if (!auto) {
+      fileName += "." + DateFormats.getNormalizedDateTime();
+    }
+    if (isPreUpdate) {
+      fileName += ".preupdate";
+      if (oldVersion > 0) {
+        fileName += "-v" + oldVersion;
+      }
+    }
+    fileName += ".db";
     return fileName;
   }
 
-  public static String getDatabaseFileNamePreviousBackup(Context context, int index) {
-    String fileName = FileUtils.getDatabaseFileName(context) + index; // .db0, .db1, etc
-    return fileName;
+  public static String getDatabaseFileNameForBackupVersion(String fileName, int backupVersion) {
+    return fileName + backupVersion; // .db0, .db1, etc
   }
 
   public static String getDatabaseDirectoryPath(Context context) {

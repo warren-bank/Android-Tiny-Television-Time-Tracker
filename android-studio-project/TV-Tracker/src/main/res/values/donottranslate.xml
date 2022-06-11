@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="app_name_short" translatable="false">TV Tracker</string>
-<string name="app_name_legacy" translatable="false">DroidShows</string>
 <string name="api_key" translatable="false">c9eb196aaf70baf91d4ce4f0fea6a360</string>
-<string name="databases_directory_name"  translatable="false">databases</string>
-<string name="images_small_directory_name"  translatable="false">images_small</string>
+<string name="default_backups_directory_name" translatable="false">TV-Tracker</string>
+<string name="images_small_directory_name" translatable="false">images_small</string>
 <string name="images_medium_directory_name" translatable="false">images_medium</string>
+<string name="databases_directory_name" translatable="false">databases</string>
+<string name="database_file_name" translatable="false">@string/default_backups_directory_name</string>
 <string name="copyright" translatable="false">{app-name} v{version}
 \n&#169;2010-{year} C. Limpinho, P. Cabido (GPLv3): code.google.com/p/droidseries
 \nModified by M. Berthe: gitorious.org/droidseries/mckaels-droidseries

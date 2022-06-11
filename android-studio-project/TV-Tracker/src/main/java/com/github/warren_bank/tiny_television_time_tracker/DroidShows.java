@@ -259,7 +259,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
     // Hidden
     // ==============
 
-    backupFolder           = sharedPrefs.getString(BACKUP_FOLDER_PREF_NAME, (Environment.getExternalStorageDirectory() + "/" + getString(R.string.app_name_legacy)));
+    backupFolder           = sharedPrefs.getString(BACKUP_FOLDER_PREF_NAME, (Environment.getExternalStorageDirectory() + "/" + getString(R.string.default_backups_directory_name)));
     lastStatsUpdateCurrent = sharedPrefs.getString(LAST_STATS_UPDATE_NAME, "");
     lastStatsUpdateArchive = sharedPrefs.getString(LAST_STATS_UPDATE_ARCHIVE_NAME, "");
     filterNetworks         = sharedPrefs.getBoolean(FILTER_NETWORKS_NAME, false);
@@ -386,8 +386,10 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
     switch (mode) {
       case Update.MODE_INSTALL: {
         if (willUpdate) {
-          boolean isPreUpdate = true;
-          backupPermissionCheck(false, backupFolder, isPreUpdate);
+          boolean auto          = false;
+          boolean isPreUpdate   = true;
+          String backupFileName = FileUtils.getDatabaseFileName(DroidShows.this, auto, isPreUpdate, oldVersion);
+          backupPermissionCheck(auto, backupFolder, backupFileName, isPreUpdate);
           return false;
         }
         break;
@@ -892,9 +894,6 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
       backupPermissionCheck(auto, backupFolder);
     }
     else {
-      File folder = new File(backupFolder);
-      if (!folder.isDirectory())
-        folder.mkdir();
       filePickerPermissionCheck(backupFolder, false);
     }
   }
@@ -918,19 +917,22 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
   private class PassthroughBackup {
     protected boolean auto;
     protected String  backupFolder;
+    protected String  backupFileName;
 
-    protected PassthroughBackup(boolean auto, String backupFolder) {
-      this.auto = auto;
-      this.backupFolder = backupFolder;
+    protected PassthroughBackup(boolean auto, String backupFolder, String backupFileName) {
+      this.auto           = auto;
+      this.backupFolder   = backupFolder;
+      this.backupFileName = backupFileName;
     }
   }
 
   private void backupPermissionCheck(boolean auto, String backupFolder) {
-    boolean isPreUpdate = false;
-    backupPermissionCheck(auto, backupFolder, isPreUpdate);
+    String backupFileName = FileUtils.getDatabaseFileName(DroidShows.this, auto);
+    boolean isPreUpdate   = false;
+    backupPermissionCheck(auto, backupFolder, backupFileName, isPreUpdate);
   }
 
-  private void backupPermissionCheck(boolean auto, String backupFolder, boolean isPreUpdate) {
+  private void backupPermissionCheck(boolean auto, String backupFolder, String backupFileName, boolean isPreUpdate) {
     if (auto && !autoBackup) return;
 
     String[] allRequestedPermissions = new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"};
@@ -939,7 +941,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
       ? Constants.PERMISSION_CHECK_REQUEST_CODE_BACKUP_DATABASE_PREUPDATE
       : Constants.PERMISSION_CHECK_REQUEST_CODE_BACKUP_DATABASE;
 
-    Object passthrough = (Object) new PassthroughBackup(auto, backupFolder);
+    Object passthrough = (Object) new PassthroughBackup(auto, backupFolder, backupFileName);
 
     RuntimePermissionUtils.requestPermissions(DroidShows.this, DroidShows.this, allRequestedPermissions, requestCode, passthrough);
   }
@@ -955,12 +957,22 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
       case Constants.PERMISSION_CHECK_REQUEST_CODE_RESTORE_DATABASE_FILEPICKER: {
           String folderString = (String) passthrough;
           boolean restoring   = true;
+
+          File folder = new File(folderString);
+          if (!folder.isDirectory())
+            folder.mkdir();
+
           filePicker(folderString, restoring);
         }
         break;
       case Constants.PERMISSION_CHECK_REQUEST_CODE_BACKUP_DATABASE_FILEPICKER: {
           String folderString = (String) passthrough;
           boolean restoring   = false;
+
+          File folder = new File(folderString);
+          if (!folder.isDirectory())
+            folder.mkdir();
+
           filePicker(folderString, restoring);
         }
         break;
@@ -968,14 +980,14 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
           // the user has granted the permission required to save a backup of the DB.. before updating the version of the database schema
 
           PassthroughBackup pb = (PassthroughBackup) passthrough;
-          backup(pb.auto, pb.backupFolder);
+          backup(pb.auto, pb.backupFolder, pb.backupFileName);
 
           updateDatabase(/* mode */ Update.MODE_INSTALL, /* passthrough */ (Object) null, /* skipPreDatabaseUpdateCallback */ true);
         }
         break;
       case Constants.PERMISSION_CHECK_REQUEST_CODE_BACKUP_DATABASE: {
           PassthroughBackup pb = (PassthroughBackup) passthrough;
-          backup(pb.auto, pb.backupFolder);
+          backup(pb.auto, pb.backupFolder, pb.backupFileName);
         }
         break;
     }
@@ -996,7 +1008,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
                 // ask to grant the permissions again
 
                 PassthroughBackup pb = (PassthroughBackup) passthrough;
-                backupPermissionCheck(pb.auto, pb.backupFolder, /* isPreUpdate */ true);
+                backupPermissionCheck(pb.auto, pb.backupFolder, pb.backupFileName, /* isPreUpdate */ true);
               }
             })
             .setNegativeButton(R.string.dialog_cancel, new DialogInterface.OnClickListener() {
@@ -1091,34 +1103,48 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
   };
 
   private void backup(boolean auto, final String backupFolder) {
+    String backupFileName = FileUtils.getDatabaseFileName(DroidShows.this, auto);
+    backup(auto, backupFolder, backupFileName);
+  }
+
+  private void backup(boolean auto, final String backupFolder, String backupFileName) {
     File source = new File(FileUtils.getDatabaseFilePath(DroidShows.this));
-    File destination = new File(backupFolder, FileUtils.getDatabaseFileName(DroidShows.this));
-    if (auto && (!autoBackup ||
+    File destination = new File(backupFolder, backupFileName);
+    if (
+      auto &&
+      (
+        !autoBackup ||
         DateFormats.NORMALIZE_DATE.format(destination.lastModified()).equals(lastStatsUpdateCurrent) ||
-        source.lastModified() == destination.lastModified()))
+        (source.lastModified() == destination.lastModified())
+      )
+    ) {
       return;
+    }
     if (backupVersioning && destination.exists()) {
-      File previous0 = new File(backupFolder, FileUtils.getDatabaseFileNamePreviousBackup(DroidShows.this, 0));
+      File previous0 = new File(backupFolder, FileUtils.getDatabaseFileNameForBackupVersion(backupFileName, 0));
       if (previous0.exists()) {
-        File previous1 = new File(backupFolder, FileUtils.getDatabaseFileNamePreviousBackup(DroidShows.this, 1));
+        File previous1 = new File(backupFolder, FileUtils.getDatabaseFileNameForBackupVersion(backupFileName, 1));
         if (previous1.exists())
           previous1.delete();
         previous0.renameTo(previous1);
       }
       destination.renameTo(previous0);
-    } else
+    }
+    else {
       destination.delete();
+    }
     File folder = new File(backupFolder);
     if (!folder.isDirectory())
       folder.mkdir();
     int toastTxt = R.string.dialog_backup_done;
     try {
       copy(source, destination);
-    } catch (IOException e) {
+    }
+    catch (IOException e) {
       toastTxt = R.string.dialog_backup_failed;
       e.printStackTrace();
     }
-    if (!auto && toastTxt == R.string.dialog_backup_done && !backupFolder.equals(DroidShows.backupFolder)) {
+    if (!auto && (toastTxt == R.string.dialog_backup_done) && !backupFolder.equals(DroidShows.backupFolder)) {
       final CharSequence[] backupFolders = {backupFolder, DroidShows.backupFolder};
       new AlertDialog.Builder(DroidShows.this)
         .setTitle(toastTxt)
@@ -1974,7 +2000,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
 
   private void startAsyncInfo() {
     if (!isUpdating && ((asyncInfo == null) || (asyncInfo.getStatus() != AsyncTask.Status.RUNNING))) {
-      String newToday        = DateFormats.NORMALIZE_DATE.format(Calendar.getInstance().getTime());
+      String newToday        = DateFormats.getNormalizedDate();
       String lastStatsUpdate = (showArchive == 0) ? lastStatsUpdateCurrent : lastStatsUpdateArchive;
       if (!lastStatsUpdate.equals(newToday)) {
         Log.d(Constants.LOG_TAG, "AsyncInfo RUNNING | Today = " + newToday);
