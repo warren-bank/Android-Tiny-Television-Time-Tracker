@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">berterusan</string>
 <string name="showstatus_ended">berakhir</string>
 <string name="wiki_search_query_suffix">Siri televisyen</string>
+<string name="dialog_update_db_tmdb_migration_errors">Kemaskini pangkalan data dihadapi beberapa siri televisyen yang tidak dapat migrain.</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">Log lengkap ditulis ke:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">Yang berikut adalah senarai TVDB ID nilai\nbersama-sama dengan nama setiap siri berkaitan\nyang hadir dalam pangkalan data sebelum menaik taraf,\nTetapi tidak dapat diselesaikan semula kepada yang berkaitan TMDB ID nilai:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >Yang berikut adalah senarai TMDB ID nilai\nbersama-sama dengan nama setiap siri berkaitan\nyang hadir dalam pangkalan data sebelum menaik taraf,\ntetapi tidak dapat ditambah menggunakan TMDB API:</string>
 </resources>

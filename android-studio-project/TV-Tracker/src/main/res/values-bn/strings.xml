@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">ক্রমাগত</string>
 <string name="showstatus_ended">শেষ হয়েছে</string>
 <string name="wiki_search_query_suffix">টেলিভিশন সিরিজ</string>
+<string name="dialog_update_db_tmdb_migration_errors">ডেটাবেজ আপডেট কিছু টেলিভিশন সিরিজের সম্মুখীন হয়েছে যা অভিবাসিত হতে পারেনি</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">একটি সম্পূর্ণ লগ লেখা হয়েছে:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">নিম্নোক্ত একটি তালিকা TVDB ID মান\nপ্রতিটি সংশ্লিষ্ট সিরিজের নামের সাথে\nযা আপগ্রেডের আগে ডাটাবেসে উপস্থিত ছিল,\nকিন্তু এর সাথে সংশ্লিষ্ট কোন সমাধান হতে পারে না TMDB ID মান:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >নিম্নোক্ত একটি তালিকা TMDB ID মান\nপ্রতিটি সংশ্লিষ্ট সিরিজের নামের সাথে\nযা আপগ্রেডের আগে ডাটাবেসে উপস্থিত ছিল,\nকিন্তু ব্যবহার করে যোগ করা যায়নি TMDB API:</string>
 </resources>

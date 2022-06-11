@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">fortsätta</string>
 <string name="showstatus_ended">avslutad</string>
 <string name="wiki_search_query_suffix">TV-serie</string>
+<string name="dialog_update_db_tmdb_migration_errors">Databasuppdateringen påträffade en del tv-serier som inte kunde migrera</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">En fullständig logg har skrivits till:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">Följande är en lista över TVDB ID värden\ntillsammans med namnet på varje motsvarande serie\nsom fanns i databasen före uppgraderingen,\nmen kunde inte lösas upp till en motsvarande TMDB ID värde:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >Följande är en lista över TMDB ID värden\ntillsammans med namnet på varje motsvarande serie\nsom fanns i databasen före uppgraderingen,\nmen kan inte läggas till med hjälp av TMDB API:</string>
 </resources>

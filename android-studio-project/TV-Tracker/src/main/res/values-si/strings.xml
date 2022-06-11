@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">දිගටම</string>
 <string name="showstatus_ended">අවසන් විය</string>
 <string name="wiki_search_query_suffix">රූපවාහිනිය</string>
+<string name="dialog_update_db_tmdb_migration_errors">Database update encountered some television series that were not able to migrate</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">සම්පූර්ණ ලොග් එකක් ලියවුනේ:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">පහත දැක්වෙන්නේ එම ලැයිස්තුවල TVDB ID අගයන්\nසමග එක් එක් අනුකරණ ශ්රේණියට අදාල\nඒ සඳහා පෙර දත්ත ගබඩාවේ ඇති,\nනමුත් ඊට අනුකූලතාවයකට විසදිය නොහැකි විය TMDB ID අගය:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >පහත දැක්වෙන්නේ එම ලැයිස්තුවල TMDB ID අගයන්\nසමග එක් එක් අනුකරණ ශ්රේණියට අදාල\nඒ සඳහා පෙර දත්ත ගබඩාවේ ඇති,\nඒත් පාවිච්චි කරලා එකතු කරන්න බැරි උනා TMDB API:</string>
 </resources>

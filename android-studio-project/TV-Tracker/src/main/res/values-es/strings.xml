@@ -135,4 +135,8 @@
 <string name="showstatus_continuing">Emitiendo</string>
   <string name="showstatus_ended">Finalizada</string>
 <string name="wiki_search_query_suffix">serie de televisión</string>
+<string name="dialog_update_db_tmdb_migration_errors">La actualización de la base de datos ha encontrado algunas series de televisión que no han podido migrar</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">Se ha escrito un registro completo en:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">La siguiente es una lista de TVDB ID valores\njunto con el nombre de cada serie correspondiente\nque estaban presentes en la base de datos antes de la actualización,\npero no se ha podido resolver a un TMDB ID valor:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >La siguiente es una lista de TMDB ID valores\njunto con el nombre de cada serie correspondiente\nque estaban presentes en la base de datos antes de la actualización,\npero no se ha podido añadir utilizando el TMDB API:</string>
 </resources>

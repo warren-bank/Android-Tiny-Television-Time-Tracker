@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">продължаващо.</string>
 <string name="showstatus_ended">Край.</string>
 <string name="wiki_search_query_suffix">телевизионна серия</string>
+<string name="dialog_update_db_tmdb_migration_errors">Обновяване на база данни срещна някои телевизионни сериали, които не са били в състояние да мигрират</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">Пълен запис е написан на:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">Следва списък на TVDB ID стойности:\nзаедно с наименованието на всяка съответна серия\nкоито са били налични в базата данни преди надстройването,\nно не може да бъде решен на съответните TMDB ID стойност::</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >Следва списък на TMDB ID стойности:\nзаедно с наименованието на всяка съответна серия\nкоито са били налични в базата данни преди надстройването,\nно не можа да бъде добавен с помощта на TMDB API:</string>
 </resources>

@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">కొనసాగుతోంది</string>
 <string name="showstatus_ended">ముగిసింది</string>
 <string name="wiki_search_query_suffix">టెలివిజన్ సిరీస్</string>
+<string name="dialog_update_db_tmdb_migration_errors">డేటాబేసు నవీకరణ కొన్ని టెలివిజన్ శ్రేణులు వలస పోవలేకపోయాయి.</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">ఒక పూర్తి లాగ్ రాశారు.:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">ఈ క్రింది జాబితా TVDB ID విలువలు\nఒక్కొక్క సంప్రదాయ సిరీస్ పేరుతో పాటు\nఇది అప్గ్రేడ్ కు ముందుగా డేటాబేస్ లో ఉన్నది.,\nకానీ తగినంతగా పరిష్కారంగా ఉండలేకపోయారు. TMDB ID విలువు:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >ఈ క్రింది జాబితా TMDB ID విలువలు\nఒక్కొక్క సంప్రదాయ సిరీస్ పేరుతో పాటు\nఇది అప్గ్రేడ్ కు ముందుగా డేటాబేస్ లో ఉన్నది.,\nకాని ఉపయోగించి జతచేయలేకపోయారు. TMDB API:</string>
 </resources>

@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">,</string>
 <string name="showstatus_ended">, kas</string>
 <string name="wiki_search_query_suffix">televīzijas seriāls</string>
+<string name="dialog_update_db_tmdb_migration_errors">Datu bāzes atjaunināšana radušās dažas televīzijas sērijas, kas nespēja migrēt</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">Pilns žurnāls bija rakstīts uz:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">Tālāk ir saraksts ar TVDB ID vērtības\nkopā ar katras atbilstošās sērijas nosaukumu\n, kas bija klāt datu bāzē pirms jaunināšanas,\n, bet to nevar atrisināt atbilstīgā TMDB ID vērtību:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >Tālāk ir saraksts ar TMDB ID vērtības\nkopā ar katras atbilstošās sērijas nosaukumu\n, kas bija klāt datu bāzē pirms jaunināšanas,\nbet nevarēja pievienot, izmantojot TMDB API:</string>
 </resources>

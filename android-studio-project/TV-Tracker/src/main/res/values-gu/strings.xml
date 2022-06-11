@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">ચાલુ રાખો</string>
 <string name="showstatus_ended">અંત</string>
 <string name="wiki_search_query_suffix">ટેલિવિઝન શ્રેણી</string>
+<string name="dialog_update_db_tmdb_migration_errors">ડેટાબેઝ સુધારો અમુક ટેલિવિઝન શ્રેણીઓ કે જેને સ્થળાંતર કરી શક્યા નહિં</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">સમાપ્ત લોગ લખેલ હતુ:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">નીચેની યાદી છે TVDB ID કિંમતો\nદરેક સંબંધિત શ્રેણીનું નામ સાથે\nતે સુધારવા પહેલાં ડેટાબેઝમાં હાજર હતા,\nપરંતુ તે સંતુલિત થઇ શકે તેમ નથી TMDB ID કિંમત:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >નીચેની યાદી છે TMDB ID કિંમતો\nદરેક સંબંધિત શ્રેણીનું નામ સાથે\nતે સુધારવા પહેલાં ડેટાબેઝમાં હાજર હતા,\nપરંતુ મદદથી ઉમેરાઈ શક્યા નહિં TMDB API:</string>
 </resources>

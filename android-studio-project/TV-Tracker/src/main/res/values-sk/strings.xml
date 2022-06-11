@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">pokračovanie</string>
 <string name="showstatus_ended">ukončené</string>
 <string name="wiki_search_query_suffix">séria televíznych programov</string>
+<string name="dialog_update_db_tmdb_migration_errors">Aktualizácia databázy zaznamenala niektoré televízne série, ktoré neboli schopné migrovať</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">Úplný protokol bol zapísaný do:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">Nasleduje zoznam TVDB ID hodnoty\nspolu s názvom každej príslušnej série\nktoré boli prítomné v databáze pred aktualizáciou verzie,\nale nedalo sa rozlíšiť k zodpovednému TMDB ID hodnota:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >Nasleduje zoznam TMDB ID hodnoty\nspolu s názvom každej príslušnej série\nktoré boli prítomné v databáze pred aktualizáciou verzie,\nale nemohol byť pridaný pomocou TMDB API:</string>
 </resources>

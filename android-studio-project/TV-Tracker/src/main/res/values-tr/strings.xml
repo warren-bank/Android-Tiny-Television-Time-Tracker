@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">devam etme</string>
 <string name="showstatus_ended">sona erdirildi</string>
 <string name="wiki_search_query_suffix">televizyon dizisi</string>
+<string name="dialog_update_db_tmdb_migration_errors">Veritabanı güncellemesi yeni düzeye geçirilemeyen bazı televizyon dizisiyle karşılaştı</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">Şu öğe için tam bir günlük yazıldı::\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">Aşağıdakilerin listesi: TVDB ID değerler\nher bir ilgili serinin adı ile birlikte\nBüyütmeden önce veritabanında var olan,\nancak karşılık gelen bir değer olarak çözümlenemedi TMDB ID değer:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >Aşağıdakilerin listesi: TMDB ID değerler\nher bir ilgili serinin adı ile birlikte\nBüyütmeden önce veritabanında var olan,\nancak, şu öğe kullanılarak eklenemedi: TMDB API:</string>
 </resources>

@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">जारी</string>
 <string name="showstatus_ended">समाप्त</string>
 <string name="wiki_search_query_suffix">टेलिविजन</string>
+<string name="dialog_update_db_tmdb_migration_errors">डेटाबेस अद्यतन कुछ टेलीविजन श्रृंखला से सामना हुआ जो विस्थापित करने में सक्षम नहीं थे</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">के लिए एक पूर्ण लॉग लिखा गया था:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">की एक सूची है. TVDB ID मूल्य\nके साथ प्रत्येक संबंधित श्रृंखला के नाम के साथ\nकि उन्नयन से पहले डेटाबेस में मौजूद थे,\nलेकिन इसे हल नहीं किया जा सका TMDB ID मूल्य:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >की एक सूची है. TMDB ID मूल्य\nके साथ प्रत्येक संबंधित श्रृंखला के नाम के साथ\nकि उन्नयन से पहले डेटाबेस में मौजूद थे,\nके उपयोग में जोड़ा नहीं जा सकता है TMDB API:</string>
 </resources>

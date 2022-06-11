@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">nastavka</string>
 <string name="showstatus_ended">završeno</string>
 <string name="wiki_search_query_suffix">televizijski niz</string>
+<string name="dialog_update_db_tmdb_migration_errors">Ažuriranje baze podataka je naišlo na neke televizijski serije koje nisu bile u mogućnosti migrirati</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">Zapisan je potpuni dnevnik:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">Sljedeće je lista TVDB ID vrijednosti\nzajedno s imenom svakog odgovarajuće serije\nkoji su bili prisutni u bazi podataka prije nadogradnje,\nali ne može se riješiti na odgovarajući TMDB ID vrijednost:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >Sljedeće je lista TMDB ID vrijednosti\nzajedno s imenom svakog odgovarajuće serije\nkoji su bili prisutni u bazi podataka prije nadogradnje,\nali se nije mogao dodati korištenjem TMDB API:</string>
 </resources>

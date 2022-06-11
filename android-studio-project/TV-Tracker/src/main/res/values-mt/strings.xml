@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">tkomplija</string>
 <string name="showstatus_ended">spiċċat</string>
 <string name="wiki_search_query_suffix">serje televiżiva</string>
+<string name="dialog_update_db_tmdb_migration_errors">Database aġġornament li ltaqa \' magħhom xi serje televiżiva li ma kinux kapaċi jemigraw</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">A log komplut kien miktub li:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">Dan li ġej huwa lista ta \' TVDB ID valuri\nflimkien ma \'l-isem ta\' kull serje korrispondenti\nli kienu preżenti fid-database qabel it-titjib,\niżda ma setax jiġi riżolt għal korrispondenti TMDB ID valur:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >Dan li ġej huwa lista ta \' TMDB ID valuri\nflimkien ma \'l-isem ta\' kull serje korrispondenti\nli kienu preżenti fid-database qabel it-titjib,\niżda ma setgħux jiġu miżjuda bl-użu ta \' TMDB API:</string>
 </resources>

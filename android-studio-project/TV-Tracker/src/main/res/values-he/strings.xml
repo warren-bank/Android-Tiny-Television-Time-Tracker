@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">המשך</string>
 <string name="showstatus_ended">הסתיים</string>
 <string name="wiki_search_query_suffix">סדרת טלוויזיה</string>
+<string name="dialog_update_db_tmdb_migration_errors">עדכון מסד הנתונים נתקל בסדרת טלוויזיה שלא הצליחה לבצע הגירה</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">יומן מלא נכתב ל -:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">הרשימה שלהלן היא רשימה של TVDB ID ערכים\nיחד עם שם כל סדרה תואמת\nשהיו קיימים בבסיס הנתונים לפני השדרוג.,\nאך לא ניתן לפתור אותה ל-תואם TMDB ID ערך:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >הרשימה שלהלן היא רשימה של TMDB ID ערכים\nיחד עם שם כל סדרה תואמת\nשהיו קיימים בבסיס הנתונים לפני השדרוג.,\nאך לא ניתן להוסיף באמצעות ה - TMDB API:</string>
 </resources>

@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">jätkates</string>
 <string name="showstatus_ended">lõppenud</string>
 <string name="wiki_search_query_suffix">teleseriaal</string>
+<string name="dialog_update_db_tmdb_migration_errors">Andmebaas uuendab mõningaid teleseriaali, mis ei suutnud migreeruda</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">Täielik logi oli kirjutatud:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">Järgnev on loetelu TVDB ID Väärtused\nkoos nimega iga vastava seeria\nSee oli andmebaasis enne uuendamist.,\nkuid ei saa lahendada vastava TMDB ID väärtus:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >Järgnev on loetelu TMDB ID Väärtused\nkoos nimega iga vastava seeria\nSee oli andmebaasis enne uuendamist.,\nkuid ei saa lisada kasutades TMDB API:</string>
 </resources>

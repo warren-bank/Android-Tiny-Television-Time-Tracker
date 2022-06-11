@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">جاری</string>
 <string name="showstatus_ended">ختم ہوا</string>
 <string name="wiki_search_query_suffix">ٹیلی ویژن سیریز</string>
+<string name="dialog_update_db_tmdb_migration_errors">ڈیٹا بیس اپ ڈیٹ کچھ ٹیلی ویژن سیریز کہ ہجرت کرنے کے قابل نہیں تھے کا سامنا کرنا پڑا</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">ایک مکمل لاگ ان لکھا گیا:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">درج ذیل فہرست ہے. TVDB ID اقدار\nہر ایک کی سیریز کے نام کے ساتھ ساتھ\nاپ گریڈ کرنے سے قبل ڈیٹا بیس میں موجود تھے,\nلیکن ایک اسی کو حل نہیں کیا جاسکتا. TMDB ID قدر:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >درج ذیل فہرست ہے. TMDB ID اقدار\nہر ایک کی سیریز کے نام کے ساتھ ساتھ\nاپ گریڈ کرنے سے قبل ڈیٹا بیس میں موجود تھے,\nلیکن اسے استعمال میں شامل نہیں کیا جا سکتا. TMDB API:</string>
 </resources>

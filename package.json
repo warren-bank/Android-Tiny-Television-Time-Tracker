@@ -6,7 +6,7 @@
     "@warren-bank/translate-android-strings": "^1.8.1"
   },
   "scripts": {
-    "translate":       "translate-android-strings -i \"en\" -f \"android-studio-project/TV-Tracker/src/main/res/values/strings.xml\" -d \"android-studio-project/TV-Tracker/src/main/res\" -m --na --nc --nw -b \"(?:TV|IMDb|OK|TMDB)\"",
+    "translate":       "translate-android-strings -i \"en\" -f \"android-studio-project/TV-Tracker/src/main/res/values/strings.xml\" -d \"android-studio-project/TV-Tracker/src/main/res\" -m --na --nc --nw -b \"(?:TV|IMDb|OK|TMDb|TMDB|TVDB|API|ID|DB)\"",
     "translate:debug": "npm run translate -- -o \"en\" --debug"
   }
 }

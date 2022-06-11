@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">Jatkuu</string>
 <string name="showstatus_ended">Päättyi</string>
 <string name="wiki_search_query_suffix">Televisiosarja</string>
+<string name="dialog_update_db_tmdb_migration_errors">Tietokannan päivitys on kohdannut joitakin televisiosarjoja, jotka eivät ole voineet siirtää</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">Täydellinen loki on kirjoitettu:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">Seuraavassa on luettelo TVDB ID Arvot\nSekä kunkin vastaavan sarjan nimi\nJotka olivat tietokannassa ennen päivitystä,\nMutta ei voitu ratkaista vastaavaan TMDB ID Arvo:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >Seuraavassa on luettelo TMDB ID Arvot\nSekä kunkin vastaavan sarjan nimi\nJotka olivat tietokannassa ennen päivitystä,\nMutta ei voitu lisätä TMDB API:</string>
 </resources>

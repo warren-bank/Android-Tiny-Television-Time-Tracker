@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">tiếp tục</string>
 <string name="showstatus_ended">đã kết thúc</string>
 <string name="wiki_search_query_suffix">phim truyền hình</string>
+<string name="dialog_update_db_tmdb_migration_errors">Cập nhật cơ sở dữ liệu gặp phải một số bộ phim truyền hình không thể di chuyển</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">Bản ghi hoàn chỉnh đã được ghi vào:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">Sau đây là danh sách các TVDB ID giá trị\ncùng với tên của từng sêri tương ứng\nđã có trong cơ sở dư ̃ liệu trước khi nâng cấp,\nnhưng không thể giải quyết tương ứng TMDB ID giá trị:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >Sau đây là danh sách các TMDB ID giá trị\ncùng với tên của từng sêri tương ứng\nđã có trong cơ sở dư ̃ liệu trước khi nâng cấp,\nnhưng không thể thêm bằng cách sử dụng TMDB API:</string>
 </resources>

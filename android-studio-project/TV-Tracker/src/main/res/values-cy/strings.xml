@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">parhau</string>
 <string name="showstatus_ended">dod i ben</string>
 <string name="wiki_search_query_suffix">cyfres deledu</string>
+<string name="dialog_update_db_tmdb_migration_errors">Daeth diweddariad cronfa ddata ar draws rhai cyfres deledu nad oeddent yn gallu mudo</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">Ysgrifennwyd cofnod cyflawn i:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">Mae\'r canlynol yn rhestr o TVDB ID gwerthoedd\nynghyd ag enw pob cyfres gyfatebol\nyr oedd hynny\'n bresennol yn y gronfa ddata cyn uwchraddio,\nond ni ellid ei ddatrys i gyfatebol TMDB ID gwerth:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >Mae\'r canlynol yn rhestr o TMDB ID gwerthoedd\nynghyd ag enw pob cyfres gyfatebol\nyr oedd hynny\'n bresennol yn y gronfa ddata cyn uwchraddio,\nond ni ellid ei ychwanegu gan ddefnyddio\'r canlynol TMDB API:</string>
 </resources>

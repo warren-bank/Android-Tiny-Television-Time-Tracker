@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">\')</string>
 <string name="showstatus_ended">Τέλος.</string>
 <string name="wiki_search_query_suffix">τηλεοπτικές σειρές:</string>
+<string name="dialog_update_db_tmdb_migration_errors">Η ενημέρωση της βάσης δεδομένων εντόπισε ορισμένες τηλεοπτικές σειρές που δεν ήταν σε θέση να μεταναστεύσουν</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">Ένα πλήρες αρχείο καταγραφής γράφτηκε:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">Ακολουθεί μια λίστα με: TVDB ID -τιμές\nμαζί με το όνομα κάθε αντίστοιχης σειράς.\nπου υπήρχαν στη βάση δεδομένων πριν από την αναβάθμιση,\nαλλά δεν μπορεί να αναλυθεί σε ένα αντίστοιχο TMDB ID \' τιμή:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >Ακολουθεί μια λίστα με: TMDB ID -τιμές\nμαζί με το όνομα κάθε αντίστοιχης σειράς.\nπου υπήρχαν στη βάση δεδομένων πριν από την αναβάθμιση,\nαλλά δεν ήταν δυνατή η προσθήκη του. TMDB API:</string>
 </resources>

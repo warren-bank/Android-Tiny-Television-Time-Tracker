@@ -138,4 +138,8 @@
 <string name="showstatus_continuing">läuft</string>
 <string name="showstatus_ended">beendet</string>
 <string name="wiki_search_query_suffix">Fernsehserie</string>
+<string name="dialog_update_db_tmdb_migration_errors">Bei der Datenbankaktualisierung wurde eine Reihe von Fernsehserien festgestellt, die nicht migriert werden konnten.</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">Ein vollständiges Protokoll wurde in:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">Die folgende Liste enthält eine Liste von TVDB ID Werte\nzusammen mit dem Namen der entsprechenden Reihen\ndie vor dem Upgrade in der Datenbank vorhanden waren,\nkonnte jedoch nicht in einen entsprechenden TMDB ID Wert:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >Die folgende Liste enthält eine Liste von TMDB ID Werte\nzusammen mit dem Namen der entsprechenden Reihen\ndie vor dem Upgrade in der Datenbank vorhanden waren,\nSie konnte jedoch nicht mit Hilfe der TMDB API:</string>
 </resources>

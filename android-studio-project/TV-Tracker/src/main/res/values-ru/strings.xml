@@ -136,4 +136,8 @@
 <string name="showstatus_continuing">продолжается</string>
 <string name="showstatus_ended">закончен</string>
 <string name="wiki_search_query_suffix">телесериалы</string>
+<string name="dialog_update_db_tmdb_migration_errors">Обновление базы данных встретило некоторые телевизионные сериалы, которые не смогли мигрировать</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">Полный протокол был записан в:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">Ниже перечислены некоторые из них: TVDB ID значения\nвместе с именем каждой соответствующей серии\nкоторые присутствовали в базе данных перед обновлением,\nно не удалось преобразовать в соответствующий TMDB ID значение:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >Ниже перечислены некоторые из них: TMDB ID значения\nвместе с именем каждой соответствующей серии\nкоторые присутствовали в базе данных перед обновлением,\nно не удалось добавить с помощью TMDB API:</string>
 </resources>

@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">leanúnach</string>
 <string name="showstatus_ended">dar críoch</string>
 <string name="wiki_search_query_suffix">sraith teilifíse</string>
+<string name="dialog_update_db_tmdb_migration_errors">Bunachar sonraí a thabhairt cothrom le dáta a bhfuil roinnt sraith teilifíse nach raibh in ann a mighráte</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">Bhí logchomhad iomlán scríofa chuig:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">Is é seo a leanas liosta de TVDB ID luachanna\nchomh maith leis an ainm gach sraith comhfhreagrach\na bhí i láthair ar an mbunachar sonraí roimh uasghrádú,\nach ní féidir é a réiteach go comhfhreagrach TMDB ID luach:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >Is é seo a leanas liosta de TMDB ID luachanna\nchomh maith leis an ainm gach sraith comhfhreagrach\na bhí i láthair ar an mbunachar sonraí roimh uasghrádú,\nach ní féidir é a chur leis an TMDB API:</string>
 </resources>

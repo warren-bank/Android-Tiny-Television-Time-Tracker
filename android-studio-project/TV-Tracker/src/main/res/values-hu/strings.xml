@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">Folyamatos</string>
 <string name="showstatus_ended">Befejeződött</string>
 <string name="wiki_search_query_suffix">Televíziós sorozat</string>
+<string name="dialog_update_db_tmdb_migration_errors">Az adatbázis frissítése olyan televíziós sorozatokat észlelt, amelyek nem voltak képesek átállítani</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">A teljes napló írásra került:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">A következő egy lista TVDB ID értékek\nAz egyes sorok nevével együtt\nAmelyek a frissítés előtt jelen voltak az adatbázisban,\nDe nem oldható fel a megfelelő TMDB ID érték:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >A következő egy lista TMDB ID értékek\nAz egyes sorok nevével együtt\nAmelyek a frissítés előtt jelen voltak az adatbázisban,\nDe nem adható hozzá a segítségével TMDB API:</string>
 </resources>

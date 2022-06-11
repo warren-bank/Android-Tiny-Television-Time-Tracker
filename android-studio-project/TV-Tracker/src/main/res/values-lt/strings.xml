@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">Tęstinis</string>
 <string name="showstatus_ended">baigėsi</string>
 <string name="wiki_search_query_suffix">Televizijos kameros</string>
+<string name="dialog_update_db_tmdb_migration_errors">Duomenų bazės atnaujinimas susidūrė su kai kurių televizijos serijos, kurios negalėjo migruoti</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">Pilnas žurnalas buvo parašyta:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">Toliau pateikiamas sąrašas: TVDB ID vertės\nkartu su kiekvienos atitinkamos serijos pavadinimu\nkurie buvo pateikti duomenų bazėje iki atnaujinimo,\nbet negali būti išspręsta į atitinkamą TMDB ID Vertė:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >Toliau pateikiamas sąrašas: TMDB ID vertės\nkartu su kiekvienos atitinkamos serijos pavadinimu\nkurie buvo pateikti duomenų bazėje iki atnaujinimo,\nbet negali būti pridėta naudojant TMDB API:</string>
 </resources>

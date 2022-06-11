@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">தொடர்ந்து</string>
 <string name="showstatus_ended">முடிவடைந்தது</string>
 <string name="wiki_search_query_suffix">தொலைக்காட்சி தொடர்</string>
+<string name="dialog_update_db_tmdb_migration_errors">தரவுத்தளத்தில் புதுப்பிக்கப்பட்டது சில தொலைக்காட்சி தொடர்கள்</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">ஒரு முழுமையான பதிவு எழுதப்பட்டது:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">பின்வரும் ஒரு பட்டியல் TVDB ID மதிப்புகள்\nஒவ்வொரு வரிசைப்படுத்தப்பட்ட தொடர்களின் பெயருடன்\nமேம்படுத்துவதற்கு முந்தைய தரவுத்தளத்தில் இருந்தன.,\nஆனால் ஒத்திசைக்கு தெரிவிக்க முடியவில்லை. TMDB ID மதிப்பு:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >பின்வரும் ஒரு பட்டியல் TMDB ID மதிப்புகள்\nஒவ்வொரு வரிசைப்படுத்தப்பட்ட தொடர்களின் பெயருடன்\nமேம்படுத்துவதற்கு முந்தைய தரவுத்தளத்தில் இருந்தன.,\nஆனால் இதை பயன்படுத்தி சேர்க்கமுடியவில்லை. TMDB API:</string>
 </resources>

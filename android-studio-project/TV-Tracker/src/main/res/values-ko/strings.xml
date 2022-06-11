@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">계속</string>
 <string name="showstatus_ended">끝이다</string>
 <string name="wiki_search_query_suffix">텔레비전 시리즈</string>
+<string name="dialog_update_db_tmdb_migration_errors">데이터베이스 업데이트에서 마이그레이션할 수 없는 일부 텔레비전 시리즈가 발생했습니다.</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">전체 로그는 다음과 같이 작성되었습니다.:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">다음은 다음 목록입니다. TVDB ID 값\n각 해당 시리즈의 이름과 함께\n업그레이드 이전에 데이터베이스에 있었던,\n그러나 해당되는 항목으로 해석될 수 없습니다. TMDB ID 값:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >다음은 다음 목록입니다. TMDB ID 값\n각 해당 시리즈의 이름과 함께\n업그레이드 이전에 데이터베이스에 있었던,\n그러나 이 옵션을 사용하여 추가할 수 없습니다. TMDB API:</string>
 </resources>

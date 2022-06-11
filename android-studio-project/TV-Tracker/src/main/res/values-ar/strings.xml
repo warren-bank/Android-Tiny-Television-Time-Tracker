@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">استمرار</string>
 <string name="showstatus_ended">تم الانتهاء</string>
 <string name="wiki_search_query_suffix">مسلسل تلفزيوني</string>
+<string name="dialog_update_db_tmdb_migration_errors">تحديث قاعدة البيانات قابل بعض المسلسلات التلفزيونية التي لم تكن قادرة على الهجرة</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">تم كتابة سجل كامل الى:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">وفيما يلي قائمة بأسماء : TVDB ID قيم\nمع الاسم الخاص بكل من السلاسل المناظرة\nالتي كانت موجودة في قاعدة البيانات قبل التحديث,\nولكن لا يمكن حلها الى مناظرة TMDB ID القيمة:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >وفيما يلي قائمة بأسماء : TMDB ID قيم\nمع الاسم الخاص بكل من السلاسل المناظرة\nالتي كانت موجودة في قاعدة البيانات قبل التحديث,\nولكن لا يمكن اضافته باستخدام TMDB API:</string>
 </resources>

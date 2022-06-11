@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">繼續</string>
 <string name="showstatus_ended">已結束</string>
 <string name="wiki_search_query_suffix">電視劇</string>
+<string name="dialog_update_db_tmdb_migration_errors">資料庫更新遇到一些無法移轉的電視系列</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">已寫入完整日誌:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">以下為下列項目的清單： TVDB ID 值\n以及每個對應的系列的名稱\n在升級之前出現在資料庫中的,\n但無法解析成對應的 TMDB ID 值:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >以下為下列項目的清單： TMDB ID 值\n以及每個對應的系列的名稱\n在升級之前出現在資料庫中的,\n但無法使用 TMDB API:</string>
 </resources>

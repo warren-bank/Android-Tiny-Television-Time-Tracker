@@ -123,4 +123,8 @@
 <string name="showstatus_continuing">継続</string>
 <string name="showstatus_ended">終了</string>
 <string name="wiki_search_query_suffix">テレビシリーズ</string>
+<string name="dialog_update_db_tmdb_migration_errors">データベース更新により、移行できないテレビ番組がいくつか検出されました</string>
+<string name="dialog_update_db_tmdb_migration_errors_log_file">ログの書き込みが完了しました:\n(%s)</string>
+<string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">以下にリストを示します。 TVDB ID 値\nそれぞれの対応する系列の名前とともに\nアップグレード前にデータベースに存在していたこと,\nしかし、対応するものには解決できませんでした TMDB ID 値:</string>
+<string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >以下にリストを示します。 TMDB ID 値\nそれぞれの対応する系列の名前とともに\nアップグレード前にデータベースに存在していたこと,\nただし、以下を使用して追加できません TMDB API:</string>
 </resources>
