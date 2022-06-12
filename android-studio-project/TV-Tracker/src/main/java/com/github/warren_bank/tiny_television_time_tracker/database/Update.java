@@ -483,8 +483,8 @@ public class Update {
             + ")"
           );
 
-          queries.add("INSERT into tmdb_migration_series   SELECT NULL as tmdbid, cast(id      as INTEGER) as thetvdbid, serieName as name, language, passiveStatus as archived, 0 as pinned, extResources from series");
-          queries.add("INSERT into tmdb_migration_episodes SELECT NULL as tmdbid, cast(serieId as INTEGER) as thetvdbid, seasonNumber, episodeNumber, seen from episodes");
+          queries.add("INSERT into tmdb_migration_series   SELECT NULL as tmdbid, cast(id      as INTEGER) as thetvdbid, serieName as name, language, passiveStatus as archived, 0 as pinned, extResources FROM series");
+          queries.add("INSERT into tmdb_migration_episodes SELECT NULL as tmdbid, cast(serieId as INTEGER) as thetvdbid, seasonNumber, episodeNumber, MAX(seen) as seen FROM episodes GROUP BY thetvdbid, seasonNumber, episodeNumber");
 
           if (!TextUtils.isEmpty(defaultLangCode))
             queries.add("UPDATE tmdb_migration_series SET language = '" + defaultLangCode + "' WHERE language=NULL");
