@@ -1075,8 +1075,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
         public boolean accept(File dir, String filename) {
           File file = new File(dir.getAbsolutePath() + File.separator + filename);
           if (showFiles)
-            return file.isDirectory()
-              || file.isFile() && file.getName().toLowerCase().indexOf("droidshows.db") == 0;
+            return file.isDirectory() || FileUtils.isDatabaseFile(file);
           else
             return file.isDirectory();
         }

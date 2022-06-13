@@ -14,6 +14,7 @@ import java.net.URL;
 import java.nio.channels.FileChannel;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class FileUtils {
 
@@ -66,6 +67,23 @@ public class FileUtils {
   public static boolean exists(String path) {
     File file = FileUtils.getFile(path);
     return ((file != null) && file.exists());
+  }
+
+  // --------------------------------------------------------------------------- test paths: for DB
+
+  private static Pattern dbFileNameRegex = null;
+
+  public static boolean isDatabaseFile(File file) {
+    boolean result = false;
+    try {
+      if (FileUtils.dbFileNameRegex == null) {
+        FileUtils.dbFileNameRegex = Pattern.compile("^(?:droidshows|tv[\\-_\\.\\s]?tracker).*\\.db(?:[\\.\\-].*)?$", Pattern.CASE_INSENSITIVE);
+      }
+
+      result = (file != null) && file.exists() && file.isFile() && FileUtils.dbFileNameRegex.matcher(file.getName()).matches();
+    }
+    catch(Exception e) {}
+    return result;
   }
 
   // --------------------------------------------------------------------------- get paths: for DB
