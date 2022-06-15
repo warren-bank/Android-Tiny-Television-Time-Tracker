@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">连接至 TMDb API. 再试一次.</string>
 <string name="messages_marked_seen">已标记为所见</string>
 <string name="messages_marked_unseen">标记为未显示</string>
+<string name="messages_context_mark_season">标记所有集</string>
+<string name="messages_context_mark_season_seen_before">在季节前</string>
+<string name="messages_context_mark_season_seen">在季节里</string>
+<string name="messages_context_mark_season_unseen">在不被看见的季节</string>
+<string name="messages_context_mark_season_unseen_after">本赛季结束后</string>
 <string name="messages_context_archived">已归档</string>
 <string name="messages_context_unarchived">已恢复</string>
 <string name="messages_aired">播发:</string>

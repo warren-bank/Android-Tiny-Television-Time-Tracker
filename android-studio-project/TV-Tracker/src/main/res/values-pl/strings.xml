@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">Błąd podczas nawiązywania połączenia z TMDb API. Spróbuj ponownie.</string>
 <string name="messages_marked_seen">oznaczone jako widoczne</string>
 <string name="messages_marked_unseen">oznaczone jako niewidoczne</string>
+<string name="messages_context_mark_season">Oznacz wszystkie odcinki</string>
+<string name="messages_context_mark_season_seen_before">przed sezonem jak widać</string>
+<string name="messages_context_mark_season_seen">w sezonie jak widać</string>
+<string name="messages_context_mark_season_unseen">w sezonie jako niewidoczne</string>
+<string name="messages_context_mark_season_unseen_after">po sezonie jako niewidoczne</string>
 <string name="messages_context_archived">zarchiwizowane</string>
 <string name="messages_context_unarchived">odzyskane</string>
 <string name="messages_aired">Aired:</string>

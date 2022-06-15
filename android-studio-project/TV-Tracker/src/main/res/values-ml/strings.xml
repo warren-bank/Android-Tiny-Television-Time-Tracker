@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">ബന്ധിപ്പിക്കുന്നതില് പിശക് TMDb API. വീണ്ടും ശ്രമിക്കുക.</string>
 <string name="messages_marked_seen">കാണുന്നതുപോലെ അടയാളപ്പെടുത്തിയിരിക്കുന്നു</string>
 <string name="messages_marked_unseen">കാണപ്പെടുന്നതുപോലെ അടയാളപ്പെടുത്തിയിരിക്കുന്നു</string>
+<string name="messages_context_mark_season">എല്ലാ അക്ഷരങ്ങളെയും അടയാളപ്പെടുത്തുക</string>
+<string name="messages_context_mark_season_seen_before">സീസണിനു മുമ്പ്</string>
+<string name="messages_context_mark_season_seen">സീസണിൽ കണ്ടു.</string>
+<string name="messages_context_mark_season_unseen">സീസണിൽ കാണപ്പെടുന്നതുപോലെ</string>
+<string name="messages_context_mark_season_unseen_after">സീസണിനു ശേഷം കാണപ്പെടുന്നതുപോലെ</string>
 <string name="messages_context_archived">\@ option: check</string>
 <string name="messages_context_unarchived">बरामद</string>
 <string name="messages_aired">Aired:</string>

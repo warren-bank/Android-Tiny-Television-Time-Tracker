@@ -116,6 +116,11 @@
 <string name="messages_api_con_error">Error al conectar a TMDb API. Inténtalo de nuevo.</string>
 <string name="messages_marked_seen">marcado como visto</string>
 <string name="messages_marked_unseen">marcado como no visto</string>
+<string name="messages_context_mark_season">Marcar todos los episodios</string>
+<string name="messages_context_mark_season_seen_before">antes de la temporada</string>
+<string name="messages_context_mark_season_seen">en la temporada como se ve</string>
+<string name="messages_context_mark_season_unseen">en temporada como no visto</string>
+<string name="messages_context_mark_season_unseen_after">después de la temporada como invisible</string>
 <string name="messages_context_archived">archivado</string>
 <string name="messages_context_unarchived">recuperado</string>
 <string name="messages_aired">Emitido:</string>

@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">Hiba a csatlakozáskor TMDb API. Próbáld újra..</string>
 <string name="messages_marked_seen">Megjelöltek szerint</string>
 <string name="messages_marked_unseen">Mintha láthatatlan lett volna</string>
+<string name="messages_context_mark_season">Összes esemény megjelölése</string>
+<string name="messages_context_mark_season_seen_before">A szezon előtt</string>
+<string name="messages_context_mark_season_seen">Szezonban, mint látható</string>
+<string name="messages_context_mark_season_unseen">A szezonban, mint láthatatlan</string>
+<string name="messages_context_mark_season_unseen_after">A szezon után láthatatlanul</string>
 <string name="messages_context_archived">Archivált</string>
 <string name="messages_context_unarchived">Visszanyert</string>
 <string name="messages_aired">Fáradt:</string>

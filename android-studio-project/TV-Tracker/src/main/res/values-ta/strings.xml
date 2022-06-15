@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">இணைக்கும்போது பிழை TMDb API. மீண்டும் முயற்சி.</string>
 <string name="messages_marked_seen">பார்க்கப்படாத</string>
 <string name="messages_marked_unseen">பார்க்கப்படாத</string>
+<string name="messages_context_mark_season">எல்லா பக்கங்களையும் குறி</string>
+<string name="messages_context_mark_season_seen_before">காலம் முன்பே காணப்படுகிற</string>
+<string name="messages_context_mark_season_seen">காலத்தில் காணப்படுகிற</string>
+<string name="messages_context_mark_season_unseen">காலத்தில் காணப்படாத காலத்தில்</string>
+<string name="messages_context_mark_season_unseen_after">பருவம் பின் காணப்படாத காலம்</string>
 <string name="messages_context_archived">காப்பகப்படுத்தப்பட்டது</string>
 <string name="messages_context_unarchived">மீண்டும்</string>
 <string name="messages_aired">அலங்காரம்:</string>

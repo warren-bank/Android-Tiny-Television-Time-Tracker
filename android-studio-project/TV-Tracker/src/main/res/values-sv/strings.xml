@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">Fel vid anslutning till TMDb API. Försök igen.</string>
 <string name="messages_marked_seen">markerad som sedd</string>
 <string name="messages_marked_unseen">markerad som ej sedd</string>
+<string name="messages_context_mark_season">Markera alla avsnitt</string>
+<string name="messages_context_mark_season_seen_before">före säsong enligt</string>
+<string name="messages_context_mark_season_seen">under säsong som sedd</string>
+<string name="messages_context_mark_season_unseen">under säsong som ej sedda</string>
+<string name="messages_context_mark_season_unseen_after">efter säsong som ej sedda</string>
 <string name="messages_context_archived">arkiverade</string>
 <string name="messages_context_unarchived">återvunna</string>
 <string name="messages_aired">Aired:</string>

@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">خطأ في الاتصال الى TMDb API. حاول مرة أخرى.</string>
 <string name="messages_marked_seen">ملحوظ كما تم مشاهدته</string>
 <string name="messages_marked_unseen">تم تعليمه كغير معلم</string>
+<string name="messages_context_mark_season">تعليم كل الحلقات</string>
+<string name="messages_context_mark_season_seen_before">قبل الموسم كما ترى</string>
+<string name="messages_context_mark_season_seen">في الموسم كما ترى</string>
+<string name="messages_context_mark_season_unseen">في الموسم كما لم ير</string>
+<string name="messages_context_mark_season_unseen_after">بعد الموسم كما لم ير</string>
 <string name="messages_context_archived">مخزن</string>
 <string name="messages_context_unarchived">تم استعادته</string>
 <string name="messages_aired">مستوحى:</string>

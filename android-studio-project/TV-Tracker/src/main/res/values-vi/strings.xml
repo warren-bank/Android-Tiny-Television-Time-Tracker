@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">Lỗi khi kết nối vào TMDb API. Thử lại.</string>
 <string name="messages_marked_seen">được đánh dấu là</string>
 <string name="messages_marked_unseen">đã được đánh dấu</string>
+<string name="messages_context_mark_season">Đánh dấu mọi tập</string>
+<string name="messages_context_mark_season_seen_before">trước khi xem</string>
+<string name="messages_context_mark_season_seen">trong mùa như đã thấy</string>
+<string name="messages_context_mark_season_unseen">trong mùa như chưa thấy</string>
+<string name="messages_context_mark_season_unseen_after">Sau một mùa không có</string>
 <string name="messages_context_archived">lưu trư ̃</string>
 <string name="messages_context_unarchived">đã phục hồi</string>
 <string name="messages_aired">Đã phát:</string>

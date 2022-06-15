@@ -119,6 +119,11 @@
 <string name="messages_api_con_error">Verbindung zu TMDb API nicht möglich. Versuche es erneut.</string>
 <string name="messages_marked_seen">als gesehen markiert</string>
 <string name="messages_marked_unseen">als ungesehen markiert</string>
+<string name="messages_context_mark_season">Alle Episoden markieren</string>
+<string name="messages_context_mark_season_seen_before">vor der Saison als gesehen</string>
+<string name="messages_context_mark_season_seen">in der Saison gesehen</string>
+<string name="messages_context_mark_season_unseen">in der Saison als unsichtbar</string>
+<string name="messages_context_mark_season_unseen_after">nach Saison als unsichtbar</string>
 <string name="messages_context_archived">archiviert</string>
 <string name="messages_context_unarchived">aus dem Archiv entfernt</string>
 <string name="messages_aired">ausgestrahlt:</string>

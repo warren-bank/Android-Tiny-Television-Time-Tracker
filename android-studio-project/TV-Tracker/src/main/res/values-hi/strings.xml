@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">इससे कनेक्ट करने में त्रुटि TMDb API. फिर कोशिश करें.</string>
 <string name="messages_marked_seen">को देखा जैसा</string>
 <string name="messages_marked_unseen">अदृष्ट</string>
+<string name="messages_context_mark_season">सभी प्रकरण चिह्नित करें</string>
+<string name="messages_context_mark_season_seen_before">पहले से ही देखा जाए</string>
+<string name="messages_context_mark_season_seen">जैसा कि देखा गया है</string>
+<string name="messages_context_mark_season_unseen">जैसा कि परोक्ष रूप से</string>
+<string name="messages_context_mark_season_unseen_after">अदृष्ट के मौसम</string>
 <string name="messages_context_archived">अभिलेखित</string>
 <string name="messages_context_unarchived">बरामद</string>
 <string name="messages_aired">प्रसारित:</string>

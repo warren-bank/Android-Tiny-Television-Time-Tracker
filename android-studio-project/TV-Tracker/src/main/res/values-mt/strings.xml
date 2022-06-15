@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">Żball konnessjoni ma \' TMDb API. Erġa \' pprova.</string>
 <string name="messages_marked_seen">immarkat kif jidher</string>
 <string name="messages_marked_unseen">immarkat bħala mhux osservat</string>
+<string name="messages_context_mark_season">Immarka l-episodji kollha</string>
+<string name="messages_context_mark_season_seen_before">qabel l-istaġun kif jidher</string>
+<string name="messages_context_mark_season_seen">fi staġun kif jidher</string>
+<string name="messages_context_mark_season_unseen">fi staġun kif mhux meqjus</string>
+<string name="messages_context_mark_season_unseen_after">wara l-istaġun kif mhux meqjus</string>
 <string name="messages_context_archived">arkivjati</string>
 <string name="messages_context_unarchived">irkuprati</string>
 <string name="messages_aired">Imxandra:</string>

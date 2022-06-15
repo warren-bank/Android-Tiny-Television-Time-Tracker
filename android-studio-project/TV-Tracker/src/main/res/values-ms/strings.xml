@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">Ralat menyambung ke TMDb API. Cuba lagi.</string>
 <string name="messages_marked_seen">ditanda sebagai dilihat</string>
 <string name="messages_marked_unseen">Ditanda sebagai ghaib</string>
+<string name="messages_context_mark_season">Tandakan semua episod</string>
+<string name="messages_context_mark_season_seen_before">sebelum musim dilihat</string>
+<string name="messages_context_mark_season_seen">dalam musim yang dilihat</string>
+<string name="messages_context_mark_season_unseen">dalam musim seperti yang tidak dilihat</string>
+<string name="messages_context_mark_season_unseen_after">selepas musim seperti ghaib</string>
 <string name="messages_context_archived">Diarkib</string>
 <string name="messages_context_unarchived">Dipulihkan</string>
 <string name="messages_aired">Aired:</string>

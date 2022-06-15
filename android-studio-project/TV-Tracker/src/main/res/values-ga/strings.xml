@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">Earráid agus á nascadh le TMDb API. Bain triail as.</string>
 <string name="messages_marked_seen">marcáilte mar atá</string>
 <string name="messages_marked_unseen">marcáilte mar nach bhfuil siad</string>
+<string name="messages_context_mark_season">Marcáil gach uile oigeachtaName</string>
+<string name="messages_context_mark_season_seen_before">roimh shéasúr le feiceáil</string>
+<string name="messages_context_mark_season_seen">sa séasúr, mar</string>
+<string name="messages_context_mark_season_unseen">sa séasúr agus gan choinne</string>
+<string name="messages_context_mark_season_unseen_after">tar éis séasúr mar gheall</string>
 <string name="messages_context_archived">cartlainne</string>
 <string name="messages_context_unarchived">aisghafa</string>
 <string name="messages_aired">Craoladh:</string>

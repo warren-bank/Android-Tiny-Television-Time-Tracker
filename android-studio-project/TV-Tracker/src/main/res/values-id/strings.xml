@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">Kesalahan dalam menghubungkan ke TMDb API. Coba lagi.</string>
 <string name="messages_marked_seen">Ditandai sebagai terlihat</string>
 <string name="messages_marked_unseen">ditandai sebagai tak terlihat</string>
+<string name="messages_context_mark_season">Tandai semua episode</string>
+<string name="messages_context_mark_season_seen_before">sebelum musim seperti yang terlihat</string>
+<string name="messages_context_mark_season_seen">di musim seperti yang terlihat</string>
+<string name="messages_context_mark_season_unseen">di musim seperti yang tak terlihat</string>
+<string name="messages_context_mark_season_unseen_after">setelah musim sebagai tidak terlihat</string>
 <string name="messages_context_archived">diarsipkan</string>
 <string name="messages_context_unarchived">Pulihkan</string>
 <string name="messages_aired">Ditayangkan:</string>

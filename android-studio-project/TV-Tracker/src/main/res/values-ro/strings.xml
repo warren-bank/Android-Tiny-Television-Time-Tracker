@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">Eroare la conectarea la TMDb API. Încercați din nou.</string>
 <string name="messages_marked_seen">marcat ca văzut</string>
 <string name="messages_marked_unseen">marcat ca nevăzut</string>
+<string name="messages_context_mark_season">Marchează toate episoadele</string>
+<string name="messages_context_mark_season_seen_before">înainte de sezon ca văzut</string>
+<string name="messages_context_mark_season_seen">în sezon așa cum se vede</string>
+<string name="messages_context_mark_season_unseen">în sezon ca nevăzut</string>
+<string name="messages_context_mark_season_unseen_after">după sezon ca nevăzut</string>
 <string name="messages_context_archived">arhivat</string>
 <string name="messages_context_unarchived">recuperate</string>
 <string name="messages_aired">Difuzat:</string>

@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">שגיאה בחיבור ל - TMDb API. נסו שוב.</string>
 <string name="messages_marked_seen">מסומן כפי שנראה</string>
 <string name="messages_marked_unseen">מסומן כבלתי נראה</string>
+<string name="messages_context_mark_season">סימון \' כל הפרקים \'</string>
+<string name="messages_context_mark_season_seen_before">לפני עונה כפי שנראה</string>
+<string name="messages_context_mark_season_seen">בעונה כפי שנראה</string>
+<string name="messages_context_mark_season_unseen">בעונה כבלתי נראית</string>
+<string name="messages_context_mark_season_unseen_after">אחרי עונה כבלתי נראית</string>
 <string name="messages_context_archived">נגנז</string>
 <string name="messages_context_unarchived">התאושש</string>
 <string name="messages_aired">שודר:</string>

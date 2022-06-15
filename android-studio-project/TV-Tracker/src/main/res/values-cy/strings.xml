@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">Gwall wrth gysylltu TMDb API. Ceisiwch eto.</string>
 <string name="messages_marked_seen">wedi ei farcio fel</string>
 <string name="messages_marked_unseen">wedi\'i farcio fel heb ei weld</string>
+<string name="messages_context_mark_season">Marcio pob episodau</string>
+<string name="messages_context_mark_season_seen_before">cyn tymor fel y gwelwyd</string>
+<string name="messages_context_mark_season_seen">yn y tymor fel y gwelwyd</string>
+<string name="messages_context_mark_season_unseen">yn y tymor fel nas gwelwyd</string>
+<string name="messages_context_mark_season_unseen_after">ar ôl tymor fel heb ei weld</string>
 <string name="messages_context_archived">wedi ei archifo</string>
 <string name="messages_context_unarchived">adadferwyd</string>
 <string name="messages_aired">Gwyntyllwyd:</string>

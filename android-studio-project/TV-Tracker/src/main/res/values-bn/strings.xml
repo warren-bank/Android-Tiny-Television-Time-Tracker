@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">সংযোগ করতে সমস্যা হয়েছে TMDb API. পুনরায় চেষ্টা করুন.</string>
 <string name="messages_marked_seen">চিহ্নিত হিসাবে চিহ্নিত করা হয়েছে</string>
 <string name="messages_marked_unseen">অদেখা হিসাবে চিহ্নিত</string>
+<string name="messages_context_mark_season">সকল পর্ব চিহ্নিত করুন</string>
+<string name="messages_context_mark_season_seen_before">মৌসুমের আগে দেখা যাক</string>
+<string name="messages_context_mark_season_seen">যেমনটা দেখা গেছে</string>
+<string name="messages_context_mark_season_unseen">অদেখা হিসাবে ঋতুতে</string>
+<string name="messages_context_mark_season_unseen_after">মৌসুমের পর অদেখা</string>
 <string name="messages_context_archived">আর্কাইভকৃত</string>
 <string name="messages_context_unarchived">উদ্ধার করা হয়েছে</string>
 <string name="messages_aired">প্রচারিত:</string>

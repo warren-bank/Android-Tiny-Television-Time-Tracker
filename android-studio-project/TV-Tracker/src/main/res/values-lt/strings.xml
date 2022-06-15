@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">Klaida, jungianti TMDb API. Bandykite dar.</string>
 <string name="messages_marked_seen">pažymėti kaip matyti</string>
 <string name="messages_marked_unseen">pažymėta kaip nematė</string>
+<string name="messages_context_mark_season">Pažymėti visus epizodus</string>
+<string name="messages_context_mark_season_seen_before">prieš sezoną, kaip matyti</string>
+<string name="messages_context_mark_season_seen">Sezonas, kaip matyti</string>
+<string name="messages_context_mark_season_unseen">Sezonas, kaip nematė</string>
+<string name="messages_context_mark_season_unseen_after">po sezonu, kaip nematė</string>
 <string name="messages_context_archived">Archyvas</string>
 <string name="messages_context_unarchived">Atsigavo</string>
 <string name="messages_aired">Poruota:</string>

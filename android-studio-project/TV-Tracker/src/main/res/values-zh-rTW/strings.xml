@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">連接時發生錯誤 TMDb API. 再試一次.</string>
 <string name="messages_marked_seen">標示為已看到</string>
 <string name="messages_marked_unseen">標示為未看到</string>
+<string name="messages_context_mark_season">所有劇集</string>
+<string name="messages_context_mark_season_seen_before">季前</string>
+<string name="messages_context_mark_season_seen">季前</string>
+<string name="messages_context_mark_season_unseen">在這個季節裡</string>
+<string name="messages_context_mark_season_unseen_after">季前</string>
 <string name="messages_context_archived">保存</string>
 <string name="messages_context_unarchived">恢復</string>
 <string name="messages_aired">艾雷德:</string>

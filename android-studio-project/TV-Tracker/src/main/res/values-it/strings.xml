@@ -118,6 +118,11 @@
 <string name="messages_api_con_error">Errore connessione a TMDb API. Riprova.</string>
 <string name="messages_marked_seen">segnati come visti</string>
 <string name="messages_marked_unseen">segnati come non visti</string>
+<string name="messages_context_mark_season">Segna tutti gli episodi</string>
+<string name="messages_context_mark_season_seen_before">prima della stagione come visto</string>
+<string name="messages_context_mark_season_seen">in stagione come visto</string>
+<string name="messages_context_mark_season_unseen">in stagione come non visto</string>
+<string name="messages_context_mark_season_unseen_after">dopo stagione come non visto</string>
 <string name="messages_context_archived">archiviata</string>
 <string name="messages_context_unarchived">ripristinata</string>
 <string name="messages_aired">Trasmesso:</string>

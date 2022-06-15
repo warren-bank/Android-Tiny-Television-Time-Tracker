@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">Помилка з \' єднання з TMDb API. Спробувати ще раз.</string>
 <string name="messages_marked_seen">Позначений як</string>
 <string name="messages_marked_unseen">Позначений як</string>
+<string name="messages_context_mark_season">Позначити всі епізоди</string>
+<string name="messages_context_mark_season_seen_before">перед початком сезону</string>
+<string name="messages_context_mark_season_seen">в сезоні, як це видно</string>
+<string name="messages_context_mark_season_unseen">У сезоні як невидимий</string>
+<string name="messages_context_mark_season_unseen_after">після того, як сезон не</string>
 <string name="messages_context_archived">архівована</string>
 <string name="messages_context_unarchived">relen</string>
 <string name="messages_aired">Ефір:</string>

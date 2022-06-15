@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">Kļūda, kas savieno TMDb API. Mēģiniet vēlreiz.</string>
 <string name="messages_marked_seen">iezīmēts kā redzams</string>
 <string name="messages_marked_unseen">iezīmēts kā neredzēts</string>
+<string name="messages_context_mark_season">Atzīmēt visas epizodes</string>
+<string name="messages_context_mark_season_seen_before">pirms sezonas, kā redzams</string>
+<string name="messages_context_mark_season_seen">sezonā, kā redzams</string>
+<string name="messages_context_mark_season_unseen">sezonā, kā neredzēts</string>
+<string name="messages_context_mark_season_unseen_after">pēc sezonas kā neredzēts</string>
 <string name="messages_context_archived">arhivēti</string>
 <string name="messages_context_unarchived">Reģenerēts</string>
 <string name="messages_aired">AR:</string>

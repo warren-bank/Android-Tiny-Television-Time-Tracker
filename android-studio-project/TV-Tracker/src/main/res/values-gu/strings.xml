@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">જોડાઇ રહ્યા હોય ત્યારે ભૂલ TMDb API. ફરીથી પ્રયત્ન કરો.</string>
 <string name="messages_marked_seen">જોયેલ તરીકે ચિહ્નિત થયેલ છે</string>
 <string name="messages_marked_unseen">જોયેલ તરીકે ચિહ્નિત થયેલ છે</string>
+<string name="messages_context_mark_season">બધા ભાગો ને ચિહ્નિત કરો</string>
+<string name="messages_context_mark_season_seen_before">સીઝન પહેલા જોવા માટે</string>
+<string name="messages_context_mark_season_seen">સીઝનમાં જોવા મળે છે</string>
+<string name="messages_context_mark_season_unseen">સીઝનમાં અસ્તિત્વમાં</string>
+<string name="messages_context_mark_season_unseen_after">સીઝન પછી જોવા મળે છે.</string>
 <string name="messages_context_archived">અનામત રાખેલું</string>
 <string name="messages_context_unarchived">बरामद થયેલ</string>
 <string name="messages_aired">પ્રસારિત:</string>

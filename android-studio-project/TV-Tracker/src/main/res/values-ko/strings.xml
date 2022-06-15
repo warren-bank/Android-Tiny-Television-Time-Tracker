@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">연결 오류 TMDb API. 다시 시도하기.</string>
 <string name="messages_marked_seen">표시된 것으로 표시</string>
 <string name="messages_marked_unseen">보이지 않는 것으로 표시된</string>
+<string name="messages_context_mark_season">모든 에피소드를 표시하기</string>
+<string name="messages_context_mark_season_seen_before">시즌 전에 볼 수 있다</string>
+<string name="messages_context_mark_season_seen">나타난 바와 같이 계절에 따라</string>
+<string name="messages_context_mark_season_unseen">보이지 않는 것으로 계절에 따라.</string>
+<string name="messages_context_mark_season_unseen_after">계절이 보이지 않는 것으로</string>
 <string name="messages_context_archived">아카이브된</string>
 <string name="messages_context_unarchived">회복된</string>
 <string name="messages_aired">원하는:</string>

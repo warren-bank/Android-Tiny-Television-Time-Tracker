@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">接続中のエラー TMDb API. 再試行.</string>
 <string name="messages_marked_seen">見られるという</string>
 <string name="messages_marked_unseen">目に見えない</string>
+<string name="messages_context_mark_season">すべてのエピソードをマーク</string>
+<string name="messages_context_mark_season_seen_before">前シーズンの目前で</string>
+<string name="messages_context_mark_season_seen">目に見える季節に</string>
+<string name="messages_context_mark_season_unseen">未見の季節における</string>
+<string name="messages_context_mark_season_unseen_after">未見の季節の後</string>
 <string name="messages_context_archived">アーカイブ済み</string>
 <string name="messages_context_unarchived">回収</string>
 <string name="messages_aired">アエド:</string>

@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">සම්බන්ධ කරමින් දෝෂයක් TMDb API. නැවත උත්සාහ කරන්න.</string>
 <string name="messages_marked_seen">ලෙස සලකුණු කර ඇත.</string>
 <string name="messages_marked_unseen">නොපෙනෙන ලෙස සලකුණු කරන්න</string>
+<string name="messages_context_mark_season">සියළුම කොටස් සලකුණු කරන්න</string>
+<string name="messages_context_mark_season_seen_before">මීට පෙර දැක ඇති පරිදි</string>
+<string name="messages_context_mark_season_seen">ලෙස සෘජුවේදී</string>
+<string name="messages_context_mark_season_unseen">නොපෙනෙන ලෙස සෘජුවේදී</string>
+<string name="messages_context_mark_season_unseen_after">කාලයෙන් පසු නොපෙනෙන ලෙස</string>
 <string name="messages_context_archived">සංරක්ෂණය</string>
 <string name="messages_context_unarchived">बरामद</string>
 <string name="messages_aired">විකාශනය:</string>

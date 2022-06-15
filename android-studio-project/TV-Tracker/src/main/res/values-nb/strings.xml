@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">Feil ved tilkobling til TMDb API. Prøv igjen.</string>
 <string name="messages_marked_seen">merket som sett</string>
 <string name="messages_marked_unseen">merket som usett</string>
+<string name="messages_context_mark_season">Merk alle episoder</string>
+<string name="messages_context_mark_season_seen_before">før sesong som sett</string>
+<string name="messages_context_mark_season_seen">i sesong som sett</string>
+<string name="messages_context_mark_season_unseen">i sesong som usett</string>
+<string name="messages_context_mark_season_unseen_after">etter sesong som usett</string>
 <string name="messages_context_archived">arkivert</string>
 <string name="messages_context_unarchived">gjenvinning</string>
 <string name="messages_aired">Avvist:</string>

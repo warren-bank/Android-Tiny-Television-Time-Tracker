@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">ข้อผิดพลาดในการเชื่อมต่อกับ TMDb API. ลองอีกครั้ง.</string>
 <string name="messages_marked_seen">ทำเครื่องหมายเป็นเห็นแล้ว</string>
 <string name="messages_marked_unseen">ทำเครื่องหมายเป็นมองไม่เห็น</string>
+<string name="messages_context_mark_season">ทำเครื่องหมายตอนทั้งหมด</string>
+<string name="messages_context_mark_season_seen_before">ก่อนฤดูกาลที่เห็น</string>
+<string name="messages_context_mark_season_seen">ในฤดูกาลที่เห็น</string>
+<string name="messages_context_mark_season_unseen">ในฤดูที่เป็นสิ่งที่มองไม่เห็น</string>
+<string name="messages_context_mark_season_unseen_after">หลังจากฤดูกาลที่ไม่สามารถมองเห็นได้</string>
 <string name="messages_context_archived">เก็บถาวร</string>
 <string name="messages_context_unarchived">กู้คืน</string>
 <string name="messages_aired">เป็นประธาน:</string>

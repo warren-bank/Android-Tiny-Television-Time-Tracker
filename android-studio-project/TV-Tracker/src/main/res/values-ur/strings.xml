@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">سے منسلک Error to TMDb API. پھر کوشش کریں.</string>
 <string name="messages_marked_seen">جیسا کہ دیکھا گیا</string>
 <string name="messages_marked_unseen">غیب کی نشان دہی</string>
+<string name="messages_context_mark_season">مارک تمام اقساط</string>
+<string name="messages_context_mark_season_seen_before">موسم سے پہلے بھی دیکھا</string>
+<string name="messages_context_mark_season_seen">موسم میں دیکھا جاتا ہے</string>
+<string name="messages_context_mark_season_unseen">موسم میں بطور غیب</string>
+<string name="messages_context_mark_season_unseen_after">موسم کے بعد غیب</string>
 <string name="messages_context_archived">آرکائیو</string>
 <string name="messages_context_unarchived">برآمد</string>
 <string name="messages_aired">وائیرڈ:</string>

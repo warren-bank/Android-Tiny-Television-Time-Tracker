@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">Viga ühendumisel TMDb API. Proovi uuesti.</string>
 <string name="messages_marked_seen">tähistatud kui nähtu</string>
 <string name="messages_marked_unseen">märgistamata</string>
+<string name="messages_context_mark_season">Märgi kõik episoodid</string>
+<string name="messages_context_mark_season_seen_before">enne hooaega, kui näha</string>
+<string name="messages_context_mark_season_seen">hooajal, nagu näha</string>
+<string name="messages_context_mark_season_unseen">hooajaks kui nähtu</string>
+<string name="messages_context_mark_season_unseen_after">pärast hooaja möödumist</string>
 <string name="messages_context_archived">arhiveeritud</string>
 <string name="messages_context_unarchived">taaskasutatud</string>
 <string name="messages_aired">Eetris:</string>

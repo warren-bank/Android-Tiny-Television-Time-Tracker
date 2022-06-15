@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">Σφάλμα σύνδεσης με το TMDb API. Δοκίμασε πάλι..</string>
 <string name="messages_marked_seen">(\')</string>
 <string name="messages_marked_unseen">επισημασμένο ως μη ορατό.</string>
+<string name="messages_context_mark_season">Mark όλα τα επεισόδια</string>
+<string name="messages_context_mark_season_seen_before">πριν την εποχή, όπως φαίνεται</string>
+<string name="messages_context_mark_season_seen">την εποχή, όπως φαίνεται</string>
+<string name="messages_context_mark_season_unseen">την εποχή ως αόρατους</string>
+<string name="messages_context_mark_season_unseen_after">μετά την σεζόν ως μη.</string>
 <string name="messages_context_archived">-αρχειοθέτηση</string>
 <string name="messages_context_unarchived">ανακτητη</string>
 <string name="messages_aired">-Μαλλιά:</string>

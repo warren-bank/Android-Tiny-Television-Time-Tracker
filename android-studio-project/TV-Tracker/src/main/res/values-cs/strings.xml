@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">Chyba připojení k TMDb API. Zkuste to znovu.</string>
 <string name="messages_marked_seen">označeno jako viditelné</string>
 <string name="messages_marked_unseen">označeno jako neviditelné</string>
+<string name="messages_context_mark_season">Označit všechny epizody</string>
+<string name="messages_context_mark_season_seen_before">před začátkem sezóny</string>
+<string name="messages_context_mark_season_seen">v sezóně, jak je vidět</string>
+<string name="messages_context_mark_season_unseen">v sezóně jako neviditelné</string>
+<string name="messages_context_mark_season_unseen_after">po sezóně jako neviditelné</string>
 <string name="messages_context_archived">archivováno</string>
 <string name="messages_context_unarchived">zotavena</string>
 <string name="messages_aired">Najatý:</string>

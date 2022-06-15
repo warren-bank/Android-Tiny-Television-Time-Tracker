@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">मा जडान गर्दा त्रुटि TMDb API. फेरि प्रयास गर्नुहोस्.</string>
 <string name="messages_marked_seen">देखिएको रूपमा चिन्ह लगायो</string>
 <string name="messages_marked_unseen">अदृश्य रूपमा चिन्ह लगायो</string>
+<string name="messages_context_mark_season">सबै घटनाहरू चिन्ह लगाउनुहोस्</string>
+<string name="messages_context_mark_season_seen_before">देखा पर्ने मौसम भन्दा पहिले</string>
+<string name="messages_context_mark_season_seen">देखा पर्ने मौसममा</string>
+<string name="messages_context_mark_season_unseen">अदृश्य रूपमा मौसममा</string>
+<string name="messages_context_mark_season_unseen_after">अदृश्य रूपमा मौसम पछि</string>
 <string name="messages_context_archived">सङ्ग्रहित</string>
 <string name="messages_context_unarchived">बरामद गरिएको</string>
 <string name="messages_aired">Aired:</string>

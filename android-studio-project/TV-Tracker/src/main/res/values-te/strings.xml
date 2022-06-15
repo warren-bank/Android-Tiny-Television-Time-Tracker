@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">అనుసంధానించు దోషము TMDb API. మళ్ళీ ప్రయత్నించండి.</string>
 <string name="messages_marked_seen">చూడగా గుర్తించబడిందిName</string>
 <string name="messages_marked_unseen">కనిపించినట్లుగా గుర్తించబడినది</string>
+<string name="messages_context_mark_season">అన్ని ధారావాహికలను మార్క్</string>
+<string name="messages_context_mark_season_seen_before">కాలముందే కనిపించింది.</string>
+<string name="messages_context_mark_season_seen">చూసిన ఋతుపవనాలు</string>
+<string name="messages_context_mark_season_unseen">అలానే ఋతువులో</string>
+<string name="messages_context_mark_season_unseen_after">సీజన్ తరువాత కనబడలేదు.</string>
 <string name="messages_context_archived">ఆర్కైవ్ చేయబడింది</string>
 <string name="messages_context_unarchived">बरामद</string>
 <string name="messages_aired">ప్రసారం:</string>

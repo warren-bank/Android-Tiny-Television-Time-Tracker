@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">Napaka pri povezovanju z TMDb API. Poskusite znova..</string>
 <string name="messages_marked_seen">označen kot viden</string>
 <string name="messages_marked_unseen">označena kot nevidna</string>
+<string name="messages_context_mark_season">Označi vse epizode</string>
+<string name="messages_context_mark_season_seen_before">pred sezono videno</string>
+<string name="messages_context_mark_season_seen">v sezoni:</string>
+<string name="messages_context_mark_season_unseen">v sezoni, kot nevideno</string>
+<string name="messages_context_mark_season_unseen_after">po sezoni nevideno</string>
 <string name="messages_context_archived">arhiviran</string>
 <string name="messages_context_unarchived">izterjani</string>
 <string name="messages_aired">V paru:</string>

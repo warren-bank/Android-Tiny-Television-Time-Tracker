@@ -117,6 +117,11 @@
 <string name="messages_api_con_error">Ошибка подключения к TMDb API. Попробуйте снова.</string>
 <string name="messages_marked_seen">пометить просмотренным</string>
 <string name="messages_marked_unseen">пометить непросмотренным</string>
+<string name="messages_context_mark_season">Отметить все эпизоды</string>
+<string name="messages_context_mark_season_seen_before">до сезона, как видно</string>
+<string name="messages_context_mark_season_seen">в сезон, как видно</string>
+<string name="messages_context_mark_season_unseen">в сезон, как невиданные</string>
+<string name="messages_context_mark_season_unseen_after">после сезона как невиданные</string>
 <string name="messages_context_archived">помещено в архив</string>
 <string name="messages_context_unarchived">восстановлено из архива</string>
 <string name="messages_aired">Показана:</string>

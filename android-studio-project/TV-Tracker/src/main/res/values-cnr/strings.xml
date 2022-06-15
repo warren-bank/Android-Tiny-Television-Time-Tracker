@@ -104,6 +104,11 @@
 <string name="messages_api_con_error">Greška u povezivanju sa TMDb API. Pokušajte ponovo..</string>
 <string name="messages_marked_seen">Označeno kao viđeno.</string>
 <string name="messages_marked_unseen">Označeno kao nevidljivo</string>
+<string name="messages_context_mark_season">Obilježi sve epizode.</string>
+<string name="messages_context_mark_season_seen_before">Prije nego što je sezona viđena</string>
+<string name="messages_context_mark_season_seen">U sezoni kao što je viđena</string>
+<string name="messages_context_mark_season_unseen">U sezoni kao nevidljiva.</string>
+<string name="messages_context_mark_season_unseen_after">Nakon što je sezona neviđena</string>
 <string name="messages_context_archived">arhiviranje</string>
 <string name="messages_context_unarchived">Da.</string>
 <string name="messages_aired">Emitovana:</string>

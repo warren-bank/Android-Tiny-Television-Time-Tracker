@@ -119,6 +119,11 @@
 <string name="messages_api_con_error">Kan geen verbinding maken met TMDb API. Probeer opnieuw.</string>
 <string name="messages_marked_seen">gemarkeerd als gezien</string>
 <string name="messages_marked_unseen">gemarkeerd als niet gezien</string>
+<string name="messages_context_mark_season">Alle afleveringen markeren</string>
+<string name="messages_context_mark_season_seen_before">voor seizoen zoals gezien</string>
+<string name="messages_context_mark_season_seen">in het seizoen zoals gezien</string>
+<string name="messages_context_mark_season_unseen">in het seizoen als ongezien</string>
+<string name="messages_context_mark_season_unseen_after">na seizoen als ongezien</string>
 <string name="messages_context_archived">gearchiveerd</string>
 <string name="messages_context_unarchived">teruggehaald</string>
 <string name="messages_aired">Uitgezonden:</string>
