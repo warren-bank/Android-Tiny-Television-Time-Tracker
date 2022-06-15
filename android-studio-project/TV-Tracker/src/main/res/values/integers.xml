@@ -2,4 +2,16 @@
 <resources>
 <integer name="images_small_width_dp" >100</integer> <!-- applies to ImageView in layout: DroidShows/src/main/res/layout/row.xml        -->
 <integer name="images_medium_width_dp">200</integer> <!-- applies to ImageView in layout: DroidShows/src/main/res/layout/view_serie.xml -->
+<integer-array name="resize_icon_option_values">
+  <item>0</item>
+  <item>20</item>
+  <item>40</item>
+  <item>60</item>
+  <item>80</item>
+  <item>100</item>
+  <item>125</item>
+  <item>150</item>
+  <item>175</item>
+  <item>200</item>
+</integer-array>
 </resources>

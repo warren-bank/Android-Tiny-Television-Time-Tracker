@@ -182,6 +182,10 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
   private static final String SHOW_ICONS = "show_icons";
   public static boolean showIcons;
 
+  // Dynamically resize width of images in list?
+  private static final String RESIZE_ICONS = "resize_icons";
+  public static int resizeIconsWidthPx;
+
   // Show date of next airing episode, instead of next episode's date?
   private static final String SHOW_NEXT_AIRING = "show_next_airing";
   public static boolean showNextAiring;
@@ -281,6 +285,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
     backupVersioning       = sharedPrefs.getBoolean(BACKUP_VERSIONING_PREF_NAME, true);
     enablePullToUpdate     = sharedPrefs.getBoolean(ENABLE_PULL_TO_UPDATE_PREF_NAME, true);
     showIcons              = sharedPrefs.getBoolean(SHOW_ICONS, true);
+    resizeIconsWidthPx     = sharedPrefs.getInt(RESIZE_ICONS, 0);
     showNextAiring         = sharedPrefs.getBoolean(SHOW_NEXT_AIRING, false);
     markFromLastWatched    = sharedPrefs.getBoolean(MARK_FROM_LAST_WATCHED, false);
     includeSpecialsOption  = sharedPrefs.getBoolean(INCLUDE_SPECIALS_NAME, false);
@@ -789,6 +794,32 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
     ((CheckBox) about.findViewById(R.id.full_line_check)).setChecked(fullLineCheckOption);
     ((CheckBox) about.findViewById(R.id.switch_swipe_direction)).setChecked(switchSwipeDirection);
     ((TextView) about.findViewById(R.id.change_language)).setText(getString(R.string.dialog_change_language) +" ("+ langCode +")");
+
+    {
+      Spinner spinner = (Spinner) about.findViewById(R.id.resize_icons);
+      int[]    spinner_values = getResources().getIntArray(R.array.resize_icon_option_values);
+      String[] spinner_names  = new String[spinner_values.length];
+      int current_spinner_position = 0;
+      for (int i=0; i < spinner_values.length; i++) {
+        spinner_names[i] = (i == 0)
+          ? (getString(R.string.messages_off) + " (" + getResources().getInteger(R.integer.images_small_width_dp) + " dp)")
+          : (spinner_values[i] + " px");
+
+        if (spinner_values[i] == resizeIconsWidthPx)
+          current_spinner_position = i;
+      }
+      ArrayAdapter<String> adapter = new ArrayAdapter<>(DroidShows.this, android.R.layout.simple_spinner_dropdown_item, spinner_names);
+      spinner.setAdapter(adapter);
+      spinner.setSelection(current_spinner_position);
+      spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
+        public void onItemSelected(AdapterView<?> parent, View v, int position, long id) {
+          resizeIconsWidthPx = spinner_values[position];
+          listView.post(updateListView);
+        }
+        public void onNothingSelected(AdapterView<?> arg0) {
+        }
+      });
+    }
 
     // -----
 
@@ -1937,6 +1968,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
     ed.putBoolean(BACKUP_VERSIONING_PREF_NAME, backupVersioning);
     ed.putBoolean(ENABLE_PULL_TO_UPDATE_PREF_NAME, enablePullToUpdate);
     ed.putBoolean(SHOW_ICONS, showIcons);
+    ed.putInt(RESIZE_ICONS, resizeIconsWidthPx);
     ed.putBoolean(SHOW_NEXT_AIRING, showNextAiring);
     ed.putBoolean(MARK_FROM_LAST_WATCHED, markFromLastWatched);
     ed.putBoolean(INCLUDE_SPECIALS_NAME, includeSpecialsOption);
@@ -2277,7 +2309,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
         }
         if (holder.sle != null) {
           String sleString = serie.getUnwatchedLastEpisode();
-          if ((sleString != null) && !sleString.isEmpty()) {
+          if (!TextUtils.isEmpty(sleString)) {
             holder.sle.setText(
               sleString
                 .replace("[ne]", strLastEp)
@@ -2292,7 +2324,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
         }
         if (holder.sne != null) {
           String sneString = serie.getNextEpisode();
-          if ((nunwatched > 0) && (sneString != null) && !sneString.isEmpty()) {
+          if ((nunwatched > 0) && !TextUtils.isEmpty(sneString)) {
             if (sneString.contains("[na]")) {
               sneAired = false;
             }
@@ -2340,13 +2372,41 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
           try {
             if (!showIcons) throw new Exception("");
 
-            Bitmap icon = serie.getDIcon();
+            Bitmap icon = null;
+            if ((icon == null) && (resizeIconsWidthPx > 0)) {
+              // dynamically resize width of image
+
+              String iconPath = serie.getIcon();
+              if (!TextUtils.isEmpty(iconPath) && (resizeIconsWidthPx > getResources().getInteger(R.integer.images_small_width_dp))) {
+                // resized image is larger than default width
+
+                iconPath = iconPath.replace(
+                  getString(R.string.images_small_directory_name),
+                  getString(R.string.images_medium_directory_name)
+                );
+
+                icon = BitmapFactory.decodeFile(iconPath);
+              }
+
+              holder.icon.setAdjustViewBounds(true);
+              holder.icon.setMaxWidth(resizeIconsWidthPx);
+              holder.icon.setScaleType(ImageView.ScaleType.FIT_XY);
+            }
+            else {
+              // reset to default settings
+
+              holder.icon.setAdjustViewBounds(false);
+              holder.icon.setScaleType(ImageView.ScaleType.CENTER);
+            }
+            if (icon == null) {
+              icon = serie.getDIcon();
+            }
             if (icon != null) {
               holder.icon.setImageBitmap(icon);
             }
             else {
               String iconPath = serie.getIcon();
-              if ((iconPath != null) && !iconPath.isEmpty()) {
+              if (!TextUtils.isEmpty(iconPath)) {
                 icon = BitmapFactory.decodeFile(iconPath);
                 serie.setDIcon(icon);
                 holder.icon.setImageBitmap(icon);
@@ -2390,7 +2450,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
             }
             else {
               String iconPath = serie.getIcon();
-              if ((iconPath != null) && !iconPath.isEmpty()) {
+              if (!TextUtils.isEmpty(iconPath)) {
                 icon = BitmapFactory.decodeFile(iconPath);
                 serie.setDIcon(icon);
                 holder.icon.setImageBitmap(icon);
