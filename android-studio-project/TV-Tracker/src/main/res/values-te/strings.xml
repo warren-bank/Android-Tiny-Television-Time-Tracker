@@ -94,7 +94,6 @@
 <string name="messages_series_success">షో %s జోడించబడింది</string>
 <string name="messages_title_adding_serie">ప్రదర్శన</string>
 <string name="messages_adding_serie">గాథింగ్ షో సమాచారం ...</string>
-<string name="messages_context_mark_seasonseen">అన్ని ధారావాహికలను కనిపించు</string>
 <string name="messages_specials">జాతుల</string>
 <string name="messsages_view_ep_details">ఎపిసోడ్ వివరాలు</string>
 <string name="messsages_edit_seen_timestamp">టైమ్‌స్టాంప్ చూసిన సవరణ</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">అనుసంధానించు దోషము TMDb API. మళ్ళీ ప్రయత్నించండి.</string>
 <string name="messages_marked_seen">చూడగా గుర్తించబడిందిName</string>
 <string name="messages_marked_unseen">కనిపించినట్లుగా గుర్తించబడినది</string>
-<string name="messages_context_mark_seasonunseen">అన్ని ధారావాహికలను కనిపించినట్లుగా మార్క్ చేయుము</string>
-<string name="messages_context_mark_asseenuptothis">ఇక్కడి నుండి సాగులు కనిపిస్తాయి.</string>
 <string name="messages_context_archived">ఆర్కైవ్ చేయబడింది</string>
 <string name="messages_context_unarchived">बरामद</string>
 <string name="messages_aired">ప్రసారం:</string>

@@ -102,7 +102,6 @@
 <string name="messages_series_success">Série %s ajoutée</string>
 <string name="messages_title_adding_serie">Ajout de la série</string>
 <string name="messages_adding_serie">Récupération des informations sur la série…</string>
-<string name="messages_context_mark_seasonseen">Marquer tout les épisodes comme vus</string>
 <string name="messages_specials">Épisodes spéciaux</string>
 <string name="messsages_view_ep_details">Détail de l\'épisode</string>
 <string name="messsages_edit_seen_timestamp">Modifier l\'horodatage de visualisation</string>
@@ -113,8 +112,6 @@
 <string name="messages_api_con_error">Erreur de connexion à TMDb API. Essayez à nouveau.</string>
 <string name="messages_marked_seen">marqué comme vu</string>
 <string name="messages_marked_unseen">marqué comme non vu</string>
-<string name="messages_context_mark_seasonunseen">Marquer tout les épisodes comme non-vus</string>
-<string name="messages_context_mark_asseenuptothis">Marquer les saisons jusqu\'ici comme vues</string>
 <string name="messages_context_archived">archivé</string>
 <string name="messages_context_unarchived">sorti des archives</string>
 <string name="messages_aired">Sortie:</string>

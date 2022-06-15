@@ -94,7 +94,6 @@
 <string name="messages_series_success">Show %s added</string>
 <string name="messages_title_adding_serie">Adding show</string>
 <string name="messages_adding_serie">Gathering show information…</string>
-<string name="messages_context_mark_seasonseen">Mark all episodes as seen</string>
 <string name="messages_specials">Specials</string>
 <string name="messsages_view_ep_details">Episode details</string>
 <string name="messsages_edit_seen_timestamp">Edit seen timestamp</string>
@@ -105,8 +104,11 @@
 <string name="messages_api_con_error">Error connecting to TMDb API. Try again.</string>
 <string name="messages_marked_seen">marked as seen</string>
 <string name="messages_marked_unseen">marked as unseen</string>
-<string name="messages_context_mark_seasonunseen">Mark all episodes as unseen</string>
-<string name="messages_context_mark_asseenuptothis">Seasons up to here are seen</string>
+<string name="messages_context_mark_season">Mark all episodes</string>
+<string name="messages_context_mark_season_seen_before">before season as seen</string>
+<string name="messages_context_mark_season_seen">in season as seen</string>
+<string name="messages_context_mark_season_unseen">in season as unseen</string>
+<string name="messages_context_mark_season_unseen_after">after season as unseen</string>
 <string name="messages_context_archived">archived</string>
 <string name="messages_context_unarchived">recovered</string>
 <string name="messages_aired">Aired:</string>

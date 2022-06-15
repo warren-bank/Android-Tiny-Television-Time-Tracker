@@ -107,7 +107,6 @@
 <string name="messages_series_success">Сериал %s добавлен</string>
 <string name="messages_title_adding_serie">Сериал добавляется</string>
 <string name="messages_adding_serie">Получение информации о сериале…</string>
-<string name="messages_context_mark_seasonseen">Пометить все серии просмотренными</string>
 <string name="messages_specials">Доп. видео</string>
 <string name="messsages_view_ep_details">Показать информацию о серии</string>
 <string name="messsages_edit_seen_timestamp">Изменить дату просмотра</string>
@@ -118,8 +117,6 @@
 <string name="messages_api_con_error">Ошибка подключения к TMDb API. Попробуйте снова.</string>
 <string name="messages_marked_seen">пометить просмотренным</string>
 <string name="messages_marked_unseen">пометить непросмотренным</string>
-<string name="messages_context_mark_seasonunseen">Пометить все серии просмотренными</string>
-<string name="messages_context_mark_asseenuptothis">Все сезоны до этого пометить просмотренными</string>
 <string name="messages_context_archived">помещено в архив</string>
 <string name="messages_context_unarchived">восстановлено из архива</string>
 <string name="messages_aired">Показана:</string>

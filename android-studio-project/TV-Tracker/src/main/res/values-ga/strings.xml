@@ -94,7 +94,6 @@
 <string name="messages_series_success">Taispeáin %s curtha leis</string>
 <string name="messages_title_adding_serie">Taispeáin taispeáin</string>
 <string name="messages_adding_serie">Taispeáin an t-eolas a thaispeáint ...</string>
-<string name="messages_context_mark_seasonseen">Marcáil gach episodes mar atá le feiceáil</string>
 <string name="messages_specials">Speisialtachtaí</string>
 <string name="messsages_view_ep_details">Sonraí Eipeasóid</string>
 <string name="messsages_edit_seen_timestamp">Cuir an stampa ama in eagar</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">Earráid agus á nascadh le TMDb API. Bain triail as.</string>
 <string name="messages_marked_seen">marcáilte mar atá</string>
 <string name="messages_marked_unseen">marcáilte mar nach bhfuil siad</string>
-<string name="messages_context_mark_seasonunseen">Marcáil gach episodes mar nach bhfuil le feiceáil</string>
-<string name="messages_context_mark_asseenuptothis">Séasúir suas go dtí anseo le feiceáil</string>
 <string name="messages_context_archived">cartlainne</string>
 <string name="messages_context_unarchived">aisghafa</string>
 <string name="messages_aired">Craoladh:</string>

@@ -94,7 +94,6 @@
 <string name="messages_series_success">הצגה %s נוסף</string>
 <string name="messages_title_adding_serie">הוספת תצוגה</string>
 <string name="messages_adding_serie">פרטי הצגת מידע ...</string>
-<string name="messages_context_mark_seasonseen">\"מארק, כל הפרקים נראו כמו\"</string>
 <string name="messages_specials">מיוחדים</string>
 <string name="messsages_view_ep_details">פרק זמן</string>
 <string name="messsages_edit_seen_timestamp">עריכת חותמת זמן</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">שגיאה בחיבור ל - TMDb API. נסו שוב.</string>
 <string name="messages_marked_seen">מסומן כפי שנראה</string>
 <string name="messages_marked_unseen">מסומן כבלתי נראה</string>
-<string name="messages_context_mark_seasonunseen">לסמן את כל הפרקים כבלתי נראים.</string>
-<string name="messages_context_mark_asseenuptothis">\"סיבניי עד כאן נראים\"</string>
 <string name="messages_context_archived">נגנז</string>
 <string name="messages_context_unarchived">התאושש</string>
 <string name="messages_aired">שודר:</string>

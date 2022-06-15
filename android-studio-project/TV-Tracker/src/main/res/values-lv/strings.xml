@@ -94,7 +94,6 @@
 <string name="messages_series_success">Rādīt %s .</string>
 <string name="messages_title_adding_serie">Pievienot parādīt</string>
 <string name="messages_adding_serie">Vākt informāciju ...</string>
-<string name="messages_context_mark_seasonseen">Atzīmēt visas epizodes, kā redzams</string>
 <string name="messages_specials">Specials</string>
 <string name="messsages_view_ep_details">Epizode</string>
 <string name="messsages_edit_seen_timestamp">Rediģēt redzēto laika zīmogu</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">Kļūda, kas savieno TMDb API. Mēģiniet vēlreiz.</string>
 <string name="messages_marked_seen">iezīmēts kā redzams</string>
 <string name="messages_marked_unseen">iezīmēts kā neredzēts</string>
-<string name="messages_context_mark_seasonunseen">Atzīmēt visas epizodes kā neredzētas</string>
-<string name="messages_context_mark_asseenuptothis">Sezonas līdz šeit ir redzams</string>
 <string name="messages_context_archived">arhivēti</string>
 <string name="messages_context_unarchived">Reģenerēts</string>
 <string name="messages_aired">AR:</string>

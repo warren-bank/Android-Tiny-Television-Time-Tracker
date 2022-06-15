@@ -94,7 +94,6 @@
 <string name="messages_series_success">عرض %s تم اضافته</string>
 <string name="messages_title_adding_serie">اضافة عرض</string>
 <string name="messages_adding_serie">جاري تجميع معلومات العرض ...</string>
-<string name="messages_context_mark_seasonseen">وضع علامة على كل الحلقات كما رأيت</string>
 <string name="messages_specials">تحديد خاص</string>
 <string name="messsages_view_ep_details">تفاصيل الحلقة</string>
 <string name="messsages_edit_seen_timestamp">تحرير خاتم الوقت</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">خطأ في الاتصال الى TMDb API. حاول مرة أخرى.</string>
 <string name="messages_marked_seen">ملحوظ كما تم مشاهدته</string>
 <string name="messages_marked_unseen">تم تعليمه كغير معلم</string>
-<string name="messages_context_mark_seasonunseen">وضع علامة على كل الحلقات كغيرها</string>
-<string name="messages_context_mark_asseenuptothis">الفصول تصل إلى هنا ينظر إليها</string>
 <string name="messages_context_archived">مخزن</string>
 <string name="messages_context_unarchived">تم استعادته</string>
 <string name="messages_aired">مستوحى:</string>

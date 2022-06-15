@@ -94,7 +94,6 @@
 <string name="messages_series_success">แสดง %s ที่เพิ่ม</string>
 <string name="messages_title_adding_serie">การเพิ่มการแสดง</string>
 <string name="messages_adding_serie">กำลังรวบรวมข้อมูลแสดง ...</string>
-<string name="messages_context_mark_seasonseen">ทำเครื่องหมายทุกตอนตามที่เห็น</string>
 <string name="messages_specials">ข้อมูลจำเพาะ</string>
 <string name="messsages_view_ep_details">รายละเอียดตอนที่</string>
 <string name="messsages_edit_seen_timestamp">แก้ไขการประทับเวลาที่เห็น</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">ข้อผิดพลาดในการเชื่อมต่อกับ TMDb API. ลองอีกครั้ง.</string>
 <string name="messages_marked_seen">ทำเครื่องหมายเป็นเห็นแล้ว</string>
 <string name="messages_marked_unseen">ทำเครื่องหมายเป็นมองไม่เห็น</string>
-<string name="messages_context_mark_seasonunseen">ทำเครื่องหมายทุกตอนเป็นไม่สามารถเห็นได้</string>
-<string name="messages_context_mark_asseenuptothis">ฤดูกาลขึ้นไปที่นี่จะเห็น</string>
 <string name="messages_context_archived">เก็บถาวร</string>
 <string name="messages_context_unarchived">กู้คืน</string>
 <string name="messages_aired">เป็นประธาน:</string>

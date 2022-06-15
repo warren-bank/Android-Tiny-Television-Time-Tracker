@@ -94,7 +94,6 @@
 <string name="messages_series_success">Показати %s додано</string>
 <string name="messages_title_adding_serie">Додавання показу</string>
 <string name="messages_adding_serie">Збір інформації про показ ...</string>
-<string name="messages_context_mark_seasonseen">Позначити всі епізоди, як це показано</string>
 <string name="messages_specials">Особливі</string>
 <string name="messsages_view_ep_details">Подробиці про серію</string>
 <string name="messsages_edit_seen_timestamp">Змінити часову позначку часу</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">Помилка з \' єднання з TMDb API. Спробувати ще раз.</string>
 <string name="messages_marked_seen">Позначений як</string>
 <string name="messages_marked_unseen">Позначений як</string>
-<string name="messages_context_mark_seasonunseen">Позначити всі епізоди як небачених</string>
-<string name="messages_context_mark_asseenuptothis">Тут можна побачити пори року</string>
 <string name="messages_context_archived">архівована</string>
 <string name="messages_context_unarchived">relen</string>
 <string name="messages_aired">Ефір:</string>

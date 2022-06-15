@@ -94,7 +94,6 @@
 <string name="messages_series_success">காட்டு %s சேர்க்கப்பட்டது</string>
 <string name="messages_title_adding_serie">கூடுதலான காட்டு</string>
 <string name="messages_adding_serie">சேகரிக்கும் தகவல்களைக் காண்பித்தல்…</string>
-<string name="messages_context_mark_seasonseen">எல்லாவற்றையும் பார்க்க குறி</string>
 <string name="messages_specials">சிறப்புகள்</string>
 <string name="messsages_view_ep_details">எப்போதும் விவரங்கள்</string>
 <string name="messsages_edit_seen_timestamp">பார்க்கப்பட்ட நேரத்தைக் காட்டு</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">இணைக்கும்போது பிழை TMDb API. மீண்டும் முயற்சி.</string>
 <string name="messages_marked_seen">பார்க்கப்படாத</string>
 <string name="messages_marked_unseen">பார்க்கப்படாத</string>
-<string name="messages_context_mark_seasonunseen">அனைத்து குறியீடுகளையும் பார்க்கப்படாததால் குறி</string>
-<string name="messages_context_mark_asseenuptothis">இங்கே செல்வங்கள் காணப்படுகின்றன.</string>
 <string name="messages_context_archived">காப்பகப்படுத்தப்பட்டது</string>
 <string name="messages_context_unarchived">மீண்டும்</string>
 <string name="messages_aired">அலங்காரம்:</string>

@@ -94,7 +94,6 @@
 <string name="messages_series_success">Visa %s tillagt</string>
 <string name="messages_title_adding_serie">Lägger till program</string>
 <string name="messages_adding_serie">Samlar in information ...</string>
-<string name="messages_context_mark_seasonseen">Markera alla episoder som setts</string>
 <string name="messages_specials">Specialiteter</string>
 <string name="messsages_view_ep_details">Episod-detaljer</string>
 <string name="messsages_edit_seen_timestamp">Redigera sett tidsstämpel</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">Fel vid anslutning till TMDb API. Försök igen.</string>
 <string name="messages_marked_seen">markerad som sedd</string>
 <string name="messages_marked_unseen">markerad som ej sedd</string>
-<string name="messages_context_mark_seasonunseen">Markera alla episoder som ej sedda</string>
-<string name="messages_context_mark_asseenuptothis">Säsonger upp till här är sedda</string>
 <string name="messages_context_archived">arkiverade</string>
 <string name="messages_context_unarchived">återvunna</string>
 <string name="messages_aired">Aired:</string>

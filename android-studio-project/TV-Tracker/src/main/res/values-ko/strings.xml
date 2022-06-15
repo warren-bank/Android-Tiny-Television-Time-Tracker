@@ -94,7 +94,6 @@
 <string name="messages_series_success">쇼 %s 추가된</string>
 <string name="messages_title_adding_serie">쇼 추가하기</string>
 <string name="messages_adding_serie">정보를 수집하는 중 ...</string>
-<string name="messages_context_mark_seasonseen">모든 에피소드를 볼 수 있는 것으로 표시</string>
 <string name="messages_specials">전문가</string>
 <string name="messsages_view_ep_details">에피소드 세부사항</string>
 <string name="messsages_edit_seen_timestamp">편집된 시간소인 편집</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">연결 오류 TMDb API. 다시 시도하기.</string>
 <string name="messages_marked_seen">표시된 것으로 표시</string>
 <string name="messages_marked_unseen">보이지 않는 것으로 표시된</string>
-<string name="messages_context_mark_seasonunseen">모든 에피소드를 볼 수 없는 것으로 표시</string>
-<string name="messages_context_mark_asseenuptothis">여기까지의 계절은</string>
 <string name="messages_context_archived">아카이브된</string>
 <string name="messages_context_unarchived">회복된</string>
 <string name="messages_aired">원하는:</string>

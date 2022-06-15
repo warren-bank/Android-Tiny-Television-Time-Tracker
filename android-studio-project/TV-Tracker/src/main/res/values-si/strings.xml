@@ -94,7 +94,6 @@
 <string name="messages_series_success">පෙන්වන්න %s එකතු කරන්න</string>
 <string name="messages_title_adding_serie">සංදර්ශන පෙන්වීම</string>
 <string name="messages_adding_serie">ප්රදර්ශන තොරතුරු රැස් කිරීම…</string>
-<string name="messages_context_mark_seasonseen">සියළුම කොටස් දැකිය හැකි ලෙස සලකුණු කරන්න</string>
 <string name="messages_specials">විශේෂාංග</string>
 <string name="messsages_view_ep_details">කොටස විස්තර කරන්න.</string>
 <string name="messsages_edit_seen_timestamp">සංස්කාරකය දුඹුරු කාලරාමු</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">සම්බන්ධ කරමින් දෝෂයක් TMDb API. නැවත උත්සාහ කරන්න.</string>
 <string name="messages_marked_seen">ලෙස සලකුණු කර ඇත.</string>
 <string name="messages_marked_unseen">නොපෙනෙන ලෙස සලකුණු කරන්න</string>
-<string name="messages_context_mark_seasonunseen">සියලු කොටස් නොපෙනෙන ලෙස සලකුණු කරන්න</string>
-<string name="messages_context_mark_asseenuptothis">මෙහි දක්වා ඇති සෙස්සන් දැක දැකත්</string>
 <string name="messages_context_archived">සංරක්ෂණය</string>
 <string name="messages_context_unarchived">बरामद</string>
 <string name="messages_aired">විකාශනය:</string>

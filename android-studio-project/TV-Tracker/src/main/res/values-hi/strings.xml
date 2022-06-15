@@ -94,7 +94,6 @@
 <string name="messages_series_success">दिखाएँ %s जोड़ा</string>
 <string name="messages_title_adding_serie">शो जोड़ना</string>
 <string name="messages_adding_serie">संग्रहण सूचना दिखाएँ ...</string>
-<string name="messages_context_mark_seasonseen">सभी एपिसोडों को देखे</string>
 <string name="messages_specials">स्पेसल्स</string>
 <string name="messsages_view_ep_details">प्रकरण विवरण</string>
 <string name="messsages_edit_seen_timestamp">देखे टाइमस्टैंप संपादित करें</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">इससे कनेक्ट करने में त्रुटि TMDb API. फिर कोशिश करें.</string>
 <string name="messages_marked_seen">को देखा जैसा</string>
 <string name="messages_marked_unseen">अदृष्ट</string>
-<string name="messages_context_mark_seasonunseen">सभी घटनाओं को अदृश्य के रूप में चिह्नित</string>
-<string name="messages_context_mark_asseenuptothis">यहां के मौसम को देखा जाता है ।</string>
 <string name="messages_context_archived">अभिलेखित</string>
 <string name="messages_context_unarchived">बरामद</string>
 <string name="messages_aired">प्रसारित:</string>

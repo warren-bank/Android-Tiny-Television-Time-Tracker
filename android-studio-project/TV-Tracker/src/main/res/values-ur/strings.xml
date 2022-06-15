@@ -94,7 +94,6 @@
 <string name="messages_series_success">شو %s شامل</string>
 <string name="messages_title_adding_serie">ایڈڈنگ شو</string>
 <string name="messages_adding_serie">اجتماع شو کی معلومات ...</string>
-<string name="messages_context_mark_seasonseen">مارک تمام اقساط جیسا کہ دیکھا</string>
 <string name="messages_specials">وشیشتائیں</string>
 <string name="messsages_view_ep_details">قسط کی تفصیلات</string>
 <string name="messsages_edit_seen_timestamp">تدوین کا ٹائم ٹکٹ دیکھا</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">سے منسلک Error to TMDb API. پھر کوشش کریں.</string>
 <string name="messages_marked_seen">جیسا کہ دیکھا گیا</string>
 <string name="messages_marked_unseen">غیب کی نشان دہی</string>
-<string name="messages_context_mark_seasonunseen">مارک تمام اقساط بطور غیب</string>
-<string name="messages_context_mark_asseenuptothis">یہاں تک کے موسم دیکھا جاتا ہے</string>
 <string name="messages_context_archived">آرکائیو</string>
 <string name="messages_context_unarchived">برآمد</string>
 <string name="messages_aired">وائیرڈ:</string>

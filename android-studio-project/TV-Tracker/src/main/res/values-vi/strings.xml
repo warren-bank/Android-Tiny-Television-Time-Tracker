@@ -94,7 +94,6 @@
 <string name="messages_series_success">Hiển thị %s thêm</string>
 <string name="messages_title_adding_serie">Thêm chương trình</string>
 <string name="messages_adding_serie">Ðang thu thập thông tin ...</string>
-<string name="messages_context_mark_seasonseen">Đánh dấu mọi tập như đã thấy</string>
 <string name="messages_specials">Đặc tả</string>
 <string name="messsages_view_ep_details">Chi tiết Tập</string>
 <string name="messsages_edit_seen_timestamp">Sửa nhãn thời gian đã xem</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">Lỗi khi kết nối vào TMDb API. Thử lại.</string>
 <string name="messages_marked_seen">được đánh dấu là</string>
 <string name="messages_marked_unseen">đã được đánh dấu</string>
-<string name="messages_context_mark_seasonunseen">Đánh dấu tất cả các tập như không</string>
-<string name="messages_context_mark_asseenuptothis">Các mùa đến đây được nhìn thấy</string>
 <string name="messages_context_archived">lưu trư ̃</string>
 <string name="messages_context_unarchived">đã phục hồi</string>
 <string name="messages_aired">Đã phát:</string>

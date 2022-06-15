@@ -94,7 +94,6 @@
 <string name="messages_series_success">Näita %s Lisatud</string>
 <string name="messages_title_adding_serie">Lisa näitamine</string>
 <string name="messages_adding_serie">Teabe kogumine ...</string>
-<string name="messages_context_mark_seasonseen">Kõigi episoodide märkimine</string>
 <string name="messages_specials">Eripakkumised</string>
 <string name="messsages_view_ep_details">Episoodide üksikasjad</string>
 <string name="messsages_edit_seen_timestamp">Redigeerimine vaata ajatemplit</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">Viga ühendumisel TMDb API. Proovi uuesti.</string>
 <string name="messages_marked_seen">tähistatud kui nähtu</string>
 <string name="messages_marked_unseen">märgistamata</string>
-<string name="messages_context_mark_seasonunseen">Kõigi episoodide märkimine</string>
-<string name="messages_context_mark_asseenuptothis">Hooaeg kuni siin on näha</string>
 <string name="messages_context_archived">arhiveeritud</string>
 <string name="messages_context_unarchived">taaskasutatud</string>
 <string name="messages_aired">Eetris:</string>

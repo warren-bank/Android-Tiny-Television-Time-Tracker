@@ -94,7 +94,6 @@
 <string name="messages_series_success">Arată %s adăugat</string>
 <string name="messages_title_adding_serie">Adăugarea de spectacol</string>
 <string name="messages_adding_serie">Adunând informaţii despre spectacol ...</string>
-<string name="messages_context_mark_seasonseen">Marcați toate episoadele după cum se vede</string>
 <string name="messages_specials">Specialități</string>
 <string name="messsages_view_ep_details">Detalii despre episod</string>
 <string name="messsages_edit_seen_timestamp">Editați timestamp văzut</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">Eroare la conectarea la TMDb API. Încercați din nou.</string>
 <string name="messages_marked_seen">marcat ca văzut</string>
 <string name="messages_marked_unseen">marcat ca nevăzut</string>
-<string name="messages_context_mark_seasonunseen">Marchează toate episoadele ca fiind nevăzute</string>
-<string name="messages_context_mark_asseenuptothis">Anotimpurile până aici sunt văzute</string>
 <string name="messages_context_archived">arhivat</string>
 <string name="messages_context_unarchived">recuperate</string>
 <string name="messages_aired">Difuzat:</string>

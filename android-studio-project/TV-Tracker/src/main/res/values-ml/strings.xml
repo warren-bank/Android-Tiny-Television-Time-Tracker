@@ -94,7 +94,6 @@
 <string name="messages_series_success">കാണിക്കുക %s കൂട്ടിച്ചേരുക</string>
 <string name="messages_title_adding_serie">പ്രദര്ശനം</string>
 <string name="messages_adding_serie">Gathering show information ...</string>
-<string name="messages_context_mark_seasonseen">എല്ലാ അക്ഷരങ്ങളെയും കാണുന്നതുപോലെ അടയാളപ്പെടുത്തുക</string>
 <string name="messages_specials">സ്പെകിയല്</string>
 <string name="messsages_view_ep_details">എപ്പിസോഡിന്റെ വിവരങ്ങള്</string>
 <string name="messsages_edit_seen_timestamp">കാണുന്ന സമയസ്റ്റാമ്പ് ചിട്ടപ്പെടുത്തുക</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">ബന്ധിപ്പിക്കുന്നതില് പിശക് TMDb API. വീണ്ടും ശ്രമിക്കുക.</string>
 <string name="messages_marked_seen">കാണുന്നതുപോലെ അടയാളപ്പെടുത്തിയിരിക്കുന്നു</string>
 <string name="messages_marked_unseen">കാണപ്പെടുന്നതുപോലെ അടയാളപ്പെടുത്തിയിരിക്കുന്നു</string>
-<string name="messages_context_mark_seasonunseen">എല്ലാ അക്ഷരങ്ങളെയും കാണുന്നതുപോലെ അടയാളപ്പെടുത്തുക</string>
-<string name="messages_context_mark_asseenuptothis">ഇവിടെ സീസണുകൾ കാണപ്പെടുന്നു.</string>
 <string name="messages_context_archived">\@ option: check</string>
 <string name="messages_context_unarchived">बरामद</string>
 <string name="messages_aired">Aired:</string>

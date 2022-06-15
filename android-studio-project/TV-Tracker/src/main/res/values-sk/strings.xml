@@ -94,7 +94,6 @@
 <string name="messages_series_success">Zobraziť %s pridaný</string>
 <string name="messages_title_adding_serie">Pridáva sa zobrazenie</string>
 <string name="messages_adding_serie">Získavanie informácií o zobrazovaní ...</string>
-<string name="messages_context_mark_seasonseen">Označiť všetky epizódy ako vidno</string>
 <string name="messages_specials">Špeciály</string>
 <string name="messsages_view_ep_details">Podrobné informácie o</string>
 <string name="messsages_edit_seen_timestamp">Upraviť zobrazenie časovej značky</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">Nastala chyba pri pripájaní k TMDb API. Skúsiť znova.</string>
 <string name="messages_marked_seen">označené ako viditeľné</string>
 <string name="messages_marked_unseen">označené ako neviditeľné</string>
-<string name="messages_context_mark_seasonunseen">Označiť všetky epizódy ako neviditeľné</string>
-<string name="messages_context_mark_asseenuptothis">Ročné obdobia sú viditeľné.</string>
 <string name="messages_context_archived">archivovaný</string>
 <string name="messages_context_unarchived">obnovený</string>
 <string name="messages_aired">Vysielaný:</string>

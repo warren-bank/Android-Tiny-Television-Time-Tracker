@@ -94,7 +94,6 @@
 <string name="messages_series_success">Pokaži %s dodano</string>
 <string name="messages_title_adding_serie">Dodajanje prikazne</string>
 <string name="messages_adding_serie">Zbiranje informacij o prikazi ...</string>
-<string name="messages_context_mark_seasonseen">Označi vse epizode:</string>
 <string name="messages_specials">Specialke</string>
 <string name="messsages_view_ep_details">Podrobnosti epizdela</string>
 <string name="messsages_edit_seen_timestamp">Urejanje vidnega časovnega žiga</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">Napaka pri povezovanju z TMDb API. Poskusite znova..</string>
 <string name="messages_marked_seen">označen kot viden</string>
 <string name="messages_marked_unseen">označena kot nevidna</string>
-<string name="messages_context_mark_seasonunseen">Označi vse epizode kot nevideno</string>
-<string name="messages_context_mark_asseenuptothis">Letni časi so tu.</string>
 <string name="messages_context_archived">arhiviran</string>
 <string name="messages_context_unarchived">izterjani</string>
 <string name="messages_aired">V paru:</string>

@@ -94,7 +94,6 @@
 <string name="messages_series_success">Покажи! %s добави:</string>
 <string name="messages_title_adding_serie">Добавяне на шоу</string>
 <string name="messages_adding_serie">Събиране на информация за показване ...</string>
-<string name="messages_context_mark_seasonseen">Отбележи всички епизоди, както се вижда</string>
 <string name="messages_specials">Специални.</string>
 <string name="messsages_view_ep_details">Подробности за епизод</string>
 <string name="messsages_edit_seen_timestamp">Редактиране на видян времеви индикатор</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">Грешка при свързване с TMDb API. Опитай пак..</string>
 <string name="messages_marked_seen">маркиран като видим</string>
 <string name="messages_marked_unseen">маркирани като ненаблюдавани</string>
-<string name="messages_context_mark_seasonunseen">Отбележат всички епизоди като невиждани</string>
-<string name="messages_context_mark_asseenuptothis">Сезоните се виждат тук.</string>
 <string name="messages_context_archived">архивиран</string>
 <string name="messages_context_unarchived">Възстановено</string>
 <string name="messages_aired">-Да.:</string>

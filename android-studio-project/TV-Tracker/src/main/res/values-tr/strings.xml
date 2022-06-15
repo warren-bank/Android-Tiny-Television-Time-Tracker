@@ -94,7 +94,6 @@
 <string name="messages_series_success">Göster %s eklendi</string>
 <string name="messages_title_adding_serie">Gösterme ekleme</string>
 <string name="messages_adding_serie">Show bilgileri toplanıyor ...</string>
-<string name="messages_context_mark_seasonseen">Tüm bölümleri görüldüğü gibi işaretleyin</string>
 <string name="messages_specials">Özel Bilgiler</string>
 <string name="messsages_view_ep_details">Bölüm ayrıntıları</string>
 <string name="messsages_edit_seen_timestamp">Görülme zaman damgasını düzenle</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">Bağlantı kurulurken hata oluştu TMDb API. Yeniden deneyin.</string>
 <string name="messages_marked_seen">görüldüğü gibi işaretlendi</string>
 <string name="messages_marked_unseen">görünmeyen</string>
-<string name="messages_context_mark_seasonunseen">Tüm bölümleri görünmeyen olarak işaretle</string>
-<string name="messages_context_mark_asseenuptothis">Burada mevsimler görülmeye başladı.</string>
 <string name="messages_context_archived">arşivlendi</string>
 <string name="messages_context_unarchived">kurtarıldı</string>
 <string name="messages_aired">AIred:</string>

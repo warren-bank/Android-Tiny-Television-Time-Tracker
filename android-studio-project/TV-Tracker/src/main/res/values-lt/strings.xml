@@ -94,7 +94,6 @@
 <string name="messages_series_success">Rodyti %s pridedama</string>
 <string name="messages_title_adding_serie">Pridėti šou</string>
 <string name="messages_adding_serie">Rinkti informaciją ...</string>
-<string name="messages_context_mark_seasonseen">Žymėti visus epizodus, kaip matyti</string>
 <string name="messages_specials">Specialūs reikalavimai</string>
 <string name="messsages_view_ep_details">Epizodo duomenys</string>
 <string name="messsages_edit_seen_timestamp">Keisti laiko žymę</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">Klaida, jungianti TMDb API. Bandykite dar.</string>
 <string name="messages_marked_seen">pažymėti kaip matyti</string>
 <string name="messages_marked_unseen">pažymėta kaip nematė</string>
-<string name="messages_context_mark_seasonunseen">Žymėti visus epizodus, kaip nematė</string>
-<string name="messages_context_mark_asseenuptothis">Sezonus iki čia yra vertinamas</string>
 <string name="messages_context_archived">Archyvas</string>
 <string name="messages_context_unarchived">Atsigavo</string>
 <string name="messages_aired">Poruota:</string>

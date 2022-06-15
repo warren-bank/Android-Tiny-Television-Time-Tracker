@@ -94,7 +94,6 @@
 <string name="messages_series_success">Uri %s miżjuda</string>
 <string name="messages_title_adding_serie">Żieda turi</string>
 <string name="messages_adding_serie">Ġbir juru informazzjoni ...</string>
-<string name="messages_context_mark_seasonseen">Immarka l-episodji kollha kif jidhru</string>
 <string name="messages_specials">Tas-</string>
 <string name="messsages_view_ep_details">Dettalji tal-episodju</string>
 <string name="messsages_edit_seen_timestamp">Editja raw timebold</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">Żball konnessjoni ma \' TMDb API. Erġa \' pprova.</string>
 <string name="messages_marked_seen">immarkat kif jidher</string>
 <string name="messages_marked_unseen">immarkat bħala mhux osservat</string>
-<string name="messages_context_mark_seasonunseen">Immarka l-episodji kollha bħala mhux osservati</string>
-<string name="messages_context_mark_asseenuptothis">L-istaġuni sa hawn jidhru</string>
 <string name="messages_context_archived">arkivjati</string>
 <string name="messages_context_unarchived">irkuprati</string>
 <string name="messages_aired">Imxandra:</string>

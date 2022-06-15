@@ -94,7 +94,6 @@
 <string name="messages_series_success">Pokaži %s Dodano je</string>
 <string name="messages_title_adding_serie">Dodavanje emisije</string>
 <string name="messages_adding_serie">Prikupljanje pokazuje informacije ...</string>
-<string name="messages_context_mark_seasonseen">Označi sve epizode kao što je vidjeno</string>
 <string name="messages_specials">Specijaliteti</string>
 <string name="messsages_view_ep_details">Detalji epizode</string>
 <string name="messsages_edit_seen_timestamp">Uređivanje viđene vremenske oznake</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">Greška u povezivanju sa TMDb API. Pokušaj ponovo..</string>
 <string name="messages_marked_seen">Označeno kao viđena</string>
 <string name="messages_marked_unseen">označeno kao nevidljivo</string>
-<string name="messages_context_mark_seasonunseen">Označi sve epizode nevidljivim</string>
-<string name="messages_context_mark_asseenuptothis">Godišnja doba do ovdje su viđena.</string>
 <string name="messages_context_archived">arhivirano</string>
 <string name="messages_context_unarchived">obnovljen</string>
 <string name="messages_aired">Emitirano:</string>

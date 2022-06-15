@@ -94,7 +94,6 @@
 <string name="messages_series_success">Pokaż %s dodane</string>
 <string name="messages_title_adding_serie">Dodawanie pokazu</string>
 <string name="messages_adding_serie">Zbieranie informacji o pokazie ...</string>
-<string name="messages_context_mark_seasonseen">Oznacz wszystkie odcinki jako widoczne</string>
 <string name="messages_specials">Specjały</string>
 <string name="messsages_view_ep_details">Szczegóły epizodu</string>
 <string name="messsages_edit_seen_timestamp">Edytuj widziany znacznik czasu</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">Błąd podczas nawiązywania połączenia z TMDb API. Spróbuj ponownie.</string>
 <string name="messages_marked_seen">oznaczone jako widoczne</string>
 <string name="messages_marked_unseen">oznaczone jako niewidoczne</string>
-<string name="messages_context_mark_seasonunseen">Oznacz wszystkie odcinki jako niewidoczne</string>
-<string name="messages_context_mark_asseenuptothis">Pory roku do tej pory są widoczne</string>
 <string name="messages_context_archived">zarchiwizowane</string>
 <string name="messages_context_unarchived">odzyskane</string>
 <string name="messages_aired">Aired:</string>

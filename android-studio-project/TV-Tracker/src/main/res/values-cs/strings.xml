@@ -94,7 +94,6 @@
 <string name="messages_series_success">Zobrazit %s přidáno</string>
 <string name="messages_title_adding_serie">Přidání zobrazení</string>
 <string name="messages_adding_serie">Shromažďování informací o zobrazení ...</string>
-<string name="messages_context_mark_seasonseen">Označit všechny epizody jako viditelné</string>
 <string name="messages_specials">Speciální</string>
 <string name="messsages_view_ep_details">Detaily epizody</string>
 <string name="messsages_edit_seen_timestamp">Upravit časové razítko</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">Chyba připojení k TMDb API. Zkuste to znovu.</string>
 <string name="messages_marked_seen">označeno jako viditelné</string>
 <string name="messages_marked_unseen">označeno jako neviditelné</string>
-<string name="messages_context_mark_seasonunseen">Označit všechny epizody jako neviditelné</string>
-<string name="messages_context_mark_asseenuptothis">Sezóny jsou zde vidět</string>
 <string name="messages_context_archived">archivováno</string>
 <string name="messages_context_unarchived">zotavena</string>
 <string name="messages_aired">Najatý:</string>

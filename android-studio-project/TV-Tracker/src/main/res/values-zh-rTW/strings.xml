@@ -94,7 +94,6 @@
 <string name="messages_series_success">顯示 %s 已新增</string>
 <string name="messages_title_adding_serie">新增顯示</string>
 <string name="messages_adding_serie">正在收集顯示資訊...</string>
-<string name="messages_context_mark_seasonseen">將所有事件標示為可見</string>
 <string name="messages_specials">專業</string>
 <string name="messsages_view_ep_details">Episode 詳細資料</string>
 <string name="messsages_edit_seen_timestamp">編輯查看時間戳記</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">連接時發生錯誤 TMDb API. 再試一次.</string>
 <string name="messages_marked_seen">標示為已看到</string>
 <string name="messages_marked_unseen">標示為未看到</string>
-<string name="messages_context_mark_seasonunseen">將所有事件標示為未看到</string>
-<string name="messages_context_mark_asseenuptothis">到這裡的季節是</string>
 <string name="messages_context_archived">保存</string>
 <string name="messages_context_unarchived">恢復</string>
 <string name="messages_aired">艾雷德:</string>

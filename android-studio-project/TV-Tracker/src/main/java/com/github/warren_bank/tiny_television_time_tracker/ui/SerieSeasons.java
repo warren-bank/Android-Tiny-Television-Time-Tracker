@@ -34,8 +34,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class SerieSeasons extends ListActivity
-{
+public class SerieSeasons extends ListActivity {
   private static boolean isUpdating = false;
 
   private DbGateway db;
@@ -47,9 +46,10 @@ public class SerieSeasons extends ListActivity
   private ListView listView;
 
   // Context Menus
-  private static final int ALLEPSEEN_CONTEXT   = Menu.FIRST;
-  private static final int ALLUPTOTHIS_CONTEXT = ALLEPSEEN_CONTEXT   + 1;
-  private static final int ALLEPUNSEEN_CONTEXT = ALLUPTOTHIS_CONTEXT + 1;
+  private static final int CONTEXT_MARK_BEFORE_SEASON_SEEN  = Menu.FIRST;
+  private static final int CONTEXT_MARK_SEASON_SEEN         = CONTEXT_MARK_BEFORE_SEASON_SEEN + 1;
+  private static final int CONTEXT_MARK_SEASON_UNSEEN       = CONTEXT_MARK_SEASON_SEEN        + 1;
+  private static final int CONTEXT_MARK_AFTER_SEASON_UNSEEN = CONTEXT_MARK_SEASON_UNSEEN      + 1;
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
@@ -88,31 +88,47 @@ public class SerieSeasons extends ListActivity
   /* context menu */
   public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
     super.onCreateContextMenu(menu, v, menuInfo);
+
+    /*
     AdapterContextMenuInfo info = (AdapterContextMenuInfo) menuInfo;
     SeasonRow season            = seasonsAdapter.getItem(info.position);
+    */
 
-    menu.add(0, ALLEPSEEN_CONTEXT,   0, getString(R.string.messages_context_mark_seasonseen));
-    menu.add(0, ALLUPTOTHIS_CONTEXT, 0, getString(R.string.messages_context_mark_asseenuptothis));
-    menu.add(0, ALLEPUNSEEN_CONTEXT, 0, getString(R.string.messages_context_mark_seasonunseen));
-    menu.setHeaderTitle(season.name);
+    String title = getString(R.string.messages_context_mark_season) + "…";
+    menu.setHeaderTitle(title);
+
+    menu.add(0, CONTEXT_MARK_BEFORE_SEASON_SEEN,  0, getString(R.string.messages_context_mark_season_seen_before));
+    menu.add(0, CONTEXT_MARK_SEASON_SEEN,         0, getString(R.string.messages_context_mark_season_seen));
+    menu.add(0, CONTEXT_MARK_SEASON_UNSEEN,       0, getString(R.string.messages_context_mark_season_unseen));
+    menu.add(0, CONTEXT_MARK_AFTER_SEASON_UNSEEN, 0, getString(R.string.messages_context_mark_season_unseen_after));
   }
 
   public boolean onContextItemSelected(MenuItem item) {
     AdapterContextMenuInfo info = (AdapterContextMenuInfo) item.getMenuInfo();
-    SeasonRow season            = seasonsAdapter.getItem(info.position);
+    SeasonRow season;
 
     switch (item.getItemId()) {
-      case ALLEPSEEN_CONTEXT :
+      case CONTEXT_MARK_BEFORE_SEASON_SEEN :
+        for (int i = 0; i < info.position; i++) {
+          season = seasonsAdapter.getItem(i);
+          db.updateUnwatchedSeason(serieId, season.seasonNumber);
+        }
+        getInfo();
+        return true;
+      case CONTEXT_MARK_SEASON_SEEN :
+        season = seasonsAdapter.getItem(info.position);
         db.updateUnwatchedSeason(serieId, season.seasonNumber);
         getInfo();
         return true;
-      case ALLEPUNSEEN_CONTEXT :
+      case CONTEXT_MARK_SEASON_UNSEEN :
+        season = seasonsAdapter.getItem(info.position);
         db.updateWatchedSeason(serieId, season.seasonNumber);
         getInfo();
         return true;
-      case ALLUPTOTHIS_CONTEXT :
-        for (int i = 1; i <= season.seasonNumber; i++) {
-          db.updateUnwatchedSeason(serieId, i);
+      case CONTEXT_MARK_AFTER_SEASON_UNSEEN :
+        for (int i = (info.position + 1); i < seasonsAdapter.getCount(); i++) {
+          season = seasonsAdapter.getItem(i);
+          db.updateWatchedSeason(serieId, season.seasonNumber);
         }
         getInfo();
         return true;

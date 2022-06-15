@@ -94,7 +94,6 @@
 <string name="messages_series_success">Näytä %s Lisätty</string>
 <string name="messages_title_adding_serie">Adding show</string>
 <string name="messages_adding_serie">Näytötietojen keruu ...</string>
-<string name="messages_context_mark_seasonseen">Merkitse kaikki jaksot</string>
 <string name="messages_specials">Specials</string>
 <string name="messsages_view_ep_details">Episode-tiedot</string>
 <string name="messsages_edit_seen_timestamp">Muokkaa aikaleima</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">Virhe yhteyden muodostuksessa TMDb API. Yritä uudelleen.</string>
 <string name="messages_marked_seen">Merkitty näkyväksi</string>
 <string name="messages_marked_unseen">Merkitty näkymättömäksi</string>
-<string name="messages_context_mark_seasonunseen">Merkitse kaikki jaksot näkymättömiksi</string>
-<string name="messages_context_mark_asseenuptothis">Seasonit ovat täällä.</string>
 <string name="messages_context_archived">Arkistoitu</string>
 <string name="messages_context_unarchived">Hyödynnettävä</string>
 <string name="messages_aired">Hiuksinen:</string>

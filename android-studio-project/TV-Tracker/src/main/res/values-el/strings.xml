@@ -94,7 +94,6 @@
 <string name="messages_series_success">Εμφάνιση: %s \' προσθήκη</string>
 <string name="messages_title_adding_serie">Προσθήκη show</string>
 <string name="messages_adding_serie">Συλλογή πληροφοριών ...</string>
-<string name="messages_context_mark_seasonseen">Σήμανση όλων των επεισοδίων, όπως</string>
 <string name="messages_specials">\' Ειδικές</string>
 <string name="messsages_view_ep_details">Επεισόδια</string>
 <string name="messsages_edit_seen_timestamp">Τροποποίηση αποτυπώματος χρόνου</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">Σφάλμα σύνδεσης με το TMDb API. Δοκίμασε πάλι..</string>
 <string name="messages_marked_seen">(\')</string>
 <string name="messages_marked_unseen">επισημασμένο ως μη ορατό.</string>
-<string name="messages_context_mark_seasonunseen">Σήμανση όλων των επεισοδίων ως unseen</string>
-<string name="messages_context_mark_asseenuptothis">Οι εποχές έρχονται εδώ.</string>
 <string name="messages_context_archived">-αρχειοθέτηση</string>
 <string name="messages_context_unarchived">ανακτητη</string>
 <string name="messages_aired">-Μαλλιά:</string>

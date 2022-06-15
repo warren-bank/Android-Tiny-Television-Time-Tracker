@@ -94,7 +94,6 @@
 <string name="messages_series_success">Dangos %s ychwanegwyd</string>
 <string name="messages_title_adding_serie">Ychwanegu sioe</string>
 <string name="messages_adding_serie">Casglu gwybodaeth:</string>
-<string name="messages_context_mark_seasonseen">Marcio pob episodau fel a welwyd</string>
 <string name="messages_specials">Arbennigion</string>
 <string name="messsages_view_ep_details">Manylion y bennod</string>
 <string name="messsages_edit_seen_timestamp">Golygu stamp amser</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">Gwall wrth gysylltu TMDb API. Ceisiwch eto.</string>
 <string name="messages_marked_seen">wedi ei farcio fel</string>
 <string name="messages_marked_unseen">wedi\'i farcio fel heb ei weld</string>
-<string name="messages_context_mark_seasonunseen">Marcio pob episodau fel heb ei weld</string>
-<string name="messages_context_mark_asseenuptothis">Mae\'r tymhorau hyd yma yn cael eu gweld</string>
 <string name="messages_context_archived">wedi ei archifo</string>
 <string name="messages_context_unarchived">adadferwyd</string>
 <string name="messages_aired">Gwyntyllwyd:</string>

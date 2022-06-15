@@ -94,7 +94,6 @@
 <string name="messages_series_success">দেখাও %s যোগ করা হয়েছে</string>
 <string name="messages_title_adding_serie">অ্যাডডিং প্রদর্শন</string>
 <string name="messages_adding_serie">শো তথ্য সংগ্রহ…</string>
-<string name="messages_context_mark_seasonseen">সব পর্বকে দেখার মত চিহ্নিত করো</string>
 <string name="messages_specials">স্পেসিয়াল</string>
 <string name="messsages_view_ep_details">এপিসোড বিবরণ</string>
 <string name="messsages_edit_seen_timestamp">সময়-স্ট্যাম্প সম্পাদনা</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">সংযোগ করতে সমস্যা হয়েছে TMDb API. পুনরায় চেষ্টা করুন.</string>
 <string name="messages_marked_seen">চিহ্নিত হিসাবে চিহ্নিত করা হয়েছে</string>
 <string name="messages_marked_unseen">অদেখা হিসাবে চিহ্নিত</string>
-<string name="messages_context_mark_seasonunseen">সব পর্বকে অদেখা হিসাবে চিহ্নিত করুন</string>
-<string name="messages_context_mark_asseenuptothis">এখানে সিজম দেখা যায়.</string>
 <string name="messages_context_archived">আর্কাইভকৃত</string>
 <string name="messages_context_unarchived">উদ্ধার করা হয়েছে</string>
 <string name="messages_aired">প্রচারিত:</string>

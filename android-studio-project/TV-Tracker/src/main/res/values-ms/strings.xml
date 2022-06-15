@@ -94,7 +94,6 @@
 <string name="messages_series_success">Papar %s ditambah</string>
 <string name="messages_title_adding_serie">Menambah paparan</string>
 <string name="messages_adding_serie">Mengumpulkan maklumat ...</string>
-<string name="messages_context_mark_seasonseen">Tandakan semua episod yang dilihat</string>
 <string name="messages_specials">Spesifikasi</string>
 <string name="messsages_view_ep_details">Perincian episod</string>
 <string name="messsages_edit_seen_timestamp">Sunting setem masa</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">Ralat menyambung ke TMDb API. Cuba lagi.</string>
 <string name="messages_marked_seen">ditanda sebagai dilihat</string>
 <string name="messages_marked_unseen">Ditanda sebagai ghaib</string>
-<string name="messages_context_mark_seasonunseen">Tandakan semua episod sebagai ghaib</string>
-<string name="messages_context_mark_asseenuptothis">Musim sehingga di sini dilihat.</string>
 <string name="messages_context_archived">Diarkib</string>
 <string name="messages_context_unarchived">Dipulihkan</string>
 <string name="messages_aired">Aired:</string>

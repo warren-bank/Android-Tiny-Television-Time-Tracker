@@ -94,7 +94,6 @@
 <string name="messages_series_success">Vis %s lagt til</string>
 <string name="messages_title_adding_serie">Legger til show</string>
 <string name="messages_adding_serie">Samler vis informasjon ...</string>
-<string name="messages_context_mark_seasonseen">Merk alle episoder som sett</string>
 <string name="messages_specials">Spesialer</string>
 <string name="messsages_view_ep_details">Episode detaljer</string>
 <string name="messsages_edit_seen_timestamp">Rediger sett tidsstempel</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">Feil ved tilkobling til TMDb API. Prøv igjen.</string>
 <string name="messages_marked_seen">merket som sett</string>
 <string name="messages_marked_unseen">merket som usett</string>
-<string name="messages_context_mark_seasonunseen">Merk alle episoder som usett</string>
-<string name="messages_context_mark_asseenuptothis">Sesong opp til her blir sett</string>
 <string name="messages_context_archived">arkivert</string>
 <string name="messages_context_unarchived">gjenvinning</string>
 <string name="messages_aired">Avvist:</string>

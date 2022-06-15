@@ -109,7 +109,6 @@
 <string name="messages_series_success">Die Serie %s wurde hinzugefügt</string>
 <string name="messages_title_adding_serie">Serie hinzufügen</string>
 <string name="messages_adding_serie">Die Serieinformation werden heruntergeladen…</string>
-<string name="messages_context_mark_seasonseen">Alle Folgen als gesehen markieren</string>
 <string name="messages_specials">Besondere Folgen</string>
 <string name="messsages_view_ep_details">Details der Folge anzeigen</string>
 <string name="messsages_edit_seen_timestamp">Anschau-Zeitpunkt ändern</string>
@@ -120,8 +119,6 @@
 <string name="messages_api_con_error">Verbindung zu TMDb API nicht möglich. Versuche es erneut.</string>
 <string name="messages_marked_seen">als gesehen markiert</string>
 <string name="messages_marked_unseen">als ungesehen markiert</string>
-<string name="messages_context_mark_seasonunseen">Alle Folgen als ungesehen markieren</string>
-<string name="messages_context_mark_asseenuptothis">Alle Staffeln bis hier als gesehen markieren</string>
 <string name="messages_context_archived">archiviert</string>
 <string name="messages_context_unarchived">aus dem Archiv entfernt</string>
 <string name="messages_aired">ausgestrahlt:</string>

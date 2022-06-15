@@ -94,7 +94,6 @@
 <string name="messages_series_success">Tampilkan %s $ditambahkan</string>
 <string name="messages_title_adding_serie">Menambahkan acara</string>
 <string name="messages_adding_serie">Mengumpulkan informasi acara ...</string>
-<string name="messages_context_mark_seasonseen">Tandai semua episode seperti yang terlihat</string>
 <string name="messages_specials">Spesial</string>
 <string name="messsages_view_ep_details">Rincian episode</string>
 <string name="messsages_edit_seen_timestamp">Sunting timestamp dilihat</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">Kesalahan dalam menghubungkan ke TMDb API. Coba lagi.</string>
 <string name="messages_marked_seen">Ditandai sebagai terlihat</string>
 <string name="messages_marked_unseen">ditandai sebagai tak terlihat</string>
-<string name="messages_context_mark_seasonunseen">Tandai semua episode sebagai tak terlihat</string>
-<string name="messages_context_mark_asseenuptothis">Musim sampai di sini terlihat</string>
 <string name="messages_context_archived">diarsipkan</string>
 <string name="messages_context_unarchived">Pulihkan</string>
 <string name="messages_aired">Ditayangkan:</string>

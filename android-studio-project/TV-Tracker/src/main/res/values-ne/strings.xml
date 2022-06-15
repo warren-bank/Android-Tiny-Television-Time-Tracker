@@ -94,7 +94,6 @@
 <string name="messages_series_success">देखाउनुहोस् %s थपिएको</string>
 <string name="messages_title_adding_serie">प्रदर्शन थप्दै</string>
 <string name="messages_adding_serie">प्रदान जानकारी देखाउँदछ…</string>
-<string name="messages_context_mark_seasonseen">सबै घटनाहरू देखा पर्ने रूपमा चिन्ह लगाउनुहोस्</string>
 <string name="messages_specials">विशेषताहरू</string>
 <string name="messsages_view_ep_details">एपिसोड विवरण</string>
 <string name="messsages_edit_seen_timestamp">देखा पर्ने टाइमस्ट्याम्प सम्पादन गर्नुहोस्</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">मा जडान गर्दा त्रुटि TMDb API. फेरि प्रयास गर्नुहोस्.</string>
 <string name="messages_marked_seen">देखिएको रूपमा चिन्ह लगायो</string>
 <string name="messages_marked_unseen">अदृश्य रूपमा चिन्ह लगायो</string>
-<string name="messages_context_mark_seasonunseen">सबै घटनाहरू अदृश्य रूपमा चिन्ह लगाउनुहोस्</string>
-<string name="messages_context_mark_asseenuptothis">यहाँ सम्म सिप हरु देखा पर्छन</string>
 <string name="messages_context_archived">सङ्ग्रहित</string>
 <string name="messages_context_unarchived">बरामद गरिएको</string>
 <string name="messages_aired">Aired:</string>

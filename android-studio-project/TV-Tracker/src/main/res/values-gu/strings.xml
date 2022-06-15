@@ -94,7 +94,6 @@
 <string name="messages_series_success">બતાવો %s ઉમેરાયેલ</string>
 <string name="messages_title_adding_serie">શબ્દ ઉમેરી રહ્યા છીએ</string>
 <string name="messages_adding_serie">એકત્રીકરણ બતાવો માહિતી…</string>
-<string name="messages_context_mark_seasonseen">બધા ભાગો ને જોવા માટે ચિહ્નિત કરો</string>
 <string name="messages_specials">સ્પેશિયલ</string>
 <string name="messsages_view_ep_details">અઠવાડિયાનો વિગતો</string>
 <string name="messsages_edit_seen_timestamp">જોયેલ ટાઇમસ્ટેમ્પમાં ફેરફાર કરો</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">જોડાઇ રહ્યા હોય ત્યારે ભૂલ TMDb API. ફરીથી પ્રયત્ન કરો.</string>
 <string name="messages_marked_seen">જોયેલ તરીકે ચિહ્નિત થયેલ છે</string>
 <string name="messages_marked_unseen">જોયેલ તરીકે ચિહ્નિત થયેલ છે</string>
-<string name="messages_context_mark_seasonunseen">બધા ભાગો અસ્તિત્વમાં ચિહ્નિત કરો</string>
-<string name="messages_context_mark_asseenuptothis">અહીં જોવા મળે છે તે જોવા મળે છે</string>
 <string name="messages_context_archived">અનામત રાખેલું</string>
 <string name="messages_context_unarchived">बरामद થયેલ</string>
 <string name="messages_aired">પ્રસારિત:</string>

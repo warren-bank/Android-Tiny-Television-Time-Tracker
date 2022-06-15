@@ -94,7 +94,6 @@
 <string name="messages_series_success">ショー %s 追加された</string>
 <string name="messages_title_adding_serie">表示の追加</string>
 <string name="messages_adding_serie">情報を収集しています ...</string>
-<string name="messages_context_mark_seasonseen">すべてのエピソードにマークを付ける</string>
 <string name="messages_specials">特殊文字</string>
 <string name="messsages_view_ep_details">エピソードの詳細</string>
 <string name="messsages_edit_seen_timestamp">表示タイム・スタンプ</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">接続中のエラー TMDb API. 再試行.</string>
 <string name="messages_marked_seen">見られるという</string>
 <string name="messages_marked_unseen">目に見えない</string>
-<string name="messages_context_mark_seasonunseen">すべてのエピソードに未確認のマークを付ける</string>
-<string name="messages_context_mark_asseenuptothis">ここまでの季節が見られます</string>
 <string name="messages_context_archived">アーカイブ済み</string>
 <string name="messages_context_unarchived">回収</string>
 <string name="messages_aired">アエド:</string>

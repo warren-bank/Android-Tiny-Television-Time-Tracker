@@ -94,7 +94,6 @@
 <string name="messages_series_success">Megjelenítés %s Hozzáadott</string>
 <string name="messages_title_adding_serie">Show hozzáadása</string>
 <string name="messages_adding_serie">A show információk összegyűjtése ...</string>
-<string name="messages_context_mark_seasonseen">Jelölje be az összes részt,</string>
 <string name="messages_specials">Specialok</string>
 <string name="messsages_view_ep_details">Fordította:</string>
 <string name="messsages_edit_seen_timestamp">Meglátott időpecsét szerkesztése</string>
@@ -105,8 +104,6 @@
 <string name="messages_api_con_error">Hiba a csatlakozáskor TMDb API. Próbáld újra..</string>
 <string name="messages_marked_seen">Megjelöltek szerint</string>
 <string name="messages_marked_unseen">Mintha láthatatlan lett volna</string>
-<string name="messages_context_mark_seasonunseen">Jelölje be az összes részt láthatatlanul</string>
-<string name="messages_context_mark_asseenuptothis">A Seasons itt látható.</string>
 <string name="messages_context_archived">Archivált</string>
 <string name="messages_context_unarchived">Visszanyert</string>
 <string name="messages_aired">Fáradt:</string>
