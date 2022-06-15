@@ -64,6 +64,7 @@
 <string name="dialog_full_line_check">Gunakan seluruh baris untuk menandai episode</string>
 <string name="dialog_switch_swipe_direction">Geser kanan-ke-kiri untuk kembali</string>
 <string name="dialog_show_icons">Tampilkan gambar dalam daftar</string>
+<string name="dialog_resize_icons">Ubah lebar gambar secara dinamis dalam daftar</string>
 <string name="dialog_show_next_airing">Tampilkan tanggal penayangan episode berikutnya, bukan tanggal episode berikutnya</string>
 <string name="dialog_mark_from_last_watched">Tandai episode berikutnya mulai dari yang paling baru tonton</string>
 <string name="dialog_help">&#187; Jangan lupa untuk memutakhirkan acara secara teratur\n&#187; Item-item tekan panjang untuk lebih banyak opsi\n&#187; Geser kiri-ke-kanan untuk kembali\n\nDalam Menampilkan Ikhtisar:\n&#187; Tarik ke bawah daftar untuk memutakhirkan menunjukkan\n&#187; Ketuk poster untuk info episode berikutnya\n&#187; Poster tap ganda untuk info acara\n&#187; Poster pers panjang untuk sumber daya eksternal (ke * [url] s secara langsung, atau daftar)\n&#187; Menggesek kanan-ke-kiri ke tanda berikutnya seperti yang terlihat\n\nDalam Menampilkan Detail:\n&#187; Tap poster untuk tampilan layar penuh\n&#187; Klik layar penuh gambar poster untuk seni penggemar\n&#187; Panjang tekan poster layar penuh untuk membuka di aplikasi eksternal\n\nRincian Acara/Episode:\n&#187; Tap IMDb rating untuk melihat dalam IMDb\n&#187; Tekan tanggal untuk menambah kalender</string>
@@ -111,6 +112,7 @@
 <string name="messages_aired">Ditayangkan:</string>
 <string name="messages_at">Pada pukul</string>
 <string name="messages_of">Of</string>
+<string name="messages_off">off</string>
 <string name="messages_on">pada</string>
 <string name="messages_daily">Harian</string>
 <string name="messages_ep">Episode</string>

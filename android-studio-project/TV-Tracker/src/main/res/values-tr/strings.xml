@@ -64,6 +64,7 @@
 <string name="dialog_full_line_check">Bölümü işaretlemek için tüm satırı kullan</string>
 <string name="dialog_switch_swipe_direction">Geri dönmek için sağdan sola doğru kaydırın</string>
 <string name="dialog_show_icons">Listedeki resimleri göster</string>
+<string name="dialog_resize_icons">Listedeki görüntülerin genişliğini dinamik olarak yeniden boyutlandır</string>
 <string name="dialog_show_next_airing">Bir sonraki yayınlanma tarihini göster, gelecek bölümün tarihi yerine.</string>
 <string name="dialog_mark_from_last_watched">Sonraki bölüm en son izlenenizden başlayarak</string>
 <string name="dialog_help">&#187; Programları düzenli olarak güncellemeyi unutmayın.\n&#187; Daha fazla seçenek için uzun basın öğeleri\n&#187; Geriye gitmek için soldan sağa doğru kaydırın\n\nGösterilerde Genel Bakış:\n&#187; Programları güncellemek için listeyi aşağı çek\n&#187; Sonraki bölüm bilgileri için musluk posteri\n&#187; Bilgi göstermek için çift musluk posteri\n&#187; Dış kaynak için uzun basın afişi (* [ url] doğrudan ya da liste))\n&#187; Görüldüğü gibi bir sonraki olarak işaretlemek için sağa sola kaydır\n\nAyrıntıları Göster içinde:\n&#187; Tam ekran görünümü için tap posteri\n&#187; Fan sanatı için tam ekran poster resmi tıklatın\n&#187; Dış uygulamada açmak için uzun basın tam ekran posteri\n\nBölüm/Bölüm Ayrıntıları:\n&#187; Step IMDb görüntülemek için değerleme IMDb\n&#187; Takvime eklemek için randevu tarihi</string>
@@ -111,6 +112,7 @@
 <string name="messages_aired">AIred:</string>
 <string name="messages_at">-</string>
 <string name="messages_of">/</string>
+<string name="messages_off">kapalı</string>
 <string name="messages_on">-</string>
 <string name="messages_daily">Günlük</string>
 <string name="messages_ep">Bölüm</string>

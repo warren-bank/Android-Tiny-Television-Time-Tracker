@@ -64,6 +64,7 @@
 <string name="dialog_full_line_check">මුළු ලංකාවටම කොටු කොටු කොටු කරන්න</string>
 <string name="dialog_switch_swipe_direction">ආපසු යාමට දකුණට වමට ස්වයිප් කරන්න</string>
 <string name="dialog_show_icons">ලැයිස්තුවේ පින්තූර පෙන්වන්න</string>
+<string name="dialog_resize_icons">ලැයිස්තුවේ ඇති පිංතූර වල ඩයිනමිකව නැවත ප්රමාණය</string>
 <string name="dialog_show_next_airing">මීළඟ ගුවන් ගත කිරීමේ දිනය පෙන්වන්න, ඊලඟ කොටස වෙනුවට</string>
 <string name="dialog_mark_from_last_watched">ලඟදි බලපු බලපු මාර්ක් ඊලග කොටස</string>
 <string name="dialog_help">&#187; නිතර නිතර පෙන්වන්නත් අමතක කරන්න එපා.\n&#187; වැඩි විකල්ප සඳහා දිගු-මාධ්ය අයිතමයන්\n&#187; ආපසු යාමට දකුණට ස්වයිප් කරන්න\n\nදළ විශ්ලේෂණය පෙන්වයි:\n&#187; පෙන්වීම සඳහා පහත ලැයිස්තුගත කරන්න\n&#187; ඊලඟ කොටසේ තොරතුරු සඳහා ටැප් පෝස්ටරය\n&#187; පෙන්වන තොරතුරු සඳහා ඩබල් ටැප් පෝස්ටරය\n&#187; බාහිර සම්පත් සඳහා දිගු-මාධ්ය පෝස්ටරය (to * [url] s සෘජු, හෝ ලැයිස්තුව)\n&#187; Swipe right-to-left to mark next as seen\n\nවිස්තර පෙන්වන්න:\n&#187; සම්පූර්ණ තිර දසුන සඳහා ටැප් පෝස්ටරය\n&#187; ෆෑන් කලාව සඳහා සම්පූර්ණ තිරයේ පෝස්ටර් පින්තූරය ක්ලික් කරන්න\n&#187; බාහිර ප් රදේශවල විවෘත කිරීමට දිගු-මාධ්ය පූර්ණ-තිර පෝස්ටරය\n\nපෙන්වන්න/කොටස විස්තර කරන්න:\n&#187; IMDB හි බැලීමට IMDB ශ්රේණිගත කිරීම තට්ටු කරන්න\n&#187; දිනදර්ශනයට එක් කිරීමට ටැප් දිනය</string>
@@ -111,6 +112,7 @@
 <string name="messages_aired">විකාශනය:</string>
 <string name="messages_at">හිදී</string>
 <string name="messages_of">වල</string>
+<string name="messages_off">ඉවත් කරන්න</string>
 <string name="messages_on">මත</string>
 <string name="messages_daily">දිනමිණ</string>
 <string name="messages_ep">කොටස</string>

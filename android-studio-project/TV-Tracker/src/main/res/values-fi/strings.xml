@@ -64,6 +64,7 @@
 <string name="dialog_full_line_check">Käytä koko rivin merkkiin asti</string>
 <string name="dialog_switch_swipe_direction">Pyyhi oikealta vasemmalle.</string>
 <string name="dialog_show_icons">Näytä kuvia luettelossa</string>
+<string name="dialog_resize_icons">Dynamerkkien kuvien leveys luettelossa</string>
 <string name="dialog_show_next_airing">Seuraavan jakson aloituspäivä seuraavan jakson päivämäärän sijaan</string>
 <string name="dialog_mark_from_last_watched">Mark seuraava jakso alkoi viimeisimmästä katselusta.</string>
 <string name="dialog_help">&#187; Älä unohda päivittää ohjelmia säännöllisesti\n&#187; Pitkät-painikkeet-lisää vaihtoehtoja\n&#187; -Pyyhi vasemmalta oikealle.\n\nTässä kentässä näkyy:\n&#187; Poista luettelo päivityksistä\n&#187; Seuraavan jakson tiedot Tap-julisteesta\n&#187; Tupla-hanajuliste\n&#187; Ulkoisen resurssin Long-Press -juliste (* [url] s suoraan tai luettelo)\n&#187; Pyyhi oikealta vasemmalle, niin kuin nähdään.\n\nNäytä tiedot:\n&#187; Tap-julisteiden näyttö\n&#187; Klikkaa laajakuvajulistekuvaa fanitetaidetta varten\n&#187; Pitkä-lehtikuvajuliste avoinna ulkoisessa sovelluksessa\n\nNäytä/Episodi-tiedot:\n&#187; Tap IMDb Kelpuutus IMDb\n&#187; Kalenterin aloituspäivä</string>
@@ -111,6 +112,7 @@
 <string name="messages_aired">Hiuksinen:</string>
 <string name="messages_at">Kello</string>
 <string name="messages_of">,</string>
+<string name="messages_off">Pois</string>
 <string name="messages_on">On</string>
 <string name="messages_daily">Daily</string>
 <string name="messages_ep">Episodi</string>

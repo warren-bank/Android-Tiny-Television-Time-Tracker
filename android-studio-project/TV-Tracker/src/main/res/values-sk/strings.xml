@@ -64,6 +64,7 @@
 <string name="dialog_full_line_check">Použiť celú linku na označenie epizóde</string>
 <string name="dialog_switch_swipe_direction">Otočiť doprava na prednú časť vrátiť</string>
 <string name="dialog_show_icons">Zobraziť obrázky v zozname</string>
+<string name="dialog_resize_icons">Dynamická zmena veľkosti obrázkov v zozname</string>
 <string name="dialog_show_next_airing">Zobraziť dátum ďalšieho vetrania epizóda, miesto ďalšej epizóda dátum</string>
 <string name="dialog_mark_from_last_watched">Označiť ďalšiu epizóde začínajúc od naposledy sledovanej</string>
 <string name="dialog_help">&#187; Nezabudnite, že aktualizácia sa pravidelne zobrazuje\n&#187; Dlhé tlačové položky pre viac volieb\n&#187; Otočiť doľava doprava, aby ste sa vrátili späť\n\nV náhľade-prehľad:\n&#187; Roletového zoznamu na aktualizáciu ukazuje\n&#187; Ťuknite na položku plagát pre ďalšiu epizóde\n&#187; Dvojitým ťuknutím na plagát\n&#187; Long-press plagát pre externý zdroj (do * [url] s priamo, alebo zoznam)\n&#187; Potiahnutím práv prednaľavo, aby ste ju videli, ako je vidieť\n\nPri zobrazení podrobností:\n&#187; Ťuknite na položku plagát pre zobrazenie na celú obrazovku\n&#187; Kliknite na celú obrazovku obrázok plagátu pre fanúšikov\n&#187; Long-press full-screen plagát k otvoreniu v externej aplikácii\n\nV Zobraziť/epizóde podrobnosti:\n&#187; Ťuknite IMDb hodnotenie na zobrazenie v IMDb\n&#187; Ťuknutím na dátum pridania do kalendára</string>
@@ -111,6 +112,7 @@
 <string name="messages_aired">Vysielaný:</string>
 <string name="messages_at">na</string>
 <string name="messages_of">z</string>
+<string name="messages_off">vypnutý</string>
 <string name="messages_on">zapnuté</string>
 <string name="messages_daily">Denne</string>
 <string name="messages_ep">Epizóda</string>

@@ -64,6 +64,7 @@
 <string name="dialog_full_line_check">使用整條線標記集</string>
 <string name="dialog_switch_swipe_direction">從右到左滑動以返回</string>
 <string name="dialog_show_icons">在清單中顯示影像</string>
+<string name="dialog_resize_icons">動態調整清單中影像的寬度</string>
 <string name="dialog_show_next_airing">顯示下一個播出日期的日期，而不是下一集的日期</string>
 <string name="dialog_mark_from_last_watched">標示下一集從最近觀看開始</string>
 <string name="dialog_help">&#187; 別忘了定期更新\n&#187; 長按的項目，以取得其他選項\n&#187; 從左到右向左滑動\n\n在顯示概觀中:\n&#187; 下拉清單以更新顯示畫面\n&#187; 點選「下一集資訊」的海報\n&#187; 顯示資訊的雙點選海報\n&#187; 外部資源的長按海報（to *[url] s 直接或清單）)\n&#187; 從右至左向左滑動，按看到\n\n在顯示明細中:\n&#187; 針對全螢幕視圖點選海報\n&#187; 按一下風扇藝術的全螢幕海報影像\n&#187; 在外部應用程式中開啟的長按全螢幕海報\n\n顯示/Episode 詳細資料:\n&#187; 點選 IMDb 在中檢視的評等 IMDb\n&#187; 點選日期以新增至行事曆</string>
@@ -111,6 +112,7 @@
 <string name="messages_aired">艾雷德:</string>
 <string name="messages_at">於</string>
 <string name="messages_of">的</string>
+<string name="messages_off">外</string>
 <string name="messages_on">上</string>
 <string name="messages_daily">每日</string>
 <string name="messages_ep">埃皮索德</string>

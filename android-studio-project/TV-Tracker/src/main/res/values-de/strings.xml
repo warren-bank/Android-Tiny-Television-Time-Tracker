@@ -64,6 +64,7 @@
 <string name="dialog_full_line_check">Tippen auf ganze Zeile markiert Folge als gesehen</string>
 <string name="dialog_switch_swipe_direction">Von rechts nach links wischen, um zurück zu gehen</string>
 <string name="dialog_show_icons">Bilder in Liste anzeigen</string>
+<string name="dialog_resize_icons">Dynamische Größe der Größe der Bilder in der Liste</string>
 <string name="dialog_show_next_airing">Ausstrahlungstermin statt nächster Folge anzeigen</string>
 <string name="dialog_mark_from_last_watched">Nächste Folge markieren, beginnend mit der zuletzt angesehenen</string>
 <string name="dialog_help">&#187; Vergiss nicht, die Serien regelmäßig zu aktualisieren
@@ -126,6 +127,7 @@
 <string name="messages_aired">ausgestrahlt:</string>
 <string name="messages_at">am</string>
 <string name="messages_of">von</string>
+<string name="messages_off">Aus</string>
 <string name="messages_on">am</string>
 <string name="messages_daily">Täglich</string>
 <string name="messages_ep">Folge</string>

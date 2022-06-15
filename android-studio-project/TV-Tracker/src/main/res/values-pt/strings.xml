@@ -64,6 +64,7 @@
 <string name="dialog_full_line_check">Use linha inteira para marcar episódio</string>
 <string name="dialog_switch_swipe_direction">Swipe direto-esquerda para voltar</string>
 <string name="dialog_show_icons">Mostrar imagens em lista</string>
+<string name="dialog_resize_icons">Redimensionar dinamicamente a largura de imagens em lista</string>
 <string name="dialog_show_next_airing">Show data do próximo episódio do airing, em vez da data do próximo episódio</string>
 <string name="dialog_mark_from_last_watched">Marque próximo episódio começando a partir do mais recentemente assistido</string>
 <string name="dialog_help">&#187; Não se esqueça de atualizar shows regularmente\n&#187; Itens de longa imprensa para mais opções\n&#187; Swipe esquerda para a direita voltar\n\nEm Mostra Visão Geral:\n&#187; Pull down list para atualizar os shows\n&#187; Toque em cartaz para o próximo episódio info\n&#187; Poster de torneira dupla para show info\n&#187; Poster de longa prensa para recurso externo (para * [url] s diretamente, ou lista)\n&#187; Swipe direto-esquerda para marcar próximo como visto\n\nEm Detalhes Mostrar:\n&#187; Poster de torneira para visualização em tela cheia\n&#187; Clique em imagem de pôster em tela cheia para a arte de fãs\n&#187; Poster de tela cheia de longa imprensa para abrir em app externo\n\nEm Detalhes Show / Episódio:\n&#187; Toque IMDb classificação para visualizar em IMDb\n&#187; Data da torneira para adicionar ao calendário</string>
@@ -111,6 +112,7 @@
 <string name="messages_aired">Exibido:</string>
 <string name="messages_at">em</string>
 <string name="messages_of">de</string>
+<string name="messages_off">desligado</string>
 <string name="messages_on">em</string>
 <string name="messages_daily">Diariamente</string>
 <string name="messages_ep">Episódio</string>

@@ -64,6 +64,7 @@
 <string name="dialog_full_line_check">Usa intera linea per contrassegnare un episodio</string>
 <string name="dialog_switch_swipe_direction">Scorri da destra a sinistra per tornare indietro</string>
 <string name="dialog_show_icons">Mostra immagini in elenco</string>
+<string name="dialog_resize_icons">Larghezza di ridimensimento dinamicamente delle immagini in elenco</string>
 <string name="dialog_show_next_airing">Mostra data del prossimo ep. trasmesso invece che del prossimo da vedere</string>
 <string name="dialog_mark_from_last_watched">Segna prossimo ep. a partire dall\'ultimo visto</string>
 <string name="dialog_help">&#187; Non dimenticarti di aggiornare le serie regolarmente
@@ -125,6 +126,7 @@
 <string name="messages_aired">Trasmesso:</string>
 <string name="messages_at">alle</string>
 <string name="messages_of">di</string>
+<string name="messages_off">off</string>
 <string name="messages_on">il</string>
 <string name="messages_daily">Giornaliero</string>
 <string name="messages_ep">Ep.</string>

@@ -64,6 +64,7 @@
 <string name="dialog_full_line_check">Utiliser la ligne entière pour marquer l\'épisode</string>
 <string name="dialog_switch_swipe_direction">Glissez vers la gauche pour revenir en arrière</string>
 <string name="dialog_show_icons">Afficher les images dans la liste</string>
+<string name="dialog_resize_icons">Redimensiez dynamiquement la largeur des images dans la liste</string>
 <string name="dialog_show_next_airing">Afficher la date du prochain épisode de diffusion, au lieu de la date de l\'épisode suivant</string>
 <string name="dialog_mark_from_last_watched">Marquer l\'épisode suivant à partir de la dernière observation</string>
 <string name="dialog_help">&#187; N\'oubliez pas de mettre à jour régulièrement les spectacles\n&#187; Articles de presse longue pour plus d\'options\n&#187; Glissez de gauche à droite pour revenir en arrière\n\nDans Présentation des spectacles:\n&#187; Liste déroulante pour mettre à jour les spectacles\n&#187; Touchez l\'affiche pour les prochaines infos sur\n&#187; Affiche double tap pour afficher les informations\n&#187; Affiche de la presse longue pour la ressource externe (à * [url] s directement, ou liste)\n&#187; Glissez de droite à gauche pour marquer la page suivante\n\nDans Afficher les détails:\n&#187; Touchez l\'affiche pour la vue plein écran\n&#187; Cliquez sur l\'image d\'affichage plein écran pour l\'art du ventilateur\n&#187; Affiche à l\'écran complet pour ouvrir dans une application externe\n\nEn détail/Détails de l\'épisode:\n&#187; Touchez IMDb notation à afficher dans IMDb\n&#187; Touchez la date à ajouter au calendrier</string>
@@ -111,6 +112,7 @@
 <string name="messages_aired">Diffusé:</string>
 <string name="messages_at">à</string>
 <string name="messages_of">de</string>
+<string name="messages_off">off</string>
 <string name="messages_on">sur</string>
 <string name="messages_daily">Quotidien</string>
 <string name="messages_ep">Épisode</string>

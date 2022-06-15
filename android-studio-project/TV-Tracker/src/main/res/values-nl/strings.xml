@@ -64,6 +64,7 @@
 <string name="dialog_full_line_check">Hele regel gebruiken voor afvinken</string>
 <string name="dialog_switch_swipe_direction">Veegrichting voor terug omdraaien</string>
 <string name="dialog_show_icons">Afbeeldingen in lijst tonen</string>
+<string name="dialog_resize_icons">Breedte van afbeeldingen dynamisch wijzigen in lijst</string>
 <string name="dialog_show_next_airing">Eerstvolgende uitzending tonen i.p.v. datum volgende aflevering</string>
 <string name="dialog_mark_from_last_watched">Aflevering markeren beginnend bij meest recent bekeken</string>
 <string name="dialog_help">&#187; Werk regelmatig de series bij
@@ -126,6 +127,7 @@
 <string name="messages_aired">Uitgezonden:</string>
 <string name="messages_at">om</string>
 <string name="messages_of">van</string>
+<string name="messages_off">uit</string>
 <string name="messages_on">op</string>
 <string name="messages_daily">Dagelijks</string>
 <string name="messages_ep"></string>

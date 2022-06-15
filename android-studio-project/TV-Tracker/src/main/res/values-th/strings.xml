@@ -64,6 +64,7 @@
 <string name="dialog_full_line_check">ใช้บรรทัดทั้งหมดเพื่อทำเครื่องหมายตอน</string>
 <string name="dialog_switch_swipe_direction">ปัดจากขวาไปซ้ายเพื่อกลับไปที่</string>
 <string name="dialog_show_icons">แสดงอิมเมจในรายการ</string>
+<string name="dialog_resize_icons">ปรับขนาดความกว้างของรูปภาพแบบไดนามิกในรายการ</string>
 <string name="dialog_show_next_airing">แสดงวันที่ของตอนออกอากาศถัดไปแทนวันที่ของตอนต่อไป ...</string>
 <string name="dialog_mark_from_last_watched">มาร์กในตอนถัดไปเริ่มจากการเฝ้าสังเกตครั้งล่าสุด</string>
 <string name="dialog_help">&#187; อย่าลืมอัพเดตแสดงอย่างสม่ำเสมอ\n&#187; ไอเท็มที่มีการกดยาวสำหรับอ็อพชันเพิ่มเติม\n&#187; ปัดจากซ้ายไปขวาเพื่อกลับไป -\n\nในการแสดงภาพรวม:\n&#187; ดึงรายการเพื่ออัพเดตรายการ\n&#187; แท็บโปสเตอร์สำหรับข้อมูลตอนถัดไป\n&#187; โปสเตอร์ double tap เพื่อแสดงข้อมูล\n&#187; โปสเตอร์ค้างไว้นานสำหรับรีซอร์สภายนอก (ไปที่ *[url]s โดยตรงหรือรายการ)\n&#187; ปัดจากขวาไปซ้ายเพื่อทำเครื่องหมายถัดจาก seen\n\nในรายละเอียดที่แสดง:\n&#187; แตะโปสเตอร์สำหรับมุมมองแบบเต็มหน้าจอ\n&#187; คลิกรูปภาพโปสเตอร์แบบเต็มจอสำหรับภาพอาร์ต\n&#187; โปสเตอร์ขนาดเต็มจอแบบเต็มเพื่อเปิดในแอ็พภายนอก\n\nใน Show/Episode Details:\n&#187; แตะ IMDb การจัดอันดับเพื่อดูใน IMDb\n&#187; วันที่แตะเพื่อเพิ่มลงในปฏิทิน</string>
@@ -111,6 +112,7 @@
 <string name="messages_aired">เป็นประธาน:</string>
 <string name="messages_at">ที่</string>
 <string name="messages_of">ของ</string>
+<string name="messages_off">ปิด</string>
 <string name="messages_on">บน</string>
 <string name="messages_daily">รายวัน</string>
 <string name="messages_ep">ตอนที่แล้ว</string>

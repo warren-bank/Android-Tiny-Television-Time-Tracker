@@ -64,6 +64,7 @@
 <string name="dialog_full_line_check">Använd hela linjen för att markera avsnitt</string>
 <string name="dialog_switch_swipe_direction">Svep åt höger-till-vänster för att gå tillbaka</string>
 <string name="dialog_show_icons">Visa bilder i lista</string>
+<string name="dialog_resize_icons">Dynamisk storleksändring av bilder i listan</string>
 <string name="dialog_show_next_airing">Visa datum för nästa flygningsepisod, i stället för nästa episod</string>
 <string name="dialog_mark_from_last_watched">Markera nästa avsnitt som börjar från den senaste bevakningen</string>
 <string name="dialog_help">&#187; Glöm inte att uppdatera visar regelbundet\n&#187; Långa-artiklar för fler alternativ\n&#187; Svep vänster-till-höger för att gå tillbaka\n\nVisa översikt:\n&#187; Ta fram listan för att uppdatera program\n&#187; Knacka på affisch för nästa episod\n&#187; Dubbelknacka om du vill visa information\n&#187; Lång-press-affisch för extern resurs (till * [ webbadress ] s direkt, eller lista)\n&#187; Svep höger-till-vänster för att markera nästa som har setts\n\nVisa detaljer:\n&#187; Knacka-affisch för helskärmsvy\n&#187; Klicka på fullskärmsaffischbild för fläktkonst\n&#187; Lång-tryck på helskärmsaffisch för att öppna i extern app\n\nIn show / Episode-detaljer:\n&#187; Tap IMDb behörighet att visa i IMDb\n&#187; Knacka datum för att lägga till i kalendern</string>
@@ -111,6 +112,7 @@
 <string name="messages_aired">Aired:</string>
 <string name="messages_at">vid</string>
 <string name="messages_of">av</string>
+<string name="messages_off">av</string>
 <string name="messages_on">den</string>
 <string name="messages_daily">Varje dag</string>
 <string name="messages_ep">Episod</string>

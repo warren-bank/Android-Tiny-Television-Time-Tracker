@@ -64,6 +64,7 @@
 <string name="dialog_full_line_check">Bain úsáid as líne ar fad a mharcáil episode</string>
 <string name="dialog_switch_swipe_direction">Swipe ceart-go-fágtha chun dul ar ais</string>
 <string name="dialog_show_icons">Taispeáin íomhánna sa liosta</string>
+<string name="dialog_resize_icons">Leithead:% 1:% 1</string>
 <string name="dialog_show_next_airing">Taispeáin dáta an chéad eileode eping eile, in ionad an chéad dáta eile is gaire</string>
 <string name="dialog_mark_from_last_watched">Marcáil an chéad eileoige eile ag tosú ó na huachtar is déanaí</string>
 <string name="dialog_help">&#187; Ná déan dearmad a thaispeáint chun go dtaispeánfar go rialta\n&#187; Fad-brúigh míreanna le haghaidh roghanna níos mó\n&#187; Swipe fhág-le-ceart chun dul ar ais\n\nAg Súil Leis:\n&#187; Brúigh síos liosta chun an leagan amach a nuashonrú\n&#187; Téip poster le haghaidh an chéad teirde is déanaí\n&#187; Pobaltóir dúbailte le haghaidh an t-eolas\n&#187; Fada-brúigh pster le haghaidh acmhainní seachtracha (go * [url] s go díreach, nó liosta)\n&#187; Cwipe ceart-ar-fágtha chun marc eile mar atá le feiceáil\n\n&amp; Taispeáin Sonraí:\n&#187; Téip poster le haghaidh amharc lánscáileáin\n&#187; Cliceáil an íomhá phóstaer lánscáileáin le haghaidh eagla\n&#187; Fad-brúigh póstaer lánscáileáin a oscailt i app seachtrach\n\n&amp; Taispeáin/Episode Sonraí:\n&#187; Tap IMDb rátáil chun amharc ar IMDb\n&#187; Dáta comhaid le cur leis an féilire</string>
@@ -111,6 +112,7 @@
 <string name="messages_aired">Craoladh:</string>
 <string name="messages_at">ag</string>
 <string name="messages_of">de</string>
+<string name="messages_off">\@ info</string>
 <string name="messages_on">ar</string>
 <string name="messages_daily">Laethúil</string>
 <string name="messages_ep">Eachtra</string>

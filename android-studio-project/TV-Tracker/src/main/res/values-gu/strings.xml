@@ -64,6 +64,7 @@
 <string name="dialog_full_line_check">સમગ્ર લીટી ને ચિહ્નિત કરવા માટે વાપરો</string>
 <string name="dialog_switch_swipe_direction">પાછા જવા માટે જમણેથી ડાબે સ્વાઇપ કરો</string>
 <string name="dialog_show_icons">યાદીમાં ચિત્રો બતાવો</string>
+<string name="dialog_resize_icons">યાદીમાં ચિત્રોની ડાયનેમિક રીતે માપ બદલો</string>
 <string name="dialog_show_next_airing">આગળની એરઇંગ એપિસોની તારીખ ને બતાવો, પછીની તારીખ ની જગ્યાએ</string>
 <string name="dialog_mark_from_last_watched">સૌથી તાજેતરમાં જોવામાં આવતી પછીની પછીનું ચિહ્ન કરો</string>
 <string name="dialog_help">&#187; નિયમિત રીતે સુધારો કરવા માટે અટકાવો નહિં\n&#187; વધુ વિકલ્પો માટે લાંબી દબાણ વસ્તુઓ\n&#187; પાછા જવા માટે ડાબેથી જમણે સ્વાઇપ કરો\n\nઓવરવ્યુ બતાવે છે:\n&#187; બતાવવા માટે યાદી નીચે નાંખો\n&#187; આગળના અવાજ જાણકારી માટે ટૅપ પોસ્ટર\n&#187; બતાવવા માટેની જાણકારી માટે બે ટૅપ પોસ્ટર\n&#187; બાહ્ય સ્ત્રોત માટે લાંબા-દબાવો પોસ્ટર (* [url] s થી સીધુ, અથવા યાદી)\n&#187; જમણી બાજુ જમણી બાજુ જોવા માટે ડાબી બાજુ\n\nવિગતો બતાવો:\n&#187; પૂર્ણસ્ક્રીન દૃશ્ય માટે પોસ્ટર\n&#187; ફીન કલા માટે પૂર્ણ સ્ક્રીન પોસ્ટર ચિત્ર પર ક્લિક કરો\n&#187; બહારનાં કાર્યક્રમમાં ખોલવા માટે લાંબો-દબાવો સંપૂર્ણસ્ક્રીન પોસ્ટર\n\nબતાવો/એસોડ વિગતો:\n&#187; ટૅપ IMDb માં જોવા માટે રેટિંગ IMDb\n&#187; કેલેન્ડરમાં ઉમેરવાની તારીખ</string>
@@ -111,6 +112,7 @@
 <string name="messages_aired">પ્રસારિત:</string>
 <string name="messages_at">તરફ</string>
 <string name="messages_of">ની</string>
+<string name="messages_off">બંધ</string>
 <string name="messages_on">ચાલુ</string>
 <string name="messages_daily">દૈનિક</string>
 <string name="messages_ep">ઘટના</string>

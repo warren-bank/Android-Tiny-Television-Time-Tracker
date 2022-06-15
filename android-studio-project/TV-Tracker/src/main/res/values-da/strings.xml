@@ -64,6 +64,7 @@
 <string name="dialog_full_line_check">Brug hele linjen til at markere afsnit</string>
 <string name="dialog_switch_swipe_direction">Swipe højre-til-venstre for at gå tilbage</string>
 <string name="dialog_show_icons">Vis billeder i liste</string>
+<string name="dialog_resize_icons">Størrelse på bredde på dynamisk størrelse på billeder i listen</string>
 <string name="dialog_show_next_airing">Vis dato for næste flyvehændelse, i stedet for næste afsnit</string>
 <string name="dialog_mark_from_last_watched">Markér næste episode begyndende fra det seneste set</string>
 <string name="dialog_help">&#187; Husk jævnligt at opdatere programmer\n&#187; Lange-presseelementer for at få flere muligheder\n&#187; Swipe left-to-right to go back\n\nOversigt over oversigter:\n&#187; Vis liste for at opdatere programmer\n&#187; Tap-plakat for næste afsnit-afsnit\n&#187; Dobbelttryk for visning af oplysninger om visning\n&#187; Lang-presseplakat for ekstern ressource (til * [ url ] s direkte, eller liste)\n&#187; Stryg højre-til-venstre for at markere som set\n\nVis oplysninger:\n&#187; Tap-plakat for fuldskærmfremvisning\n&#187; Klik på helskærmbilledbillede for fanskunst\n&#187; Lang-tryk på helskærm for at åbne i ekstern applikation\n\nI Vis / Episodeoplysninger:\n&#187; Tap IMDb Vurder til visning i IMDb\n&#187; Tap-dato for at tilføje til kalender</string>
@@ -111,6 +112,7 @@
 <string name="messages_aired">Aired:</string>
 <string name="messages_at">kl.</string>
 <string name="messages_of">af</string>
+<string name="messages_off">off</string>
 <string name="messages_on">om</string>
 <string name="messages_daily">Daglig</string>
 <string name="messages_ep">Episode</string>

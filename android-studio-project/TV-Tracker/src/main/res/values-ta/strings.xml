@@ -64,6 +64,7 @@
 <string name="dialog_full_line_check">முழு கோட்டை குறி எத்தனை பயன்படுத்து</string>
 <string name="dialog_switch_swipe_direction">திரும்பிச் செல்ல வலமிருந்து இடமாக ஸ்வைப் செய்யவும்</string>
 <string name="dialog_show_icons">பட்டியலின் படங்களை காட்டு</string>
+<string name="dialog_resize_icons">பட்டியலின் படங்களின் அகலத்தை மறுஅளவாக்கு</string>
 <string name="dialog_show_next_airing">அடுத்த விரிவாக்கத்தின் தேதியை அடுத்த படத்தின் தேதியின் பதிலாக காட்டு</string>
 <string name="dialog_mark_from_last_watched">அடுத்த விசையை அண்மையில் பார்க்கவும்</string>
 <string name="dialog_help">&#187; புதுப்பிக்கப்படுவதற்கு மறக்க வேண்டாம்\n&#187; அதிக தேர்வுகளுக்கு நீண்ட-அழுத்தப்பட்ட உருப்படிகள்\n&#187; திரும்பிச் செல்ல இடமிருந்து வலமாக ஸ்வைப் செய்யவும்\n\nகாட்சி புள்ளிவிவரம்:\n&#187; பட்டியலை புதுப்பிக்கவும்\n&#187; அடுத்த படி தகவலுக்கான தடை போஸ்டர்\n&#187; காட்ட தகவலுக்கான இரட்டை டப் போஸ்டர்\n&#187; வெளி மூலங்களுக்கான நீண்ட-அழுத்த போஸ்டர் (to * [url] s நேரடியாக, அல்லது பட்டியல்)\n&#187; சரியான வலது-இடது-இடது தானாக பார்க்கவும்\n\nவிவரங்களை காட்டு:\n&#187; முழு-திரை காட்சிக்கு தடை போஸ்டர்\n&#187; ஃபிரான் கலைக்கான முழுத்திரை போஸ்டர் பிம்பத்தை க்ளிக் செய்யவும்\n&#187; வெளி பயன்பாடு திறக்க நீண்ட-அழுத்த முழுத்திரை போஸ்டர்\n\nShow/Episode விவரங்கள்:\n&#187; Tap IMDb பார்வைக்கு மதிப்பெண்கள் IMDb\n&#187; நாட்காட்டியில் சேர்க்க தேதி</string>
@@ -111,6 +112,7 @@
 <string name="messages_aired">அலங்காரம்:</string>
 <string name="messages_at">இல்</string>
 <string name="messages_of">குறித்து</string>
+<string name="messages_off">மேற்கோள்கள்</string>
 <string name="messages_on">ஆன்</string>
 <string name="messages_daily">தினசரி</string>
 <string name="messages_ep">எகிப்தி</string>

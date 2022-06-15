@@ -64,6 +64,7 @@
 <string name="dialog_full_line_check">পর্বটি চিহ্নিত করতে সমগ্র রেখা ব্যবহার করুন</string>
 <string name="dialog_switch_swipe_direction">ফিরে যেতে ডান থেকে বাম সোয়াইপ করুন</string>
 <string name="dialog_show_icons">তালিকায় ছবি প্রদর্শন করা হবে</string>
+<string name="dialog_resize_icons">তালিকায় ছবির প্রস্থ ডাইনামিক্যালি আকার-আকার</string>
 <string name="dialog_show_next_airing">পরবর্তী পর্বের তারিখ এর পরিবর্তে পরবর্তী এয়ারলিং পর্বের তারিখ প্রদর্শন করা হবে</string>
 <string name="dialog_mark_from_last_watched">পরবর্তী পর্বটি সবচেয়ে বেশী দেখা থেকে শুরু করে চিহ্নিত করুন</string>
 <string name="dialog_help">&#187; আপডেট করতে ভুলে যাবেন না.\n&#187; আরো অপশনের জন্য লং-প্রেস আইটেম\n&#187; ফিরে যেতে বাম থেকে ডানদিকে সোয়াইপ করুন\n\nশো ওভারভিউতে:\n&#187; প্রদর্শন সংক্রান্ত তথ্য হালনাগাদ করার জন্য নিচে নামাও\n&#187; পরবর্তী পর্ব তথ্যের জন্য ট্যাপ পোস্টার\n&#187; প্রদর্শিত তথ্যের জন্য ডাবল ট্যাপ পোস্টার\n&#187; বাহ্যিক রিসোর্সের জন্য লং-প্রেস পোস্টার (* [url] s সরাসরি, অথবা তালিকা)\n&#187; পরবর্তী হিসাবে চিহ্নিত করার জন্য ডান-বাম দিকে সোয়াইপ করুন\n\nবিস্তারিত বিবরণ:\n&#187; পূর্ণ-পর্দা অনুযায়ীর জন্য একটি পোস্টার\n&#187; ফ্যান আর্টের জন্য সম্পূর্ণ-পর্দা পোস্টার ছবি ক্লিক করুন\n&#187; বাহ্যিক অ্যাপ্লিকেশানে উন্মুক্ত করার জন্য লং-প্রেস পূর্ণ-পর্দা পোস্টার\n\nপ্রদর্শন/এপিসোডে বিস্তারিত:\n&#187; টাপ IMDb ভিউ-এ রেটিং IMDb\n&#187; ক্যালেন্ডারে যোগ করার তারিখ</string>
@@ -111,6 +112,7 @@
 <string name="messages_aired">প্রচারিত:</string>
 <string name="messages_at">এ</string>
 <string name="messages_of">এর</string>
+<string name="messages_off">বন্ধ</string>
 <string name="messages_on">চালু</string>
 <string name="messages_daily">দৈনিক</string>
 <string name="messages_ep">পর্ব</string>

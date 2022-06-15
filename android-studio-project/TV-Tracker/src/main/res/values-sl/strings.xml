@@ -64,6 +64,7 @@
 <string name="dialog_full_line_check">Uporabi celotno vrstico za označevanje epizod</string>
 <string name="dialog_switch_swipe_direction">Swipe right-to-leve, da se vrnete</string>
 <string name="dialog_show_icons">Pokaži slike na seznamu</string>
+<string name="dialog_resize_icons">Dinamično spreminjanje velikosti širine slik na seznamu</string>
 <string name="dialog_show_next_airing">Prikaži datum naslednje epizod vzklika, namesto datuma naslednje epizod</string>
 <string name="dialog_mark_from_last_watched">Označi naslednjo epizod, ki se je začela od zadnje opazoene.</string>
 <string name="dialog_help">&#187; Ne pozabite redno posodabljali.\n&#187; Dolgo-pritisnite postavke za več možnosti\n&#187; Swipe levo-proti-desno, da se vrnete\n\nV Prikazuje Pregled:\n&#187; Povleci seznam za posodobitev predstav\n&#187; Dotakni se plakata za naslednji dogodek\n&#187; Dvojni plakat za prikaz za prikaz informacij\n&#187; Dolg-press poster for external resource (to * [url] s neposredno, ali seznam)\n&#187; Swipe right-to-left to mark next as viden\n\nV podrobnostih Pokaži:\n&#187; Plakat za prikaz za celozaslonski pogled\n&#187; Kliknite sliko plakata celotnega zaslona za umetnost ventilatorja\n&#187; Long-pritisnite celozaslonski poster za odpiranje v zunanji aplikaciji\n\nPodrobnosti o prikazu / Epizodi:\n&#187; Dotakni IMDb ocena za prikaz v IMDb\n&#187; Dotakni se datum za dodajanje v koledar</string>
@@ -111,6 +112,7 @@
 <string name="messages_aired">V paru:</string>
 <string name="messages_at">pri</string>
 <string name="messages_of">od</string>
+<string name="messages_off">izklopa</string>
 <string name="messages_on">na</string>
 <string name="messages_daily">Dnevni odmerek</string>
 <string name="messages_ep">Epizr</string>

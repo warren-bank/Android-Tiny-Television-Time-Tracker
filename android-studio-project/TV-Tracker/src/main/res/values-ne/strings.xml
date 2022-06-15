@@ -64,6 +64,7 @@
 <string name="dialog_full_line_check">श्रृङ्खलाकासाथ पूरा लाइन प्रयोग गर्नुहोस्</string>
 <string name="dialog_switch_swipe_direction">दायाँ-बायाँ जाने दायाँबायाँ</string>
 <string name="dialog_show_icons">सूचीमा छविहरू देखाउनुहोस्</string>
+<string name="dialog_resize_icons">सूचीमा छविको डायनामिक रिसाइज चौडाइ</string>
 <string name="dialog_show_next_airing">पछिल्लो श्रृङ्खलाबद्ध प्रकरणको मिति देखाउनुहोस्</string>
 <string name="dialog_mark_from_last_watched">पछिल्लो प्रकरणलाई सबैभन्दा पछिल्लो हेरिएको बाट सुरु भएको चिन्ह</string>
 <string name="dialog_help">&#187; नियमित रुपमा अपडेट गर्न नभुल्नु होला\n&#187; धेरै विकल्पहरूका लागि लामो-प्रेस वस्तुहरू\n&#187; स्विप बायाँ-को-को-को-को-को लौरो\n\nदेखाउँदछ:\n&#187; अद्यावधिक गर्न सूची खाली गर्नुहोस्\n&#187; पछिल्लो प्रकरण सूचना का लागि टप पोस्टर\n&#187; देखाउनका लागि डबल टप पोस्टर\n&#187; बाह्य संसाधनका लागि लामो-प्रेस पोस्टर (* [url] s प्रत्यक्ष, वा सूची)\n&#187; दायाँ-to-to-left to mark as next as seen\n\nविवरण देखाउनुहोस्:\n&#187; पूरा पर्दा दृश्यका लागि ट्याप पोस्टर\n&#187; प्रशंसक कलाका लागि पूरा-पर्दा पोस्टर छवि क्लिक गर्नुहोस्\n&#187; बाह्य एपमा खोल्न लामो-प्रेस फुल-स्क्रिन पोस्टर\n\nदेखाउनुहोस्/एपिसोड विवरणमा:\n&#187; टाप IMDb मा हेर्नको लागि रेटिङ IMDb\n&#187; क्यालेन्डर थप्न टाप मिति</string>
@@ -111,6 +112,7 @@
 <string name="messages_aired">Aired:</string>
 <string name="messages_at">मा</string>
 <string name="messages_of">Of:</string>
+<string name="messages_off">बन्द गर्नुहोस्</string>
 <string name="messages_on">माथि</string>
 <string name="messages_daily">दैनिक</string>
 <string name="messages_ep">एपिसोड</string>

@@ -64,6 +64,7 @@
 <string name="dialog_full_line_check">Utilizați întreaga linie pentru a marca episodul</string>
 <string name="dialog_switch_swipe_direction">Swipe dreapta-la-stânga pentru a merge înapoi</string>
 <string name="dialog_show_icons">Arată imaginile în listă</string>
+<string name="dialog_resize_icons">Redimensionați dinamic lățimea imaginilor în listă</string>
 <string name="dialog_show_next_airing">Arată data următorului episod de difuzare, în loc de data următorului episod</string>
 <string name="dialog_mark_from_last_watched">Marchează episodul următor pornind de la cel mai recent vizionat</string>
 <string name="dialog_help">&#187; Nu uitați să actualizați emisiunile în mod regulat\n&#187; Articole de presă lungi pentru mai multe opțiuni\n&#187; Glisați stânga-la-dreapta pentru a merge înapoi\n\nÎn Arată Prezentare generală:\n&#187; Trageți lista pentru a actualiza emisiunile\n&#187; Atingeți afișul pentru următorul episod info\n&#187; Poster cu robinet dublu pentru info show\n&#187; Afișul de presă lung pentru resurse externe (la * [url] s direct, sau listă)\n&#187; Trageți cu degetul drept-la-stânga pentru a marca următorul\n\nÎn Arată Detalii:\n&#187; Atingeți afișul pentru vizualizare completă\n&#187; Faceți clic pe imagine poster full-screen pentru arta ventilatorului\n&#187; Lung-apăsați afișul full-screen pentru a deschide în aplicație externă\n\nÎn Arată/Episodul Detalii:\n&#187; Atingeți IMDb rating to view in IMDb\n&#187; Atingeți data pentru a adăuga la calendar</string>
@@ -111,6 +112,7 @@
 <string name="messages_aired">Difuzat:</string>
 <string name="messages_at">la</string>
 <string name="messages_of">din</string>
+<string name="messages_off">off</string>
 <string name="messages_on"></string>
 <string name="messages_daily">Zilnic</string>
 <string name="messages_ep">Episodul</string>

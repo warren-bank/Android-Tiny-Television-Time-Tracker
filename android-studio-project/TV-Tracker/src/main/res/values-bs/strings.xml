@@ -64,6 +64,7 @@
 <string name="dialog_full_line_check">Koristi cijelu liniju da označi epizodu</string>
 <string name="dialog_switch_swipe_direction">Prijeđite prstom desno na lijevo</string>
 <string name="dialog_show_icons">Prikaži slike u listi</string>
+<string name="dialog_resize_icons">Dinamičku veličinu veličine slika u listi</string>
 <string name="dialog_show_next_airing">Prikaži datum sljedećeg emitiranja, umjesto datuma sljedeće epizode</string>
 <string name="dialog_mark_from_last_watched">Mark sledeća epizoda počinje od najskorijeg posmatranja</string>
 <string name="dialog_help">&#187; Ne zaboravi da ažuriramo emisije redovno.\n&#187; Dugo štampe za više opcija\n&#187; Pređite prstom lijevo-na-desno da se vratite\n\nU Emisijama Pregled:\n&#187; Povucite prema dolje listu za ažuriranje pokazuje\n&#187; Dotaknite poster za info sljedeće epizode\n&#187; Dvostruka tap plakat za prikaz info\n&#187; Long-press poster za eksterni resurs (do * [url] s direktno ili lista)\n&#187; Prijeđite prstom desno na lijevo, da označite kao što je vidjeno\n\nU Pokaži Detalje:\n&#187; Dotaknite poster za pogled punog ekrana\n&#187; Kliknite full-screen sliku za umetnost ventilatora\n&#187; Dugogodišnji poster za cijeli ekran koji se otvara u vanjskoj aplikaciji\n\nU epizodi \"Pokaži/epizode\":\n&#187; Dodirnite IMDb ocjena da se vidi u IMDb\n&#187; Dodirnite datum za dodavanje u kalendar</string>
@@ -111,6 +112,7 @@
 <string name="messages_aired">Emitirano:</string>
 <string name="messages_at">u</string>
 <string name="messages_of">Od</string>
+<string name="messages_off">Isključeno</string>
 <string name="messages_on">Na</string>
 <string name="messages_daily">Dnevno</string>
 <string name="messages_ep">Epizoda</string>
