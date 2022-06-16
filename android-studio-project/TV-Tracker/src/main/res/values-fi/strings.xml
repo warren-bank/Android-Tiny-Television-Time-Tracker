@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">fi</string>
 <string name="app_name_long">Pieni televisiotoiminnan jäljittäjä</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">Ei vuodenaikoja näytettäväksi.</string>
 <string name="active">Käytössä</string>
 <string name="archive">Arkisto</string>
-<string name="addserie_hint">Lisää ...</string>
-<string name="search_hint">Etsi ...</string>
+<string name="addserie_hint">Lisää…</string>
+<string name="search_hint">Etsi…</string>
 <string name="menu_filter">Suodattimet</string>
 <string name="menu_undo">Undo</string>
 <string name="menu_add_serie">Lisää show</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">Kausi on täysin katsonut</string>
 <string name="messages_deleted">Poistettu</string>
 <string name="messages_title_search_series">Hakee ohjelmia</string>
-<string name="messages_search_series">Tietojen nouto on meneillään ...</string>
+<string name="messages_search_series">Tietojen nouto on meneillään…</string>
 <string name="messages_series_success">Näytä %s Lisätty</string>
 <string name="messages_title_adding_serie">Adding show</string>
-<string name="messages_adding_serie">Näytötietojen keruu ...</string>
+<string name="messages_adding_serie">Näytötietojen keruu…</string>
 <string name="messages_specials">Specials</string>
 <string name="messsages_view_ep_details">Episode-tiedot</string>
 <string name="messsages_edit_seen_timestamp">Muokkaa aikaleima</string>

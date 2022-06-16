@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">da</string>
 <string name="app_name_long">lillebitte tidssenderen for tv</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">Ingen sæsoner, der skal vises.</string>
 <string name="active">Aktiv</string>
 <string name="archive">Arkivér</string>
-<string name="addserie_hint">Vis for at tilføje ...</string>
-<string name="search_hint">Søg ...</string>
+<string name="addserie_hint">Vis for at tilføje…</string>
+<string name="search_hint">Søg…</string>
 <string name="menu_filter">Filtrér programmer</string>
 <string name="menu_undo">Fortryd</string>
 <string name="menu_add_serie">Tilføj et show</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">Season så fuldstændig på</string>
 <string name="messages_deleted">slettet</string>
 <string name="messages_title_search_series">Søgning vises</string>
-<string name="messages_search_series">Henter data ...</string>
+<string name="messages_search_series">Henter data…</string>
 <string name="messages_series_success">Vis %s tilføjet</string>
 <string name="messages_title_adding_serie">Tilføjer show</string>
-<string name="messages_adding_serie">Indsamler oplysninger ...</string>
+<string name="messages_adding_serie">Indsamler oplysninger…</string>
 <string name="messages_specials">Specialer</string>
 <string name="messsages_view_ep_details">Episodeoplysninger</string>
 <string name="messsages_edit_seen_timestamp">Redigér set tidsstempel</string>

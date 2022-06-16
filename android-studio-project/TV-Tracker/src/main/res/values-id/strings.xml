@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">id</string>
 <string name="app_name_long">pelacak waktu kecil untuk televisi</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">Tidak ada musim untuk ditampilkan.</string>
 <string name="active">Aktif</string>
 <string name="archive">Arsip</string>
-<string name="addserie_hint">Tampilkan untuk menambahkan ...</string>
-<string name="search_hint">Cari ...</string>
+<string name="addserie_hint">Tampilkan untuk menambahkan…</string>
+<string name="search_hint">Cari…</string>
 <string name="menu_filter">Filter menunjukkan</string>
 <string name="menu_undo">Batalkan</string>
 <string name="menu_add_serie">Tambahkan suatu acara</string>
@@ -42,7 +42,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Secara otomatis melakukan backup harian</string>
 <string name="dialog_backup_versioning">Gunakan versioning untuk backup</string>
-<string name="dialog_pull_to_update">Aktifkan gerakan \"Pull To Update\"</string>
+<string name="dialog_pull_to_update">Aktifkan gerakan \"Tarik untuk memperbarui\"</string>
 <string name="dialog_backup">Backup</string>
 <string name="dialog_backup_done">Cadangan basis data selesai</string>
 <string name="dialog_backup_failed">Tidak dapat melakukan backup!</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">Musim benar-benar ditonton</string>
 <string name="messages_deleted">dihapus</string>
 <string name="messages_title_search_series">Mencari menunjukkan</string>
-<string name="messages_search_series">Mengambil data ...</string>
+<string name="messages_search_series">Mengambil data…</string>
 <string name="messages_series_success">Tampilkan %s $ditambahkan</string>
 <string name="messages_title_adding_serie">Menambahkan acara</string>
-<string name="messages_adding_serie">Mengumpulkan informasi acara ...</string>
+<string name="messages_adding_serie">Mengumpulkan informasi acara…</string>
 <string name="messages_specials">Spesial</string>
 <string name="messsages_view_ep_details">Rincian episode</string>
 <string name="messsages_edit_seen_timestamp">Sunting timestamp dilihat</string>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ta</string>
 <string name="app_name_long">தொலைக்காட்சித் தொலைக்காட்சி</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">காட்சிக்கு எதுவும் இல்லை.</string>
 <string name="active">செயற்பாடு</string>
 <string name="archive">காப்பகம்</string>
-<string name="addserie_hint">சேர்க்க காட்டு</string>
-<string name="search_hint">தேடு ...</string>
+<string name="addserie_hint">சேர்க்க காட்டு…</string>
+<string name="search_hint">தேடு…</string>
 <string name="menu_filter">வடிகட்டி காட்டுகிறது</string>
 <string name="menu_undo">செயல் நீக்கு</string>
 <string name="menu_add_serie">ஒரு காட்டியை சேர்</string>
@@ -90,7 +90,7 @@
 <string name="messages_season_completely_watched">சைன் முழுமையாக பார்க்கப்பட்டது</string>
 <string name="messages_deleted">நீக்கப்பட்டது</string>
 <string name="messages_title_search_series">காண்பிக்கிறது</string>
-<string name="messages_search_series">தரவை மீட்டெடுக்கிறது ...</string>
+<string name="messages_search_series">தரவை மீட்டெடுக்கிறது…</string>
 <string name="messages_series_success">காட்டு %s சேர்க்கப்பட்டது</string>
 <string name="messages_title_adding_serie">கூடுதலான காட்டு</string>
 <string name="messages_adding_serie">சேகரிக்கும் தகவல்களைக் காண்பித்தல்…</string>

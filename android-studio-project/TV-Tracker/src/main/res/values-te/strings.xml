@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">te</string>
 <string name="app_name_long">టెలివిజన్ కోసం టెలికాల్ ట్రాకర్</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">ప్రదర్శించుటకు ఋషులు లేదు.</string>
 <string name="active">క్రియాశీలము</string>
 <string name="archive">ఆర్కైవ్</string>
-<string name="addserie_hint">జతచేయుటకు చూపించు ...</string>
-<string name="search_hint">శోధన ...</string>
+<string name="addserie_hint">జతచేయుటకు చూపించు…</string>
+<string name="search_hint">శోధన…</string>
 <string name="menu_filter">ఫిల్టర్ షోలు</string>
 <string name="menu_undo">అన్డు</string>
 <string name="menu_add_serie">ఒక ప్రదర్శన జతచేయుము</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">సీజన్ పూర్తిగా కనిపించింది.</string>
 <string name="messages_deleted">తొలగించబడినది</string>
 <string name="messages_title_search_series">చూపించే ప్రదర్శన</string>
-<string name="messages_search_series">దత్తాంశమును పునర్చేస్తోంది ...</string>
+<string name="messages_search_series">దత్తాంశమును పునర్చేస్తోంది…</string>
 <string name="messages_series_success">షో %s జోడించబడింది</string>
 <string name="messages_title_adding_serie">ప్రదర్శన</string>
-<string name="messages_adding_serie">గాథింగ్ షో సమాచారం ...</string>
+<string name="messages_adding_serie">గాథింగ్ షో సమాచారం…</string>
 <string name="messages_specials">జాతుల</string>
 <string name="messsages_view_ep_details">ఎపిసోడ్ వివరాలు</string>
 <string name="messsages_edit_seen_timestamp">టైమ్‌స్టాంప్ చూసిన సవరణ</string>

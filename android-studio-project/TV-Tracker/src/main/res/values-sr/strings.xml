@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">sr</string>
 <string name="app_name_long">мали временски трагач за телевизију</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">Нема годишњих доба за приказ.</string>
 <string name="active">Активно</string>
 <string name="archive">Архива</string>
-<string name="addserie_hint">Прикажи да додаш ...</string>
-<string name="search_hint">Претражи ...</string>
+<string name="addserie_hint">Прикажи да додаш…</string>
+<string name="search_hint">Претражи…</string>
 <string name="menu_filter">Приказује се филтер</string>
 <string name="menu_undo">Поништи</string>
 <string name="menu_add_serie">Додај представу</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">Сезона је потпуно посматрала</string>
 <string name="messages_deleted">избрисано</string>
 <string name="messages_title_search_series">Претраживање показује</string>
-<string name="messages_search_series">Преузимање података ...</string>
+<string name="messages_search_series">Преузимање података…</string>
 <string name="messages_series_success">Прикажи %s додато</string>
 <string name="messages_title_adding_serie">Додавање показивања</string>
-<string name="messages_adding_serie">Прикупљање информација о показивање ...</string>
+<string name="messages_adding_serie">Прикупљање информација о показивање…</string>
 <string name="messages_specials">Специјалитети</string>
 <string name="messsages_view_ep_details">Детаљи епизода</string>
 <string name="messsages_edit_seen_timestamp">Уреди видео временске ознаке</string>

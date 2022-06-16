@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">hi</string>
 <string name="app_name_long">टेलीविजन के लिए छोटे समय के ट्रेकर</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">दिखाने के लिए कोई मौसम नहीं.</string>
 <string name="active">सक्रिय</string>
 <string name="archive">अभिलेखागार</string>
-<string name="addserie_hint">जोड़ने के लिए दिखाएँ ...</string>
-<string name="search_hint">ढूंढें ...</string>
+<string name="addserie_hint">जोड़ने के लिए दिखाएँ…</string>
+<string name="search_hint">ढूंढें…</string>
 <string name="menu_filter">फ़िल्टर दिखाएँ</string>
 <string name="menu_undo">पहले जैसा</string>
 <string name="menu_add_serie">एक शो जोड़ें</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">पूरी तरह से देखा मौसम</string>
 <string name="messages_deleted">लोप</string>
 <string name="messages_title_search_series">खोज रहा है</string>
-<string name="messages_search_series">डाटा निकाल रहा है ...</string>
+<string name="messages_search_series">डाटा निकाल रहा है…</string>
 <string name="messages_series_success">दिखाएँ %s जोड़ा</string>
 <string name="messages_title_adding_serie">शो जोड़ना</string>
-<string name="messages_adding_serie">संग्रहण सूचना दिखाएँ ...</string>
+<string name="messages_adding_serie">संग्रहण सूचना दिखाएँ…</string>
 <string name="messages_specials">स्पेसल्स</string>
 <string name="messsages_view_ep_details">प्रकरण विवरण</string>
 <string name="messsages_edit_seen_timestamp">देखे टाइमस्टैंप संपादित करें</string>

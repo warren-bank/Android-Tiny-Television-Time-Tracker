@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ko</string>
 <string name="app_name_long">텔레비전의 조그마한 시간 추적기</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">표시할 계절이 없음.</string>
 <string name="active">활성</string>
 <string name="archive">아카이브</string>
-<string name="addserie_hint">추가하기 위해 표시 ...</string>
-<string name="search_hint">검색 ...</string>
+<string name="addserie_hint">추가하기 위해 표시…</string>
+<string name="search_hint">검색…</string>
 <string name="menu_filter">필터 표시</string>
 <string name="menu_undo">실행 취소</string>
 <string name="menu_add_serie">쇼 추가하기</string>
@@ -43,7 +43,7 @@
 <string name="dialog_auto_backup">일별 백업 자동 수행</string>
 <string name="dialog_backup_versioning">백업에 대한 버전화 사용</string>
 <string name="dialog_pull_to_update">\"업데이트 받기\" 제스처 사용</string>
-<string name="dialog_backup">백업</string>
+<string name="dialog_backup">지원</string>
 <string name="dialog_backup_done">데이터베이스 백업 완료</string>
 <string name="dialog_backup_failed">백업을 수행할 수 없음!</string>
 <string name="dialog_backup_preupdate_title">데이터베이스 업데이트 필요</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">시즌을 완전히 지켜보는</string>
 <string name="messages_deleted">삭제된</string>
 <string name="messages_title_search_series">검색 결과</string>
-<string name="messages_search_series">데이터 검색 중 ...</string>
+<string name="messages_search_series">데이터 검색 중…</string>
 <string name="messages_series_success">쇼 %s 추가된</string>
 <string name="messages_title_adding_serie">쇼 추가하기</string>
-<string name="messages_adding_serie">정보를 수집하는 중 ...</string>
+<string name="messages_adding_serie">정보를 수집하는 중…</string>
 <string name="messages_specials">전문가</string>
 <string name="messsages_view_ep_details">에피소드 세부사항</string>
 <string name="messsages_edit_seen_timestamp">편집된 시간소인 편집</string>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">lv</string>
 <string name="app_name_long">maza laika trakeris televīzijai</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">Nav sezonas, lai parādītu.</string>
 <string name="active">Aktīvais</string>
 <string name="archive">Arhīvs</string>
-<string name="addserie_hint">Rādīt, lai pievienotu ...</string>
-<string name="search_hint">Meklēt ...</string>
+<string name="addserie_hint">Rādīt, lai pievienotu…</string>
+<string name="search_hint">Meklēt…</string>
 <string name="menu_filter">Filtrēt parāda</string>
 <string name="menu_undo">Undo</string>
 <string name="menu_add_serie">Pievienot rādi</string>
@@ -42,7 +42,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Automātiski veikt ikdienas dublējumus</string>
 <string name="dialog_backup_versioning">Izmantot versioning backups</string>
-<string name="dialog_pull_to_update">Ieslēgt \"Pull To Update\" žestu</string>
+<string name="dialog_pull_to_update">Ieslēgt \"Pull, lai atjauninātu\" žestu</string>
 <string name="dialog_backup">Rezerves kopija</string>
 <string name="dialog_backup_done">Datu bāzes dublēšana pabeigta</string>
 <string name="dialog_backup_failed">Neizdevās veikt rezerves kopēšanu!</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">Sezona pilnīgi noskatījās</string>
 <string name="messages_deleted">svītrota</string>
 <string name="messages_title_search_series">Meklēšanas rezultāti</string>
-<string name="messages_search_series">Ielādē datus ...</string>
+<string name="messages_search_series">Ielādē datus…</string>
 <string name="messages_series_success">Rādīt %s .</string>
 <string name="messages_title_adding_serie">Pievienot parādīt</string>
-<string name="messages_adding_serie">Vākt informāciju ...</string>
+<string name="messages_adding_serie">Vākt informāciju…</string>
 <string name="messages_specials">Specials</string>
 <string name="messsages_view_ep_details">Epizode</string>
 <string name="messsages_edit_seen_timestamp">Rediģēt redzēto laika zīmogu</string>

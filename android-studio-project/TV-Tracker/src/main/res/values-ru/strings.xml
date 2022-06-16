@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ru</string>
 <string name="app_name_long">крошечный трекер для телевидения</string>
@@ -42,11 +42,11 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">автоматическое ежедневное резервное копирование</string>
 <string name="dialog_backup_versioning">Использовать версионирование для резервного копирования</string>
-<string name="dialog_pull_to_update">Включить жест \"Pull To Update\"</string>
+<string name="dialog_pull_to_update">Включить жест \"Тянуть, чтобы обновить\"</string>
 <string name="dialog_backup">Резервирование</string>
 <string name="dialog_backup_done">Резервная копия создана</string>
 <string name="dialog_backup_failed">Невозможно создать резервную копию!</string>
-<string name="dialog_backup_preupdate_title">Требуется Обновление Базы Данных</string>
+<string name="dialog_backup_preupdate_title">Требуется обновление базы данных</string>
 <string name="dialog_backup_preupdate_message">Вы установили более новую версию этого приложения. Необходимо также обновить версию базы данных. Сохранение резервной копии перед этой операцией рекомендуется; любая ошибка приведет к повреждению базы данных. Для этого необходимо сначала предоставить разрешение на сохранение файла резервной копии во внешнюю память. Сохранить резервную копию перед обновлением?</string>
 <string name="dialog_backup_usefolder">Использовать для ежедневного резервного копирования</string>
 <string name="dialog_change_language">Язык краткого описания</string>
@@ -60,13 +60,13 @@
 <string name="dialog_cancel">Отмена</string>
 <string name="dialog_search">Искать:</string>
 <string name="dialog_update_series">Начать обновление информации о сериалах?</string>
-<string name="dialog_include_specials">Включить доп. видео в количество просмотренных</string>
+<string name="dialog_include_specials">Включите специальные предложения в подсчете нереагированных</string>
 <string name="dialog_full_line_check">Вся строка помечает просмотренным</string>
 <string name="dialog_switch_swipe_direction">Проведите справа налево, чтобы вернуться назад</string>
 <string name="dialog_show_icons">Показывать изображения в списке</string>
 <string name="dialog_resize_icons">Динамически изменять ширину изображений в списке</string>
 <string name="dialog_show_next_airing">Показать следующий выход в эфир вместо даты выхода следующего эпизода</string>
-<string name="dialog_mark_from_last_watched">Отметить следующий эпизод, начиная с самых последних просмотренных</string>
+<string name="dialog_mark_from_last_watched">Отметьте следующий эпизод, начиная с самых последних просмотренных</string>
 <string name="dialog_help">&#187; Не забывайте обновлять информацию о сериалах
 \n&#187; По длинному нажатию показывается меню
 \n&#187; Листайте влево, чтобы вернуться назад

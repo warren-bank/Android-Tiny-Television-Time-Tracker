@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">hu</string>
 <string name="app_name_long">Apró időjeladó a televízióhoz</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">Nincsenek megjeleníthető évszakok.</string>
 <string name="active">Aktív</string>
 <string name="archive">Archívum</string>
-<string name="addserie_hint">Megjelenítés megjelenítése ...</string>
-<string name="search_hint">Keresés ...</string>
+<string name="addserie_hint">Megjelenítés megjelenítése…</string>
+<string name="search_hint">Keresés…</string>
 <string name="menu_filter">Szűrő show</string>
 <string name="menu_undo">Visszavonás</string>
 <string name="menu_add_serie">Show hozzáadása</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">Season teljesen figyelt.</string>
 <string name="messages_deleted">Törölve</string>
 <string name="messages_title_search_series">Keresési show</string>
-<string name="messages_search_series">Adatok lekérése ...</string>
+<string name="messages_search_series">Adatok lekérése…</string>
 <string name="messages_series_success">Megjelenítés %s Hozzáadott</string>
 <string name="messages_title_adding_serie">Show hozzáadása</string>
-<string name="messages_adding_serie">A show információk összegyűjtése ...</string>
+<string name="messages_adding_serie">A show információk összegyűjtése…</string>
 <string name="messages_specials">Specialok</string>
 <string name="messsages_view_ep_details">Fordította:</string>
 <string name="messsages_edit_seen_timestamp">Meglátott időpecsét szerkesztése</string>

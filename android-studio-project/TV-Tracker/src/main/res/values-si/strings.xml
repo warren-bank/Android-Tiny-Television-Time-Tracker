@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">si</string>
 <string name="app_name_long">රූපවාහිනිය සඳහා කුඩා කාලයේ ට්රැකර්</string>
@@ -7,10 +7,10 @@
 <string name="layout_seasons_no_items">දර්ශණය කිරීමට සෘතු නැත.</string>
 <string name="active">සක්රීය</string>
 <string name="archive">සංරක්ෂණය</string>
-<string name="addserie_hint">එක් කිරීමට පෙන්වන්න ...</string>
-<string name="search_hint">සොයන්න ...</string>
+<string name="addserie_hint">එක් කිරීමට පෙන්වන්න…</string>
+<string name="search_hint">සොයන්න…</string>
 <string name="menu_filter">පෙරහන පෙන්වයි</string>
-<string name="menu_undo">Undo</string>
+<string name="menu_undo">අහෝසි කරන්න</string>
 <string name="menu_add_serie">සංදර්ශනයක් එක් කරන්න</string>
 <string name="menu_update">යාවත්කාලීන පෙන්වීම</string>
 <string name="menu_search">සොයන්න</string>
@@ -20,25 +20,25 @@
 <string name="menu_sort_by_next_unseen_date">ඊලඟ නොපෙනෙන කොටසේ දිස්වන දිනය\n(නැගණිය: පැරණිම පළමු)</string>
 <string name="menu_sort_by_last_unseen_date">පසුගිය නොපෙනෙන කොටසේ දිනය විසින්\n(පහලට බහිනවා: අලුත්ගම පළාත)</string>
 <string name="menu_about">විකල්ප</string>
-<string name="menu_exit">Exit</string>
+<string name="menu_exit">පිටවීම</string>
 <string name="menu_context_update">යාවත්කාලීන කිරීම</string>
 <string name="menu_context_updated">යාවත්කාලීන කිරීම</string>
 <string name="menu_context_delete">මකන්න</string>
 <string name="menu_context_add_serie">පෙන්වන්න</string>
 <string name="menu_show_archive">සංරක්ෂණය පෙන්වන්න</string>
 <string name="menu_show_current">දැනට පෙන්වන්න</string>
-<string name="menu_exclude_seen">Exclude දැක්වේ</string>
+<string name="menu_exclude_seen">දැකීම බැහැර කරන්න</string>
 <string name="menu_include_seen">දැක්විය හැකිය.</string>
 <string name="menu_log">සටහන් කරන්න</string>
-<string name="menu_close_log">\@ action: button</string>
+<string name="menu_close_log">ලොගය වසා දමන්න</string>
 <string name="menu_context_view_serie_details">විස්තර පෙන්වන්න</string>
 <string name="menu_context_view_imdb">IMDb පිටුවක් පෙන්වන්න</string>
 <string name="menu_context_view_ep_imdb">IMDb කොටු පිටුව</string>
 <string name="menu_context_search_on">සොයන්න</string>
 <string name="menu_context_ext_resources">බාහිර සම්පත්</string>
 <string name="menu_context_mark_next_episode_as_seen">මීළඟ කොටස දැක්වෙන ලෙස සලකුණු කරන්න</string>
-<string name="menu_context_pin">Pin</string>
-<string name="menu_context_unpin">Unpin</string>
+<string name="menu_context_pin">අමුණන්න</string>
+<string name="menu_context_unpin">නොදන්නා</string>
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">දෛනික පසුපසට ස්වයංක්රීයව සිදු කරන්න</string>
 <string name="dialog_backup_versioning">Backups සඳහා versioning භාවිත කරන්න</string>
@@ -90,7 +90,7 @@
 <string name="messages_season_completely_watched">සීසන් එක සම්පූර්ණයෙන්ම බලලා තියෙනවා.</string>
 <string name="messages_deleted">මකාදැමීම</string>
 <string name="messages_title_search_series">සංදර්ශන පෙන්වීම</string>
-<string name="messages_search_series">දත්ත ලබා ගැනීම ...</string>
+<string name="messages_search_series">දත්ත ලබා ගැනීම…</string>
 <string name="messages_series_success">පෙන්වන්න %s එකතු කරන්න</string>
 <string name="messages_title_adding_serie">සංදර්ශන පෙන්වීම</string>
 <string name="messages_adding_serie">ප්රදර්ශන තොරතුරු රැස් කිරීම…</string>
@@ -127,7 +127,7 @@
 <string name="showstatus_continuing">දිගටම</string>
 <string name="showstatus_ended">අවසන් විය</string>
 <string name="wiki_search_query_suffix">රූපවාහිනිය</string>
-<string name="dialog_update_db_tmdb_migration_errors">Database update encountered some television series that were not able to migrate</string>
+<string name="dialog_update_db_tmdb_migration_errors">දත්ත සමුදා යාවත්කාලීන කිරීම මගින් සංක්රමණය වීමට නොහැකි වූ රූපවාහිනී කතා මාලාවකට හමු විය</string>
 <string name="dialog_update_db_tmdb_migration_errors_log_file">සම්පූර්ණ ලොග් එකක් ලියවුනේ:\n(%s)</string>
 <string name="db_migration_log_file_heading_tvdb_series_ids_that_failed_to_resolve">පහත දැක්වෙන්නේ එම ලැයිස්තුවල TVDB ID අගයන්\nසමග එක් එක් අනුකරණ ශ්රේණියට අදාල\nඒ සඳහා පෙර දත්ත ගබඩාවේ ඇති,\nනමුත් ඊට අනුකූලතාවයකට විසදිය නොහැකි විය TMDB ID අගය:</string>
 <string name="db_migration_log_file_heading_tmdb_series_ids_that_failed_to_add"    >පහත දැක්වෙන්නේ එම ලැයිස්තුවල TMDB ID අගයන්\nසමග එක් එක් අනුකරණ ශ්රේණියට අදාල\nඒ සඳහා පෙර දත්ත ගබඩාවේ ඇති,\nඒත් පාවිච්චි කරලා එකතු කරන්න බැරි උනා TMDB API:</string>

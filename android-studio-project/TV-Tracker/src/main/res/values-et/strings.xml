@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">et</string>
 <string name="app_name_long">tilluke aeg tracker televisioonis</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">Pole hooaega, et näidata.</string>
 <string name="active">Aktiivne</string>
 <string name="archive">Arhiiv</string>
-<string name="addserie_hint">Näita, et lisada ...</string>
-<string name="search_hint">Otsi ...</string>
+<string name="addserie_hint">Näita, et lisada…</string>
+<string name="search_hint">Otsi…</string>
 <string name="menu_filter">Filter näitab</string>
 <string name="menu_undo">Võta tagasi</string>
 <string name="menu_add_serie">Lisa näitamine</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">Hooaeg on täielikult jälgitud</string>
 <string name="messages_deleted">kustutatud</string>
 <string name="messages_title_search_series">Otsimine</string>
-<string name="messages_search_series">Andmete hankimine ...</string>
+<string name="messages_search_series">Andmete hankimine…</string>
 <string name="messages_series_success">Näita %s Lisatud</string>
 <string name="messages_title_adding_serie">Lisa näitamine</string>
-<string name="messages_adding_serie">Teabe kogumine ...</string>
+<string name="messages_adding_serie">Teabe kogumine…</string>
 <string name="messages_specials">Eripakkumised</string>
 <string name="messsages_view_ep_details">Episoodide üksikasjad</string>
 <string name="messsages_edit_seen_timestamp">Redigeerimine vaata ajatemplit</string>
@@ -112,10 +112,10 @@
 <string name="messages_context_archived">arhiveeritud</string>
 <string name="messages_context_unarchived">taaskasutatud</string>
 <string name="messages_aired">Eetris:</string>
-<string name="messages_at"></string>
-<string name="messages_of">/</string>
-<string name="messages_off">Välja lülitatud</string>
-<string name="messages_on">-</string>
+<string name="messages_at">juures</string>
+<string name="messages_of">-st</string>
+<string name="messages_off">väljas</string>
+<string name="messages_on">peal</string>
 <string name="messages_daily">Igapäevane</string>
 <string name="messages_ep">Episood</string>
 <string name="episode_directors">Direktorid:</string>

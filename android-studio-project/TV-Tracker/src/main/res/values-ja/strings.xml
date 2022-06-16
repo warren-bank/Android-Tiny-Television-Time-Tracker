@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ja</string>
 <string name="app_name_long">テレビのための小さな時のトラッカー</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">表示する季節がない.</string>
 <string name="active">アクティブ</string>
 <string name="archive">アーカイブ</string>
-<string name="addserie_hint">追加するものを表示 ...</string>
-<string name="search_hint">検索...</string>
+<string name="addserie_hint">追加するものを表示…</string>
+<string name="search_hint">検索…</string>
 <string name="menu_filter">フィルターの表示</string>
 <string name="menu_undo">元に戻す</string>
 <string name="menu_add_serie">ショーの追加</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">シーソン・完全に監視</string>
 <string name="messages_deleted">削除済み</string>
 <string name="messages_title_search_series">ショーの検索</string>
-<string name="messages_search_series">データの取得中</string>
+<string name="messages_search_series">データの取得中…</string>
 <string name="messages_series_success">ショー %s 追加された</string>
 <string name="messages_title_adding_serie">表示の追加</string>
-<string name="messages_adding_serie">情報を収集しています ...</string>
+<string name="messages_adding_serie">情報を収集しています…</string>
 <string name="messages_specials">特殊文字</string>
 <string name="messsages_view_ep_details">エピソードの詳細</string>
 <string name="messsages_edit_seen_timestamp">表示タイム・スタンプ</string>

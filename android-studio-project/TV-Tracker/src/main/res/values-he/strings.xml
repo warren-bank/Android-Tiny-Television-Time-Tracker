@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">he</string>
 <string name="app_name_long">מכשיר מעקב קטן לטלוויזיה</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">אין עונות להצגה..</string>
 <string name="active">פעיל</string>
 <string name="archive">ארכיב</string>
-<string name="addserie_hint">הצגה להוספה ...</string>
-<string name="search_hint">חיפוש ...</string>
+<string name="addserie_hint">הצגה להוספה…</string>
+<string name="search_hint">חיפוש…</string>
 <string name="menu_filter">תצוגת מסנן</string>
 <string name="menu_undo">ביטול</string>
 <string name="menu_add_serie">הוספת הצגה</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">-עונה 1, פרק 1</string>
 <string name="messages_deleted">נמחק</string>
 <string name="messages_title_search_series">חיפוש הופעות</string>
-<string name="messages_search_series">הנתונים מאוחזרים ...</string>
+<string name="messages_search_series">הנתונים מאוחזרים…</string>
 <string name="messages_series_success">הצגה %s נוסף</string>
 <string name="messages_title_adding_serie">הוספת תצוגה</string>
-<string name="messages_adding_serie">פרטי הצגת מידע ...</string>
+<string name="messages_adding_serie">פרטי הצגת מידע…</string>
 <string name="messages_specials">מיוחדים</string>
 <string name="messsages_view_ep_details">פרק זמן</string>
 <string name="messsages_edit_seen_timestamp">עריכת חותמת זמן</string>

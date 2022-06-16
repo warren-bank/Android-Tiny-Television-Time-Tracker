@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ro</string>
 <string name="app_name_long">mic timp tracker pentru televiziune</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">Nici un sezon pentru a afișa.</string>
 <string name="active">Activ</string>
 <string name="archive">Arhiva</string>
-<string name="addserie_hint">Arată pentru a adăuga ...</string>
-<string name="search_hint">Căutare ...</string>
+<string name="addserie_hint">Arată pentru a adăuga…</string>
+<string name="search_hint">Căutare…</string>
 <string name="menu_filter">Arată filtrul</string>
 <string name="menu_undo">Anulează</string>
 <string name="menu_add_serie">Adaugă un spectacol</string>
@@ -42,7 +42,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Efectuați automat backup-uri zilnice</string>
 <string name="dialog_backup_versioning">Utilizarea versioning pentru backup-uri</string>
-<string name="dialog_pull_to_update">Activează gestul \"Pull To Update\"</string>
+<string name="dialog_pull_to_update">Activează gestul \"Trageți la actualizare\"</string>
 <string name="dialog_backup">Backup</string>
 <string name="dialog_backup_done">Backup baze de date completate</string>
 <string name="dialog_backup_failed">Imposibil de efectuat backup!</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">Sezonul complet vizionat</string>
 <string name="messages_deleted">șterse</string>
 <string name="messages_title_search_series">Căutarea arată</string>
-<string name="messages_search_series">Recuperarea datelor ...</string>
+<string name="messages_search_series">Recuperarea datelor…</string>
 <string name="messages_series_success">Arată %s adăugat</string>
 <string name="messages_title_adding_serie">Adăugarea de spectacol</string>
-<string name="messages_adding_serie">Adunând informaţii despre spectacol ...</string>
+<string name="messages_adding_serie">Adunând informaţii despre spectacol…</string>
 <string name="messages_specials">Specialități</string>
 <string name="messsages_view_ep_details">Detalii despre episod</string>
 <string name="messsages_edit_seen_timestamp">Editați timestamp văzut</string>
@@ -114,8 +114,8 @@
 <string name="messages_aired">Difuzat:</string>
 <string name="messages_at">la</string>
 <string name="messages_of">din</string>
-<string name="messages_off">off</string>
-<string name="messages_on"></string>
+<string name="messages_off">de pe</string>
+<string name="messages_on">pe</string>
 <string name="messages_daily">Zilnic</string>
 <string name="messages_ep">Episodul</string>
 <string name="episode_directors">Directori:</string>

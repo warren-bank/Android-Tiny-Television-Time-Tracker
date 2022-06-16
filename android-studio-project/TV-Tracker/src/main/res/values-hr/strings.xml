@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">hr</string>
 <string name="app_name_long">sićušni tragač vremena za televiziju</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">Nema sezona za prikaz.</string>
 <string name="active">Aktivan</string>
 <string name="archive">Arhiva</string>
-<string name="addserie_hint">Prikaži za dodavanje ...</string>
-<string name="search_hint">Pretraži ...</string>
+<string name="addserie_hint">Prikaži za dodavanje…</string>
+<string name="search_hint">Pretraži…</string>
 <string name="menu_filter">Filter pokazuje</string>
 <string name="menu_undo">Poništenje</string>
 <string name="menu_add_serie">Dodaj prikaz</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">Sezona je kompletno gledana</string>
 <string name="messages_deleted">obrisano</string>
 <string name="messages_title_search_series">Pretraživanje pokazuje</string>
-<string name="messages_search_series">Dohvat podataka ...</string>
+<string name="messages_search_series">Dohvat podataka…</string>
 <string name="messages_series_success">Pokaži %s dodano</string>
 <string name="messages_title_adding_serie">Dodavanje pokazuje</string>
-<string name="messages_adding_serie">Skupljanje informacija o prikazu ...</string>
+<string name="messages_adding_serie">Skupljanje informacija o prikazu…</string>
 <string name="messages_specials">Specijaliteti</string>
 <string name="messsages_view_ep_details">Detalji epizode</string>
 <string name="messsages_edit_seen_timestamp">Uredi viđeni vremenski okvir</string>

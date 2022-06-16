@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">pt</string>
 <string name="app_name_long">minúsculo tempo rastreador para televisão</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">Sem estações para exibir.</string>
 <string name="active">Ativo</string>
 <string name="archive">Arquivo</string>
-<string name="addserie_hint">Mostrar para adicionar ...</string>
-<string name="search_hint">Pesquisar ...</string>
+<string name="addserie_hint">Mostrar para adicionar…</string>
+<string name="search_hint">Pesquisar…</string>
 <string name="menu_filter">Programas de filtro</string>
 <string name="menu_undo">Desfazer</string>
 <string name="menu_add_serie">Adicionar um show</string>
@@ -42,7 +42,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Realizar automaticamente backups diários</string>
 <string name="dialog_backup_versioning">Usar versionamento para backups</string>
-<string name="dialog_pull_to_update">Ativar o gesto \"Pull To Update\"</string>
+<string name="dialog_pull_to_update">Ativar o gesto \"Puxe para atualizar\"</string>
 <string name="dialog_backup">Backup</string>
 <string name="dialog_backup_done">Backup de banco de dados</string>
 <string name="dialog_backup_failed">Não é possível realizar backup!</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">Temporada completamente assistida</string>
 <string name="messages_deleted">excluído</string>
 <string name="messages_title_search_series">Programas de pesquisa</string>
-<string name="messages_search_series">Recuperando dados ...</string>
+<string name="messages_search_series">Recuperando dados…</string>
 <string name="messages_series_success">Mostrar %s adicionado</string>
 <string name="messages_title_adding_serie">Inclusão de show</string>
-<string name="messages_adding_serie">Reune informações de show ...</string>
+<string name="messages_adding_serie">Reune informações de show…</string>
 <string name="messages_specials">Especiais</string>
 <string name="messsages_view_ep_details">Detalhes do episódio</string>
 <string name="messsages_edit_seen_timestamp">Editar timestamp visto</string>

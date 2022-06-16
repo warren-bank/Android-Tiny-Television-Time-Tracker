@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">vi</string>
 <string name="app_name_long">Trình theo dõi thời gian nhỏ</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">Không có mùa để hiển thị.</string>
 <string name="active">Hoạt động</string>
 <string name="archive">Kho lưu</string>
-<string name="addserie_hint">Hiển thị để thêm ...</string>
-<string name="search_hint">Tìm kiếm ...</string>
+<string name="addserie_hint">Hiển thị để thêm…</string>
+<string name="search_hint">Tìm kiếm…</string>
 <string name="menu_filter">Lọc hiển thị</string>
 <string name="menu_undo">Hủy bỏ</string>
 <string name="menu_add_serie">Thêm một chương trình</string>
@@ -75,7 +75,7 @@
 <string name="messages_no_internet">Không có kết nối Internet</string>
 <string name="messages_no_permission">Không đủ quyền để thực hiện thao tác yêu cầu</string>
 <string name="messages_title_update_series">Cập nhật cho</string>
-<string name="messages_episodes"></string>
+<string name="messages_episodes">tập phim</string>
 <string name="messages_new_episodes">các tập mới</string>
 <string name="messages_new_episode">Tập mới</string>
 <string name="messages_ep_aired">đã phát sóng</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">Mùa giải hoàn toàn được</string>
 <string name="messages_deleted">xóa</string>
 <string name="messages_title_search_series">Đang tìm kiếm</string>
-<string name="messages_search_series">Truy xuất dư ̃ liệu</string>
+<string name="messages_search_series">Truy xuất dư ̃ liệu…</string>
 <string name="messages_series_success">Hiển thị %s thêm</string>
 <string name="messages_title_adding_serie">Thêm chương trình</string>
-<string name="messages_adding_serie">Ðang thu thập thông tin ...</string>
+<string name="messages_adding_serie">Ðang thu thập thông tin…</string>
 <string name="messages_specials">Đặc tả</string>
 <string name="messsages_view_ep_details">Chi tiết Tập</string>
 <string name="messsages_edit_seen_timestamp">Sửa nhãn thời gian đã xem</string>
@@ -112,9 +112,9 @@
 <string name="messages_context_archived">lưu trư ̃</string>
 <string name="messages_context_unarchived">đã phục hồi</string>
 <string name="messages_aired">Đã phát:</string>
-<string name="messages_at">vào</string>
-<string name="messages_of"></string>
-<string name="messages_off"></string>
+<string name="messages_at">lúc</string>
+<string name="messages_of">của</string>
+<string name="messages_off">tắt</string>
 <string name="messages_on">trên</string>
 <string name="messages_daily">Hàng ngày</string>
 <string name="messages_ep">Tập tin</string>

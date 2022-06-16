@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">mt</string>
 <string name="app_name_long">żmien ċkejkna tracker għat-televiżjoni</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">L-ebda staġuni għall-wiri.</string>
 <string name="active">Attiv</string>
 <string name="archive">Arkivju</string>
-<string name="addserie_hint">Uri li żżid ...</string>
-<string name="search_hint">Fittex ...</string>
+<string name="addserie_hint">Uri li żżid…</string>
+<string name="search_hint">Fittex…</string>
 <string name="menu_filter">Il-filtru juri</string>
 <string name="menu_undo">Undo</string>
 <string name="menu_add_serie">Żid spettaklu</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">Staġun kompletament jarah</string>
 <string name="messages_deleted">imħassra</string>
 <string name="messages_title_search_series">Tiftix juri</string>
-<string name="messages_search_series">Data ta \' rkupru ...</string>
+<string name="messages_search_series">Data ta \' rkupru…</string>
 <string name="messages_series_success">Uri %s miżjuda</string>
 <string name="messages_title_adding_serie">Żieda turi</string>
-<string name="messages_adding_serie">Ġbir juru informazzjoni ...</string>
+<string name="messages_adding_serie">Ġbir juru informazzjoni…</string>
 <string name="messages_specials">Tas-</string>
 <string name="messsages_view_ep_details">Dettalji tal-episodju</string>
 <string name="messsages_edit_seen_timestamp">Editja raw timebold</string>

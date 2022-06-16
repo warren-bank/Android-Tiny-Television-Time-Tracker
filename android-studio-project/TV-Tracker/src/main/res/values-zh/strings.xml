@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">zh</string>
 <string name="app_name_long">电视小追踪器</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">没有要显示的季节.</string>
 <string name="active">活动</string>
 <string name="archive">档案</string>
-<string name="addserie_hint">显示以添加...</string>
-<string name="search_hint">搜索 ...</string>
+<string name="addserie_hint">显示以添加…</string>
+<string name="search_hint">搜索…</string>
 <string name="menu_filter">过滤器显示</string>
 <string name="menu_undo">解开</string>
 <string name="menu_add_serie">添加显示</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">季节完全看</string>
 <string name="messages_deleted">已删除</string>
 <string name="messages_title_search_series">搜索显示</string>
-<string name="messages_search_series">正在检索数据...</string>
+<string name="messages_search_series">正在检索数据…</string>
 <string name="messages_series_success">显示 %s 已添加</string>
 <string name="messages_title_adding_serie">添加显示</string>
-<string name="messages_adding_serie">正在收集显示信息...</string>
+<string name="messages_adding_serie">正在收集显示信息…</string>
 <string name="messages_specials">专业</string>
 <string name="messsages_view_ep_details">事件详细信息</string>
 <string name="messsages_edit_seen_timestamp">编辑看到的时间戳记</string>

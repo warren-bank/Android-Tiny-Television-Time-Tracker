@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">nb</string>
 <string name="app_name_long">bittesmå tidssporer for TV</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">Ingen sesonger å vise.</string>
 <string name="active">Aktiv</string>
 <string name="archive">Arkiv</string>
-<string name="addserie_hint">Vis for å legge til ...</string>
-<string name="search_hint">Søk ...</string>
+<string name="addserie_hint">Vis for å legge til…</string>
+<string name="search_hint">Søk…</string>
 <string name="menu_filter">Filteret viser</string>
 <string name="menu_undo">Angre</string>
 <string name="menu_add_serie">Legg til en forestilling</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">Sesong totalt sett</string>
 <string name="messages_deleted">slettet</string>
 <string name="messages_title_search_series">Søker viser</string>
-<string name="messages_search_series">Henter data ...</string>
+<string name="messages_search_series">Henter data…</string>
 <string name="messages_series_success">Vis %s lagt til</string>
 <string name="messages_title_adding_serie">Legger til show</string>
-<string name="messages_adding_serie">Samler vis informasjon ...</string>
+<string name="messages_adding_serie">Samler vis informasjon…</string>
 <string name="messages_specials">Spesialer</string>
 <string name="messsages_view_ep_details">Episode detaljer</string>
 <string name="messsages_edit_seen_timestamp">Rediger sett tidsstempel</string>

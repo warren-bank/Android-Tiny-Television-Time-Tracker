@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ar</string>
 <string name="app_name_long">متعقب وقت صغير للتليفزيون</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">لا توجد مواسم للعرض.</string>
 <string name="active">فعال</string>
 <string name="archive">تخزين</string>
-<string name="addserie_hint">عرض لاضافته ...</string>
-<string name="search_hint">بحث ...</string>
+<string name="addserie_hint">عرض لاضافته…</string>
+<string name="search_hint">بحث…</string>
 <string name="menu_filter">ترشيح بيانات البرامج</string>
 <string name="menu_undo">تراجع</string>
 <string name="menu_add_serie">اضافة عرض</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">لقد شاهد الموسم بالكامل</string>
 <string name="messages_deleted">تم حذفه</string>
 <string name="messages_title_search_series">برامج البحث</string>
-<string name="messages_search_series">جاري استرجاع البيانات ...</string>
+<string name="messages_search_series">جاري استرجاع البيانات…</string>
 <string name="messages_series_success">عرض %s تم اضافته</string>
 <string name="messages_title_adding_serie">اضافة عرض</string>
-<string name="messages_adding_serie">جاري تجميع معلومات العرض ...</string>
+<string name="messages_adding_serie">جاري تجميع معلومات العرض…</string>
 <string name="messages_specials">تحديد خاص</string>
 <string name="messsages_view_ep_details">تفاصيل الحلقة</string>
 <string name="messsages_edit_seen_timestamp">تحرير خاتم الوقت</string>
@@ -102,8 +102,8 @@
 <string name="messages_db_error_delete_serie">حدث خطأ في قاعدة البيانات أثناء حذف العرض</string>
 <string name="messages_db_error_delete_episode">حدث خطأ في قاعدة البيانات أثناء حذف الحلقة</string>
 <string name="messages_api_con_error">خطأ في الاتصال الى TMDb API. حاول مرة أخرى.</string>
-<string name="messages_marked_seen">ملحوظ كما تم مشاهدته</string>
-<string name="messages_marked_unseen">تم تعليمه كغير معلم</string>
+<string name="messages_marked_seen">تم وضع علامة كما لم ير</string>
+<string name="messages_marked_unseen">تم تعليمه كغير معل</string>
 <string name="messages_context_mark_season">تعليم كل الحلقات</string>
 <string name="messages_context_mark_season_seen_before">قبل الموسم كما ترى</string>
 <string name="messages_context_mark_season_seen">في الموسم كما ترى</string>

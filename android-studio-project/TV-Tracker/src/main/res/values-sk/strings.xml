@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">sk</string>
 <string name="app_name_long">malý čas tracker pre televízor</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">Žiadne sezóny na zobrazenie.</string>
 <string name="active">Aktívny</string>
 <string name="archive">Archív</string>
-<string name="addserie_hint">Zobraziť &amp; pridať ...</string>
-<string name="search_hint">Hľadať ...</string>
+<string name="addserie_hint">Zobraziť &amp; pridať…</string>
+<string name="search_hint">Hľadať…</string>
 <string name="menu_filter">Zobraziť filter</string>
 <string name="menu_undo">Vrátiť späť</string>
 <string name="menu_add_serie">Pridať show</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">Sezóna úplne sledovaná</string>
 <string name="messages_deleted">zmazané</string>
 <string name="messages_title_search_series">Vyhľadávanie ukazuje</string>
-<string name="messages_search_series">Získavajú sa údaje ...</string>
+<string name="messages_search_series">Získavajú sa údaje…</string>
 <string name="messages_series_success">Zobraziť %s pridaný</string>
 <string name="messages_title_adding_serie">Pridáva sa zobrazenie</string>
-<string name="messages_adding_serie">Získavanie informácií o zobrazovaní ...</string>
+<string name="messages_adding_serie">Získavanie informácií o zobrazovaní…</string>
 <string name="messages_specials">Špeciály</string>
 <string name="messsages_view_ep_details">Podrobné informácie o</string>
 <string name="messsages_edit_seen_timestamp">Upraviť zobrazenie časovej značky</string>

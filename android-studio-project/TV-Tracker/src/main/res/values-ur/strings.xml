@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ur</string>
 <string name="app_name_long">ٹیلی ویژن کے لئے چھوٹے وقت کے ٹریکر</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">ڈسپلے کرنے کے لئے کوئی موسموں.</string>
 <string name="active">فعال</string>
 <string name="archive">محفوظہ</string>
-<string name="addserie_hint">شامل کرنے کے لئے شو ...</string>
-<string name="search_hint">تلاش ...</string>
+<string name="addserie_hint">شامل کرنے کے لئے شو…</string>
+<string name="search_hint">تلاش…</string>
 <string name="menu_filter">فلٹر شو</string>
 <string name="menu_undo">Undo</string>
 <string name="menu_add_serie">ایک شو شامل کریں</string>
@@ -37,10 +37,10 @@
 <string name="menu_context_search_on">تلاش</string>
 <string name="menu_context_ext_resources">بیرونی وسائل</string>
 <string name="menu_context_mark_next_episode_as_seen">مارک اگلی قسط دیکھا</string>
-<string name="menu_context_pin">قلم</string>
+<string name="menu_context_pin">پن</string>
 <string name="menu_context_unpin">انپن</string>
 <string name="dialog_ok">OK</string>
-<string name="dialog_auto_backup">خود کار طریقے سے روزانہ بیک اپ انجام</string>
+<string name="dialog_auto_backup">خود بخود روزانہ بیک اپ انجام دیں</string>
 <string name="dialog_backup_versioning">بیک اپ کے لیے عمودی طور پر استعمال کریں</string>
 <string name="dialog_pull_to_update">قابل تجدید \"پلس ٹو ڈیٹ\" اشارہ کریں</string>
 <string name="dialog_backup">بیک اپ</string>
@@ -82,7 +82,7 @@
 <string name="messages_to_be_aired">نشر کیا جائے گا</string>
 <string name="messages_to_be_aired_pl">نشر کیا جائے گا</string>
 <string name="messages_seasons">موسم</string>
-<string name="messages_season">موسم</string>
+<string name="messages_season">سیزن</string>
 <string name="messages_next_episode">اگلا غیب:</string>
 <string name="messages_last_episode">آخری غیب:</string>
 <string name="messages_next_airing">اگلی نشر:</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">موسم پوری طرح دیکھا</string>
 <string name="messages_deleted">خارج کر دیا</string>
 <string name="messages_title_search_series">سرچ شو</string>
-<string name="messages_search_series">اعداد و شمار کی تردید ...</string>
+<string name="messages_search_series">اعداد و شمار کی تردید…</string>
 <string name="messages_series_success">شو %s شامل</string>
 <string name="messages_title_adding_serie">ایڈڈنگ شو</string>
-<string name="messages_adding_serie">اجتماع شو کی معلومات ...</string>
+<string name="messages_adding_serie">اجتماع شو کی معلومات…</string>
 <string name="messages_specials">وشیشتائیں</string>
 <string name="messsages_view_ep_details">قسط کی تفصیلات</string>
 <string name="messsages_edit_seen_timestamp">تدوین کا ٹائم ٹکٹ دیکھا</string>

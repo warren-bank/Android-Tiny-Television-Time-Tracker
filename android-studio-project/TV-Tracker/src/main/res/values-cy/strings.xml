@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">cy</string>
 <string name="app_name_long">traciwr amser bach ar gyfer y teledu</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">Dim tymhorau i\'w ddangos.</string>
 <string name="active">Gweithredol</string>
 <string name="archive">Archif</string>
-<string name="addserie_hint">Dangos i ychwanegu ...</string>
-<string name="search_hint">Chwilio ...</string>
+<string name="addserie_hint">Dangos i ychwanegu…</string>
+<string name="search_hint">Chwilio…</string>
 <string name="menu_filter">Name</string>
 <string name="menu_undo">Dadwneud</string>
 <string name="menu_add_serie">Ychwanegu sioe</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">Name</string>
 <string name="messages_deleted">dilewyd</string>
 <string name="messages_title_search_series">&amp; Chwilio</string>
-<string name="messages_search_series">Nôl data ...</string>
+<string name="messages_search_series">Nôl data…</string>
 <string name="messages_series_success">Dangos %s ychwanegwyd</string>
 <string name="messages_title_adding_serie">Ychwanegu sioe</string>
-<string name="messages_adding_serie">Casglu gwybodaeth:</string>
+<string name="messages_adding_serie">Casglu gwybodaeth…</string>
 <string name="messages_specials">Arbennigion</string>
 <string name="messsages_view_ep_details">Manylion y bennod</string>
 <string name="messsages_edit_seen_timestamp">Golygu stamp amser</string>

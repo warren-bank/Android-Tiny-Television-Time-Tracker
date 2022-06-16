@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">cs</string>
 <string name="app_name_long">malý sledovač času pro televizi</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">Žádné roční období k zobrazení.</string>
 <string name="active">Aktivní.</string>
 <string name="archive">Archív</string>
-<string name="addserie_hint">Zobrazit pro přidání ...</string>
-<string name="search_hint">Hledat ...</string>
+<string name="addserie_hint">Zobrazit pro přidání…</string>
+<string name="search_hint">Hledat…</string>
 <string name="menu_filter">Filtrovat zobrazení</string>
 <string name="menu_undo">Vrátit zpět</string>
 <string name="menu_add_serie">Přidat prezentaci</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">Sezóna kompletně sledována</string>
 <string name="messages_deleted">odstraněn</string>
 <string name="messages_title_search_series">Hledání ukazuje</string>
-<string name="messages_search_series">Načítání dat ...</string>
+<string name="messages_search_series">Načítání dat…</string>
 <string name="messages_series_success">Zobrazit %s přidáno</string>
 <string name="messages_title_adding_serie">Přidání zobrazení</string>
-<string name="messages_adding_serie">Shromažďování informací o zobrazení ...</string>
+<string name="messages_adding_serie">Shromažďování informací o zobrazení…</string>
 <string name="messages_specials">Speciální</string>
 <string name="messsages_view_ep_details">Detaily epizody</string>
 <string name="messsages_edit_seen_timestamp">Upravit časové razítko</string>

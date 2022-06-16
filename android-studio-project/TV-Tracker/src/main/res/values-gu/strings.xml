@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">gu</string>
 <string name="app_name_long">ટેલિવિઝન માટે ઘણી વખત ટ્રેકર</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">દર્શાવવા માટે ઋતુઓ નથી.</string>
 <string name="active">સક્રિય</string>
 <string name="archive">પેટી</string>
-<string name="addserie_hint">ઉમેરવા માટે બતાવો ...</string>
-<string name="search_hint">શોધ ...</string>
+<string name="addserie_hint">ઉમેરવા માટે બતાવો…</string>
+<string name="search_hint">શોધ…</string>
 <string name="menu_filter">ફિલ્ટર બતાવે છે</string>
 <string name="menu_undo">પાછું લાવો</string>
 <string name="menu_add_serie">બતાવ ઉમેરો</string>
@@ -90,7 +90,7 @@
 <string name="messages_season_completely_watched">શિયાળાને સંપૂર્ણપણે જોઇ</string>
 <string name="messages_deleted">કાઢી નંખાયેલ</string>
 <string name="messages_title_search_series">શોધી રહ્યા છે</string>
-<string name="messages_search_series">માહિતી મેળવી રહ્યા છીએ ...</string>
+<string name="messages_search_series">માહિતી મેળવી રહ્યા છીએ…</string>
 <string name="messages_series_success">બતાવો %s ઉમેરાયેલ</string>
 <string name="messages_title_adding_serie">શબ્દ ઉમેરી રહ્યા છીએ</string>
 <string name="messages_adding_serie">એકત્રીકરણ બતાવો માહિતી…</string>

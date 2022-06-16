@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">lt</string>
 <string name="app_name_long">Maža laiko sekiklis televizoriui</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">Nėra sezonų rodyti.</string>
 <string name="active">Aktyvus</string>
 <string name="archive">Archyvas</string>
-<string name="addserie_hint">Rodyti ...</string>
-<string name="search_hint">Ieškoti ...</string>
+<string name="addserie_hint">Rodyti…</string>
+<string name="search_hint">Ieškoti…</string>
 <string name="menu_filter">Filtruoti</string>
 <string name="menu_undo">Undo</string>
 <string name="menu_add_serie">Pridėti šou</string>
@@ -25,20 +25,20 @@
 <string name="menu_context_updated">Atnaujinta</string>
 <string name="menu_context_delete">Ištrinti</string>
 <string name="menu_context_add_serie">Pridėti rodyti</string>
-<string name="menu_show_archive">Rodyti archyvą</string>
+<string name="menu_show_archive">Rodyti archyv</string>
 <string name="menu_show_current">Rodyti dabartinį</string>
 <string name="menu_exclude_seen">Nematyti</string>
 <string name="menu_include_seen">Įtraukti į</string>
 <string name="menu_log">Žurnalo</string>
-<string name="menu_close_log">Užverti žurnalą</string>
+<string name="menu_close_log">Užverti žurnal</string>
 <string name="menu_context_view_serie_details">Rodyti detales</string>
 <string name="menu_context_view_imdb">IMDb rodyti puslapį</string>
 <string name="menu_context_view_ep_imdb">IMDb Epizodas</string>
 <string name="menu_context_search_on">Ieškoti</string>
 <string name="menu_context_ext_resources">Išorės ištekliai</string>
 <string name="menu_context_mark_next_episode_as_seen">Pažymėti kitą epizodą, kaip matyti</string>
-<string name="menu_context_pin">PIN</string>
-<string name="menu_context_unpin">Unpin</string>
+<string name="menu_context_pin">prisegti</string>
+<string name="menu_context_unpin">atkalti</string>
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Automatiškai atlikti kasdienes atsargines kopijas</string>
 <string name="dialog_backup_versioning">Naudoti veiksmųveiksmųveiksmusir</string>
@@ -73,9 +73,9 @@
 <string name="menu_unarchive">Susigrąžinimas</string>
 <string name="messages_title_updating_series">Atnaujinimui rodo</string>
 <string name="messages_no_internet">Interneto ryšio nėra</string>
-<string name="messages_no_permission">Nepakankamas leidimas atlikti prašomą operaciją</string>
+<string name="messages_no_permission">Nepakankamas leidimas atlikti prašomą operacij</string>
 <string name="messages_title_update_series">Atnaujinti rodo</string>
-<string name="messages_episodes">-</string>
+<string name="messages_episodes">epizodai</string>
 <string name="messages_new_episodes">Naujų epizodų</string>
 <string name="messages_new_episode">naujas epizodas</string>
 <string name="messages_ep_aired">suporuotas</string>
@@ -88,19 +88,19 @@
 <string name="messages_next_airing">Next Airing:</string>
 <string name="messages_no_new_eps">Nėra naujų epizodų</string>
 <string name="messages_season_completely_watched">Sezonas visiškai stebimi</string>
-<string name="messages_deleted">Išbraukti.</string>
+<string name="messages_deleted">ištrinta</string>
 <string name="messages_title_search_series">Paieškos rezultatai</string>
-<string name="messages_search_series">Gaunami duomenys ...</string>
+<string name="messages_search_series">Gaunami duomenys…</string>
 <string name="messages_series_success">Rodyti %s pridedama</string>
 <string name="messages_title_adding_serie">Pridėti šou</string>
-<string name="messages_adding_serie">Rinkti informaciją ...</string>
+<string name="messages_adding_serie">Rinkti informaciją…</string>
 <string name="messages_specials">Specialūs reikalavimai</string>
 <string name="messsages_view_ep_details">Epizodo duomenys</string>
 <string name="messsages_edit_seen_timestamp">Keisti laiko žymę</string>
 <string name="messages_calendar_app_error">Nerasta kalendoriaus app!</string>
 <string name="messages_db_error_update">Duomenų bazės klaida atnaujinant</string>
 <string name="messages_db_error_delete_serie">Duomenų bazės klaida, kai ištrinama</string>
-<string name="messages_db_error_delete_episode">Duomenų bazės klaida trinant epizodą</string>
+<string name="messages_db_error_delete_episode">Duomenų bazės klaida ištrinant epizodą</string>
 <string name="messages_api_con_error">Klaida, jungianti TMDb API. Bandykite dar.</string>
 <string name="messages_marked_seen">pažymėti kaip matyti</string>
 <string name="messages_marked_unseen">pažymėta kaip nematė</string>
@@ -112,10 +112,10 @@
 <string name="messages_context_archived">Archyvas</string>
 <string name="messages_context_unarchived">Atsigavo</string>
 <string name="messages_aired">Poruota:</string>
-<string name="messages_at"></string>
-<string name="messages_of"></string>
-<string name="messages_off">Ne</string>
-<string name="messages_on">Dėl</string>
+<string name="messages_at">prie</string>
+<string name="messages_of">apie</string>
+<string name="messages_off">išjungtas</string>
+<string name="messages_on">Įjungta</string>
 <string name="messages_daily">Kasdien</string>
 <string name="messages_ep">Epizodas</string>
 <string name="episode_directors">Direktoriai:</string>

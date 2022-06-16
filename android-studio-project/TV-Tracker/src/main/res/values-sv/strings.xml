@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">sv</string>
 <string name="app_name_long">Tv-pytteliten sändaren</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">Inga säsonger att visa.</string>
 <string name="active">Aktiv</string>
 <string name="archive">Arkivera</string>
-<string name="addserie_hint">Visa att lägga till ...</string>
-<string name="search_hint">Sök ...</string>
+<string name="addserie_hint">Visa att lägga till…</string>
+<string name="search_hint">Sök…</string>
 <string name="menu_filter">Filterprogram</string>
 <string name="menu_undo">Ångra</string>
 <string name="menu_add_serie">Lägg till en show</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">Säsongen bevakade</string>
 <string name="messages_deleted">borttagen</string>
 <string name="messages_title_search_series">Söka i program</string>
-<string name="messages_search_series">Hämtar data ...</string>
+<string name="messages_search_series">Hämtar data…</string>
 <string name="messages_series_success">Visa %s tillagt</string>
 <string name="messages_title_adding_serie">Lägger till program</string>
-<string name="messages_adding_serie">Samlar in information ...</string>
+<string name="messages_adding_serie">Samlar in information…</string>
 <string name="messages_specials">Specialiteter</string>
 <string name="messsages_view_ep_details">Episod-detaljer</string>
 <string name="messsages_edit_seen_timestamp">Redigera sett tidsstämpel</string>

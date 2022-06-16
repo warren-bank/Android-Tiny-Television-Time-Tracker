@@ -42,7 +42,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Automatisch dagelijks back-ups maken</string>
 <string name="dialog_backup_versioning">Versiebeheer voor back-ups gebruiken</string>
-<string name="dialog_pull_to_update">\"Pull To Update\"-gebaar inschakelen</string>
+<string name="dialog_pull_to_update">\"Trek aan om te updaten\"-gebaar inschakelen</string>
 <string name="dialog_backup">Back-up maken</string>
 <string name="dialog_backup_done">Back-up voltooid</string>
 <string name="dialog_backup_failed">Kon back-up niet voltooien!</string>
@@ -132,7 +132,7 @@
 <string name="messages_off">uit</string>
 <string name="messages_on">op</string>
 <string name="messages_daily">Dagelijks</string>
-<string name="messages_ep"></string>
+<string name="messages_ep">Aflevering</string>
 <string name="episode_directors">Regisseurs:</string>
 <string name="episode_writers">Schrijvers:</string>
 <string name="episode_guest_stars">Gastacteurs:</string>

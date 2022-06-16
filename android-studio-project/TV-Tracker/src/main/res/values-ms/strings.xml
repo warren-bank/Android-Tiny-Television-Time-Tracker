@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ms</string>
 <string name="app_name_long">Penjejak masa kecil untuk televisyen</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">Tiada musim untuk dipaparkan.</string>
 <string name="active">&amp; Aktif</string>
 <string name="archive">Arkib</string>
-<string name="addserie_hint">Papar untuk tambah ...</string>
-<string name="search_hint">Gelintar ...</string>
+<string name="addserie_hint">Papar untuk tambah…</string>
+<string name="search_hint">Gelintar…</string>
 <string name="menu_filter">Penapis dipaparkan</string>
 <string name="menu_undo">Buat asal</string>
 <string name="menu_add_serie">Tambah paparan</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">Musim telah ditonton.</string>
 <string name="messages_deleted">dipadam</string>
 <string name="messages_title_search_series">Menggelintar menunjukkan</string>
-<string name="messages_search_series">Mendapatkan semula data ...</string>
+<string name="messages_search_series">Mendapatkan semula data…</string>
 <string name="messages_series_success">Papar %s ditambah</string>
 <string name="messages_title_adding_serie">Menambah paparan</string>
-<string name="messages_adding_serie">Mengumpulkan maklumat ...</string>
+<string name="messages_adding_serie">Mengumpulkan maklumat…</string>
 <string name="messages_specials">Spesifikasi</string>
 <string name="messsages_view_ep_details">Perincian episod</string>
 <string name="messsages_edit_seen_timestamp">Sunting setem masa</string>

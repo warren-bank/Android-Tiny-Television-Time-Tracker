@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">tr</string>
 <string name="app_name_long">televizyon için minik zaman izleyici</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">Görüntülenecek mevsimler yok.</string>
 <string name="active">Etkin</string>
 <string name="archive">Arşivle</string>
-<string name="addserie_hint">Eklemek için göster ...</string>
-<string name="search_hint">Ara ...</string>
+<string name="addserie_hint">Eklemek için göster…</string>
+<string name="search_hint">Ara…</string>
 <string name="menu_filter">Süzgeç gösterileri</string>
 <string name="menu_undo">Geri Al</string>
 <string name="menu_add_serie">Bir gösteri ekle</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">Sezon tamamen izlendi</string>
 <string name="messages_deleted">silindi</string>
 <string name="messages_title_search_series">Arama gösterileri</string>
-<string name="messages_search_series">Veriler alınıyor ...</string>
+<string name="messages_search_series">Veriler alınıyor…</string>
 <string name="messages_series_success">Göster %s eklendi</string>
 <string name="messages_title_adding_serie">Gösterme ekleme</string>
-<string name="messages_adding_serie">Show bilgileri toplanıyor ...</string>
+<string name="messages_adding_serie">Show bilgileri toplanıyor…</string>
 <string name="messages_specials">Özel Bilgiler</string>
 <string name="messsages_view_ep_details">Bölüm ayrıntıları</string>
 <string name="messsages_edit_seen_timestamp">Görülme zaman damgasını düzenle</string>
@@ -111,11 +111,11 @@
 <string name="messages_context_mark_season_unseen_after">sezondan sonra görünmeyen</string>
 <string name="messages_context_archived">arşivlendi</string>
 <string name="messages_context_unarchived">kurtarıldı</string>
-<string name="messages_aired">AIred:</string>
-<string name="messages_at">-</string>
-<string name="messages_of">/</string>
+<string name="messages_aired">Yaymak:</string>
+<string name="messages_at">-den</string>
+<string name="messages_of">-nin</string>
 <string name="messages_off">kapalı</string>
-<string name="messages_on">-</string>
+<string name="messages_on">üzerinde</string>
 <string name="messages_daily">Günlük</string>
 <string name="messages_ep">Bölüm</string>
 <string name="episode_directors">Yönetmenler:</string>

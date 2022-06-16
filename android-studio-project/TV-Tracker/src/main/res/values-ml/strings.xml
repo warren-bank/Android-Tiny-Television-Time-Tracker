@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ml</string>
 <string name="app_name_long">ടെലിവിഷനിൽ ചെറിയ സമയത്തുള്ള ട്രാക്കർ</string>
@@ -7,10 +7,10 @@
 <string name="layout_seasons_no_items">പ്രദര്ശിപ്പിക്കാന് ഋതുക്കളില്ല.</string>
 <string name="active">സജീവമാക്കുക</string>
 <string name="archive">ശേഖരം</string>
-<string name="addserie_hint">ചേര്ക്കാന് കാണിക്കുക ...</string>
-<string name="search_hint">തെരയുക ...</string>
+<string name="addserie_hint">ചേര്ക്കാന് കാണിക്കുക…</string>
+<string name="search_hint">തെരയുക…</string>
 <string name="menu_filter">ഫില്റ്റര് കാണിക്കുന്നു</string>
-<string name="menu_undo">Undo</string>
+<string name="menu_undo">പഴയപടിയാക്കുക</string>
 <string name="menu_add_serie">ഒരു ഷോ കൂട്ടിച്ചേര്ക്കുക</string>
 <string name="menu_update">പരിഷ്കരിക്കുക</string>
 <string name="menu_search">തെരയുക</string>
@@ -37,11 +37,11 @@
 <string name="menu_context_search_on">തെരയുക</string>
 <string name="menu_context_ext_resources">പുറം വിഭവങ്ങള്</string>
 <string name="menu_context_mark_next_episode_as_seen">അടുത്ത അദ്ധ്യായം കാണുന്നതുപോലെ അടയാളപ്പെടുത്തുക</string>
-<string name="menu_context_pin">പിന്</string>
-<string name="menu_context_unpin">Unpin</string>
+<string name="menu_context_pin">മൊട്ടുസൂചി</string>
+<string name="menu_context_unpin">അൺപിൻ</string>
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">ദിവസേന ബാക്കപ്പുകള് സ്വയം നടത്തുക</string>
-<string name="dialog_backup_versioning">ബാക്കപ്പുകള്ക്കായി versioning ഉപയോഗിക്കുക</string>
+<string name="dialog_backup_versioning">ബാക്കപ്പുകൾക്കായി പതിപ്പ് ഉപയോഗിക്കുക</string>
 <string name="dialog_pull_to_update">\"പുതുക്കല് പരിഷ്കരിക്കുന്നതിനായി\" സജ്ജമാക്കുക</string>
 <string name="dialog_backup">ബാക്കപ്പ്</string>
 <string name="dialog_backup_done">ഡാറ്റാബേസ് പിന്തുണയുള്ള</string>
@@ -49,7 +49,7 @@
 <string name="dialog_backup_preupdate_title">ഡാറ്റാബേസ് പരിഷ്കരണം ആവശ്യമാണ്</string>
 <string name="dialog_backup_preupdate_message">നിങ്ങള് ഈ പ്രയോഗത്തിന്റെ ഒരു പുതിയ പതിപ്പ് ഇന്സ്റ്റോള് ചെയ്തിരിക്കുന്നു. ഡാറ്റാബേസിന്റെ പതിപ്പും പരിഷ്കരിക്കേണ്ടതുണ്ട്. ഈ ഓപ്പറേഷന് ശുപാർശ ചെയ്യുന്നതിനുമുമ്പ് ഒരു ബാക്കപ്പ് സൂക്ഷിക്കുക; ഏതെങ്കിലും പിശകു് ഡാറ്റാബേസ് ദുഷിപ്പിക്കും. അങ്ങനെ ചെയ്യാന്, ബാക്കപ്പ് ഫയല് സൂക്ഷിക്കുന്നതിനായി ആദ്യം അനുമതി നല്കേണ്ടതുണ്ട്. ആവശ്യമായ പുതുക്കുന്നതിന് മുന്പ് ഒരു ബാക്കപ്പ് സൂക്ഷിക്കണമോ\??</string>
 <string name="dialog_backup_usefolder">ദിവസേന ബാക്കപ്പുകള്ക്കായി ഫോള്ഡര് ഉപയോഗിക്കുക</string>
-<string name="dialog_change_language">Synopsis language</string>
+<string name="dialog_change_language">സംഗ്രഹം ഭാഷ</string>
 <string name="dialog_restore">വീണ്ടെടുക്കുക</string>
 <string name="dialog_restore_now">ഒരു ബാക്കപ്പ് വീണ്ടെടുക്കുവാന് ഈ ഡാറ്റാബേസില് ഇപ്പോള് എല്ലാ വിവരങ്ങളും പൂര്ണ്ണമായി മാറ്റും. തുടരുക?</string>
 <string name="dialog_restore_done">ഡാറ്റാബേസ് വിജയകരമായി വീണ്ടെടുത്ത</string>
@@ -70,7 +70,7 @@
 <string name="dialog_help">&#187; പരിഷ്കരിക്കാന് മറക്കരുത്.\n&#187; കൂടുതല് ഐച്ഛികങ്ങള് കൂടുതല് ഐച്ഛികങ്ങള്\n&#187; തിരിച്ചു പോകാനുള്ള അവകാശം സ്വിപ്പ് ബാക്കി\n\nà \'- à\', à \', à\', à \', à:\n&#187; പരിഷ്കരിക്കുവാനുള്ള പട്ടിക താഴെ കാണുക\n&#187; അടുത്ത എപ്പിസോഫിനുള്ള പോസ്റ്റര്\n&#187; വിവരങ്ങള് കാണിക്കുവാന് ഡബിള് ടാപ്പ് പോസ്റ്റര്\n&#187; ബാഹ്യ റിസോഴ്സിനായി ലോങ്ങ്-പ്രസ് പോസ്റ്റര് (* [url] s നേരിട്ട്, അല്ലെങ്കില് ലിസ്റ്റ്)\n&#187; കാണുന്നതുപോലെ അടയാളപ്പെടുത്താന് വലതുവശത്തു് ഇടതുവശത്തു്\n\nവിശദാംശങ്ങള് കാണിയ്ക്കുക:\n&#187; പൂര്ണ്ണമായ സ്ക്രീന് കാഴ്ചയ്ക്കുള്ള പോസ്റ്റര് ടാപ്പ് ചെയ്യുക\n&#187; ഫാന് കലയ്ക്കുള്ള പൂര്ണ്ണമായ പോസ്റ്റര് ചിത്രം ക്ലിക്ക് ചെയ്യുക\n&#187; ബാഹ്യ ആപ്പിനിൽ തുറക്കുവാനുള്ള ദീർഘമായ പൂർണ്ണമായ പോസ്റ്റർ\n\nകാണിക്ക/ എപ്പിസോഡില് വിശദാംശങ്ങള്:\n&#187; ടാപ് IMDb കാണുവാനുള്ള റേറ്റിങ്ങ് IMDb\n&#187; കലണ്ടറിലേക്ക് ചേര്ക്കാനുള്ള തീയതി</string>
 <string name="dialog_networks">നെറ്റ്വർക്ക്Name</string>
 <string name="menu_archive">ശേഖരം</string>
-<string name="menu_unarchive">Recover</string>
+<string name="menu_unarchive">വീണ്ടെടുക്കുക</string>
 <string name="messages_title_updating_series">പ്രദര്ശനം കാണിക്കുന്നു</string>
 <string name="messages_no_internet">ഇന്റര്നെറ്റ് ബന്ധം ലഭ്യമല്ല</string>
 <string name="messages_no_permission">ആവശ്യപ്പെട്ട പ്രക്രിയ പ്രവര്ത്തിപ്പിക്കാന് ആവശ്യമായ അനുവാദം</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">സീസൺ പൂർണ്ണമായും നിരീക്ഷിച്ചു</string>
 <string name="messages_deleted">നീക്കം ചെയ്യുക</string>
 <string name="messages_title_search_series">പ്രദര്ശനം കാണിക്കുന്നു</string>
-<string name="messages_search_series">ഡേറ്റാ ലഭ്യമാക്കുന്നു ...</string>
+<string name="messages_search_series">ഡേറ്റാ ലഭ്യമാക്കുന്നു…</string>
 <string name="messages_series_success">കാണിക്കുക %s കൂട്ടിച്ചേരുക</string>
 <string name="messages_title_adding_serie">പ്രദര്ശനം</string>
-<string name="messages_adding_serie">Gathering show information ...</string>
+<string name="messages_adding_serie">ശേഖരിക്കുന്ന വിവരങ്ങൾ ശേഖരിക്കുന്നു…</string>
 <string name="messages_specials">സ്പെകിയല്</string>
 <string name="messsages_view_ep_details">എപ്പിസോഡിന്റെ വിവരങ്ങള്</string>
 <string name="messsages_edit_seen_timestamp">കാണുന്ന സമയസ്റ്റാമ്പ് ചിട്ടപ്പെടുത്തുക</string>
@@ -109,20 +109,20 @@
 <string name="messages_context_mark_season_seen">സീസണിൽ കണ്ടു.</string>
 <string name="messages_context_mark_season_unseen">സീസണിൽ കാണപ്പെടുന്നതുപോലെ</string>
 <string name="messages_context_mark_season_unseen_after">സീസണിനു ശേഷം കാണപ്പെടുന്നതുപോലെ</string>
-<string name="messages_context_archived">\@ option: check</string>
-<string name="messages_context_unarchived">बरामद</string>
-<string name="messages_aired">Aired:</string>
-<string name="messages_at">At</string>
-<string name="messages_of">Of a</string>
-<string name="messages_off">ഓഫ് ചെയ്യുക</string>
-<string name="messages_on">ഓണ്</string>
+<string name="messages_context_archived">ആർക്കൈവുചെയ്തു</string>
+<string name="messages_context_unarchived">വീണ്ടെടുത്തു</string>
+<string name="messages_aired">പക്ഷേപണം ചെയ്യല്:</string>
+<string name="messages_at">സ്ഥാനം</string>
+<string name="messages_of">ആല്</string>
+<string name="messages_off">ദൂരെ</string>
+<string name="messages_on">മേല്</string>
 <string name="messages_daily">ദിനപത്രം</string>
 <string name="messages_ep">എപ്പിസോഡ്</string>
 <string name="episode_directors">സംവിധായകന്മാര്:</string>
 <string name="episode_writers">എഴുത്തുകാരന്:</string>
 <string name="episode_guest_stars">ഗസ്റ്റ് നക്ഷത്രങ്ങൾ:</string>
 <string name="series_runtime_minutes">മിനിറ്റ്</string>
-<string name="series_synopsis">Synopsis:</string>
+<string name="series_synopsis">സംഗ്രഹം:</string>
 <string name="series_actors">ആക്ടേഴ്സ്:</string>
 <string name="showstatus_continuing">തുടരുന്നു</string>
 <string name="showstatus_ended">അവസാനിച്ചിരിക്കുന്നു</string>

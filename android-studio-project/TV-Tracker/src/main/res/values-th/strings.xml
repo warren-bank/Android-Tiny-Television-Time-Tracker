@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">th</string>
 <string name="app_name_long">ตัวติดตามตัวน้อยสำหรับโทรทัศน์</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">ไม่มีฤดูกาลที่จะแสดง.</string>
 <string name="active">แอ็คทีฟ</string>
 <string name="archive">เก็บถาวร</string>
-<string name="addserie_hint">แสดงเพื่อเพิ่ม...</string>
-<string name="search_hint">ค้นหา...</string>
+<string name="addserie_hint">แสดงเพื่อเพิ่ม…</string>
+<string name="search_hint">ค้นหา…</string>
 <string name="menu_filter">แสดงตัวกรอง</string>
 <string name="menu_undo">เลิกทำ</string>
 <string name="menu_add_serie">เพิ่มการแสดง</string>
@@ -65,7 +65,7 @@
 <string name="dialog_switch_swipe_direction">ปัดจากขวาไปซ้ายเพื่อกลับไปที่</string>
 <string name="dialog_show_icons">แสดงอิมเมจในรายการ</string>
 <string name="dialog_resize_icons">ปรับขนาดความกว้างของรูปภาพแบบไดนามิกในรายการ</string>
-<string name="dialog_show_next_airing">แสดงวันที่ของตอนออกอากาศถัดไปแทนวันที่ของตอนต่อไป ...</string>
+<string name="dialog_show_next_airing">แสดงวันที่ของตอนออกอากาศถัดไปแทนวันที่ของตอนต่อไป</string>
 <string name="dialog_mark_from_last_watched">มาร์กในตอนถัดไปเริ่มจากการเฝ้าสังเกตครั้งล่าสุด</string>
 <string name="dialog_help">&#187; อย่าลืมอัพเดตแสดงอย่างสม่ำเสมอ\n&#187; ไอเท็มที่มีการกดยาวสำหรับอ็อพชันเพิ่มเติม\n&#187; ปัดจากซ้ายไปขวาเพื่อกลับไป -\n\nในการแสดงภาพรวม:\n&#187; ดึงรายการเพื่ออัพเดตรายการ\n&#187; แท็บโปสเตอร์สำหรับข้อมูลตอนถัดไป\n&#187; โปสเตอร์ double tap เพื่อแสดงข้อมูล\n&#187; โปสเตอร์ค้างไว้นานสำหรับรีซอร์สภายนอก (ไปที่ *[url]s โดยตรงหรือรายการ)\n&#187; ปัดจากขวาไปซ้ายเพื่อทำเครื่องหมายถัดจาก seen\n\nในรายละเอียดที่แสดง:\n&#187; แตะโปสเตอร์สำหรับมุมมองแบบเต็มหน้าจอ\n&#187; คลิกรูปภาพโปสเตอร์แบบเต็มจอสำหรับภาพอาร์ต\n&#187; โปสเตอร์ขนาดเต็มจอแบบเต็มเพื่อเปิดในแอ็พภายนอก\n\nใน Show/Episode Details:\n&#187; แตะ IMDb การจัดอันดับเพื่อดูใน IMDb\n&#187; วันที่แตะเพื่อเพิ่มลงในปฏิทิน</string>
 <string name="dialog_networks">เครือข่าย</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">ซีซั่นดูแล้ว</string>
 <string name="messages_deleted">ถูกลบ</string>
 <string name="messages_title_search_series">การค้นหาแสดง</string>
-<string name="messages_search_series">กำลังดึงข้อมูล...</string>
+<string name="messages_search_series">กำลังดึงข้อมูล…</string>
 <string name="messages_series_success">แสดง %s ที่เพิ่ม</string>
 <string name="messages_title_adding_serie">การเพิ่มการแสดง</string>
-<string name="messages_adding_serie">กำลังรวบรวมข้อมูลแสดง ...</string>
+<string name="messages_adding_serie">กำลังรวบรวมข้อมูลแสดง…</string>
 <string name="messages_specials">ข้อมูลจำเพาะ</string>
 <string name="messsages_view_ep_details">รายละเอียดตอนที่</string>
 <string name="messsages_edit_seen_timestamp">แก้ไขการประทับเวลาที่เห็น</string>

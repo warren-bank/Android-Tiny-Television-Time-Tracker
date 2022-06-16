@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ga</string>
 <string name="app_name_long">tarracóir ama beag le haghaidh teilifíse</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">Níl aon séasúir le taispeáint.</string>
 <string name="active">Gníomhach</string>
 <string name="archive">Cartlann</string>
-<string name="addserie_hint">Taispeáin go dtí an ...</string>
-<string name="search_hint">Cuardaigh ...</string>
+<string name="addserie_hint">Taispeáin go dtí an…</string>
+<string name="search_hint">Cuardaigh…</string>
 <string name="menu_filter">Taispeáin an scagaire</string>
 <string name="menu_undo">&amp; Cealaigh</string>
 <string name="menu_add_serie">Cuir taispeáin leis</string>
@@ -52,7 +52,7 @@
 <string name="dialog_change_language">Teanga synopsis</string>
 <string name="dialog_restore">Athchóirigh</string>
 <string name="dialog_restore_now">Beidh cúltaca cúltaca a chur in ionad gach eolas faoi láthair sa bhunachar sonraí. Lean?</string>
-<string name="dialog_restore_done">\@ info: inbox</string>
+<string name="dialog_restore_done">Athchóiríodh an bunachar sonraí go rathúil</string>
 <string name="dialog_restore_failed">Ní féidir bunachar sonraí a athchóiriú!</string>
 <string name="dialog_restore_notfound">Níorbh fhéidir cúltaca ar stóráil seachtrach a aimsiú!</string>
 <string name="dialog_title_delete">Scrios taispeáin?</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">Séasúr go hiomlán faire</string>
 <string name="messages_deleted">scriostar</string>
 <string name="messages_title_search_series">Seónna á chuardach</string>
-<string name="messages_search_series">Sonraí á n-aisghabháil ...</string>
+<string name="messages_search_series">Sonraí á n-aisghabháil…</string>
 <string name="messages_series_success">Taispeáin %s curtha leis</string>
 <string name="messages_title_adding_serie">Taispeáin taispeáin</string>
-<string name="messages_adding_serie">Taispeáin an t-eolas a thaispeáint ...</string>
+<string name="messages_adding_serie">Taispeáin an t-eolas a thaispeáint…</string>
 <string name="messages_specials">Speisialtachtaí</string>
 <string name="messsages_view_ep_details">Sonraí Eipeasóid</string>
 <string name="messsages_edit_seen_timestamp">Cuir an stampa ama in eagar</string>
@@ -114,7 +114,7 @@
 <string name="messages_aired">Craoladh:</string>
 <string name="messages_at">ag</string>
 <string name="messages_of">de</string>
-<string name="messages_off">\@ info</string>
+<string name="messages_off">as</string>
 <string name="messages_on">ar</string>
 <string name="messages_daily">Laethúil</string>
 <string name="messages_ep">Eachtra</string>

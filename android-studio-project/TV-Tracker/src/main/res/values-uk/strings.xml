@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">uk</string>
 <string name="app_name_long">крихітний інструмент стеження за часом</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">Немає сезонів для показу.</string>
 <string name="active">Активний</string>
 <string name="archive">Архівувати</string>
-<string name="addserie_hint">Показати, щоб додати ...</string>
-<string name="search_hint">Пошук ...</string>
+<string name="addserie_hint">Показати, щоб додати…</string>
+<string name="search_hint">Пошук…</string>
 <string name="menu_filter">Фільтрувати показ</string>
 <string name="menu_undo">Вернути</string>
 <string name="menu_add_serie">Додати показ</string>
@@ -42,11 +42,11 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Автоматично виконувати щоденні резервні</string>
 <string name="dialog_backup_versioning">Використовувати для створення резервних копій</string>
-<string name="dialog_pull_to_update">Увімкнути жест \"Pull To Update\"</string>
+<string name="dialog_pull_to_update">Увімкнути жест \"Потягніть до оновлення\"</string>
 <string name="dialog_backup">Резервування</string>
 <string name="dialog_backup_done">Створення резервної копії завершено</string>
 <string name="dialog_backup_failed">Неможливо виконати резервну копію!</string>
-<string name="dialog_backup_preupdate_title">Потрібна оновлення бази даних</string>
+<string name="dialog_backup_preupdate_title">Потрібне оновлення бази даних</string>
 <string name="dialog_backup_preupdate_message">Ви встановили новішу версію цієї програми. Крім того, версія бази даних також має бути оновлена. Рекомендуємо зберегти резервну копію перед цією операцією; будь-яка помилка пошкодить базу даних. Щоб зробити це, вам слід спочатку надати дозвіл на збереження резервних файлів на зовнішній склад. Ви бажаєте зберегти резервну копію перед оновленням?</string>
 <string name="dialog_backup_usefolder">Використовувати теку для щоденних резервних копій</string>
 <string name="dialog_change_language">Мова синопсиса</string>
@@ -90,15 +90,15 @@
 <string name="messages_season_completely_watched">Завершення сезону повністю спостереження</string>
 <string name="messages_deleted">вилучено</string>
 <string name="messages_title_search_series">Пошук показів</string>
-<string name="messages_search_series">Отримання даних ...</string>
+<string name="messages_search_series">Отримання даних…</string>
 <string name="messages_series_success">Показати %s додано</string>
 <string name="messages_title_adding_serie">Додавання показу</string>
-<string name="messages_adding_serie">Збір інформації про показ ...</string>
+<string name="messages_adding_serie">Збір інформації про показ…</string>
 <string name="messages_specials">Особливі</string>
 <string name="messsages_view_ep_details">Подробиці про серію</string>
 <string name="messsages_edit_seen_timestamp">Змінити часову позначку часу</string>
 <string name="messages_calendar_app_error">Не знайдено додатка календаря!</string>
-<string name="messages_db_error_update">Помилка під час оновлення бази даних</string>
+<string name="messages_db_error_update">Помилка бази даних під час оновлення</string>
 <string name="messages_db_error_delete_serie">Помилка бази даних під час вилучення показу</string>
 <string name="messages_db_error_delete_episode">Помилка бази даних під час вилучення епізоду</string>
 <string name="messages_api_con_error">Помилка з \' єднання з TMDb API. Спробувати ще раз.</string>
@@ -112,10 +112,10 @@
 <string name="messages_context_archived">архівована</string>
 <string name="messages_context_unarchived">relen</string>
 <string name="messages_aired">Ефір:</string>
-<string name="messages_at">на</string>
-<string name="messages_of"></string>
-<string name="messages_off">вимкнено</string>
-<string name="messages_on">на</string>
+<string name="messages_at">біля</string>
+<string name="messages_of">на</string>
+<string name="messages_off">не вистачати</string>
+<string name="messages_on">біля</string>
 <string name="messages_daily">Щоденний</string>
 <string name="messages_ep">Епізод</string>
 <string name="episode_directors">Режисери:</string>

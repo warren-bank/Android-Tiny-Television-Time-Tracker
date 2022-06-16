@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">ne</string>
 <string name="app_name_long">टेलिभिजनका लागि टाइट टाइम ट्र्याकर</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">प्रदर्शन गर्न कुनै मौसम छैन.</string>
 <string name="active">सक्रिय</string>
 <string name="archive">सङ्ग्रह</string>
-<string name="addserie_hint">थप्न देखाउनुहोस् ...</string>
-<string name="search_hint">खोजी गर्नुहोस् ...</string>
+<string name="addserie_hint">थप्न देखाउनुहोस्…</string>
+<string name="search_hint">खोजी गर्नुहोस्…</string>
 <string name="menu_filter">फिल्टर देखाउछ</string>
 <string name="menu_undo">पूर्वस्थितिमा फर्काउनुहोस्</string>
 <string name="menu_add_serie">प्रदर्शन थप्नुहोस्</string>
@@ -90,7 +90,7 @@
 <string name="messages_season_completely_watched">सिजन पूर्ण रुपमा हेरिएको छ</string>
 <string name="messages_deleted">मेटिएको</string>
 <string name="messages_title_search_series">खोजी गर्दैछ</string>
-<string name="messages_search_series">डेटा पुन: प्राप्त गर्दैछ ...</string>
+<string name="messages_search_series">डेटा पुन: प्राप्त गर्दैछ…</string>
 <string name="messages_series_success">देखाउनुहोस् %s थपिएको</string>
 <string name="messages_title_adding_serie">प्रदर्शन थप्दै</string>
 <string name="messages_adding_serie">प्रदान जानकारी देखाउँदछ…</string>

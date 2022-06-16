@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">zh-TW</string>
 <string name="app_name_long">電視小跟踪器</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">沒有季節可顯示.</string>
 <string name="active">作用中</string>
 <string name="archive">Archive</string>
-<string name="addserie_hint">顯示以新增...</string>
-<string name="search_hint">搜尋...</string>
+<string name="addserie_hint">顯示以新增…</string>
+<string name="search_hint">搜尋…</string>
 <string name="menu_filter">過濾顯示</string>
 <string name="menu_undo">解開</string>
 <string name="menu_add_serie">新增顯示</string>
@@ -90,10 +90,10 @@
 <string name="messages_season_completely_watched">Season 完全觀看</string>
 <string name="messages_deleted">已刪除</string>
 <string name="messages_title_search_series">搜尋顯示</string>
-<string name="messages_search_series">正在擷取資料...</string>
+<string name="messages_search_series">正在擷取資料…</string>
 <string name="messages_series_success">顯示 %s 已新增</string>
 <string name="messages_title_adding_serie">新增顯示</string>
-<string name="messages_adding_serie">正在收集顯示資訊...</string>
+<string name="messages_adding_serie">正在收集顯示資訊…</string>
 <string name="messages_specials">專業</string>
 <string name="messsages_view_ep_details">Episode 詳細資料</string>
 <string name="messsages_edit_seen_timestamp">編輯查看時間戳記</string>

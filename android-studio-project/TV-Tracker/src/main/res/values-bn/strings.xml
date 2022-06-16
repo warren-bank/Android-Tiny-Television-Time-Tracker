@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">bn</string>
 <string name="app_name_long">টেলিভিশনের জন্য ছোট সময় ট্র্যাকার</string>
@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">প্রদর্শন করার কোন ঋতু নেই.</string>
 <string name="active">সক্রিয়</string>
 <string name="archive">আর্কাইভ</string>
-<string name="addserie_hint">যোগ করতে দেখাও ...</string>
-<string name="search_hint">অনুসন্ধান ...</string>
+<string name="addserie_hint">যোগ করতে দেখাও…</string>
+<string name="search_hint">অনুসন্ধান…</string>
 <string name="menu_filter">ফিল্টার প্রদর্শন</string>
 <string name="menu_undo">বাতিল করো</string>
 <string name="menu_add_serie">একটি শো যোগ করো</string>
@@ -90,7 +90,7 @@
 <string name="messages_season_completely_watched">সিজন পুরোপুরি দেখেছে</string>
 <string name="messages_deleted">মুছে ফেলা হয়েছে</string>
 <string name="messages_title_search_series">প্রদর্শন করা হচ্ছে</string>
-<string name="messages_search_series">তথ্য আনা হচ্ছে ...</string>
+<string name="messages_search_series">তথ্য আনা হচ্ছে…</string>
 <string name="messages_series_success">দেখাও %s যোগ করা হয়েছে</string>
 <string name="messages_title_adding_serie">অ্যাডডিং প্রদর্শন</string>
 <string name="messages_adding_serie">শো তথ্য সংগ্রহ…</string>

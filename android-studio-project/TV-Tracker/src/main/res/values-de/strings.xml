@@ -7,8 +7,8 @@
 <string name="layout_seasons_no_items">Keine Staffeln gefunden.</string>
 <string name="active">Aktiv</string>
 <string name="archive">Archiv</string>
-<string name="addserie_hint">Serie hinzufügen</string>
-<string name="search_hint">Serie suchen</string>
+<string name="addserie_hint">Serie hinzufügen…</string>
+<string name="search_hint">Serie suchen…</string>
 <string name="menu_filter">Serien filtern</string>
 <string name="menu_undo">Rückgängig</string>
 <string name="menu_add_serie">Serie hinzufügen</string>
@@ -42,7 +42,7 @@
 <string name="dialog_ok">OK</string>
 <string name="dialog_auto_backup">Tägliche automatische Datensicherung</string>
 <string name="dialog_backup_versioning">Versionierung für Sicherungen verwenden</string>
-<string name="dialog_pull_to_update">Geste \"Pull To Update\" aktivieren</string>
+<string name="dialog_pull_to_update">Geste \"Ziehen Sie zum Update\" aktivieren</string>
 <string name="dialog_backup">Sichern</string>
 <string name="dialog_backup_done">Datensicherung fertig</string>
 <string name="dialog_backup_failed">Datensicherung fehlgeschlagen!</string>
