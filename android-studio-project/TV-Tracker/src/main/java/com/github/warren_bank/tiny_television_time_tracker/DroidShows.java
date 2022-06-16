@@ -386,6 +386,12 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
 
   @Override // Update.DatabaseUpdateListener
   public boolean preDatabaseUpdate(int mode, int oldVersion, boolean willUpdate) {
+    if (willUpdate && (oldVersion < Update.VERSION_TMDB_MIGRATION) && !NetworkUtils.isNetworkAvailable(DroidShows.this)) {
+      String toastTxt = getString(R.string.dialog_backup_preupdate_title) + "\u2026" + "\n" + getString(R.string.messages_no_internet);
+      Toast.makeText(DroidShows.this, toastTxt, Toast.LENGTH_LONG).show();
+      return false;
+    }
+
     cancelAsyncInfo();
     isUpdating = true;
 

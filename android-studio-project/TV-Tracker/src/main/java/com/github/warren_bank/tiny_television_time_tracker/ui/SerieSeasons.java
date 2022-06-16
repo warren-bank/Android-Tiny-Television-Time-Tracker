@@ -94,7 +94,7 @@ public class SerieSeasons extends ListActivity {
     SeasonRow season            = seasonsAdapter.getItem(info.position);
     */
 
-    String title = getString(R.string.messages_context_mark_season) + "…";
+    String title = getString(R.string.messages_context_mark_season) + "\u2026";
     menu.setHeaderTitle(title);
 
     menu.add(0, CONTEXT_MARK_BEFORE_SEASON_SEEN,  0, getString(R.string.messages_context_mark_season_seen_before));
