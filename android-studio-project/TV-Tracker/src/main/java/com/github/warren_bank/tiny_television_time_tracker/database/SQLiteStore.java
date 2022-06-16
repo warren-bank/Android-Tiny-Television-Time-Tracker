@@ -198,6 +198,15 @@ public class SQLiteStore extends SQLiteOpenHelper {
         + ");"
       );
       dbase.execSQL(
+          "CREATE TABLE IF NOT EXISTS unavailableEpisodes ("
+        +   "serieId              INTEGER NOT NULL"                       + ", "
+        +   "seasonNumber         INTEGER NOT NULL"                       + ", "
+        +   "episodeNumber        INTEGER NOT NULL"                       + ", "
+        +   "PRIMARY KEY (serieId, seasonNumber, episodeNumber)"          + ", "
+        +   "FOREIGN KEY (serieId) REFERENCES series (id)"
+        + ");"
+      );
+      dbase.execSQL(
           "CREATE INDEX idx_episodes_serieid_seasonnumber ON episodes (serieId, seasonNumber);"
       );
       dbase.execSQL(

@@ -32,7 +32,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Update {
-  protected static final String currentVersion = "0.1.5-7G6";
+  protected static final String currentVersion = "0000000009";
 
   public static final int MODE_INSTALL = 1;
   public static final int MODE_RESTORE = 2;
@@ -174,6 +174,8 @@ public class Update {
         return 7;
       case "0.1.5-7G6":
         return 8;
+      case "0000000009":
+        return 9;
     }
     return -1;
   }
@@ -237,6 +239,14 @@ public class Update {
       version                                  = getVersionNumber();
     }
     if (!databaseUpdateResult.didUpdateFail && (version == 8)) {
+      didUpdate                                = true;
+      result                                   = update_version_008();
+      databaseUpdateResult.didUpdateAllSeries |= result;
+      databaseUpdateResult.didUpdateSucceed   &= result;
+      databaseUpdateResult.didUpdateFail      |= !result;
+      version                                  = getVersionNumber();
+    }
+    if (!databaseUpdateResult.didUpdateFail && (version == 9)) {
       // noop: version of schema is up-to-date
     }
 
@@ -330,6 +340,27 @@ public class Update {
     try {
       if (!doTmdbApiMigration()) return false;
       db.execQuery("UPDATE droidseries SET version='0.1.5-7G6'");
+      return true;
+    } catch (Exception e) {
+      Log.e(Constants.LOG_TAG, "Error updating database");
+      e.printStackTrace();
+      return false;
+    }
+  }
+
+  private boolean update_version_008() {
+    Log.d(Constants.LOG_TAG, "UPDATING TO VERSION 0000000009");
+    try {
+      db.execQuery(
+          "CREATE TABLE IF NOT EXISTS unavailableEpisodes ("
+        +   "serieId              INTEGER NOT NULL"                       + ", "
+        +   "seasonNumber         INTEGER NOT NULL"                       + ", "
+        +   "episodeNumber        INTEGER NOT NULL"                       + ", "
+        +   "PRIMARY KEY (serieId, seasonNumber, episodeNumber)"          + ", "
+        +   "FOREIGN KEY (serieId) REFERENCES series (id)"
+        + ");"
+      );
+      db.execQuery("UPDATE droidseries SET version='0000000009'");
       return true;
     } catch (Exception e) {
       Log.e(Constants.LOG_TAG, "Error updating database");

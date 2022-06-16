@@ -10,6 +10,7 @@ import com.github.warren_bank.tiny_television_time_tracker.database.model.DbGenr
 import com.github.warren_bank.tiny_television_time_tracker.database.model.DbGuestStar;
 import com.github.warren_bank.tiny_television_time_tracker.database.model.DbSeason;
 import com.github.warren_bank.tiny_television_time_tracker.database.model.DbSeries;
+import com.github.warren_bank.tiny_television_time_tracker.database.model.DbUnavailableEpisode;
 import com.github.warren_bank.tiny_television_time_tracker.database.model.DbWriter;
 import com.github.warren_bank.tiny_television_time_tracker.database.model.EpisodeSeen;
 import com.github.warren_bank.tiny_television_time_tracker.ui.model.SearchResult;
@@ -223,7 +224,7 @@ public class ApiGateway {
 
   public boolean updateSeries(int serieId, boolean ignoreMissingEpisodes) {
     DbSeries          oldDbSeries = db.getDbSeries(serieId);
-    List<EpisodeSeen> oldEpisodes = db.getEpisodeSeen(serieId, /* includeAll */ true);
+    List<EpisodeSeen> oldEpisodes = db.getEpisodeSeen(serieId, /* includeUnseen */ true, /* includeUnavailable */ true);
     if (oldDbSeries == null) return false;
 
     String language = oldDbSeries.language;
@@ -284,7 +285,7 @@ public class ApiGateway {
     if (language == null) return false;
 
     DbSeries          oldDbSeries = db.getDbSeries(serieId);
-    List<EpisodeSeen> oldEpisodes = db.getEpisodeSeen(serieId, /* includeAll */ true);
+    List<EpisodeSeen> oldEpisodes = db.getEpisodeSeen(serieId, /* includeUnseen */ true, /* includeUnavailable */ true);
     if (oldDbSeries == null) return false;
 
     TVInfo apiSeries = getApiSeries(serieId, language);
@@ -324,6 +325,12 @@ public class ApiGateway {
       for (DbSeason dbSeason : dbSeasons) {
         for (int episodeNumber=1; episodeNumber <= dbSeason.episodeCount; episodeNumber++) {
           oldEpisode = db.findEpisodeSeen(oldEpisodes, dbSeason.seasonNumber, episodeNumber);
+          if ((oldEpisode != null) && oldEpisode.isUnavailable()) {
+            if (!ignoreMissingEpisodes) {
+              result = false;
+            }
+            continue;
+          }
           seen = ((oldEpisode == null) || (oldEpisode.seen <= 0)) ? 0 : oldEpisode.seen;
 
           result &= addEpisode(dbSeason.serieId, dbSeason.seasonNumber, episodeNumber, language, ignoreMissingEpisodes, seen);
@@ -366,7 +373,11 @@ public class ApiGateway {
 
   private boolean addEpisode(int serieId, int seasonNumber, int episodeNumber, String language, boolean ignoreMissingEpisodes, int seen) {
     TVEpisodeInfo apiEpisode = getApiEpisode(serieId, seasonNumber, episodeNumber, language);
-    if (apiEpisode == null) return ignoreMissingEpisodes;
+    if (apiEpisode == null) {
+      DbUnavailableEpisode dbUnavailableEpisode = new DbUnavailableEpisode(serieId, seasonNumber, episodeNumber);
+      db.saveDbUnavailableEpisode(dbUnavailableEpisode);
+      return ignoreMissingEpisodes;
+    }
 
     DbEpisode         dbEpisode    = getDbEpisode   (serieId, apiEpisode);
     List<DbWriter>    dbWriters    = getDbWriters   (serieId, apiEpisode);

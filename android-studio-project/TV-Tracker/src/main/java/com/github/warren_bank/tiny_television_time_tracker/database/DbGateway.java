@@ -10,6 +10,7 @@ import com.github.warren_bank.tiny_television_time_tracker.database.model.DbGenr
 import com.github.warren_bank.tiny_television_time_tracker.database.model.DbGuestStar;
 import com.github.warren_bank.tiny_television_time_tracker.database.model.DbSeason;
 import com.github.warren_bank.tiny_television_time_tracker.database.model.DbSeries;
+import com.github.warren_bank.tiny_television_time_tracker.database.model.DbUnavailableEpisode;
 import com.github.warren_bank.tiny_television_time_tracker.database.model.DbWriter;
 import com.github.warren_bank.tiny_television_time_tracker.database.model.EpisodeSeen;
 import com.github.warren_bank.tiny_television_time_tracker.ui.model.BaseEpisode;
@@ -584,11 +585,16 @@ public class DbGateway {
   // ---------------------------------------------------------------------------
 
   public List<EpisodeSeen> getEpisodeSeen(int serieId) {
-    boolean includeAll = false;
-    return getEpisodeSeen(serieId, includeAll);
+    boolean includeUnseen = false;
+    return getEpisodeSeen(serieId, includeUnseen);
   }
 
-  public List<EpisodeSeen> getEpisodeSeen(int serieId, boolean includeAll) {
+  public List<EpisodeSeen> getEpisodeSeen(int serieId, boolean includeUnseen) {
+    boolean includeUnavailable = false;
+    return getEpisodeSeen(serieId, includeUnseen, includeUnavailable);
+  }
+
+  public List<EpisodeSeen> getEpisodeSeen(int serieId, boolean includeUnseen, boolean includeUnavailable) {
     List<EpisodeSeen> episodes = new ArrayList<EpisodeSeen>();
 
     int episodeId, seasonNumber, episodeNumber, seen;
@@ -598,7 +604,7 @@ public class DbGateway {
       + "   episodes"
       + " WHERE"
       + "   serieId = " + serieId
-      + (includeAll
+      + (includeUnseen
           ? ""
           : " AND seen>0"
         )
@@ -615,6 +621,50 @@ public class DbGateway {
           seasonNumber  = getColumnInteger(c, "seasonNumber");
           episodeNumber = getColumnInteger(c, "episodeNumber");
           seen          = getColumnInteger(c, "seen");
+
+          EpisodeSeen episode = new EpisodeSeen(episodeId, seasonNumber, episodeNumber, seen);
+          episodes.add(episode);
+        } while (c.moveToNext());
+      }
+    }
+    catch (SQLiteException e) {
+      Log.e(Constants.LOG_TAG, e.getMessage());
+    }
+    if (c != null) c.close();
+
+    if (includeUnavailable) {
+      episodes.addAll(
+        getUnavailableEpisodes(serieId)
+      );
+      Collections.sort(episodes);
+    }
+
+    return episodes;
+  }
+
+  public List<EpisodeSeen> getUnavailableEpisodes(int serieId) {
+    List<EpisodeSeen> episodes = new ArrayList<EpisodeSeen>();
+
+    int episodeId = EpisodeSeen.UNAVAILABLE_EPISODE_ID;
+    int seen      = 0;
+    int seasonNumber, episodeNumber;
+
+    String query = "SELECT seasonNumber, episodeNumber"
+      + " FROM "
+      + "   unavailableEpisodes"
+      + " WHERE"
+      + "   serieId = " + serieId
+      + " ORDER BY"
+      + "   seasonNumber ASC, episodeNumber ASC";
+
+    Cursor c = null;
+    try {
+      c = db.query(query);
+
+      if ((c != null) && c.moveToFirst() && c.isFirst()) {
+        do {
+          seasonNumber  = getColumnInteger(c, "seasonNumber");
+          episodeNumber = getColumnInteger(c, "episodeNumber");
 
           EpisodeSeen episode = new EpisodeSeen(episodeId, seasonNumber, episodeNumber, seen);
           episodes.add(episode);
@@ -1497,6 +1547,21 @@ public class DbGateway {
       +         "'" + episode.imdbId                                     + "'" + ", "
       +               episode.reviewRating                                     + ", "
       +               episode.seen
+      + "   )";
+
+    return db.execQuery(query);
+  }
+
+  // ---------------------------------------------------------------------------
+
+  public boolean saveDbUnavailableEpisode(DbUnavailableEpisode episode) {
+    String query = "INSERT INTO unavailableEpisodes"
+      + "   (serieId, seasonNumber, episodeNumber)"
+      + " VALUES"
+      + "   ("
+      +               episode.serieId                                          + ", "
+      +               episode.seasonNumber                                     + ", "
+      +               episode.episodeNumber
       + "   )";
 
     return db.execQuery(query);
