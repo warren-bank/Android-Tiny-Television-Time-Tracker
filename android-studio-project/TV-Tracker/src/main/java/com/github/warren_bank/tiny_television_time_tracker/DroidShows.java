@@ -407,7 +407,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
       }
     }
 
-    if (willUpdate && (oldVersion < 8)) {
+    if (willUpdate && (oldVersion < Update.VERSION_TMDB_MIGRATION)) {
       WakeLockMgr.acquire(DroidShows.this);
       WifiLockMgr.acquire(DroidShows.this);
     }
@@ -457,7 +457,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
       }
     }
 
-    if (oldVersion < 8) {
+    if (oldVersion < Update.VERSION_TMDB_MIGRATION) {
       WakeLockMgr.release();
       WifiLockMgr.release();
     }

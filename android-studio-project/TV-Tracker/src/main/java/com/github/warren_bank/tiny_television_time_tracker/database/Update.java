@@ -37,6 +37,8 @@ public class Update {
   public static final int MODE_INSTALL = 1;
   public static final int MODE_RESTORE = 2;
 
+  public static final int VERSION_TMDB_MIGRATION = 8;
+
   public class DatabaseUpdateResult {
     public boolean didUpdateFail;
     public boolean didUpdateSucceed;
