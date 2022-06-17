@@ -37,7 +37,8 @@ public class Update {
   // static
   // ---------------------------------------------------------------------------
 
-  protected static final String currentVersion = "0000000009";
+  protected static final String VERSION_STRING_CURRENT = "0000000009";
+  private   static       String VERSION_STRING_ACTUAL  = null;
 
   public static final int MODE_INSTALL = 1;
   public static final int MODE_RESTORE = 2;
@@ -63,26 +64,41 @@ public class Update {
 
   // ---------------------------------------------------------------------------
 
-  protected static boolean needsUpdate(SQLiteStore db) {
-    return !Update.getVersion(db).equals(Update.currentVersion);
+  protected static void resetVersionCache() {
+    Update.VERSION_STRING_ACTUAL = null;
   }
 
-  private static String getVersion(SQLiteStore db) {
-    String version = "";
-    try {
-      Cursor c = Update.query(db, "SELECT version FROM droidseries");
-      if (c != null && c.moveToFirst()) {
-        version = c.getString(0);
-        Log.d(Constants.LOG_TAG, "Current database version: "+ version);
-        return version;
+  protected static boolean needsUpdate(SQLiteStore db) {
+    return !Update.getVersion(db, /* resetCache */ false).equals(Update.VERSION_STRING_CURRENT);
+  }
+
+  private static String getVersion(SQLiteStore db, boolean resetCache) {
+    if (resetCache)
+      Update.resetVersionCache();
+
+    if (TextUtils.isEmpty(Update.VERSION_STRING_ACTUAL)) {
+      try {
+        Cursor c = Update.query(db, "SELECT version FROM droidseries");
+        if (c != null && c.moveToFirst()) {
+          String version = c.getString(0);
+          if (!TextUtils.isEmpty(version)) {
+            Update.VERSION_STRING_ACTUAL = version;
+            Log.d(Constants.LOG_TAG, "Current database version: " + version);
+          }
+        }
+        c.close();
+      } catch (SQLiteException e) {
+        Log.e(Constants.LOG_TAG, e.getMessage());
       }
-      c.close();
-    } catch (SQLiteException e) {
-      Log.e(Constants.LOG_TAG, e.getMessage());
     }
-    Update.execQuery(db, "INSERT INTO droidseries (version) VALUES ('0');");
-    Log.d(Constants.LOG_TAG, "DB version blank. All updates will be run; please ignore errors.");
-    return "0";
+
+    if (TextUtils.isEmpty(Update.VERSION_STRING_ACTUAL)) {
+      Update.VERSION_STRING_ACTUAL = "0";
+      Update.execQuery(db, "INSERT INTO droidseries (version) VALUES ('" + Update.VERSION_STRING_ACTUAL + "')");
+      Log.d(Constants.LOG_TAG, "DB version blank. All updates will be run; please ignore errors.");
+    }
+
+    return Update.VERSION_STRING_ACTUAL;
   }
 
   // ---------------------------------------------------------------------------
@@ -203,7 +219,7 @@ public class Update {
   }
 
   private int getVersionNumber() {
-    String version = Update.getVersion(db);
+    String version = Update.getVersion(db, /* resetCache */ true);
 
     switch(version) {
       case "0":

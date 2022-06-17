@@ -175,7 +175,7 @@ public class SQLiteStore extends SQLiteOpenHelper {
         + ");"
       );
       dbase.execSQL(
-          "INSERT INTO droidseries (version) VALUES ('" + Update.currentVersion + "');"
+          "INSERT INTO droidseries (version) VALUES ('" + Update.VERSION_STRING_CURRENT + "');"
       );
       dbase.execSQL(
           "CREATE TABLE IF NOT EXISTS series ("
@@ -304,10 +304,11 @@ public class SQLiteStore extends SQLiteOpenHelper {
     catch (SQLiteException e) {
       Log.e(Constants.LOG_TAG, e.getMessage());
     }
+    Update.resetVersionCache();
   }
 
   @Override
   public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-    // TODO Auto-generated method stub
+    Update.resetVersionCache();
   }
 }
