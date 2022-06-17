@@ -29,6 +29,7 @@ import com.omertron.themoviedbapi.model.tv.TVBasic;
 import com.omertron.themoviedbapi.model.tv.TVEpisodeInfo;
 import com.omertron.themoviedbapi.model.tv.TVInfo;
 import com.omertron.themoviedbapi.model.tv.TVSeasonBasic;
+import com.omertron.themoviedbapi.model.tv.TVSeasonInfo;
 import com.omertron.themoviedbapi.results.ResultList;
 
 import android.content.Context;
@@ -45,6 +46,7 @@ import java.util.Map;
 // https://omertron.github.io/api-themoviedb/apidocs/index.html
 // https://omertron.github.io/api-themoviedb/apidocs/com/omertron/themoviedbapi/TheMovieDbApi.html
 // https://omertron.github.io/api-themoviedb/apidocs/com/omertron/themoviedbapi/model/tv/TVInfo.html
+// https://omertron.github.io/api-themoviedb/apidocs/com/omertron/themoviedbapi/model/tv/TVSeasonInfo.html
 // https://omertron.github.io/api-themoviedb/apidocs/com/omertron/themoviedbapi/model/tv/TVEpisodeInfo.html
 // -----------------------------------------------------------------------------
 
@@ -201,8 +203,12 @@ public class ApiGateway {
       }
     }
     if (result) {
+      List<Integer> episodeNumbers;
       for (DbSeason dbSeason : dbSeasons) {
-        for (int episodeNumber=1; episodeNumber <= dbSeason.episodeCount; episodeNumber++) {
+        episodeNumbers = getApiEpisodeNumbers(serieId, dbSeason.seasonNumber, language);
+        if ((episodeNumbers == null) || episodeNumbers.isEmpty()) continue;
+
+        for (int episodeNumber : episodeNumbers) {
           result &= addEpisode(dbSeason.serieId, dbSeason.seasonNumber, episodeNumber, language, ignoreMissingEpisodes);
           //if (!result) break;
         }
@@ -258,8 +264,12 @@ public class ApiGateway {
       }
     }
     if (result) {
+      List<Integer> episodeNumbers;
       for (DbSeason dbSeason : dbSeasons) {
-        for (int episodeNumber=1; episodeNumber <= dbSeason.episodeCount; episodeNumber++) {
+        episodeNumbers = getApiEpisodeNumbers(serieId, dbSeason.seasonNumber, language);
+        if ((episodeNumbers == null) || episodeNumbers.isEmpty()) continue;
+
+        for (int episodeNumber : episodeNumbers) {
           if (db.hasEpisodeSeen(oldEpisodes, dbSeason.seasonNumber, episodeNumber)) continue;
 
           result &= addEpisode(dbSeason.serieId, dbSeason.seasonNumber, episodeNumber, language, ignoreMissingEpisodes);
@@ -320,10 +330,14 @@ public class ApiGateway {
       result &= db.deleteEpisodes(serieId, /* refreshStats */ false);
     }
     if (result) {
+      List<Integer> episodeNumbers;
       EpisodeSeen oldEpisode;
       int seen;
       for (DbSeason dbSeason : dbSeasons) {
-        for (int episodeNumber=1; episodeNumber <= dbSeason.episodeCount; episodeNumber++) {
+        episodeNumbers = getApiEpisodeNumbers(serieId, dbSeason.seasonNumber, language);
+        if ((episodeNumbers == null) || episodeNumbers.isEmpty()) continue;
+
+        for (int episodeNumber : episodeNumbers) {
           oldEpisode = db.findEpisodeSeen(oldEpisodes, dbSeason.seasonNumber, episodeNumber);
           if ((oldEpisode != null) && oldEpisode.isUnavailable()) {
             if (!ignoreMissingEpisodes) {
@@ -409,6 +423,27 @@ public class ApiGateway {
       }
     }
     return result;
+  }
+
+  // ---------------------------------------------------------------------------
+
+  private List<Integer> getApiEpisodeNumbers(int serieId, int seasonNumber, String language) {
+    try {
+      String[] appendToResponse = new String[0];
+      TVSeasonInfo apiSeason = api.getSeasonInfo(serieId, seasonNumber, language, appendToResponse);
+
+      List<Integer> episodeNumbers = new ArrayList<Integer>();
+      for (TVEpisodeInfo apiEpisode : apiSeason.getEpisodes()) {
+        episodeNumbers.add(
+          apiEpisode.getEpisodeNumber()
+        );
+      }
+      return episodeNumbers;
+    }
+    catch(Exception e) {
+      Log.e(Constants.LOG_TAG, e.getMessage());
+      return null;
+    }
   }
 
   // ---------------------------------------------------------------------------
