@@ -340,7 +340,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
     }
     catch(Exception e) {
       api = null;
-      Toast.makeText(getApplicationContext(), R.string.menu_context_updated, Toast.LENGTH_LONG).show();
+      Toast.makeText(getApplicationContext(), R.string.messages_api_con_error, Toast.LENGTH_LONG).show();
       return false;
     }
   }
@@ -388,7 +388,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
   public boolean preDatabaseUpdate(int mode, int oldVersion, boolean willUpdate) {
     if (willUpdate && (oldVersion < Update.VERSION_TMDB_MIGRATION) && !NetworkUtils.isNetworkAvailable(DroidShows.this)) {
       String toastTxt = getString(R.string.dialog_backup_preupdate_title) + "\u2026" + "\n" + getString(R.string.messages_no_internet);
-      Toast.makeText(DroidShows.this, toastTxt, Toast.LENGTH_LONG).show();
+      Toast.makeText(getApplicationContext(), toastTxt, Toast.LENGTH_LONG).show();
       return false;
     }
 
@@ -437,7 +437,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
         if (!result.didUpdateFail) {
           String backupFile = (String) passthrough;
           String toastTxt   = getString(R.string.dialog_restore_done) + "\n(" + backupFile + ")";
-          Toast.makeText(DroidShows.this, toastTxt, Toast.LENGTH_LONG).show();
+          Toast.makeText(getApplicationContext(), toastTxt, Toast.LENGTH_LONG).show();
 
           FileUtils.cleanDatabaseDirectory(DroidShows.this);
           undo.clear();
@@ -1214,7 +1214,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
     File destination = new File(FileUtils.getDatabaseFilePath(DroidShows.this));
 
     if (!source.exists()) {
-      Toast.makeText(DroidShows.this, getString(R.string.dialog_restore_notfound), Toast.LENGTH_LONG).show();
+      Toast.makeText(getApplicationContext(), getString(R.string.dialog_restore_notfound), Toast.LENGTH_LONG).show();
       return;
     }
 
@@ -1222,7 +1222,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
       copy(source, destination);
     }
     catch (IOException e) {
-      Toast.makeText(DroidShows.this, getString(R.string.dialog_restore_failed), Toast.LENGTH_LONG).show();
+      Toast.makeText(getApplicationContext(), getString(R.string.dialog_restore_failed), Toast.LENGTH_LONG).show();
       return;
     }
 

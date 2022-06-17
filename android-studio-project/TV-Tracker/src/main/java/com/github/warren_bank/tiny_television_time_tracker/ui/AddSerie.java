@@ -43,10 +43,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class AddSerie extends ListActivity
-{
-  private static final int ADD_SERIE_MENU_ITEM    = Menu.FIRST;
-  private static final int ADD_CONTEXT            = Menu.FIRST;
+public class AddSerie extends ListActivity {
+  private static final int ADD_SERIE_MENU_ITEM = Menu.FIRST;
+  private static final int ADD_CONTEXT         = Menu.FIRST;
 
   private ApiGateway api;
   private DbGateway db;
@@ -111,7 +110,7 @@ public class AddSerie extends ListActivity
     }
     catch(Exception e) {
       api = null;
-      Toast.makeText(getApplicationContext(), R.string.menu_context_updated, Toast.LENGTH_LONG).show();
+      Toast.makeText(getApplicationContext(), R.string.messages_api_con_error, Toast.LENGTH_LONG).show();
       return false;
     }
   }

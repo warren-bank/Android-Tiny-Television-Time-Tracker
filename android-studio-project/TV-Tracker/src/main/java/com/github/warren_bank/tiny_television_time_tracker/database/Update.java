@@ -32,12 +32,62 @@ import java.util.List;
 import java.util.Map;
 
 public class Update {
+
+  // ---------------------------------------------------------------------------
+  // static
+  // ---------------------------------------------------------------------------
+
   protected static final String currentVersion = "0000000009";
 
   public static final int MODE_INSTALL = 1;
   public static final int MODE_RESTORE = 2;
 
   public static final int VERSION_TMDB_MIGRATION = 8;
+
+  // ---------------------------------------------------------------------------
+
+  private static Cursor query(SQLiteStore db, String query) {
+    boolean skipVersionCheck = true;
+    return db.query(query, skipVersionCheck);
+  }
+
+  private static boolean execQuery(SQLiteStore db, String query) {
+    boolean skipVersionCheck = true;
+    return db.execQuery(query, skipVersionCheck);
+  }
+
+  private static boolean execTransaction(SQLiteStore db, List<String> queries) {
+    boolean skipVersionCheck = true;
+    return db.execTransaction(queries, skipVersionCheck);
+  }
+
+  // ---------------------------------------------------------------------------
+
+  protected static boolean needsUpdate(SQLiteStore db) {
+    return !Update.getVersion(db).equals(Update.currentVersion);
+  }
+
+  private static String getVersion(SQLiteStore db) {
+    String version = "";
+    try {
+      Cursor c = Update.query(db, "SELECT version FROM droidseries");
+      if (c != null && c.moveToFirst()) {
+        version = c.getString(0);
+        Log.d(Constants.LOG_TAG, "Current database version: "+ version);
+        return version;
+      }
+      c.close();
+    } catch (SQLiteException e) {
+      Log.e(Constants.LOG_TAG, e.getMessage());
+    }
+    Update.execQuery(db, "INSERT INTO droidseries (version) VALUES ('0');");
+    Log.d(Constants.LOG_TAG, "DB version blank. All updates will be run; please ignore errors.");
+    return "0";
+  }
+
+  // ---------------------------------------------------------------------------
+  // inner classes and interfaces
+  // ---------------------------------------------------------------------------
 
   public class DatabaseUpdateResult {
     public boolean didUpdateFail;
@@ -72,6 +122,10 @@ public class Update {
     public void    postDatabaseUpdate(int mode, int oldVersion, DatabaseUpdateResult result, Object passthrough);
   }
 
+  // ---------------------------------------------------------------------------
+  // instance
+  // ---------------------------------------------------------------------------
+
   private Context context;
   private SQLiteStore db;
   private DatabaseUpdateResult databaseUpdateResult;
@@ -80,6 +134,18 @@ public class Update {
     // IMPORTANT: Do NOT use "context.getApplicationContext()". Context must be for an Activity (NOT an Application) to create a ProgressDialog.
     this.context = (Context) context;
     this.db      = SQLiteStore.getInstance(context);
+  }
+
+  private Cursor query(String query) {
+    return Update.query(db, query);
+  }
+
+  private boolean execQuery(String query) {
+    return Update.execQuery(db, query);
+  }
+
+  private boolean execTransaction(List<String> queries) {
+    return Update.execTransaction(db, queries);
   }
 
   public void updateDatabase(DatabaseUpdateListener listener, int mode) {
@@ -101,12 +167,15 @@ public class Update {
         databaseUpdateResult = new DatabaseUpdateResult();
 
         int     oldVersion = getVersionNumber();
-        boolean willUpdate = needsUpdate();
+        boolean willUpdate = Update.needsUpdate(db);
 
         if (!skipPreDatabaseUpdateCallback) {
           if (listener != null) {
             boolean proceed = listener.preDatabaseUpdate(mode, oldVersion, willUpdate);
-            if (!proceed) return;
+            if (!proceed) {
+              Looper.loop();
+              return;
+            }
           }
         }
 
@@ -133,30 +202,8 @@ public class Update {
     updateDatabaseTh.start();
   }
 
-  private boolean needsUpdate() {
-    return !getVersion().equals(currentVersion);
-  }
-
-  private String getVersion() {
-    String version = "";
-    try {
-      Cursor c = db.query("SELECT version FROM droidseries");
-      if (c != null && c.moveToFirst()) {
-        version = c.getString(0);
-        Log.d(Constants.LOG_TAG, "Current database version: "+ version);
-        return version;
-      }
-      c.close();
-    } catch (SQLiteException e) {
-      Log.e(Constants.LOG_TAG, e.getMessage());
-    }
-    db.execQuery("INSERT INTO droidseries (version) VALUES ('0');");
-    Log.d(Constants.LOG_TAG, "DB version blank. All updates will be run; please ignore errors.");
-    return "0";
-  }
-
   private int getVersionNumber() {
-    String version = getVersion();
+    String version = Update.getVersion(db);
 
     switch(version) {
       case "0":
@@ -258,8 +305,8 @@ public class Update {
   private boolean update_version_001() {
     Log.d(Constants.LOG_TAG, "UPDATING TO VERSION 0.1.5-7");
     try {
-      db.execQuery("ALTER TABLE series ADD COLUMN passiveStatus INTEGER DEFAULT 0");
-      db.execQuery("UPDATE droidseries SET version='0.1.5-7'");
+      execQuery("ALTER TABLE series ADD COLUMN passiveStatus INTEGER DEFAULT 0");
+      execQuery("UPDATE droidseries SET version='0.1.5-7'");
       return true;
     } catch (Exception e) {
       Log.e(Constants.LOG_TAG, "Error updating database");
@@ -271,12 +318,12 @@ public class Update {
   private boolean update_version_002() {
     Log.d(Constants.LOG_TAG, "UPDATING TO VERSION 0.1.5-7G");
     try {
-      db.execQuery("ALTER TABLE series ADD COLUMN seasonCount INTEGER DEFAULT -1");
-      db.execQuery("ALTER TABLE series ADD COLUMN unwatchedAired INTEGER DEFAULT -1");
-      db.execQuery("ALTER TABLE series ADD COLUMN unwatched INTEGER DEFAULT -1");
-      db.execQuery("ALTER TABLE series ADD COLUMN nextEpisode VARCHAR DEFAULT '-1'");
-      db.execQuery("ALTER TABLE series ADD COLUMN nextAir VARCHAR DEFAULT '-1'");
-      db.execQuery("UPDATE droidseries SET version='0.1.5-7G'");
+      execQuery("ALTER TABLE series ADD COLUMN seasonCount INTEGER DEFAULT -1");
+      execQuery("ALTER TABLE series ADD COLUMN unwatchedAired INTEGER DEFAULT -1");
+      execQuery("ALTER TABLE series ADD COLUMN unwatched INTEGER DEFAULT -1");
+      execQuery("ALTER TABLE series ADD COLUMN nextEpisode VARCHAR DEFAULT '-1'");
+      execQuery("ALTER TABLE series ADD COLUMN nextAir VARCHAR DEFAULT '-1'");
+      execQuery("UPDATE droidseries SET version='0.1.5-7G'");
       return true;
     } catch (Exception e) {
       Log.e(Constants.LOG_TAG, "Error updating database");
@@ -288,8 +335,8 @@ public class Update {
   private boolean update_version_003() {
     Log.d(Constants.LOG_TAG, "UPDATING TO VERSION 0.1.5-7G2");
     try {
-      db.execQuery("ALTER TABLE series ADD COLUMN extResources VARCHAR NOT NULL DEFAULT ''");
-      db.execQuery("UPDATE droidseries SET version='0.1.5-7G2'");
+      execQuery("ALTER TABLE series ADD COLUMN extResources VARCHAR NOT NULL DEFAULT ''");
+      execQuery("UPDATE droidseries SET version='0.1.5-7G2'");
       return true;
     } catch (Exception e) {
       Log.e(Constants.LOG_TAG, "Error updating database");
@@ -302,7 +349,7 @@ public class Update {
     Log.d(Constants.LOG_TAG, "UPDATING TO VERSION 0.1.5-7G3");
     try {
       if (!convertSeenTimestamps()) return false;
-      db.execQuery("UPDATE droidseries SET version='0.1.5-7G3'");
+      execQuery("UPDATE droidseries SET version='0.1.5-7G3'");
       return true;
     } catch (Exception e) {
       Log.e(Constants.LOG_TAG, "Error updating database");
@@ -314,8 +361,8 @@ public class Update {
   private boolean update_version_005() {
     Log.d(Constants.LOG_TAG, "UPDATING TO VERSION 0.1.5-7G4");
     try {
-      db.execQuery("ALTER TABLE series ADD COLUMN unwatchedLastAired VARCHAR");
-      db.execQuery("UPDATE droidseries SET version='0.1.5-7G4'");
+      execQuery("ALTER TABLE series ADD COLUMN unwatchedLastAired VARCHAR");
+      execQuery("UPDATE droidseries SET version='0.1.5-7G4'");
       return true;
     } catch (Exception e) {
       Log.e(Constants.LOG_TAG, "Error updating database");
@@ -327,8 +374,8 @@ public class Update {
   private boolean update_version_006() {
     Log.d(Constants.LOG_TAG, "UPDATING TO VERSION 0.1.5-7G5");
     try {
-      db.execQuery("ALTER TABLE series ADD COLUMN unwatchedLastEpisode VARCHAR");
-      db.execQuery("UPDATE droidseries SET version='0.1.5-7G5'");
+      execQuery("ALTER TABLE series ADD COLUMN unwatchedLastEpisode VARCHAR");
+      execQuery("UPDATE droidseries SET version='0.1.5-7G5'");
       return true;
     } catch (Exception e) {
       Log.e(Constants.LOG_TAG, "Error updating database");
@@ -341,7 +388,7 @@ public class Update {
     Log.d(Constants.LOG_TAG, "UPDATING TO VERSION 0.1.5-7G6");
     try {
       if (!doTmdbApiMigration()) return false;
-      db.execQuery("UPDATE droidseries SET version='0.1.5-7G6'");
+      execQuery("UPDATE droidseries SET version='0.1.5-7G6'");
       return true;
     } catch (Exception e) {
       Log.e(Constants.LOG_TAG, "Error updating database");
@@ -353,7 +400,7 @@ public class Update {
   private boolean update_version_008() {
     Log.d(Constants.LOG_TAG, "UPDATING TO VERSION 0000000009");
     try {
-      db.execQuery(
+      execQuery(
           "CREATE TABLE IF NOT EXISTS unavailableEpisodes ("
         +   "serieId              INTEGER NOT NULL"                       + ", "
         +   "seasonNumber         INTEGER NOT NULL"                       + ", "
@@ -362,7 +409,7 @@ public class Update {
         +   "FOREIGN KEY (serieId) REFERENCES series (id)"
         + ");"
       );
-      db.execQuery("UPDATE droidseries SET version='0000000009'");
+      execQuery("UPDATE droidseries SET version='0000000009'");
       return true;
     } catch (Exception e) {
       Log.e(Constants.LOG_TAG, "Error updating database");
@@ -385,7 +432,7 @@ public class Update {
 
     Cursor c = null;
     try {
-      c = db.query(query);
+      c = query(query);
 
       if ((c != null) && c.moveToFirst() && c.isFirst()) {
         do {
@@ -421,7 +468,7 @@ public class Update {
       }
 
       if (result && !queries.isEmpty()) {
-        result = db.execTransaction(queries);
+        result = execTransaction(queries);
       }
 
       if (result) {
@@ -533,7 +580,7 @@ public class Update {
 
             Cursor c = null;
             try {
-              c = db.query(query);
+              c = query(query);
 
               if ((c != null) && c.moveToFirst() && c.isFirst()) {
                 do {
@@ -573,7 +620,7 @@ public class Update {
             }
           }
 
-          result = db.execTransaction(queries);
+          result = execTransaction(queries);
         }
         catch(Exception e) {
           Log.e(Constants.LOG_TAG, "Error creating a backup of user metadata to temporary tables.", e);
@@ -588,7 +635,7 @@ public class Update {
             queries.add("DROP TABLE IF EXISTS tmdb_migration_series");
             queries.add("DROP TABLE IF EXISTS tmdb_migration_episodes");
 
-            db.execTransaction(queries);
+            execTransaction(queries);
           }
           catch(Exception e) {
             Log.e(Constants.LOG_TAG, "Error deleting temporary tables.", e);
@@ -609,8 +656,9 @@ public class Update {
           queries.add("DROP TABLE serie_seasons");
           queries.add("DROP TABLE episodes");
           queries.add("DROP TABLE series");
+          queries.add("DROP TABLE droidseries");
 
-          result = db.execTransaction(queries);
+          result = execTransaction(queries);
         }
         catch(Exception e) {
           Log.e(Constants.LOG_TAG, "Error deleting old schema.", e);
@@ -646,9 +694,16 @@ public class Update {
       }
 
       // construct an entirely new schema
+      // -----------------------------------------
+      // notes:
+      //   * afterward:
+      //      needsUpdate(...) == false
+      //   * which is required by api.addSeries(...),
+      //     because methods in ApiGateway call methods in DbGateway that don't skipVersionCheck
+      // -----------------------------------------
       if (result) {
         try {
-          db.onCreate(null);
+          db.onCreate(/* SQLiteDatabase dbase */ null);
         }
         catch(Exception e) {
           Log.e(Constants.LOG_TAG, "Error creating new schema.", e);
@@ -667,7 +722,7 @@ public class Update {
           FullUpdateProgressViewer progressViewer = null;
           Cursor c = null;
           try {
-            c = db.query(query);
+            c = query(query);
 
             if ((c != null) && c.moveToFirst() && c.isFirst()) {
               progressViewer = new FullUpdateProgressViewer(context);
@@ -693,7 +748,7 @@ public class Update {
                     databaseUpdateResult.tmdbApiMigrationResult.tmdbSeriesIdsThatFailedToAdd.add(serieId);
                     databaseUpdateResult.tmdbApiMigrationResult.seriesNamesThatFailedToAdd.add(name);
 
-                    Toast.makeText(context, "Failed to re-add series: '" + name + "'.\nNot all data was loaded from API.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(context.getApplicationContext(), "Failed to re-add series: '" + name + "'.\nNot all data was loaded from API.", Toast.LENGTH_LONG).show();
                     throw new Exception("Failed to re-add series: serieId=" + serieId + ", name='" + name + "', langCode=" + language + ", archived=" + ((archived == 1) ? "true" : "false"));
                   }
                 }
@@ -774,7 +829,7 @@ public class Update {
             );
           }
 
-          result = db.execTransaction(queries);
+          result = execTransaction(queries);
         }
         catch(Exception e) {
           Log.e(Constants.LOG_TAG, "Error importing user metadata for TV series from temporary tables to new schema.", e);
@@ -790,7 +845,7 @@ public class Update {
           queries.add("DROP TABLE IF EXISTS tmdb_migration_series");
           queries.add("DROP TABLE IF EXISTS tmdb_migration_episodes");
 
-          db.execTransaction(queries);
+          execTransaction(queries);
         }
         catch(Exception e) {
           Log.e(Constants.LOG_TAG, "Error deleting temporary tables.", e);
@@ -893,7 +948,7 @@ public class Update {
   public static void handleDatabaseUpdateResultErrors(Activity context, int oldVersion, DatabaseUpdateResult result, String logFolder) {
     if (result.didUpdateFail) {
       String error = context.getString(R.string.messages_db_error_update);
-      Toast.makeText(context, error, Toast.LENGTH_LONG).show();
+      Toast.makeText(context.getApplicationContext(), error, Toast.LENGTH_LONG).show();
     }
 
     if (

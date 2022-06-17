@@ -90,7 +90,16 @@ public class SQLiteStore extends SQLiteOpenHelper {
   }
 
   public Cursor query(String query) {
+    boolean skipVersionCheck = false;
+    return query(query, skipVersionCheck);
+  }
+
+  public Cursor query(String query, boolean skipVersionCheck) {
+    // only run queries against the current DB schema
+    if (!skipVersionCheck && Update.needsUpdate(this)) return null;
+
     Cursor c = null;
+
     try {
       c = db.rawQuery(query, null);
     }
@@ -101,6 +110,14 @@ public class SQLiteStore extends SQLiteOpenHelper {
   }
 
   public boolean execQuery(String query) {
+    boolean skipVersionCheck = false;
+    return execQuery(query, skipVersionCheck);
+  }
+
+  public boolean execQuery(String query, boolean skipVersionCheck) {
+    // only run queries against the current DB schema
+    if (!skipVersionCheck && Update.needsUpdate(this)) return false;
+
     try {
       db.execSQL(query);
     }
@@ -112,6 +129,14 @@ public class SQLiteStore extends SQLiteOpenHelper {
   }
 
   public boolean execTransaction(List<String> queries) {
+    boolean skipVersionCheck = false;
+    return execTransaction(queries, skipVersionCheck);
+  }
+
+  public boolean execTransaction(List<String> queries, boolean skipVersionCheck) {
+    // only run queries against the current DB schema
+    if (!skipVersionCheck && Update.needsUpdate(this)) return false;
+
     boolean result = true;
     try {
       db.beginTransaction();
