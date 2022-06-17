@@ -113,11 +113,14 @@ public class ApiGateway {
 
     try {
       FindResults response = api.find(externalId, origin, language);
-
-      if ((response == null) || response.getTvResults().isEmpty())
+      if (response == null)
         throw new Exception("no results");
 
-      for (TVBasic tv : response.getTvResults()) {
+      List<TVBasic> tvResults = response.getTvResults();
+      if ((tvResults == null) || tvResults.isEmpty())
+        throw new Exception("no results");
+
+      for (TVBasic tv : tvResults) {
         int internalId = tv.getId();
         if (internalId > 0) {
           return internalId;
@@ -140,8 +143,12 @@ public class ApiGateway {
       if ((response == null) || response.isEmpty())
         throw new Exception("no results");
 
+      List<TVBasic> tvResults = response.getResults();
+      if ((tvResults == null) || tvResults.isEmpty())
+        throw new Exception("no results");
+
       List<SearchResult> results = new ArrayList<SearchResult>();
-      for (TVBasic tv : response.getResults()) {
+      for (TVBasic tv : tvResults) {
         results.add(
           new SearchResult(
             tv.getId(),
@@ -431,9 +438,15 @@ public class ApiGateway {
     try {
       String[] appendToResponse = new String[0];
       TVSeasonInfo apiSeason = api.getSeasonInfo(serieId, seasonNumber, language, appendToResponse);
+      if (apiSeason == null)
+        throw new Exception("no results");
+
+      List<TVEpisodeInfo> allEpisodes = apiSeason.getEpisodes();
+      if ((allEpisodes == null) || allEpisodes.isEmpty())
+        throw new Exception("no results");
 
       List<Integer> episodeNumbers = new ArrayList<Integer>();
-      for (TVEpisodeInfo apiEpisode : apiSeason.getEpisodes()) {
+      for (TVEpisodeInfo apiEpisode : allEpisodes) {
         episodeNumbers.add(
           apiEpisode.getEpisodeNumber()
         );
@@ -523,7 +536,7 @@ public class ApiGateway {
 
   private String getDbSeries_contentRating(TVInfo apiSeries) {
     List<ContentRating> ratings = apiSeries.getContentRatings();
-    if (ratings.isEmpty()) return "";
+    if ((ratings == null) || ratings.isEmpty()) return "";
 
     // search for preferred content-ratings system
     String preferred_country = "US";
@@ -550,14 +563,16 @@ public class ApiGateway {
     List<DbSeason> dbSeasons = new ArrayList<DbSeason>();
 
     List<TVSeasonBasic> apiSeasons = apiSeries.getSeasons();
-    for (TVSeasonBasic apiSeason : apiSeasons) {
-      DbSeason dbSeason = new DbSeason(
-        /* int serieId      */ apiSeries.getId(),
-        /* int seasonNumber */ apiSeason.getSeasonNumber(),
-        /* String name      */ getDbSeason_name(apiSeason),
-        /* int episodeCount */ apiSeason.getEpisodeCount()
-      );
-      dbSeasons.add(dbSeason);
+    if ((apiSeasons != null) && !apiSeasons.isEmpty()) {
+      for (TVSeasonBasic apiSeason : apiSeasons) {
+        DbSeason dbSeason = new DbSeason(
+          /* int serieId      */ apiSeries.getId(),
+          /* int seasonNumber */ apiSeason.getSeasonNumber(),
+          /* String name      */ getDbSeason_name(apiSeason),
+          /* int episodeCount */ apiSeason.getEpisodeCount()
+        );
+        dbSeasons.add(dbSeason);
+      }
     }
 
     return dbSeasons;
@@ -576,12 +591,14 @@ public class ApiGateway {
     List<DbGenre> dbGenres = new ArrayList<DbGenre>();
 
     List<Genre> apiGenres = apiSeries.getGenres();
-    for (Genre apiGenre : apiGenres) {
-      DbGenre dbGenre = new DbGenre(
-        /* int serieId  */ apiSeries.getId(),
-        /* String genre */ apiGenre.getName()
-      );
-      dbGenres.add(dbGenre);
+    if ((apiGenres != null) && !apiGenres.isEmpty()) {
+      for (Genre apiGenre : apiGenres) {
+        DbGenre dbGenre = new DbGenre(
+          /* int serieId  */ apiSeries.getId(),
+          /* String genre */ apiGenre.getName()
+        );
+        dbGenres.add(dbGenre);
+      }
     }
 
     return dbGenres;
@@ -593,12 +610,14 @@ public class ApiGateway {
     List<DbActor> dbActors = new ArrayList<DbActor>();
 
     List<MediaCreditCast> apiCast = apiSeries.getCredits().getCast();
-    for (MediaCreditCast apiCastMember : apiCast) {
-      DbActor dbActor = new DbActor(
-        /* int serieId  */ apiSeries.getId(),
-        /* String actor */ apiCastMember.getName()
-      );
-      dbActors.add(dbActor);
+    if ((apiCast != null) && !apiCast.isEmpty()) {
+      for (MediaCreditCast apiCastMember : apiCast) {
+        DbActor dbActor = new DbActor(
+          /* int serieId  */ apiSeries.getId(),
+          /* String actor */ apiCastMember.getName()
+        );
+        dbActors.add(dbActor);
+      }
     }
 
     return dbActors;
@@ -629,14 +648,16 @@ public class ApiGateway {
     String job_title = "Writer";
 
     List<MediaCreditCrew> apiCrew = apiEpisode.getCrew();
-    for (MediaCreditCrew apiCrewMember : apiCrew) {
-      if (job_title.equals(apiCrewMember.getJob())) {
-        DbWriter dbWriter = new DbWriter(
-          /* int serieId   */ serieId,
-          /* int episodeId */ apiEpisode.getId(),
-          /* String writer */ apiCrewMember.getName()
-        );
-        dbWriters.add(dbWriter);
+    if ((apiCrew != null) && !apiCrew.isEmpty()) {
+      for (MediaCreditCrew apiCrewMember : apiCrew) {
+        if (job_title.equals(apiCrewMember.getJob())) {
+          DbWriter dbWriter = new DbWriter(
+            /* int serieId   */ serieId,
+            /* int episodeId */ apiEpisode.getId(),
+            /* String writer */ apiCrewMember.getName()
+          );
+          dbWriters.add(dbWriter);
+        }
       }
     }
 
@@ -651,14 +672,16 @@ public class ApiGateway {
     String job_title = "Director";
 
     List<MediaCreditCrew> apiCrew = apiEpisode.getCrew();
-    for (MediaCreditCrew apiCrewMember : apiCrew) {
-      if (job_title.equals(apiCrewMember.getJob())) {
-        DbDirector dbDirector = new DbDirector(
-          /* int serieId     */ serieId,
-          /* int episodeId   */ apiEpisode.getId(),
-          /* String director */ apiCrewMember.getName()
-        );
-        dbDirectors.add(dbDirector);
+    if ((apiCrew != null) && !apiCrew.isEmpty()) {
+      for (MediaCreditCrew apiCrewMember : apiCrew) {
+        if (job_title.equals(apiCrewMember.getJob())) {
+          DbDirector dbDirector = new DbDirector(
+            /* int serieId     */ serieId,
+            /* int episodeId   */ apiEpisode.getId(),
+            /* String director */ apiCrewMember.getName()
+          );
+          dbDirectors.add(dbDirector);
+        }
       }
     }
 
@@ -671,13 +694,15 @@ public class ApiGateway {
     List<DbGuestStar> dbGuestStars = new ArrayList<DbGuestStar>();
 
     List<MediaCreditCast> apiCast = apiEpisode.getGuestStars();
-    for (MediaCreditCast apiCastMember : apiCast) {
-      DbGuestStar dbGuestStar = new DbGuestStar(
-        /* int serieId      */ serieId,
-        /* int episodeId    */ apiEpisode.getId(),
-        /* String guestStar */ apiCastMember.getName()
-      );
-      dbGuestStars.add(dbGuestStar);
+    if ((apiCast != null) && !apiCast.isEmpty()) {
+      for (MediaCreditCast apiCastMember : apiCast) {
+        DbGuestStar dbGuestStar = new DbGuestStar(
+          /* int serieId      */ serieId,
+          /* int episodeId    */ apiEpisode.getId(),
+          /* String guestStar */ apiCastMember.getName()
+        );
+        dbGuestStars.add(dbGuestStar);
+      }
     }
 
     return dbGuestStars;

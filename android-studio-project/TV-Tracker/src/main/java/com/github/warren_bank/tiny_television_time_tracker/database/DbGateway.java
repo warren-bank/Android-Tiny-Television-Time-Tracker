@@ -688,14 +688,16 @@ public class DbGateway {
 
   public EpisodeSeen findEpisodeSeen(List<EpisodeSeen> episodes, int seasonNumber, int episodeNumber) {
     EpisodeSeen found = null;
-    for (EpisodeSeen episode : episodes) {
-      if ((episode.seasonNumber == seasonNumber) && (episode.episodeNumber == episodeNumber)) {
-        found = episode;
-        break;
-      }
-      if (episode.seasonNumber > seasonNumber) {
-        // episodes are sorted in ascending order; short-circuit loop after passing the desired season.
-        break;
+    if ((episodes != null) && !episodes.isEmpty()) {
+      for (EpisodeSeen episode : episodes) {
+        if ((episode.seasonNumber == seasonNumber) && (episode.episodeNumber == episodeNumber)) {
+          found = episode;
+          break;
+        }
+        if (episode.seasonNumber > seasonNumber) {
+          // episodes are sorted in ascending order; short-circuit loop after passing the desired season.
+          break;
+        }
       }
     }
     return found;

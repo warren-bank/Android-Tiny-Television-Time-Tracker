@@ -718,12 +718,14 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
     ((CheckBox) filterV.findViewById(R.id.exclude_seen)).setChecked(excludeSeen);
     List<String> allNetworks = db.getNetworks();
     final LinearLayout networksFilterV = (LinearLayout) filterV.findViewById(R.id.networks_filter);
-    for (String network : allNetworks) {
-      CheckBox networkCheckBox = new CheckBox(DroidShows.this);
-      networkCheckBox.setText(network);
-      if (!networks.isEmpty())
-        networkCheckBox.setChecked(networks.contains(network));
-      networksFilterV.addView(networkCheckBox);
+    if ((allNetworks != null) && !allNetworks.isEmpty()) {
+      for (String network : allNetworks) {
+        CheckBox networkCheckBox = new CheckBox(DroidShows.this);
+        networkCheckBox.setText(network);
+        if (!networks.isEmpty())
+          networkCheckBox.setChecked(networks.contains(network));
+        networksFilterV.addView(networkCheckBox);
+      }
     }
     ToggleButton networksFilter = (ToggleButton) filterV.findViewById(R.id.toggle_networks_filter);
     networksFilter.setChecked(filterNetworks);
@@ -1713,8 +1715,8 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
       isUpdating = true;
 
       List<TVShowItem> items = db.createTVShowItems((searching() ? 2 : showArchive), false, null);
+      if ((items == null) || items.isEmpty()) return;
       int series_count = items.size();
-      if (series_count <= 0) return;
 
       final Runnable updateallseries = new Runnable() {
         public void run() {

@@ -137,6 +137,9 @@ public class SQLiteStore extends SQLiteOpenHelper {
     // only run queries against the current DB schema
     if (!skipVersionCheck && Update.needsUpdate(this)) return false;
 
+    // validate input
+    if ((queries == null) || queries.isEmpty()) return false;
+
     boolean result = true;
     try {
       db.beginTransaction();

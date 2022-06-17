@@ -56,6 +56,9 @@ public final class RuntimePermissionUtils {
     if (Build.VERSION.SDK_INT < 23)
       return null;
 
+    if ((allRequestedPermissions == null) || (allRequestedPermissions.length == 0))
+      return null;
+
     List<String> missingPermissions = new ArrayList<String>();
 
     for (String permission : allRequestedPermissions) {
@@ -71,6 +74,12 @@ public final class RuntimePermissionUtils {
   }
 
   private static String[] getMissingPermissions(String[] allRequestedPermissions, int[] allGrantResults) {
+    if ((allRequestedPermissions == null) || (allRequestedPermissions.length == 0))
+      return null;
+
+    if ((allGrantResults == null) || (allGrantResults.length == 0))
+      return allRequestedPermissions;
+
     List<String> missingPermissions = new ArrayList<String>();
     int index;
 
