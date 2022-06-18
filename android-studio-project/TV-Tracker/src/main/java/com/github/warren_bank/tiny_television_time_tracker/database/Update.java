@@ -306,7 +306,6 @@ public class Update {
     if (!databaseUpdateResult.didUpdateFail && (version == 8)) {
       didUpdate                                = true;
       result                                   = update_version_008();
-      databaseUpdateResult.didUpdateAllSeries |= result;
       databaseUpdateResult.didUpdateSucceed   &= result;
       databaseUpdateResult.didUpdateFail      |= !result;
       version                                  = getVersionNumber();
