@@ -2,7 +2,7 @@
 node_modules/
 
 # debug output from Android string translator
-android-studio-project/DroidShows/src/main/res/debug.en.txt
+android-studio-project/TV-Tracker/src/main/res/debug.en.txt
 
 # Android generated
 bin
