@@ -22,7 +22,8 @@
       android:label="@string/app_name_short"
       android:name=".DroidShows"
       android:configChanges="colorMode|density|fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode"
-      android:launchMode="standard">
+      android:launchMode="standard"
+      android:exported="true">
 
       <intent-filter>
         <action   android:name="android.intent.action.MAIN"/>
@@ -36,7 +37,8 @@
       android:label="@string/menu_context_add_serie"
       android:name=".ui.AddSerie"
       android:configChanges="colorMode|density|fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode"
-      android:launchMode="singleTop">
+      android:launchMode="singleTop"
+      android:exported="true">
 
       <intent-filter>
         <action android:name="android.intent.action.SEARCH"/>
@@ -49,23 +51,27 @@
     <activity
       android:name=".ui.SerieSeasons"
       android:configChanges="colorMode|density|fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode"
-      android:launchMode="standard"/>
+      android:launchMode="standard"
+      android:exported="false"/>
 
     <activity
       android:name=".ui.SerieEpisodes"
       android:configChanges="colorMode|density|fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode"
-      android:launchMode="standard"/>
+      android:launchMode="standard"
+      android:exported="false"/>
 
     <activity
       android:name=".ui.ViewEpisode"
       android:configChanges="colorMode|density|fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode"
-      android:launchMode="standard"/>
+      android:launchMode="standard"
+      android:exported="false"/>
 
     <activity
       android:label="@string/menu_context_view_serie_details"
       android:name=".ui.ViewSerie"
       android:configChanges="colorMode|density|fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode"
-      android:launchMode="standard"/>
+      android:launchMode="standard"
+      android:exported="false"/>
 
   </application>
 </manifest>
