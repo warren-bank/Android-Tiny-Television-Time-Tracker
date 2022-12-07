@@ -21,8 +21,21 @@ android {
     archivesBaseName += "-$versionName"
   }
 
+  flavorDimensions "languageResources"
+
+  productFlavors {
+    withAllLanguageTranslations {
+      dimension "languageResources"
+    }
+    english {
+      dimension "languageResources"
+    }
+  }
+
   buildTypes {
     release {
+      debuggable      false
+      jniDebuggable   false
       shrinkResources true
       minifyEnabled   true
       proguardFiles = [
@@ -31,18 +44,10 @@ android {
       ]
     }
     debug {
-      debuggable  true
-      jniDebuggable true
-    }
-  }
-
-  flavorDimensions 'language_resources'
-  productFlavors {
-    all_languages {
-      dimension 'language_resources'
-    }
-    english_only {
-      dimension 'language_resources'
+      debuggable      true
+      jniDebuggable   true
+      shrinkResources false
+      minifyEnabled   false
     }
   }
 
