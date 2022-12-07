@@ -936,7 +936,7 @@ public class DbGateway {
         + " AND"
         + "   seen=0"
         + ((lastWatched != null)
-            ? (" AND seasonNumber >= " + lastWatched[0] + " AND episodeNumber > " + lastWatched[1])
+            ? (" AND ((seasonNumber = " + lastWatched[0] + " AND episodeNumber > " + lastWatched[1] + ") OR (seasonNumber > " + lastWatched[0] + "))")
             : ""
           )
         + (DroidShows.includeSpecialsOption
@@ -1361,7 +1361,7 @@ public class DbGateway {
       + " AND"
       + "   seen=0"
       + ((lastWatched != null)
-          ? (" AND seasonNumber >= " + lastWatched[0] + " AND episodeNumber > " + lastWatched[1])
+          ? (" AND ((seasonNumber = " + lastWatched[0] + " AND episodeNumber > " + lastWatched[1] + ") OR (seasonNumber > " + lastWatched[0] + "))")
           : ""
         )
       + (DroidShows.includeSpecialsOption
