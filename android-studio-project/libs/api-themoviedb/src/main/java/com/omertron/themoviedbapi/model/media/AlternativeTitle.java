@@ -19,6 +19,7 @@
  */
 package com.omertron.themoviedbapi.model.media;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;
 import org.apache.commons.lang3.builder.EqualsBuilder;
@@ -27,6 +28,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 /**
  * @author Stuart
  */
+@JsonIgnoreProperties(ignoreUnknown=true)
 public class AlternativeTitle implements Serializable {
 
     private static final long serialVersionUID = 100L;

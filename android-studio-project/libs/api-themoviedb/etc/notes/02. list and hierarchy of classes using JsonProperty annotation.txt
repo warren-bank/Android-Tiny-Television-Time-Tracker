@@ -1,0 +1,172 @@
+classes that use the annotation: "JsonProperty"
+===============================================
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/AbstractIdName.java
+  extends AbstractJsonMapping
+    => BASE
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/Certification.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/FindResults.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/Language.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/StatusCode.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/account/Account.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/account/Avatar.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/account/AvatarHash.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/artwork/Artwork.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/artwork/ArtworkMedia.java
+  extends Artwork
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/authentication/TokenAuthorisation.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/authentication/TokenSession.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/change/ChangeKeyItem.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/change/ChangeListItem.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/change/ChangedItem.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/collection/Collection.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/collection/CollectionInfo.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/company/Company.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/config/Configuration.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/config/JobDepartment.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/credits/CreditBasic.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/credits/CreditMovieBasic.java
+  extends CreditBasic
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/credits/CreditTVBasic.java
+  extends CreditBasic
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/credits/MediaCredit.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/credits/MediaCreditCast.java
+  extends MediaCredit
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/credits/MediaCreditCrew.java
+  extends MediaCredit
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/list/ListItem.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/list/ListItemStatus.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/list/ListStatusCode.java
+  extends StatusCode
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/list/UserList.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/media/AlternativeTitle.java
+  => BASE
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/media/MediaBasic.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/media/MediaCreditList.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/media/MediaState.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/media/RatedValue.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/media/Trailer.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/media/Translation.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/media/Video.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/movie/MovieBasic.java
+  extends MediaBasic
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/movie/MovieInfo.java
+  extends MovieBasic
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/movie/ProductionCompany.java
+  extends AbstractIdName
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/movie/ProductionCountry.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/movie/Release.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/movie/ReleaseDate.java
+  extends Release
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/movie/ReleaseDates.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/movie/ReleaseInfo.java
+  extends Release
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/network/Network.java
+  extends AbstractIdName
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/person/ContentRating.java
+  => BASE
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/person/CreditInfo.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/person/ExternalID.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/person/PersonBasic.java
+  extends AbstractIdName
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/person/PersonCreditList.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/person/PersonFind.java
+  extends PersonBasic
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/person/PersonInfo.java
+  extends PersonBasic
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/review/Review.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/tv/TVBasic.java
+  extends MediaBasic
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/tv/TVCredit.java
+  extends AbstractIdName
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/tv/TVEpisodeBasic.java
+  extends MediaBasic
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/tv/TVEpisodeInfo.java
+  extends TVEpisodeBasic
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/tv/TVInfo.java
+  extends TVBasic
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/tv/TVSeasonBasic.java
+  extends AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/tv/TVSeasonInfo.java
+  extends TVSeasonBasic
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/results/AbstractWrapperAll.java
+  extends AbstractWrapperIdPages
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/results/AbstractWrapperIdPages.java
+  extends AbstractWrapperId
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/results/AbstractWrapperId.java
+  extends AbstractWrapperBase
+    => BASE
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/results/ResultDates.java
+  extends .model.AbstractJsonMapping
+    => BASE (above)
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/results/WrapperAlternativeTitles.java
+  extends AbstractWrapperId
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/results/WrapperChanges.java
+  extends AbstractWrapperBase
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/results/WrapperConfig.java
+  extends AbstractWrapperBase
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/results/WrapperGenericList.java
+  extends AbstractWrapperAll
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/results/WrapperGenres.java
+  extends AbstractWrapperBase
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/results/WrapperImages.java
+  extends AbstractWrapperAll
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/results/WrapperJobList.java
+  extends AbstractWrapperBase
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/results/WrapperMovieKeywords.java
+  extends AbstractWrapperId
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/results/WrapperReleaseInfo.java
+  extends AbstractWrapperId
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/results/WrapperTranslations.java
+  extends AbstractWrapperId
+
+etc:
+====
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/results/AbstractWrapperBase.java
+  extends .model.AbstractJsonMapping
+    => BASE (above)
+
+BASE classes:
+=============
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/AbstractJsonMapping.java
+  .model.AbstractJsonMapping
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/media/AlternativeTitle.java
+  .model.media.AlternativeTitle
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/person/ContentRating.java
+  .model.person.ContentRating

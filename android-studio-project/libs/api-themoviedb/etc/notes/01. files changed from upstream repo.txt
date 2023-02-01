@@ -1,0 +1,5 @@
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/TheMovieDbApi.java
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/model/AbstractJsonMapping.java
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/tools/ApiUrl.java
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/tools/HttpTools.java
+./Android-Tiny-Television-Time-Tracker/android-studio-project/libs/api-themoviedb/src/main/java/com/omertron/themoviedbapi/tools/TmdbParameters.java

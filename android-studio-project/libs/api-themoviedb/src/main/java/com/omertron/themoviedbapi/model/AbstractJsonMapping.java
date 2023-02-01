@@ -21,6 +21,7 @@ package com.omertron.themoviedbapi.model;
 
 import android.util.Log;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -30,6 +31,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
  *
  * @author stuart.boston
  */
+@JsonIgnoreProperties(ignoreUnknown=true)
 public abstract class AbstractJsonMapping implements Serializable {
 
     private static final long serialVersionUID = 100L;

@@ -19,6 +19,7 @@
  */
 package com.omertron.themoviedbapi.model.person;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;
 
@@ -26,6 +27,7 @@ import java.io.Serializable;
  *
  * @author Stuart.Boston
  */
+@JsonIgnoreProperties(ignoreUnknown=true)
 public class ContentRating implements Serializable {
 
     private static final long serialVersionUID = 100L;
