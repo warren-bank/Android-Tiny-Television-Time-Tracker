@@ -977,8 +977,14 @@ public class Update {
       // then write a log file to the default backup folder.
       String dialogMsg = null;
 
-      String[] allRequestedPermissions = new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"};
-      boolean hasAllPermissions = RuntimePermissionUtils.hasAllPermissions(context, allRequestedPermissions);
+      boolean hasAllPermissions;
+      if (Build.VERSION.SDK_INT < 30) {
+        String[] allRequestedPermissions = new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"};
+        hasAllPermissions = RuntimePermissionUtils.hasAllPermissions(context, allRequestedPermissions);
+      }
+      else {
+        hasAllPermissions = RuntimePermissionUtils.hasFilePermissions();
+      }
 
       if (hasAllPermissions) {
         StringBuilder content = new StringBuilder(256);

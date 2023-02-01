@@ -1,8 +1,13 @@
 package com.github.warren_bank.tiny_television_time_tracker.utils;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
+import android.os.Environment;
+import android.provider.Settings;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -15,6 +20,29 @@ public final class RuntimePermissionUtils {
   }
 
   private static HashMap<Integer,Object> passthroughCache = new HashMap<Integer,Object>();
+
+  public static void onRequestPermissionsResult(RuntimePermissionListener listener, int requestCode, String[] permissions, int[] grantResults) {
+    Object passthrough          = passthroughCache.remove(requestCode);
+    String[] missingPermissions = RuntimePermissionUtils.getMissingPermissions(permissions, grantResults);
+
+    if (missingPermissions == null) {
+      listener.onRequestPermissionsGranted(requestCode, passthrough);
+    }
+    else {
+      listener.onRequestPermissionsDenied(requestCode, passthrough, missingPermissions);
+    }
+  }
+
+  public static void onActivityResult(RuntimePermissionListener listener, int requestCode, int resultCode, Intent data) {
+    Object passthrough = passthroughCache.remove(requestCode);
+
+    if (resultCode == Activity.RESULT_OK) {
+      listener.onRequestPermissionsGranted(requestCode, passthrough);
+    }
+    else {
+      listener.onRequestPermissionsDenied(requestCode, passthrough, /* missingPermissions= */ null);
+    }
+  }
 
   public static boolean hasAllPermissions(Activity activity, String[] allRequestedPermissions) {
     String[] missingPermissions = RuntimePermissionUtils.getMissingPermissions(activity, allRequestedPermissions);
@@ -37,18 +65,6 @@ public final class RuntimePermissionUtils {
       passthroughCache.put(requestCode, passthrough);
 
       activity.requestPermissions(missingPermissions, requestCode);
-    }
-  }
-
-  public static void onRequestPermissionsResult(Activity activity, RuntimePermissionListener listener, int requestCode, String[] permissions, int[] grantResults) {
-    Object passthrough          = passthroughCache.remove(requestCode);
-    String[] missingPermissions = RuntimePermissionUtils.getMissingPermissions(permissions, grantResults);
-
-    if (missingPermissions == null) {
-      listener.onRequestPermissionsGranted(requestCode, passthrough);
-    }
-    else {
-      listener.onRequestPermissionsDenied(requestCode, passthrough, missingPermissions);
     }
   }
 
@@ -99,4 +115,33 @@ public final class RuntimePermissionUtils {
 
     return missingPermissions.toArray(new String[missingPermissions.size()]);
   }
+
+  // ---------------------------------------------------------------------------
+  // special case: "android.permission.MANAGE_EXTERNAL_STORAGE"
+
+  public static void showFilePermissions(Activity activity, int requestCode) {
+    Object passthrough = null;
+    RuntimePermissionUtils.showFilePermissions(activity, requestCode, passthrough);
+  }
+
+  public static void showFilePermissions(Activity activity, int requestCode, Object passthrough) {
+    Uri uri       = Uri.parse("package:" + activity.getPackageName());
+    Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION, uri);
+
+    passthroughCache.put(requestCode, passthrough);
+
+    activity.startActivityForResult(intent, requestCode);
+  }
+
+  public static boolean hasFilePermissions() {
+    return RuntimePermissionUtils.canAccessAllFiles();
+  }
+
+  private static boolean canAccessAllFiles() {
+    return (Build.VERSION.SDK_INT < 30)
+      ? true
+      : Environment.isExternalStorageManager();
+  }
+
+  // ---------------------------------------------------------------------------
 }

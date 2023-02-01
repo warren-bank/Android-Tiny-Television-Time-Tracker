@@ -940,15 +940,13 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
   }
 
   private void filePickerPermissionCheck(final String folderString, final boolean restoring) {
-    String[] allRequestedPermissions = new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"};
-
     int requestCode = restoring
       ? Constants.PERMISSION_CHECK_REQUEST_CODE_RESTORE_DATABASE_FILEPICKER
       : Constants.PERMISSION_CHECK_REQUEST_CODE_BACKUP_DATABASE_FILEPICKER;
 
     Object passthrough = (Object) folderString;
 
-    RuntimePermissionUtils.requestPermissions(DroidShows.this, DroidShows.this, allRequestedPermissions, requestCode, passthrough);
+    requestFilePermissions(requestCode, passthrough);
   }
 
   private class PassthroughBackup {
@@ -972,20 +970,36 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
   private void backupPermissionCheck(boolean auto, String backupFolder, String backupFileName, boolean isPreUpdate) {
     if (auto && !autoBackup) return;
 
-    String[] allRequestedPermissions = new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"};
-
     int requestCode = isPreUpdate
       ? Constants.PERMISSION_CHECK_REQUEST_CODE_BACKUP_DATABASE_PREUPDATE
       : Constants.PERMISSION_CHECK_REQUEST_CODE_BACKUP_DATABASE;
 
     Object passthrough = (Object) new PassthroughBackup(auto, backupFolder, backupFileName);
 
-    RuntimePermissionUtils.requestPermissions(DroidShows.this, DroidShows.this, allRequestedPermissions, requestCode, passthrough);
+    requestFilePermissions(requestCode, passthrough);
+  }
+
+  private void requestFilePermissions(int requestCode, Object passthrough) {
+    if (Build.VERSION.SDK_INT < 30) {
+      String[] allRequestedPermissions = new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"};
+      RuntimePermissionUtils.requestPermissions(DroidShows.this, DroidShows.this, allRequestedPermissions, requestCode, passthrough);
+    }
+    else if (!RuntimePermissionUtils.hasFilePermissions()) {
+      RuntimePermissionUtils.showFilePermissions(DroidShows.this, requestCode, passthrough);
+    }
+    else {
+      onRequestPermissionsGranted(requestCode, passthrough);
+    }
   }
 
   @Override
   public void onRequestPermissionsResult (int requestCode, String[] permissions, int[] grantResults) {
-    RuntimePermissionUtils.onRequestPermissionsResult(DroidShows.this, DroidShows.this, requestCode, permissions, grantResults);
+    RuntimePermissionUtils.onRequestPermissionsResult(DroidShows.this, requestCode, permissions, grantResults);
+  }
+
+  @Override
+  protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    RuntimePermissionUtils.onActivityResult(DroidShows.this, requestCode, resultCode, data);
   }
 
   @Override // RuntimePermissionUtils.RuntimePermissionListener
@@ -1032,6 +1046,23 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
 
   @Override // RuntimePermissionUtils.RuntimePermissionListener
   public void onRequestPermissionsDenied(int requestCode, Object passthrough, String[] missingPermissions) {
+
+    if (Build.VERSION.SDK_INT >= 30) {
+      // workaround: startActivityForResult(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION) doesn't return a result value, which is interpreted by RuntimePermissionUtils as denial
+      switch(requestCode) {
+        case Constants.PERMISSION_CHECK_REQUEST_CODE_RESTORE_DATABASE_FILEPICKER:
+        case Constants.PERMISSION_CHECK_REQUEST_CODE_BACKUP_DATABASE_FILEPICKER:
+        case Constants.PERMISSION_CHECK_REQUEST_CODE_BACKUP_DATABASE_PREUPDATE:
+        case Constants.PERMISSION_CHECK_REQUEST_CODE_BACKUP_DATABASE: {
+            if (RuntimePermissionUtils.hasFilePermissions()) {
+              onRequestPermissionsGranted(requestCode, passthrough);
+              return;
+            }
+          }
+          break;
+      }
+    }
+
     switch(requestCode) {
       case Constants.PERMISSION_CHECK_REQUEST_CODE_BACKUP_DATABASE_PREUPDATE: {
           // the user has denied the permission required to save a backup of the DB.. before updating the version of the database schema;

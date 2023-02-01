@@ -241,7 +241,12 @@ public class ViewEpisode extends Activity implements RuntimePermissionUtils.Runt
 
   @Override
   public void onRequestPermissionsResult (int requestCode, String[] permissions, int[] grantResults) {
-    RuntimePermissionUtils.onRequestPermissionsResult(ViewEpisode.this, ViewEpisode.this, requestCode, permissions, grantResults);
+    RuntimePermissionUtils.onRequestPermissionsResult(ViewEpisode.this, requestCode, permissions, grantResults);
+  }
+
+  @Override
+  protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    RuntimePermissionUtils.onActivityResult(ViewEpisode.this, requestCode, resultCode, data);
   }
 
   @Override // RuntimePermissionUtils.RuntimePermissionListener
