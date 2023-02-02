@@ -271,15 +271,28 @@ public class ApiGateway {
       }
     }
     if (result) {
-      List<Integer> episodeNumbers;
+      List<EpisodeSeen> newEpisodes;
+      EpisodeSeen oldEpisode;
       for (DbSeason dbSeason : dbSeasons) {
-        episodeNumbers = getApiEpisodeNumbers(serieId, dbSeason.seasonNumber, language);
-        if ((episodeNumbers == null) || episodeNumbers.isEmpty()) continue;
+        newEpisodes = getApiEpisodesInSeason(serieId, dbSeason.seasonNumber, language);
+        if ((newEpisodes == null) || newEpisodes.isEmpty()) continue;
 
-        for (int episodeNumber : episodeNumbers) {
-          if (db.hasEpisodeSeen(oldEpisodes, dbSeason.seasonNumber, episodeNumber)) continue;
+        for (EpisodeSeen newEpisode : newEpisodes) {
+          oldEpisode = db.findEpisodeSeen(oldEpisodes, newEpisode.episodeId);
 
-          result &= addEpisode(dbSeason.serieId, dbSeason.seasonNumber, episodeNumber, language, ignoreMissingEpisodes);
+          if (oldEpisode == null) {
+            // not found => add new
+            result &= addEpisode(dbSeason.serieId, newEpisode.seasonNumber, newEpisode.episodeNumber, language, ignoreMissingEpisodes);
+          }
+          else if (oldEpisode.compareTo(newEpisode) != 0) {
+            // found but data is invalid => delete old, add new, preserve seen timestamp
+            result &= db.deleteEpisode(dbSeason.serieId, newEpisode.episodeId, /* refreshStats= */ false);
+            result &= addEpisode(dbSeason.serieId, newEpisode.seasonNumber, newEpisode.episodeNumber, language, ignoreMissingEpisodes, oldEpisode.seen);
+          }
+          else {
+            // found and data is valid => noop
+            continue;
+          }
           //if (!result) break;
         }
         //if (!result) break;
@@ -435,6 +448,21 @@ public class ApiGateway {
   // ---------------------------------------------------------------------------
 
   private List<Integer> getApiEpisodeNumbers(int serieId, int seasonNumber, String language) {
+    List<EpisodeSeen> episodes = getApiEpisodesInSeason(serieId, seasonNumber, language);
+
+    if ((episodes == null) || episodes.isEmpty())
+      return null;
+
+    List<Integer> episodeNumbers = new ArrayList<Integer>();
+    for (EpisodeSeen episode : episodes) {
+      episodeNumbers.add(
+        episode.episodeNumber
+      );
+    }
+    return episodeNumbers;
+  }
+
+  private List<EpisodeSeen> getApiEpisodesInSeason(int serieId, int seasonNumber, String language) {
     try {
       String[] appendToResponse = new String[0];
       TVSeasonInfo apiSeason = api.getSeasonInfo(serieId, seasonNumber, language, appendToResponse);
@@ -445,13 +473,18 @@ public class ApiGateway {
       if ((allEpisodes == null) || allEpisodes.isEmpty())
         throw new Exception("no results");
 
-      List<Integer> episodeNumbers = new ArrayList<Integer>();
+      List<EpisodeSeen> episodes = new ArrayList<EpisodeSeen>();
       for (TVEpisodeInfo apiEpisode : allEpisodes) {
-        episodeNumbers.add(
-          apiEpisode.getEpisodeNumber()
+        episodes.add(
+          new EpisodeSeen(
+            /* episodeId=     */ apiEpisode.getId(),
+            seasonNumber,
+            /* episodeNumber= */ apiEpisode.getEpisodeNumber(),
+            /* seen=          */ 0
+          )
         );
       }
-      return episodeNumbers;
+      return episodes;
     }
     catch(Exception e) {
       Log.e(Constants.LOG_TAG, e.getMessage());

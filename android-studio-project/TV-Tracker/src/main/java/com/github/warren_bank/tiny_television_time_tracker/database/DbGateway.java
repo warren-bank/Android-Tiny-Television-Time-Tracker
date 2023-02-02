@@ -681,6 +681,26 @@ public class DbGateway {
   // ---------------------------------------------------------------------------
   // related utilities
 
+  public boolean hasEpisodeSeen(List<EpisodeSeen> episodes, int episodeId) {
+    EpisodeSeen found = findEpisodeSeen(episodes, episodeId);
+    return (found != null);
+  }
+
+  public EpisodeSeen findEpisodeSeen(List<EpisodeSeen> episodes, int episodeId) {
+    EpisodeSeen found = null;
+    if ((episodes != null) && !episodes.isEmpty() && (episodeId != EpisodeSeen.UNAVAILABLE_EPISODE_ID)) {
+      for (EpisodeSeen episode : episodes) {
+        if (episode.episodeId == episodeId) {
+          found = episode;
+          break;
+        }
+      }
+    }
+    return found;
+  }
+
+  // ---------------------------------------------------------------------------
+
   public boolean hasEpisodeSeen(List<EpisodeSeen> episodes, int seasonNumber, int episodeNumber) {
     EpisodeSeen found = findEpisodeSeen(episodes, seasonNumber, episodeNumber);
     return (found != null);
