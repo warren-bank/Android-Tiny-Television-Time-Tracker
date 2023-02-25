@@ -15,6 +15,7 @@ import com.github.warren_bank.tiny_television_time_tracker.ui.ViewSerie;
 import com.github.warren_bank.tiny_television_time_tracker.ui.model.EpisodeMarkedAsSeen;
 import com.github.warren_bank.tiny_television_time_tracker.ui.model.NextEpisode;
 import com.github.warren_bank.tiny_television_time_tracker.ui.model.TVShowItem;
+import com.github.warren_bank.tiny_television_time_tracker.ui.model.UnwatchedLastAiredEpisode;
 import com.github.warren_bank.tiny_television_time_tracker.utils.FileUtils;
 import com.github.warren_bank.tiny_television_time_tracker.utils.HardwareUtils;
 import com.github.warren_bank.tiny_television_time_tracker.utils.ImageUtils;
@@ -338,7 +339,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
       api = ApiGateway.getInstance(DroidShows.this);
       return true;
     }
-    catch(Exception e) {
+    catch (Exception e) {
       api = null;
       Toast.makeText(getApplicationContext(), R.string.messages_api_con_error, Toast.LENGTH_LONG).show();
       return false;
@@ -515,7 +516,8 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
               i.set(thisFastScroller, null);
             }
           }
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
           e.printStackTrace();
         }
       }
@@ -699,7 +701,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
               listView.post(updateListView);
             }
           }
-          catch(Exception e) {}
+          catch (Exception e) {}
         }
       })
       .setNegativeButton(getString(R.string.dialog_cancel), new DialogInterface.OnClickListener() {
@@ -784,7 +786,8 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
         .replace("{version}",  getPackageManager().getPackageInfo(getPackageName(), 0).versionName)
         .replace("{year}",     Calendar.getInstance().get(Calendar.YEAR) +""));
       changelog.setTextColor(changelog.getTextColors().getDefaultColor());
-    } catch (NameNotFoundException e) {
+    }
+    catch (NameNotFoundException e) {
       e.printStackTrace();
     }
 
@@ -1831,7 +1834,8 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
           + (!logMode ? (showArchive == 1 ? " - "+ getString(R.string.archive) : "") :
             " - "+ getString(R.string.menu_log)));
       runOnUiThread(updateListView);
-    } catch (Exception e) {
+    }
+    catch (Exception e) {
       Log.e(Constants.LOG_TAG, "Error populating TVShowItems or no shows added yet");
       e.printStackTrace();
     }
@@ -2096,6 +2100,11 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
   private static class AsyncInfo extends AsyncTask<String, Void, Void> {
     @Override
     protected Void doInBackground(String... params) {
+      int serieId, unwatched, unwatchedAired;
+      String nextEpisodeFirstAired, nextEpisodeString, newestEpisodeFirstAired, newestEpisodeStr;
+      UnwatchedLastAiredEpisode newestEpisode;
+      NextEpisode nextEpisode;
+
       try {
         String newToday    = params[0];
         int showArchiveTmp = showArchive;
@@ -2105,30 +2114,45 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
         for (int i = 0; i < series.size(); i++) {
           TVShowItem serie = series.get(i);
           if (isCancelled()) return null;
-          int serieId        = serie.getSerieId();
-          int unwatched      = db.getEpsUnwatched(serieId);
-          int unwatchedAired = db.getEpsUnwatchedAired(serieId);
-          if ((unwatched != serie.getUnwatched()) || (unwatchedAired != serie.getUnwatchedAired())) {
-            if (isCancelled()) return null;
+          serieId        = serie.getSerieId();
+          unwatched      = db.getEpsUnwatched(serieId);
+          unwatchedAired = db.getEpsUnwatchedAired(serieId);
+
+          newestEpisode           = db.getUnwatchedLastAiredEpisode(serieId);
+          newestEpisodeFirstAired = newestEpisode.firstAired;
+          newestEpisodeStr        = db.getEpisodeString(newestEpisode, /* boolean showNextAiring= */ false, /* boolean requireAiredDate= */ true);
+
+          if ((unwatched != serie.getUnwatched()) || (unwatchedAired != serie.getUnwatchedAired()) || !newestEpisodeStr.equals(serie.getUnwatchedLastEpisode())) {
             serie.setUnwatched(unwatched);
             serie.setUnwatchedAired(unwatchedAired);
-            String nextEpisodeString = null;
-            if (showNextAiring && (unwatchedAired > 0)) {
-              NextEpisode nextEpisode = db.getNextEpisode(serieId);
-              nextEpisodeString       = db.getNextEpisodeString(nextEpisode, true);
+            serie.setUnwatchedLastEpisode(newestEpisodeStr);
+            serie.setUnwatchedLastAired(newestEpisode.firstAiredDate);
+
+            if (showNextAiring && (unwatchedAired > 0) && (unwatchedAired < unwatched)) {
+              nextEpisode           = db.getNextEpisode(serieId);
+              nextEpisodeFirstAired = nextEpisode.firstAired;
+              nextEpisodeString     = db.getNextEpisodeString(nextEpisode, true);
+
               serie.setNextEpisode(nextEpisodeString);
+              serie.setNextAir(nextEpisode.firstAiredDate);
             }
-            if (isCancelled()) return null;
-            db.updateShowStats(serieId, unwatched, unwatchedAired, nextEpisodeString);
+            else {
+              nextEpisodeFirstAired = null;
+              nextEpisodeString     = null;
+            }
+
+            db.updateShowStats(serieId, unwatched, unwatchedAired, nextEpisodeFirstAired, nextEpisodeString, newestEpisodeFirstAired, newestEpisodeStr);
           }
         }
+
         if (isCancelled()) return null;
         listView.post(updateListView);
         if (showArchiveTmp == 0 || showArchiveTmp == 2)
           lastStatsUpdateCurrent = newToday;
         if (showArchiveTmp > 0)
           lastStatsUpdateArchive = newToday;
-      } catch (Exception e) {
+      }
+      catch (Exception e) {
         e.printStackTrace();
       }
       return null;
@@ -2364,26 +2388,27 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
         if (holder.sne != null) {
           String sneString = serie.getNextEpisode();
           if ((nunwatched > 0) && !TextUtils.isEmpty(sneString)) {
-            if (sneString.contains("[na]")) {
-              sneAired = false;
+            boolean hasNextAir = sneString.contains("[na]");
+
+            sneAired = hasNextAir
+              ? true
+              : (nunwatchedAired > 0);
+
+            if (!sneAired) {
+              sneAired = (nunwatchedAired > 0);
             }
-            else {
-              if (!sneAired) {
-                sneAired = (nunwatchedAired > 0);
-              }
 
-              if (!sneAired) {
-                Date nextAirDate = serie.getNextAir();
+            if (!sneAired) {
+              Date nextAirDate = serie.getNextAir();
 
-                if ((nextAirDate != null)) {
-                  sneAired = (nextAirDate.compareTo(Calendar.getInstance().getTime()) <= 0);
-                }
+              if ((nextAirDate != null)) {
+                sneAired = (nextAirDate.compareTo(Calendar.getInstance().getTime()) <= 0);
               }
             }
 
             holder.sne.setText(
               sneString
-                .replace("[ne]", (sneAired ? strNextEp : strNextAiring))
+                .replace("[ne]", ((sneAired && !hasNextAir) ? strNextEp : strNextAiring))
                 .replace("[na]", strNextAiring)
                 .replace("[on]", strOn)
             );
@@ -2456,7 +2481,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
             }
             holder.icon.setVisibility(View.VISIBLE);
           }
-          catch(Exception e) {
+          catch (Exception e) {
             holder.icon.setVisibility(View.GONE);
           }
         }
@@ -2500,7 +2525,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
             }
             holder.icon.setVisibility(View.VISIBLE);
           }
-          catch(Exception e) {
+          catch (Exception e) {
             holder.icon.setVisibility(View.GONE);
           }
         }

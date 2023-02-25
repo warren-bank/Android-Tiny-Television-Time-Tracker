@@ -16,4 +16,12 @@ public class BaseEpisode {
     this.firstAired     = firstAired;
     this.firstAiredDate = firstAiredDate;
   }
+
+  public boolean equals(BaseEpisode that) {
+    return (
+         (this.serieId == that.serieId)
+      && (this.season  == that.season )
+      && (this.episode == that.episode)
+    );
+  }
 }

@@ -964,7 +964,7 @@ public class DbGateway {
             : " AND seasonNumber <> 0"
           )
         + (showNextAiring
-            ? (" AND firstAired >= " + "'" + today + "'")
+            ? (" AND firstAired > " + "'" + today + "'")
             : ""
           )
         + " ORDER BY"
@@ -1032,7 +1032,7 @@ public class DbGateway {
       + " AND"
       + "   seen=0"
       + " AND"
-      + "   firstAired < " + "'" + today + "'"
+      + "   firstAired <= " + "'" + today + "'"
       + " AND"
       + "   firstAired <> ''"
       + (DroidShows.includeSpecialsOption
@@ -1080,7 +1080,7 @@ public class DbGateway {
     return getEpisodeString(nextEpisode, showNextAiring, requireAiredDate);
   }
 
-  private String getEpisodeString(BaseEpisode baseEpisode, boolean showNextAiring, boolean requireAiredDate) {
+  public String getEpisodeString(BaseEpisode baseEpisode, boolean showNextAiring, boolean requireAiredDate) {
     if ((baseEpisode == null) || (baseEpisode.episode == -1))
       return "";
 
@@ -1093,7 +1093,7 @@ public class DbGateway {
 
     if (showNextAiring) {
       NextEpisode nextEpisodeAiring = getNextEpisode(baseEpisode.serieId, true);
-      if (nextEpisodeAiring != null) {
+      if ((nextEpisodeAiring != null) && (nextEpisodeAiring.season >= 0) && (nextEpisodeAiring.episode >= 0) && !nextEpisodeAiring.equals(baseEpisode)) {
         return baseEpisodeString
           + " | [na] "
           + nextEpisodeAiring.season
@@ -1330,7 +1330,7 @@ public class DbGateway {
       + (onlyHasAired
           ? (
                 " AND"
-              + "   firstAired < " + "'" + today + "'"
+              + "   firstAired <= " + "'" + today + "'"
               + " AND"
               + "   firstAired <> ''"
             )
@@ -1789,7 +1789,7 @@ public class DbGateway {
     int unwatchedAired = getEpsUnwatchedAired(serieId);
 
     NextEpisode nextEpisode  = getNextEpisode(serieId);
-    String nextEpisodeString = getNextEpisodeString(nextEpisode, /* boolean showNextAiring= */ (DroidShows.showNextAiring && (0 < unwatchedAired) && (unwatchedAired < unwatched)));
+    String nextEpisodeString = getNextEpisodeString(nextEpisode, /* boolean showNextAiring= */ (DroidShows.showNextAiring && (unwatchedAired > 0) && (unwatchedAired < unwatched)));
 
     UnwatchedLastAiredEpisode newestEpisode = getUnwatchedLastAiredEpisode(serieId);
     String newestEpisodeStr = getEpisodeString(newestEpisode, /* boolean showNextAiring= */ false, /* boolean requireAiredDate= */ true);
@@ -1809,15 +1809,27 @@ public class DbGateway {
     return db.execQuery(query);
   }
 
-  public boolean updateShowStats(int serieId, int unwatched, int unwatchedAired, String nextEpisodeString) {
+  public boolean updateShowStats(int serieId, int unwatched, int unwatchedAired, String nextEpisodeFirstAired, String nextEpisodeString, String newestEpisodeFirstAired, String newestEpisodeStr) {
     String query = "UPDATE series"
       + " SET"
-      + (!TextUtils.isEmpty(nextEpisodeString)
-          ? (" nextEpisode="       + "'" + nextEpisodeString        + "'" + ",")
+      + ((nextEpisodeFirstAired != null)
+          ? (" nextAir="              + "'" + nextEpisodeFirstAired    + "'" + ",")
           : ""
         )
-      + "   unwatched="                  + unwatched                      + ","
-      + "   unwatchedAired="             + unwatchedAired
+      + ((nextEpisodeString != null)
+          ? (" nextEpisode="          + "'" + nextEpisodeString        + "'" + ",")
+          : ""
+        )
+      + ((newestEpisodeFirstAired != null)
+          ? (" unwatchedLastAired="   + "'" + newestEpisodeFirstAired  + "'" + ",")
+          : ""
+        )
+      + ((newestEpisodeStr != null)
+          ? (" unwatchedLastEpisode=" + "'" + newestEpisodeStr         + "'" + ",")
+          : ""
+        )
+      + "   unwatched="                     + unwatched                      + ","
+      + "   unwatchedAired="                + unwatchedAired
       + " WHERE"
       + "   id = " + serieId;
 
@@ -1841,7 +1853,7 @@ public class DbGateway {
       + " AND"
       + "   seasonNumber = " + seasonNumber
       + " AND"
-      + "   firstAired < " + "'" + today + "'"
+      + "   firstAired <= " + "'" + today + "'"
       + " AND"
       + "   firstAired <> ''"
       + " AND"
