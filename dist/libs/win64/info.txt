@@ -1,0 +1,2 @@
+https://www.sqlite.org/download.html
+https://www.sqlite.org/2023/sqlite-dll-win64-x64-3420000.zip

@@ -1,0 +1,30 @@
+--------------------------------------------------------------------------------
+
+help
+
+--------------------------------------------------------------------------------
+
+stop at com.github.warren_bank.tiny_television_time_tracker.DroidShowsDatabaseMigrationTool:15
+run
+list
+
+--------------------------------------------------------------------------------
+
+stop at com.github.warren_bank.tiny_television_time_tracker.database.Update:67
+run
+list
+
+eval c.getPosition()
+eval c.getString(0)
+next
+list
+
+eval version
+eval c.getPosition()
+
+--------------------------------------------------------------------------------
+
+step
+step up
+
+--------------------------------------------------------------------------------

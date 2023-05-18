@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: ../libs/classes/commons-lang3-3.9.jar ../libs/classes/jackson-annotations-2.13.3.jar ../libs/classes/jackson-core-2.13.3.jar ../libs/classes/jackson-databind-2.13.3.jar ../libs/classes/jna-5.13.0.jar
+Main-Class: com.github.warren_bank.tiny_television_time_tracker.DroidShowsDatabaseMigrationTool
+
