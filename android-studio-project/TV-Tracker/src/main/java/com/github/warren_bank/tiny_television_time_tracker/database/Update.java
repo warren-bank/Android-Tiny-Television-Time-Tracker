@@ -102,6 +102,34 @@ public class Update {
   }
 
   // ---------------------------------------------------------------------------
+  /* https://developer.android.com/reference/android/database/sqlite/package-summary
+   *   API 01: SQLite 3.4
+   *   API 03: SQLite 3.5
+   *   API 08: SQLite 3.6
+   *   API 11: SQLite 3.7
+   *   API 21: SQLite 3.8
+   *   API 24: SQLite 3.9
+   *   API 26: SQLite 3.18
+   *   API 27: SQLite 3.19
+   *   API 28: SQLite 3.22
+   *   API 30: SQLite 3.28
+   *   API 31: SQLite 3.32
+   * ---------------------------------------------------------------------------
+   */
+
+  private static boolean canPerformUpdateFrom() {
+    /* ---------------------------------
+     * https://www.sqlite.org/changes.html#version_3_33_0
+     *   UPDATE-FROM syntax requires: SQLite 3.33.0+
+     * ---------------------------------
+     */
+
+    // return (Build.VERSION.SDK_INT >= 34);
+
+    return false;
+  }
+
+  // ---------------------------------------------------------------------------
   // inner classes and interfaces
   // ---------------------------------------------------------------------------
 
@@ -795,8 +823,8 @@ public class Update {
         try {
           queries = new ArrayList<String>();
 
-          if (Build.VERSION.SDK_INT >= 31) {
-            // use UPDATE-FROM syntax that was added to SQLite v3.33.0 and is only supported by Android 12 and higher
+          if (canPerformUpdateFrom()) {
+            // use UPDATE-FROM syntax that was added to SQLite v3.33.0
 
             queries.add("UPDATE series"
               + " SET"
