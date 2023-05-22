@@ -14,6 +14,8 @@ import com.sun.jna.Native;
 import com.sun.jna.Pointer;
 import com.sun.jna.ptr.PointerByReference;
 
+import java.nio.charset.StandardCharsets;
+
 public class SQLite implements Library {
   public static final String JNA_LIBRARY_NAME = "sqlite3";
   // public static final NativeLibrary JNA_NATIVE_LIB = NativeLibrary.getInstance(SQLite.JNA_LIBRARY_NAME);
@@ -104,10 +106,13 @@ public class SQLite implements Library {
   public static native Pointer sqlite3_mprintf(String zFormat, String arg);
   public static native void sqlite3_free(Pointer p);
 
-  public static Pointer nativeString(String sql) { // TODO Check encoding?
-    byte[] data = sql.getBytes();
+  public static Pointer nativeString(String sql) {
+    if (sql == null) {
+      return Pointer.NULL;
+    }
+    final byte[] data = sql.getBytes(StandardCharsets.UTF_8);
     final Pointer pointer = new Memory(data.length + 1);
-    pointer.write(0, data, 0, data.length);
+    pointer.write(0L, data, 0, data.length);
     pointer.setByte(data.length, (byte) 0);
     return pointer;
   }
