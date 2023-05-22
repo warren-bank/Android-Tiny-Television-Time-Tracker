@@ -58,7 +58,7 @@
 
 #### Usage (jar, cmd, win64, w/ provided test script):
 
-* download the release [zip bundle](https://github.com/warren-bank/Android-Tiny-Television-Time-Tracker/releases/download/db-migration-tool%2F001.00.01-11JRE/001.00.01-11JRE.zip)
+* download the release [zip bundle](https://github.com/warren-bank/Android-Tiny-Television-Time-Tracker/releases/download/db-migration-tool%2F001.00.02-11JRE/001.00.02-11JRE.zip)
 * unzip
 * copy `DroidShows.db` from phone to the directory: `tests/01/data`
 * run: `tests/01/run-test-migration.bat`
