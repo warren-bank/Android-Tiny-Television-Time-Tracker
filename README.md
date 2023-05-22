@@ -56,6 +56,18 @@
   call bin/windows-bat/run.bat "%cd%/tests/01/data/DroidShows.db" "%cd%/tests/01/data/TV-Tracker.db"
 ```
 
+#### Usage (jar, cmd, win64, w/ provided test script):
+
+* download the release [zip bundle](https://github.com/warren-bank/Android-Tiny-Television-Time-Tracker/releases/download/db-migration-tool%2F001.00.00-11JRE/001.00.00-11JRE.zip)
+* unzip
+* copy `DroidShows.db` from phone to the directory: `tests/01/data`
+* run: `tests/01/run-test-migration.bat`
+* wait for the terminal to close when complete
+  - can monitor progress by reading the output that is piped to: `tests/01/run-test-migration.log`
+* copy `TV-Tracker.db` to phone from the directory: `tests/01/data`
+* import `TV-Tracker.db` to `TV-Tracker` app
+* wait for thumbnails to download and resize
+
 #### Legal:
 
 * copyright: [Warren Bank](https://github.com/warren-bank)
