@@ -1040,7 +1040,7 @@ public class DbGateway {
           : " AND seasonNumber <> 0"
         )
       + " ORDER BY"
-      + "   firstAired DESC"
+      + "   firstAired DESC, seasonNumber DESC, episodeNumber DESC"
       + " LIMIT 1";
 
     Cursor c = null;
