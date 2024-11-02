@@ -224,6 +224,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
   public static Thread updateAllShowsTh           = null;
   public static boolean logMode                   = false;
   public static boolean isUpdating                = false;
+  public static boolean showDbRestoreUpdateDlg    = true;
   public static int removeEpisodeIdFromLog        = 0;
   public static ApiGateway api;
   public static DbGateway db;
@@ -455,7 +456,10 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
 
             runOnUiThread(new Runnable() {
               public void run() {
-                updateAllSeries(2); // 2 = update archive and current shows
+                if (showDbRestoreUpdateDlg)
+                  updateAllSeriesDialog(2); // 2 = update archive and current shows
+                else
+                  updateAllSeries(2); // 2 = update archive and current shows
               }
             });
           }
@@ -1719,7 +1723,15 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
   }
 
   public void updateAllSeriesDialog() {
-    String updateMessageAD = getString(R.string.dialog_update_series);
+    updateAllSeriesDialog(showArchive);
+  }
+
+  public void updateAllSeriesDialog(final int showArchive) {
+    String updateMessageAD = getString(
+      (showArchive == 2)
+        ? R.string.dialog_update_series_all
+        : R.string.dialog_update_series_list
+    );
     AlertDialog.Builder alertDialog = new AlertDialog.Builder(DroidShows.this)
       .setTitle(R.string.messages_title_update_series)
       .setMessage(updateMessageAD)
@@ -1733,6 +1745,9 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
       })
       .setNegativeButton(getString(R.string.dialog_cancel), new DialogInterface.OnClickListener() {
         public void onClick(DialogInterface dialog, int which) {
+          if (showArchive == 2)
+            getSeries();
+
           return;
         }
       });

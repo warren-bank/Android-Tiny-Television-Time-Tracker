@@ -59,7 +59,8 @@
 <string name="dialog_delete">Are you sure you want to delete %s?</string>
 <string name="dialog_cancel">Cancel</string>
 <string name="dialog_search">Search string:</string>
-<string name="dialog_update_series">Are you sure you want to update all listed shows now?</string>
+<string name="dialog_update_series_all">Update all shows in database now?</string>
+<string name="dialog_update_series_list">Are you sure you want to update all listed shows now?</string>
 <string name="dialog_include_specials">Include specials in unwatched count</string>
 <string name="dialog_full_line_check">Use entire line to mark episode</string>
 <string name="dialog_switch_swipe_direction">Swipe right-to-left to go back</string>
