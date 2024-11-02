@@ -59,7 +59,8 @@
 <string name="dialog_delete">நீங்கள் நீக்க விரும்புகிறீர்களா %s?</string>
 <string name="dialog_cancel">ரத்து செய்</string>
 <string name="dialog_search">தேடு சரம்:</string>
-<string name="dialog_update_series">நீங்கள் தற்போது பட்டியலிடப்பட்ட அனைத்து பட்டியலை புதுப்பிக்கவேண்டுமா\??</string>
+<string name="dialog_update_series_all">இப்போது தரவுத்தளத்தில் அனைத்து நிகழ்வுகளையும் புதுப்பி?</string>
+<string name="dialog_update_series_list">நீங்கள் தற்போது பட்டியலிடப்பட்ட அனைத்து பட்டியலை புதுப்பிக்கவேண்டுமா\??</string>
 <string name="dialog_include_specials">பார்க்கப்படாத எண்ணிக்கையில் சிறப்புகள் சேர்க்கவும்</string>
 <string name="dialog_full_line_check">முழு கோட்டை குறி எத்தனை பயன்படுத்து</string>
 <string name="dialog_switch_swipe_direction">திரும்பிச் செல்ல வலமிருந்து இடமாக ஸ்வைப் செய்யவும்</string>

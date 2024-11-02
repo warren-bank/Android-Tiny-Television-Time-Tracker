@@ -59,7 +59,8 @@
 <string name="dialog_delete">Вы действительно хотите удалить %s?</string>
 <string name="dialog_cancel">Отмена</string>
 <string name="dialog_search">Искать:</string>
-<string name="dialog_update_series">Начать обновление информации о сериалах?</string>
+<string name="dialog_update_series_all">Обновить все показание в базе данных сейчас?</string>
+<string name="dialog_update_series_list">Начать обновление информации о сериалах?</string>
 <string name="dialog_include_specials">Включите специальные предложения в подсчете нереагированных</string>
 <string name="dialog_full_line_check">Вся строка помечает просмотренным</string>
 <string name="dialog_switch_swipe_direction">Проведите справа налево, чтобы вернуться назад</string>

@@ -59,7 +59,8 @@
 <string name="dialog_delete">আপনি কি মুছে ফেলতে চান\? %s?</string>
 <string name="dialog_cancel">বাতিল করো</string>
 <string name="dialog_search">অনুসন্ধানের স্ট্রিং:</string>
-<string name="dialog_update_series">আপনি কি নিশ্চিত আপনি এখন তালিকাভুক্ত সব অনুষ্ঠানটি হালনাগাদ করতে চান?</string>
+<string name="dialog_update_series_all">বর্তমানে ডাটাবেসে সব প্রদর্শন করা হবে?</string>
+<string name="dialog_update_series_list">আপনি কি নিশ্চিত আপনি এখন তালিকাভুক্ত সব অনুষ্ঠানটি হালনাগাদ করতে চান?</string>
 <string name="dialog_include_specials">অবিকৃত গণনা-এ বিশেষ বৈশিষ্ট্যাবলী অন্তর্ভুক্ত করো</string>
 <string name="dialog_full_line_check">পর্বটি চিহ্নিত করতে সমগ্র রেখা ব্যবহার করুন</string>
 <string name="dialog_switch_swipe_direction">ফিরে যেতে ডান থেকে বাম সোয়াইপ করুন</string>

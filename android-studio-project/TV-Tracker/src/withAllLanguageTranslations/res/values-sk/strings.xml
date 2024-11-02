@@ -59,7 +59,8 @@
 <string name="dialog_delete">Ste si istý, že chcete vymazať %s?</string>
 <string name="dialog_cancel">Zrušiť</string>
 <string name="dialog_search">Vyhľadávací reťazec:</string>
-<string name="dialog_update_series">Ste si istý, že chcete aktualizovať všetky zobrazené zobrazené teraz?</string>
+<string name="dialog_update_series_all">Aktualizovať všetky zobrazované v databáze teraz?</string>
+<string name="dialog_update_series_list">Ste si istý, že chcete aktualizovať všetky zobrazené zobrazené teraz?</string>
 <string name="dialog_include_specials">Zahrnúť špeciály do nesledovaného počtu</string>
 <string name="dialog_full_line_check">Použiť celú linku na označenie epizóde</string>
 <string name="dialog_switch_swipe_direction">Otočiť doprava na prednú časť vrátiť</string>

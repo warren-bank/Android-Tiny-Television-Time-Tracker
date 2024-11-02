@@ -59,7 +59,8 @@
 <string name="dialog_delete">Kas oled kindel, et soovid kustutada %s?</string>
 <string name="dialog_cancel">Loobu</string>
 <string name="dialog_search">Otsimisstring:</string>
-<string name="dialog_update_series">Kas oled kindel, et soovid värskendada kõik loetletud näitused nüüd?</string>
+<string name="dialog_update_series_all">Uuenda kõik näitab andmebaasi nüüd?</string>
+<string name="dialog_update_series_list">Kas oled kindel, et soovid värskendada kõik loetletud näitused nüüd?</string>
 <string name="dialog_include_specials">Erialade kaasamine jälgimata loendamisse</string>
 <string name="dialog_full_line_check">Terve rea kasutamine episoodi tähistamiseks</string>
 <string name="dialog_switch_swipe_direction">Nipsake paremalt vasakule, et tagasi minna</string>

@@ -59,7 +59,8 @@
 <string name="dialog_delete">คุณแน่ใจว่าต้องการลบ %s?</string>
 <string name="dialog_cancel">ยกเลิก</string>
 <string name="dialog_search">สตริงการค้นหา:</string>
-<string name="dialog_update_series">คุณแน่ใจว่าต้องการอัพเดตรายการที่แสดงทั้งหมดในขณะนี้?</string>
+<string name="dialog_update_series_all">อัพเดตการแสดงทั้งหมดในฐานข้อมูลเดี๋ยวนี้?</string>
+<string name="dialog_update_series_list">คุณแน่ใจว่าต้องการอัพเดตรายการที่แสดงทั้งหมดในขณะนี้?</string>
 <string name="dialog_include_specials">รวมพิเศษในการนับที่ไม่ได้ดู</string>
 <string name="dialog_full_line_check">ใช้บรรทัดทั้งหมดเพื่อทำเครื่องหมายตอน</string>
 <string name="dialog_switch_swipe_direction">ปัดจากขวาไปซ้ายเพื่อกลับไปที่</string>

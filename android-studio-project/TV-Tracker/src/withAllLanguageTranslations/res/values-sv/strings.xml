@@ -59,7 +59,8 @@
 <string name="dialog_delete">Är du säker på att du vill ta bort %s?</string>
 <string name="dialog_cancel">Avbryt</string>
 <string name="dialog_search">Söksträng:</string>
-<string name="dialog_update_series">Är du säker på att du vill uppdatera alla listade program nu?</string>
+<string name="dialog_update_series_all">Uppdatera alla program i databasen nu?</string>
+<string name="dialog_update_series_list">Är du säker på att du vill uppdatera alla listade program nu?</string>
 <string name="dialog_include_specials">Inkludera specialare i antal oövervakade antal</string>
 <string name="dialog_full_line_check">Använd hela linjen för att markera avsnitt</string>
 <string name="dialog_switch_swipe_direction">Svep åt höger-till-vänster för att gå tillbaka</string>

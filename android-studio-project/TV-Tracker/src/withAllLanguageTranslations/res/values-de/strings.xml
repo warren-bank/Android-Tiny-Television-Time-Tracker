@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">de</string>
 <string name="app_name_long">Winzige Zeittracker fürs Fernsehen</string>
@@ -59,7 +59,8 @@
 <string name="dialog_delete">Soll %s wirklich gelöscht?</string>
 <string name="dialog_cancel">Abbrechen</string>
 <string name="dialog_search">Suchbegriff:</string>
-<string name="dialog_update_series">Sollen jetzt alle Serien aktualisiert werden?</string>
+<string name="dialog_update_series_all">Alle Shows in der Datenbank jetzt aktualisieren?</string>
+<string name="dialog_update_series_list">Sollen jetzt alle Serien aktualisiert werden?</string>
 <string name="dialog_include_specials">Besondere Folgen in der Übersicht zeigen</string>
 <string name="dialog_full_line_check">Tippen auf ganze Zeile markiert Folge als gesehen</string>
 <string name="dialog_switch_swipe_direction">Von rechts nach links wischen, um zurück zu gehen</string>

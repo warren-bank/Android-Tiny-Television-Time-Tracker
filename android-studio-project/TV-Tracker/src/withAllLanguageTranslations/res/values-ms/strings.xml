@@ -59,7 +59,8 @@
 <string name="dialog_delete">Anda pasti ingin memadam %s?</string>
 <string name="dialog_cancel">Batal</string>
 <string name="dialog_search">Rentetan gelintar:</string>
-<string name="dialog_update_series">Anda pasti hendak kemaskini semua paparan yang tersenarai sekarang?</string>
+<string name="dialog_update_series_all">Kemaskini semua paparan dalam pangkalan data sekarang?</string>
+<string name="dialog_update_series_list">Anda pasti hendak kemaskini semua paparan yang tersenarai sekarang?</string>
 <string name="dialog_include_specials">Sertakan khusus dalam kiraan yang tidak ditonton</string>
 <string name="dialog_full_line_check">Guna keseluruhan baris untuk menandakan episod</string>
 <string name="dialog_switch_swipe_direction">Leret ke kiri ke kiri untuk kembali</string>

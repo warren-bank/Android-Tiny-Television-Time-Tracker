@@ -59,7 +59,8 @@
 <string name="dialog_delete">Czy na pewno usunąć %s?</string>
 <string name="dialog_cancel">Anuluj</string>
 <string name="dialog_search">Łańcuch wyszukiwania:</string>
-<string name="dialog_update_series">Czy na pewno chcesz zaktualizować wszystkie pokazy wyświetlone teraz?</string>
+<string name="dialog_update_series_all">Aktualizuj wszystkie pokazy w bazie danych teraz?</string>
+<string name="dialog_update_series_list">Czy na pewno chcesz zaktualizować wszystkie pokazy wyświetlone teraz?</string>
 <string name="dialog_include_specials">Uwzględnij specjały w liczbie nieobserwowanych</string>
 <string name="dialog_full_line_check">Użyj całej linii do zaznaczania odcinka</string>
 <string name="dialog_switch_swipe_direction">Przesuń w prawo od prawej do lewej, aby wrócić</string>

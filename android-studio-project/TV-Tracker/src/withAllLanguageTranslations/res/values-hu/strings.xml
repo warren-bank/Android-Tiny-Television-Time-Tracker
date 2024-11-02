@@ -59,7 +59,8 @@
 <string name="dialog_delete">Biztosan törölni kívánja %s?</string>
 <string name="dialog_cancel">Mégse</string>
 <string name="dialog_search">Keresési karaktersorozat:</string>
-<string name="dialog_update_series">Biztosan frissíteni kívánja az összes felsorolt showt\??</string>
+<string name="dialog_update_series_all">Összes show frissítése az adatbázisban most?</string>
+<string name="dialog_update_series_list">Biztosan frissíteni kívánja az összes felsorolt showt\??</string>
 <string name="dialog_include_specials">Specialok tartalmazása a nem figyelt számlálásban</string>
 <string name="dialog_full_line_check">Teljes sor használata az epizód megjelöléséhez</string>
 <string name="dialog_switch_swipe_direction">Jobbra-balra-vissza.</string>

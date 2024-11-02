@@ -59,7 +59,8 @@
 <string name="dialog_delete">మీరు ఖచ్చితంగా తొలగించాలనుకుంటున్నారా %s?</string>
 <string name="dialog_cancel">రద్దు</string>
 <string name="dialog_search">స్ట్రీన్ శోధన:</string>
-<string name="dialog_update_series">మీరు అన్ని జాబితా ప్రదర్శనలను నవీకరణ చేయాలనుకుంటున్నారా?</string>
+<string name="dialog_update_series_all">\@ title: window?</string>
+<string name="dialog_update_series_list">మీరు అన్ని జాబితా ప్రదర్శనలను నవీకరణ చేయాలనుకుంటున్నారా?</string>
 <string name="dialog_include_specials">కనిపెట్టిన లెక్కలో ప్రత్యేకత</string>
 <string name="dialog_full_line_check">సంపూర్ణ వరుసను గుర్తుకు ఉపయోగించు</string>
 <string name="dialog_switch_swipe_direction">తిరిగి వెళ్ళడానికి కుడి నుండి ఎడమకు స్వైప్ చేయండి</string>

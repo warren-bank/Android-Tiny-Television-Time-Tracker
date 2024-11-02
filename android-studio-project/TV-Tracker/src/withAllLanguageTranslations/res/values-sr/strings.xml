@@ -59,7 +59,8 @@
 <string name="dialog_delete">Да ли сте сигурни да желите да избришете %s?</string>
 <string name="dialog_cancel">Откажи</string>
 <string name="dialog_search">Ниска претраге:</string>
-<string name="dialog_update_series">Да ли сте сигурни да желите да ажурирате све наведене емисије сада?</string>
+<string name="dialog_update_series_all">Ажурирај све емисије у бази података сада?</string>
+<string name="dialog_update_series_list">Да ли сте сигурни да желите да ажурирате све наведене емисије сада?</string>
 <string name="dialog_include_specials">Укључи и специјалитете у непосматрано</string>
 <string name="dialog_full_line_check">Користите целу линију да означите епизоду</string>
 <string name="dialog_switch_swipe_direction">Превуците десно-на-лево да бисте се вратили</string>

@@ -59,7 +59,8 @@
 <string name="dialog_delete">Jeste li sigurni da želite obrisati %s?</string>
 <string name="dialog_cancel">Otkaži</string>
 <string name="dialog_search">Niz za traženje:</string>
-<string name="dialog_update_series">Jeste li sigurni da želite ažurirati sve ispisane serije sada?</string>
+<string name="dialog_update_series_all">Ažuriraj sve emisije u bazi podataka?</string>
+<string name="dialog_update_series_list">Jeste li sigurni da želite ažurirati sve ispisane serije sada?</string>
 <string name="dialog_include_specials">Uključi specijalitete u nepromatračni brojač</string>
 <string name="dialog_full_line_check">Koristite cijelu liniju za označitu epizodu</string>
 <string name="dialog_switch_swipe_direction">Swipe desno-na-lijevo za povratak</string>

@@ -59,7 +59,8 @@
 <string name="dialog_delete">Ви впевнені, що хочете вилучити %s?</string>
 <string name="dialog_cancel">Скасувати</string>
 <string name="dialog_search">Рядок пошуку:</string>
-<string name="dialog_update_series">Ви впевнені, що хочете оновлювати всі перелічені покази?</string>
+<string name="dialog_update_series_all">Оновити всі покази у базі даних?</string>
+<string name="dialog_update_series_list">Ви впевнені, що хочете оновлювати всі перелічені покази?</string>
 <string name="dialog_include_specials">Включити спеціальні значення у непереглянутому підрахунку</string>
 <string name="dialog_full_line_check">Використовувати цілу лінію для позначення епізоду</string>
 <string name="dialog_switch_swipe_direction">Проведіть проведіть праворуч вліво, щоб повернутися назад</string>

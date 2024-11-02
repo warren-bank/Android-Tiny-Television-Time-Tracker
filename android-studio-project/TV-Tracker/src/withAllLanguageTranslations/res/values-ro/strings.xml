@@ -59,7 +59,8 @@
 <string name="dialog_delete">Eşti sigur că vrei să ştergi %s?</string>
 <string name="dialog_cancel">Anulează</string>
 <string name="dialog_search">Șir de căutare:</string>
-<string name="dialog_update_series">Sunteți sigur că doriți să actualizați toate emisiunile listate acum?</string>
+<string name="dialog_update_series_all">Actualizați toate emisiunile în baza de date acum?</string>
+<string name="dialog_update_series_list">Sunteți sigur că doriți să actualizați toate emisiunile listate acum?</string>
 <string name="dialog_include_specials">Include specialități în număr nevizionat</string>
 <string name="dialog_full_line_check">Utilizați întreaga linie pentru a marca episodul</string>
 <string name="dialog_switch_swipe_direction">Swipe dreapta-la-stânga pentru a merge înapoi</string>

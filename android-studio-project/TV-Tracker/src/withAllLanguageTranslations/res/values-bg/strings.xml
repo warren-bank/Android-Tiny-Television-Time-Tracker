@@ -59,7 +59,8 @@
 <string name="dialog_delete">Сигурни ли сте, че искате да изтриете %s?</string>
 <string name="dialog_cancel">Отказ</string>
 <string name="dialog_search">Низ за търсене:</string>
-<string name="dialog_update_series">Сигурни ли сте, че желаете да актуализирате всички изброени предавания сега?</string>
+<string name="dialog_update_series_all">Актуализиране на всички предавания в базата данни сега?</string>
+<string name="dialog_update_series_list">Сигурни ли сте, че желаете да актуализирате всички изброени предавания сега?</string>
 <string name="dialog_include_specials">Включете специалитетите в негледани брони.</string>
 <string name="dialog_full_line_check">Използвайте цялата линия, за да отбележат епизод</string>
 <string name="dialog_switch_swipe_direction">Плъзнете надясно наляво, за да се върнете.</string>

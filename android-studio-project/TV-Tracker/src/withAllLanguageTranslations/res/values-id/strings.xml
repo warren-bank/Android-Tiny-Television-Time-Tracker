@@ -59,7 +59,8 @@
 <string name="dialog_delete">Apakah Anda yakin ingin menghapus file ini\? %s?</string>
 <string name="dialog_cancel">Batalkan</string>
 <string name="dialog_search">Cari string:</string>
-<string name="dialog_update_series">Apakah Anda yakin ingin memperbarui semua acara yang terdaftar sekarang\??</string>
+<string name="dialog_update_series_all">Mutakhirkan semua acara dalam basis data sekarang?</string>
+<string name="dialog_update_series_list">Apakah Anda yakin ingin memperbarui semua acara yang terdaftar sekarang\??</string>
 <string name="dialog_include_specials">Sertakan menu spesial dalam hitungan yang tidak diawasi</string>
 <string name="dialog_full_line_check">Gunakan seluruh baris untuk menandai episode</string>
 <string name="dialog_switch_swipe_direction">Geser kanan-ke-kiri untuk kembali</string>

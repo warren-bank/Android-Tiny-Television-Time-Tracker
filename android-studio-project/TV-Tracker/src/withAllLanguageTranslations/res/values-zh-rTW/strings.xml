@@ -59,7 +59,8 @@
 <string name="dialog_delete">您確定要刪除 %s?</string>
 <string name="dialog_cancel">取消</string>
 <string name="dialog_search">搜尋字串:</string>
-<string name="dialog_update_series">您確定現在要更新所有列出的顯示畫面嗎？?</string>
+<string name="dialog_update_series_all">立即更新資料庫中的所有顯示?</string>
+<string name="dialog_update_series_list">您確定現在要更新所有列出的顯示畫面嗎？?</string>
 <string name="dialog_include_specials">併入未監看計數中的指定</string>
 <string name="dialog_full_line_check">使用整條線標記集</string>
 <string name="dialog_switch_swipe_direction">從右到左滑動以返回</string>

@@ -59,7 +59,8 @@
 <string name="dialog_delete">Ali ste prepričani, da želite izbrisati %s?</string>
 <string name="dialog_cancel">Preklici</string>
 <string name="dialog_search">Iskalni niz:</string>
-<string name="dialog_update_series">Ali ste prepričani, da želite posodobiti vse navedene oddaje zdaj?</string>
+<string name="dialog_update_series_all">Posodobi vse prikazi v bazi podatkov zdaj?</string>
+<string name="dialog_update_series_list">Ali ste prepričani, da želite posodobiti vse navedene oddaje zdaj?</string>
 <string name="dialog_include_specials">Vključi posebne ponudbe v neopazoeni števščini</string>
 <string name="dialog_full_line_check">Uporabi celotno vrstico za označevanje epizod</string>
 <string name="dialog_switch_swipe_direction">Swipe right-to-leve, da se vrnete</string>

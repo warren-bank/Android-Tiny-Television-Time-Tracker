@@ -59,7 +59,8 @@
 <string name="dialog_delete">Ydych chi\'n siŵr eich bod am ddileu %s?</string>
 <string name="dialog_cancel">Diddymu</string>
 <string name="dialog_search">Llinyn chwilio:</string>
-<string name="dialog_update_series">Ydych chi\'n siwr eich bod am ddiweddaru\'r holl sioeau rhestredig yn awr?</string>
+<string name="dialog_update_series_all">Mae\'r diweddariad yn dangos mewn cronfa ddata yn awr?</string>
+<string name="dialog_update_series_list">Ydych chi\'n siwr eich bod am ddiweddaru\'r holl sioeau rhestredig yn awr?</string>
 <string name="dialog_include_specials">Cynnwys y rhai sydd heb eu gwylio</string>
 <string name="dialog_full_line_check">Defnyddio llinell gyfan i farcio \' r digwyddiad</string>
 <string name="dialog_switch_swipe_direction">Llusgwch dde-i-chwith i fynd yn ôl</string>

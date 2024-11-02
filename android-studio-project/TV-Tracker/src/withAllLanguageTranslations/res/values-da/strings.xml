@@ -59,7 +59,8 @@
 <string name="dialog_delete">Er du sikker på, at du vil slette %s?</string>
 <string name="dialog_cancel">Annullér</string>
 <string name="dialog_search">Søgestreng:</string>
-<string name="dialog_update_series">Er du sikker på, at du vil opdatere alle viste programmer nu?</string>
+<string name="dialog_update_series_all">Opdatér alle shows i database nu?</string>
+<string name="dialog_update_series_list">Er du sikker på, at du vil opdatere alle viste programmer nu?</string>
 <string name="dialog_include_specials">Inkludér specialer i ikke-set antal</string>
 <string name="dialog_full_line_check">Brug hele linjen til at markere afsnit</string>
 <string name="dialog_switch_swipe_direction">Swipe højre-til-venstre for at gå tilbage</string>

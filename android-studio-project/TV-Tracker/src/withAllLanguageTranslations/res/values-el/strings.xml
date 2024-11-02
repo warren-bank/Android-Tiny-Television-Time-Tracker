@@ -59,7 +59,8 @@
 <string name="dialog_delete">Είστε βέβαιοι ότι θέλετε να διαγράψετε %s?</string>
 <string name="dialog_cancel">Ακύρωση.</string>
 <string name="dialog_search">Σειρά χαρακτήρων αναζήτησης:</string>
-<string name="dialog_update_series">Είστε βέβαιοι ότι θέλετε να ενημερώσετε όλες τις εμφανείς εκπομπές τώρα?</string>
+<string name="dialog_update_series_all">Ενημέρωση όλων των show στη βάση δεδομένων τώρα?</string>
+<string name="dialog_update_series_list">Είστε βέβαιοι ότι θέλετε να ενημερώσετε όλες τις εμφανείς εκπομπές τώρα?</string>
 <string name="dialog_include_specials">Συμπερίληψη ειδικών σε μη παρακολουθήσεις.</string>
 <string name="dialog_full_line_check">Χρήση ολόκληρης γραμμής για τη σήμανση επεισοδίο</string>
 <string name="dialog_switch_swipe_direction">Σαρώστε δεξιά προς τα αριστερά για να πάει πίσω</string>

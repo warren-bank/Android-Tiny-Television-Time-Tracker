@@ -59,7 +59,8 @@
 <string name="dialog_delete">هل أنت متأكد من أنك ترغب في الحذف %s?</string>
 <string name="dialog_cancel">الغاء</string>
 <string name="dialog_search">عبارة البحث:</string>
-<string name="dialog_update_series">هل أنت متأكد من أنك تريد تحديث كل البرامج المعروضة الآن?</string>
+<string name="dialog_update_series_all">تعديل كل العروض في قاعدة البيانات الآن?</string>
+<string name="dialog_update_series_list">هل أنت متأكد من أنك تريد تحديث كل البرامج المعروضة الآن?</string>
 <string name="dialog_include_specials">تضمين العروض الخاصة في عدد غير مراقب</string>
 <string name="dialog_full_line_check">استخدام الخط بالكامل لتعليم الحلقة</string>
 <string name="dialog_switch_swipe_direction">سيمسح يمين-الى اليسار للخلف</string>

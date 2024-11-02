@@ -59,7 +59,8 @@
 <string name="dialog_delete">Haluatko varmasti poistaa %s?</string>
 <string name="dialog_cancel">Peruuta</string>
 <string name="dialog_search">Hakumerkkijono:</string>
-<string name="dialog_update_series">Haluatko varmasti päivittää kaikki luetellut ohjelmat nyt?</string>
+<string name="dialog_update_series_all">Päivitä kaikki ohjelmat nyt?</string>
+<string name="dialog_update_series_list">Haluatko varmasti päivittää kaikki luetellut ohjelmat nyt?</string>
 <string name="dialog_include_specials">Sisältää erikoiset, joita ei lasketa</string>
 <string name="dialog_full_line_check">Käytä koko rivin merkkiin asti</string>
 <string name="dialog_switch_swipe_direction">Pyyhi oikealta vasemmalle.</string>

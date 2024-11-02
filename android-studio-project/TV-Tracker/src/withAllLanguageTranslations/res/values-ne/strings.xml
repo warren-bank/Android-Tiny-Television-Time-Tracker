@@ -59,7 +59,8 @@
 <string name="dialog_delete">तपाईँ मेट्न निश्चित हुनुहुन्छ %s?</string>
 <string name="dialog_cancel">रद्द गर्नुहोस्</string>
 <string name="dialog_search">स्ट्रिङ खोजी गर्नुहोस्:</string>
-<string name="dialog_update_series">तपाईँ अहिले सबै सूचीबद्ध शोमा अद्यावधिक गर्न निश्चित हुनुहुन्छ?</string>
+<string name="dialog_update_series_all">अहिले डाटाबेसमा सबै प्रदर्शन अद्यावधिक गर्नुहोस्?</string>
+<string name="dialog_update_series_list">तपाईँ अहिले सबै सूचीबद्ध शोमा अद्यावधिक गर्न निश्चित हुनुहुन्छ?</string>
 <string name="dialog_include_specials">नहेरिएको गणमा विशेषताहरू समावेश गर्नुहोस्</string>
 <string name="dialog_full_line_check">श्रृङ्खलाकासाथ पूरा लाइन प्रयोग गर्नुहोस्</string>
 <string name="dialog_switch_swipe_direction">दायाँ-बायाँ जाने दायाँबायाँ</string>

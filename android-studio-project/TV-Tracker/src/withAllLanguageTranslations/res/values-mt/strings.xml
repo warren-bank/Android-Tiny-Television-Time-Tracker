@@ -59,7 +59,8 @@
 <string name="dialog_delete">Inti żgur li inti tixtieq li tħassar %s?</string>
 <string name="dialog_cancel">Tħassir</string>
 <string name="dialog_search">Tfittxija string:</string>
-<string name="dialog_update_series">Inti żgur li inti tixtieq li taġġorna kollha elenkati turi issa?</string>
+<string name="dialog_update_series_all">Aġġornament turi kollha fil-database issa?</string>
+<string name="dialog_update_series_list">Inti żgur li inti tixtieq li taġġorna kollha elenkati turi issa?</string>
 <string name="dialog_include_specials">Jinkludu speals fl-għadd mhux segwit</string>
 <string name="dialog_full_line_check">Uża l-linja sħiħa għall-episodju tal-marka</string>
 <string name="dialog_switch_swipe_direction">Swip dritt-biex-xellug biex tmur lura</string>

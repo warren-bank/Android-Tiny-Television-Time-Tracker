@@ -59,7 +59,8 @@
 <string name="dialog_delete">削除しますか %s?</string>
 <string name="dialog_cancel">キャンセル</string>
 <string name="dialog_search">検索ストリング:</string>
-<string name="dialog_update_series">リストされているすべての図を今すぐ更新しますか \??</string>
+<string name="dialog_update_series_all">データベースのすべての表示を今すぐ更新?</string>
+<string name="dialog_update_series_list">リストされているすべての図を今すぐ更新しますか \??</string>
 <string name="dialog_include_specials">ウォッチされていないカウントに指定された</string>
 <string name="dialog_full_line_check">エピソードにライン全体を使用</string>
 <string name="dialog_switch_swipe_direction">右から左へスワイプする</string>

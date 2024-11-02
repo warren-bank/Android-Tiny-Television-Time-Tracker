@@ -59,7 +59,8 @@
 <string name="dialog_delete">Voulez-vous vraiment supprimer %s?</string>
 <string name="dialog_cancel">Annuler</string>
 <string name="dialog_search">Chaîne de recherche:</string>
-<string name="dialog_update_series">Voulez-vous vraiment mettre à jour tous les spectacles répertoriés maintenant\??</string>
+<string name="dialog_update_series_all">Mettre à jour tous les spectacles dans la base?</string>
+<string name="dialog_update_series_list">Voulez-vous vraiment mettre à jour tous les spectacles répertoriés maintenant\??</string>
 <string name="dialog_include_specials">Inclure les valeurs spéciales dans le compte non surveillé</string>
 <string name="dialog_full_line_check">Utiliser la ligne entière pour marquer l\'épisode</string>
 <string name="dialog_switch_swipe_direction">Glissez vers la gauche pour revenir en arrière</string>

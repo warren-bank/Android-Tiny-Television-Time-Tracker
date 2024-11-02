@@ -59,7 +59,8 @@
 <string name="dialog_delete">آپ کو خارج کرنا چاہتے ہیں یقین ہے %s?</string>
 <string name="dialog_cancel">منسوخ</string>
 <string name="dialog_search">سرچ سٹرنگ:</string>
-<string name="dialog_update_series">کیا آپ کو یقین ہے کہ آپ تمام درج شوز اپ ڈیٹ کرنا چاہتے ہیں اب?</string>
+<string name="dialog_update_series_all">اپ ڈیٹ اب ڈیٹا بیس میں تمام شوز?</string>
+<string name="dialog_update_series_list">کیا آپ کو یقین ہے کہ آپ تمام درج شوز اپ ڈیٹ کرنا چاہتے ہیں اب?</string>
 <string name="dialog_include_specials">غیر محفوظ شمار میں متعین خصوصی شامل</string>
 <string name="dialog_full_line_check">پرکرن کے لئے پوری لائن استعمال کریں</string>
 <string name="dialog_switch_swipe_direction">سومٹا دائیں-بائیں جانے کے لئے</string>

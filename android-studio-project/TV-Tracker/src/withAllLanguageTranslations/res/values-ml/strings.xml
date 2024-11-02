@@ -59,7 +59,8 @@
 <string name="dialog_delete">നിങ്ങള്ക്ക് നീക്കം ചെയ്യണമെന്ന് ഉറപ്പാണോ\? %s?</string>
 <string name="dialog_cancel">റദ്ദാക്കുക</string>
 <string name="dialog_search">തെരച്ചില് സ്ട്രിങ്:</string>
-<string name="dialog_update_series">നിങ്ങള്ക്കിപ്പോള് എല്ലാ പട്ടികകളെയും കാണിക്കണമെന്നുറപ്പാണോ\??</string>
+<string name="dialog_update_series_all">ഡാറ്റാബേസില് എല്ലാം പരിഷ്കരിക്കുക?</string>
+<string name="dialog_update_series_list">നിങ്ങള്ക്കിപ്പോള് എല്ലാ പട്ടികകളെയും കാണിക്കണമെന്നുറപ്പാണോ\??</string>
 <string name="dialog_include_specials">നിരീക്ഷിച്ച എണ്ണത്തില് പ്രത്യേകതകളെ ഉള്പ്പെടുത്തുക</string>
 <string name="dialog_full_line_check">എപ്പിസോഡിലേക്ക് മുഴുവന് വരി ഉപയോഗിക്കുക</string>
 <string name="dialog_switch_swipe_direction">വലത്തേക്ക് തിരിച്ചു പോകുക</string>

@@ -59,7 +59,8 @@
 <string name="dialog_delete">Er du sikker på at du vil slette %s?</string>
 <string name="dialog_cancel">Annuller</string>
 <string name="dialog_search">Søk i streng:</string>
-<string name="dialog_update_series">Er du sikker på at du vil oppdatere alle oppførte serier nå?</string>
+<string name="dialog_update_series_all">Oppdater alle serier i database nå?</string>
+<string name="dialog_update_series_list">Er du sikker på at du vil oppdatere alle oppførte serier nå?</string>
 <string name="dialog_include_specials">Inkluder spesialiteter i uovervåket telling</string>
 <string name="dialog_full_line_check">Bruk hele linjen til å markere episode</string>
 <string name="dialog_switch_swipe_direction">Sveip høyre-til-venstre for å gå tilbake</string>

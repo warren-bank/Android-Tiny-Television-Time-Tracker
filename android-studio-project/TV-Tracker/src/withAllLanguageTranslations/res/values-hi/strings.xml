@@ -59,7 +59,8 @@
 <string name="dialog_delete">क्या आप सुनिश्चित हैं कि आप हटाना चाहते हैं %s?</string>
 <string name="dialog_cancel">रद्द करें</string>
 <string name="dialog_search">ढूंढें स्ट्रिंग:</string>
-<string name="dialog_update_series">क्या आप सुनिश्चित हैं कि आप सभी सूचीबद्ध शो अद्यतन करना चाहते हैं?</string>
+<string name="dialog_update_series_all">डाटाबेस में सभी शो अद्यतन करें अब?</string>
+<string name="dialog_update_series_list">क्या आप सुनिश्चित हैं कि आप सभी सूचीबद्ध शो अद्यतन करना चाहते हैं?</string>
 <string name="dialog_include_specials">अदेखे गिनती में स्पेसल्स शामिल करें</string>
 <string name="dialog_full_line_check">घटना के प्रसंग में पूरी लाइन का उपयोग करें</string>
 <string name="dialog_switch_swipe_direction">दाएँ से वापस जाने के लिए दाएँ का स्वाइप करें</string>

@@ -59,7 +59,8 @@
 <string name="dialog_delete">삭제하시겠습니까\? %s?</string>
 <string name="dialog_cancel">취소</string>
 <string name="dialog_search">검색 문자열:</string>
-<string name="dialog_update_series">이제 나열된 모든 표시를 업데이트하시겠습니까\??</string>
+<string name="dialog_update_series_all">데이터베이스의 모든 표시를 지금 업데이트?</string>
+<string name="dialog_update_series_list">이제 나열된 모든 표시를 업데이트하시겠습니까\??</string>
 <string name="dialog_include_specials">감시되지 않은 계수에 특별 항목 포함</string>
 <string name="dialog_full_line_check">전체 행을 사용하여 에피소드 표시</string>
 <string name="dialog_switch_swipe_direction">다시 돌아가기 위해 오른쪽에서 왼쪽으로 쓸어넘기기</string>

@@ -59,7 +59,8 @@
 <string name="dialog_delete">האם אתם בטוחים שברצונכם למחוק\? %s?</string>
 <string name="dialog_cancel">ביטול</string>
 <string name="dialog_search">מחרוזת חיפוש:</string>
-<string name="dialog_update_series">אתם בטוחים שברצונכם לעדכן את כל המופעים הרשומים כעת\??</string>
+<string name="dialog_update_series_all">עדכון כל התוכניות במסד הנתונים כעת?</string>
+<string name="dialog_update_series_list">אתם בטוחים שברצונכם לעדכן את כל המופעים הרשומים כעת\??</string>
 <string name="dialog_include_specials">הכללת מנות מיוחדות בספירת שלא נצפה</string>
 <string name="dialog_full_line_check">שימוש בשורה שלמה לסימון פרק</string>
 <string name="dialog_switch_swipe_direction">מחיקה מימין לשמאל כדי לחזור.</string>

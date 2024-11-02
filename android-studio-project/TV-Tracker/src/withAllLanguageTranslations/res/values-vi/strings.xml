@@ -59,7 +59,8 @@
 <string name="dialog_delete">Bạn có chắc là muốn xóa %s?</string>
 <string name="dialog_cancel">Hủy</string>
 <string name="dialog_search">Chuỗi tìm kiếm:</string>
-<string name="dialog_update_series">Bạn có chắc là muốn cập nhật tất cả các hiển thị được liệt kê?</string>
+<string name="dialog_update_series_all">Cập nhật mọi chương trình trong cơ sở dữ?</string>
+<string name="dialog_update_series_list">Bạn có chắc là muốn cập nhật tất cả các hiển thị được liệt kê?</string>
 <string name="dialog_include_specials">Bao gồm các chương trình đặc biệt trong sô ́ lượng</string>
 <string name="dialog_full_line_check">Dùng toàn bộ dòng để đánh dấu tập</string>
 <string name="dialog_switch_swipe_direction">Xoay sang trái để quay lại</string>

@@ -59,7 +59,8 @@
 <string name="dialog_delete">શું તમે ખરેખર કાઢી નાંખવા માંગો છો %s?</string>
 <string name="dialog_cancel">રદ કરો</string>
 <string name="dialog_search">શબ્દમાળા શોધો:</string>
-<string name="dialog_update_series">શું તમે ખરેખર બધા યાદી બતાવવાનું હવે સુધારવા માંગો છો?</string>
+<string name="dialog_update_series_all">હવે ડેટાબેઝમાં બધા જ બતાવે છે?</string>
+<string name="dialog_update_series_list">શું તમે ખરેખર બધા યાદી બતાવવાનું હવે સુધારવા માંગો છો?</string>
 <string name="dialog_include_specials">અસંખ્ય ગણતરીમાં સ્પષ્ટીઓ સમાવો</string>
 <string name="dialog_full_line_check">સમગ્ર લીટી ને ચિહ્નિત કરવા માટે વાપરો</string>
 <string name="dialog_switch_swipe_direction">પાછા જવા માટે જમણેથી ડાબે સ્વાઇપ કરો</string>

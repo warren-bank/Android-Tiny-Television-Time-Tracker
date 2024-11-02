@@ -59,7 +59,8 @@
 <string name="dialog_delete">Vai esat pārliecināts, ka vēlaties dzēst %s?</string>
 <string name="dialog_cancel">Atcelt</string>
 <string name="dialog_search">Meklēšanas virkne:</string>
-<string name="dialog_update_series">Vai esat pārliecināts, ka vēlaties atjaunināt visas uzskaitītās rāda tagad?</string>
+<string name="dialog_update_series_all">Atjaunot visus šovus datu bāzē tagad?</string>
+<string name="dialog_update_series_list">Vai esat pārliecināts, ka vēlaties atjaunināt visas uzskaitītās rāda tagad?</string>
 <string name="dialog_include_specials">Iekļaut specials nevērotu skaitu</string>
 <string name="dialog_full_line_check">Lietot visu rindu, lai atzīmētu epizodi</string>
 <string name="dialog_switch_swipe_direction">Pārvelciet pa labi pa kreisi, lai atgrieztos</string>

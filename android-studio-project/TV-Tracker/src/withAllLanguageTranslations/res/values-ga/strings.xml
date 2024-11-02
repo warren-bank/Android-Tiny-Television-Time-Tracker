@@ -59,7 +59,8 @@
 <string name="dialog_delete">An bhfuil tú cinnte gur mian leat a scriosadh %s?</string>
 <string name="dialog_cancel">Cealaigh</string>
 <string name="dialog_search">Teaghrán cuardaigh:</string>
-<string name="dialog_update_series">An bhfuil tú cinnte gur mian leat gach seónna atá liostaithe a nuashonrú anois.?</string>
+<string name="dialog_update_series_all">Nuashonraigh gach taispeántais sa bhunachar sonraí anois?</string>
+<string name="dialog_update_series_list">An bhfuil tú cinnte gur mian leat gach seónna atá liostaithe a nuashonrú anois.?</string>
 <string name="dialog_include_specials">Cuir specials i gcomhróidí gan amharc</string>
 <string name="dialog_full_line_check">Bain úsáid as líne ar fad a mharcáil episode</string>
 <string name="dialog_switch_swipe_direction">Swipe ceart-go-fágtha chun dul ar ais</string>

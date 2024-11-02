@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">it</string>
 <string name="app_name_long">piccolissimo tracker per la televisione</string>
@@ -59,7 +59,8 @@
 <string name="dialog_delete">Sicuro di voler eliminare %s?</string>
 <string name="dialog_cancel">Annulla</string>
 <string name="dialog_search">Testo cercato:</string>
-<string name="dialog_update_series">Sicuro di voler aggiornare tutte le serie adesso?</string>
+<string name="dialog_update_series_all">Aggiornare tutti gli spettacoli in database ora?</string>
+<string name="dialog_update_series_list">Sicuro di voler aggiornare tutte le serie adesso?</string>
 <string name="dialog_include_specials">Includi gli speciali nel conteggio dei non visti</string>
 <string name="dialog_full_line_check">Usa intera linea per contrassegnare un episodio</string>
 <string name="dialog_switch_swipe_direction">Scorri da destra a sinistra per tornare indietro</string>

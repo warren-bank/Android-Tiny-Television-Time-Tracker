@@ -59,7 +59,8 @@
 <string name="dialog_delete">Ar tikrai norite ištrinti %s?</string>
 <string name="dialog_cancel">Atšaukti</string>
 <string name="dialog_search">Paieškos eilutė:</string>
-<string name="dialog_update_series">Ar tikrai norite atnaujinti visus išvardintus rodo dabar?</string>
+<string name="dialog_update_series_all">Atnaujinti visus duomenis duomenų bazėje dabar?</string>
+<string name="dialog_update_series_list">Ar tikrai norite atnaujinti visus išvardintus rodo dabar?</string>
 <string name="dialog_include_specials">Įtraukti atmainas nestebimų skaičiaus</string>
 <string name="dialog_full_line_check">Naudoti visą liniją pažymėti epizodas</string>
 <string name="dialog_switch_swipe_direction">Braukite į dešinę-į kairę, kad grįžtų</string>

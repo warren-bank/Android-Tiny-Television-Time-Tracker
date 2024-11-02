@@ -59,7 +59,8 @@
 <string name="dialog_delete">Jste si jisti, že chcete odstranit %s?</string>
 <string name="dialog_cancel">Storno</string>
 <string name="dialog_search">Hledaný řetězec:</string>
-<string name="dialog_update_series">Jste si jisti, že chcete aktualizovat všechny zobrazené položky nyní?</string>
+<string name="dialog_update_series_all">Aktualizovat vše v databázi nyní?</string>
+<string name="dialog_update_series_list">Jste si jisti, že chcete aktualizovat všechny zobrazené položky nyní?</string>
 <string name="dialog_include_specials">Zahrnout speciály v nesledovaný počet</string>
 <string name="dialog_full_line_check">Použít celý řádek k označení epizody</string>
 <string name="dialog_switch_swipe_direction">Přejeďte prstem doprava a vraťte se zpět</string>

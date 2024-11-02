@@ -59,7 +59,8 @@
 <string name="dialog_delete">ඔබට මකා දැමීමට අවශ්යයද %s?</string>
 <string name="dialog_cancel">අවලංගු කරන්න</string>
 <string name="dialog_search">සොයන්න:</string>
-<string name="dialog_update_series">ඔබට දැනට ඇති සියළුම ලැයිස්තුගත කිරීම් වලට යාවත්කාල කිරීමට අවශ්යද?</string>
+<string name="dialog_update_series_all">දැනට දත්ත ගබඩාවේ සියළු පෙන්වීම යාවත්කාලීන කරන්න?</string>
+<string name="dialog_update_series_list">ඔබට දැනට ඇති සියළුම ලැයිස්තුගත කිරීම් වලට යාවත්කාල කිරීමට අවශ්යද?</string>
 <string name="dialog_include_specials">නොබලපු ගණන් වල විශේෂයන් ඇතුලත් කරන්න</string>
 <string name="dialog_full_line_check">මුළු ලංකාවටම කොටු කොටු කොටු කරන්න</string>
 <string name="dialog_switch_swipe_direction">ආපසු යාමට දකුණට වමට ස්වයිප් කරන්න</string>

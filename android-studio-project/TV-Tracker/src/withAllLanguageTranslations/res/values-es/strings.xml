@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="lang_code">es</string>
 <string name="app_name_long">Pequeño rastreador de tiempo para televisión</string>
@@ -59,7 +59,8 @@
 <string name="dialog_delete">¿Seguro que quieres borrar %s?</string>
 <string name="dialog_cancel">Cancelar</string>
 <string name="dialog_search">Texto buscado:</string>
-<string name="dialog_update_series">¿Quieres actualizar las series ahora mismo?</string>
+<string name="dialog_update_series_all">Actualizar todos los programas de la base de datos?</string>
+<string name="dialog_update_series_list">¿Quieres actualizar las series ahora mismo?</string>
 <string name="dialog_include_specials">Cuenta los especiales como episodios no vistos</string>
 <string name="dialog_full_line_check">Toca en toda la línea para marcar un ep.</string>
 <string name="dialog_switch_swipe_direction">Retrocede deslizando de derecha a izquierda</string>

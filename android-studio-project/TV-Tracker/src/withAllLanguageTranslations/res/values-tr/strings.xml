@@ -59,7 +59,8 @@
 <string name="dialog_delete">Silmek istediğinizden emin misiniz\? %s?</string>
 <string name="dialog_cancel">İptal</string>
 <string name="dialog_search">Arama dizgisi:</string>
-<string name="dialog_update_series">Listelenen tüm programları şimdi güncelleştirmek istediğinizden emin misiniz\??</string>
+<string name="dialog_update_series_all">Veritabanındaki tüm gösterileri şimdi güncelle?</string>
+<string name="dialog_update_series_list">Listelenen tüm programları şimdi güncelleştirmek istediğinizden emin misiniz\??</string>
 <string name="dialog_include_specials">İzlenmeyen sayıma özel bilgileri dahil et</string>
 <string name="dialog_full_line_check">Bölümü işaretlemek için tüm satırı kullan</string>
 <string name="dialog_switch_swipe_direction">Geri dönmek için sağdan sola doğru kaydırın</string>
