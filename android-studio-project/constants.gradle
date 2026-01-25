@@ -1,9 +1,10 @@
 project.ext {
-    releaseVersionCode  = Integer.parseInt("008002609", 10)  //Integer.MAX_VALUE == 2147483647
-    releaseVersion      = '008.00.26-09API'
-    javaVersion         = JavaVersion.VERSION_1_8
-    minSdkVersion       = 9
-    targetSdkVersion    = 33
-    compileSdkVersion   = 33
-    buildToolsVersion   = '33.0.1'
+  applicationId      = 'com.github.warren_bank.tiny_television_time_tracker'
+  releaseVersionCode = Integer.parseInt("008002609", 10)  //Integer.MAX_VALUE == 2147483647
+  releaseVersion     = '008.00.26-09API'
+  javaVersion        = JavaVersion.VERSION_1_8
+  minSdkVersion      = 9
+  targetSdkVersion   = 35
+  compileSdkVersion  = 35
+  buildToolsVersion  = '35.0.0'
 }

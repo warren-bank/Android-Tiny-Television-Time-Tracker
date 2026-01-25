@@ -2,6 +2,8 @@ apply from: '../../constants.gradle'
 apply plugin: 'com.android.library'
 
 android {
+  namespace 'com.omertron.themoviedbapi'
+
   compileSdkVersion project.ext.compileSdkVersion
   buildToolsVersion project.ext.buildToolsVersion
 

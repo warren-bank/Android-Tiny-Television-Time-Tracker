@@ -2,6 +2,8 @@ apply from: '../constants.gradle'
 apply plugin: 'com.android.application'
 
 android {
+  namespace project.ext.applicationId
+
   compileSdkVersion project.ext.compileSdkVersion
   buildToolsVersion project.ext.buildToolsVersion
 
@@ -11,12 +13,12 @@ android {
   }
 
   defaultConfig {
-    minSdkVersion project.ext.minSdkVersion
+    minSdkVersion    project.ext.minSdkVersion
     targetSdkVersion project.ext.targetSdkVersion
 
-    applicationId "com.github.warren_bank.tiny_television_time_tracker"
-    versionName project.ext.releaseVersion
-    versionCode project.ext.releaseVersionCode
+    applicationId project.ext.applicationId
+    versionName   project.ext.releaseVersion
+    versionCode   project.ext.releaseVersionCode
 
     archivesBaseName += "-$versionName"
   }
@@ -30,6 +32,10 @@ android {
     english {
       dimension "languageResources"
     }
+  }
+
+  buildFeatures {
+    buildConfig = true
   }
 
   buildTypes {
@@ -49,6 +55,11 @@ android {
       shrinkResources false
       minifyEnabled   false
     }
+  }
+
+  dependenciesInfo {
+    includeInApk    = false  // Disables dependency metadata when building APKs.
+    includeInBundle = false  // Disables dependency metadata when building Android App Bundles.
   }
 
   lintOptions {
