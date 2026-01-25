@@ -2,8 +2,8 @@
 
 # ====================================================================
 
--keep class com.omertron.themoviedbapi.model.** { *; }
--keep class org.yamj.api.common.exception.**    { *; }
+-keep class com.omertron.themoviedbapi.**    { *; }
+-keep class org.yamj.api.common.exception.** { *; }
 
 -keep,allowshrinking class org.apache.** { *; }
 

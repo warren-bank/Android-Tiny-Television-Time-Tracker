@@ -4,12 +4,10 @@
 
 -keep class com.github.warren_bank.tiny_television_time_tracker.** { *; }
 
--keep,allowshrinking class com.omertron.themoviedbapi.** { *; }
-
 # ====================================================================
 
--keep class com.omertron.themoviedbapi.model.** { *; }
--keep class org.yamj.api.common.exception.**    { *; }
+-keep class com.omertron.themoviedbapi.**    { *; }
+-keep class org.yamj.api.common.exception.** { *; }
 
 -keep,allowshrinking class org.apache.** { *; }
 
