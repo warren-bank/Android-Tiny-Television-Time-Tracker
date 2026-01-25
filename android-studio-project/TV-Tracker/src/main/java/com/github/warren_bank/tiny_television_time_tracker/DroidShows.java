@@ -988,7 +988,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
 
   private void requestFilePermissions(int requestCode, Object passthrough) {
     if (Build.VERSION.SDK_INT < 30) {
-      String[] allRequestedPermissions = new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"};
+      String[] allRequestedPermissions = new String[]{"android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"};
       RuntimePermissionUtils.requestPermissions(DroidShows.this, DroidShows.this, allRequestedPermissions, requestCode, passthrough);
     }
     else if (!RuntimePermissionUtils.hasFilePermissions()) {

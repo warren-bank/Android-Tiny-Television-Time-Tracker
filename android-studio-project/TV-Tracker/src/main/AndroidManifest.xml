@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
   xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
   package="com.github.warren_bank.tiny_television_time_tracker">
 
   <uses-permission android:name="android.permission.INTERNET"/>
@@ -10,15 +11,18 @@
   <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
 
   <!-- file access permissions: Android 1 to 10 -->
+  <!-- note: Android 10 requires "requestLegacyExternalStorage" -->
+  <uses-permission android:maxSdkVersion="29" android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:maxSdkVersion="29" android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
   <!-- file access permissions: Android 11+ -->
-  <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" tools:ignore="ScopedStorage" />
 
   <application
     android:icon="@drawable/icon"
     android:label="@string/app_name_long"
     android:theme="@style/app_theme"
+    android:requestLegacyExternalStorage="true"
     android:allowBackup="true"
     android:resizeableActivity="true"
     android:usesCleartextTraffic="true">
