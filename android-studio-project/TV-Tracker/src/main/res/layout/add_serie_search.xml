@@ -4,4 +4,4 @@
   android:layout_width="fill_parent"
   android:layout_height="wrap_content"
   android:hint="@string/addserie_hint"
-  android:label="@string/app_name_short"/>
+  android:label="@string/app_name_short" />

@@ -19,7 +19,7 @@
     android:layout_gravity="center_vertical"
     android:paddingRight="2dp"
     android:textSize="18sp"
-    android:textStyle="bold"/>
+    android:textStyle="bold" />
 
   <ImageView
     android:id="@+id/addserieBtn"
@@ -34,7 +34,7 @@
     android:cropToPadding="false"
     android:focusable="false"
     android:focusableInTouchMode="false"
-    android:text=""/>
+    android:text="" />
 
 </LinearLayout>
 
