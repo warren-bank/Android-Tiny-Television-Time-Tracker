@@ -61,7 +61,7 @@ public class AddSerie extends ListActivity {
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.add_serie);
+    setContentView(R.layout.activity_add_serie);
 
     connectAPI();
     this.db               = DbGateway.getInstance(this);

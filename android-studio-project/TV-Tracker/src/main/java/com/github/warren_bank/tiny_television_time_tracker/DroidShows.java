@@ -250,7 +250,7 @@ public class DroidShows extends ListActivity implements RuntimePermissionUtils.R
         return;
       }
     }
-    setContentView(R.layout.main);
+    setContentView(R.layout.activity_main);
     main = findViewById(R.id.main);
 
     // Data Stores

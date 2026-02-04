@@ -62,7 +62,7 @@ public class SerieEpisodes extends ListActivity {
     this.overridePendingTransition(R.anim.right_enter, R.anim.right_exit);
 
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.serie_episodes);
+    setContentView(R.layout.activity_serie_episodes);
 
     db = DbGateway.getInstance(this);
 

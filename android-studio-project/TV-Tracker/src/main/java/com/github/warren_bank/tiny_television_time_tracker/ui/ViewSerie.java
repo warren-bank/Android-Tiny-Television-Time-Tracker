@@ -45,7 +45,7 @@ public class ViewSerie extends Activity {
     this.overridePendingTransition(R.anim.left_enter, R.anim.left_exit);
 
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.view_serie);
+    setContentView(R.layout.activity_view_serie);
 
     Intent intent = getIntent();
     serieId       = intent.getIntExtra("serieId", -1);

@@ -59,7 +59,7 @@ public class ViewEpisode extends Activity implements RuntimePermissionUtils.Runt
     this.overridePendingTransition(R.anim.right_enter, R.anim.right_exit);
 
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.view_episode);
+    setContentView(R.layout.activity_view_episode);
 
     Intent intent = getIntent();
     serieId       = intent.getIntExtra("serieId",   -1);
